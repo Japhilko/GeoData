@@ -161,6 +161,7 @@ data(world.cities)
 
 head(world.cities)
 
+world.cities$name
 
   # ignore the following two lines
 library(xtable)
@@ -254,24 +255,3 @@ close(con)
 
 
 
-
-#--------------------------------#
-# Package dismo
-#--------------------------------#
-
-library(dismo)
-mymap <- gmap("France")  # choose whatever country
-plot(mymap)
-
-setwd(graph.path)
-pdf("France_dismo.pdf")
-plot(mymap)
-dev.off()
-
-
-MAmap <- gmap("Mannheim")
-plot(MAmap)
-
-pdf("Mannheim_dismo.pdf")
-plot(MAmap)
-dev.off()
