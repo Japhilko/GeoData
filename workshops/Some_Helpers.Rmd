@@ -9,7 +9,7 @@ output: html_document
 
 <http://www.codecademy.com/tracks/web>
 
-
+<http://www.w3schools.com/css/css_howto.asp>
 
 Styles
 
@@ -25,3 +25,10 @@ You can enable figure captions by `fig_caption: yes` in YAML:
     output:
       rmarkdown::html_vignette:
         fig_caption: yes        
+        
+<http://shiny.rstudio.com/articles/css.html>
+
+        
+## <http://github.org>
+
+<http://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/>
