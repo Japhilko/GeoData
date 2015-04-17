@@ -1,0 +1,42 @@
+---
+title: "Indicator maps"
+author: "Jan-Philipp Kolb"
+date: "17. April 2015"
+output: html_document
+---
+
+
+- Get the data on indicators
+- Get polygons
+- Transfer and combine data
+- Plot the result
+
+
+
+## Get the data on indicators
+
+
+Eurostat offers the possibility to download the sahpefile for the NUTS regions in Europe.^[<http://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/NUTS_2010_60M_SH.zip>]
+
+
+
+data management platform: ([datahub.io](http://datahub.io))
+
+
+## Get polygons
+
+### The `maptools` package:
+
+```{r, fig.show='hold',fig.cap = "Hello world."}
+## Example maptools
+library(maptools)
+data(wrld_simpl)
+plot(wrld_simpl)
+```
+
+
+<http://cran.r-project.org/web/packages/spatstat/vignettes/shapefiles.pdf>
+
+### The [GADM](http://gadm.org) website.
+
+
