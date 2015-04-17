@@ -16,6 +16,9 @@ output: html_document
 ## Get the data on indicators
 
 
+[Eurostat - PEEIS](http://ec.europa.eu/eurostat/web/euro-indicators/peeis)
+
+
 Eurostat offers the possibility to download the sahpefile for the NUTS regions in Europe.^[<http://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/NUTS_2010_60M_SH.zip>]
 
 
