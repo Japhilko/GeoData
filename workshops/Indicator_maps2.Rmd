@@ -19,8 +19,40 @@ output: html_document
 [Eurostat - PEEIS](http://ec.europa.eu/eurostat/web/euro-indicators/peeis)
 
 
-Eurostat offers the possibility to download the sahpefile for the NUTS regions in Europe.^[<http://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/NUTS_2010_60M_SH.zip>]
+```{r, echo=FALSE}
+main.path <- "J:/Work/Statistik/Kolb/Paper/EURONAmaps/"
+data.path <- paste(main.path,"/data/",sep="")
+git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/data/"
+graph.path <- "J:/Work/Statistik/Kolb/Paper/EURONAmaps/LaTeX/figure"
+```
 
+
+
+```{r,eval=F, echo=FALSE}
+Cons <- read.xlsx2("ConsumptionExpenditure.xls",1)
+
+setwd(git.path)
+save(Cons,file="ConsumptionExpenditure.RData")
+
+write.csv(Cons,"Cons.csv")
+```
+
+
+```{r, echo=FALSE}
+setwd(git.path)
+```
+
+
+Read data and get the countries:
+
+```{r}
+setwd(git.path)
+Cons <- read.csv("Cons.csv")
+Cons <- Cons[-nrow(Cons),]
+
+Names <- strsplit(as.character(Cons[,2]),":")
+Names2 <- unlist(lapply(Names,function(x)x[2]))
+```
 
 
 data management platform: ([datahub.io](http://datahub.io))
@@ -37,9 +69,60 @@ data(wrld_simpl)
 plot(wrld_simpl)
 ```
 
-
 <http://cran.r-project.org/web/packages/spatstat/vignettes/shapefiles.pdf>
+
+
+
+```{r}
+ind_cons2 <- match(Names2,wrld_simpl$NAME)
+EU_cons <- wrld_simpl[ind_cons2,]
+```
+
+
+
+```{r}
+plot(EU_cons,col="royalblue")
+```
+
+```{r,eval=F, echo=FALSE}
+setwd(graph.path)
+pdf("CountriesEurope.pdf")
+par(mar=c(0,0,0,0))
+plot(EU_cons,col="royalblue")
+dev.off()
+```
+
+
+Eurostat offers the possibility to download the sahpefile for the NUTS regions in Europe.^[<http://ec.europa.eu/eurostat/cache/GISCO/geodatafiles/NUTS_2010_60M_SH.zip>]
+
+
 
 ### The [GADM](http://gadm.org) website.
 
+
+
+## Plot the results
+
+```{r}
+EU_cons@data$X2012Q1 <- as.numeric(as.character(Cons[,3]))
+EU_cons@data$X2013Q1 <- as.numeric(as.character(Cons[,7]))
+EU_cons@data$X2014Q1 <- as.numeric(as.character(Cons[,11]))
+```
+
+
+```{r}
+library(colorRamps)
+spplot(EU_cons,c("X2012Q1","X2013Q1","X2014Q1"),
+       col.regions=matlab.like(100),layout=c(3,1))
+```
+
+
+```{r,eval=F, echo=FALSE}
+setwd(graph.path)
+pdf("Europe_NUTS1_consumption4.pdf",height=2.5)
+par(mar=c(0,0,0,0))
+spplot(EU_cons,c("X2012Q1","X2013Q1","X2014Q1"),
+       col.regions=matlab.like(100),layout=c(3,1))
+dev.off()
+```
 
