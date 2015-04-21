@@ -1,0 +1,88 @@
+---
+title: "Library maptools"
+author: "Jan-Philipp Kolb"
+date: "21. April 2015"
+output: md_document
+---
+
+## The library maptools
+
+- The data set wrld_simpl has polygons for the most countries in the world
+
+```{r}
+library(maptools)
+data(wrld_simpl)
+```
+
+
+## Hello world
+
+```{r}
+plot(wrld_simpl)
+```
+
+
+
+## The data set behind
+
+```{r,eval=F}
+head(wrld_simpl)
+```
+
+
+```{r,results='asis',echo=F}
+library(knitr)
+kable(head(wrld_simpl))
+```
+
+
+## The structure of the data set
+
+- with head you get only the first entries
+
+```{r}
+head(wrld_simpl@data$NAME)
+```
+
+
+## A logical request
+
+```{r}
+ind_SA <- wrld_simpl@data$NAME =="South Africa"
+head(ind_SA)
+```
+
+```{r}
+table(ind_SA)
+```
+
+## A map for South Africa
+
+- plot only one country
+
+```{r}
+SouthAfrica <- wrld_simpl[ind_SA,]
+plot(SouthAfrica)
+```
+
+## Select more than one country
+
+```{r}
+EuropeList <- c('Germany', 'France')
+my_map <- wrld_simpl[wrld_simpl$NAME %in% EuropeList, ]
+plot(my_map)
+```
+
+## More color
+
+```{r}
+my_map@data$color <- c("blue","green")
+plot(my_map,col=my_map@data$color)
+```
+
+## More color for the world
+
+```{r}
+plot(wrld_simpl, bg='azure2', col='khaki', border='#AAAAAA')
+```
+
