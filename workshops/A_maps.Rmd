@@ -2,7 +2,7 @@
 title: "Hello world"
 author: "Jan-Philipp Kolb"
 date: "21. April 2015"
-output: html_document
+output: md_document
 ---
 
 ## The first library
