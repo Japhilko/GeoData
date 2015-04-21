@@ -26,13 +26,13 @@ plot(wrld_simpl)
 ## The data set behind
 
 ```{r,eval=F}
-head(wrld_simpl)
+head(wrld_simpl@data)
 ```
 
 
 ```{r,results='asis',echo=F}
 library(knitr)
-kable(head(wrld_simpl))
+kable(head(wrld_simpl@data))
 ```
 
 

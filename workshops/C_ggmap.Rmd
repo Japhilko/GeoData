@@ -1,0 +1,90 @@
+---
+title: "ggmap"
+author: "Jan-Philipp Kolb"
+date: "13 April 2015"
+output: md_document
+---
+
+## Library ggmap
+
+```{r,message=F}
+library(ggmap)
+```
+
+```{r,message=F}
+qmap("Mannheim")
+MA_map <- qmap("Mannheim",zoom=14)
+```
+
+## Other zoom level
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 12)
+```
+
+## Get closer
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 13)
+```
+
+
+## Get very close
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 20)
+```
+
+## ggmap - source
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 14, source="osm")
+```
+
+
+## ggmap - maptype
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 14, maptype="satellite")
+```
+
+## ggmap - maptype
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 14, maptype="hybrid")
+```
+
+
+## ggmap - maptype
+
+```{r,message=F}
+qmap(location = 'Mannheim', zoom = 14,
+ maptype="toner",source="stamen")
+```
+
+
+## Geocoding
+
+```{r,,message=F}
+POI <- c("B2, 1 Mannheim","Hbf Mannheim",
+         "Wasserturm Mannheim")
+
+ListPOI <- data.frame(lat=NA,lon=NA)
+
+for ( i in 1:length(POI)){
+  geoPOI <- geocode(POI[i])
+  ListPOI[i,"lat"] <-  geoPOI$lat 
+  ListPOI[i,"lon"] <-  geoPOI$lon 
+}
+```
+
+## Points in map
+
+<http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf>
+
+```{r,message=F,warning=F}
+MA_map +
+geom_point(aes(x = lon, y = lat),
+data = ListPOI)
+```
+
