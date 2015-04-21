@@ -86,3 +86,9 @@ plot(my_map,col=my_map@data$color)
 plot(wrld_simpl, bg='azure2', col='khaki', border='#AAAAAA')
 ```
 
+## A map for Europe
+
+```{r}
+Europe <- wrld_simpl[wrld_simpl$REGION=="150",]
+plot(Europe,col="royalblue")
+```
