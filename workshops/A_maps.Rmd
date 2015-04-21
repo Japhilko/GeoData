@@ -1,0 +1,140 @@
+---
+title: "Hello world"
+author: "Jan-Philipp Kolb"
+date: "21. April 2015"
+output: html_document
+---
+
+## The first library
+
+- R is a modular programmin language
+- For many tasks it is necessary to load packages
+
+```{r,message=F}
+  # install the library
+# install.packages("maps")
+
+  # load the library
+library(maps)
+```
+
+## Hello world
+
+```{r}
+map("world")
+```
+
+
+## A map of the USA
+
+- with the argument col, it is possible to specify the border color 
+
+```{r}
+map('usa',col="blue")
+```
+
+
+## A map of France
+
+```{r}
+map("france",fill=T,col="green")
+```
+
+
+## A map of Italy
+
+- get more than one color
+
+```{r}
+map("italy",fill=T, col = 1:10)
+```
+
+## A map of US-states
+
+```{r}
+map("state")
+```
+
+
+## Maps of other countries
+
+- For most of the countries you have to specify two arguments:
+
+```{r}
+map("world", "Germany")
+```
+
+
+## More than one country in a map
+
+```{r}
+map("world", c("Germany","Poland"))
+```
+
+
+## More than one country in a map with colors
+
+```{r}
+map("world", c("Germany","Austria"),fill=T,col=c("red","green"))
+```
+
+## Map scales
+
+```{r}
+map("world", "China")
+map.scale()
+```
+
+## Maps with labels
+
+```{r}
+map.text("world", "Germany")
+```
+
+## Cities data set
+
+```{r}
+data(us.cities)
+```
+
+
+
+```{r,results='asis',echo=F}
+library(knitr)
+kable(head(us.cities))
+```
+
+
+## Map German cities
+
+```{r}
+map("world", "Germany")
+map.cities(country = "Germany")
+```
+
+## Map only capital
+
+```{r}
+map("world", "Germany")
+map.cities(country = "Germany",capitals=1)
+```
+
+## Data set world cities
+
+```{r}
+data(world.cities)
+```
+
+
+```{r,results='asis',echo=F}
+kable(head(world.cities))
+```
+
+## Change type of symbol
+
+```{r}
+map("world", "Germany")
+map.cities(country = "Germany",pch=20,col="red")
+```
+
+
