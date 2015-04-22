@@ -1,0 +1,50 @@
+---
+title: "sp package"
+author: "Jan-Philipp Kolb"
+date: "22. April 2015"
+output: html_document
+---
+
+## The package sp
+
+- classes and methods for spatial data
+
+```{r}
+library(sp)
+```
+
+## Hello world
+
+- A first example using data from maptools
+- [ISO2-codes](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+
+
+```{r,message=F}
+library(maptools)
+data("wrld_simpl")
+ind <- wrld_simpl@data$ISO2%in%c("FR","DE","AT","CH")
+my_map <- wrld_simpl[ind,]
+plot(my_map)
+```
+
+
+## The data set
+
+```{r}
+my_map@data
+```
+
+
+```{r,echo=F}
+library(knitr)
+kable(my_map@data)
+```
+
+
+
+## First example
+
+```{r}
+spplot(my_map,"POP2005")
+```
+
