@@ -2,7 +2,7 @@
 title: "ggmap"
 author: "Jan-Philipp Kolb"
 date: "13 April 2015"
-output: md_document
+output: html_document
 ---
 
 ## Library ggmap
@@ -87,4 +87,13 @@ MA_map +
 geom_point(aes(x = lon, y = lat),
 data = ListPOI)
 ```
+
+## Get the distance between 2 points
+
+```{r,message=F}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
+```
+
+
+
 
