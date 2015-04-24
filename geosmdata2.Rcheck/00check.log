@@ -1,0 +1,13 @@
+* using log directory 'C:/Users/kolbjp/Documents/GitHub/GeoData/geosmdata2.Rcheck'
+* using R version 3.1.2 (2014-10-31)
+* using platform: x86_64-w64-mingw32 (64-bit)
+* using session charset: ISO8859-1
+* checking for file 'geosmdata2/DESCRIPTION' ... OK
+* checking extension type ... Package
+* this is package 'geosmdata2' version '0.1'
+* checking package namespace information ... OK
+* checking package dependencies ... ERROR
+Namespace dependency not required: 'osmar'
+
+See the information on DESCRIPTION files in the chapter 'Creating R
+packages' of the 'Writing R Extensions' manual.

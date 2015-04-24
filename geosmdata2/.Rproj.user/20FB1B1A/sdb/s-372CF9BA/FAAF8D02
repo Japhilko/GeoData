@@ -1,0 +1,18 @@
+{
+    "contents" : "\n\npkg.path <- \"C:/Users/kolbjp/Documents/GitHub/GeoData/geosmdata2/data\"\n\nlibrary(ggmap)\nlibrary(osmar)\n\napi <- osmsource_api()\ncityC <- geocode(\"Berlin\")\nbb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)\nuaBerlin <- get_osm(bb, source = api)\n\nsetwd(pkg.path)\nsave(uaBerlin,file=\"uaBerlin.RData\")\n\nlibrary(roxygen2)\n\n\n# https://support.rstudio.com/hc/en-us/articles/200486518-Customizing-Package-Build-Options",
+    "created" : 1429869875457.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "829175117",
+    "id" : "FAAF8D02",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
