@@ -1,0 +1,15 @@
+---
+title: "First Steps in R"
+author: "Jan-Philipp Kolb"
+date: "24. April 2015"
+output: md_document
+---
+
+
+
+
+<https://learnr.wordpress.com/>
+
+## Graphics
+
+<http://www.harding.edu/fmccown/r/>

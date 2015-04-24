@@ -1,0 +1,24 @@
+---
+title: "Data sources"
+author: "Jan-Philipp Kolb"
+date: "24. April 2015"
+output: html_document
+---
+
+## Data from Open Street Map
+
+```{r}
+library(osmar)
+
+```
+
+
+## The worldHires data
+
+```{r}
+library(mapdata)
+data(worldHiresMapEnv)
+map('worldHires', col=1:10)
+```
+
+
