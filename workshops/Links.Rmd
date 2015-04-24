@@ -1,0 +1,12 @@
+---
+title: "Interesting Links"
+author: "Jan-Philipp Kolb"
+date: "24. April 2015"
+output: html_document
+---
+
+<file:///D:/Dropbox/RForschung/SpatialCourse/Rcode/makingmaps/makingmaps.html>
+
+<http://www.molecularecologist.com/2012/09/making-maps-with-r/>
+
+<http://thematicmapping.org/downloads/world_borders.php>

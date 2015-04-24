@@ -1,0 +1,25 @@
+---
+title: "GoogleVis package"
+author: "Jan-Philipp Kolb"
+date: "24. April 2015"
+output: html_document
+---
+
+
+```{r,message=F}
+library(googleVis)
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData")
+```
+
+
+
+```{r}
+?gvisMap
+M1 <- gvisMap(Andrew, "LatLong" , "Tip",
+              options=list(showTip=TRUE, showLine=TRUE, enableScrollWheel=TRUE,
+                           mapType='hybrid', useMapTypeControl=TRUE,
+                           width=800,height=400))
+
+plot(M1)
+```
+

@@ -1,0 +1,10 @@
+Package: geosmdata2
+Type: Package
+Title: Get data from Open Street Map
+Version: 0.1
+Date: 2015-04-24
+Author: Jan-Philipp Kolb
+Maintainer: <Jan-Philipp_Kolb@gmx.net>
+Description: This package is a wrapper for some functions provided in the osmar package.
+License: The GNU General Public License version 2
+LazyData: TRUE

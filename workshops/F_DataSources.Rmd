@@ -7,9 +7,18 @@ output: html_document
 
 ## Data from Open Street Map
 
-```{r}
+```{r,message=F}
 library(osmar)
+api <- osmsource_api()
+library(ggmap)
+```
 
+## Download OSM data 
+
+```{r}
+cityC <- geocode("Berlin")
+bb <- center_bbox(cityC$lon,cityC$lat,1200, 1200)
+ua <- get_osm(bb, source = api)
 ```
 
 

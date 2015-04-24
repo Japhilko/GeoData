@@ -1,0 +1,18 @@
+{
+    "contents" : "\n\nlibrary(roxygen2)\n\n\n# https://support.rstudio.com/hc/en-us/articles/200486518-Customizing-Package-Build-Options",
+    "created" : 1429869875457.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1271829497",
+    "id" : "FAAF8D02",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
