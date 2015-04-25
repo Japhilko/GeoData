@@ -2,7 +2,7 @@
 title: "ggmap"
 author: "Jan-Philipp Kolb"
 date: "13 April 2015"
-output: html_document
+output: md_document
 ---
 
 ## Library ggmap
@@ -62,6 +62,16 @@ qmap(location = 'Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
 
+## Other ways to get a map
+
+- qmap is a wrapper for ggmap and get_map
+- with get_googlemap you get similar results
+
+```{r,meassage=F}
+MAmap <- get_googlemap("Mannheim")
+ggmap(MAmap)
+```
+
 
 ## Geocoding
 
@@ -94,6 +104,12 @@ data = ListPOI)
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
 ```
 
+```{r,message=F}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
+```
 
+```{r,message=F}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
+```
 
 

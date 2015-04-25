@@ -17,8 +17,8 @@ library(ggmap)
 
 ```{r}
 cityC <- geocode("Berlin")
-bb <- center_bbox(cityC$lon,cityC$lat,1200, 1200)
-ua <- get_osm(bb, source = api)
+bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
+uaBerlin <- get_osm(bb, source = api)
 ```
 
 
@@ -30,4 +30,11 @@ data(worldHiresMapEnv)
 map('worldHires', col=1:10)
 ```
 
+
+## Historic data
+
+```{r}
+library(HistData)
+data(Arbuthnot)
+```
 

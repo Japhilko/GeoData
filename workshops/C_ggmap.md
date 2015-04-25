@@ -59,6 +59,25 @@ ggmap - maptype
 
 ![](C_ggmap_files/figure-markdown_strict/unnamed-chunk-9-1.png)
 
+Other ways to get a map
+-----------------------
+
+-   qmap is a wrapper for ggmap and get\_map
+-   with get\_googlemap you get similar results
+
+<!-- -->
+
+    MAmap <- get_googlemap("Mannheim")
+
+    ## Map from URL : http://maps.googleapis.com/maps/api/staticmap?center=Mannheim&zoom=10&size=%20640x640&maptype=terrain&sensor=false
+    ## Google Maps API Terms of Service : http://developers.google.com/maps/terms
+    ## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Mannheim&sensor=false
+    ## Google Maps API Terms of Service : http://developers.google.com/maps/terms
+
+    ggmap(MAmap)
+
+![](C_ggmap_files/figure-markdown_strict/unnamed-chunk-10-1.png)
+
 Geocoding
 ---------
 
@@ -82,4 +101,26 @@ Points in map
     geom_point(aes(x = lon, y = lat),
     data = ListPOI)
 
-![](C_ggmap_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](C_ggmap_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+
+Get the distance between 2 points
+---------------------------------
+
+    mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
+
+    ##             from             to   m    km     miles seconds minutes  hours
+    ## 1 Q1, 4 Mannheim B2, 1 Mannheim 741 0.741 0.4604574     207    3.45 0.0575
+
+    mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
+
+    ##             from             to   m    km     miles seconds  minutes
+    ## 1 Q1, 4 Mannheim B2, 1 Mannheim 546 0.546 0.3392844     421 7.016667
+    ##       hours
+    ## 1 0.1169444
+
+    mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
+
+    ##             from             to   m    km    miles seconds  minutes
+    ## 1 Q1, 4 Mannheim B2, 1 Mannheim 555 0.555 0.344877     215 3.583333
+    ##        hours
+    ## 1 0.05972222

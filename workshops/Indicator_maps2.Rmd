@@ -126,3 +126,8 @@ spplot(EU_cons,c("X2012Q1","X2013Q1","X2014Q1"),
 dev.off()
 ```
 
+## Links and references
+
+<http://rpubs.com/adam_dennett/8955>
+
+<http://wiekvoet.blogspot.de/2015/04/unemployment-of-europe-in-2014-by-nuts.html>
