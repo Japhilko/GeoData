@@ -10,3 +10,10 @@ output: html_document
 <http://www.molecularecologist.com/2012/09/making-maps-with-r/>
 
 <http://thematicmapping.org/downloads/world_borders.php>
+
+## Flowing data
+
+Where people run
+
+<http://flowingdata.com/2014/02/05/where-people-run/>
+

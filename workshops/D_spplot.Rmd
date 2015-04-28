@@ -48,3 +48,4 @@ kable(my_map@data)
 spplot(my_map,"POP2005")
 ```
 
+

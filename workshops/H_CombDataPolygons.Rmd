@@ -1,0 +1,17 @@
+---
+title: "Combine polygons with data"
+author: "Jan-Philipp Kolb"
+date: "25. April 2015"
+output: ioslides_presentation
+---
+
+## Load polygons
+
+- Examples are also on this [blog post](http://wiekvoet.blogspot.de/2015/04/unemployment-of-europe-in-2014-by-nuts.html)
+- We have to load necessary libraries:
+
+```{r}
+library(maptools)
+library(xml2)
+```
+
