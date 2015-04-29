@@ -33,6 +33,8 @@ map('worldHires', col=1:10)
 
 ## Historic data
 
+<http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/>
+
 ```{r}
 library(HistData)
 data(Arbuthnot)
