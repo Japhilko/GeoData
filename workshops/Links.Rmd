@@ -5,7 +5,34 @@ date: "24. April 2015"
 output: html_document
 ---
 
+
+## Intro R
+
+<http://manuals.bioinformatics.ucr.edu/home/programming-in-r>
+
+
+## Popularity R
+
+<http://www.gulli.com/news/23740-programmiersprache-r-in-der-wissenschaft-immer-beliebter-2014-04-24>
+
+<http://community.oreilly.de/blog/2011/01/18/statistiksoftware-r/>
+
+<http://www.nytimes.com/2009/01/07/technology/business-computing/07program.html?_r=0>
+
+<http://www.r-bloggers.com/top-100-r-packages-for-2013-jan-may/>
+
+<http://www.r-bloggers.com/a-list-of-r-packages-by-popularity/>
+
+
+
+## Making maps
+
+<http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/>
+
 <file:///D:/Dropbox/RForschung/SpatialCourse/Rcode/makingmaps/makingmaps.html>
+
+
+<http://www.r-bloggers.com/visualizing-gis-data-with-r-and-open-street-map/>
 
 <http://www.molecularecologist.com/2012/09/making-maps-with-r/>
 
@@ -17,3 +44,116 @@ Where people run
 
 <http://flowingdata.com/2014/02/05/where-people-run/>
 
+## R conferences
+
+<http://www.r-bloggers.com/some-r-conferences-in-2015/>
+
+
+```{r}
+  # http://www.r-bloggers.com/mapping-biomes/
+  # http://fwtools.maptools.org/
+
+  #http://www.r-bloggers.com/no-surprises-more-people-tweet-more-visualizing-twitter-counts-during-election-day/
+```
+
+## Comics
+
+<http://xkcd.com/1138/>
+
+
+
+## Julia Language
+
+<http://julialang.org/learning/>
+
+<http://www.inwt-statistics.de/blog-artikel-lesen/Statistik-Software_R.html>
+
+<https://github.com/openlayers/openlayers>
+
+## Further Languages
+
+<http://www.rzbt.haw-hamburg.de/dankert/ccppjava.html/>
+
+## Python
+
+<http://civilstat.com/2012/10/javascript-and-d3-for-r-users-part-2-running-off-the-r-server-instead-of-python/>
+
+## Java
+
+<http://clojure.org/>
+
+
+##  getting to know html
+
+<https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction>
+
+## Javascript
+
+<http://www.dateiendung.com/format/js>
+
+
+## R and Javascript
+
+<http://www.r-bloggers.com/statistical-computation-in-javascript-am-i-nuts/>
+
+<http://www.htmlwidgets.org/>
+
+## Running javascript using V8
+
+
+```{r,eval=F}
+library(V8)
+data(diamonds, package="ggplot2")
+ct <- new_context()
+ct$assign("diamonds", diamonds)
+
+# Load CrossFilter JavaScript library
+ct$source("http://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.11/crossfilter.min.js")
+
+ct$console()
+```
+
+
+## openlayers
+
+<http://openlayers.org/en/v3.2.0/doc/tutorials/introduction.html>
+
+## Some helpers
+
+<http://www.w3schools.com/html/html_intro.asp>
+
+## Open CPU
+
+<https://www.opencpu.org/>
+
+
+## R and Hadoop
+
+<https://github.com/RevolutionAnalytics/RHadoop/wiki>
+
+```{r}
+# http://rapache.net/
+```
+
+
+## Links
+
+<http://www.r-bloggers.com/become-an-effective-data-hacker-with-the-r-hadoop-stack/>
+<http://blog.revolutionanalytics.com/2011/09/mapreduce-hadoop-r.html>
+
+
+## Further links
+
+<http://www.r-bloggers.com/introducing-v8-an-embedded-javascript-engine-for-r/>
+
+<http://jsfiddle.net/user/opencpu/fiddles/>
+
+<https://www.opencpu.org/posts/v8-release-0-2/>
+<https://www.r-bloggers.com/introducing-v8-an-embedded-javascript-engine-for-r/>
+
+<http://rforge.net/JRI/index.html>
+
+
+```{r,eval=F}
+system.file("jri",package="rJava")
+```

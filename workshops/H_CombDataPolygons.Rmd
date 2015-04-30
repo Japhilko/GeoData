@@ -15,3 +15,11 @@ library(maptools)
 library(xml2)
 ```
 
+## GUI for spatial data
+
+<http://www.r-bloggers.com/open-street-maps/>
+
+```{r,eval=F}
+library(DeducerSpatial)
+```
+

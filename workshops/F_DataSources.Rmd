@@ -21,6 +21,15 @@ bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
 uaBerlin <- get_osm(bb, source = api)
 ```
 
+## TwittR
+
+```{r,eval=F}
+library(twitteR)
+library(streamR)
+```
+
+
+<http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/>
 
 ## The worldHires data
 
@@ -38,5 +47,11 @@ map('worldHires', col=1:10)
 ```{r}
 library(HistData)
 data(Arbuthnot)
+```
+
+## Data for the US
+
+```{r,eval=F}
+library(UScensus2000)
 ```
 
