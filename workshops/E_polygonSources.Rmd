@@ -1,0 +1,17 @@
+---
+title: "Sources for polygons"
+author: "Jan-Philipp Kolb"
+date: "24. April 2015"
+output: md_document
+---
+
+
+```{r,eval=F,echo=F}
+git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData"
+setwd(git.path)
+library(mapdata)
+```
+
+
+
+<http://thematicmapping.org/downloads/world_borders.php>
