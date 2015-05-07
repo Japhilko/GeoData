@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Georeferenzierung\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"7. Mai 2015\"\noutput: slidy_presentation\n---\n\n## Allgemein\n\nUnter dem Vorgang der Georeferenzierung, Geokodierung, Geotagging oder Verortung versteht man die Zuweisung raumbezogener Informationen, der Georeferenz, zu einem Datensatz.\n\n<http://de.wikipedia.org/wiki/Georeferenzierung>\n\n\n\n\n```{r,eval=F,echo=F}\nmain.path <- \"J:/Work/Statistik/Kolb/Vorträge/20151101_LifBi_Georeferenzierung/slides\"\nsetwd(main.path)\n```\n\n",
+    "created" : 1430991523951.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1287118829",
+    "id" : "8F7CCD52",
+    "lastKnownWriteTime" : 1430991849,
+    "path" : "J:/Work/Statistik/Kolb/Vorträge/20151101_LifBi_Georeferenzierung/slides/lifbi_georef.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

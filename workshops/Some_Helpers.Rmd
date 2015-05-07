@@ -32,3 +32,12 @@ You can enable figure captions by `fig_caption: yes` in YAML:
 ## <http://github.org>
 
 <http://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/>
+
+## rmarkdown
+
+see the documentation for the rmarkdown package
+
+```{r,eval=F}
+library(rmarkdown)
+```
+
