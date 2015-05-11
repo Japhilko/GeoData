@@ -38,6 +38,10 @@ output: html_document
 
 <http://thematicmapping.org/downloads/world_borders.php>
 
+<http://www.r-bloggers.com/eu-life-quality-geo-report/>
+
+<http://www.r-bloggers.com/choroplethr-v3-1-0-better-summary-demographic-data/>
+
 ## Flowing data
 
 Where people run
