@@ -38,9 +38,9 @@ output: html_document
 
 <http://thematicmapping.org/downloads/world_borders.php>
 
-<http://www.r-bloggers.com/eu-life-quality-geo-report/>
+Google maps:
 
-<http://www.r-bloggers.com/choroplethr-v3-1-0-better-summary-demographic-data/>
+<http://www.r-bloggers.com/creating-styled-google-maps-in-ggmap/>
 
 ## Flowing data
 
@@ -81,6 +81,8 @@ Where people run
 ## Python
 
 <http://civilstat.com/2012/10/javascript-and-d3-for-r-users-part-2-running-off-the-r-server-instead-of-python/>
+
+<http://rforwork.info/2015/05/28/an-r-enthusiast-goes-pythonic/>
 
 ## Java
 
@@ -139,6 +141,9 @@ ct$console()
 # http://rapache.net/
 ```
 
+## Using a database and R
+
+<http://www.r-bloggers.com/using-azure-as-an-r-datasource-part-2-pulling-data-from-mysqlmariadb/>
 
 ## Links
 
