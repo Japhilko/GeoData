@@ -2,7 +2,7 @@
 title: "First Steps in R"
 author: "Jan-Philipp Kolb"
 date: "24. April 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 ## Why use R
@@ -17,6 +17,15 @@ output: md_document
 ## Why use R II
 
 ![alt text](http://www.edureka.co/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
+
+
+## Geographic information systems and R
+
+- R and QGIS
+
+[qgis](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/300px-QGis_Logo.png)
+
 
 ## Online workshops to learn R
 
