@@ -41,3 +41,14 @@ see the documentation for the rmarkdown package
 library(rmarkdown)
 ```
 
+
+## Cite a r-package
+
+```{r}
+citation(package = "cluster")
+citation(package = "xlsx")
+citation(package = "foreign")
+citation(package = "mice")
+```
+
+<http://www.blopig.com/blog/2013/07/citing-r-packages-in-your-thesispaperassignments/>
