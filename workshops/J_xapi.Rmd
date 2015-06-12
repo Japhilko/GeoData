@@ -62,7 +62,19 @@ abcd <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=
 
 
 
+```{r}
+library(raster)
+LUX3 <- getData('GADM', country='LUX', level=3)
 
+LUXT <- LUX3[LUX3@data$NAME_3=="Troisvierges",]
+```
+
+```{r}
+library(sp)
+bLUXT <- bbox(LUXT)
+bbox3 <- paste(bLUXT[1,1],bLUXT[2,1],bLUXT[1,2],bLUXT[2,2],sep=",")
+abct <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox3,"%5D",sep=""))
+```
 
 
 

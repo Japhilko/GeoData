@@ -6,6 +6,42 @@ output: md_document
 ---
 
 
+## GADM
+
+```{r}
+library(raster)
+LUX2 <- getData('GADM', country='LUX', level=2)
+
+LUX3 <- getData('GADM', country='LUX', level=3)
+
+LUX4 <- getData('GADM', country='LUX', level=4)
+```
+
+```{r}
+plot(LUX4)
+```
+
+```{r}
+DEU3 <- getData('GADM', country='DEU', level=3)
+```
+
+
+## Postal codes for Germany
+
+<http://datahub.io/de/dataset/postal-codes-de>
+
+```{r}
+setwd("D:/Daten/Daten/GeoDaten")
+library(rgdal)
+PLZ <- readOGR ("post_pl.shp","post_pl")
+MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
+bbox4 <- bbox(MA)
+```
+
+
+
+## Other sources
+
 ```{r,eval=F,echo=F}
 git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData"
 setwd(git.path)

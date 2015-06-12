@@ -67,6 +67,11 @@ Where people run
   #http://www.r-bloggers.com/no-surprises-more-people-tweet-more-visualizing-twitter-counts-during-election-day/
 ```
 
+
+## Interesting geolinks
+
+<http://www.gis-mannheim.de/>
+
 ## Comics
 
 <http://xkcd.com/1138/>
