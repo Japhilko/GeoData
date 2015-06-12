@@ -83,6 +83,10 @@ library(rgdal)
 PLZ <- readOGR ("post_pl.shp","post_pl")
 MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
 bMA <- bbox(MA)
+
+MA2 <- PLZ[PLZ@data$PLZ99=="68159",]
+bMA2 <- bbox(MA2)
+
 bbox4 <- paste(bMA[1,1],bMA[2,1],bMA[1,2],bMA[2,2],sep=",")
 abcm <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox4,"%5D",sep=""))
 ```
