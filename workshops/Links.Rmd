@@ -38,6 +38,13 @@ output: html_document
 
 <http://thematicmapping.org/downloads/world_borders.php>
 
+<http://www.r-bloggers.com/introductory-point-pattern-analysis-of-open-crime-data-in-london/>
+
+<http://www.r-bloggers.com/u-s-drought-monitoring-with-hexbin-state-maps-in-r/>
+## Interactive maps
+
+<http://r-video-tutorial.blogspot.ch/2015/05/exchange-data-between-r-and-google-maps.html>
+
 Google maps:
 
 <http://www.r-bloggers.com/creating-styled-google-maps-in-ggmap/>
@@ -83,6 +90,8 @@ Where people run
 <http://civilstat.com/2012/10/javascript-and-d3-for-r-users-part-2-running-off-the-r-server-instead-of-python/>
 
 <http://rforwork.info/2015/05/28/an-r-enthusiast-goes-pythonic/>
+
+<http://www.r-bloggers.com/choosing-r-or-python-for-data-analysis-an-infographic/>
 
 ## Java
 

@@ -1,0 +1,34 @@
+---
+title: "Use R-package osmar"
+author: "Jan-Philipp Kolb"
+date: "Thu Jun 11 17:13:33 2015"
+output: ioslides_presentation
+---
+
+## Download information
+
+```{r}
+library(ggmap)
+library(osmar)
+api <- osmsource_api()
+```
+
+```{r}
+cityC <- geocode("Mannheim Seckenheim")
+bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
+ua <- get_osm(bb, source = api)
+```
+
+## What is inside:
+
+You get three types of objects:
+```{r}
+names(ua)
+```
+
+## What is behind:
+
+Osmosis is a command line Java application for processing OSM data.
+
+<http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29>
+
