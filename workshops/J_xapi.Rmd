@@ -77,9 +77,31 @@ abct <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=
 ```
 
 
+```{r}
+setwd("D:/Daten/Daten/GeoDaten")
+library(rgdal)
+PLZ <- readOGR ("post_pl.shp","post_pl")
+MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
+bMA <- bbox(MA)
+bbox4 <- paste(bMA[1,1],bMA[2,1],bMA[1,2],bMA[2,2],sep=",")
+abcm <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox4,"%5D",sep=""))
+```
+
 
 ```{r}
-?xmlToList
+List_abcm <- xmlToList(abcm)
+
+List_abcm[[1]][2]
+
+List_abcm[[2]][2]
+```
+
+
+```{r}
+xList<- lapply(List_abcm,unlist)
+
+ListEl <- xList[[1]]
+ListEl[which(ListEl=="name")+1]
 ```
 
 
@@ -88,7 +110,34 @@ abct <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=
 abce <- xmlParse("http://open.mapquestapi.com/xapi/api/0.6/node[amenity=pub][bbox=8.41420088819042,49.467729452325514,8.551529989747436,49.517905125443455]")
 ```
 
+## Getting different map features
+
+<http://wiki.openstreetmap.org/wiki/Map_Features>
+```{r}
+
+bb_x=bbox(MA)
+
+object_x="leisure=playground"
+
+request_xapi <- function(bb_x,object_x){
+  bbox_x <- paste(bb_x[1,1],bb_x[2,1],bb_x[1,2],bb_x[2,2],sep=",")
+  xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bbox_x,"%5D",sep=""))
+}
+
+MA_pg <-  request_xapi(bb_x=bbox(MA),object_x="leisure=playground")
+
+
+MA_bakery <-  request_xapi(bb_x=bbox(MA),object_x="shop=bakery")
+```
+
+
 
 ## Links
+
+Working with XML files:
+
+<http://www.informit.com/articles/article.aspx?p=2215520>
+
+
 
 <http://gis.stackexchange.com/questions/18124/how-do-i-download-specific-openstreetmap-data-by-tag>

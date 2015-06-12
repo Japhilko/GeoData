@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Graphics with Rstudio\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"7. Mai 2015\"\noutput: ioslides_presentation\n---\n\n## Graphics with R\n\n<http://www.r-bloggers.com/rstudio-v0-99-preview-graphviz-and-diagrammer/>\n\n## DiagrammeR\n\n```{r,eval=F,echo=F}\ninstall.packages(\"DiagrammeR\")\nlibrary(DiagrammeR)\ndevtools::install_github('rich-iannone/DiagrammeR')\n```\n\n\n\n<http://rich-iannone.github.io/DiagrammeR/>\n",
+    "created" : 1431000719261.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "219972516",
+    "id" : "FD03DE4A",
+    "lastKnownWriteTime" : 1431001455,
+    "path" : "~/GitHub/RVisualisation/slides/DiagrammR.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
