@@ -28,9 +28,20 @@ Organisation of bounding box:
 
 [left,bottom,right,top]
 
+or:
+
+[east,south,west,north]
+
+or:
+
+[lon.min,lat.min,lon.max,lat.max]
+
+
 for example Mannheim Seckenheim:
 
 [8.5382,49.4573,8.5808,49.4759]
+
+Links to download information from this section:
 
 <http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=8.5382,49.4573,8.5808,49.4759%5D>
 
@@ -134,6 +145,26 @@ MA_pg <-  request_xapi(bb_x=bbox(MA),object_x="leisure=playground")
 MA_bakery <-  request_xapi(bb_x=bbox(MA),object_x="shop=bakery")
 ```
 
+## How to create a bounding box:
+
+```{r}
+library(ggmap)
+
+gc_HD <- geocode("Heidelberg")
+
+box.value <- 0.0075
+
+gc_HD_min <- gc_HD - box.value
+gc_HD_max <- gc_HD + box.value
+
+# [lon.min,lat.min,lon.max,lat.max]
+bbox_x <- paste(gc_HD_min$lon,gc_HD_min$lat,gc_HD_max$lon,gc_HD_max$lat,sep=",")
+object_x="leisure=playground"
+xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bbox_x,"%5D",sep=""))
+```
+
+## Possibility to save results:
+
 
 
 ## Links
@@ -145,3 +176,12 @@ Working with XML files:
 
 
 <http://gis.stackexchange.com/questions/18124/how-do-i-download-specific-openstreetmap-data-by-tag>
+
+
+Defining an adequate bounding box:
+
+<http://gis.stackexchange.com/questions/46954/clip-spatial-object-to-bounding-box-in-r>
+
+Clipping spatial data in R:
+
+<http://robinlovelace.net/r/2014/07/29/clipping-with-r.html>
