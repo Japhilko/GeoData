@@ -165,6 +165,48 @@ xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",obje
 
 ## Possibility to save results:
 
+```{r,echo=F,eval=F}
+setwd("D:/Daten/Daten/GeoDaten/XAPI")
+```
+
+```{r,eval=F}
+object_x1 <- "playground"
+save(xapi_x,file=paste("xapi_HD_",object_x1,".RData",sep=""))
+```
+
+## Another Example
+
+```{r}
+location="Schwetzingen"
+object_x="amenity=school"
+
+
+create_bbox <- function(location,box.value){
+  gc_loc <- geocode(location)
+
+  gc_loc_min <- gc_loc - box.value
+  gc_loc_max <- gc_loc + box.value
+  bbox_x <- paste(gc_loc_min$lon,gc_loc_min$lat,gc_loc_max$lon,gc_loc_max$lat,sep=",")
+}
+
+bb_SW <- create_bbox(location="Schwetzingen",box.value=0.0075)
+xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bb_SW,"%5D",sep=""))
+```
+
+
+```{r,eval=F}
+object_x1 <- "school"
+save(xapi_x,file=paste("xapi_HD_",location,"_",object_x1,".RData",sep=""))
+```
+
+
+## Get results for a bigger area
+
+```{r}
+
+```
+
+
 
 
 ## Links

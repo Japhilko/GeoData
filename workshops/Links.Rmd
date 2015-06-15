@@ -165,6 +165,10 @@ ct$console()
 <http://blog.revolutionanalytics.com/2011/09/mapreduce-hadoop-r.html>
 
 
+OpenGov
+
+<http://ropengov.github.io/projects/>
+
 ## Further links
 
 <http://www.r-bloggers.com/introducing-v8-an-embedded-javascript-engine-for-r/>
