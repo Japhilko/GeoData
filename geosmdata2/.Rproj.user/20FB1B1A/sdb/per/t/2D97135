@@ -1,0 +1,18 @@
+{
+    "contents" : "\nlibrary(XML)\n\nsetwd(\"C:/Users/kolbjp/Documents/GitHub/GeoData/geosmdata2/data\")\n\n# http://open.mapquestapi.com/xapi/\n\ndat <- c(8.417813,8.59396,49.410141,49.58984)\nbb_x1 <- array(dat,c(2,2))\n\nobject_x=\"leisure=playground\"\n\nMA_pg  <- xmlParse(paste(\"http://open.mapquestapi.com/xapi/api/0.6/node%5B\",object_x,\"%5D%5Bbbox=\",bbox_x,\"%5D\",sep=\"\"))\n\nsave(MA_pg,file=\"MA_pg.RData\")\n\n\n",
+    "created" : 1434015953871.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2146594482",
+    "id" : "2D97135",
+    "lastKnownWriteTime" : 1434101275,
+    "path" : "J:/Work/Statistik/Kolb/Vorträge/20151101_LifBi_Georeferenzierung/rcode/xapi_object.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
