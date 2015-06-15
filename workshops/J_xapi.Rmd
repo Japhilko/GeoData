@@ -51,7 +51,8 @@ Links to download information from this section:
 ab <- xmlParse("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=-77.041579,38.885851,-77.007247,38.900881%5D")
 
 bbox <- "-77.041579,38.885851,-77.007247,38.900881"
-abc <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox,"%5D",sep=""))
+abc <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",
+                      bbox,"%5D",sep=""))
 ```
 
 Finding a specific place
@@ -68,7 +69,8 @@ MAcode4 <- geocode("Mannheim Wallstadt")
 
   # [left,bottom,right,top]
 bbox2 <- paste(MAcode3$lon,MAcode2$lat,MAcode4$lon,MAcode1$lat,sep=",")
-abcd <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox2,"%5D",sep=""))
+abcd <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",
+                       bbox2,"%5D",sep=""))
 ```
 
 
@@ -84,7 +86,8 @@ LUXT <- LUX3[LUX3@data$NAME_3=="Troisvierges",]
 library(sp)
 bLUXT <- bbox(LUXT)
 bbox3 <- paste(bLUXT[1,1],bLUXT[2,1],bLUXT[1,2],bLUXT[2,2],sep=",")
-abct <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox3,"%5D",sep=""))
+abct <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",
+                       bbox3,"%5D",sep=""))
 ```
 
 
@@ -99,7 +102,8 @@ MA2 <- PLZ[PLZ@data$PLZ99=="68159",]
 bMA2 <- bbox(MA2)
 
 bbox4 <- paste(bMA[1,1],bMA[2,1],bMA[1,2],bMA[2,2],sep=",")
-abcm <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",bbox4,"%5D",sep=""))
+abcm <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",
+                       bbox4,"%5D",sep=""))
 ```
 
 
@@ -136,7 +140,8 @@ object_x="leisure=playground"
 
 request_xapi <- function(bb_x,object_x){
   bbox_x <- paste(bb_x[1,1],bb_x[2,1],bb_x[1,2],bb_x[2,2],sep=",")
-  xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bbox_x,"%5D",sep=""))
+  xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
+                           "%5D%5Bbbox=",bbox_x,"%5D",sep=""))
 }
 
 MA_pg <-  request_xapi(bb_x=bbox(MA),object_x="leisure=playground")
@@ -160,7 +165,8 @@ gc_HD_max <- gc_HD + box.value
 # [lon.min,lat.min,lon.max,lat.max]
 bbox_x <- paste(gc_HD_min$lon,gc_HD_min$lat,gc_HD_max$lon,gc_HD_max$lat,sep=",")
 object_x="leisure=playground"
-xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bbox_x,"%5D",sep=""))
+xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
+                         "%5D%5Bbbox=",bbox_x,"%5D",sep=""))
 ```
 
 ## Possibility to save results:
@@ -190,7 +196,8 @@ create_bbox <- function(location,box.value){
 }
 
 bb_SW <- create_bbox(location="Schwetzingen",box.value=0.0075)
-xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bb_SW,"%5D",sep=""))
+xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
+                         "%5D%5Bbbox=",bb_SW,"%5D",sep=""))
 ```
 
 
@@ -202,8 +209,15 @@ save(xapi_x,file=paste("xapi_HD_",location,"_",object_x1,".RData",sep=""))
 
 ## Get results for a bigger area
 
-```{r}
+bus station does not work so good
 
+```{r}
+loc1="Mannheim Seckenheim"
+object_x="amenity=parking"
+bv=0.05
+bb_SK <- create_bbox(loc1,bv)
+xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
+                         "%5D%5Bbbox=",bb_SK,"%5D",sep=""))
 ```
 
 
@@ -211,14 +225,16 @@ save(xapi_x,file=paste("xapi_HD_",location,"_",object_x1,".RData",sep=""))
 
 ## Links
 
+Usage of overpass API:
+
+<http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/>
+
+
 Working with XML files:
 
 <http://www.informit.com/articles/article.aspx?p=2215520>
 
-
-
-<http://gis.stackexchange.com/questions/18124/how-do-i-download-specific-openstreetmap-data-by-tag>
-
+<http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf>
 
 Defining an adequate bounding box:
 
@@ -227,3 +243,8 @@ Defining an adequate bounding box:
 Clipping spatial data in R:
 
 <http://robinlovelace.net/r/2014/07/29/clipping-with-r.html>
+
+Other information:
+
+<http://gis.stackexchange.com/questions/18124/how-do-i-download-specific-openstreetmap-data-by-tag>
+
