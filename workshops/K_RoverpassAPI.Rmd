@@ -1,0 +1,15 @@
+---
+title: "R and overpass api"
+author: "Jan-Philipp Kolb"
+date: "16. Juni 2015"
+output: html_document
+---
+
+```{r,eval=F,echo=F}
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/workshops")
+```
+
+
+## Links
+
+<https://www.mapbox.com/guides/overpass-turbo/>

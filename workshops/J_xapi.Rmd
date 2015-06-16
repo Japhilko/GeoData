@@ -240,6 +240,13 @@ Defining an adequate bounding box:
 
 <http://gis.stackexchange.com/questions/46954/clip-spatial-object-to-bounding-box-in-r>
 
+
+All streets project:
+
+<http://benfry.com/writing/archives/category/allstreets>
+
+
+
 Clipping spatial data in R:
 
 <http://robinlovelace.net/r/2014/07/29/clipping-with-r.html>
