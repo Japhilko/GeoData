@@ -88,6 +88,10 @@ Where people run
 
 ## Further Languages
 
+Comparison of R and other statistical programs
+
+<http://blog.datacamp.com/statistical-language-wars-the-infograph/>
+
 <http://www.rzbt.haw-hamburg.de/dankert/ccppjava.html/>
 
 ## Python

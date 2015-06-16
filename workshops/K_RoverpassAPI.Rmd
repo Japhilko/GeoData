@@ -10,6 +10,22 @@ setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/workshops")
 ```
 
 
+
+```{r}
+object_x="place=neighbourhood"
+loc1="Mannheim"
+bv=0.1
+bb_SK <- create_bbox(loc1,bv)
+overpass_info <- xmlParse(paste("http://www.overpass-api.de/api/xapi?way[bbox=",bb_SK,"][",object_x,"]",
+                                sep=""))
+```
+
+
+## Working with XML and xpath
+
+<http://www.data2type.de/xml-xslt-xslfo/xpath/xpath-einfuehrung/>  
+
+
 ## Links
 
 <https://www.mapbox.com/guides/overpass-turbo/>
