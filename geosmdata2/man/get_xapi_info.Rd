@@ -20,6 +20,6 @@ Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 bbox_x1 <- "8.461786,49.4320257,8.5514127,49.4984071"
 object_x="amenity=pub"
 
-MA_pub <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bbox_x1,"%5D",sep=""))
+# MA_pub <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,"%5D%5Bbbox=",bbox_x1,"%5D",sep=""))
 
 }
