@@ -23,9 +23,24 @@ overpass_info <- xmlParse(paste("http://www.overpass-api.de/api/xapi?way[bbox=",
 
 ## Working with XML and xpath
 
+```{r}
+library(devtools)
+install_github("Japhilko/GeoData/geosmdata2")
+```
+
+
+
+
 <http://www.data2type.de/xml-xslt-xslfo/xpath/xpath-einfuehrung/>  
+
+<http://www.w3schools.com/xpath/xpath_axes.asp>
 
 
 ## Links
 
 <https://www.mapbox.com/guides/overpass-turbo/>
+
+
+Streets of ...
+
+<http://statistik-stuttgart.de/r-street-of-france/>
