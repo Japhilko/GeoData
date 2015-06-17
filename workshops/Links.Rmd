@@ -72,6 +72,11 @@ Where people run
 
 <http://www.gis-mannheim.de/>
 
+
+## Writing own packages
+
+<http://r-pkgs.had.co.nz/description.html>
+
 ## Comics
 
 <http://xkcd.com/1138/>

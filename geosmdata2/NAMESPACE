@@ -1,6 +1,4 @@
 
-import(osmar)
-
-import(XML)
+import(XML,osmar)
 
 exportPattern("^[[:alpha:]]+")
