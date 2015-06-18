@@ -10,26 +10,13 @@ output: html_document
 The package [osmar](http://cran.r-project.org/web/packages/osmar/index.html) provides good possibilities to download information about small areas from  
 [OpenStreetMap](http://www.openstreetmap.org/). But there are shortcommings too. Sometimes you might want to have information only on one specific topic and you want that information for a bigger area. In this case osmar might not be the perfect solution.  
 
-```{r,eval=F,echo=F,include=F}
-path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/workshops"
-setwd(path)
-```
-
-
-
-```{r}
-library(XML)
-```
-
-
 ## Download specific information
 
-mapquest Xapi Service:
+There are several ways to download information from OpenStreetMap. On of these possibilities is the mapquest Xapi Service:
 
 <http://open.mapquestapi.com/xapi/>
 
-
-Organisation of bounding box:
+To get information, you have to specify a bounding box:
 
 [left,bottom,right,top]
 
@@ -46,11 +33,20 @@ for example Mannheim Seckenheim:
 
 [8.5382,49.4573,8.5808,49.4759]
 
-Links to download information from this section:
+Links to download information from this section (pubs in this case):
 
 <http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=8.5382,49.4573,8.5808,49.4759%5D>
 
-<http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=-77.041579,38.885851,-77.007247,38.900881%5D>
+## Using R to download information:
+
+The library [XML](http://cran.r-project.org/web/packages/XML/index.html) is essential to perform the following steps:
+
+```{r}
+library(XML)
+```
+
+
+Now the command xmlParse can be used to download information:
 
 ```{r}
 ab <- xmlParse("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=-77.041579,38.885851,-77.007247,38.900881%5D")
@@ -78,7 +74,7 @@ abcd <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=
                        bbox2,"%5D",sep=""))
 ```
 
-
+Getting a bounding box from administrative areas. Which are downloaded from GADM. 
 
 ```{r}
 library(raster)
@@ -96,134 +92,28 @@ abct <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=
 ```
 
 
-```{r}
-setwd("D:/Daten/Daten/GeoDaten")
-library(rgdal)
-PLZ <- readOGR ("post_pl.shp","post_pl")
-MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
-bMA <- bbox(MA)
+An overview of the different map features is available on the [OSM wiki](http://wiki.openstreetmap.org/wiki/Map_Features).
 
-MA2 <- PLZ[PLZ@data$PLZ99=="68159",]
-bMA2 <- bbox(MA2)
+## The overpass API
 
-bbox4 <- paste(bMA[1,1],bMA[2,1],bMA[1,2],bMA[2,2],sep=",")
-abcm <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=",
-                       bbox4,"%5D",sep=""))
-```
+Instead of xapi you should use the overpass API. [Here](http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Stra.C3.9Fenliste) are some use cases available.
 
+You can get all streets in Troisdorf with the following command:
 
 ```{r}
-List_abcm <- xmlToList(abcm)
-
-List_abcm[[1]][2]
-
-List_abcm[[2]][2]
+Troisdorf <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Troisdorf\"];way(area)[highway][name];out;")
 ```
 
+[Information on how to organise the command line.](http://overpass-api.de/command_line.html)
+
+
+Example: Find all cinemas in Bonn which are at most 100m away from bus stops 
 
 ```{r}
-xList<- lapply(List_abcm,unlist)
-
-ListEl <- xList[[1]]
-ListEl[which(ListEl=="name")+1]
+CinemasBonn <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Bonn\"];node(area)[highway=bus_stop];node(around:100)[amenity=cinema];out;")
 ```
 
 
-
-```{r}
-abce <- xmlParse("http://open.mapquestapi.com/xapi/api/0.6/node[amenity=pub][bbox=8.41420088819042,49.467729452325514,8.551529989747436,49.517905125443455]")
-```
-
-## Getting different map features
-
-<http://wiki.openstreetmap.org/wiki/Map_Features>
-```{r}
-
-bb_x=bbox(MA)
-
-object_x="leisure=playground"
-
-request_xapi <- function(bb_x,object_x){
-  bbox_x <- paste(bb_x[1,1],bb_x[2,1],bb_x[1,2],bb_x[2,2],sep=",")
-  xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
-                           "%5D%5Bbbox=",bbox_x,"%5D",sep=""))
-}
-
-MA_pg <-  request_xapi(bb_x=bbox(MA),object_x="leisure=playground")
-
-
-MA_bakery <-  request_xapi(bb_x=bbox(MA),object_x="shop=bakery")
-```
-
-## How to create a bounding box:
-
-```{r}
-library(ggmap)
-
-gc_HD <- geocode("Heidelberg")
-
-box.value <- 0.0075
-
-gc_HD_min <- gc_HD - box.value
-gc_HD_max <- gc_HD + box.value
-
-# [lon.min,lat.min,lon.max,lat.max]
-bbox_x <- paste(gc_HD_min$lon,gc_HD_min$lat,gc_HD_max$lon,gc_HD_max$lat,sep=",")
-object_x="leisure=playground"
-xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
-                         "%5D%5Bbbox=",bbox_x,"%5D",sep=""))
-```
-
-## Possibility to save results:
-
-```{r,echo=F,eval=F}
-setwd("D:/Daten/Daten/GeoDaten/XAPI")
-```
-
-```{r,eval=F}
-object_x1 <- "playground"
-save(xapi_x,file=paste("xapi_HD_",object_x1,".RData",sep=""))
-```
-
-## Another Example
-
-```{r}
-location="Schwetzingen"
-object_x="amenity=school"
-
-
-create_bbox <- function(location,box.value){
-  gc_loc <- geocode(location)
-
-  gc_loc_min <- gc_loc - box.value
-  gc_loc_max <- gc_loc + box.value
-  bbox_x <- paste(gc_loc_min$lon,gc_loc_min$lat,gc_loc_max$lon,gc_loc_max$lat,sep=",")
-}
-
-bb_SW <- create_bbox(location="Schwetzingen",box.value=0.0075)
-xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
-                         "%5D%5Bbbox=",bb_SW,"%5D",sep=""))
-```
-
-
-```{r,eval=F}
-object_x1 <- "school"
-save(xapi_x,file=paste("xapi_HD_",location,"_",object_x1,".RData",sep=""))
-```
-
-
-## Get results for a bigger area
-
-bus station does not work so good
-
-```{r}
-loc1="Mannheim Seckenheim"
-object_x="amenity=parking"
-bv=0.05
-bb_SK <- create_bbox(loc1,bv)
-xapi_x <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5B",object_x,
-                         "%5D%5Bbbox=",bb_SK,"%5D",sep=""))
-```
 
 
 
@@ -234,6 +124,11 @@ Usage of overpass API:
 
 <http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/>
 
+<https://www.mapbox.com/guides/overpass-turbo/>
+
+About overpass API in German:
+
+<http://podcast.openstreetmap.de/2012/12/28/osmde009-osm-talk-die-overpass-api/>
 
 Working with XML files:
 
@@ -263,3 +158,22 @@ Other information:
 
 <http://gis.stackexchange.com/questions/18124/how-do-i-download-specific-openstreetmap-data-by-tag>
 
+## More information on getting data from the web with R
+
+First off all I would recomend the following website <http://gastonsanchez.com/work/webdata/>
+
+There is a CRAN task view on [Web Technologies and Services](http://cran.r-project.org/web/views/WebTechnologies.html)
+
+
+
+<http://www.data2type.de/xml-xslt-xslfo/xpath/xpath-einfuehrung/>  
+
+<http://www.w3schools.com/xpath/xpath_axes.asp>
+
+<http://gastonsanchez.com/blog/resources/2014/05/12/Web-data.html>
+
+
+
+Streets of ...
+
+<http://statistik-stuttgart.de/r-street-of-france/>
