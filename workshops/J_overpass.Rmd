@@ -5,6 +5,11 @@ date: "12. Juni 2015"
 output: html_document
 ---
 
+## Introduction
+
+The package [osmar](http://cran.r-project.org/web/packages/osmar/index.html) provides good possibilities to download information about small areas from  
+[OpenStreetMap](http://www.openstreetmap.org/). But there are shortcommings too. Sometimes you might want to have information only on one specific topic and you want that information for a bigger area. In this case osmar might not be the perfect solution.  
+
 ```{r,eval=F,echo=F}
 path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/workshops"
 setwd(path)
@@ -235,6 +240,9 @@ Working with XML files:
 <http://www.informit.com/articles/article.aspx?p=2215520>
 
 <http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf>
+
+
+<http://www.w3schools.com/xquery/>
 
 Defining an adequate bounding box:
 
