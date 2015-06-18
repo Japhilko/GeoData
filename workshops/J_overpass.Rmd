@@ -113,10 +113,27 @@ Example: Find all cinemas in Bonn which are at most 100m away from bus stops
 CinemasBonn <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Bonn\"];node(area)[highway=bus_stop];node(around:100)[amenity=cinema];out;")
 ```
 
+All restaurants in Ilvesheim:
+```{r}
+restaurantIlvesheim <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Ilvesheim\"];node(area)[amenity=restaurant];out;")
+```
+
+Find restaurants in Feudenheim (admin_level=9)
+
+```{r}
+restaurantFeudenheim <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Feudenheim\"];node(area)[amenity=restaurant];out;")
+```
+
+Get the administrative boundaries for the city of Mannheim:
+```{r}
+boundaryMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative];out;")
+```
 
 
 
+for more examples see:
 
+<http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>
 
 ## Links
 
