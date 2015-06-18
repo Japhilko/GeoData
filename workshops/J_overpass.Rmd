@@ -1,5 +1,5 @@
 ---
-title: "Use xapi"
+title: "Use OSM API overpass"
 author: "Jan-Philipp Kolb"
 date: "12. Juni 2015"
 output: html_document
@@ -10,7 +10,7 @@ output: html_document
 The package [osmar](http://cran.r-project.org/web/packages/osmar/index.html) provides good possibilities to download information about small areas from  
 [OpenStreetMap](http://www.openstreetmap.org/). But there are shortcommings too. Sometimes you might want to have information only on one specific topic and you want that information for a bigger area. In this case osmar might not be the perfect solution.  
 
-```{r,eval=F,echo=F}
+```{r,eval=F,echo=F,include=F}
 path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/workshops"
 setwd(path)
 ```
