@@ -125,13 +125,34 @@ restaurantFeudenheim <- xmlParse("http://www.overpass-api.de/api/interpreter?dat
 ```
 
 Get the administrative boundaries for the city of Mannheim:
+
 ```{r}
 boundaryMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative];out;")
 ```
 
-for more examples see:
 
-<http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL>
+## Output options
+
+More about the [Query language](http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL) used to get information via the overpass API.
+
+
+```{r}
+geomMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative];out geom;")
+```
+
+Five different output formats are possible, a description is available [here](http://overpass-api.de/output_formats.html).
+
+The following url can be used to get a csv:
+
+<http://overpass-api.de/api/interpreter?data=[out:csv(::"type",::"id")];area[name="Feudenheim"];node(area)[amenity=restaurant];out;>
+
+This can be also used to load data directly into the workspace of R:
+
+```{r}
+info <- read.csv("http://overpass-api.de/api/interpreter?data=[out:csv(::\"type\",::\"id\")];area[name=\"Feudenheim\"];node(area)[amenity=restaurant];out;")
+```
+
+
 
 ## Processment of XML data
 
