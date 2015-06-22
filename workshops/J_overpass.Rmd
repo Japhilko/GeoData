@@ -152,6 +152,10 @@ info <- read.csv("http://overpass-api.de/api/interpreter?data=[out:csv(::\"type\
 ```
 
 
+```{r}
+infoBayern <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Bayern\"];way(area)[amenity=charging_station];out;")
+```
+
 
 ## Processment of XML data
 
