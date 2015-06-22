@@ -142,9 +142,8 @@ geomMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"
 
 Five different output formats are possible, a description is available [here](http://overpass-api.de/output_formats.html).
 
-The following url can be used to get a csv:
+This [url](http://overpass-api.de/api/interpreter?data=[out:csv(::"type",::"id")];area[name="Feudenheim"];node(area)[amenity=restaurant];out;) can be used to get a csv:
 
-<http://overpass-api.de/api/interpreter?data=[out:csv(::"type",::"id")];area[name="Feudenheim"];node(area)[amenity=restaurant];out;>
 
 This can be also used to load data directly into the workspace of R:
 
