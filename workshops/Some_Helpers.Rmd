@@ -42,9 +42,14 @@ library(rmarkdown)
 ```
 
 
+Here you can find the chunk options:
+
+<http://yihui.name/knitr/options/>
+
+
 ## Cite a r-package
 
-```{r}
+```{r,cache=T}
 citation(package = "cluster")
 citation(package = "xlsx")
 citation(package = "foreign")
