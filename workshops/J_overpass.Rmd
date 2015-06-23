@@ -130,6 +130,13 @@ Get the administrative boundaries for the city of Mannheim:
 boundaryMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative];out;")
 ```
 
+More than one condition:
+
+```{r}
+boundMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative][admin_level=9];out;")
+```
+
+
 
 ## Output options
 
