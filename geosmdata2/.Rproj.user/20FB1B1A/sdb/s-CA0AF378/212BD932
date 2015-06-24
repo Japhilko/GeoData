@@ -1,0 +1,18 @@
+{
+    "contents" : "\\name{plotbui}\n\\alias{plotbui}\n\\title{function plotbui}\n\\usage{\nplotbui(ua)\n}\n\\arguments{\n\\item{ua}{the osmar file which the polygons are to be read from.}\n}\n\\value{\nan instance of \\code{get_osm}.\n}\n\\description{\nConverts osmar object in polygons\n}\n\\author{\nJan-Philipp Kolb \\email{Jan-Philipp_Kolb@gmx.net}\n}\n\\examples{\ndata(uaBerlin)\npol_Berlin <- plotbui(uaBerlin)\n}\n",
+    "created" : 1435145774810.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2558600710",
+    "id" : "212BD932",
+    "lastKnownWriteTime" : 1429878538,
+    "path" : "~/GitHub/GeoData/geosmdata2/man/plotbui.Rd",
+    "project_path" : "man/plotbui.Rd",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 16,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

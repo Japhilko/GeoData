@@ -50,6 +50,9 @@ If you need a bibliography:
  <http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
 
 
+If you want to write a vignette:
+<http://www.magesblog.com/2012/01/feedback-from-vignette-survey.html>
+
 ## Cite a r-package
 
 ```{r,cache=T}

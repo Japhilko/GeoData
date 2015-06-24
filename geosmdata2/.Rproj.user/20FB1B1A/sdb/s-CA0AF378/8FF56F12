@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{extract_info_op}\n\\alias{extract_info_op}\n\\title{function extract_info_op}\n\\usage{\nextract_info_op(OSM.Data,value)\n}\n\\arguments{\n\\item{OSM.Data}{an osm object.}\n\\item{value}{a map feature.}\n\n}\n\\value{.\n}\n\\description{\n\n}\n\\author{\nJan-Philipp Kolb \\email{Jan-Philipp_Kolb@gmx.net}\n}\n\\examples{\nlibrary(XML)\nobject_x <- \"amenity=school\"\nbbox_x <- \"8.4178134,49.41014103,8.59395996,49.58984376\"\n# schools_MA <- xmlParse(paste(\"http://www.overpass-api.de/api/xapi?way[bbox=\",bbox_x,\"][\",object_x,\"]\",\n#               sep=\"\"))\n\n# info <- extract_info_op(OSM.Data=schools_MA,value=\"school\")\n\n}\n",
+    "created" : 1434523230405.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2522202250",
+    "id" : "8FF56F12",
+    "lastKnownWriteTime" : 1435145669,
+    "path" : "~/GitHub/GeoData/geosmdata2/man/extract_info_op.Rd",
+    "project_path" : "man/extract_info_op.Rd",
+    "properties" : {
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

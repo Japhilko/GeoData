@@ -8,4 +8,4 @@ Maintainer: <Jan-Philipp_Kolb@gmx.net>
 Description: This package is a wrapper for some functions to access information on OpenStreetMap.
 License: The GNU General Public License version 2
 LazyData: TRUE
-Imports: XML
+Imports: XML,osmar,sp

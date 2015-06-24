@@ -1,4 +1,6 @@
 
-import(XML,osmar)
+import(XML,sp,osmar)
+
+export(get_osm_nodes)
 
 exportPattern("^[[:alpha:]]+")
