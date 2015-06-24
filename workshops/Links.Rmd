@@ -41,6 +41,11 @@ output: html_document
 <http://www.r-bloggers.com/introductory-point-pattern-analysis-of-open-crime-data-in-london/>
 
 <http://www.r-bloggers.com/u-s-drought-monitoring-with-hexbin-state-maps-in-r/>
+
+## Information from OpenStreetMap
+
+<https://mapzen.com/data/metro-extracts/>
+
 ## Interactive maps
 
 <http://r-video-tutorial.blogspot.ch/2015/05/exchange-data-between-r-and-google-maps.html>

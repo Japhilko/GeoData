@@ -1,0 +1,18 @@
+{
+    "contents" : "get_osm_nodes <- function(object2,place){\n  ind <- which(object2==osm_df$Value)\n  if(length(ind)>0){\n    type_obj <- \"node\"\n    object <- paste(osm_df$Key[ind],\"=\",object2,sep=\"\")\n    Link1 <- \"http://www.overpass-api.de/api/interpreter?data=area[name=\\\"\"\n    InfoList <- xmlParse(paste(Link1,place,\"\\\"];\",type_obj,\"(area)[\",object,\"];out;\",sep=\"\"))\n    return(InfoList)\n  }else{stop(\"Map feature not found\")}\n}\n",
+    "created" : 1435137502278.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "344708216",
+    "id" : "5DC563F9",
+    "lastKnownWriteTime" : 1435137515,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/get_osm_nodes.R",
+    "project_path" : "R/get_osm_nodes.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

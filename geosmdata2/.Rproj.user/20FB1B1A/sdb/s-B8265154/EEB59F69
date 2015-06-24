@@ -1,0 +1,17 @@
+{
+    "contents" : "extract_info_op <- function(OSM.Data,value){\n  way_id  <- unlist( xpathApply( OSM.Data, paste( \"//tag[@v = '\", value, \"']/parent::way/@ id\", sep = \"\" ) ) )\n  n_obj <- length(xpathApply( OSM.Data, \"//way\" ))\n  Liste <- list()\n  for (i in 1:n_obj){\n    Liste_i <- unlist(xpathApply( OSM.Data, paste(\"//way[@id = \",way_id[i],\"]//tag/attribute::*\",sep=\"\") ) )\n\n    p.node\t\t<- paste( \"//way[@id = '\", way_id[i] ,\"']/nd/@ref\", sep = \"\" )\n    way_node_save\t<- as.numeric( xpathApply( OSM.Data, p.node ) )\n\n    p.lat\t<- paste(\"//node[@id = \", way_node_save  ,\"]/@ lat\", sep = \"\")\n    p.lon\t<- paste(\"//node[@id = \", way_node_save  ,\"]/@ lon\", sep = \"\")\n    lat <- lon <- rep(NA,length(way_node_save ))\n    for( j in 1:length(way_node_save ) )\n    {\n      lat_j \t<- as.numeric( xpathApply( OSM.Data, p.lat[ j ] ) )\n      lat[ j ] <- ifelse(length(lat_j)>0,lat_j,NA)\n      lon_j \t<- as.numeric( xpathApply( OSM.Data, p.lon[ j ] ) )\n      lon[ j ] \t<-ifelse(length(lat_j)>0,lon_j,NA)\n    }\n    lon_i <- mean( lon ,na.rm=T)\n    lat_i <-  mean( lat,na.rm=T )\n\n    ind_k <- which(names(Liste_i)==\"k\")\n    ind_v <- which(names(Liste_i)==\"v\")\n    Liste[[i]] <- data.frame(k=Liste_i[ind_k],\n                             v=Liste_i[ind_v],\n                             id=rep(way_id[i],length(ind_k)),\n                             lat=rep(lat_i,length(ind_k)),\n                             lon=rep(lon_i,length(ind_k))\n    )\n  }\n\n  DF_x <- do.call(rbind,Liste)\n}\n",
+    "created" : 1434464381181.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3613999014",
+    "id" : "EEB59F69",
+    "lastKnownWriteTime" : 1434463222,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/extract_info_op.R",
+    "project_path" : "R/extract_info_op.R",
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "\nrepluml <- function(x){\n  x <- gsub(\"Ã¶\",\"ö\",x)\n  x <- gsub(\"Ã¤\",\"ä\",x)\n  return(x)\n}\n",
+    "created" : 1435133354133.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1856835581",
+    "id" : "D9025AE7",
+    "lastKnownWriteTime" : 1435133385,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/repluml.R",
+    "project_path" : "R/repluml.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

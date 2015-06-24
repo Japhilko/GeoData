@@ -168,6 +168,15 @@ infoBayern <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[nam
 
 One way to process information from a XML is to use the command [xmlToList](http://www.inside-r.org/packages/cran/XML/docs/xmlToList)
 
+```{r}
+root <- xmlRoot(boundMA)
+infoAttrs <- xmlSApply(root, xmlAttrs)
+
+```
+
+
+
+
 ## Links
 
 Usage of overpass API:

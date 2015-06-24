@@ -46,6 +46,9 @@ Here you can find the chunk options:
 
 <http://yihui.name/knitr/options/>
 
+If you need a bibliography:
+ <http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
+
 
 ## Cite a r-package
 
@@ -57,3 +60,8 @@ citation(package = "mice")
 ```
 
 <http://www.blopig.com/blog/2013/07/citing-r-packages-in-your-thesispaperassignments/>
+
+
+## What's new on R
+
+<http://cran.r-project.org/src/base/NEWS>
