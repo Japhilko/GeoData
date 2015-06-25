@@ -6,5 +6,5 @@ get_osm_nodes <- function(object2,place){
     Link1 <- "http://www.overpass-api.de/api/interpreter?data=area[name=\""
     InfoList <- xmlParse(paste(Link1,place,"\"];",type_obj,"(area)[",object,"];out;",sep=""))
     return(InfoList)
-  }else{stop("Map feature not found")}
+  }else{stop("Map feature not found - have a look at http://wiki.openstreetmap.org/wiki/Map_Features")}
 }

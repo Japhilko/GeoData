@@ -1,0 +1,18 @@
+{
+    "contents" : "\n\ninfo <- extract_info_op(OSM.Data=cafes,value=\"cafe\")\n",
+    "created" : 1435233239623.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2285386721",
+    "id" : "39110CC2",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 17,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
