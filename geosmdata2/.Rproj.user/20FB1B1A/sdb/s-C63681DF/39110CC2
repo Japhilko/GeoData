@@ -1,10 +1,10 @@
 {
-    "contents" : "\n\ninfo <- extract_info_op(OSM.Data=cafes,value=\"cafe\")\n",
+    "contents" : "\n\n",
     "created" : 1435233239623.000,
     "dirty" : true,
     "encoding" : "",
     "folds" : "",
-    "hash" : "2285386721",
+    "hash" : "1541608299",
     "id" : "39110CC2",
     "lastKnownWriteTime" : 7011605692497750387,
     "path" : null,

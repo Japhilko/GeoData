@@ -1,0 +1,17 @@
+{
+    "contents" : "\n#------------------------------------------#\n# libraries\n#------------------------------------------#\n\n\nlibrary(XML)\nlibrary(geosmdata2)\nlibrary(xlsx)\n\n#------------------------------------------#\n# set paths\n#------------------------------------------#\n\n\ndata.path <- \"C:/Users/kolbjp/Documents/GitHub/GeoData/geosmdata2/data\"\ndata.path2 <- \"J:/Work/Statistik/Kolb/Paper/UseOSMdata/data\"\n\n#------------------------------------------#\n# load data\n#------------------------------------------#\n\n\nsetwd(data.path2)\nosm_df2 <- read.xlsx(\"OSMmapfeatures.xlsx\",1)\n\nosm_df <- osm_df2[,1:3]\n\nosm_df <- osm_df[complete.cases(osm_df),]\n\nosm_df$Key <- as.character(osm_df$Key)\nosm_df$Value <- as.character(osm_df$Value)\nosm_df$Element <- as.character(osm_df$Element)\n\n#------------------------------------------#\n# save data\n#------------------------------------------#\n\n\nsetwd(data.path)\nsave(osm_df,file=\"osm_df.RData\")\n\n\n\n##########################################################\n##########################################################\nosm_df[is.na(osm_df$Key),]\nosm_df[is.na(osm_df$Value),]\n\nTab <- readHTMLTable(\"http://wiki.openstreetmap.org/wiki/Map_Features\")\n\n\nosmKey <- lapply(Tab,function(x)x$` Key`)\n\nosmValue <- lapply(Tab,function(x)x$` Value`)\n\n\nosm_df <- data.frame(Key=as.character(unlist(osmKey)),\n                     Value=as.character(unlist(osmValue)))\n\n\nosm_df <- osm_df[complete.cases(osm_df),]\n\nosm_df$Element <- NA\nosm_df$Element[osm_df$Key==\"aerialway\"] <- \"Way\"\nosm_df$Element[osm_df$Value==\"pylon\"] <- \"Node\"\n\nosm_df$Element[osm_df$Key==\"aeroway\"] <- \"Way\"\n\nosm_df$Element[osm_df$Key==\"amenity\"] <- \"Node\"\n\n# ind <- which(osm_df$Value==\"school\"&osm_df$Key==\"building\")\n# osm_df <- osm_df[-ind,]\n\n\nfor (i in 134:nrow(osm_df)){\n  osm_object <- get_osm_nodes(osm_df$Value[i],place=\"Sandhofen\")\n}\n\n\n\nreadHTMLTable(\"http://wiki.openstreetmap.org/wiki/Tag:aerialway%3Dcable_car\")\n\n\n\nload(\"osm_df.RData\")\n\n\nhead(osm_df)\n\n\nstr(Tab[[1]])\nx<- Tab[[1]]\n\nx$` Key`\n\n\nosm_df[osm_df$Key==\"amenity\",]\n\n#------------------------------------------#\n# get the element\n#------------------------------------------#\n\n\n\n# Tab <- readLines(\"http://wiki.openstreetmap.org/wiki/Map_Features\")\n\n\n\n#------------------------------------------#\n# Links\n#------------------------------------------#\n\n# http://maperitive.net/docs/Querying_Data.html\n",
+    "created" : 1435233754756.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4216397578",
+    "id" : "C60440B",
+    "lastKnownWriteTime" : 1435237870,
+    "path" : "J:/Work/Statistik/Kolb/Paper/UseOSMdata/rcode/rOSM_k_OSMdfMapfeatures.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 11,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

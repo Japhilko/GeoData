@@ -1,6 +1,6 @@
-\name{get_osm_nodes}
-\alias{get_osm_nodes}
-\title{function get_osm_nodes}
+\name{get_osm_ways}
+\alias{get_osm_ways}
+\title{function get_osm_ways}
 \usage{
 get_osm_nodes(object2,place)
 }
@@ -13,11 +13,11 @@ get_osm_nodes(object2,place)
 
 }
 \description{
-Returns info on nodes from \url{http://www.overpass-api.de/api/}
+Returns info on ways from \url{http://www.overpass-api.de/api/}
 }
 \author{
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-  cafes <- get_osm_nodes("cafe",place="Sandhofen")
+  roads <- get_osm_ways(object2="secondary",place="Sandhofen")
 }

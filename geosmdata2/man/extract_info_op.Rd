@@ -12,14 +12,14 @@ extract_info_op(OSM.Data,value)
 \value{.
 }
 \description{
-
+Extract information from OpenStreetMap object
 }
 \author{
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
 
-
-info <- extract_info_op(OSM.Data=schools_MA,value="school")
+schools <- get_osm_nodes(object2="school",place="Montpellier")
+info <- extract_info_op(OSM.Data=schools,value="school")
 
 }
