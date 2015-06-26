@@ -46,6 +46,11 @@ output: html_document
 
 <https://mapzen.com/data/metro-extracts/>
 
+Administrative borders for Germany
+
+<http://wiki.openstreetmap.org/wiki/WikiProject_Germany/Grenzen>
+
+
 ## Interactive maps
 
 <http://r-video-tutorial.blogspot.ch/2015/05/exchange-data-between-r-and-google-maps.html>

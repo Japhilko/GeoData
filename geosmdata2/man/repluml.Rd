@@ -14,6 +14,6 @@ function to replace umlauts
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-
-
+cityname <- repluml("München")
+brewery <- get_osm_nodes("brewery",place=cityname)
 }

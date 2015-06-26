@@ -1,8 +1,8 @@
-\name{get_osm_nodes}
-\alias{get_osm_nodes}
-\title{function get_osm_nodes}
+\name{get_osm_relation}
+\alias{get_osm_relation}
+\title{function get_osm_relation}
 \usage{
-get_osm_nodes(object2,place)
+get_osm_relation(object2,place)
 }
 \arguments{
 \item{object2}{Value for map feature you are searching for}
@@ -19,6 +19,5 @@ Returns info on nodes from \url{http://www.overpass-api.de/api/}
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-  cafes <- get_osm_nodes("cafe",place="Sandhofen")
-  brewery <- get_osm_nodes(" 	brewery",place="München")
+bike_routes <- get_osm_relation(object2="bicycle",place="Mannheim")
 }
