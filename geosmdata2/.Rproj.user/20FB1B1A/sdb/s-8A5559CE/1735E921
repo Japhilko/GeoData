@@ -1,0 +1,18 @@
+{
+    "contents" : "get_osm_relation <- function(object2,place){\n  ind <- which(object2==osm_df$Value)\n  if(length(ind)>0){\n    ind2 <- agrep(\"relation\",osm_df$Element[ind])\n    if(length(ind2)>0){\n      ind <- ind[ind2[1]]\n      type_obj <- \"relation\"\n      object <- paste(osm_df$Key[ind],\"=\",object2,sep=\"\")\n      Link1 <- \"http://www.overpass-api.de/api/interpreter?data=area[name=\\\"\"\n      InfoList <- xmlParse(paste(Link1,place,\"\\\"];\",type_obj,\"(area)[\",object,\"];out;\",sep=\"\"))\n      return(InfoList)\n    }else{\n      ind2 <- agrep(\"node\",osm_df$Element[ind])\n      if(length(ind2)>0){stop(\"Try function get_osm_nodes\")\n      }else{\"Try function get_osm_ways\"}\n\n    }\n\n  }else{stop(\"Map feature not found - have a look at http://wiki.openstreetmap.org/wiki/Map_Features\")}\n}\n",
+    "created" : 1435298028649.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2927418351",
+    "id" : "1735E921",
+    "lastKnownWriteTime" : 1435298113,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/get_osm_relation.R",
+    "project_path" : "R/get_osm_relation.R",
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
