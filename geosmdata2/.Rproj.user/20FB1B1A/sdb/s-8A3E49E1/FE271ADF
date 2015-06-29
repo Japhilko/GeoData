@@ -1,0 +1,17 @@
+{
+    "contents" : "extract_info_op <- function(OSM.Data,value){\n  kov <- ifelse(value%in%osm_df$Value,\"v\",\"k\")\n  if(kov==\"v\"){\n    ind <- which(value==osm_df$Value)\n  }else{\n    ind <- which(value==osm_df$Key)\n  }\n  Element <- osm_df$Element2[ind]\n\n  node_id<- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\"= '\",value,\"']/parent::\",Element,\"/@ id\",sep=\"\") )\n  lat_x <- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\" = '\",value,\"']/parent::\",Element,\"/@ lat\",sep=\"\"))\n  lon_x <- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\" = '\",value,\"']/parent::\",Element,\"/@ lon\",sep=\"\"))\n  Liste <- list()\n  for (i in 1:length(node_id)){\n    Liste_i <- unlist(xpathApply(OSM.Data,paste(\"//\",Element,\"[@id = \",node_id[i],\"]//tag/attribute::*\",sep=\"\")))\n    ind_k <- which(names(Liste_i)==\"k\")\n    ind_v <- which(names(Liste_i)==\"v\")\n    Liste[[i]] <- data.frame(k=Liste_i[ind_k],\n                             v=Liste_i[ind_v],\n                             id=rep(unlist(node_id[i]),length(ind_k))\n    )\n  }\n  DF_x <- do.call(rbind,Liste)\n  DF_x1 <- data.frame(with(DF_x,tapply(v,list(id,k),function(x)as.character(x))))\n  DF_x1$lat <- unlist(as.numeric(lat_x))\n  DF_x1$lon <- unlist(as.numeric(lon_x))\n  return(DF_x1)\n}\n",
+    "created" : 1435591498287.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4270282593",
+    "id" : "FE271ADF",
+    "lastKnownWriteTime" : 1435593539,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/extract_info_op.R",
+    "project_path" : "R/extract_info_op.R",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
