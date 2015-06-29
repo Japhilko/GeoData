@@ -1,0 +1,18 @@
+{
+    "contents" : "\nlibrary(geosmdata2)\n\n\n# streets <- get_osm_addresses(object2=\"addr:street\",place=\"Sippersfeld\")\nstreets <- xmlParse(\"http://www.overpass-api.de/api/interpreter?data=area[name=\\\"Sippersfeld\\\"];way(area)[highway][name];out;\")\n\n\nextract_info_op(streets,\"highway\")\n\n\n\n\n\n# http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];node[%22addr:street%22=%22Neuhaus%22]%2850.67,10.91,50.70,10.94%29;out;\n\n# http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];way[%22addr:street%22=%22Neuhaus%22]%2850.67,10.91,50.70,10.94%29;out;",
+    "created" : 1435564757880.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1469254834",
+    "id" : "EB244EC7",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
