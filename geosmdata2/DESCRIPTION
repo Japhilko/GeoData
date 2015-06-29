@@ -9,3 +9,4 @@ Description: This package is a wrapper for some functions to access information 
 License: The GNU General Public License version 2
 LazyData: TRUE
 Imports: XML,osmar,sp
+Depends: XML
