@@ -20,5 +20,5 @@ Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
   cafes <- get_osm_nodes("cafe",place="Sandhofen")
-  brewery <- get_osm_nodes(" 	brewery",place="München")
+  brewery <- get_osm_nodes("brewery",place="München")
 }

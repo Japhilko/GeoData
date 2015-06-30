@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{CountNodes}\n\\alias{CountNodes}\n\\title{function to count nodes in an osm xml object}\n\\usage{\nCountNodes(object2)\n}\n\\arguments{\n\\item{object2}{a xml object}\n}\n\\description{\nfunction to count nodes\n}\n\\author{\nJan-Philipp Kolb \\email{Jan-Philipp_Kolb@gmx.net}\n}\n\\examples{\nambulance_station <- get_osm_nodes(object2=\"ambulance_station\",place=\"Berlin\")\nCountNodes(ambulance_station)\n}\n",
+    "created" : 1435651981109.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2832071747",
+    "id" : "B14B4FFC",
+    "lastKnownWriteTime" : 1435652096,
+    "path" : "~/GitHub/GeoData/geosmdata2/man/CountNodes.Rd",
+    "project_path" : "man/CountNodes.Rd",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

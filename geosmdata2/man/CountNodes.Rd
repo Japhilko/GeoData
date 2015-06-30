@@ -14,6 +14,6 @@ function to count nodes
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-saveXML(ambulance_station,file="ambulance_station_Berlin.xml")
+ambulance_station <- get_osm_nodes(object2="ambulance_station",place="Berlin")
 CountNodes(ambulance_station)
 }

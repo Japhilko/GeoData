@@ -11,13 +11,33 @@ vignette: >
 
 The `geoosmdata2` package is designed for the download and work with data from OpenStreetMap. 
 
+```{r}
+library(geosmdata2)
+```
+
+
+
+## Area
 
 ```{r}
+
+Rom_pedestrian <- get_osm_area(object2="pedestrian",
+                               place="Rom")
+info_pedestrian <- extract_info_op(OSM.Data=Rom_pedestrian,
+                                    value="pedestrian")
 
 ```
 
 
-Also a quote using `>`:
+## Relation
 
-> "He who gives up [code] safety for [code] speed deserves neither."
-([via](https://twitter.com/hadleywickham/status/504368538874703872))
+> "A relation is one of the core data elements that consists of one or more tags and also an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describe the part that a particular feature plays within a relation. "
+([via](http://wiki.openstreetmap.org/wiki/Relation))
+
+```{r,eval=F}
+MA_bike_routes <- get_osm_relation("bicycle","Mannheim")
+
+info_bike_routes <- extract_info_op(OSM.Data=MA_bike_routes,
+                                    value="bicycle")
+```
+
