@@ -185,6 +185,8 @@ Usage of overpass API:
 
 <https://www.mapbox.com/guides/overpass-turbo/>
 
+<http://blog-en.openalfa.com/how-to-query-openstreetmap-using-the-overpass-api>
+
 About overpass API in German:
 
 <http://podcast.openstreetmap.de/2012/12/28/osmde009-osm-talk-die-overpass-api/>

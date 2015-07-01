@@ -1,0 +1,17 @@
+{
+    "contents" : "#---------------------------------------#\n# Write your own package\n#\n#---------------------------------------#\n\n\n\n# http://cran.r-project.org/doc/contrib/Lemon-kickstart/kr_rfunc.html\n\n\n# http://www.r-project.org/conferences/useR-2004/Keynotes/Maechler.pdf\n\n#---------------------------------------#\n# Write a vignette\n#---------------------------------------#\n\n# http://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html\n\n# http://developer.r-project.org/Rds.html\n\nlibrary(testthat)\n\n\n# http://r-pkgs.had.co.nz/check.html\n\ndevtools::document()\n\n?testthat::skip_on_cran\n\n",
+    "created" : 1435752885618.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "412330589",
+    "id" : "F85D0CB9",
+    "lastKnownWriteTime" : 1435753068,
+    "path" : "J:/Work/Statistik/Kolb/R lernen und lehren/PackageDevelopment.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

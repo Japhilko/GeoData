@@ -18,6 +18,9 @@ Returns info on nodes from \url{http://www.overpass-api.de/api/}
 \author{
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
+\seealso{
+\code{\link{get_osm_relation}}, \url{http://www.r-project.org}
+}
 \examples{
   cafes <- get_osm_nodes("cafe",place="Sandhofen")
   brewery <- get_osm_nodes("brewery",place="München")

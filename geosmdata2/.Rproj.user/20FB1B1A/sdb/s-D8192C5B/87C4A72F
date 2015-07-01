@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{get_osm_nodes}\n\\alias{get_osm_nodes}\n\\title{function get_osm_nodes}\n\\usage{\nget_osm_nodes(object2,place)\n}\n\\arguments{\n\\item{object2}{Value for map feature you are searching for}\n\\item{place}{Place for the map features}\n\n}\n\\value{\n\n}\n\\description{\nReturns info on nodes from \\url{http://www.overpass-api.de/api/}\n}\n\\author{\nJan-Philipp Kolb \\email{Jan-Philipp_Kolb@gmx.net}\n}\n\\seealso{\n\\code{\\link{get_osm_relation}}, \\url{http://www.r-project.org}\n}\n\\examples{\n  cafes <- get_osm_nodes(\"cafe\",place=\"Sandhofen\")\n  brewery <- get_osm_nodes(\"brewery\",place=\"München\")\n}\n",
+    "created" : 1435652225277.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2407428425",
+    "id" : "87C4A72F",
+    "lastKnownWriteTime" : 1435752834,
+    "path" : "~/GitHub/GeoData/geosmdata2/man/get_osm_nodes.Rd",
+    "project_path" : "man/get_osm_nodes.Rd",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

@@ -1,0 +1,18 @@
+{
+    "contents" : "\n# https://github.com/malexan/nominatim/blob/master/geocode.r\nlibrary(rjson)\nrequire(XML)\nlibrary(stringr)\n\n#' Nominatim\n#'\n#' geocodes a location using OpenStreetMap.\n#'\n#' @param output verbose level\n#' @param messaging turn messaging on/off\n#' @return depends (at least a data.frame with variables lon and lat)\n#' @author Alexander Matrunich \\email{alexander@@matrunich.com}\n#' @details Based on David Kahle's geocode.R from ggmap\n#' @seealso \\url{http://wiki.openstreetmap.org/wiki/Nominatim}\n\ngeocode_osm <- function(place) {\n  place <- str_replace_all(place, ' ', '+')\n  place <- URLencode(place)\n  url_string <- str_c('http://nominatim.openstreetmap.org/search?format=json&addressdetails=1&q=', place)\n  con <- url(url_string)\n  geoc <- fromJSON(paste(readLines(con,warn=F), collapse = ''))\n  close(con)\n  return(geoc)\n}\n\n\n\ngeocode_osm(place=\"Mannheim B2,1\")\n",
+    "created" : 1435753064605.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3902683907",
+    "id" : "A27E510E",
+    "lastKnownWriteTime" : 1435754133,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/geocode_osm.R",
+    "project_path" : "R/geocode_osm.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
