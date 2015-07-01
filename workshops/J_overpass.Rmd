@@ -198,6 +198,8 @@ Working with XML files:
 
 <http://www.w3schools.com/xquery/>
 
+<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
+
 Defining an adequate bounding box:
 
 <http://gis.stackexchange.com/questions/46954/clip-spatial-object-to-bounding-box-in-r>
