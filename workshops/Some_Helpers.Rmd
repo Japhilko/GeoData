@@ -46,6 +46,11 @@ Here you can find the chunk options:
 
 <http://yihui.name/knitr/options/>
 
+Here is how to embed formulas:
+
+<http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html>
+
+
 If you need a bibliography:
  <http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
 

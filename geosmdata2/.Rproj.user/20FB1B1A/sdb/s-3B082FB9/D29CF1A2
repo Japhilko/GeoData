@@ -1,0 +1,18 @@
+{
+    "contents" : "\nlibrary(geosmdata2)\n\n\ndata.path <- \"J:/Work/Statistik/Kolb/Paper/UseOSMdata/data/XML\"\n\n\n\n# streets <- get_osm_addresses(object2=\"addr:street\",place=\"Sippersfeld\")\nstreets <- xmlParse(\"http://www.overpass-api.de/api/interpreter?data=area[name=\\\"Sippersfeld\\\"];way(area)[highway][name];out;\")\n\n\ninfo <- extract_info_op(streets,\"highway\")\n\n#---------------------------------------#\n# Example for a relation\n#---------------------------------------#\n\n\nMA_bike_routes <- get_osm_relation(\"bicycle\",\"Mannheim\")\n\nsetwd(data.path)\nsaveXML(MA_bike_routes,file=\"MA_bike_routes.xml\")\n\n\n\n\n#---------------------------------------#\n# Example for an area\n#---------------------------------------#\n\nRom_pedestrian <- get_osm_area(object2=\"pedestrian\",\n                               place=\"Rom\")\nsaveXML(Rom_pedestrian,file=\"Rom_pedestrian.xml\")\n\n\nStrassburg_pedestrian <- get_osm_area(object2=\"pedestrian\",\n                                      place=\"Straßburg\")\n\nsaveXML(Strassburg_pedestrian,file=\"Strassburg_pedestrian.xml\")\n\n\n\n#---------------------------------------#\n# recode\n#---------------------------------------#\n\n\nlibrary(car)\n?recode\n\nosm_df$Element\n\n\n#---------------------------------------#\n# Links\n#---------------------------------------#\n\n\n# http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];node[%22addr:street%22=%22Neuhaus%22]%2850.67,10.91,50.70,10.94%29;out;\n\n# http://overpass.osm.rambler.ru/cgi/interpreter?data=[out:json];way[%22addr:street%22=%22Neuhaus%22]%2850.67,10.91,50.70,10.94%29;out;\n\n\n# https://help.openstreetmap.org/questions/17816/how-do-i-get-address-range-for-a-given-waystreet\n\n# http://www.r-bloggers.com/learn-to-map-census-data-in-r/\n\n  # User request\n# http://deployr.revolutionanalytics.com/documents/dev/api-doc/guide/workingusers.html\n",
+    "created" : 1435737068006.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4016590118",
+    "id" : "D29CF1A2",
+    "lastKnownWriteTime" : 1435649605,
+    "path" : "J:/Work/Statistik/Kolb/Paper/UseOSMdata/rcode/rOSM_X_AddOn_150629.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

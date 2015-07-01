@@ -42,6 +42,10 @@ output: html_document
 
 <http://www.r-bloggers.com/u-s-drought-monitoring-with-hexbin-state-maps-in-r/>
 
+<http://www.r-bloggers.com/stop-and-frisk-spatial-analysis-of-racial-discrepancies/>
+
+<http://www.r-bloggers.com/organize-a-walk-around-london-with-r/>
+
 ## Information from OpenStreetMap
 
 <https://mapzen.com/data/metro-extracts/>
