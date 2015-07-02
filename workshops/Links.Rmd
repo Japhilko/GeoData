@@ -27,6 +27,20 @@ output: html_document
 
 ## Making maps
 
+Have a look at this:
+
+<http://giswerk.org/>
+
+Task view for mapping tools:
+<https://github.com/ropensci/maptools>
+
+How to work with OpenStreetMap data
+
+In general (three osm apis):
+<http://www.d-mueller.de/blog/open-streetmap-api-tutorial-umkreissuche/>
+
+<http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic>
+
 <http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/>
 
 <file:///D:/Dropbox/RForschung/SpatialCourse/Rcode/makingmaps/makingmaps.html>

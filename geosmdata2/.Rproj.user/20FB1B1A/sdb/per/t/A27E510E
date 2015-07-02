@@ -1,0 +1,18 @@
+{
+    "contents" : "geocode_osm <- function(place) {\n  place <- str_replace_all(place, ' ', '+')\n  place <- URLencode(place)\n  url_string <- str_c('http://nominatim.openstreetmap.org/search?format=json&addressdetails=1&q=', place)\n  con <- url(url_string)\n  geoc <- fromJSON(paste(readLines(con,warn=F), collapse = ''))\n  close(con)\n  return(geoc)\n}\n\n\n\n\n",
+    "created" : 1435753064605.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "441373873",
+    "id" : "A27E510E",
+    "lastKnownWriteTime" : 1435754461,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/geocode_osm.R",
+    "project_path" : "R/geocode_osm.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

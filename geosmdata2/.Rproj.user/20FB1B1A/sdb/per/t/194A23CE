@@ -1,0 +1,17 @@
+{
+    "contents" : "Package: geosmdata2\nType: Package\nTitle: Get data from Open Street Map\nVersion: 0.1\nDate: 2015-04-24\nAuthor: Jan-Philipp Kolb\nMaintainer: <Jan-Philipp_Kolb@gmx.net>\nDescription: This package is a wrapper for some functions to access information on OpenStreetMap.\nLicense: The GNU General Public License version 2\nLazyData: TRUE\nImports: XML,osmar,sp\nDepends: XML,rjson,stringr\n\n",
+    "created" : 1435754537209.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "256874718",
+    "id" : "194A23CE",
+    "lastKnownWriteTime" : 1435754552,
+    "path" : "~/GitHub/GeoData/geosmdata2/DESCRIPTION",
+    "project_path" : "DESCRIPTION",
+    "properties" : {
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "type" : "dcf"
+}

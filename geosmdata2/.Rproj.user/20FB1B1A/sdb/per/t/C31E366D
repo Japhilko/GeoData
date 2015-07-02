@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"Dokumentation pairfam\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"23. Juni 2015\"\noutput: \n  word_document: \n    fig_height: 2\n    fig_width: 3\nbibliography: pairfam.bib\n---\n\n\n\n```{r,echo=F}\n# Pfade definieren\nmain.path <- \"J:/Work/Statistik/Kolb/Beratung/Gewichtung/pairfam/\"\nr.path <- paste(main.path,\"rcode/Gewichtung_neu/\",sep=\"\")\ndata.path <- \"S:/weighting\"\ndoku.path <- paste(main.path,\"Paper/\",sep=\"\")\ndata.path2 <- paste(main.path,\"data/\",sep=\"\")\n```\n\n\n```{r,echo=F}\nlibrary(xtable)\nlibrary(knitr)\n\nsetwd(data.path2)\nload(\"xTab1.Rdata\")\n```\n\n# Überblick Querschnittsgewichtung\n\n<!-- Kommentar -->\n\nDas Designgewicht ist überall gleich (1,225).\n\n![alt](figure/barchart_w1_bik.png)\n\nProblem ist das Alter, da bei den [Sonderauswertungen](https://www.destatis.de/DE/Methoden/DemografischeRegionaleStandards/SonderauswertungMZ.html) nur Altersgruppen angegeben werden. Diese Altersgruppen sind unterschiedlich von den bei pairfam verwendeten. \n\n## Post-stratifikation Gewicht\n<!--S:\\Post-Stratification Weight (inkl.   gew_2_mz08)\n  gewichte_und_hh_final_auslieferung.dta\n-->\n\nDie Datei `gewichte_und_hh_final_auslieferung.dta` hat 12402 Ausprägungen.\n\nZusätzlich gibt es noch ein Gewicht `dxpsweight`, dass Design und Poststratifikation miteinander verbindet.\n\n\n\n# Überblick Modelle Längsschnittgewichtung\n\n\n```{r,echo=F,eval=F}\n\n# Die Dokumentation befindet sich in folgendem Ordner:\n# J:\\Work\\Statistik\\Kolb\\Beratung\\Gewichtung\\pairfam\\Literatur\n# Abschlussbericht Längsschnittgewichtung.pdf\n\n# Der Ursprungscode (Uni München) befindet sich hier:\n# S:\\R-Code\\Anker\n\n# Das Skript heißt:\n# aw2_gewichtung.R\n```\n\n\n\n\n\nEs gibt drei verschiedene Kohorten.\n\n```{r,echo=F}\nA <- c(\"Kohorte 1\",\"1991-1993\")\nB <- c(\"Kohorte 2\",\"1981-1983\")\nC <- c(\"Kohorte 3\",\"1971-1973\")\n\nABC <- rbind(A,B,C)\ncolnames(ABC) <- c(\"Kohorte\",\"Jahre\")\nkable(ABC)\n```\n\n\n![alt](figure/pairfam_w1_kohorte.png)\n\n\n\n- Die Teilnahmewahrscheinlichkeit $P_{P_i}$ gibt an, mit welcher Wahrscheinlichkeit zum\nZeitpunkt der Folgewelle Informationen zu der Person i vorliegen.\n\n- Die Kontaktwahrscheinlichkeit $P_{A_i}$ gibt die Wahrscheinlichkeit davon an, dass die Ankerperson\nerreichbar ist. \n\n- Die Antwortwahrscheinlichkeit $P_{C_i}$ gibt an, mit welcher\nWahrscheinlichkeit die Ankerperson tatsachlich antwortet und an der nachsten\nWelle teilnimmt.\n\n```{r,echo=F}\nkable(xTab1, type = \"html\")\n```\n\n\n$$\n\\begin{aligned}\nG_{A_i}=\\dfrac{1}{P_{P_i} \\cdot P_{A_i} \\cdot P_{C_i}}\n\\end{aligned}\n$$\n\nDie drei Wahrscheinlichkeiten werden miteinander multipliziert und daraus wird die Inverse gebildet.\n\n\n## Analyse der Gewichte\n\n![alt](figure/bgewicht.png)\n\nFor more information see [@gablersdm]\n\n# Literatur\n",
+    "created" : 1435834262885.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3679157262",
+    "id" : "C31E366D",
+    "lastKnownWriteTime" : 1435839994,
+    "path" : "J:/Work/Statistik/Kolb/Beratung/Gewichtung/pairfam/Paper/pairfam_doku.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 17,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

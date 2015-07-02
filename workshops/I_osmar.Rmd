@@ -32,3 +32,10 @@ Osmosis is a command line Java application for processing OSM data.
 
 <http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29>
 
+## Further tutorials on the usage of osmar and OpenStreetMap data:
+
+<http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest>
+
+<https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd>
+
+<http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic>
