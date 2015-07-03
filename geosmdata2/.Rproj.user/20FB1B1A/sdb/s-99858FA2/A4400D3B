@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"Weighting with survey package\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"24. Juni 2015\"\noutput: html_document\n---\n\n\n## Preliminaries \n\nThe package\n\n\n```{r,message=F}\nlibrary(survey)\nlibrary(knitr)\n```\n\n\n\n<http://r-survey.r-forge.r-project.org/survey/index.html>\n\nIntroduction course:\n<http://knutur.at/wsmt/>\n\nAnalyse many big population surveys\n<http://www.asdfree.com/>\n\nfor example:\n<http://www.r-bloggers.com/analyze-the-european-social-survey-ess-with-r/>\n\nMore info?\n\n<http://tophcito.blogspot.de/2014/04/social-science-goes-r-weighted-survey.html>\n\nBlogg from Thomas Lumley:\n\n<http://notstatschat.tumblr.com/post/62048763550/statins-and-the-causal-markov-property>\n\n![alt text](http://revolution-computing.typepad.com/.a/6a010534b1db25970b017ee81be3cf970d-800wi)\n\n\n## The data\n\nPisa\n<http://www.r-bloggers.com/analyze-the-program-for-international-student-assessment-pisa-with-r-and-monetdb/>\n\n```{r}\n(load(url(\"http://knutur.at/wsmt/R/RData/small.RData\")))\nkable(head(small))\n```\n\n## The api data\n\n```{r}\ndata(api)\n```\n\n\n```{r}\nrel_api <- apistrat[,c(\"stype\",\"snum\",\"dnum\",\"pw\",\"fpc\")]\nkable(head(rel_api))\n```\n\n\n\n\n## Specifying a survey design\n\nAn overview of the possible survey designs is available [here](http://r-survey.r-forge.r-project.org/survey/html/svydesign.html)\n\n### Stratified\n\n```{r}\ndstrat <- svydesign(id=~1,strata=~stype, weights=~pw, data=apistrat, fpc=~fpc)\n```\n\n### One-stage cluster sample\n\n```{r}\ndclus1<-svydesign(id=~dnum, weights=~pw, data=apiclus1, fpc=~fpc)\n```\n\n### Two-stage cluster sample\n\n\n- id=~SubPlot+obs: In the id argument we need to list variables that identify both the primary sampling units and the secondary sampling units, in that order. Here the primary sampling units are the subplots (variable SubPlot) while the secondary sampling units are the trees in the subplot. The variable obs created above identifies the individual trees.\n\n- fpc=~fpc1+fpc2: Similarly in the fpc argument we need to specify the variables containing the information for the FPC calculation at each level. The variable fpc1 records the cluster population size 60 (primary sample stage) while fpc2 records the number of trees in the selected subplots (secondary sample stage). \n\n~ is used when variables are in the data frame.\n\n[Source](http://www.unc.edu/courses/2010spring/ecol/562/001/docs/lectures/lecture20.htm)\n\n```{r}\n# two-stage cluster sample: weights computed from population sizes.\ndclus2<-svydesign(id=~dnum+snum, fpc=~fpc1+fpc2, data=apiclus2)\n```\n\n## Analysis of complex survey designs\n\n```{r}\nsvymean(~api00, dclus1, deff=TRUE)\n```\n\n\n## Weights Trimming\n\n```{r}\n?trimWeights\n```\n\n\n\n\n## Literature on survey weighting\n\n<http://tophcito.blogspot.de/2014/04/survey-computing-your-own-post.html>\n",
+    "created" : 1435909589740.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2110324293",
+    "id" : "A4400D3B",
+    "lastKnownWriteTime" : 1435921816,
+    "path" : "J:/Work/Statistik/Kolb/Workshops/2016/grade_sampling/SurveyWeighting.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "\n#-----------------------------------------------#\n# Beispiel 1\n#-----------------------------------------------#\n\n\nDat_BSP1 <- data.frame(y1=1:4,y2=c(1:2,1:2),y3=c(3:4,3:4),psu=c(1,1,2,2),\n                       fpc1=rep(4,4))\n\n\n\ndclus2<-svydesign(id=~psu,  \n                  fpc=~fpc1,\n                  data=Dat_BSP1)\n\nErg1 <- svymean(~y1,dclus2,deff=T)\nErg2 <- svymean(~y2,dclus2,deff=T)\nErg3 <- svymean(~y3,dclus2,deff=T)\n\n#-----------------------------------------------#\n# Beispiel 2\n#-----------------------------------------------#\n\nN <- 20\nm <- 10\nn <- 5\ny0 <- outer(rep(1,m),(1:N),FUN=\"+\")\ns <- sample(N,n,replace=TRUE)\ny <- y0[,s]\n\nDat_BSP2 <- data.frame(y1=as.vector(y),psu=rep(s,each=10),\n                       fpc1=rep(200,length(y)))\n\n\ndclus2B<-svydesign(id=~psu,  \n                  fpc=~fpc1,\n                  data=Dat_BSP2)\n\nsvymean(~y1,dclus2B,deff=T)\n\n\nwrite.dta(Dat_BSP2,file=\"Dat_BSP2.dta\")\n\n\n#-----------------------------------------------#\n# Beispiel Allbus\n#-----------------------------------------------#\n\npath <- \"J:/Work/Statistik/Kolb/Paper/Gewichtung/data\"\n\nsetwd(path)\n\n\ndat_zus <- read.spss(\"zusatz_cs_siegfried_2010.sav\", use.value.labels = FALSE,to.data.frame = TRUE)\ndat     <- read.spss(\"allb10_cs.sav\", use.value.labels = FALSE,to.data.frame = TRUE)\n\nDat   <- merge(dat,dat_zus,by.x=\"v2\",by.y=\"v2\")  # Mergen der beiden Dateien nach v2\n\nDat$Mi  <- Dat[,ncol(Dat)-1] \nDat_CC <- Dat[!is.na(Dat$Mi),]\n\n\nu   <- unique(Dat_CC$Mi)\nn   <- length(Dat_CC$Mi)\nDat_CC$PSU <- Dat_CC$Mi\n\nfor(i in 1:n){\n  Dat_CC$PSU <- replace(Dat_CC$PSU,(1:n)[Dat_CC$PSU==u[i]],i)\n}\n\n\n\n\ntable(Dat_CC$PSU)\n\nfpc1 <- rep(80000000,nrow(Dat_CC))\n\ntab_Mi <- table(Dat_CC$Mi)\n\nfpc2 <- Dat_CC$Bevölkerungab18Stand31.12.2007\n\n# Dat_Allb <- data.frame(psu=PSU,fpc=Mi)\nID <- 1:nrow(Dat_CC)\nPSU <- Dat_CC$PSU\n\n\ntapply(fpc2,PSU,function(x)length(unique(x)))\n\n\ndclus_Allb<-svydesign(id=PSU+ID,  \n                   fpc=fpc1+fpc2)\n\n\n\nwrite.dta(apiclus2,file=\"\")\n",
+    "created" : 1435909733516.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1026411897",
+    "id" : "4DD0FAAA",
+    "lastKnownWriteTime" : 1424361553,
+    "path" : "J:/Work/Statistik/Kolb/Paper/Gewichtung/Rcode/Weighting_Lumley.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

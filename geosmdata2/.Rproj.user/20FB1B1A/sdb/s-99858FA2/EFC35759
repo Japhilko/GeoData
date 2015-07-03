@@ -1,0 +1,18 @@
+{
+    "contents" : "\n\ntrees<-read.table('http://www.unc.edu/courses/2007spring/enst/562/001/data/lab4/Surinam.csv', header=T, sep=',')\n\nset.seed(50)\nsrs.sample<-trees[sample(1:nrow(trees), 300, replace=F),]\n\nSRS.obj<-svydesign(id=~1, fpc=rep(nrow(trees),300), data=srs.sample) \n\nsvymean(~Diameter_cm,SRS.obj)\nSRS.obj.nofpc<-svydesign(id=~1,data=srs.sample)\n\n\nfracs<-table(trees$CC)/sum(table(trees$CC))\n\nnd<-round(fracs[1]*300)\nns<-300-nd \n\nfpcvals<-table(trees$CC) \n\nclassD<-trees[trees$CC=='D',]\nclassD$fpc<-rep(fpcvals[1], nrow(classD))\n# Pull off stratum S observations\nclassS<-trees[trees$CC=='S',]\nclassS$fpc<-rep(fpcvals[2], nrow(classS))\n\nset.seed(100)\nd.sample<-sample(1:nrow(classD),nd,replace=F)\ns.sample<-sample(1:nrow(classS),ns,replace=F)\n\nstrat.samp<-rbind(classD[d.sample,], classS[s.sample,])\n\nstrat.obj<-svydesign(id=~1, strata=~CC, data=strat.samp, fpc=~fpc)\n\nplot.list<-sort(unique(trees$SubPlot))\nnum.plots <- length(plot.list)\n\nmy.plot<-plot.list[sample(1:num.plots,3)]\n\ncluster.sample<-trees[trees$SubPlot %in% my.plot,]\n\n\ncluster.obj<-svydesign(id=~SubPlot, fpc=rep(num.plots, nrow(cluster.sample)), data=cluster.sample)\n\n\nset.seed(200)\n#sample from the list of the plot names\ncluster.list <- plot.list[sample(1:num.plots, 6, F)]\n\n\nclust.samp2<-NULL\nfor(i in 1:length(cluster.list)) {\n  cur.clust <- trees[trees$SubPlot == cluster.list[i],]\n  cur.sample <- cur.clust[sample(1:nrow(cur.clust),50,F),]\n  cur.sample$fpc2 <- rep(nrow(cur.clust),50)\n  clust.samp2 <- rbind(clust.samp2, cur.sample)\n}\n\n\nclust.samp2$obs <- 1:300\nclust.samp2$fpc1 <- rep(60, nrow(clust.samp2))\n\nsvydesign(id=~SubPlot+obs, fpc=~fpc1+fpc2, data=clust.samp2) -> two.stage\nsvymean(~Diameter_cm,two.stage)\n",
+    "created" : 1435912011468.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "331452955",
+    "id" : "EFC35759",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
