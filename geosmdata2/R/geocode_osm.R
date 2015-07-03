@@ -10,6 +10,8 @@ geocode_osm <- function(place,output=c("coord","all")){
   geoc2 <- c(as.numeric(geoc1[which(names(geoc1)=="lat")]),as.numeric(geoc1[which(names(geoc1)=="lon")]))
   names(geoc2) <- c("lat","lon")
   if(output=="all"){return(geoc[[1]])}else{return(geoc2)}
+  Sys.sleep(1) # http://wiki.openstreetmap.org/wiki/Nominatim_usage_policy
+  # an absolute maximum of 1 request/s
 }
 
 

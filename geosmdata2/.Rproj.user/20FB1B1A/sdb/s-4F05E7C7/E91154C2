@@ -1,0 +1,18 @@
+{
+    "contents" : "require(XML,rjson,stringr)\n\ngc <- geocode_osm(place=\"Rheinauer See\",output=\"all\")\nCircSearch(what=\"cafe\",lat=gc$lat,lon=gc$lon,radius=10000)\n\n\n\n\ngc_MA <- geocode_osm(place=\"Mannheim B2,1\",output=\"all\")\n\nbus_stop_MA <- CircSearch(what=\"bus_stop\",lat=gc_MA$lat,lon=gc_MA$lon,radius=5000)\n\ninfo_bus <- extract_info_op(OSM.Data=bus_stop_MA,value=\"bus_stop\")\n\n#------------------------------------#\n# function\n#------------------------------------#\n\n\nCircSearch <- function(what,lat,lon,radius){\n  ind <- which(what==osm_df$Value)\n\n  if(length(ind)>0){\n    ind2 <- agrep(\"node\",osm_df$Element[ind])\n    if(length(ind2)>0){\n      ind <- ind[ind2[1]]\n\n      object <- paste(osm_df$Key[ind],\"=\",what,sep=\"\")\n      Link1 <- \"http://www.overpass-api.de/api/interpreter?data=\"\n      expr <- paste(\"node(around:\",radius,\",\",lat,\",\",lon,\")[\",object,\"];out;\",sep=\"\")\n      InfoList <- xmlParse(paste(Link1,expr,sep=\"\"))\n      return(InfoList)\n    }\n  }\n}\n\nlink <- \"http://www.overpass-api.de/api/interpreter?data=node(around:10000,49.413,8.5337)[\\\"amenity\\\"=\\\"cafe\\\"];out;\"\ninfo <- xmlParse(link)\n# http://overpass-api.de/api/interpreter?data=node%5B%22amenity%22%3D%22pub%22%5D%5B%22name%22%3D%22Bristol%22%5D%3Bnode%28around%3A100%29%5B%22highway%22%3D%22bus%5Fstop%22%5D%3Bout%3B\n\n# <query type=\"node\">\n#   <around lat=\"49.413\" lon=\"8.5337\" radius=\"1000\"/>\n#   <has-kv k=\"amenity\" v=\"cafe\" />\n#   </query>\n#   <print />\n\n\n#------------------------------------#\n# Links\n#------------------------------------#\n\n# http://stackoverflow.com/questions/16442663/how-to-get-point-of-interest-near-my-point-using-overpass-api\n# http://overpass-api.de/query_form.html\n\n\n# http://osm-bremen.de/author/cracklinrain/\n",
+    "created" : 1435840643175.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3423446920",
+    "id" : "E91154C2",
+    "lastKnownWriteTime" : 1435902287,
+    "path" : "J:/Work/Statistik/Kolb/Paper/UseOSMdata/rcode/rOSM_o_CIRCUMSEARCH.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 15,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

@@ -1,0 +1,17 @@
+{
+    "contents" : "\\name{CircSearch}\n\\alias{CircSearch}\n\\title{function CircSearch}\n\\usage{\nCircSearch(what,lat,lon,radius)\n}\n\\arguments{\n\\item{what,lat,lon,radius}{Map feature}\n\\item{lat}{Latitude}\n\\item{lon}{Longitude}\n\\item{radius}{Radius}\n}\n\\description{\nPerforms circum search\n}\n\\author{\nJan-Philipp Kolb \\email{Jan-Philipp_Kolb@gmx.net}\n}\n\\references{\n\\url{http://wiki.openstreetmap.org/wiki/Overpass_API#Around}\n}\n\\examples{\ngc <- geocode_osm(place=\"Venice beach\",output=\"all\")\ncafes_venice <- CircSearch(what=\"cafe\",lat=gc$lat,lon=gc$lon,radius=10000)\n}\n\n\n\n",
+    "created" : 1435901162549.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1391347845",
+    "id" : "DF0EBC4",
+    "lastKnownWriteTime" : 1435901446,
+    "path" : "~/GitHub/GeoData/geosmdata2/man/CircSearch.Rd",
+    "project_path" : "man/CircSearch.Rd",
+    "properties" : {
+    },
+    "relative_order" : 17,
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

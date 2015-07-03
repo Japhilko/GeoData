@@ -22,6 +22,7 @@ ua <- get_osm(bb, source = api)
 ## What is inside:
 
 You get three types of objects:
+
 ```{r}
 names(ua)
 ```

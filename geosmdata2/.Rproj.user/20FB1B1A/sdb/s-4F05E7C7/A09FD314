@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"Use R-package osmar\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"Thu Jun 11 17:13:33 2015\"\noutput: ioslides_presentation\n---\n\n## Download information\n\n```{r}\nlibrary(ggmap)\nlibrary(osmar)\napi <- osmsource_api()\n```\n\n```{r}\ncityC <- geocode(\"Mannheim Seckenheim\")\nbb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)\nua <- get_osm(bb, source = api)\n```\n\n## What is inside:\n\nYou get three types of objects:\n\n```{r}\nnames(ua)\n```\n\n## What is behind:\n\nOsmosis is a command line Java application for processing OSM data.\n\n<http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29>\n\n## Further tutorials on the usage of osmar and OpenStreetMap data:\n\n<http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest>\n\n<https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd>\n\n<http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic>\n",
+    "created" : 1435760066530.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "144084863",
+    "id" : "A09FD314",
+    "lastKnownWriteTime" : 1435903786,
+    "path" : "~/GitHub/GeoData/workshops/I_osmar.Rmd",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}

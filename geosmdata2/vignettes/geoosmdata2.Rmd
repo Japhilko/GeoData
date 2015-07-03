@@ -9,10 +9,19 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+
+## Introduction
+
 The `geoosmdata2` package is designed for the download and work with data from OpenStreetMap. 
 
 ```{r}
 library(geosmdata2)
+```
+
+## Geocoding with nominatim
+
+```{r}
+gc <- geocode_osm("rue Saint Vincent Paris",output="all")
 ```
 
 
