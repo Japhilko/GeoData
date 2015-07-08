@@ -1,0 +1,18 @@
+{
+    "contents" : "#---------------------------------------#\n# Survey Weighting with ALLBUS data\n# Jan-Philipp Kolb und Siegfried Gabler\n# Mon Jun 29 10:27:37 2015\n#---------------------------------------#\n\n#---------------------------------------#\n# Generalities\n#---------------------------------------#\n\nauthor <- \"Siegfried Gabler und Jan-Philipp Kolb\"\nscriptname <- \"WeightALL_A_prepareData.R\"\n\n#---------------------------------------#\n# Paths\n#---------------------------------------#\n\n\nr.path <- \"J:/Work/Statistik/Kolb/Paper/Gewichtung/Rcode/rcodePaper\"\npath <- \"J:/Work/Statistik/Kolb/Paper/Gewichtung/data\"\n\n#---------------------------------------#\n# Libraries\n#---------------------------------------#\n\n\nlibrary(foreign)\nrequire(xlsx)\n\n#---------------------------------------#\n# Read data\n#---------------------------------------#\n\nsetwd(path)\ndat_zus <- read.spss(\"zusatz_cs_siegfried_2010_neu.sav\", use.value.labels = FALSE,to.data.frame = TRUE)\ndat     <- read.spss(\"allb10_cs.sav\", use.value.labels = FALSE,to.data.frame = TRUE)\n\nVars <- read.xlsx(\"VariablenALLBUS10.xlsx\",1)\n#---------------------------------------#\n# Merge data\n#---------------------------------------#\n\n\nx   <- merge(dat,dat_zus,by.x=\"v2\",by.y=\"v2\")  # Mergen der beiden Dateien nach v2\n\n#---------------------------------------#\n# Create new PSU indicator\n#---------------------------------------#\n\nind <- agrep(\"Bev\",colnames(x))\ncolnames(x)[ind] <- \"Mi\"\n\n# Mi[is.na(Mi)] <- 10124  # Email Michael Blohm 11.12.2014\nu   <- unique(x$Mi)\nn   <- length(x$Mi)\nPSU <- x$Mi\nfor(i in 1:n){\n  PSU <- replace(PSU,(1:n)[PSU==u[i]],i)\n}\nx   <- cbind(x,PSU)\n\n\n#---------------------------------------#\n# save data set\n#---------------------------------------#\n\nsetwd(path)\nattr(x,\"Info\") <- paste(author,scriptname,date())\nsave(x,file=\"ALLBUSweights.RData\")\n\n#---------------------------------------#\n# save data set - as dta\n#---------------------------------------#\n\nwrite.dta(x,file=\"ALLBUSweights.dta\")\n\n\n#---------------------------------------#\n# save varlist\n#---------------------------------------#\n\nhead(Vars)\nattr(Vars,\"Info\") <- paste(author,scriptname,date())\nsave(Vars,file=\"ALLBUS10Vars.RData\")\n\n\nsessionInfo()\n# R version 3.2.0 (2015-04-16)\n# Platform: x86_64-w64-mingw32/x64 (64-bit)\n# Running under: Windows 7 x64 (build 7601) Service Pack 1\n#\n# locale:\n#   [1] LC_COLLATE=German_Germany.1252  LC_CTYPE=German_Germany.1252    LC_MONETARY=German_Germany.1252\n# [4] LC_NUMERIC=C                    LC_TIME=German_Germany.1252\n#\n# attached base packages:\n#   [1] stats     graphics  grDevices utils     datasets  methods   base\n#\n# other attached packages:\n#   [1] xlsx_0.5.7     xlsxjars_0.6.1 rJava_0.9-6    foreign_0.8-63 xtable_1.7-4\n#\n# loaded via a namespace (and not attached):\n#   [1] tools_3.2.0\n",
+    "created" : 1436181591567.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3641012773",
+    "id" : "5F7E9924",
+    "lastKnownWriteTime" : 1435905801,
+    "path" : "J:/Work/Statistik/Kolb/Paper/Gewichtung/Rcode/rcodePaper/WeightALL_A_prepareData.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
