@@ -221,3 +221,8 @@ OpenGov
 ```{r,eval=F}
 system.file("jri",package="rJava")
 ```
+
+```{r}
+install.packages("DiscreteRV")
+```
+
