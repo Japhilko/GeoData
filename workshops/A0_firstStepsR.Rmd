@@ -20,17 +20,42 @@ output: ioslides_presentation
 
 
 
-## Geographic information systems and R
+## GIS and R
 
-- R and QGIS
+Geographic information systems (GIS)
 
-[qgis](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/300px-QGis_Logo.png)
+- R and [qgis](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/300px-QGis_Logo.png)
 
+- [Applied Spatial Data Analysis with R](http://www.uclm.es/profesorado/vgomez/useR2015/) (Virgilio Gómez-Rubio)
+
+- [spatstat: Spatial Point Pattern Analysis](http://cran.r-project.org/web/packages/spatstat/index.html)
+
+- [giswerk](http://giswerk.org/)
+
+- [Task view mapping](https://github.com/ropensci/maptools)
 
 ## Online workshops to learn R
 
-<https://learnr.wordpress.com/>
+- [Manuals on Homepage](http://cran.r-project.org/manuals.html)
+
+- [Programming in R](http://manuals.bioinformatics.ucr.edu/home/programming-in-r)
+
+- [Learning R](https://learnr.wordpress.com/)
+
+- [Reference card](http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf)
+
+- [How to get help in R](http://itfeature.com/tag/how-to-get-help-in-r)
 
 ## Graphics
 
-<http://www.harding.edu/fmccown/r/>
+- [Producing Simple Graphs with R](http://www.harding.edu/fmccown/r/)
+
+- [Lattice](http://stat.ethz.ch/R-manual/R-devel/library/lattice/html/Lattice.html)
+
+- [R Graphics by Paul Murrell](https://www.stat.auckland.ac.nz/~paul/RGraphics/rgraphics.html)
+
+## Last slide
+
+![alt text](http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png)
+
+
