@@ -140,6 +140,11 @@ Comparison of R and other statistical programs
 <http://clojure.org/>
 
 
+## Google programming language GO
+
+<https://golang.org/>
+
+
 ##  getting to know html
 
 <https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction>
@@ -205,6 +210,28 @@ ct$console()
 OpenGov
 
 <http://ropengov.github.io/projects/>
+
+## New Developments UseR 2015 in Aalborg
+
+[Overview in German](http://blog.eoda.de/2015/07/01/eoda-auf-der-user-conference-2015-in-aalborg-die-eindruecke-vom-tutorial-tuesday/)
+
+Have a look at Docker
+<https://www.docker.com/>
+
+[network analysis with igraph](http://igraph.org/r/)
+
+[Tutorial RHadoop](http://hortonworks.com/hadoop-tutorial/using-rhadoop-to-predict-visitors-amount/)
+
+<http://www.rdatamining.com/big-data/r-hadoop-setup-guide>
+
+[Analyze and manage Facebook ads from R](https://github.com/cardcorp/fbRads)
+
+
+Get into contact
+<https://ropensci.org/community/#join-us>
+<https://www.r-consortium.org/>
+
+[An alternative for rstudio](http://www.openanalytics.eu/downloads/architect)
 
 ## Further links
 

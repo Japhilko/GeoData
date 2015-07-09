@@ -58,6 +58,9 @@ Geographic information systems (GIS)
 
 ![picture](http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg)
 
+
+[Overview of available packages on CRAN](http://www.r-pkg.org/)
+
 ## R-conferences
 
 [eoda from UseR15 in Aalborg](http://blog.eoda.de/2015/07/03/eoda-auf-der-user-conference-2015-in-aalborg-die-highlights-vom-ersten-praesentationstag-teil-2/)
