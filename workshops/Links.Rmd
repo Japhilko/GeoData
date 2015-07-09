@@ -87,7 +87,8 @@ Where people run
 
 <http://www.r-bloggers.com/some-r-conferences-in-2015/>
 
-
+get an overview of events:
+<http://10times.com/>
 ```{r}
   # http://www.r-bloggers.com/mapping-biomes/
   # http://fwtools.maptools.org/
@@ -95,6 +96,8 @@ Where people run
   #http://www.r-bloggers.com/no-surprises-more-people-tweet-more-visualizing-twitter-counts-during-election-day/
 ```
 
+
+[Inspire Conference](http://inspire.ec.europa.eu/events/conferences/inspire_2014/page/home)
 
 ## Interesting geolinks
 
@@ -214,6 +217,8 @@ OpenGov
 ## New Developments UseR 2015 in Aalborg
 
 [Overview in German](http://blog.eoda.de/2015/07/01/eoda-auf-der-user-conference-2015-in-aalborg-die-eindruecke-vom-tutorial-tuesday/)
+
+[Another overview](http://blog.revolutionanalytics.com/user-groups/)
 
 Have a look at Docker
 <https://www.docker.com/>
