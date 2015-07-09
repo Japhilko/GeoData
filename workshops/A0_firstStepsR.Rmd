@@ -65,6 +65,9 @@ Geographic information systems (GIS)
 
 [eoda from UseR15 in Aalborg](http://blog.eoda.de/2015/07/03/eoda-auf-der-user-conference-2015-in-aalborg-die-highlights-vom-ersten-praesentationstag-teil-2/)
 
+[UseR Aalborg - r-bloggers](http://www.r-bloggers.com/user-2015-conference-in-aalborg/)
+
+[UseR Aalborg - twitter](https://twitter.com/search?q=%23user2015&src=typd)
 ## Last slide
 
 ![alt text](http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png)
