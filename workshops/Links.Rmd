@@ -10,6 +10,9 @@ output: html_document
 
 <http://manuals.bioinformatics.ucr.edu/home/programming-in-r>
 
+[Teaching R](http://www.r-bloggers.com/teaching-a-short-topic-to-beginner-r-users/)
+
+[Data Wrangling etc.](http://stat545-ubc.github.io/)
 
 ## Popularity R
 
@@ -167,15 +170,15 @@ Comparison of R and other statistical programs
 
 
 ```{r,eval=F}
-library(V8)
-data(diamonds, package="ggplot2")
-ct <- new_context()
-ct$assign("diamonds", diamonds)
-
-# Load CrossFilter JavaScript library
-ct$source("http://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.11/crossfilter.min.js")
-
-ct$console()
+# library(V8)
+# data(diamonds, package="ggplot2")
+# ct <- new_context()
+# ct$assign("diamonds", diamonds)
+# 
+# # Load CrossFilter JavaScript library
+# ct$source("http://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.11/crossfilter.min.js")
+# 
+# ct$console()
 ```
 
 
@@ -255,6 +258,6 @@ system.file("jri",package="rJava")
 ```
 
 ```{r}
-install.packages("DiscreteRV")
+# install.packages("DiscreteRV")
 ```
 

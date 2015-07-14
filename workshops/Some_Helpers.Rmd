@@ -69,6 +69,15 @@ citation(package = "mice")
 
 <http://www.blopig.com/blog/2013/07/citing-r-packages-in-your-thesispaperassignments/>
 
+## Rstudio and git
+
+[Rstudio and git](http://www.r-bloggers.com/rstudio-and-github/)
+
+[Github](https://github.com/jennybc/2015-06-28_r-summit-talk/blob/master/2015-06-28_bryan-r-summit-talk.pdf)
+
+[Github 2](http://www.r-bloggers.com/get-by-with-a-little-r-help-from-your-friends-at-github/)
+
+[education and github](http://blog.revolutionanalytics.com/2015/06/get-your-r-education-going-with-github.html)
 
 ## What's new on R
 
