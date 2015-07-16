@@ -56,6 +56,8 @@ Geographic information systems (GIS)
 
 - [R Graphics by Paul Murrell](https://www.stat.auckland.ac.nz/~paul/RGraphics/rgraphics.html)
 
+- [Possibilities to visualize](http://mesa.ac.nz/wp-content/uploads/2012/05/all_presentations.pdf)
+
 ## Packages in R
 
 ![picture](http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg)
