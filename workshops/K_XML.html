@@ -110,7 +110,11 @@
 
 </article></slide><slide class=''><hgroup><h2>Get example data</h2></hgroup><article  id="get-example-data">
 
-<pre class = 'prettyprint lang-r'>library(geosmdata2)</pre>
+<pre class = 'prettyprint lang-r'>library(geosmdata2)
+osm_object &lt;- get_osm_ways(object2=&quot;cycleway&quot;,place=&quot;Mannheim&quot;)
+xml_obj &lt;- xmlRoot(osm_object)</pre>
+
+<img src='https://github.com/Japhilko/GeoData/blob/master/data/figure/XMLex.PNG' title=''/>
 
 </article></slide><slide class=''><hgroup><h2>Further information</h2></hgroup><article  id="further-information">
 

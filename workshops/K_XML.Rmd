@@ -27,8 +27,12 @@ See his work [here](http://gastonsanchez.com/) and another [picture](https://ima
 
 ```{r,eval=Ex}
 library(geosmdata2)
-
+osm_object <- get_osm_ways(object2="cycleway",place="Mannheim")
+xml_obj <- xmlRoot(osm_object)
 ```
+
+
+![Pic](https://github.com/Japhilko/GeoData/blob/master/data/figure/XMLex.PNG)
 
 
 ## Further information
