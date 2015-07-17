@@ -46,6 +46,8 @@ Here you can find the chunk options:
 
 <http://yihui.name/knitr/options/>
 
+[More about knittr](http://yihui.name/knitr/demo/showcase/)
+
 Here is how to embed formulas:
 
 <http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html>
