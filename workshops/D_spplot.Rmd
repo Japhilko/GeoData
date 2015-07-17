@@ -2,14 +2,14 @@
 title: "sp package"
 author: "Jan-Philipp Kolb"
 date: "22. April 2015"
-output: html_document
+output: ioslides_presentation
 ---
 
 ## The package sp
 
 - classes and methods for spatial data
 
-```{r}
+```{r,message=F}
 library(sp)
 ```
 
