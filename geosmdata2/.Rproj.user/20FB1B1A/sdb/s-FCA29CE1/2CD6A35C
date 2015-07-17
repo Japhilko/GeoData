@@ -11,7 +11,7 @@
     "project_path" : "man/get_osm_ways.Rd",
     "properties" : {
     },
-    "relative_order" : 7,
+    "relative_order" : 1,
     "source_on_save" : false,
     "type" : "r_doc"
 }

@@ -27,6 +27,27 @@ library(geosmdata2)
 gc <- geocode_osm("rue Saint Vincent Paris",output="all")
 ```
 
+## Get information on points of interest (POI)
+
+```{r}
+cafes <- get_osm_nodes("cafe",place="Concord")
+
+cafes_cc <- extract_info_op(OSM.Data=cafes,value="cafe")
+```
+
+
+
+
+The `ggmap` function from package [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html) can be used to download a background map. 
+
+```{r}
+library(ggmap)
+Concord_map <- get_googlemap("Concord")
+ggmap(Concord_map)+ geom_point(aes(x = lon, y = lat),
+data = cafes_cc)
+```
+
+
 
 ## Area
 
@@ -43,6 +64,7 @@ info_pedestrian <- extract_info_op(OSM.Data=Rom_pedestrian,
 
 ```{r}
 MA_cycle1 <- get_osm_ways(object2="cycleway",place="Mannheim")
+MA_bike_routes <- extract_position_op(MA_cycle1,"cycleway")
 ```
 
 

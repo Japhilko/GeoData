@@ -84,3 +84,5 @@ citation(package = "mice")
 ## What's new on R
 
 <http://cran.r-project.org/src/base/NEWS>
+
+[Teaching with R](http://gastonsanchez.com/teaching/)
