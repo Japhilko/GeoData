@@ -1,18 +1,18 @@
 {
     "contents" : "\n\nlibrary(geosmdata2)\nlibrary(osmar)\n\nobject2=\"cycleway\"\nplace=\"Trier\"\n\nTrier <- xmlParse(\"http://www.overpass-api.de/api/interpreter?data=area[name=\\\"Trier\\\"];way(area)[highway=cycleway];out geom;\")\n\n\n\nbike_HD <- get_osm_ways(object2=\"cycleway\",place=\"Heidelberg\")\n\nvalue = \"cycleway\"\nOSM.Data <- bike_HD\n\ninfo <- extract_position_op(bike_HD,\"cycleway\")\n\n\nListe_i <- unlist(xpathApply(OSM.Data,paste(\"//\",Element,\"[@id = \",node_id[i],\"]//nd/attribute::*\",sep=\"\")))\n\n\nosm_object <- get_osm_ways(object2=\"cycleway\",place=\"Mannheim\")\n\nvalue = \"cycleway\"\nOSM.Data = osm_object\n\nnode_id<- xpathApply(OSM.Data,\"//tag[@v= 'cycleway']/parent::way/@ id\")\n\nnode_id<- xpathApply(OSM.Data,\"//tag[@v= 'cycleway']/parent::way/@ nd\")\n\nnode_id<- xpathApply(OSM.Data,\"//.\")\n\nnode_id<- xpathApply(OSM.Data,\"//@id\")\n\nnode_id<- xpathApply(OSM.Data,\"//parent::way/@ id\")\n\nnode_id<- xpathApply(OSM.Data,\"//self::way/.\")\n\n\nnode_way<- xpathApply(OSM.Data,\"//child::way/.\")\n\nxpathApply(node_way[[1]],\"//child::way/.\")\n\nunlist(node_id<- xpathApply(OSM.Data,\"//child::nd/./@ref\"))\n\n\nxpathApply(node_way,\"/.\")\n\n\nxpathSApply(node_way,xmlValue)\n\nnode_id\n\nxml <- xmlChildren(OSM.Data)\n\n\n\n\nxml_obj <- xmlRoot(osm_object)\n\n\ninfoAttrs <- xmlSApply(xml_obj, xmlAttrs)\n# infoAttrs2 <- xmlSApply(xml_obj, xmlValue)\n\n?xpathApply\nxpathApply(osm_object, \"//a[@way]\", xmlGetAttr, \"nd\")\n\n\nMA_cycl1 <- extract_info_op(MA_cycle1,\"cycleway\")\nunique(MA_cycl1$destination.forward)\n# extract_info_op\n",
-    "created" : 1437113569473.000,
+    "created" : 1437124398339.000,
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "436981178",
-    "id" : "ABE02F45",
+    "id" : "30A494AD",
     "lastKnownWriteTime" : 1437123939,
     "path" : "J:/Work/Statistik/Kolb/Paper/UseOSMdata/rcode/rOSM_P_getlocWays.R",
     "project_path" : null,
     "properties" : {
         "tempName" : "Untitled1"
     },
-    "relative_order" : 3,
+    "relative_order" : 8,
     "source_on_save" : false,
     "type" : "r_source"
 }

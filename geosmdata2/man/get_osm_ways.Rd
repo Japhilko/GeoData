@@ -19,5 +19,7 @@ Returns info on ways from \url{http://www.overpass-api.de/api/}
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-  roads <- get_osm_ways(object2="secondary",place="Sandhofen")
+#  roads <- get_osm_ways(object2="secondary",place="Sandhofen")
+  bike_routes <- get_osm_ways(object2="cycleway",place="Berkeley")
+
 }

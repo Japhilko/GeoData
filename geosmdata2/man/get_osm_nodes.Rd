@@ -22,6 +22,6 @@ Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 \code{\link{get_osm_relation}}, \url{http://www.r-project.org}
 }
 \examples{
-  cafes <- get_osm_nodes("cafe",place="Sandhofen")
-  brewery <- get_osm_nodes("brewery",place="München")
+  cafes <- get_osm_nodes("cafe",place="Emeryville")
+  # brewery <- get_osm_nodes("brewery",place="Ingolstadt")
 }

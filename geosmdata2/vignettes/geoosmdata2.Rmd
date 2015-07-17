@@ -14,6 +14,9 @@ vignette: >
 
 The `geoosmdata2` package is designed for the download and work with data from OpenStreetMap. 
 
+[Overpass-turbo](https://www.mapbox.com/guides/overpass-turbo/) is an alternative, but no API. 
+
+
 ```{r}
 library(geosmdata2)
 ```
@@ -23,7 +26,6 @@ library(geosmdata2)
 ```{r}
 gc <- geocode_osm("rue Saint Vincent Paris",output="all")
 ```
-
 
 
 ## Area
