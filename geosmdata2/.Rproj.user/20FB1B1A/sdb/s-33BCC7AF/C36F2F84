@@ -1,0 +1,17 @@
+{
+    "contents" : "GeoData\n=======\n\nThis repo encloses my research with R on statistics and geodata. And my package on downloading and process information from [OpenStreetMap](http://www.openstreetmap.de/).\n\n\n\n\n\n\n\n\n",
+    "created" : 1437114083057.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3735079215",
+    "id" : "C36F2F84",
+    "lastKnownWriteTime" : 1437114190,
+    "path" : "~/GitHub/GeoData/README.md",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "markdown"
+}
