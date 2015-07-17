@@ -7,7 +7,7 @@ get_osm_ways <- function(object2,place){
       type_obj <- "way"
       object <- paste(osm_df$Key[ind],"=",object2,sep="")
       Link1 <- "http://www.overpass-api.de/api/interpreter?data=area[name=\""
-      InfoList <- xmlParse(paste(Link1,place,"\"];",type_obj,"(area)[",object,"];out;",sep=""))
+      InfoList <- xmlParse(paste(Link1,place,"\"];",type_obj,"(area)[",object,"];out geom;",sep=""))
       return(InfoList)
     }else{
       ind2 <- agrep("node",osm_df$Element[ind])

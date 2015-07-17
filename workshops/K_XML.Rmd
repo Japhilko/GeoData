@@ -9,10 +9,6 @@ output: ioslides_presentation
 Ex=F
 ```
 
-## Working with XML files:
-
-<http://www.informit.com/articles/article.aspx?p=2215520>
-
 ## Gaston Sanchez
 
 ![picture](http://gastonsanchez.com/images/blog/dataflow_page.jpg)
@@ -32,8 +28,15 @@ xml_obj <- xmlRoot(osm_object)
 ```
 
 
-![Pic](https://github.com/Japhilko/GeoData/blob/master/data/figure/XMLex.PNG)
+![Pic](http://www.msxfaq.de/code/xml01.gif)
 
+## Another Working example with XML files:
+
+<http://www.informit.com/articles/article.aspx?p=2215520>
+
+```{r}
+
+```
 
 ## Further information
 
@@ -43,3 +46,4 @@ xml_obj <- xmlRoot(osm_object)
 
 
 [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
+

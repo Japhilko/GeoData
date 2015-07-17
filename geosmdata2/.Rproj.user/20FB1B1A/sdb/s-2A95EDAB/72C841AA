@@ -1,0 +1,18 @@
+{
+    "contents" : "extract_position_op <- function(OSM.Data,value){\n  kov <- ifelse(value%in%osm_df$Value,\"v\",\"k\")\n  if(kov==\"v\"){\n    ind <- which(value==osm_df$Value)\n  }else{\n    ind <- which(value==osm_df$Key)\n  }\n  Element <- osm_df$Element2[ind]\n\n  node_id<- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\"= '\",value,\"']/parent::\",Element,\"/@ id\",sep=\"\") )\n  if (length(node_id)==0){\n    Element <- osm_df$Element3[ind]\n    node_id<- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\"= '\",value,\"']/parent::\",Element,\"/@ id\",sep=\"\") )\n    if (length(node_id)==0){\n      Element <- osm_df$Element4[ind]\n      node_id<- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\"= '\",value,\"']/parent::\",Element,\"/@ id\",sep=\"\") )\n      if (length(node_id)==0){\n        Element <- osm_df$Element5[ind]\n        node_id<- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\"= '\",value,\"']/parent::\",Element,\"/@ id\",sep=\"\") )\n      }\n    }\n  }\n\n  pb <- txtProgressBar(min = 0, max = length(node_id), style = 3)\n\n  lat_x <- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\" = '\",value,\"']/parent::\",Element,\"/@ lat\",sep=\"\"))\n  lon_x <- xpathApply(OSM.Data,paste(\"//tag[@\",kov,\" = '\",value,\"']/parent::\",Element,\"/@ lon\",sep=\"\"))\n  Liste <- list()\n  if (length(node_id)>5000){cat(\"It can take some time!\",\"\\n\")}\n  for (i in 1:length(node_id)){\n    Liste_i <- unlist(xpathApply(OSM.Data,paste(\"//\",Element,\"[@id = \",node_id[i],\"]//nd/attribute::*\",sep=\"\")))\n    ind_ref <- which(names(Liste_i)==\"lat\")\n    ind_lat <- which(names(Liste_i)==\"lat\")\n    ind_lon <- which(names(Liste_i)==\"lon\")\n    Liste[[i]] <- data.frame(ref=Liste_i[ind_ref],\n                             lat=Liste_i[ind_lat],\n                             lon=Liste_i[ind_lon],\n                             id=rep(unlist(node_id[i]),length(ind_ref))\n    )\n    # cat(\"Object\", i, \"from\",length(node_id), \"\\n\")\n    setTxtProgressBar(pb, i)\n  }\n  DF_x <- do.call(rbind,Liste)\n  return(DF_x)\n}\n",
+    "created" : 1437123331790.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "419310129",
+    "id" : "72C841AA",
+    "lastKnownWriteTime" : 1437123799,
+    "path" : "~/GitHub/GeoData/geosmdata2/R/extract_position_op.R",
+    "project_path" : "R/extract_position_op.R",
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
