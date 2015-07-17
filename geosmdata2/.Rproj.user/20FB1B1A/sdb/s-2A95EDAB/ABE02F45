@@ -1,0 +1,18 @@
+{
+    "contents" : "\n\nlibrary(geosmdata2)\nlibrary(osmar)\n\n\n\nosm_object <- get_osm_ways(object2=\"cycleway\",place=\"Mannheim\")\n\nxml_obj <- xmlRoot(osm_object)\n\n\ninfoAttrs <- xmlSApply(root, xmlAttrs)\n\n\n\n\nMA_cycl1 <- extract_info_op(MA_cycle1,\"cycleway\")\nunique(MA_cycl1$destination.forward)\n# extract_info_op\n",
+    "created" : 1437113569473.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1600836997",
+    "id" : "ABE02F45",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

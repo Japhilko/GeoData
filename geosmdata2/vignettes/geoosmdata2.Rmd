@@ -37,6 +37,13 @@ info_pedestrian <- extract_info_op(OSM.Data=Rom_pedestrian,
 
 ```
 
+## Get information about bicycle routes
+
+```{r}
+MA_cycle1 <- get_osm_ways(object2="cycleway",place="Mannheim")
+```
+
+
 
 ## Relation
 

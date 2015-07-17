@@ -1,0 +1,25 @@
+---
+title: "Working with XML data"
+author: "Jan-Philipp Kolb"
+date: "17. Juli 2015"
+output: ioslides_presentation
+---
+
+
+## Working with XML files:
+
+<http://www.informit.com/articles/article.aspx?p=2215520>
+
+## Gaston Sanchez
+
+![picture](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1)
+
+<http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf>
+
+
+<http://www.w3schools.com/xquery/>
+
+<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
+
+
+[String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)

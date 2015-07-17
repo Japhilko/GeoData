@@ -5,6 +5,13 @@ date: "12. Juni 2015"
 output: html_document
 ---
 
+```{r,echo=F}
+Examples <- F
+```
+
+
+
+
 ## Introduction
 
 The package [osmar](http://cran.r-project.org/web/packages/osmar/index.html) provides good possibilities to download information about small areas from  
@@ -48,7 +55,7 @@ library(XML)
 
 Now the command xmlParse can be used to download information:
 
-```{r}
+```{r,eval=Examples}
 ab <- xmlParse("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=pub%5D%5Bbbox=-77.041579,38.885851,-77.007247,38.900881%5D")
 
 bbox <- "-77.041579,38.885851,-77.007247,38.900881"
@@ -58,7 +65,7 @@ abc <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=p
 
 Finding a specific place
 
-```{r}
+```{r,eval=Examples}
 library(ggmap)
   # lon - east west
   # lat - south north
@@ -76,14 +83,14 @@ abcd <- xmlParse(paste("http://open.mapquestapi.com/xapi/api/0.6/node%5Bamenity=
 
 Getting a bounding box from administrative areas. Which are downloaded from GADM. 
 
-```{r}
+```{r,eval=Examples}
 library(raster)
 LUX3 <- getData('GADM', country='LUX', level=3)
 
 LUXT <- LUX3[LUX3@data$NAME_3=="Troisvierges",]
 ```
 
-```{r}
+```{r,eval=Examples}
 library(sp)
 bLUXT <- bbox(LUXT)
 bbox3 <- paste(bLUXT[1,1],bLUXT[2,1],bLUXT[1,2],bLUXT[2,2],sep=",")
@@ -100,7 +107,7 @@ Instead of xapi you should use the overpass API. [Here](http://wiki.openstreetma
 
 You can get all streets in Troisdorf with the following command:
 
-```{r}
+```{r,eval=Examples}
 Troisdorf <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Troisdorf\"];way(area)[highway][name];out;")
 ```
 
@@ -109,30 +116,30 @@ Troisdorf <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name
 
 Example: Find all cinemas in Bonn which are at most 100m away from bus stops 
 
-```{r}
+```{r,eval=Examples}
 CinemasBonn <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Bonn\"];node(area)[highway=bus_stop];node(around:100)[amenity=cinema];out;")
 ```
 
 All restaurants in Ilvesheim:
-```{r}
+```{r,eval=Examples}
 restaurantIlvesheim <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Ilvesheim\"];node(area)[amenity=restaurant];out;")
 ```
 
 Find restaurants in Feudenheim (admin_level=9)
 
-```{r}
+```{r,eval=Examples}
 restaurantFeudenheim <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Feudenheim\"];node(area)[amenity=restaurant];out;")
 ```
 
 Get the administrative boundaries for the city of Mannheim:
 
-```{r}
+```{r,eval=Examples}
 boundaryMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative];out;")
 ```
 
 More than one condition:
 
-```{r}
+```{r,eval=Examples}
 boundMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative][admin_level=9];out;")
 ```
 
@@ -143,7 +150,7 @@ boundMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\
 More about the [Query language](http://wiki.openstreetmap.org/wiki/Overpass_API/Overpass_QL) used to get information via the overpass API.
 
 
-```{r}
+```{r,eval=Examples}
 geomMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Mannheim\"];way(area)[boundary=administrative];out geom;")
 ```
 
@@ -154,12 +161,12 @@ This [url](http://overpass-api.de/api/interpreter?data=[out:csv(::"type",::"id")
 
 This can be also used to load data directly into the workspace of R:
 
-```{r}
+```{r,eval=Examples}
 info <- read.csv("http://overpass-api.de/api/interpreter?data=[out:csv(::\"type\",::\"id\")];area[name=\"Feudenheim\"];node(area)[amenity=restaurant];out;")
 ```
 
 
-```{r}
+```{r,eval=Examples}
 infoBayern <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[name=\"Bayern\"];way(area)[amenity=charging_station];out;")
 ```
 
@@ -168,7 +175,7 @@ infoBayern <- xmlParse("http://www.overpass-api.de/api/interpreter?data=area[nam
 
 One way to process information from a XML is to use the command [xmlToList](http://www.inside-r.org/packages/cran/XML/docs/xmlToList)
 
-```{r}
+```{r,eval=Examples}
 root <- xmlRoot(boundMA)
 infoAttrs <- xmlSApply(root, xmlAttrs)
 
@@ -177,40 +184,24 @@ infoAttrs <- xmlSApply(root, xmlAttrs)
 
 
 
-## Links
+## Usage of overpass API
 
-Usage of overpass API:
+An [example](http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/) on how to use the [overpasse API](http://wiki.openstreetmap.org/wiki/Overpass_API) with R.  
 
-<http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/>
+[Overpass-turbo](https://www.mapbox.com/guides/overpass-turbo/) is an alternative, but no API. 
 
-<https://www.mapbox.com/guides/overpass-turbo/>
-
-<http://blog-en.openalfa.com/how-to-query-openstreetmap-using-the-overpass-api>
-
-About overpass API in German:
-
-<http://podcast.openstreetmap.de/2012/12/28/osmde009-osm-talk-die-overpass-api/>
-
-Working with XML files:
-
-<http://www.informit.com/articles/article.aspx?p=2215520>
-
-<http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf>
+[OpenAlfaPlot]((ttp://blog-en.openalfa.com/how-to-query-openstreetmap-using-the-overpass-api)) on how to query Openstreetmap using the Overpass API. 
 
 
-<http://www.w3schools.com/xquery/>
+[About overpass API in German](http://podcast.openstreetmap.de/2012/12/28/osmde009-osm-talk-die-overpass-api/)
 
-<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
 
-Defining an adequate bounding box:
+## Defining an adequate bounding box
 
 <http://gis.stackexchange.com/questions/46954/clip-spatial-object-to-bounding-box-in-r>
 
 
-All streets project:
-
-<http://benfry.com/writing/archives/category/allstreets>
-
+[All streets project](http://benfry.com/writing/archives/category/allstreets)
 
 
 Clipping spatial data in R:
