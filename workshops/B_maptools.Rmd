@@ -2,25 +2,33 @@
 title: "Library maptools"
 author: "Jan-Philipp Kolb"
 date: "21. April 2015"
-output: md_document
+output: ioslides_presentation
 ---
+
+```{r,echo=F}
+library(knitr)
+```
+
+
 
 ## The library maptools
 
-- The data set wrld_simpl has polygons for the most countries in the world
+- The data set `wrld_simpl` from package [maptools](https://cran.r-project.org/web/packages/maptools/index.html) has polygons for the most countries in the world
 
-```{r}
+```{r,message=F}
 library(maptools)
 data(wrld_simpl)
 ```
 
+```{r,echo=F}
+kable(wrld_simpl@data[1:4,1:5])
+```
 
 ## Hello world
 
 ```{r}
 plot(wrld_simpl)
 ```
-
 
 
 ## The data set behind

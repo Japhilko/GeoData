@@ -1,0 +1,18 @@
+{
+    "contents" : "---\ntitle: \"Working with XML data\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"17. Juli 2015\"\noutput: ioslides_presentation\n---\n\n```{r,echo=F}\nEx=F\n```\n\n## Gaston Sanchez\n\n![picture](http://gastonsanchez.com/images/blog/dataflow_page.jpg)\n\nSee his work [here](http://gastonsanchez.com/) and another [picture](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1).\n\n## But more important for me\n\n[work with XML](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)\n\n## Get example data\n\n```{r,eval=Ex}\nlibrary(geosmdata2)\nosm_object <- get_osm_ways(object2=\"cycleway\",place=\"Mannheim\")\nxml_obj <- xmlRoot(osm_object)\n```\n\n\n![Pic](http://www.msxfaq.de/code/xml01.gif)\n\n\n[Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. \n\n\n\n## More working example with XML files:\n\n- <http://www.informit.com/articles/article.aspx?p=2215520>\n\n- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.org/RSXML/shortIntro.pdf)\n\n\n## Further information\n\n[Manipulating Data from the Web](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)\n\n<http://www.w3schools.com/xquery/>\n\n<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>\n\n\n[String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)\n\n",
+    "created" : 1437136922036.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "701951755",
+    "id" : "4FA771C4",
+    "lastKnownWriteTime" : 1437125551,
+    "path" : "~/GitHub/GeoData/workshops/K_XML.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
