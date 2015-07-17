@@ -5,6 +5,9 @@ date: "17. Juli 2015"
 output: ioslides_presentation
 ---
 
+```{r,echo=F}
+Ex=F
+```
 
 ## Working with XML files:
 
@@ -12,10 +15,23 @@ output: ioslides_presentation
 
 ## Gaston Sanchez
 
-![picture](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1)
+![picture](http://gastonsanchez.com/images/blog/dataflow_page.jpg)
 
-<http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf>
+See his work [here](http://gastonsanchez.com/) and another [picture](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1).
 
+## But more important for me
+
+[work with XML](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
+
+## Get example data
+
+```{r,eval=Ex}
+library(geosmdata2)
+
+```
+
+
+## Further information
 
 <http://www.w3schools.com/xquery/>
 
