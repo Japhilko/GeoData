@@ -40,6 +40,8 @@ On [Usage of R in Germany](http://www.gulli.com/news/23740-programmiersprache-r-
 
 - [Another Intro on making maps](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
 
+- [More](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
+
 
 ## Making more maps
 

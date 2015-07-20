@@ -102,3 +102,5 @@ spplot(my_map,c("POP2005","Pop2010"),
 - [Great circles](https://procomun.wordpress.com/2011/05/20/great-circles/)
 
 - [Canadian vote compass](http://blog.revolutionanalytics.com/2011/12/vote-compass-visualizing-canadian-poll-results-with-r.html)
+
+- [More colors in R](http://www.r-bloggers.com/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/)
