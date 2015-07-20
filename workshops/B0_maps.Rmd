@@ -202,3 +202,35 @@ map.cities(FCit_Bc,col="red",pch=20)
 ## Data basis - CIA World DataBank II
 
 The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+
+## Example: US Unemployment 
+
+- [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) about the usage of package maps
+
+
+Get the data:
+```{r}
+library(maps)
+data(unemp)
+data(county.fips)
+```
+
+## Colour gradients 
+
+```{r,warning=F}
+library(colorRamps)
+colors <- blue2red(6)
+barplot(1:6,col=colors)
+```
+
+
+
+## Example: US Unemployment 
+
+```{r}
+unemp$colorSteps <- cut(unemp$unemp, c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, unemp$fips)]
+
+map("county", col = colors[colorsmatch], fill = TRUE)
+```
+
