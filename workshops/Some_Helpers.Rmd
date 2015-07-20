@@ -60,6 +60,13 @@ library(rmarkdown)
 
 - [Syntax highlighting in  markdown](https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown)
 
+## Rpresentations
+
+- [Rpresentations](http://stackoverflow.com/questions/23619319/rpresentation-in-rstudio-make-image-fill-out-the-whole-screen)
+
+- [Presentations with Rmarkdown](http://rpubs.com/mansun_kuo/24330)
+
+
 ## Cite a r-package
 
 ```{r,cache=T}

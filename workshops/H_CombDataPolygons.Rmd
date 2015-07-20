@@ -5,15 +5,31 @@ date: "25. April 2015"
 output: ioslides_presentation
 ---
 
+```{r,echo=F}
+library(knitr)
+```
+
+
 ## Load polygons
 
 - Examples are also on this [blog post](http://wiekvoet.blogspot.de/2015/04/unemployment-of-europe-in-2014-by-nuts.html)
 - We have to load necessary libraries:
 
-```{r}
+```{r,message=F}
 library(maptools)
 library(xml2)
 ```
+
+## How to match data with `wrld_simpl`
+
+```{r}
+data(wrld_simpl)
+```
+
+```{r,echo=F}
+kable(wrld_simpl@data[1:4,1:4])
+```
+
 
 ## GUI for spatial data
 

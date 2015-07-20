@@ -149,8 +149,6 @@ ggmap(MAmap)</pre>
 
 <pre class = 'prettyprint lang-r'>geocode(&quot;Mannheim University&quot;)</pre>
 
-<pre >## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Mannheim+University&amp;sensor=false</pre>
-
 <table class = 'rmdtable'>
 <tr class="header">
 <th align="right">lon</th>
@@ -162,7 +160,13 @@ ggmap(MAmap)</pre>
 </tr>
 </table>
 
-</article></slide><slide class=''><hgroup><h2>Geocoding</h2></hgroup><article  id="geocoding-1">
+</article></slide><slide class=''><hgroup><h2>Geocoding - points of interest</h2></hgroup><article  id="geocoding---points-of-interest">
+
+<pre class = 'prettyprint lang-r'>POI1 &lt;- geocode(&quot;B2, 1 Mannheim&quot;)
+POI1 &lt;- geocode(&quot;Hbf Mannheim&quot;)
+POI1 &lt;- geocode(&quot;Wasserturm Mannheim&quot;)</pre>
+
+</article></slide><slide class=''><hgroup><h2>Geocoding - with a loop</h2></hgroup><article  id="geocoding---with-a-loop">
 
 <pre class = 'prettyprint lang-r'>POI &lt;- c(&quot;B2, 1 Mannheim&quot;,&quot;Hbf Mannheim&quot;,
          &quot;Wasserturm Mannheim&quot;)
@@ -187,11 +191,22 @@ data = ListPOI)</pre>
 
 <ul>
 <li>Usage of <a href='http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/' title=''>geom_point</a></li>
+<li>Question on <a href='http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2' title=''>stackoverflow</a></li>
 </ul>
 
-<pre class = 'prettyprint lang-r'>#library(devtools)
-#devtools::install_github(&quot;Japhilko/GeoData/geosmdata2&quot;)
-library(geosmdata2)</pre>
+</article></slide><slide class=''><hgroup><h2>ggmap - adding colors</h2></hgroup><article  id="ggmap---adding-colors">
+
+<pre class = 'prettyprint lang-r'>ListPOI$color &lt;- c(&quot;A&quot;,&quot;B&quot;,&quot;C&quot;)
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color),
+data = ListPOI)</pre>
+
+</article></slide><slide class=''><hgroup><h2>ggmap - bigger dots</h2></hgroup><article  id="ggmap---bigger-dots">
+
+<pre class = 'prettyprint lang-r'>ListPOI$size &lt;- c(10,20,30)
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color,size=size),
+data = ListPOI)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Cheatsheet</h2></hgroup><article  id="cheatsheet">
 
@@ -207,7 +222,15 @@ library(geosmdata2)</pre>
 
 <pre class = 'prettyprint lang-r'>mapdist(&quot;Q1, 4 Mannheim&quot;,&quot;B2, 1 Mannheim&quot;,mode=&quot;walking&quot;)</pre>
 
-<pre class = 'prettyprint lang-r'>mapdist(&quot;Q1, 4 Mannheim&quot;,&quot;B2, 1 Mannheim&quot;,mode=&quot;bicycling&quot;)</pre></article></slide>
+<pre class = 'prettyprint lang-r'>mapdist(&quot;Q1, 4 Mannheim&quot;,&quot;B2, 1 Mannheim&quot;,mode=&quot;bicycling&quot;)</pre>
+
+</article></slide><slide class=''><hgroup><h2><a href='http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/' title=''>Visualize with hexbins</a></h2></hgroup><article  id="visualize-with-hexbins">
+
+<img src='https://rud.is/b/wp-content/uploads/2015/05/201505151.png' title=''/>
+
+</article></slide><slide class=''><hgroup><h2><a href='http://blog.corynissen.com/2015/05/creating-styled-google-maps-in-ggmap.html' title=''>Another ggmap example</a></h2></hgroup><article  id="another-ggmap-example">
+
+<img src='http://i.imgur.com/WJEyxMC.jpg' title=''/></article></slide>
 
 
   <slide class="backdrop"></slide>

@@ -138,7 +138,7 @@ data = ListPOI)
 
 ## ggmap - adding colors
 
-```{r}
+```{r,eval=Ex}
 ListPOI$color <- c("A","B","C")
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color),
@@ -147,7 +147,7 @@ data = ListPOI)
 
 ## ggmap - bigger dots
 
-```{r}
+```{r,eval=Ex}
 ListPOI$size <- c(10,20,30)
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color,size=size),
@@ -183,4 +183,11 @@ mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
 
+## [Visualize with hexbins](http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/)
+
+![pic](https://rud.is/b/wp-content/uploads/2015/05/201505151.png)
+
+## [Another ggmap example](http://blog.corynissen.com/2015/05/creating-styled-google-maps-in-ggmap.html)
+
+![pic2](http://i.imgur.com/WJEyxMC.jpg)
 

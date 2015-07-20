@@ -5,6 +5,13 @@ date: "24. April 2015"
 output: html_document
 ---
 
+
+## OpenStreetMap
+
+> OpenStreetMap (OSM) is a collaborative project to create a free editable map of the world.
+
+[Wikipedia - OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap)
+
 ## Data from Open Street Map
 
 ```{r,message=F}
@@ -42,7 +49,8 @@ map('worldHires', col=1:10)
 
 ## Historic data
 
-<http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/>
+[Historic geocoder](http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/)
+
 
 ```{r}
 library(HistData)
@@ -55,3 +63,20 @@ data(Arbuthnot)
 library(UScensus2000)
 ```
 
+## GDELT data
+
+- [GDELT](http://www.gdeltproject.org/)
+- [Kalev Leetaru](http://www.kalevleetaru.com/)
+- [Example on usage of GDELT data](http://quantifyingmemory.blogspot.de/2013/04/mapping-gdelt-data-in-r-and-some.html)
+
+```{r,eval=F}
+library(GDELTtools)
+test.filter <- list(ActionGeo_ADM1Code=c("NI", "US"), ActionGeo_CountryCode="US")
+test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
+                         filter=test.filter)
+```
+
+## Other data sources
+
+- [Census results - Germany](https://ergebnisse.zensus2011.de/)
+- [Data on airports](http://openflights.org/data.html) and an [example](http://www.milanor.net/blog/?p=594) on the usage in R
