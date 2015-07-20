@@ -5,59 +5,65 @@ date: "13 April 2015"
 output: ioslides_presentation
 ---
 
+```{r,echo=F}
+Ex <- F
+```
+
+
+
 ## Library ggmap
 
 ```{r,message=F}
 library(ggmap)
 ```
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap("Mannheim")
 MA_map <- qmap("Mannheim",zoom=14)
 ```
 
 ## Other zoom level
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 12)
 ```
 
 ## Get closer
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 13)
 ```
 
 
 ## Get very close
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 20)
 ```
 
 ## ggmap - source
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 14, source="osm")
 ```
 
 
 ## ggmap - maptype
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 14, maptype="satellite")
 ```
 
 ## ggmap - maptype
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 14, maptype="hybrid")
 ```
 
 
 ## ggmap - maptype
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 qmap(location = 'Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
@@ -67,7 +73,7 @@ qmap(location = 'Mannheim', zoom = 14,
 - qmap is a wrapper for ggmap and get_map
 - with get_googlemap you get similar results
 
-```{r,meassage=F}
+```{r,meassage=F,eval=Ex}
 MAmap <- get_googlemap("Mannheim")
 ggmap(MAmap)
 ```
@@ -75,7 +81,7 @@ ggmap(MAmap)
 
 ## Geocoding
 
-```{r,,message=F}
+```{r,,message=F,eval=Ex}
 POI <- c("B2, 1 Mannheim","Hbf Mannheim",
          "Wasserturm Mannheim")
 
@@ -90,25 +96,45 @@ for ( i in 1:length(POI)){
 
 ## Points in map
 
-<http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf>
+[Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
 
-```{r,message=F,warning=F}
+
+```{r,message=F,warning=F,eval=Ex}
 MA_map +
 geom_point(aes(x = lon, y = lat),
 data = ListPOI)
 ```
 
+## More about adding points
+
+- Usage of [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
+
+
+```{r,eval=Ex}
+#library(devtools)
+#devtools::install_github("Japhilko/GeoData/geosmdata2")
+library(geosmdata2)
+
+```
+
+## Cheatsheet
+
+- Cheatsheet on [data visualisation](https://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf)
+
+![pic](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.png)
+
+
 ## Get the distance between 2 points
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
 ```
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 ```
 
-```{r,message=F}
+```{r,message=F,eval=Ex}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
 
