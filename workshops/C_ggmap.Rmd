@@ -2,7 +2,7 @@
 title: "ggmap"
 author: "Jan-Philipp Kolb"
 date: "13 April 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 ## Library ggmap
