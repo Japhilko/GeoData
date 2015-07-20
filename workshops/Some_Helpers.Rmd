@@ -7,9 +7,11 @@ output: html_document
 
 ## HTML and CSS
 
-<http://www.codecademy.com/tracks/web>
+- [HTML & CSS](http://www.codecademy.com/tracks/web) 
 
-<http://www.w3schools.com/css/css_howto.asp>
+- [Howto on CSS](http://www.w3schools.com/css/css_howto.asp)
+
+
 
 Styles
 
@@ -22,16 +24,18 @@ The `html_vignette` template includes a basic CSS theme. To override this theme 
         
 You can enable figure captions by `fig_caption: yes` in YAML:        
         
-    output:
+```    
+output:
       rmarkdown::html_vignette:
         fig_caption: yes        
-        
+```
+
 <http://shiny.rstudio.com/articles/css.html>
 
         
-## <http://github.org>
+## [Github](http://github.org) 
 
-<http://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/>
+- Use [github with Rstudio](http://www.molecularecologist.com/2013/11/using-github-with-r-and-rstudio/)
 
 ## rmarkdown
 
@@ -41,24 +45,20 @@ see the documentation for the rmarkdown package
 library(rmarkdown)
 ```
 
+- [A cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes) on the usage of Rmarkdown. 
 
-Here you can find the chunk options:
+- [Here](http://yihui.name/knitr/options/) you can find the chunk options.
 
-<http://yihui.name/knitr/options/>
+- [More about knittr](http://yihui.name/knitr/demo/showcase/)
 
-[More about knittr](http://yihui.name/knitr/demo/showcase/)
+- [Here](http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html) is how to embed formulas:
 
-Here is how to embed formulas:
+- If you need a [bibliography](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html). 
 
-<http://www.unexpected-vortices.com/sw/rippledoc/quick-markdown-example.html>
-
-
-If you need a bibliography:
- <http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html>
+- If you want to write a [vignette](http://www.magesblog.com/2012/01/feedback-from-vignette-survey.html)
 
 
-If you want to write a vignette:
-<http://www.magesblog.com/2012/01/feedback-from-vignette-survey.html>
+- [Syntax highlighting in  markdown](https://support.codebasehq.com/articles/tips-tricks/syntax-highlighting-in-markdown)
 
 ## Cite a r-package
 
@@ -83,6 +83,6 @@ citation(package = "mice")
 
 ## What's new on R
 
-<http://cran.r-project.org/src/base/NEWS>
+Get [news messages](http://cran.r-project.org/src/base/NEWS) about R. 
 
 [Teaching with R](http://gastonsanchez.com/teaching/)

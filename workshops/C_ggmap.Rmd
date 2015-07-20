@@ -7,6 +7,7 @@ output: ioslides_presentation
 
 ```{r,echo=F}
 Ex <- F
+library(knitr)
 ```
 
 
@@ -73,7 +74,7 @@ qmap(location = 'Mannheim', zoom = 14,
 - qmap is a wrapper for ggmap and get_map
 - with get_googlemap you get similar results
 
-```{r,meassage=F,eval=Ex}
+```{r,message=F,eval=Ex}
 MAmap <- get_googlemap("Mannheim")
 ggmap(MAmap)
 ```
@@ -81,7 +82,31 @@ ggmap(MAmap)
 
 ## Geocoding
 
-```{r,,message=F,eval=Ex}
+> Geocoding (...) uses a description of a location, most typically a postal address or place name, to find geographic coordinates from spatial reference data ... 
+
+[Wikipedia - Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)
+
+```{r,message=F,eval=F}
+geocode("Mannheim University")
+```
+
+```{r,echo=F,message=F}
+MAgc <- geocode("Mannheim University")
+kable(MAgc)
+```
+
+## Geocoding - points of interest
+
+```{r,eval=F}
+POI1 <- geocode("B2, 1 Mannheim")
+POI1 <- geocode("Hbf Mannheim")
+POI1 <- geocode("Wasserturm Mannheim")
+```
+
+
+## Geocoding - with a loop
+
+```{r,message=F,eval=Ex}
 POI <- c("B2, 1 Mannheim","Hbf Mannheim",
          "Wasserturm Mannheim")
 
@@ -108,13 +133,33 @@ data = ListPOI)
 ## More about adding points
 
 - Usage of [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
+- Question on [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
 
 
-```{r,eval=Ex}
+## ggmap - adding colors
+
+```{r}
+ListPOI$color <- c("A","B","C")
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color),
+data = ListPOI)
+```
+
+## ggmap - bigger dots
+
+```{r}
+ListPOI$size <- c(10,20,30)
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color,size=size),
+data = ListPOI)
+```
+
+
+
+```{r,eval=F,echo=F}
 #library(devtools)
 #devtools::install_github("Japhilko/GeoData/geosmdata2")
 library(geosmdata2)
-
 ```
 
 ## Cheatsheet

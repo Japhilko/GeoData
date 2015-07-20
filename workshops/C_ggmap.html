@@ -141,6 +141,29 @@ ggmap(MAmap)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Geocoding</h2></hgroup><article  id="geocoding">
 
+<blockquote>
+<p>Geocoding (&#8230;) uses a description of a location, most typically a postal address or place name, to find geographic coordinates from spatial reference data &#8230;</p>
+</blockquote>
+
+<p><a href='https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes' title=''>Wikipedia - Geocoding</a></p>
+
+<pre class = 'prettyprint lang-r'>geocode(&quot;Mannheim University&quot;)</pre>
+
+<pre >## Information from URL : http://maps.googleapis.com/maps/api/geocode/json?address=Mannheim+University&amp;sensor=false</pre>
+
+<table class = 'rmdtable'>
+<tr class="header">
+<th align="right">lon</th>
+<th align="right">lat</th>
+</tr>
+<tr class="odd">
+<td align="right">8.462233</td>
+<td align="right">49.48371</td>
+</tr>
+</table>
+
+</article></slide><slide class=''><hgroup><h2>Geocoding</h2></hgroup><article  id="geocoding-1">
+
 <pre class = 'prettyprint lang-r'>POI &lt;- c(&quot;B2, 1 Mannheim&quot;,&quot;Hbf Mannheim&quot;,
          &quot;Wasserturm Mannheim&quot;)
 
