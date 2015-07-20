@@ -1,0 +1,78 @@
+---
+title: "Packages - using google API"
+author: "Jan-Philipp Kolb"
+date: "22. April 2015"
+output: ioslides_presentation
+---
+
+```{r,echo=F}
+Ex <- F
+```
+
+
+
+## R-package [RgoogleMaps](https://cran.r-project.org/web/packages/RgoogleMaps/index.html)
+
+```{r,eval=Ex}
+library(RgoogleMaps)
+newmap <- GetMap(center = c(52.52001,13.40495), zoom = 14, 
+                 destfile = "Berlin.png", 
+                 maptype = "satellite")
+PlotOnStaticMap(newmap)
+?bubbleMap
+```
+
+## googleVis
+
+```{r,eval=Ex}
+
+library(googleVis)
+
+data(Exports)    # a simple data frame
+Geo <- gvisGeoMap(Exports, locationvar="Country", 
+numvar="Profit",options=list(height=400, 
+dataMode='regions'))
+plot(Geo)
+```
+
+## plotting Andrew
+
+```{r,eval=Ex}
+data(Andrew)
+M1 <- gvisMap(Andrew, "LatLong", "Tip", 
+              options=list(showTip=TRUE, showLine=F, 
+enableScrollWheel=TRUE, mapType='satellite', 
+useMapTypeControl=TRUE, width=800,height=400))
+plot(M1)
+```
+
+## More information
+
+See [Here](http://pakillo.github.io/R-GIS-tutorial/#googlevis) for more information.
+
+## rworldmap
+
+```{r,eval=Ex}
+library(rworldmap)
+# different resolutions available
+newmap <- getMap(resolution = "coarse")  
+plot(newmap)
+```
+
+## Vignette
+
+```{r}
+vignette('rworldmap')
+mapCountryData()
+```
+
+## Package dismo
+
+[dismo](http://vijaybarve.files.wordpress.com/2012/07/dan_chr3.png)
+
+```{r}
+library(dismo)
+mymap <- gmap("France")  # choose whatever country
+plot(mymap)
+```
+

@@ -234,3 +234,6 @@ colorsmatch <- unemp$colorSteps[match(county.fips$fips, unemp$fips)]
 map("county", col = colors[colorsmatch], fill = TRUE)
 ```
 
+## Further links and resources
+
+- [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)

@@ -31,6 +31,35 @@ kable(wrld_simpl@data[1:4,1:4])
 ```
 
 
+## ISO country codes
+
+> ISO 3166-1 is part of the ISO 3166 standard published by the International Organization for Standardization (ISO), and defines codes for the names of countries, dependent territories, and special areas of geographical interest. 
+
+[ISO country codes](https://en.wikipedia.org/wiki/ISO_3166-1)
+
+## Import ISO country codes
+
+```{r,eval=F}
+library(XML)
+link <- "http://www.countrycallingcodes.com/iso-country-codes/europe-codes.php"
+
+tables <- readHTMLTable(link)
+ISO2 <- as.character(tables[[2]][,2])
+ISO2 <- ISO2[-(53:56)]
+ISO2 <- ISO2[-(1:2)]
+```
+
+
+## Get map data only for Europe
+
+```{r}
+ISO2 <- ISO2[-which(ISO2=="RU")]
+ind <- match(ISO2,wrld_simpl$ISO2)
+Europe <- wrld_simpl[ind,]
+```
+
+
+
 ## GUI for spatial data
 
 <http://www.r-bloggers.com/open-street-maps/>

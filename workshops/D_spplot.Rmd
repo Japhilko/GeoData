@@ -15,8 +15,7 @@ library(sp)
 
 ## Hello world
 
-- A first example using data from maptools
-- [ISO2-codes](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+- A first example using data from maptools ([ISO2-codes](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
 
 
 ```{r,message=F}
@@ -30,14 +29,14 @@ plot(my_map)
 
 ## The data set
 
-```{r}
-my_map@data
+```{r,eval=F}
+head(my_map@data)
 ```
 
 
 ```{r,echo=F}
 library(knitr)
-kable(my_map@data)
+kable(my_map@data[1:4,1:5])
 ```
 
 
@@ -48,4 +47,58 @@ kable(my_map@data)
 spplot(my_map,"POP2005")
 ```
 
+## Using `colorRamps`
 
+```{r,message=F,warning=F}
+library(colorRamps)
+spplot(my_map,"POP2005",col.regions=blue2red(100))
+```
+
+## Using `colorRamps`
+
+```{r}
+spplot(my_map,"POP2005",col.regions=blue2green(100))
+```
+
+## Using `colorRamps`
+
+```{r}
+spplot(my_map,"POP2005",col.regions=green2red(100))
+```
+
+## Using `colorRamps`
+```{r}
+spplot(my_map,"POP2005",col.regions=blue2yellow(100))
+```
+
+## Using `colorRamps`
+```{r}
+spplot(my_map,"POP2005",col.regions=matlab.like(100))
+```
+
+## Using synthetic data
+
+Generating synthetic data (Population 2010)
+
+```{r}
+my_map$Pop2010 <- my_map$POP2005 + 
+runif(length(my_map),-10000,10000)
+```
+
+
+## Colors [matlab](http://de.mathworks.com/products/matlab/) like
+
+```{r}
+spplot(my_map,c("POP2005","Pop2010"),
+       col.regions=matlab.like(100))
+```
+
+## More examples 
+
+- [Stamen maps with spplot](https://procomun.wordpress.com/2013/04/24/stamen-maps-with-spplot/)
+
+- [Know India through visualisation](http://justanotherdatablog.blogspot.de/2014/02/know-india-through-visualisations-1.html)
+
+- [Great circles](https://procomun.wordpress.com/2011/05/20/great-circles/)
+
+- [Canadian vote compass](http://blog.revolutionanalytics.com/2011/12/vote-compass-visualizing-canadian-poll-results-with-r.html)

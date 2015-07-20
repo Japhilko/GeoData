@@ -14,6 +14,8 @@ output: html_document
 
 [Data Wrangling etc.](http://stat545-ubc.github.io/)
 
+[youtube on R](http://www.revolutionanalytics.com/what-r)
+
 ## Popularity R
 
 On [Usage of R in Germany](http://www.gulli.com/news/23740-programmiersprache-r-in-der-wissenschaft-immer-beliebter-2014-04-24). R in an [article in the New York Times](http://community.oreilly.de/blog/2011/01/18/statistiksoftware-r/)
@@ -37,6 +39,24 @@ On [Usage of R in Germany](http://www.gulli.com/news/23740-programmiersprache-r-
 - [Task view for mapping tools](https://github.com/ropensci/maptools)
 
 - [Another Intro on making maps](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+
+
+## Making more maps
+
+[Example 1](http://www.r-bloggers.com/reot-empirical-orthogonal-teleconnections-in-r/)
+
+[Example 2](http://blog.revolutionanalytics.com/2013/08/visualizing-katrinas-strongest-winds-with-r.html)
+
+[Example 3](http://www.r-bloggers.com/here-comes-the-sun/)
+
+[Example 4](http://www.r-bloggers.com/maps-of-solar-radiation/)
+
+[Example 5](http://www.r-bloggers.com/choropleths-made-easy/)
+
+## More Intros - making maps with R
+
+- [part 1](http://procomun.wordpress.com/2012/02/18/maps_with_r_1/)
+- [part 3](http://procomun.wordpress.com/2012/02/23/maps_with_r_3/)
 
 ## Work with OpenStreetMap data
 
