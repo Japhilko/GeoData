@@ -1,5 +1,5 @@
 
-import(XML,sp,osmar)
+import(XML,sp,osmar,RCurl)
 
 export(get_osm_nodes)
 

@@ -1,0 +1,18 @@
+{
+    "contents" : "\nlibrary(foreign)\n\ndata.path <- \"J:/Work/Statistik/Kolb/Beratung/Testverfahren/data\"\n\nsetwd(data.path)\n\n\n# dat <- read.spss(\"Schatz an der Küste_20152005.sav\",to.data.frame=T)\nload(\"Kuestenschatz.RData\")\n\n\nsave(dat,file=\"Kuestenschatz.RData\")\n\n\nhead(dat)\n\ntable(table(dat$S1))\n\nbarplot(table(dat$S2A1))\n\n\nbarplot(tapply(dat$endwich,dat$S2A1,sum,na.rm=T))\n\nhist(dat$endwich)\n\n\ntable(dat$S2A1_Altersgruppen)\nplot(dat$endwich,dat$S2A1)\n\n",
+    "created" : 1437557442397.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "45752528",
+    "id" : "8F6ED11",
+    "lastKnownWriteTime" : 1437562969,
+    "path" : "J:/Work/Statistik/Kolb/Beratung/Testverfahren/rcode/Testverfahren.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

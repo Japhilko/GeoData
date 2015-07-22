@@ -1,0 +1,18 @@
+{
+    "contents" : "#-------------------------------#\n# Get data\n#-------------------------------#\n\nplace <- \"Mannheim\"\nobj <- \"bakery\"\n\nxml_obj <- get_osm_nodes(\"bakery\",place=\"Mannheim\")\n\nsetwd(data.path)\nsaveXML(xml_obj,file=paste(place,\"_\",obj,\".xml\",sep=\"\"))\n",
+    "created" : 1437480413088.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "3819371036",
+    "id" : "48A746BF",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
