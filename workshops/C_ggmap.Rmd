@@ -198,9 +198,20 @@ info <- extract_info_op(xml_obj,"bakery")
 
 ```{r,cache=T,message=F}
 library(ggmap)
-Imap <- qmap(location = "Berlin", zoom = 10, maptype="toner",source="stamen")
+Imap <- qmap(location = "Berlin", zoom = 11, maptype="toner",source="stamen")
 Imap
 ```
+
+## Another contourplot
+```{r,cache=T}
+Imap + stat_density2d(data = info, aes(x = lon, y = lat,  fill = ..level..,
+                                       alpha = ..level..), bins = 80, 
+                      geom = 'polygon')
+```
+
+
+
+
 
 ## Make first contourplot
 
