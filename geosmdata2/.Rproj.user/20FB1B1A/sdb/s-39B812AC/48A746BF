@@ -1,13 +1,13 @@
 {
-    "contents" : "#-------------------------------#\n# Get data\n#-------------------------------#\n\nplace <- \"Mannheim\"\nobj <- \"bakery\"\n\nxml_obj <- get_osm_nodes(\"bakery\",place=\"Mannheim\")\n\nsetwd(data.path)\nsaveXML(xml_obj,file=paste(place,\"_\",obj,\".xml\",sep=\"\"))\n",
+    "contents" : "\n#-------------------------------#\n# Libraries\n#-------------------------------#\n\n\nlibrary(XML)\nlibrary(geosmdata2)\n\n#-------------------------------#\n# Paths\n#-------------------------------#\n\nmain.path <- \"J:/Work/Statistik/Kolb/Paper/UseOSMdata/\"\ndata.path <- paste(main.path,\"data/XML/\",sep=\"\")\n\n#-------------------------------#\n# Get data\n#-------------------------------#\n\nplace <- \"Mannheim\"\nobj <- \"bakery\"\n\nxml_obj <- get_osm_nodes(\"bakery\",place=\"Mannheim\")\n\nsetwd(data.path)\nsaveXML(xml_obj,file=paste(place,\"_\",obj,\".xml\",sep=\"\"))\n\n\n\n\nplace <- \"Berlin\"\nobj <- \"bakery\"\n\nxml_obj <- get_osm_nodes(\"bakery\",\"Berlin\")\n",
     "created" : 1437480413088.000,
-    "dirty" : true,
-    "encoding" : "",
+    "dirty" : false,
+    "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "3819371036",
+    "hash" : "394644115",
     "id" : "48A746BF",
-    "lastKnownWriteTime" : 7011605692497750387,
-    "path" : null,
+    "lastKnownWriteTime" : 1437564465,
+    "path" : "J:/Work/Statistik/Kolb/Paper/UseOSMdata/rcode/rOSM_R_getData.R",
     "project_path" : null,
     "properties" : {
         "tempName" : "Untitled1"

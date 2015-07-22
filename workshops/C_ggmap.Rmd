@@ -6,7 +6,8 @@ output: ioslides_presentation
 ---
 
 ```{r,echo=F}
-Ex <- F
+Ex <- T
+Ca <- T
 library(knitr)
 ```
 
@@ -18,53 +19,53 @@ library(knitr)
 library(ggmap)
 ```
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap("Mannheim")
 MA_map <- qmap("Mannheim",zoom=14)
 ```
 
 ## Other zoom level
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 12)
 ```
 
 ## Get closer
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 13)
 ```
 
 
 ## Get very close
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 20)
 ```
 
 ## ggmap - source
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 14, source="osm")
 ```
 
 
 ## ggmap - maptype
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 14, maptype="satellite")
 ```
 
 ## ggmap - maptype
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 14, maptype="hybrid")
 ```
 
 
 ## ggmap - maptype
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 qmap(location = 'Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
@@ -74,7 +75,7 @@ qmap(location = 'Mannheim', zoom = 14,
 - qmap is a wrapper for ggmap and get_map
 - with get_googlemap you get similar results
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 MAmap <- get_googlemap("Mannheim")
 ggmap(MAmap)
 ```
@@ -90,7 +91,7 @@ ggmap(MAmap)
 geocode("Mannheim University")
 ```
 
-```{r,echo=F,message=F}
+```{r,echo=F,message=F,cache=Ca}
 MAgc <- geocode("Mannheim University")
 kable(MAgc)
 ```
@@ -99,14 +100,14 @@ kable(MAgc)
 
 ```{r,eval=F}
 POI1 <- geocode("B2, 1 Mannheim")
-POI1 <- geocode("Hbf Mannheim")
-POI1 <- geocode("Wasserturm Mannheim")
+POI2 <- geocode("Hbf Mannheim")
+POI3 <- geocode("Wasserturm Mannheim")
 ```
 
 
 ## Geocoding - with a loop
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 POI <- c("B2, 1 Mannheim","Hbf Mannheim",
          "Wasserturm Mannheim")
 
@@ -124,7 +125,7 @@ for ( i in 1:length(POI)){
 [Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
 
 
-```{r,message=F,warning=F,eval=Ex}
+```{r,message=F,warning=F,eval=Ex,cache=Ca}
 MA_map +
 geom_point(aes(x = lon, y = lat),
 data = ListPOI)
@@ -138,7 +139,7 @@ data = ListPOI)
 
 ## ggmap - adding colors
 
-```{r,eval=Ex}
+```{r,eval=Ex,cache=Ca}
 ListPOI$color <- c("A","B","C")
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color),
@@ -147,7 +148,7 @@ data = ListPOI)
 
 ## ggmap - bigger dots
 
-```{r,eval=Ex}
+```{r,eval=Ex,cache=Ca}
 ListPOI$size <- c(10,20,30)
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color,size=size),
@@ -171,17 +172,44 @@ library(geosmdata2)
 
 ## Get the distance between 2 points
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
 ```
 
-```{r,message=F,eval=Ex}
+```{r,message=F,eval=Ex,cache=Ca}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 ```
 
-```{r,message=F,eval=Ex}
+## Get another distance
+
+```{r,message=F,eval=Ex,cache=Ca}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
+
+## Contourplot - preparing the data
+
+```{r,cache=T,message=F,warning=F,message=F,results='hide'}
+library(geosmdata2)
+xml_obj <- get_osm_nodes("bakery","Berlin")
+info <- extract_info_op(xml_obj,"bakery")
+```
+
+## Contourplot - get the map
+
+```{r,cache=T,message=F}
+library(ggmap)
+Imap <- qmap(location = "Berlin", zoom = 10, maptype="toner",source="stamen")
+Imap
+```
+
+## Make first contourplot
+
+The example is taken from [here](http://www.r-bloggers.com/contour-and-density-layers-with-ggmap/)
+
+```{r}
+Imap + geom_density2d(data = info, aes(x = lon, y = lat),lwd=1.5)
+```
+
 
 ## [Visualize with hexbins](http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/)
 
