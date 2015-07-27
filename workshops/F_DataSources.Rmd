@@ -51,6 +51,7 @@ map('worldHires', col=1:10)
 
 [Historic geocoder](http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/)
 
+- [package HistData](http://www.inside-r.org/packages/cran/HistData)
 
 ```{r}
 library(HistData)

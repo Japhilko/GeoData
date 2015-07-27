@@ -39,6 +39,8 @@ output: ioslides_presentation
 - [part 1](http://procomun.wordpress.com/2012/02/18/maps_with_r_1/)
 - [part 3](http://procomun.wordpress.com/2012/02/23/maps_with_r_3/)
 
+- [David Kahle's Homepage](https://sites.google.com/site/davidkahle/ggmap)
+
 ## Work with OpenStreetMap data
 
 In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tutorial-umkreissuche/))
@@ -55,6 +57,7 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 
 - [Visualizing GIS data with R and Open Street Map](http://www.r-bloggers.com/visualizing-gis-data-with-r-and-open-street-map/>)
 
+- [John snow and openstreetmap](http://www.r-bloggers.com/john-snow-and-openstreetmap/)
 
 ## Interactive maps
 
@@ -93,11 +96,11 @@ library(RCurl)
 
 
 
-## Routing Services
+## More links
 
 - [OpenRouteService.org](http://openrouteservice.org/?lang=de) is in use at BKG
 
-
+- [Merge Shapefile](http://www.r-bloggers.com/how-to-merge-a-shapefile-and-set-the-encoding-with-r/)
 
 
 
