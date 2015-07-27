@@ -51,6 +51,6 @@ setwd(git.path)
 library(mapdata)
 ```
 
+## More sources
 
-
-<http://thematicmapping.org/downloads/world_borders.php>
+- [World Borders Dataset](http://thematicmapping.org/downloads/world_borders.php)

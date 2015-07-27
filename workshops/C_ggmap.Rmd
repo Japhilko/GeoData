@@ -222,6 +222,10 @@ Imap + geom_density2d(data = info, aes(x = lon, y = lat),lwd=1.5)
 ```
 
 
+## 
+
+[Geo Tracking Spring 2011](http://cs.smith.edu/classwiki/index.php/Geo_Tracking_Spring_2011_Betsy#USING_R_TO_MAKE_HEATMAPS)
+
 ## [Visualize with hexbins](http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/)
 
 ![pic](https://rud.is/b/wp-content/uploads/2015/05/201505151.png)
