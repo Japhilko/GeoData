@@ -30,6 +30,10 @@ output: ioslides_presentation
 
 [Example 5](http://www.r-bloggers.com/choropleths-made-easy/)
 
+## R as GIS
+
+- [R as GIS](http://www.r-bloggers.com/r-an-integrated-statistical-programming-environment-and-gis/)
+
 ## More Intros - making maps with R
 
 - [part 1](http://procomun.wordpress.com/2012/02/18/maps_with_r_1/)
@@ -78,6 +82,14 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 - [The USA in two words](https://aschinchon.wordpress.com/2015/02/20/the-united-states-in-two-words/)
 
 <img src="https://aschinchon.files.wordpress.com/2015/02/states-in-two-words-v2.jpeg?w=906&h=453" width="900x" height="500x">
+
+- [Twitter data analysis](http://statistik-stuttgart.de/r-twitter-data-analysis/)
+
+```{r,eval=F}
+library(streamR)
+library(twitteR)
+library(RCurl)
+```
 
 
 
