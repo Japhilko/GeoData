@@ -6,6 +6,25 @@ output: ioslides_presentation
 ---
 
 
+```{r,message=F,echo=F}
+# setwd("C:/Users/Kolb/Documents/GitHub/RVisualisation/slides")
+ca <- T
+library(knitr)
+```
+
+
+## Package `datasets`
+
+```{r,cache=ca,warning=F}
+library(datasets)
+data(quakes)
+```
+
+```{r,cache=T,echo=F}
+kable(head(quakes))
+```
+
+
 ## OpenStreetMap
 
 > OpenStreetMap (OSM) is a collaborative project to create a free editable map of the world.
@@ -14,7 +33,7 @@ output: ioslides_presentation
 
 ## Data from Open Street Map
 
-```{r,message=F}
+```{r,message=F,cache=ca,warning=F}
 library(osmar)
 api <- osmsource_api()
 library(ggmap)
@@ -22,7 +41,7 @@ library(ggmap)
 
 ## Download OSM data 
 
-```{r}
+```{r,cache=ca,warning=F}
 cityC <- geocode("Berlin")
 bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
 uaBerlin <- get_osm(bb, source = api)
@@ -30,7 +49,7 @@ uaBerlin <- get_osm(bb, source = api)
 
 ## TwittR
 
-```{r,eval=F}
+```{r,eval=F,cache=ca,warning=F}
 library(twitteR)
 library(streamR)
 ```
@@ -40,7 +59,7 @@ library(streamR)
 
 ## The worldHires data
 
-```{r}
+```{r,cache=ca,warning=F}
 library(mapdata)
 data(worldHiresMapEnv)
 map('worldHires', col=1:10)
@@ -53,14 +72,14 @@ map('worldHires', col=1:10)
 
 - [package HistData](http://www.inside-r.org/packages/cran/HistData)
 
-```{r}
+```{r,cache=ca,warning=F}
 library(HistData)
 data(Arbuthnot)
 ```
 
 ## Data for the US
 
-```{r,eval=F}
+```{r,eval=F,cache=ca,warning=F}
 library(UScensus2000)
 ```
 
@@ -70,19 +89,13 @@ library(UScensus2000)
 - [Kalev Leetaru](http://www.kalevleetaru.com/)
 - [Example on usage of GDELT data](http://quantifyingmemory.blogspot.de/2013/04/mapping-gdelt-data-in-r-and-some.html)
 
-```{r,eval=F}
+```{r,eval=F,cache=ca,warning=F}
 library(GDELTtools)
 test.filter <- list(ActionGeo_ADM1Code=c("NI", "US"), ActionGeo_CountryCode="US")
 test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
                          filter=test.filter)
 ```
 
-
-## Package `datasets`
-
-```{r}
-library(datasets)
-```
 
 
 ## [The US airports and flight routes](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)

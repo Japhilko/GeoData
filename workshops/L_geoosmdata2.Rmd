@@ -71,8 +71,51 @@ Imap + stat_density2d(data = info, aes(x = lon, y = lat,  fill = ..level..,
 ```
 
 
-## 
+## Get info on ways
 
+```{r,warning=F,message=F,eval=F}
+place <- "Kaiserslautern"
+obj <- "cycleway"
+xml2 <- get_osm_ways(object2=obj,place)
+
+info_cw <- extract_position_op(OSM.Data=xml2,value="cycleway")
+```
+
+```{r,cache=T,warning=F,message=F,echo=F}
+place <- "Kaiserslautern"
+obj <- "cycleway"
+xml2 <- get_osm_ways(object2=obj,place)
+
+info_cw <- extract_position_op(OSM.Data=xml2,value="cycleway")
+```
+
+```{r,cache=T}
+info_cw$lat <- as.numeric(as.character(info_cw$lat))
+info_cw$lon <- as.numeric(as.character(info_cw$lon))
+```
+
+
+## Get a map
+
+```{r,cache=T,warning=F,message=F}
+Imap12 <- qmap(location = place, zoom = 12, maptype="toner",source="stamen")
+Imap12
+```
+
+## Plot ways at points
+
+```{r,cache=T,warning=F,message=F}
+Imap12 + geom_point(aes(x=lon,y=lat),data=info_cw,col="red")
+```
+
+## Plot a geom_line
+
+```{r,cache=T,warning=F}
+p <- ggplot(info_cw,aes(x=lon,y=lat,group=id),colour = rgb(1,0,0),size = 2) 
+p + geom_line()
+```
+
+  
 
 ## Draw lines with ggmap
 
