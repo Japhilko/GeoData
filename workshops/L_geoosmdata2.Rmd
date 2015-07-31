@@ -1,0 +1,76 @@
+---
+title: "geosmdata2 and ggmap"
+author: "Jan-Philipp Kolb"
+date: "31. Juli 2015"
+output: ioslides_presentation
+---
+
+
+```{r,echo=F}
+library(knitr)
+```
+
+
+## Contourplot - preparing the data
+
+```{r,cache=T,message=F,warning=F,message=F,results='hide'}
+library(geosmdata2)
+place <- "Hamburg"
+object <- "bakery"
+xml_obj <- get_osm_nodes(object,place)
+info <- extract_info_op(xml_obj,"bakery")
+```
+
+## The resulting object
+
+```{r,cache=T}
+nr_mf <- apply(info,2,function(x)sum(!is.na(x)))
+nr_mf
+```
+
+## The resulting data frame
+
+```{r,echo=F,cache=T}
+kable(info[1:8,c("addr.city","name","lat","lon")])
+```
+
+
+
+## Contourplot - get the map
+
+```{r,cache=T,message=F}
+library(ggmap)
+Imap <- qmap(location = place, zoom = 11, maptype="toner",source="stamen")
+Imap
+```
+
+
+## Make first contourplot
+
+The example is taken from [here](http://www.r-bloggers.com/contour-and-density-layers-with-ggmap/)
+
+```{r,cache=T,warning=F}
+Imap + geom_density2d(data = info, aes(x = lon, y = lat),lwd=1.5)
+```
+
+
+## Another contourplot
+```{r,cache=T,warning=F}
+Imap + stat_density2d(data = info, aes(x = lon, y = lat,  fill = ..level..,
+                                       alpha = ..level..), bins = 80, 
+                      geom = 'polygon')
+```
+
+
+## [Visualize with hexbins](http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/)
+
+![pic](https://rud.is/b/wp-content/uploads/2015/05/201505151.png)
+
+## [Another ggmap example](http://blog.corynissen.com/2015/05/creating-styled-google-maps-in-ggmap.html)
+
+<img src="http://i.imgur.com/WJEyxMC.jpg" alt="alt text" width="700x" height="500x">
+
+
+## [Geo Tracking Spring 2011](http://cs.smith.edu/classwiki/index.php/Geo_Tracking_Spring_2011_Betsy#USING_R_TO_MAKE_HEATMAPS)
+
+![pic3](http://cs.smith.edu/classwiki/images/thumb/6/60/Grid.png/500px-Grid.png)
