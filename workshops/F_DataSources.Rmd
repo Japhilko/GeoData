@@ -85,6 +85,19 @@ library(datasets)
 ```
 
 
+## [The US airports and flight routes](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)
+
+```{r,eval=F}
+link1 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
+openflights/data/airports.dat"
+airport <- read.csv(link1, header = F)
+
+link2 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
+openflights/data/routes.dat"
+route <- read.csv(link2, header = F)
+```
+
+
 
 ## Other data sources
 
