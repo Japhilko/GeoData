@@ -1,0 +1,143 @@
+---
+title: "geosmdata2 and ggmap"
+author: "Jan-Philipp Kolb"
+date: "31. Juli 2015"
+output: ioslides_presentation
+---
+
+
+```{r,echo=F}
+library(knitr)
+```
+
+
+## Download information with geosmdata2
+
+Install package from [github](https://github.com/Japhilko/GeoData)
+```{r,eval=F}
+library(devtools)
+devtools::install_github("Japhilko/GeoData/geosmdata2")
+```
+
+Download information using the [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API)
+
+```{r,cache=T,message=F,warning=F,message=F,results='hide'}
+library(geosmdata2)
+place <- "Hamburg"
+object <- "bakery"
+xml_obj <- get_osm_nodes(object,place)
+info <- extract_info_op(xml_obj,"bakery")
+```
+
+## The resulting data frame
+
+```{r,echo=F,cache=T}
+kable(info[1:8,c("addr.city","name","lat","lon")])
+```
+
+
+## The resulting data frame (summarized)
+
+```{r,cache=T}
+nr_mf <- apply(info,2,function(x)sum(!is.na(x)))
+nr_mf
+```
+
+
+
+## Get a map from [stamen](http://maps.stamen.com/)
+
+```{r,cache=T,message=F}
+library(ggmap)
+Imap <- qmap(location = place, zoom = 11, maptype="toner",source="stamen")
+Imap
+```
+
+
+## Make [geom_density2d](http://www.inside-r.org/packages/cran/ggplot2/docs/geom_density2d) plot 
+
+The example is taken from [here](http://www.r-bloggers.com/contour-and-density-layers-with-ggmap/)
+
+```{r,cache=T,warning=F}
+Imap + geom_density2d(data = info, aes(x = lon, y = lat),lwd=1.5)
+```
+
+
+## Another contourplot
+```{r,cache=T,warning=F}
+Imap + stat_density2d(data = info, aes(x = lon, y = lat,  fill = ..level..,
+                                       alpha = ..level..), bins = 80, 
+                      geom = 'polygon')
+```
+
+
+## Get info on ways
+
+```{r,warning=F,message=F,eval=F}
+place <- "Kaiserslautern"
+obj <- "cycleway"
+xml2 <- get_osm_ways(object2=obj,place)
+
+info_cw <- extract_position_op(OSM.Data=xml2,value="cycleway")
+```
+
+```{r,cache=T,warning=F,message=F,echo=F}
+place <- "Kaiserslautern"
+obj <- "cycleway"
+xml2 <- get_osm_ways(object2=obj,place)
+
+info_cw <- extract_position_op(OSM.Data=xml2,value="cycleway")
+```
+
+```{r,cache=T}
+info_cw$lat <- as.numeric(as.character(info_cw$lat))
+info_cw$lon <- as.numeric(as.character(info_cw$lon))
+```
+
+
+## Get a map
+
+```{r,cache=T,warning=F,message=F}
+Imap12 <- qmap(location = place, zoom = 12, maptype="toner",source="stamen")
+Imap12
+```
+
+## Plot ways at points
+
+```{r,cache=T,warning=F,message=F}
+Imap12 + geom_point(aes(x=lon,y=lat),data=info_cw,col="red")
+```
+
+## Plot a geom_line
+
+```{r,cache=T,warning=F}
+p <- ggplot(info_cw,aes(x=lon,y=lat,group=id),colour = rgb(1,0,0),size = 2) 
+p + geom_line()
+```
+
+  
+
+## Draw lines with ggmap
+
+[The US airports with most flight routes](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)
+
+![pic1](http://4.bp.blogspot.com/-Bf4wdceFTmk/UboiTwHfWiI/AAAAAAAAB7M/LdRUzMI20cU/s640/1111111111.jpg)
+
+
+## [Visualize with hexbins](http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/)
+
+![pic](https://rud.is/b/wp-content/uploads/2015/05/201505151.png)
+
+## [Another ggmap example](http://blog.corynissen.com/2015/05/creating-styled-google-maps-in-ggmap.html)
+
+<img src="http://i.imgur.com/WJEyxMC.jpg" alt="alt text" width="700x" height="500x">
+
+
+
+## [Great Maps with ggplot2](http://spatial.ly/2012/02/great-maps-ggplot2/)
+
+<img src="http://spatialanalysis.co.uk/wp-content/uploads/2012/02/bike_ggplot-1024x676.png" alt="alt text" width="700x" height="500x">
+
+## [Geo Tracking Spring 2011](http://cs.smith.edu/classwiki/index.php/Geo_Tracking_Spring_2011_Betsy#USING_R_TO_MAKE_HEATMAPS)
+
+![pic3](http://cs.smith.edu/classwiki/images/thumb/6/60/Grid.png/500px-Grid.png)

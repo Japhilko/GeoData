@@ -5,10 +5,22 @@ date: "17. Juli 2015"
 output: ioslides_presentation
 ---
 
-## Target
+## Target / Motivation
 
 The target is to visualize social aspects in maps.
  
+
+<a href="http://spatial.ly/2015/07/15minutemap/" target="_blank"><img src="http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg" width="240" height="180" border="10" /></a>
+<a href="https://www.mapbox.com/blog/osm-community-visualized/" target="_blank"><img src="https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg" width="240" height="180" border="10" /></a>
+<a href="https://uchicagoconsulting.wordpress.com/" target="_blank"><img src="https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309" width="240" height="180" border="10" /></a>
+
+<a href="http://blogs.casa.ucl.ac.uk/category/r/" target="_blank"><img src="http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif" width="240" height="180" border="10" /></a>
+<a href="http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/" target="_blank"><img src="http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg" width="240" height="180" border="10" /></a>
+<a href="http://www.pilod.nl/w/images/6/62/D9-fig4.jpg" target="_blank"><img src="http://www.pilod.nl/w/images/6/62/D9-fig4.jpg" width="240" height="180" border="10" /></a>
+
+
+
+More [examples](http://spatial.ly/blog/) 
 
 
 ## Global Peace Index

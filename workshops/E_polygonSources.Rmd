@@ -1,28 +1,44 @@
 ---
 title: "Sources for polygons"
 author: "Jan-Philipp Kolb"
-date: "24. April 2015"
-output: md_document
+date: "04/24/2015"
+output: ioslides_presentation
 ---
 
 
-## GADM
 
-```{r}
-library(raster)
-LUX2 <- getData('GADM', country='LUX', level=2)
-
-LUX3 <- getData('GADM', country='LUX', level=3)
-
-LUX4 <- getData('GADM', country='LUX', level=4)
+```{r,echo=F}
+library(knitr)
+ca <- T
 ```
 
-```{r}
+## [GADM](http://www.gadm.org/) - NUTS level 2
+
+```{r,cache=ca,warning=F}
+library(raster)
+LUX2 <- getData('GADM', country='LUX', level=2)
+plot(LUX2)
+```
+
+## [GADM](http://www.gadm.org/)- NUTS level 3
+
+```{r,cache=ca,warning=F}
+LUX3 <- getData('GADM', country='LUX', level=3)
+plot(LUX3)
+```
+
+## [GADM](http://www.gadm.org/)- NUTS level 4
+
+```{r,cache=ca,warning=F}
+LUX4 <- getData('GADM', country='LUX', level=4)
 plot(LUX4)
 ```
 
-```{r}
+## [GADM](http://www.gadm.org/)- NUTS level 3
+
+```{r,cache=ca,warning=F}
 DEU3 <- getData('GADM', country='DEU', level=3)
+plot(DEU3)
 ```
 
 
@@ -30,12 +46,18 @@ DEU3 <- getData('GADM', country='DEU', level=3)
 
 <http://datahub.io/de/dataset/postal-codes-de>
 
-```{r}
+```{r,cache=ca,warning=F}
 setwd("D:/Daten/Daten/GeoDaten")
 library(rgdal)
 PLZ <- readOGR ("post_pl.shp","post_pl")
+```
+
+## Plot Mannheim
+
+```{r,cache=ca,warning=F}
 MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
-bbox4 <- bbox(MA)
+plot(MA)
+#bbox4 <- bbox(MA)
 ```
 
 

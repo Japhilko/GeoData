@@ -1,8 +1,8 @@
 ---
 title: "ggmap"
-author: "Jan-Philipp Kolb"
-date: "13 April 2015"
-output: ioslides_presentation
+author: "Jan-Philipp Kolb and <br> Matthias Sand"
+date: "04/13/2015"
+output: slidy_presentation
 ---
 
 ```{r,echo=F}
@@ -15,7 +15,7 @@ library(knitr)
 
 ## Library ggmap
 
-```{r,message=F}
+```{r,message=F,warning=F}
 library(ggmap)
 ```
 
@@ -98,10 +98,12 @@ kable(MAgc)
 
 ## Geocoding - points of interest
 
-```{r,eval=F}
+```{r,cache=Ca,message=F,warning=F}
 POI1 <- geocode("B2, 1 Mannheim")
 POI2 <- geocode("Hbf Mannheim")
 POI3 <- geocode("Wasserturm Mannheim")
+
+POI1;POI2;POI3
 ```
 
 
@@ -136,6 +138,7 @@ data = ListPOI)
 - Usage of [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
 - Question on [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
 
+![pic](http://i.stack.imgur.com/q3euq.png)
 
 ## ggmap - adding colors
 
@@ -185,52 +188,4 @@ mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 ```{r,message=F,eval=Ex,cache=Ca}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
-
-## Contourplot - preparing the data
-
-```{r,cache=T,message=F,warning=F,message=F,results='hide'}
-library(geosmdata2)
-xml_obj <- get_osm_nodes("bakery","Berlin")
-info <- extract_info_op(xml_obj,"bakery")
-```
-
-## Contourplot - get the map
-
-```{r,cache=T,message=F}
-library(ggmap)
-Imap <- qmap(location = "Berlin", zoom = 11, maptype="toner",source="stamen")
-Imap
-```
-
-## Another contourplot
-```{r,cache=T}
-Imap + stat_density2d(data = info, aes(x = lon, y = lat,  fill = ..level..,
-                                       alpha = ..level..), bins = 80, 
-                      geom = 'polygon')
-```
-
-
-
-
-
-## Make first contourplot
-
-The example is taken from [here](http://www.r-bloggers.com/contour-and-density-layers-with-ggmap/)
-
-```{r}
-Imap + geom_density2d(data = info, aes(x = lon, y = lat),lwd=1.5)
-```
-
-
-## 
-
-[Geo Tracking Spring 2011](http://cs.smith.edu/classwiki/index.php/Geo_Tracking_Spring_2011_Betsy#USING_R_TO_MAKE_HEATMAPS)
-
-## [Visualize with hexbins](http://rud.is/b/2015/05/15/u-s-drought-monitoring-with-hexbin-state-maps-in-r/)
-
-![pic](https://rud.is/b/wp-content/uploads/2015/05/201505151.png)
-
-## [Another ggmap example](http://blog.corynissen.com/2015/05/creating-styled-google-maps-in-ggmap.html)
-
-![pic2](http://i.imgur.com/WJEyxMC.jpg)
 

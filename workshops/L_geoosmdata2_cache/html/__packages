@@ -1,0 +1,12 @@
+base
+rjson
+bitops
+RCurl
+stringr
+XML
+geosmdata2
+ggplot2
+ggmap
+maps
+mapproj
+knitr

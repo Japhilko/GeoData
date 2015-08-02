@@ -102,6 +102,19 @@ library(RCurl)
 
 - [Merge Shapefile](http://www.r-bloggers.com/how-to-merge-a-shapefile-and-set-the-encoding-with-r/)
 
+- [Football tribes](http://theinformationcapital.com/project/football-tribes/)
+
+- [Map projections](http://psychologist590.rssing.com/chan-35984540/all_p2.html)
 
 
+```{r,echo=F}
+# http://www.r-bloggers.com/can-you-track-me-now-visualizing-xfinity-wi-fi-hotspot-coverage-part-1/
+# http://citycartographer.com/tag/r-programming/
+
+# http://www.r-bloggers.com/mapping-the-past-and-the-future-with-leaflet/
+
+# Suche:
+# r-project + ggmap
+
+```
 
