@@ -5,10 +5,14 @@ date: "17. Juli 2015"
 output: ioslides_presentation
 ---
 
+
+
+
 ## Target / Motivation
 
-The target is to visualize social aspects in maps.
- 
+<strong>The target is to visualize <FONT COLOR="red"> social </FONT> aspects in maps.</strong>
+
+ <font size="5">Here is a size 5 font</font>
 
 <a href="http://spatial.ly/2015/07/15minutemap/" target="_blank"><img src="http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg" width="240" height="180" border="10" /></a>
 <a href="https://www.mapbox.com/blog/osm-community-visualized/" target="_blank"><img src="https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg" width="240" height="180" border="10" /></a>
