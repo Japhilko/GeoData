@@ -24,6 +24,7 @@ output: ioslides_presentation
 
 More [examples](http://spatial.ly/blog/) 
 
+<section> <h1>Overall Section Title </h1>
 
 ## Global Peace Index
 
@@ -53,3 +54,7 @@ More [examples](http://spatial.ly/blog/)
 -   Nuclear and heavy weapons capability
 
 -   Ease of access to small arms and light weapons 
+
+</section>
+
+## New slide
