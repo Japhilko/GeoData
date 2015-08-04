@@ -17,7 +17,10 @@ See his work [here](http://gastonsanchez.com/) and another [picture](https://ima
 
 ## But more important for me
 
-[work with XML](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
+[work with XML data](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
+
+<img src="https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/GastonSanchez.PNG" alt="alt text" width="700x" height="500x">
+
 
 ## Get example data
 
@@ -27,9 +30,7 @@ osm_object <- get_osm_ways(object2="cycleway",place="Mannheim")
 xml_obj <- xmlRoot(osm_object)
 ```
 
-
-![Pic](http://www.msxfaq.de/code/xml01.gif)
-
+<img src="http://www.msxfaq.de/code/xml01.gif" alt="alt text" width="500x" height="300x">
 
 [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
@@ -37,19 +38,19 @@ xml_obj <- xmlRoot(osm_object)
 
 ## More working example with XML files:
 
-- <http://www.informit.com/articles/article.aspx?p=2215520>
+- [Tobi Bosede - Working with XML Data in R](http://www.informit.com/articles/article.aspx?p=2215520)
 
 - Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.org/RSXML/shortIntro.pdf)
 
 
 ## Further information
 
-[Manipulating Data from the Web](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
+- [Manipulating Data from the Web](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
 
-<http://www.w3schools.com/xquery/>
+- [Information on xquery](http://www.w3schools.com/xquery/)
 
-<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
+- [R and the web (for beginners), Part II: XML in R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
 
 
-[String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
+- [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
 
