@@ -1,0 +1,19 @@
+---
+title: "Data Types"
+author: "Jan-Philipp Kolb"
+date: "11. August 2015"
+output: ioslides_presentation
+---
+
+## .gpx files
+
+![pic](http://img.expertgps.com/images/gpx256.png)
+
+
+## 
+
+```{r}
+library(rgdal)
+```
+
+- [Data analysis in Ecology](https://cran.r-project.org/web/packages/pgirmess/pgirmess.pdf)
