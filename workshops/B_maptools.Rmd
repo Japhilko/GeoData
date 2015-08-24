@@ -1,7 +1,7 @@
 ---
 title: "Library maptools"
 author: "Jan-Philipp Kolb"
-date: "21. April 2015"
+date: "04/21/2015"
 output: ioslides_presentation
 ---
 

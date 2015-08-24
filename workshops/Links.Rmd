@@ -30,6 +30,12 @@ output: ioslides_presentation
 
 [Example 5](http://www.r-bloggers.com/choropleths-made-easy/)
 
+## Even more maps...
+
+- [World ocean atlas](http://www.r-bloggers.com/comparing-world-ocean-atlases-2013-and-2013v2/)
+
+- [Display of geographic data](http://www.r-bloggers.com/display-of-geographic-data-in-r/)
+
 ## R as GIS
 
 - [R as GIS](http://www.r-bloggers.com/r-an-integrated-statistical-programming-environment-and-gis/)

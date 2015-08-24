@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
 author: "Jan-Philipp Kolb"
-date: "17. Juli 2015"
+date: "07/17/2015"
 output: ioslides_presentation
 ---
 
@@ -53,4 +53,3 @@ More [examples](http://spatial.ly/blog/)
 
 -   Ease of access to small arms and light weapons 
 
-## New slide
