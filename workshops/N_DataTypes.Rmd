@@ -17,3 +17,6 @@ library(rgdal)
 ```
 
 - [Data analysis in Ecology](https://cran.r-project.org/web/packages/pgirmess/pgirmess.pdf)
+- [readGPX](http://plotkml.r-forge.r-project.org/readGPX.html)
+- [Write GPX](http://www.inside-r.org/packages/cran/pgirmess/docs/writeGPX)
+- [multiple GPX](http://gis.stackexchange.com/questions/11221/how-to-read-multiple-gpx-files-in-r)
