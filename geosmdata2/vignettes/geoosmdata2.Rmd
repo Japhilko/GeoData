@@ -19,8 +19,9 @@ Val_eval=F
 ## Introduction
 
 The `geoosmdata2` package is designed for the download and work with data from OpenStreetMap. 
+The [Overpass](http://wiki.openstreetmap.org/wiki/Overpass_API)-API is used to get data out of OpenStreetMap.
 
-[Overpass-turbo](https://www.mapbox.com/guides/overpass-turbo/) is an alternative, but no API. 
+
 
 
 ```{r,cache=ca,eval=Val_eval}
