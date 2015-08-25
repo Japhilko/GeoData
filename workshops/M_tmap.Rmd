@@ -1,10 +1,11 @@
 ---
 title: "tmap"
 author: "Jan-Philipp Kolb"
-date: "4. August 2015"
-output: ioslides_presentation
+date: "08/04/2015"
+output: slidy_presentation
 ---
-```{r,echo=T}
+
+```{r,echo=F}
 library(knitr)
 ```
 
@@ -12,7 +13,7 @@ library(knitr)
 
 - [tmap vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
 
-```{r,warning=F}
+```{r,warning=F,message=F}
 # install.packages("tmap")
 library(tmap)
 ```
@@ -40,4 +41,28 @@ tm_layout(legend.show = FALSE, title.position = c("center", "center"),
           title.size = 2)
 ```
 
+## The development version of `tmap`
+
+```{r,cache=T}
+devtools::install_github("mtennekes/tmap/pkg", ref = "45855fa")
+```
+
+
+## Download information
+
+```{r,cache=T}
+library(tmap)
+bb_schloss <- bb(q="Mannheim Schloss")
+buildings_schloss <- read_osm(bb_schloss, buildings=osm_poly("building"))
+
+tm_shape(buildings_schloss$buildings, bbox=bb_schloss) + 
+  tm_polygons(col = "darkolivegreen3")
+```
+
+## Download information - bigger area
+
+```{r,cache=T}
+bb_Mannheim <- bb(q="Mannheim")
+
+```
 
