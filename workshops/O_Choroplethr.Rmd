@@ -1,0 +1,21 @@
+---
+title: "Package Choroplethr"
+author: "Jan-Philipp Kolb"
+date: "25. August 2015"
+output: slidy_presentation
+---
+
+## 
+
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html)
+
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)
+
+
+```{r}
+library(choroplethr)
+state_choropleth_acs("B19301", num_colors=1, zoom=c("new york", "new jersey", "connecticut"))
+?state_choropleth_acs
+
+```
+
