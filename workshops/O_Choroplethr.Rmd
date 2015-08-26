@@ -56,8 +56,6 @@ for (i in 2:ncol(df_president_ts)) {
 }
 ```
 
-## 
-
 ```{r,message=F,eval=F,warning=F}
 choroplethr_animate(choropleths)
 ```

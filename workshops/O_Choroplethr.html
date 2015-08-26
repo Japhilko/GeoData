@@ -327,9 +327,6 @@ for (i in <span class="dv">2</span>:<span class="kw">ncol</span>(df_president_ts
   title        =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;Presidential Election Results: &quot;</span>, <span class="kw">colnames</span>(df_president_ts)[i])
   choropleths[[i<span class="dv">-1</span>]] =<span class="st"> </span><span class="kw">state_choropleth</span>(df, <span class="dt">title=</span>title)
 }</code></pre>
-</div>
-<div id="section-1" class="slide section level2">
-<h1></h1>
 <pre class="sourceCode r"><code class="sourceCode r"><span class="kw">choroplethr_animate</span>(choropleths)</code></pre>
 </div>
 
