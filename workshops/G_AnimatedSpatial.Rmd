@@ -1,0 +1,52 @@
+---
+title: "Animated spatial visualisations"
+author: "Jan-Philipp Kolb"
+date: "24. April 2015"
+output: ioslides_presentation
+---
+
+## Get the coordinates
+
+```{r}
+library(ggmap)
+coords <- geocode("GESIS Mannheim")
+```
+
+
+## Get a scalable map
+
+```{r,warning=F,message=F}
+library(magrittr)
+library(leaflet)
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=coords$lon, lat=coords$lat, popup="GESIS Mannheim")
+m  # Print the map
+```
+
+
+## Links
+
+- [The Map Widget](http://rstudio.github.io/leaflet/map_widget.html)
+
+
+## 
+
+
+```{r,message=F,eval=F}
+library(googleVis)
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData")
+```
+
+
+
+```{r,eval=F}
+?gvisMap
+M1 <- gvisMap(Andrew, "LatLong" , "Tip",
+              options=list(showTip=TRUE, showLine=TRUE, enableScrollWheel=TRUE,
+                           mapType='hybrid', useMapTypeControl=TRUE,
+                           width=800,height=400))
+
+plot(M1)
+```
+

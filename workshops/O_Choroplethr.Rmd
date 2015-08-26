@@ -7,6 +7,7 @@ output: slidy_presentation
 
 ```{r,echo=F}
 library(knitr)
+library(DT)
 ```
 
 
@@ -39,11 +40,17 @@ library(choroplethr)
 
 ?df_president_ts
 data(df_president_ts)
-
-kable(df_president_ts[1:14,1:14])
 ```
 
-##
+## The datatable
+
+```{r,cache=F,echo=F,warning=F}
+datatable(df_president_ts, options = list(pageLength = 5))
+```
+
+- [datatable](http://www.htmlwidgets.org/showcase_datatables.html)
+
+## Animated 
 
 ```{r,eval=F,warning=F,message=F}
 # create a list of choropleths of presidential election results for each year
@@ -60,6 +67,3 @@ for (i in 2:ncol(df_president_ts)) {
 choroplethr_animate(choropleths)
 ```
 
-##
-
-![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/workshops/O_Choroplethr_cache/animated_choropleth.html)
