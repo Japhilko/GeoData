@@ -60,3 +60,6 @@ for (i in 2:ncol(df_president_ts)) {
 choroplethr_animate(choropleths)
 ```
 
+##
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/workshops/O_Choroplethr_cache/animated_choropleth.html)
