@@ -18,7 +18,7 @@ Examples <- F
 - You will get [.osm](http://wiki.openstreetmap.org/wiki/OSM_XML)-data. See the [osmar-manual](http://osmar.r-forge.r-project.org/RJpreprint.pdf) to work with this data.
 
 But Sometimes you might want to have information only on one 
-[specific topic](http://statistik-stuttgart.de/r-street-of-france/)
+[specific topic](http://www.r-bloggers.com/r-streets-of-france/)
 and you want that information for a 
 [bigger area](https://help.openstreetmap.org/questions/34080/using-r-to-get-lat-and-lon-from-osm_ids-without-assistance-of-external-software-eg-qgis). 
 In this case 
@@ -140,10 +140,12 @@ An overview of the different map features is available on the [OSM wiki](http://
 
 ## Usage of overpass API
 
-- An very good alternative for xapi is the overpass API. [Here](http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Stra.C3.9Fenliste) are some use cases available.
+- An very good alternative for [xapi](http://wiki.openstreetmap.org/wiki/Xapi) is the [overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API). [Here](http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Stra.C3.9Fenliste) are some use cases available.
 
 
-- An [example](http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/) on how to use the [overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) with R.  
+- [Language Guide](http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Language_Guide) and [convert form](http://overpass-api.de/convert_form.html)
+
+- Here is the [query form](http://overpass-api.de/query_form.html)
 
 - [Overpass-turbo](https://www.mapbox.com/guides/overpass-turbo/) is an alternative, but no API. 
 
@@ -152,6 +154,7 @@ An overview of the different map features is available on the [OSM wiki](http://
 
 - [About overpass API in German](http://podcast.openstreetmap.de/2012/12/28/osmde009-osm-talk-die-overpass-api/)
 
+- An [example](http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/) on how to use the [overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) with R.  
 
 ## The overpass API
 
@@ -181,6 +184,20 @@ rest_IH <- xmlParse("http://www.overpass-api.de/api/interpreter?data=
                                 [amenity=restaurant];out;")
 ```
 
+In R We can use the powerful `osmar`-package: 
+
+```{r,eval=F}
+saveXML(rest_IH,file="rest_IH.XML")
+library("osmar")
+ilv <- get_osm(complete_file(), source = osmsource_file("rest_IH.XML"))
+
+rest <- find(ilv, node(tags(k == "amenity")))
+
+plot_nodes(ilv,col = "red")
+```
+
+
+
 ## Find restaurants in Feudenheim (admin_level=9)
 
 ```{r,eval=Examples}
@@ -196,6 +213,23 @@ boundaryMA <- xmlParse("http://www.overpass-api.de/api/interpreter?data=
                        area[name=\"Mannheim\"];way(area)
                        [boundary=administrative];out;")
 ```
+
+
+```{r,echo=F,eval=F}
+data.path <- "J:/Work/Statistik/Kolb/Paper/UseOSMdata/data/XML"
+setwd(data.path)
+saveXML(boundaryMA,file="boundaryMA.xml")
+```
+
+```{r,eval=F,echo=F}
+bound <- get_osm(complete_file(), source = osmsource_file("boundaryMA.xml"))
+bound_MA <- find(bound, way(tags(k == "boundary")))
+bg_ids <- find_down(bound, way(bound_MA))
+bg <- subset(bound, ids = bg_ids)
+bg
+bg_poly <- as_sp(bg, "polygons")
+```
+
 
 ## More than one condition:
 
@@ -281,7 +315,7 @@ xpath
 
 - There is a CRAN task view on [Web Technologies and Services](http://cran.r-project.org/web/views/WebTechnologies.html)
 
-- Further examples - [Streets of ...](http://statistik-stuttgart.de/r-street-of-france/)
+- Further examples - [Streets of ...](http://www.r-bloggers.com/r-streets-of-france/)
 
 
 - [Converting osm file to shapefile in R](http://gis.stackexchange.com/questions/115911/converting-osm-file-to-shapefile-or-data-frame-in-r)

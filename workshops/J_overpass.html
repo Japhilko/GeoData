@@ -131,11 +131,12 @@ abct &lt;-<span class="st"> </span><span class="kw">xmlParse</span>(<span class=
 <div id="usage-of-overpass-api" class="slide section level2">
 <h1>Usage of overpass API</h1>
 <ul>
-<li><p>An very good alternative for xapi is the overpass API. <a href="http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Stra.C3.9Fenliste">Here</a> are some use cases available.</p></li>
-<li><p>An <a href="http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/">example</a> on how to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a> with R.</p></li>
+<li><p>An very good alternative for <a href="http://wiki.openstreetmap.org/wiki/Xapi">xapi</a> is the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a>. <a href="http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Beispielsammlung#Stra.C3.9Fenliste">Here</a> are some use cases available.</p></li>
+<li><p><a href="http://wiki.openstreetmap.org/wiki/DE:Overpass_API/Language_Guide">Language Guide</a> and <a href="http://overpass-api.de/convert_form.html">convert form</a></p></li>
 <li><p><a href="https://www.mapbox.com/guides/overpass-turbo/">Overpass-turbo</a> is an alternative, but no API.</p></li>
 <li><p><a href="(ttp://blog-en.openalfa.com/how-to-query-openstreetmap-using-the-overpass-api)">OpenAlfaPlot</a> on how to query Openstreetmap using the Overpass API.</p></li>
 <li><p><a href="http://podcast.openstreetmap.de/2012/12/28/osmde009-osm-talk-die-overpass-api/">About overpass API in German</a></p></li>
+<li><p>An <a href="http://statistik-stuttgart.de/r-osm-maps-with-osmar-and-the-overpass-x-api/">example</a> on how to use the <a href="http://wiki.openstreetmap.org/wiki/Overpass_API">overpass API</a> with R.</p></li>
 </ul>
 </div>
 <div id="the-overpass-api" class="slide section level2">
@@ -155,6 +156,14 @@ abct &lt;-<span class="st"> </span><span class="kw">xmlParse</span>(<span class=
 <pre class="sourceCode r"><code class="sourceCode r">rest_IH &lt;-<span class="st"> </span><span class="kw">xmlParse</span>(<span class="st">&quot;http://www.overpass-api.de/api/interpreter?data=</span>
 <span class="st">                                area[name=</span><span class="ch">\&quot;</span><span class="st">Ilvesheim</span><span class="ch">\&quot;</span><span class="st">];node(area)</span>
 <span class="st">                                [amenity=restaurant];out;&quot;</span>)</code></pre>
+<p>In R We can use the powerful <code>osmar</code>-package:</p>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">saveXML</span>(rest_IH,<span class="dt">file=</span><span class="st">&quot;rest_IH.XML&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;osmar&quot;</span>)
+ilv &lt;-<span class="st"> </span><span class="kw">get_osm</span>(<span class="kw">complete_file</span>(), <span class="dt">source =</span> <span class="kw">osmsource_file</span>(<span class="st">&quot;rest_IH.XML&quot;</span>))
+
+rest &lt;-<span class="st"> </span><span class="kw">find</span>(ilv, <span class="kw">node</span>(<span class="kw">tags</span>(k ==<span class="st"> &quot;amenity&quot;</span>)))
+
+<span class="kw">plot_nodes</span>(ilv,<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</code></pre>
 </div>
 <div id="find-restaurants-in-feudenheim-admin_level9" class="slide section level2">
 <h1>Find restaurants in Feudenheim (admin_level=9)</h1>
