@@ -65,6 +65,11 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 
 - [John snow and openstreetmap](http://www.r-bloggers.com/john-snow-and-openstreetmap/)
 
+## Videos on OSM
+
+- Roland Olbricht: [Schatzsuche in OpenStreetMap](https://www.youtube.com/watch?v=VJItOHImN7A&noredirect=1)
+- Claas Leiner: [Daten aus OSM extrahieren und in QGIS weiterverarbeiten](https://www.youtube.com/watch?v=VhGeaTBfFuA)
+
 ## Interactive maps
 
 - [Exchange data between R and the Google Maps API using Shiny](http://r-video-tutorial.blogspot.ch/2015/05/exchange-data-between-r-and-google-maps.html)

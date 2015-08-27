@@ -10,6 +10,10 @@ output: ioslides_presentation
 ![pic](http://img.expertgps.com/images/gpx256.png)
 
 
+## JSON files
+
+- [Gaston Sanchez](http://gastonsanchez.com/work/webdata/getting_web_data_r5_json_data.pdf)
+
 ## 
 
 ```{r}
