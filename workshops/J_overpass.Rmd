@@ -319,3 +319,13 @@ xpath
 
 
 - [Converting osm file to shapefile in R](http://gis.stackexchange.com/questions/115911/converting-osm-file-to-shapefile-or-data-frame-in-r)
+
+- [Video - Intro to overpass](https://www.youtube.com/watch?v=lwlxpG4pGJs)
+
+- [Video - Intro overpass II](https://www.youtube.com/watch?v=LxWEHQ2DpI0)
+
+- [Video - Mobile Karten](https://www.youtube.com/watch?v=WxsP9cG_Vcs)
+
+## Further links
+
+- [Open layers](http://openlayers.org/)
