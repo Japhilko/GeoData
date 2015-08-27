@@ -1,0 +1,11 @@
+base
+ggplot2
+ggmap
+XML
+bitops
+RCurl
+sp
+geosphere
+osmar
+knitr
+DT

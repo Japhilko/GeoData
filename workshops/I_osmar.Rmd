@@ -2,20 +2,26 @@
 title: "Use R-package osmar"
 author: "Jan-Philipp Kolb"
 date: "Thu Jun 11 17:13:33 2015"
-output: ioslides_presentation
+output: slidy_presentation
 ---
+
+```{r,echo=F}
+library(knitr)
+library(DT)
+```
+
 
 ## Download information
 
-```{r}
+```{r,cache=T,message=F}
 library(ggmap)
 library(osmar)
 api <- osmsource_api()
 ```
 
-```{r}
-cityC <- geocode("Mannheim Seckenheim")
-bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
+```{r,cache=T,message=F}
+cityC <- geocode("Schwetzingen")
+bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
 ua <- get_osm(bb, source = api)
 ```
 
@@ -26,6 +32,34 @@ You get three types of objects:
 ```{r}
 names(ua)
 ```
+
+![pic nodes](http://wiki.openstreetmap.org/w/images/thumb/7/76/Osm_element_node.svg/30px-Osm_element_node.svg.png) [Node](http://wiki.openstreetmap.org/wiki/Elements#Node)
+
+![pic ways](http://wiki.openstreetmap.org/w/images/thumb/e/ee/Osm_element_way.svg/30px-Osm_element_way.svg.png) [Way](http://wiki.openstreetmap.org/wiki/Elements#Way)
+
+![pic relation](http://wiki.openstreetmap.org/w/images/thumb/4/48/Osm_element_relation.svg/30px-Osm_element_relation.svg.png) [Relation](http://wiki.openstreetmap.org/wiki/Relation)
+
+
+## To access the nodes information:
+
+```{r}
+summary(ua$nodes)
+```
+
+## Overview information
+
+```{r}
+datatable(summary(ua$nodes)[[6]])
+```
+
+
+## 
+
+```{r,eval=F}
+bus <- find(ua, relation(tags(v == "bus")))
+```
+
+
 
 ## What is behind:
 

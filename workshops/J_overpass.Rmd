@@ -11,10 +11,11 @@ Examples <- F
 
 ## Introduction
 
-- The package [osmar](http://cran.r-project.org/web/packages/osmar/index.html) provides good possibilities to download information about small areas from  
-[OpenStreetMap](http://www.openstreetmap.org/). 
+- The package [osmar](http://cran.r-project.org/web/packages/osmar/index.html) provides good possibilities to download information about small areas from [OpenStreetMap](http://www.openstreetmap.org/). 
 
-- With the this [link](https://www.openstreetmap.org/export) it is possible to export data directly from OpenStreetMap.
+- With the this [link](https://www.openstreetmap.org/export) it is possible to export data directly from OpenStreetMap. 
+
+- You will get [.osm](http://wiki.openstreetmap.org/wiki/OSM_XML)-data. See the [osmar-manual](http://osmar.r-forge.r-project.org/RJpreprint.pdf) to work with this data.
 
 But Sometimes you might want to have information only on one 
 [specific topic](http://statistik-stuttgart.de/r-street-of-france/)
