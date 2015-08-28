@@ -2,4 +2,4 @@
 (node(50.745,7.17,50.75,7.18)[highway=bus_stop]);out;
 node["name"="Gielgen"];out body;
 node["name"="Gielgen"](50.7,7.1,50.8,7.2);out body;
-node["highway"="bus_stop"](49.5196,8.4063,49.4428,8.5769);out body;
+(node(49.4,8.4,49.5,8.5)[highway=bus_stop]);out;
