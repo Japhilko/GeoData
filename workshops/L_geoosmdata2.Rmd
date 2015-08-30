@@ -1,8 +1,8 @@
 ---
 title: "geosmdata2 and ggmap"
 author: "Jan-Philipp Kolb"
-date: "31. Juli 2015"
-output: ioslides_presentation
+date: "Sun Aug 30 12:35:29 2015"
+output: slidy_presentation
 ---
 
 
@@ -14,6 +14,7 @@ library(knitr)
 ## Download information with geosmdata2
 
 Install package from [github](https://github.com/Japhilko/GeoData)
+
 ```{r,eval=F}
 library(devtools)
 devtools::install_github("Japhilko/GeoData/geosmdata2")

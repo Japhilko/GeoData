@@ -117,6 +117,7 @@ library(RCurl)
 
 - [Map projections](http://psychologist590.rssing.com/chan-35984540/all_p2.html)
 
+- [CartoDB](https://cartodb.com/)
 
 ```{r,echo=F}
 # http://www.r-bloggers.com/can-you-track-me-now-visualizing-xfinity-wi-fi-hotspot-coverage-part-1/
@@ -129,3 +130,6 @@ library(RCurl)
 
 ```
 
+## Spatial statistics
+
+- [Spatial temporal statistics](http://www.r-bloggers.com/spatio-temporal-kriging-in-r/)
