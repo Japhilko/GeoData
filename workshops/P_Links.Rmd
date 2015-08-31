@@ -133,3 +133,9 @@ library(RCurl)
 ## Spatial statistics
 
 - [Spatial temporal statistics](http://www.r-bloggers.com/spatio-temporal-kriging-in-r/)
+
+- [Literature](http://eprints.ncrm.ac.uk/3295/)
+
+- [Link course Uni Mannheim](http://www.uni-mannheim.de/io/austauschstudium_in_mannheim/course_catalogues/course_catalogue_hws_2015/sowi_bachelor_englisch/index.html)
+
+- [PostGIS start](http://forum.openstreetmap.org/viewtopic.php?id=21810)

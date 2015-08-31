@@ -253,6 +253,15 @@ Geographic information systems (GIS)
 [Overview of available packages on CRAN](http://www.r-pkg.org/)
 
 
+## Basic R
+
+![BasicR](http://erpinr.files.wordpress.com/2014/04/rsession.png%3Fw%3D620%26h%3D500)
+
+
+## Rstudio 
+
+![Rstudio](http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png)
+
 ## Github stack
 
 ![alt text](http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png)
