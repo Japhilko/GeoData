@@ -10,13 +10,45 @@ library(knitr)
 ```
 
 
+## Political Map:
+
+- A political map does not show any topographic features.
+
+- It focuses on the state and national boundaries of a place.
+
+- Include locations of cities - both large and small, depending
+on the detail of the map.
+
+- A common type of political map would be one showing the 50 U.S.
+states and their borders along with the United States' north and
+south international borders (map of the United States).
+
+
+## Choropleth maps
+
+```{r,echo=F,message=F,warning=F}
+library(maps)
+library(magrittr)
+library(leaflet)
+mapStates = map("state", fill = TRUE, plot = FALSE)
+leaflet(data = mapStates) %>% addTiles() %>%
+  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
+```
+
 
 ## The maps package
 
 ```{r,message=F}
 library(maps)
+```
+
+How to get help
+
+```{r,eval=F}
 ?map
 ```
+
+
 
 ## A first map
 

@@ -2,10 +2,11 @@
 \alias{geocode_osm}
 \title{function geocode_osm}
 \usage{
-geocode_osm(place)
+geocode_osm(place,output)
 }
 \arguments{
 \item{place}{Place which should be geocoded}
+\item{output}{Complete result or just the geocode}
 }
 \description{
 Returns info from \url{http://nominatim.openstreetmap.org/}
