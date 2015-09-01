@@ -76,7 +76,14 @@ circumstances.
 - data from [flickr](https://www.flickr.com/) used
 - guess about picture taker's mode of transportation
 - time stamps and distance traveled between a user's pictures
-- Black is walking (less than 7mph), Red is bicycling or equivalent speed (less than 19mph), Blue is motor vehicles on normal roads (less than 43mph); Green is freeways or rapid transit. 
+
+Black is walking (less than 7mph), 
+
+Red is bicycling or equivalent speed (less than 19mph), 
+
+Blue is motor vehicles on normal roads (less than 43mph); 
+
+Green is freeways or rapid transit. 
 
 ## World Map Of Touristyness
 
@@ -106,9 +113,13 @@ and applications.
 - ... show you how to produce your own maps/visualisations.
 - ... tell you where you can find data.
 
-## Who I am
 
-![pic](http://www.ferienwohnung-scheibel.de/images/010_160.jpg)
+## Targets 
+
+Every participant should present his/her own maps.
+
+- Presentation of toolbox (R, Google API, OpenStreetMap etc.)
+- Learning by doing is very important
 
 ## Personal information
 
@@ -182,9 +193,16 @@ telephone-assisted surveys
 - What are you studying?
 - What are your main research interests?
 
-## Tools
+## Tools and services
 
 ![Rpic](http://developer.r-project.org/Logo/Rlogo-5.jpg)
+
+
+![pic21](http://www.webmasterpro.de/portal/news/2010/11/25/microsoft-arbeitet-mit-openstreetmap-zusammen.html/image/800px-OSM_Logo.svg.png/scale/250x400/)
+
+![pic](http://wiki.openstreetmap.org/w/images/thumb/b/b5/Overpass_API_logo.svg/400px-Overpass_API_logo.svg.png)
+
+![pic3](http://st1.bgr.in/wp-content/uploads/2014/06/google-maps-logo.jpg)
 
 
 ## Why use R
@@ -193,44 +211,52 @@ telephone-assisted surveys
 - It's open source
 - ...
 
-<http://www.r-bloggers.com/why-use-r/>
+
+> R is the leading tool for statistics, data analysis, and machine learning.  It is more than a statistical package; it’s a programming language, so you can create your own objects, functions, and packages.
+
+Source: <http://www.r-bloggers.com/why-use-r/>
 
 
-## Why use R II
+## Why use R
+
+A big number of (very specific) packages:
+
+![picture](http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg)
+
+[Overview of available packages on CRAN](http://www.r-pkg.org/)
+
+
+## Why use R
 
 ![alt text](http://www.edureka.co/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
-## Online workshops to learn R
 
-- [Manuals on Homepage](http://cran.r-project.org/manuals.html)
+## Why use R
 
-- [Programming in R](http://manuals.bioinformatics.ucr.edu/home/programming-in-r)
+- Interfaces with other programs, for example [Javascript](http://www.w3schools.com/js/), [ArcGis](http://uwm.edu/software/arcgis/), [GDAL](http://www.gdal.org/) and others... 
 
-- [Learning R](https://learnr.wordpress.com/)
-
-- [Reference card](http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf)
-
-- [How to get help in R](http://itfeature.com/tag/how-to-get-help-in-r)
-
-- [Useful tutorials](http://robjhyndman.com/hyndsight/useful-tutorials/)
+![pi](https://jresponse.net/blog/wp-content/uploads/2015/04/javascript-logo-png-200x200.png) 
+![p](http://uwm.edu/software/wp-content/uploads/sites/76/2014/06/ESRI_ARCMAP_transparente.png) 
 
 
-## GIS and R
+## Why use R
 
-Geographic information systems (GIS)
+R can be used as geographic information systems (GIS)
 
 - R and [qgis](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/300px-QGis_Logo.png)
 
-- [Applied Spatial Data Analysis with R](http://www.uclm.es/profesorado/vgomez/useR2015/) (Virgilio Gómez-Rubio)
+- Virgilio Gómez-Rubio - [Applied Spatial Data Analysis with R](http://www.uclm.es/profesorado/vgomez/useR2015/) 
 
 - [spatstat: Spatial Point Pattern Analysis](http://cran.r-project.org/web/packages/spatstat/index.html)
 
-- [giswerk](http://giswerk.org/)
-
 - [Task view mapping](https://github.com/ropensci/maptools)
 
+- [giswerk](http://giswerk.org/)
 
-## Graphics
+
+## Why use R
+
+Because it is possible to create nice graphics:
 
 - [Producing Simple Graphs with R](http://www.harding.edu/fmccown/r/)
 
@@ -244,31 +270,53 @@ Geographic information systems (GIS)
 
 - [Visualizing data in R](https://dl.dropboxusercontent.com/u/24648660/ggmap%201.pdf)
 
-- [Interview Hadley Wickham R Project Data Visualization Guru](http://decisionstats.com/2010/01/12/interview-hadley-wickham-r-project-data-visualization-guru/)
+- [Interview Hadley Wickham - R-Project Data Visualization Guru](http://decisionstats.com/2010/01/12/interview-hadley-wickham-r-project-data-visualization-guru/)
 
-## Packages in R
+## [Github](https://github.com/) stack
 
-![picture](http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg)
+![alt text](http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png)
 
-[Overview of available packages on CRAN](http://www.r-pkg.org/)
+
+## Github page
+
+- All relevant resources for this course will be available at:
+
+<https://github.com/Japhilko/GeoData>
+
+If you are interested in what is behind the scenes:
+
+- [Introduction to Github](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1)
+
+## How to learn R
+
+- [Manuals on the R-project webpage](http://cran.r-project.org/manuals.html)
+
+-  Thomas Girke - [Programming in R](http://manuals.bioinformatics.ucr.edu/home/programming-in-r)
+
+
+- Use [Reference cards](http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf), plot them and have them next to your computer
+
+- [How to get help in R](http://itfeature.com/tag/how-to-get-help-in-r)
+
+I will try to keep it simple and provide lots of resources.
+
 
 
 ## Basic R
 
 ![BasicR](http://erpinr.files.wordpress.com/2014/04/rsession.png%3Fw%3D620%26h%3D500)
 
+## Download and install R
+
+- Click [here](http://mirrors.softliste.de/cran/bin/windows/base/R-3.2.2-win.exe) to download R for Windows.
+
+- R for other platforms (Linux and Mac OS) is available under:
+
+<http://mirrors.softliste.de/cran/>
+
 
 ## Rstudio 
 
 ![Rstudio](http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png)
 
-## Github stack
 
-![alt text](http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png)
-
-## Target: 
-
-Every participant should present his/her own map.
-
-- Presentation of toolbox (R, Google API, OpenStreetMap etc.)
-- Learning by doing is very important

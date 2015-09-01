@@ -7,6 +7,7 @@ output: slidy_presentation
 
 ```{r,echo=F}
 library(knitr)
+library(DT)
 ```
 
 ## Package [tmap](https://cran.r-project.org/web/packages/tmap/index.html)
@@ -25,11 +26,37 @@ data(Europe)
 qtm(Europe)
 ```
 
-## The underlying data set
 
-```{r,echo=F,cache=T}
-kable(Europe@data[1:8,1:5])
+## The underlying data set of Europe
+
+```{r,echo=F}
+datatable(Europe@data)
 ```
+
+
+## For a map with other colors
+
+```{r,cache=T}
+qtm(Europe, fill="gdp_cap_est")
+```
+
+
+## For a map with with text 
+
+```{r}
+qtm(Europe, fill="gdp_cap_est", text="iso_a3")
+```
+
+
+
+
+```{r}
+qtm(Europe, fill="gdp_cap_est", text="iso_a3", text.size="AREA", root=5, fill.title="GDP per capita", 
+    fill.textNA="Non-European countries", theme="Europe")
+```
+
+
+
 
 ## Small multiples
 
