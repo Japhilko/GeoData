@@ -1,0 +1,69 @@
+---
+title: "Package Choroplethr"
+author: "Jan-Philipp Kolb"
+date: "08/25/2015"
+output: slidy_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+library(DT)
+```
+
+
+
+## Description choroplethr
+
+- [Intro - What is a choropleth](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
+- [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+
+## Links
+
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html)
+
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)
+
+## World Bank data
+
+```{r,cache=T,warning=F,message=F}
+library(choroplethr)
+library(WDI) 
+
+choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population", num_colors=1)
+```
+
+## Animated
+
+```{r,cache=T}
+library(choroplethr)
+
+?df_president_ts
+data(df_president_ts)
+```
+
+## The datatable
+
+```{r,cache=F,echo=F,warning=F}
+datatable(df_president_ts, options = list(pageLength = 5))
+```
+
+- [datatable](http://www.htmlwidgets.org/showcase_datatables.html)
+
+## Animated 
+
+```{r,eval=F,warning=F,message=F}
+# create a list of choropleths of presidential election results for each year
+choropleths = list()
+for (i in 2:ncol(df_president_ts)) {
+  df           = df_president_ts[, c(1, i)]
+  colnames(df) = c("region", "value")
+  title        = paste0("Presidential Election Results: ", colnames(df_president_ts)[i])
+  choropleths[[i-1]] = state_choropleth(df, title=title)
+}
+```
+
+```{r,message=F,eval=F,warning=F}
+choroplethr_animate(choropleths)
+```
+

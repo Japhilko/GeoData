@@ -1,0 +1,68 @@
+---
+title: "tmap"
+author: "Jan-Philipp Kolb"
+date: "08/04/2015"
+output: slidy_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+```
+
+## Package [tmap](https://cran.r-project.org/web/packages/tmap/index.html)
+
+- [tmap vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
+
+```{r,warning=F,message=F}
+# install.packages("tmap")
+library(tmap)
+```
+
+## Quick thematic map
+
+```{r,cache=T}
+data(Europe)
+qtm(Europe)
+```
+
+## The underlying data set
+
+```{r,echo=F,cache=T}
+kable(Europe@data[1:8,1:5])
+```
+
+## Small multiples
+
+```{r,cache=T}
+tm_shape(Europe[Europe$continent=="Europe",]) +
+    tm_fill("part", thres.poly = 0) +
+    tm_facets("name", free.coords=TRUE, drop.shapes=TRUE) +
+tm_layout(legend.show = FALSE, title.position = c("center", "center"), 
+          title.size = 2)
+```
+
+## The development version of `tmap`
+
+```{r,cache=T}
+devtools::install_github("mtennekes/tmap/pkg", ref = "45855fa")
+```
+
+
+## Download information
+
+```{r,cache=T}
+library(tmap)
+bb_schloss <- bb(q="Mannheim Schloss")
+buildings_schloss <- read_osm(bb_schloss, buildings=osm_poly("building"))
+
+tm_shape(buildings_schloss$buildings, bbox=bb_schloss) + 
+  tm_polygons(col = "darkolivegreen3")
+```
+
+## Download information - bigger area
+
+```{r,cache=T}
+bb_Mannheim <- bb(q="Mannheim")
+
+```
+

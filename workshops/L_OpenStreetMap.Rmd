@@ -1,0 +1,12 @@
+---
+title: "OpenStreetMap"
+author: "Jan-Philipp Kolb"
+date: "27. August 2015"
+output: slidy_presentation
+---
+
+## Complete file
+
+- geofabrik
+- Shapefiles are not complete
+- but e.g. `germany-latest.osm.pbf`

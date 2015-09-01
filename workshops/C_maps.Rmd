@@ -1,0 +1,271 @@
+---
+title: "maps package"
+author: "Jan-Philipp Kolb"
+date: "17. Juli 2015"
+output: ioslides_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+```
+
+
+## Political Map:
+
+- A political map does not show any topographic features.
+
+- It focuses on the state and national boundaries of a place.
+
+- Include locations of cities - both large and small, depending
+on the detail of the map.
+
+- A common type of political map would be one showing the 50 U.S.
+states and their borders along with the United States' north and
+south international borders (map of the United States).
+
+
+## Political Map
+
+```{r,echo=F,message=F,warning=F}
+library(maps)
+library(magrittr)
+library(leaflet)
+mapStates = map("state", fill = TRUE, plot = FALSE)
+leaflet(data = mapStates) %>% addTiles() %>%
+  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
+```
+
+
+## The maps package
+
+```{r,message=F}
+library(maps)
+```
+
+How to get help
+
+```{r,eval=F}
+?map
+```
+
+
+
+## A first map
+
+```{r}
+map()
+```
+
+
+## A first argument
+
+The same command with an argument:
+
+```{r}
+map("usa")
+```
+
+## A map of france
+
+```{r}
+map("france")
+```
+
+## Choropleths - package maps
+Get the borders in blue color:
+```{r}
+library ( maps )
+map ("italy", col = "blue")
+```
+
+## Choropleths - package maps
+
+If we want the areas in blue:
+```{r}
+map ("italy",fill =T, col = "blue")
+```
+
+## More colors
+
+Create a vector:
+
+```{r}
+colors <- c("blue","red","yellow")
+```
+
+and use the vector to specify the color
+
+```{r}
+map ("italy",fill =T, col = colors)
+```
+
+## Excursus: more colors!
+You can also use the [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) command to create your own colors:
+
+```{r}
+map("italy",fill=T, col = rgb(0,1,0))
+```
+
+## Try also
+
+```{r,eval=F}
+map("italy",fill=T, col = rgb(1,0,0))
+map("italy",fill=T, col = rgb(1,1,1))
+map("italy",fill=T, col = rgb(1,0.5,0.4))
+```
+
+## Choropleths - package maps
+If you want to know, which region is at which place:
+
+```{r}
+italy <- map("italy", plot = F)
+head(italy$names)
+```
+
+## A map for Germany
+
+```{r}
+library(maps)
+map("world", "Germany")
+```
+
+## Choropleths - package maps - two countries
+
+
+```{r}
+map("world", c("Germany","Poland"))
+```
+
+
+## 2 countries with color
+
+```{r}
+map("world", c("Germany","Austria"),fill=T,
+col=c("red","green"))
+```
+
+
+## Choropleths - package maps - additional features
+
+```{r}
+map("world", "China")
+map.scale()
+```
+
+## Choropleths - package maps - additional features
+
+Like `map`, but labels the regions:
+
+```{r}
+map.text("county", "penn")
+```
+
+Pennsylvania counties
+
+## R-package maps - World cities
+
+`data` loads specified data sets, or lists the available data sets.
+
+```{r}
+data(world.cities)
+```
+
+`head` - Return the First Part of an Object
+
+```{r,eval=F}
+head(world.cities)
+```
+
+## Overview of world cities data
+
+```{r,echo=F}
+kable(head(world.cities))
+```
+
+## Map the cities of the world
+
+
+```{r}
+map()
+map.cities(world.cities)
+```
+
+## Cities of France
+
+```{r}
+data(world.cities)
+map("france")
+map.cities(world.cities)
+```
+
+## Only cities of France
+
+```{r}
+FrenchCity <- world.cities$country.etc=="France"
+FCit <- world.cities[FrenchCity,]
+```
+
+```{r,echo=F}
+kable(head(FCit,n=4))
+```
+
+
+## Only cities of France
+
+Now it is possible to map only the french cities:
+
+```{r}
+map("france")
+map.cities(FCit,col="blue",pch=20)
+```
+
+`pch` - plotting character, i.e., symbol to use.
+
+
+## Different sizes - different colors 
+
+```{r}
+FCit_Bc<-FCit[FCit$pop>50000,]
+map("france")
+map.cities(FCit,col="blue",pch=20)
+map.cities(FCit_Bc,col="red",pch=20)
+```
+
+## Data basis - CIA World DataBank II
+
+The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+
+## Example: US Unemployment 
+
+- [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) about the usage of package maps
+
+
+Get the data:
+```{r}
+library(maps)
+data(unemp)
+data(county.fips)
+```
+
+## Colour gradients 
+
+```{r,warning=F}
+library(colorRamps)
+colors <- blue2red(6)
+barplot(1:6,col=colors)
+```
+
+
+
+## Example: US Unemployment 
+
+```{r}
+unemp$colorSteps <- cut(unemp$unemp, c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, unemp$fips)]
+
+map("county", col = colors[colorsmatch], fill = TRUE)
+```
+
+## Further links and resources
+
+- [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
