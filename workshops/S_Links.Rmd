@@ -141,3 +141,11 @@ library(RCurl)
 - [Link course Uni Mannheim](http://www.uni-mannheim.de/io/austauschstudium_in_mannheim/course_catalogues/course_catalogue_hws_2015/sowi_bachelor_englisch/index.html)
 
 - [PostGIS start](http://forum.openstreetmap.org/viewtopic.php?id=21810)
+
+## [French Map on Income](http://blog.revolutionanalytics.com/2011/12/mapping-prosperity-in-france-with-r.html)
+
+![pic](http://revolution-computing.typepad.com/.a/6a010534b1db25970b01675eaaae05970b-800wi)
+
+## Further maps
+
+- [Election results](https://github.com/offensivepolitics/chicago-mayor-2011)

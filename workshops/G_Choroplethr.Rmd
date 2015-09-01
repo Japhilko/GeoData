@@ -10,19 +10,56 @@ library(knitr)
 library(DT)
 ```
 
+## Introduction
+
+[`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Simplify the Creation of Choropleth Maps in R
+
+Package by [Ari Lamstein](http://www.arilamstein.com/)
+
+[`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
+- World Development Indicators (World Bank)
+
+The following relies heavily on the [vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) of the `choroplethr`-package
+
+## What is a choropleth map
+
+A choropleth is a map which
+
+- Shows geographic boundaries.
+- Colors those regions based on some metric.
+
+Choropleths are useful for visualizing data where geographic boundaries are a natural unit of aggregation. 
+
+## Population estimates for US States
+
+```{r,warning=F,message=F}
+library(choroplethr)
+data(df_pop_state)
+```
+
+`df_pop_state` is a dataset which is included in the package `choroplethr`, containing population estimates for US States in 2012.
+
+```{r,echo=F}
+datatable(df_pop_state,options = list(pageLength = 5))
+```
+
+## `choroplethr` - Hello World
+
+For example, here is a choropleth that shows 2012 US State Population Estimates:
+
+We get a choropleth map with only one argument:
+
+```{r}
+state_choropleth(df_pop_state)
+```
 
 
-## Description choroplethr
+But we can also create a title and name the legend:
 
-- [Intro - What is a choropleth](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
-- [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html)
-- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+```{r}
+state_choropleth(df_pop_state, title="2012 US State Population Estimates", legend="Population")
+```
 
-## Links
-
-- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html)
-
-- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)
 
 ## World Bank data
 
@@ -36,11 +73,15 @@ choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population", num_colo
 ## Animated
 
 ```{r,cache=T}
-library(choroplethr)
-
-?df_president_ts
 data(df_president_ts)
 ```
+
+With the questionmark we get help
+
+```{r,eval=F}
+?df_president_ts
+```
+
 
 ## The datatable
 
@@ -67,6 +108,18 @@ for (i in 2:ncol(df_president_ts)) {
 choroplethr_animate(choropleths)
 ```
 
-## Resources
+## Resources / Links
 
 - [Description](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html)
+
+- [Intro - What is a choropleth](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
+
+- [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+
+- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html)
+
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)
+
+

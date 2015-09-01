@@ -24,6 +24,10 @@ data(quakes)
 kable(head(quakes))
 ```
 
+## World Bank Data
+
+[`WDI`](https://cran.r-project.org/web/packages/WDI/index.html) - World Development Indicators (World Bank)
+
 
 ## OpenStreetMap
 
