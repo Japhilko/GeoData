@@ -67,3 +67,6 @@ for (i in 2:ncol(df_president_ts)) {
 choroplethr_animate(choropleths)
 ```
 
+## Resources
+
+- [Description](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html)

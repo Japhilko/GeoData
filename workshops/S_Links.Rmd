@@ -36,6 +36,8 @@ output: ioslides_presentation
 
 - [Display of geographic data](http://www.r-bloggers.com/display-of-geographic-data-in-r/)
 
+- [Use ggmap and maptools to create choropleths](http://www.milanor.net/blog/?p=634)
+
 ## R as GIS
 
 - [R as GIS](http://www.r-bloggers.com/r-an-integrated-statistical-programming-environment-and-gis/)
