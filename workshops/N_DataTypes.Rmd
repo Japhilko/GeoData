@@ -5,6 +5,10 @@ date: "11. August 2015"
 output: ioslides_presentation
 ---
 
+## In general
+
+- [Reading and Writing spatial data in R](http://geostat-course.org/system/files/geostat13_in%2526outAM.pdf)
+
 ## .gpx files
 
 ![pic](http://img.expertgps.com/images/gpx256.png)
@@ -24,3 +28,19 @@ library(rgdal)
 - [readGPX](http://plotkml.r-forge.r-project.org/readGPX.html)
 - [Write GPX](http://www.inside-r.org/packages/cran/pgirmess/docs/writeGPX)
 - [multiple GPX](http://gis.stackexchange.com/questions/11221/how-to-read-multiple-gpx-files-in-r)
+
+
+## GeoTiff
+
+- [Source for GeoTiff](http://earthobservatory.nasa.gov/Features/NightLights/page3.php)
+
+```{r}
+library(mapplots)
+geoTiff(grd,'c:/test1.tiff')
+```
+
+
+
+## `.dbf` file
+
+- [Database file](http://whatis.techtarget.com/fileformat/DBF-dBASE-file)

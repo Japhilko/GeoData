@@ -76,3 +76,4 @@ library(mapdata)
 ## More sources
 
 - [World Borders Dataset](http://thematicmapping.org/downloads/world_borders.php)
+- [National Historical Information System](https://www.nhgis.org/)

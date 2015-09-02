@@ -215,3 +215,10 @@ plot(Europe)
 rasterImage(fDEU,Europe$LON[16],Europe$LAT[16],13,54)
 ```
 
+## Projections
+
+- [Spatial Reference Identifier](https://en.wikipedia.org/wiki/SRID)
+
+- [Working with shapefiles](http://lincolnmullen.com/projects/dh-r/geospatial-data.html)
+
+- [srid for OpenStreetMap](http://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet)
