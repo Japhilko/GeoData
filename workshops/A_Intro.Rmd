@@ -20,9 +20,17 @@ output: ioslides_presentation
 <a href="http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/" target="_blank"><img src="http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg" width="240" height="180" border="10" /></a>
 <a href="http://www.pilod.nl/w/images/6/62/D9-fig4.jpg" target="_blank"><img src="http://www.pilod.nl/w/images/6/62/D9-fig4.jpg" width="240" height="180" border="10" /></a>
 
-
-
 More [examples](http://spatial.ly/blog/) 
+
+## Migrant route to Germany
+
+![pic](http://ichef.bbci.co.uk/news/624/cpsprodpb/32F6/production/_85164031_migrant_journeys_turkey_to_germany_624.png)
+
+[Overview of maps](http://www.lib.utexas.edu/maps/)
+
+## The road to Europe
+
+![pic](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
 
 ## Global Peace Index
 
@@ -55,7 +63,7 @@ More [examples](http://spatial.ly/blog/)
 
 ## Social index
 
-Proportion of social benet recipients in Berlin
+Proportion of social benefits recipients in Berlin
 
 ![pic](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
 
@@ -101,6 +109,9 @@ Green is freeways or rapid transit.
 - Often unstructured or semi-structured (e.g. web documents, news archives), often heterogeneous
 - Often not intended for geographic purposes, but implicitly containing geographic info implicitly (Web 2.0)
 - Often with little or no metadata
+
+
+[Examples](https://www.flickr.com/groups/qgis/pool)
 
 ## Targets
 
