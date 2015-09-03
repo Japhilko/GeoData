@@ -1,0 +1,13 @@
+---
+title: "osmTools"
+output: revealjs::revealjs_presentation
+---
+
+## OSM tools 
+
+- [JOSM](https://josm.openstreetmap.de/)
+- [Maperitive](http://wiki.openstreetmap.org/wiki/Maperitive)
+
+https://harzoptics.wordpress.com/2013/07/10/online-kurs-zum-thema-gis-wir-sind-dabei/
+
+https://harzoptics.wordpress.com/2013/07/19/wie-lassen-sich-open-street-map-karten-in-qgis-importieren/
