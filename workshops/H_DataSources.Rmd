@@ -1,8 +1,8 @@
 ---
 title: "Data sources"
 author: "Jan-Philipp Kolb"
-date: "24. April 2015"
-output: ioslides_presentation
+date: "Fri Sep 04 14:35:37 2015"
+output: slidy_presentation
 ---
 
 
@@ -28,6 +28,40 @@ kable(head(quakes))
 ## World Bank Data
 
 [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html) - World Development Indicators (World Bank)
+- [Explanation for package](https://github.com/vincentarelbundock/WDI)
+
+```{r,message=F}
+library(WDI)
+```
+
+```{r,eval=F}
+WDIsearch('gdp')[1:10,]
+```
+
+```{r,echo=F}
+kable(WDIsearch('gdp')[1:10,])
+```
+
+
+## Download and use WDI data
+
+```{r,cache=T}
+dat <-  WDI(indicator='NY.GDP.PCAP.KD', country=c('MX','CA','US'), start=1960, end=2012)
+head(dat)
+```
+
+```{r,echo=F}
+kable(dat)
+```
+
+## First plot of downloaded WDI data
+
+```{r,echo=F,cache=T}
+library(ggplot2)
+ggplot(dat, aes(year, NY.GDP.PCAP.KD, color=country)) + geom_line() + 
+    xlab('Year') + ylab('GDP per capita')
+```
+
 
 
 ## OpenStreetMap

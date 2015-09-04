@@ -269,3 +269,7 @@ map("county", col = colors[colorsmatch], fill = TRUE)
 ## Further links and resources
 
 - [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
+
+- Robin Lovelace, James Cheshire - [Introduction to visualising spatial data in R](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
+
+- [Maps in R: Introduction - Drawing the map of Europe](http://www.milanor.net/blog/?p=534)

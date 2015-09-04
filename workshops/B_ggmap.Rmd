@@ -95,14 +95,12 @@ qmap(location = 'Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
 
-## Other ways to get a map
 
-- qmap is a wrapper for ggmap and get_map
-- with get_googlemap you get similar results
+## ggmap - create an object 
 
-```{r,message=F,eval=Ex,cache=Ca}
-MAmap <- get_googlemap("Mannheim")
-ggmap(MAmap)
+```{r,warning=F,message=F}
+MA_map <- qmap(location = 'Mannheim', zoom = 14,
+ maptype="toner",source="stamen")
 ```
 
 
@@ -113,44 +111,43 @@ ggmap(MAmap)
 [Wikipedia - Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)
 
 ```{r,message=F,eval=F,warning=F}
-geocode("Mannheim Wasserturm")
+geocode("Mannheim Wasserturm",source="google")
 ```
 
 ```{r,echo=F,message=F,cache=Ca}
-MAgc <- geocode("Mannheim University")
+MAgc <- geocode("Mannheim University",source="google")
 kable(MAgc)
+```
+
+## Get the distance between 2 points
+
+```{r,message=F,eval=Ex,cache=Ca}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
+```
+
+```{r,message=F,eval=Ex,cache=Ca}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
+```
+
+
+## Get another distance
+
+```{r,message=F,eval=Ex,cache=Ca}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
 
 ## Geocoding - points of interest
 
 ```{r,cache=Ca,message=F,warning=F}
-POI1 <- geocode("B2, 1 Mannheim")
-POI2 <- geocode("Hbf Mannheim")
-POI3 <- geocode("Wasserturm Mannheim")
-
+POI1 <- geocode("B2, 1 Mannheim",source="google")
+POI2 <- geocode("Hbf Mannheim",source="google")
+POI3 <- geocode("Wasserturm Mannheim",source="google")
+ListPOI <-rbind(POI1,POI2,POI3)
 POI1;POI2;POI3
 ```
 
 
-## Geocoding - with a loop
-
-```{r,message=F,eval=Ex,cache=Ca}
-POI <- c("B2, 1 Mannheim","Hbf Mannheim",
-         "Wasserturm Mannheim")
-
-ListPOI <- data.frame(lat=NA,lon=NA)
-
-for ( i in 1:length(POI)){
-  geoPOI <- geocode(POI[i])
-  ListPOI[i,"lat"] <-  geoPOI$lat 
-  ListPOI[i,"lon"] <-  geoPOI$lon 
-}
-```
-
 ## Points in map
-
-[Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
-
 
 ```{r,message=F,warning=F,eval=Ex,cache=Ca}
 MA_map +
@@ -158,14 +155,16 @@ geom_point(aes(x = lon, y = lat),
 data = ListPOI)
 ```
 
-## More about adding points
+## Points in map
 
-- Usage of [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
-- Question on [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
+```{r,message=F,warning=F,eval=Ex,cache=Ca}
+MA_map +
+geom_point(aes(x = lon, y = lat),col="red",
+data = ListPOI)
+```
 
-![pic](http://i.stack.imgur.com/q3euq.png)
 
-## ggmap - adding colors
+## ggmap - adding different colors
 
 ```{r,eval=Ex,cache=Ca}
 ListPOI$color <- c("A","B","C")
@@ -185,11 +184,16 @@ data = ListPOI)
 
 
 
-```{r,eval=F,echo=F}
-#library(devtools)
-#devtools::install_github("Japhilko/GeoData/geosmdata2")
-library(geosmdata2)
-```
+## Resources
+
+- [Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
+
+More about adding points
+
+- Usage of [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
+- Question on [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
+
+![pic](http://i.stack.imgur.com/q3euq.png)
 
 ## Cheatsheet
 
@@ -198,26 +202,9 @@ library(geosmdata2)
 ![pic](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.png)
 
 
-## Get the distance between 2 points
-
-```{r,message=F,eval=Ex,cache=Ca}
-mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
-```
-
-```{r,message=F,eval=Ex,cache=Ca}
-mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
-```
-
-## Get another distance
-
-```{r,message=F,eval=Ex,cache=Ca}
-mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
-```
-
 ## Resources and literature
 
-[ggmap: Spatial Visualization with
-ggplot2](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&rep=rep1&type=pdf)
+[ggmap: Spatial Visualization with ggplot2](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&rep=rep1&type=pdf)
 
 by David Kahle and Hadley Wickham
  

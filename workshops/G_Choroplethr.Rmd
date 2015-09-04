@@ -1,7 +1,7 @@
 ---
 title: "Package Choroplethr"
 author: "Jan-Philipp Kolb"
-date: "08/25/2015"
+date: "Fri Sep 04 14:08:29 2015"
 output: slidy_presentation
 ---
 
@@ -25,14 +25,14 @@ The following relies heavily on the [vignette](https://cran.r-project.org/web/pa
 
 A choropleth is a map which
 
-- Shows geographic boundaries.
-- Colors those regions based on some metric.
+- shows geographic boundaries.
+- colors those regions based on some metric.
 
 Choropleths are useful for visualizing data where geographic boundaries are a natural unit of aggregation. 
 
 ## Population estimates for US States
 
-```{r,warning=F,message=F}
+```{r,warning=F,message=F,echo=F}
 library(choroplethr)
 data(df_pop_state)
 ```
@@ -45,7 +45,7 @@ datatable(df_pop_state,options = list(pageLength = 5))
 
 ## `choroplethr` - Hello World
 
-For example, here is a choropleth that shows 2012 US State Population Estimates:
+For example, here is a [choropleth](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) that shows 2012 US State Population Estimates:
 
 We get a choropleth map with only one argument:
 
@@ -60,6 +60,50 @@ But we can also create a title and name the legend:
 state_choropleth(df_pop_state, title="2012 US State Population Estimates", legend="Population")
 ```
 
+## Show only three states
+
+[US State Chropleths](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+
+```{r}
+state_choropleth(df_pop_state,
+                 title      = "2012 Population Estimates",
+                 legend     = "Population",
+                 num_colors = 1,
+                 zoom       = c("california", "washington", "oregon"))
+```
+
+
+## US County Chropleths
+
+[Choropleth of US Counties](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html)
+
+```{r,eval=F}
+?df_pop_county
+
+?county_choropleth
+```
+
+
+```{r}
+data(df_pop_county)
+
+county_choropleth(df_pop_county)
+```
+
+
+## [Country Choropleths ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+
+```{r}
+data(df_pop_country)
+
+country_choropleth(df_pop_country,
+                 title      = "2012 Population Estimates",
+                 legend     = "Population",
+                 num_colors = 1,
+                 zoom       = c("united states of america", "mexico", "canada"))
+```
+
+
 
 ## World Bank data
 
@@ -69,6 +113,14 @@ library(WDI)
 
 choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population", num_colors=1)
 ```
+
+## [Life Expectancy](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+
+```{r,warning=F,message=F}
+library(WDI) 
+choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012, title="2012 Life Expectancy")
+```
+
 
 ## Animated
 
@@ -90,23 +142,6 @@ datatable(df_president_ts, options = list(pageLength = 5))
 ```
 
 - [datatable](http://www.htmlwidgets.org/showcase_datatables.html)
-
-## Animated 
-
-```{r,eval=F,warning=F,message=F}
-# create a list of choropleths of presidential election results for each year
-choropleths = list()
-for (i in 2:ncol(df_president_ts)) {
-  df           = df_president_ts[, c(1, i)]
-  colnames(df) = c("region", "value")
-  title        = paste0("Presidential Election Results: ", colnames(df_president_ts)[i])
-  choropleths[[i-1]] = state_choropleth(df, title=title)
-}
-```
-
-```{r,message=F,eval=F,warning=F}
-choroplethr_animate(choropleths)
-```
 
 ## Resources / Links
 
