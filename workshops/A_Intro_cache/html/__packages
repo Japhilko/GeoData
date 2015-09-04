@@ -1,10 +1,4 @@
 base
-methods
-datasets
-utils
-grDevices
-graphics
-stats
 ggplot2
 ggmap
 rjson
@@ -13,3 +7,4 @@ RCurl
 stringr
 XML
 geosmdata2
+tmap

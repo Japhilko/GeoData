@@ -5,6 +5,39 @@ date: "07/17/2015"
 output: ioslides_presentation
 ---
 
+## Migrant route to Germany
+
+![pic](http://ichef.bbci.co.uk/news/624/cpsprodpb/32F6/production/_85164031_migrant_journeys_turkey_to_germany_624.png)
+
+[Overview of maps](http://www.lib.utexas.edu/maps/)
+
+## The road to Europe
+
+![pic](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
+
+
+## GDP per capita
+
+```{r,echo=F}
+library(tmap)
+data(World)
+qtm(World, fill="income_grp",fill.title="Income group") 
+```
+
+
+
+## Social index
+
+Proportion of social benefits recipients in Berlin
+
+![pic](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
+
+## The spatial perspective...
+
+- ... is relevant to understand
+circumstances.
+
+- More spatial visualisations are possible with data from web 2.0 etc.
 
 
 
@@ -22,57 +55,7 @@ output: ioslides_presentation
 
 More [examples](http://spatial.ly/blog/) 
 
-## Migrant route to Germany
 
-![pic](http://ichef.bbci.co.uk/news/624/cpsprodpb/32F6/production/_85164031_migrant_journeys_turkey_to_germany_624.png)
-
-[Overview of maps](http://www.lib.utexas.edu/maps/)
-
-## The road to Europe
-
-![pic](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
-
-## Global Peace Index
-
-![pic](http://images.huffingtonpost.com/2012-05-11-Global_Peace_Index_A.jpg)
-
-
-## Global Peace Index
-
--  The level of organised conflict
-
--   Relations with neighboring countries
-
--   The level of perceived criminality in society
-
--   Political instability
-
--   Terrorist activity
-
--   The number of homicides per 100,000 persons
-
--   The level of violent crime
-
--   Likelihood of violent demonstrations
-
--   The number of jailed population per 100,000 persons
-
--   Nuclear and heavy weapons capability
-
--   Ease of access to small arms and light weapons 
-
-## Social index
-
-Proportion of social benefits recipients in Berlin
-
-![pic](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
-
-## The spatial perspective...
-
-- ... is relevant to understand
-circumstances.
-
-- More spatial visualisations are possible with data from web 2.0 etc.
 
 ## A little quiz
 

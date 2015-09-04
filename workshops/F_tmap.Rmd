@@ -12,14 +12,20 @@ library(DT)
 
 ## Package [tmap](https://cran.r-project.org/web/packages/tmap/index.html)
 
-- [tmap vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html)
+- Load the package [tmap](http://twitter.com/sharon000/status/593028906820599808/photo/1?ref_src=twsrc%5Etfw)
+- The following examples are based on the [vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html) of the package tmap
 
 ```{r,warning=F,message=F}
 # install.packages("tmap")
 library(tmap)
 ```
 
+
+
+
 ## Quick thematic map
+
+- [qtm](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html) - Quick thematic map plot
 
 ```{r,cache=T}
 data(Europe)
@@ -30,11 +36,22 @@ qtm(Europe)
 ## The underlying data set of Europe
 
 ```{r,echo=F}
-datatable(Europe@data)
+EUR <- Europe@data
+```
+
+
+```{r,echo=F}
+# http://rstudio.github.io/DT/
+datatable(Europe@data[,1:4], class = 'cell-border stripe',rownames = FALSE,
+          options = list(pageLength = 10, autoWidth = TRUE)
+          )
+# to see the options http://datatables.net/reference/option/
 ```
 
 
 ## For a map with other colors
+
+- Visualising [Natural Earth](http://www.naturalearthdata.com/) data
 
 ```{r,cache=T}
 qtm(Europe, fill="gdp_cap_est")
@@ -47,13 +64,293 @@ qtm(Europe, fill="gdp_cap_est")
 qtm(Europe, fill="gdp_cap_est", text="iso_a3")
 ```
 
-
-
+## A theme which fits better
 
 ```{r}
 qtm(Europe, fill="gdp_cap_est", text="iso_a3", text.size="AREA", root=5, fill.title="GDP per capita", 
     fill.textNA="Non-European countries", theme="Europe")
 ```
+
+
+
+
+## [Population density](https://en.wikipedia.org/wiki/Population_density)
+
+```{r,cache=T}
+qtm(Europe, fill="pop_est_dens", fill.title="Population density")
+```
+
+## Topics with Europe data
+
+- [ISO classification](http://userpage.chemie.fu-berlin.de/diverse/doc/ISO_3166.html)
+- Country name
+- Sovereignt, continent, part of Europe, 
+- Area, Population, Population density, 
+- [Gross domestic product](https://en.wikipedia.org/wiki/Gross_domestic_product)
+- GDP [at purchasing power parity](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28PPP%29_per_capita)
+- Economy, Income group
+
+## Names and topics
+
+
+```{r,echo=F,cache=T}
+library(XML)
+info <- colnames(Europe@data)
+info2 <- c("ISO","Country name","Sovereignt","continent","part of Europe","Area","Population","Population density","Gross domestic product", "GDP per capita","Economy","Income group")
+
+info_df <- data.frame(names=info,topics=info2)
+kable(info_df)
+```
+
+
+The ISO codes: 
+
+
+```{r,echo=F,cache=T}
+link <- "http://userpage.chemie.fu-berlin.de/diverse/doc/ISO_3166.html"
+Tab <- readHTMLList(link)
+
+Tab <- strsplit(x = Tab[[1]],split = "\n")
+
+Tab3 <- Tab[[3]] 
+
+Tab4 <- Tab3[-c(1:7)]
+Tab4
+```
+
+
+## Part of Europe
+
+```{r,cache=T}
+qtm(Europe, fill="continent")
+```
+
+
+## Part of Europe
+
+```{r,cache=T}
+qtm(Europe, fill="part",fill.title="part of Europe")
+```
+
+## Area
+
+```{r,cache=T}
+qtm(Europe, fill="area") # Russia is huge
+```
+
+
+## Population
+
+```{r,cache=T}
+qtm(Europe, fill="pop_est",fill.title="Population") 
+```
+
+## Population density
+
+```{r,cache=T}
+qtm(Europe, fill="pop_est_dens",fill.title="Population density") 
+```
+
+
+## Economy
+
+```{r,cache=T}
+qtm(Europe, fill="economy") 
+```
+
+## Income group
+
+```{r,cache=T}
+qtm(Europe, fill="income_grp",fill.title="Income group") 
+```
+
+
+
+## The World data set in R-package `tmap`
+
+```{r,echo=F}
+data(World)
+datatable(World@data)
+```
+
+## World - countries by income group
+
+```{r,cache=T}
+qtm(World, fill="income_grp",fill.title="Income group") 
+```
+
+## A data set about the provinces in the Netheralnds (R-package `tmap`)
+
+```{r,echo=F}
+data(NLD_prov)
+NLD_df <- NLD_prov@data
+NLD_df[,6] <- round(NLD_df[,6])
+
+datatable(NLD_df[,1:6], class = 'cell-border stripe',rownames = FALSE,
+          options = list(pageLength = 10, autoWidth = TRUE)
+          )
+```
+
+## Netherlands - population in provinces
+
+```{r,cache=T}
+qtm(NLD_prov, fill="population",fill.title="population") 
+```
+
+## Compute Proportions
+
+```{r,cache=T}
+pop <- NLD_prov@data$population
+pop
+```
+
+```{r,cache=T}
+popmen <- NLD_prov@data$pop_men
+popmen
+```
+
+
+```{r,cache=T}
+prop <- popmen/pop
+prop
+```
+
+## Excursus: Barplot of proportion men
+
+Barplot of proportion of men
+
+```{r,cache=T}
+barplot(prop)
+```
+
+Barplot with color
+
+```{r,warnings=F,cache=T}
+barplot(prop,col="blue")
+```
+
+## Netherlands - proportion of men
+
+Add information to dataframe
+
+```{r,cache=T}
+NLD_prov@data$proportion <- prop
+```
+
+```{r,cache=T}
+qtm(NLD_prov, fill="proportion",fill.title="proportion") 
+```
+
+## Netherlands - proportion 65 plus
+
+Compute the proportion of people over 65
+
+```{r,cache=T}
+pop65plus <- NLD_prov@data$pop_65plus
+prop65plus <- pop65plus/pop
+NLD_prov@data$proportion65plus <- prop65plus
+```
+
+Plot this proportion
+```{r,cache=T}
+qtm(NLD_prov, fill="proportion",fill.title="proportion") 
+```
+
+
+## A data set about the municipalities in the Netheralnds (R-package `tmap`)
+
+```{r,cache=T}
+data(NLD_muni)
+```
+
+
+```{r,echo=F}
+NLD_df <- NLD_muni@data
+NLD_df[,6] <- round(NLD_df[,6])
+
+datatable(NLD_df[,1:6], class = 'cell-border stripe',rownames = FALSE,
+          options = list(pageLength = 10, autoWidth = TRUE)
+          )
+```
+
+
+## Population of municipalities in the Netherlands
+
+
+```{r,cache=T}
+qtm(NLD_muni, fill="population") 
+```
+
+
+
+## Two maps
+
+```{r}
+tm_shape(Europe) +
+    tm_fill(c("pop_est_dens", "gdp_cap_est"), 
+        title=c("Population density", "GDP per capita")) +
+tm_layout_Europe()
+```
+
+
+
+## Spatial data of global land cover
+
+```{r,echo=F}
+data(land)
+info_df <- land@data[1:100,]
+datatable(info_df)
+```
+
+
+## Map of global Land Cover
+
+```{r}
+data(land)
+data(World)
+tm_shape(land,  relative=FALSE) +
+    tm_raster("cover_cls", title="Global Land Cover")
+```
+
+
+## Spatial data of metropolitan areas
+
+```{r}
+data(metro)
+
+info_df <- metro@data[1:100,]
+datatable(info_df)
+```
+
+## Plot only one country
+
+```{r}
+tm_shape(Europe[Europe$name=="Austria", ]) +
+    tm_polygons()
+```
+
+
+## Global Land Cover
+
+```{r}
+data(land)
+data(World)
+pal8 <- c("#33A02C", "#B2DF8A", "#FDBF6F", "#1F78B4", "#999999", "#E31A1C", "#E6E6E6", "#A6CEE3")
+tm_shape(land, ylim = c(-88,88), relative=FALSE) +
+    tm_raster("cover_cls", palette = pal8, title="Global Land Cover", legend.hist=TRUE, legend.hist.z=0) +
+tm_shape(World) +
+    tm_borders() +
+tm_layout_World(inner.margins=0, 
+    legend.text.size=1,
+    legend.title.size=1.2,
+    legend.position = c("left","bottom"), 
+    legend.bg.color = "white", legend.bg.alpha=.2, 
+    legend.frame="gray50", 
+    legend.width=.2, legend.height=.6, 
+    legend.hist.height=.2, 
+    legend.hist.bg.color="gray60", legend.hist.bg.alpha=.5)
+```
+
 
 
 
@@ -70,14 +367,14 @@ tm_layout(legend.show = FALSE, title.position = c("center", "center"),
 
 ## The development version of `tmap`
 
-```{r,cache=T}
+```{r,cache=T,eval=F}
 devtools::install_github("mtennekes/tmap/pkg", ref = "45855fa")
 ```
 
 
 ## Download information
 
-```{r,cache=T}
+```{r,cache=T,eval=F}
 library(tmap)
 bb_schloss <- bb(q="Mannheim Schloss")
 buildings_schloss <- read_osm(bb_schloss, buildings=osm_poly("building"))
@@ -88,7 +385,7 @@ tm_shape(buildings_schloss$buildings, bbox=bb_schloss) +
 
 ## Download information - bigger area
 
-```{r,cache=T}
+```{r,cache=T,eval=F}
 bb_Mannheim <- bb(q="Mannheim")
 
 ```
