@@ -5,59 +5,121 @@ date: "07/17/2015"
 output: slidy_presentation
 ---
 
+```{r,echo=F}
+internet=F
+graph.path <- "../data/figure/"
+```
+
+
+## Hello world
+
+- Drawing maps has a long history
+- Fra Mauro map is the greatest memorial of medieval cartography
+
+```{r,echo=F}
+ab <- paste(graph.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
+```
+
+![pic](`r ab `)
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
+
 ## Migrant route to Germany
 
-![pic](http://ichef.bbci.co.uk/news/624/cpsprodpb/32F6/production/_85164031_migrant_journeys_turkey_to_germany_624.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://ichef.bbci.co.uk/news/624/cpsprodpb/32F6/production/_85164031_migrant_journeys_turkey_to_germany_624.png"  
+}else{
+  link1 <- paste(graph.path,"_85164031_migrant_journeys_turkey_to_germany_624.png",sep="")
+}
+```
+![pic](`r link1 `)
 
-[Overview of maps](http://www.lib.utexas.edu/maps/)
+- Used at BBC - get an overview of more maps like this [here](http://www.lib.utexas.edu/maps/)
 
 ## The road to Europe
 
-![pic](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg"  
+}else{
+  link1 <- paste(graph.path,"Migrant-Map-Website.jpg",sep="")
+}
+```
+![pic](`r link1 `)
 
+Source: [The independent](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
 
 ## GDP per capita
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(tmap)
 data(World)
 qtm(World, fill="income_grp",fill.title="Income group") 
 ```
 
+Data source: [World Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators)
+
 ## GDP in German federal states
 
 GDP in billion Euro
 
-![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/BIP2BLA.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/BIP2BLA.png"  
+}else{
+  link1 <- paste(graph.path,"BIP2BLA.png",sep="")
+}
+```
+![pic](`r link1 `)
 
-Source: [Wikipedia](https://de.wikipedia.org/wiki/Land_%28Deutschland%29)
+Data source: [Wikipedia](https://de.wikipedia.org/wiki/Land_%28Deutschland%29)
+
+Polygon source: Global Administrative Areas ([GADM](http://www.gadm.org/))
 
 ## Social index
 
 Proportion of social benefits recipients in Berlin
 
-![pic](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg"  
+}else{
+  link1 <- paste(graph.path,"5-format11.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [Tagesspiegel](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
 
 ## The spatial perspective...
+
+- ... is relevant to get an overview of current developments
 
 - ... is relevant to understand
 circumstances.
 
 - More spatial visualisations are possible with data from web 2.0 etc.
 
-
-
 ## Target / Motivation
 
 <strong>The target is to visualize <FONT COLOR="red"> social </FONT> aspects in maps.</strong>
 
-<a href="http://spatial.ly/2015/07/15minutemap/" target="_blank"><img src="http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg" width="240" height="180" border="10" /></a>
-<a href="https://www.mapbox.com/blog/osm-community-visualized/" target="_blank"><img src="https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg" width="240" height="180" border="10" /></a>
-<a href="https://uchicagoconsulting.wordpress.com/" target="_blank"><img src="https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309" width="240" height="180" border="10" /></a>
-
-<a href="http://blogs.casa.ucl.ac.uk/category/r/" target="_blank"><img src="http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif" width="240" height="180" border="10" /></a>
-<a href="http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/" target="_blank"><img src="http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg" width="240" height="180" border="10" /></a>
-<a href="http://www.pilod.nl/w/images/6/62/D9-fig4.jpg" target="_blank"><img src="http://www.pilod.nl/w/images/6/62/D9-fig4.jpg" width="240" height="180" border="10" /></a>
+```{r,echo=F}
+if(internet){
+a <- "<a href=\"http://spatial.ly/2015/07/15minutemap/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+  <a href=\"https://www.mapbox.com/blog/osm-community-visualized/\" target=\"_blank\"><img src=\"https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+    <a href=\"https://uchicagoconsulting.wordpress.com/\" target=\"_blank\"><img src=\"https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309\" width=\"240\" height=\"180\" border=\"10\" /></a>
+      
+      <a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif\" width=\"240\" height=\"180\" border=\"10\" /></a>
+        <a href=\"http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/\" target=\"_blank\"><img src=\"http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+          <a href=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" target=\"_blank\"><img src=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>"
+}else{
+  a <- paste(graph.path,"D9-fig4.jpg",sep="")
+}
+```
+  
+![pic](`r a `)
 
 More [examples](http://spatial.ly/blog/) 
 
@@ -65,7 +127,14 @@ More [examples](http://spatial.ly/blog/)
 
 ## A little quiz
 
-![pic](http://images.fastcompany.com/upload/4621770959_383261aebe_b.jpg)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://images.fastcompany.com/upload/4621770959_383261aebe_b.jpg"  
+}else{
+  link1 <- paste(graph.path,"4621770959_383261aebe_b.jpg",sep="")
+}
+```
+![pic](`r link1 `)
 
 ## A little quiz
 
@@ -73,15 +142,16 @@ More [examples](http://spatial.ly/blog/)
 - data from [flickr](https://www.flickr.com/) used
 - guess about picture taker's mode of transportation
 - time stamps and distance traveled between a user's pictures
+    + Black is walking (less than 7mph), 
+    + Red is bicycling or equivalent speed (less than 19mph), 
+    + Blue is motor vehicles on normal roads (less than 43mph); 
+    + Green is freeways or rapid transit. 
 
-Black is walking (less than 7mph), 
+## A little quiz
 
-Red is bicycling or equivalent speed (less than 19mph), 
+![pic](`r link1 `)
 
-Blue is motor vehicles on normal roads (less than 43mph); 
-
-Green is freeways or rapid transit. 
-
+Source: [Fast company](http://images.fastcompany.com/upload/4621770959_383261aebe_b.jpg)
 ## World Map Of Touristyness
 
 ![pic](http://s3.amazonaws.com/infobeautiful2/550_touristyness.jpg)
