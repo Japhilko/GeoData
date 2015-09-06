@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Spatial Visualisation | Introduction"
 author: "Jan-Philipp Kolb"
 date: "07/17/2015"
 output: slidy_presentation
@@ -13,16 +13,30 @@ graph.path <- "../data/figure/"
 
 ## Hello world
 
-- Drawing maps has a long history
-- Fra Mauro map is the greatest memorial of medieval cartography
-
 ```{r,echo=F}
 ab <- paste(graph.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
 ```
 
-![pic](`r ab `)
+<div class="columns-2">
+  ![pic](`r ab `)
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
+  - Drawing maps has a long history
+  - Fra Mauro map (1450) is the greatest memorial of medieval cartography
+  - Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
+</div>
+
+
+
+Detail of the Fra Mauro Map describing the construction of the junks that navigate in the Indian Ocean.
+
+```{r,echo=F}
+if(internet){
+  link1 <- "https://en.wikipedia.org/wiki/Fra_Mauro_map#/media/File:FraMauroChineseShip.jpg"  
+}else{
+  link1 <- paste(graph.path,"FraMauroChineseShip.jpg",sep="")
+}
+```
+![pic](`r link1 `)
 
 ## Migrant route to Germany
 
@@ -49,6 +63,10 @@ if(internet){
 ![pic](`r link1 `)
 
 Source: [The independent](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
+
+- Data on the conflict in Syria - [UNHCR](http://data.unhcr.org/syrianrefugees/regional.php)
+
+- Analysis on [Syrian Refugee Settlement Clinic Locations](http://www.r-bloggers.com/syrian-refugee-settlement-clinic-locations/) with R
 
 ## GDP per capita
 
@@ -101,29 +119,6 @@ circumstances.
 
 - More spatial visualisations are possible with data from web 2.0 etc.
 
-## Target / Motivation
-
-<strong>The target is to visualize <FONT COLOR="red"> social </FONT> aspects in maps.</strong>
-
-```{r,echo=F}
-if(internet){
-a <- "<a href=\"http://spatial.ly/2015/07/15minutemap/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
-  <a href=\"https://www.mapbox.com/blog/osm-community-visualized/\" target=\"_blank\"><img src=\"https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
-    <a href=\"https://uchicagoconsulting.wordpress.com/\" target=\"_blank\"><img src=\"https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309\" width=\"240\" height=\"180\" border=\"10\" /></a>
-      
-      <a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif\" width=\"240\" height=\"180\" border=\"10\" /></a>
-        <a href=\"http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/\" target=\"_blank\"><img src=\"http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
-          <a href=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" target=\"_blank\"><img src=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>"
-}else{
-  a <- paste(graph.path,"D9-fig4.jpg",sep="")
-}
-```
-  
-![pic](`r a `)
-
-More [examples](http://spatial.ly/blog/) 
-
-
 
 ## A little quiz
 
@@ -151,15 +146,60 @@ if(internet){
 
 ![pic](`r link1 `)
 
-Source: [Fast company](http://images.fastcompany.com/upload/4621770959_383261aebe_b.jpg)
-## World Map Of Touristyness
+  Source: [Eric Fischer](http://www.fastcompany.com/1652550/infographic-day-using-flickr-geotags-map-worlds-cities-updated)
 
-![pic](http://s3.amazonaws.com/infobeautiful2/550_touristyness.jpg)
+- [The geotaggers world atlas](https://www.flickr.com/photos/walkingsf/sets/72157623971287575/)
 
+## World Map Of Touristiness
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://s3.amazonaws.com/infobeautiful2/550_touristyness.jpg"  
+}else{
+  link1 <- paste(graph.path,"550_touristyness.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [Touristiness](http://www.bluemoon.ee/~ahti/touristiness-map/)
+
+Based on tourist pictures uploaded on [panoramio](http://www.panoramio.com/)
 
 ## Tracking Taxis Across Manhattan
 
-![pic](http://images.fastcompany.com/upload/Screen%20shot%202010-04-05%20at%209.05.50%20AM.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://images.fastcompany.com/upload/Screen%20shot%202010-04-05%20at%209.05.50%20AM.png"  
+}else{
+  link1 <- paste(graph.path,"Screen%20shot%202010-04-05%20at%209.05.50%20AM.png",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [The New York Times](http://www.fastcompany.com/1607065/infographic-day-tracking-taxis-across-manhattan)
+
+## Target / Motivation
+
+<strong>The target is to visualize <FONT COLOR="red"> social </FONT> aspects in maps.</strong>
+
+```{r,echo=F}
+if(internet){
+a <- "<a href=\"http://spatial.ly/2015/07/15minutemap/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+  <a href=\"https://www.mapbox.com/blog/osm-community-visualized/\" target=\"_blank\"><img src=\"https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+    <a href=\"https://uchicagoconsulting.wordpress.com/\" target=\"_blank\"><img src=\"https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309\" width=\"240\" height=\"180\" border=\"10\" /></a>
+      
+      <a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif\" width=\"240\" height=\"180\" border=\"10\" /></a>
+        <a href=\"http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/\" target=\"_blank\"><img src=\"http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+          <a href=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" target=\"_blank\"><img src=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>"
+}else{
+  a <- paste(graph.path,"D9-fig4.jpg",sep="")
+}
+```
+  
+![pic](`r a `)
+
+More [examples](http://spatial.ly/blog/) 
+
 
 ## Spatial? - Motivation
 
@@ -197,11 +237,13 @@ Every participant should present his/her own maps.
 library(ggmap)
 library(geosmdata2)
 places <- c("Sippersfeld","Trier, Universitaetsring 15","Lyon, Universite Jean Moulin Lyon 3","Gesis Mannheim")
-descr <- c("Herkunft","Studium, Diplom und Doktor","Erasmus","Aktueller Arbeitgeber")
+descr <- c("Origin","Study, Diploma and PhD","Erasmus","Current employer")
 
 coords <- data.frame(places,lat=NA,lon=NA)
+if(internet){
 for (i in 1: length(places)){
   coords[i,2:3] <- geocode_osm(places[i])  
+}
 }
 ```
 
@@ -209,19 +251,43 @@ for (i in 1: length(places)){
 ```{r,warning=F,message=F,echo=F}
 library(magrittr)
 library(leaflet)
+if(internet){
 m <- leaflet() %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=coords$lon, lat=coords$lat, popup=coords$descr)
-m  # Print the map
+  addMarkers(lng=coords$lon, lat=coords$lat, popup=coords$descr)  # Print the map
+  a <- paste(graph.path,"Places.png",sep="")
+}else{
+    a <- paste(graph.path,"Places.png",sep="")
+}
 ```
+
+![pic](`r a `)
 
 ## University of Trier
 
-![pic](https://www.uni-trier.de/fileadmin/_processed_/csm_campus_01_dbe11f5d99.gif)
+```{r,echo=F}
+if(internet){
+  link1 <- "https://www.uni-trier.de/fileadmin/_processed_/csm_campus_01_dbe11f5d99.gif"  
+}else{
+  link1 <- paste(graph.path,"csm_campus_01_dbe11f5d99.gif",sep="")
+}
+```
+![pic](`r link1 `)
 
-## Univerity Lyon III
+Source: [Website with city maps](https://www.uni-trier.de/fileadmin/_processed_/csm_campus_01_dbe11f5d99.gif)
 
-![pic](http://www.orangesmile.com/common/img_city_maps_560/lyon-map-0.jpg)
+## Erasmus - Univerity Lyon III
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.orangesmile.com/common/img_city_maps_560/lyon-map-0.jpg"  
+}else{
+  link1 <- paste(graph.path,"lyon-map-0.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [orangesmile](http://www.orangesmile.com/common/img_city_maps_560/lyon-map-0.jpg)
 
 ## Organisation Gesis
 
@@ -251,6 +317,7 @@ GESIS offers:
 - Research based services
 
 ## Tasks GESIS-Team Statistics:
+
 Consulting and research on ...
 
 - Planning of survey designs
@@ -265,17 +332,46 @@ telephone-assisted surveys
 
 ## Tools and services
 
-![Rpic](http://developer.r-project.org/Logo/Rlogo-5.jpg)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://developer.r-project.org/Logo/Rlogo-5.jpg"  
+}else{
+  link1 <- paste(graph.path,"Rlogo-5.jpg",sep="")
+}
+```
+![pic](`r link1 `)
 
 
-![pic21](http://www.webmasterpro.de/portal/news/2010/11/25/microsoft-arbeitet-mit-openstreetmap-zusammen.html/image/800px-OSM_Logo.svg.png/scale/250x400/)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.webmasterpro.de/portal/news/2010/11/25/microsoft-arbeitet-mit-openstreetmap-zusammen.html/image/800px-OSM_Logo.svg.png/scale/250x400/"  
+}else{
+  link1 <- paste(graph.path,"Logo_OSM.png",sep="")
+}
+```
+![pic21](`r link1 `)
 
-![pic](http://wiki.openstreetmap.org/w/images/thumb/b/b5/Overpass_API_logo.svg/400px-Overpass_API_logo.svg.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://wiki.openstreetmap.org/w/images/thumb/b/b5/Overpass_API_logo.svg/400px-Overpass_API_logo.svg.png"  
+}else{
+  link1 <- paste(graph.path,"400px-Overpass_API_logo.svg.png",sep="")
+}
+```
+![pic21](`r link1 `)
 
-![pic3](http://st1.bgr.in/wp-content/uploads/2014/06/google-maps-logo.jpg)
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://st1.bgr.in/wp-content/uploads/2014/06/google-maps-logo.jpg"  
+}else{
+  link1 <- paste(graph.path,"google-maps-logo.jpg",sep="")
+}
+```
+![pic21](`r link1 `)
 
 
-## Why use R
+## Why use R - It's open source
 
 - It's free
 - It's open source
@@ -287,29 +383,61 @@ telephone-assisted surveys
 Source: <http://www.r-bloggers.com/why-use-r/>
 
 
-## Why use R
+## Why use R - many specific packages
 
 A big number of (very specific) packages:
 
-![picture](http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg)
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg"  
+}else{
+  link1 <- paste(graph.path,"top-20-r-packages-downloads.jpg",sep="")
+}
+```
+![pic21](`r link1 `)
 
 [Overview of available packages on CRAN](http://www.r-pkg.org/)
 
 
-## Why use R
+## Why use R - overview of reasons
 
-![alt text](http://www.edureka.co/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.edureka.co/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png"  
+}else{
+  link1 <- paste(graph.path,"bar-learn-r-img11.png",sep="")
+}
+```
+![pic21](`r link1 `)
 
 
-## Why use R
+## Why use R - interfaces
 
 - Interfaces with other programs, for example [Javascript](http://www.w3schools.com/js/), [ArcGis](http://uwm.edu/software/arcgis/), [GDAL](http://www.gdal.org/) and others... 
 
-![pi](https://jresponse.net/blog/wp-content/uploads/2015/04/javascript-logo-png-200x200.png) 
-![p](http://uwm.edu/software/wp-content/uploads/sites/76/2014/06/ESRI_ARCMAP_transparente.png) 
+```{r,echo=F}
+if(internet){
+  link1 <- "https://jresponse.net/blog/wp-content/uploads/2015/04/javascript-logo-png-200x200.png"  
+}else{
+  link1 <- paste(graph.path,"javascript-logo-png-200x200.png",sep="")
+}
+```
+
+```{r,echo=F}
+if(internet){
+  link2 <- "http://uwm.edu/software/wp-content/uploads/sites/76/2014/06/ESRI_ARCMAP_transparente.png"  
+}else{
+  link2 <- paste(graph.path,"ESRI_ARCMAP_transparente.png",sep="")
+}
+```
 
 
-## Why use R
+![pic21](`r link1 `)
+![p](`r link2 `) 
+
+
+## Why use R - GIS
 
 R can be used as geographic information systems (GIS)
 
@@ -324,7 +452,7 @@ R can be used as geographic information systems (GIS)
 - [giswerk](http://giswerk.org/)
 
 
-## Why use R
+## Why use R - visualisation
 
 Because it is possible to create nice graphics:
 
@@ -344,7 +472,14 @@ Because it is possible to create nice graphics:
 
 ## [Github](https://github.com/) stack
 
-![alt text](http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png"  
+}else{
+  link1 <- paste(graph.path,"tumblr_mzr6zsI3TK1tqzc7ko1_1280.png",sep="")
+}
+```
+![pic21](`r link1 `)
 
 
 ## Github page
@@ -374,7 +509,14 @@ I will try to keep it simple and provide lots of resources.
 
 ## Basic R
 
-![BasicR](http://erpinr.files.wordpress.com/2014/04/rsession.png%3Fw%3D620%26h%3D500)
+```{r,echo=F}
+if(internet){
+  link1 <- "https://erpinr.files.wordpress.com/2014/04/rsession.png%3Fw%3D620%26h%3D500"  
+}else{
+  link1 <- paste(graph.path,"rsession.png",sep="")
+}
+```
+![pic21](`r link1 `)
 
 ## Download and install R
 
@@ -387,6 +529,13 @@ I will try to keep it simple and provide lots of resources.
 
 ## Rstudio 
 
-![Rstudio](http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png)
+```{r,echo=F}
+if(internet){
+  link1 <- "http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png"  
+}else{
+  link1 <- paste(graph.path,"RStudio-Screenshot.png",sep="")
+}
+```
+![pic21](`r link1 `)
 
-
+Source: [R-programming](http://rprogramming.net/)

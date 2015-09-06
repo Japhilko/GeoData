@@ -155,7 +155,11 @@ openflights/data/routes.dat"
 route <- read.csv(link2, header = F)
 ```
 
+## Data on harbours
 
+- [Natural earth data](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/)
+
+- [Make maps with that data](http://www.r-bloggers.com/minimalist-maps/)
 
 ## Other data sources
 
