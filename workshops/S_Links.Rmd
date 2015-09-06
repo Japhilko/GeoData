@@ -156,3 +156,23 @@ library(RCurl)
 ## Further maps
 
 - [Election results](https://github.com/offensivepolitics/chicago-mayor-2011)
+
+- [point-in-polygon analysis](https://community.dev.hp.com/t5/Vertica-Blog/Using-Geospatial-Data-to-Perform-a-Spatial-Analysis-with-HP/ba-p/229735)
+
+- [Presentation - spatial](http://de.slideshare.net/ruoccoma/big-datacourse)
+
+- [R ggmap examples: CloudMade Maps](http://statmatt.com/r-ggmap-examples-cloudmade-maps/)
+ and [spatial maps](http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/) and [data visualisation](http://statmatt.com/data-visualization/)
+ 
+http://stackoverflow.com/questions/22387624/ggplot2-with-ggmap-odd-shaped-polygon-r
+
+http://www.r-bloggers.com/visualising-crime-hotspots-in-england-and-wales-using-ggmap-2/
+
+http://blogs.casa.ucl.ac.uk/category/r-spatial-tips/
+
+http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
+  
+
+- [wine tasting map](http://www.r-bloggers.com/a-napa-valley-wine-tasting-map-made-with-r-and-ggmap/)
+
+- [rCrimemap](https://github.com/woobe/rCrimemap)
