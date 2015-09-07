@@ -2,12 +2,18 @@
 title: "Spatial Visualisation | Introduction"
 author: "Jan-Philipp Kolb"
 date: "07/17/2015"
-output: slidy_presentation
+output: revealjs::revealjs_presentation
 ---
 
 ```{r,echo=F}
-internet=F
+internet=T
 graph.path <- "../data/figure/"
+
+if("revealjs" %in% rownames(installed.packages()) == FALSE){
+  devtools::install_github("jjallaire/revealjs")  
+}
+
+github.path <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/"
 ```
 
 # Motivation
@@ -15,34 +21,18 @@ graph.path <- "../data/figure/"
 ## Hello world
 
 ```{r,echo=F}
-ab <- paste(graph.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
+if(internet){
+  ab1 <- paste(github.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
+}else{
+  ab1<- paste(graph.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
+}
 ```
 
-<div class="columns-2">
-  ![pic](`r ab `)
+![pic](`r ab1 `) 
 
   - Drawing maps has a long history
   - Fra Mauro map (1450) is the greatest memorial of medieval cartography
   - Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-Detail of the Fra Mauro Map describing the construction of the junks that navigate in the Indian Ocean.
-
-```{r,echo=F}
-if(internet){
-  link1 <- "https://en.wikipedia.org/wiki/Fra_Mauro_map#/media/File:FraMauroChineseShip.jpg"  
-}else{
-  link1 <- paste(graph.path,"FraMauroChineseShip.jpg",sep="")
-}
-```
-![pic](`r link1 `)
 
 ## Migrant route to Germany
 
@@ -66,9 +56,11 @@ if(internet){
   link1 <- paste(graph.path,"Migrant-Map-Website.jpg",sep="")
 }
 ```
-![pic](`r link1 `)
+Source: [The Independent](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
 
-Source: [The independent](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
+![pic](`r link1 `) 
+
+## 
 
 - Data on the conflict in Syria - [UNHCR](http://data.unhcr.org/syrianrefugees/regional.php)
 
@@ -76,13 +68,13 @@ Source: [The independent](http://www.independent.co.uk/incoming/article10471117.
 
 ## GDP per capita
 
+Data source: [World Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators)
+
 ```{r,echo=F,warning=F}
 library(tmap)
 data(World)
 qtm(World, fill="income_grp",fill.title="Income group") 
 ```
-
-Data source: [World Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators)
 
 ## GDP in German federal states
 
@@ -97,9 +89,14 @@ if(internet){
 ```
 ![pic](`r link1 `)
 
-Data source: [Wikipedia](https://de.wikipedia.org/wiki/Land_%28Deutschland%29)
 
-Polygon source: Global Administrative Areas ([GADM](http://www.gadm.org/))
+## 
+
+- Map produced with R-package [sp](https://cran.r-project.org/web/packages/sp/index.html)
+
+- Data source: [Wikipedia](https://de.wikipedia.org/wiki/Land_%28Deutschland%29)
+
+- Polygon source: Global Administrative Areas ([GADM](http://www.gadm.org/))
 
 ## More detailed - more interesting?
 
@@ -119,12 +116,14 @@ Source: [Tagesspiegel](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1
 ## Is the necessary data available?
 
 ```{r,echo=F}
-link2 <- paste(graph.path,"Zensus_Mannheim2.png",sep="")
+if(internet){
+  link1 <- paste(github.path,"Zensus_Mannheim2.png" ,sep="")
+}else{
+  link1 <- paste(graph.path,"Zensus_Mannheim2.png",sep="")
+}
 ```
 
-![pic](`r link2 `)
-
-Source: [Census Atlas](https://atlas.zensus2011.de/)
+![pic](`r link1 `)[Source](https://atlas.zensus2011.de/)
 
 ## The spatial perspective...
 
@@ -150,7 +149,7 @@ if(internet){
 ```
 ![pic](`r link1 `)
 
-## A little quiz
+## Background info
 
 - maps of photographic/traffic activity around the world
 - data from [flickr](https://www.flickr.com/) used
@@ -161,7 +160,7 @@ if(internet){
     + Blue is motor vehicles on normal roads (less than 43mph); 
     + Green is freeways or rapid transit. 
 
-## A little quiz
+## New York
 
 ![pic](`r link1 `)
 
@@ -205,17 +204,18 @@ Source: [The New York Times](http://www.fastcompany.com/1607065/infographic-day-
 if(internet){
 a <- "<a href=\"http://spatial.ly/2015/07/15minutemap/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
   <a href=\"https://www.mapbox.com/blog/osm-community-visualized/\" target=\"_blank\"><img src=\"https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
-    <a href=\"https://uchicagoconsulting.wordpress.com/\" target=\"_blank\"><img src=\"https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309\" width=\"240\" height=\"180\" border=\"10\" /></a>
+    <a href=\"https://uchicagoconsulting.wordpress.com/\" target=\"_blank\"><img src=\"https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309\" width=\"240\" height=\"180\" border=\"10\" /></a>"
       
-      <a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif\" width=\"240\" height=\"180\" border=\"10\" /></a>
+b<-"<a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif\" width=\"240\" height=\"180\" border=\"10\" /></a>
         <a href=\"http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/\" target=\"_blank\"><img src=\"http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
           <a href=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" target=\"_blank\"><img src=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>"
 }else{
-  a <- paste(graph.path,"D9-fig4.jpg",sep="")
+  a <- paste("![pic](",graph.path,"D9-fig4.jpg)",sep="")
+  b <- paste("![pic](",graph.path,"WhiteNoise.PNG)",sep="")
 }
 ```
   
-![pic](`r a `)
+`r a ` `r b `
 
 More [examples](http://spatial.ly/blog/) 
 
@@ -253,6 +253,8 @@ Every participant should present his/her own maps.
 - Presentation of toolbox (R, Google API, OpenStreetMap etc.)
 - Learning by doing is very important
 
+# Background
+
 ## Personal information
 
 ```{r,cache=T,echo=F,message=F}
@@ -277,7 +279,8 @@ if(internet){
 m <- leaflet() %>%
   addTiles() %>%  # Add default OpenStreetMap map tiles
   addMarkers(lng=coords$lon, lat=coords$lat, popup=coords$descr)  # Print the map
-  a <- paste(graph.path,"Places.png",sep="")
+m
+  a <- paste(github.path,"Places.png",sep="")
 }else{
     a <- paste(graph.path,"Places.png",sep="")
 }
@@ -352,6 +355,9 @@ telephone-assisted surveys
 - What are you studying?
 - What are your main research interests?
 
+
+# Tools for this course
+
 ## Tools and services
 
 ```{r,echo=F}
@@ -392,6 +398,8 @@ if(internet){
 ```
 ![pic21](`r link1 `)
 
+
+# Why use R
 
 ## Why use R - It's open source
 
@@ -504,6 +512,8 @@ if(internet){
 ![pic21](`r link1 `)
 
 
+# Using Github
+
 ## Github page
 
 - All relevant resources for this course will be available at:
@@ -513,6 +523,9 @@ if(internet){
 If you are interested in what is behind the scenes:
 
 - [Introduction to Github](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1)
+
+
+# First steps in R
 
 ## How to learn R
 
@@ -558,6 +571,4 @@ if(internet){
   link1 <- paste(graph.path,"RStudio-Screenshot.png",sep="")
 }
 ```
-![pic21](`r link1 `)
-
-Source: [R-programming](http://rprogramming.net/)
+![pic21](`r link1 `) Source: [R-programming](http://rprogramming.net/)
