@@ -10,6 +10,7 @@ internet=F
 graph.path <- "../data/figure/"
 ```
 
+# Motivation
 
 ## Hello world
 
@@ -25,7 +26,12 @@ ab <- paste(graph.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
   - Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
 </div>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 Detail of the Fra Mauro Map describing the construction of the junks that navigate in the Indian Ocean.
 
@@ -95,9 +101,9 @@ Data source: [Wikipedia](https://de.wikipedia.org/wiki/Land_%28Deutschland%29)
 
 Polygon source: Global Administrative Areas ([GADM](http://www.gadm.org/))
 
-## Social index
+## More detailed - more interesting?
 
-Proportion of social benefits recipients in Berlin
+Social index - Proportion of social benefits recipients in Berlin
 
 ```{r,echo=F}
 if(internet){
@@ -110,6 +116,16 @@ if(internet){
 
 Source: [Tagesspiegel](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
 
+## Is the necessary data available?
+
+```{r,echo=F}
+link2 <- paste(graph.path,"Zensus_Mannheim2.png",sep="")
+```
+
+![pic](`r link2 `)
+
+Source: [Census Atlas](https://atlas.zensus2011.de/)
+
 ## The spatial perspective...
 
 - ... is relevant to get an overview of current developments
@@ -117,10 +133,13 @@ Source: [Tagesspiegel](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1
 - ... is relevant to understand
 circumstances.
 
-- More spatial visualisations are possible with data from web 2.0 etc.
+### But how to get the adequate data?
+
+* Often the necessary data is not available
+* More spatial visualisations are possible with data from web 2.0. If we use Application Programming Interface (API) 
 
 
-## A little quiz
+## A little quiz - which town is it?
 
 ```{r,echo=F}
 if(internet){
@@ -211,6 +230,9 @@ More [examples](http://spatial.ly/blog/)
 
 
 [Examples](https://www.flickr.com/groups/qgis/pool)
+
+# Organisation
+
 
 ## Targets
 
