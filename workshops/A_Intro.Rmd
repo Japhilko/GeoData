@@ -1,12 +1,17 @@
 ---
-title: "Spatial Visualisation | Introduction"
+title: "Hello world"
 author: "Jan-Philipp Kolb"
 date: "07/17/2015"
-output: revealjs::revealjs_presentation
+output:
+  revealjs::revealjs_presentation:
+    theme: beige
+    transition: fade
+    highlight: pygments
+    center: true
 ---
 
 ```{r,echo=F}
-internet=T
+internet=F
 graph.path <- "../data/figure/"
 
 if("revealjs" %in% rownames(installed.packages()) == FALSE){
@@ -18,7 +23,9 @@ github.path <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/f
 
 # Motivation
 
-## Hello world
+## 
+
+### Fra Mauro Map
 
 ```{r,echo=F}
 if(internet){
@@ -34,7 +41,9 @@ if(internet){
   - Fra Mauro map (1450) is the greatest memorial of medieval cartography
   - Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
 
-## Migrant route to Germany
+## 
+
+### Migrant route to Germany
 
 ```{r,echo=F}
 if(internet){
@@ -47,7 +56,9 @@ if(internet){
 
 - Used at BBC - get an overview of more maps like this [here](http://www.lib.utexas.edu/maps/)
 
-## The road to Europe
+## 
+
+### The road to Europe
 
 ```{r,echo=F}
 if(internet){
@@ -66,7 +77,9 @@ Source: [The Independent](http://www.independent.co.uk/incoming/article10471117.
 
 - Analysis on [Syrian Refugee Settlement Clinic Locations](http://www.r-bloggers.com/syrian-refugee-settlement-clinic-locations/) with R
 
-## GDP per capita
+## 
+
+### GDP per capita
 
 Data source: [World Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators)
 
@@ -76,7 +89,9 @@ data(World)
 qtm(World, fill="income_grp",fill.title="Income group") 
 ```
 
-## GDP in German federal states
+## 
+
+### GDP in German federal states
 
 GDP in billion Euro
 
@@ -98,7 +113,9 @@ if(internet){
 
 - Polygon source: Global Administrative Areas ([GADM](http://www.gadm.org/))
 
-## More detailed - more interesting?
+## 
+
+### More detailed - more interesting?
 
 Social index - Proportion of social benefits recipients in Berlin
 
@@ -113,7 +130,9 @@ if(internet){
 
 Source: [Tagesspiegel](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
 
-## Is the necessary data available?
+## 
+
+### Is the necessary data available?
 
 ```{r,echo=F}
 if(internet){
@@ -125,7 +144,9 @@ if(internet){
 
 ![pic](`r link1 `)[Source](https://atlas.zensus2011.de/)
 
-## The spatial perspective...
+## 
+
+### The spatial perspective...
 
 - ... is relevant to get an overview of current developments
 
@@ -138,7 +159,9 @@ circumstances.
 * More spatial visualisations are possible with data from web 2.0. If we use Application Programming Interface (API) 
 
 
-## A little quiz - which town is it?
+## 
+
+### A little quiz - which town is it?
 
 ```{r,echo=F}
 if(internet){
@@ -149,7 +172,9 @@ if(internet){
 ```
 ![pic](`r link1 `)
 
-## Background info
+## 
+
+### Background info
 
 - maps of photographic/traffic activity around the world
 - data from [flickr](https://www.flickr.com/) used
@@ -160,7 +185,9 @@ if(internet){
     + Blue is motor vehicles on normal roads (less than 43mph); 
     + Green is freeways or rapid transit. 
 
-## New York
+## 
+
+### New York
 
 ![pic](`r link1 `)
 
@@ -168,7 +195,9 @@ if(internet){
 
 - [The geotaggers world atlas](https://www.flickr.com/photos/walkingsf/sets/72157623971287575/)
 
-## World Map Of Touristiness
+## 
+
+### World Map Of Touristiness
 
 ```{r,echo=F}
 if(internet){
@@ -183,7 +212,9 @@ Source: [Touristiness](http://www.bluemoon.ee/~ahti/touristiness-map/)
 
 Based on tourist pictures uploaded on [panoramio](http://www.panoramio.com/)
 
-## Tracking Taxis Across Manhattan
+## 
+
+### Tracking Taxis Across Manhattan
 
 ```{r,echo=F}
 if(internet){
@@ -196,7 +227,9 @@ if(internet){
 
 Source: [The New York Times](http://www.fastcompany.com/1607065/infographic-day-tracking-taxis-across-manhattan)
 
-## Target / Motivation
+## 
+
+### Target / Motivation
 
 <strong>The target is to visualize <FONT COLOR="red"> social </FONT> aspects in maps.</strong>
 
@@ -220,7 +253,9 @@ b<-"<a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img s
 More [examples](http://spatial.ly/blog/) 
 
 
-## Spatial? - Motivation
+## 
+
+### Spatial? - Motivation
 
 - Massive amounts of data ... and growing!
 - Often freely accessible on the web (e.g. through APIs)
@@ -234,7 +269,9 @@ More [examples](http://spatial.ly/blog/)
 # Organisation
 
 
-## Targets
+## 
+
+### Targets
 
 I want to....
 
@@ -246,7 +283,9 @@ and applications.
 - ... tell you where you can find data.
 
 
-## Targets 
+## 
+
+### Targets 
 
 Every participant should present his/her own maps.
 
@@ -255,9 +294,12 @@ Every participant should present his/her own maps.
 
 # Background
 
-## Personal information
+## 
 
-```{r,cache=T,echo=F,message=F}
+### Personal information
+
+```{r,cache=T,echo=F,message=F,warning=F}
+if(internet){
 library(ggmap)
 library(geosmdata2)
 places <- c("Sippersfeld","Trier, Universitaetsring 15","Lyon, Universite Jean Moulin Lyon 3","Gesis Mannheim")
@@ -267,6 +309,7 @@ coords <- data.frame(places,lat=NA,lon=NA)
 if(internet){
 for (i in 1: length(places)){
   coords[i,2:3] <- geocode_osm(places[i])  
+}
 }
 }
 ```
@@ -288,7 +331,9 @@ m
 
 ![pic](`r a `)
 
-## University of Trier
+## 
+
+### University of Trier
 
 ```{r,echo=F}
 if(internet){
@@ -301,7 +346,9 @@ if(internet){
 
 Source: [Website with city maps](https://www.uni-trier.de/fileadmin/_processed_/csm_campus_01_dbe11f5d99.gif)
 
-## Erasmus - Univerity Lyon III
+## 
+
+### Erasmus - Univerity Lyon III
 
 ```{r,echo=F}
 if(internet){
@@ -314,7 +361,9 @@ if(internet){
 
 Source: [orangesmile](http://www.orangesmile.com/common/img_city_maps_560/lyon-map-0.jpg)
 
-## Organisation Gesis
+## 
+
+### Organisation Gesis
 
 Five departments
 - Survey Design and Methodology
@@ -327,7 +376,9 @@ Five departments
 
 - Knowledge Technologies for the Social Sciences
 
-## Gesis
+## 
+
+### Gesis
 
 GESIS is:
 
@@ -341,7 +392,9 @@ GESIS offers:
 
 - Research based services
 
-## Tasks GESIS-Team Statistics:
+## 
+
+### Tasks GESIS-Team Statistics:
 
 Consulting and research on ...
 
@@ -350,7 +403,9 @@ Consulting and research on ...
 telephone-assisted surveys
 - Data analysis and visualisation
 
-## Your background?
+## 
+
+### Your background?
 - Where do you come from?
 - What are you studying?
 - What are your main research interests?
@@ -358,7 +413,9 @@ telephone-assisted surveys
 
 # Tools for this course
 
-## Tools and services
+## 
+
+### Tools and services
 
 ```{r,echo=F}
 if(internet){
@@ -401,7 +458,9 @@ if(internet){
 
 # Why use R
 
-## Why use R - It's open source
+## 
+
+### Why use R - It's open source
 
 - It's free
 - It's open source
@@ -413,7 +472,9 @@ if(internet){
 Source: <http://www.r-bloggers.com/why-use-r/>
 
 
-## Why use R - many specific packages
+## 
+
+### Why use R - many specific packages
 
 A big number of (very specific) packages:
 
@@ -430,7 +491,9 @@ if(internet){
 [Overview of available packages on CRAN](http://www.r-pkg.org/)
 
 
-## Why use R - overview of reasons
+## 
+
+### Why use R - overview of reasons
 
 ```{r,echo=F}
 if(internet){
@@ -442,7 +505,9 @@ if(internet){
 ![pic21](`r link1 `)
 
 
-## Why use R - interfaces
+## 
+
+### Why use R - interfaces
 
 - Interfaces with other programs, for example [Javascript](http://www.w3schools.com/js/), [ArcGis](http://uwm.edu/software/arcgis/), [GDAL](http://www.gdal.org/) and others... 
 
@@ -467,7 +532,9 @@ if(internet){
 ![p](`r link2 `) 
 
 
-## Why use R - GIS
+## 
+
+### Why use R - GIS
 
 R can be used as geographic information systems (GIS)
 
@@ -482,7 +549,9 @@ R can be used as geographic information systems (GIS)
 - [giswerk](http://giswerk.org/)
 
 
-## Why use R - visualisation
+## 
+
+### Why use R - visualisation
 
 Because it is possible to create nice graphics:
 
@@ -500,7 +569,9 @@ Because it is possible to create nice graphics:
 
 - [Interview Hadley Wickham - R-Project Data Visualization Guru](http://decisionstats.com/2010/01/12/interview-hadley-wickham-r-project-data-visualization-guru/)
 
-## [Github](https://github.com/) stack
+## 
+
+### [Github](https://github.com/) stack
 
 ```{r,echo=F}
 if(internet){
@@ -514,7 +585,9 @@ if(internet){
 
 # Using Github
 
-## Github page
+## 
+
+### Github page
 
 - All relevant resources for this course will be available at:
 
@@ -527,7 +600,9 @@ If you are interested in what is behind the scenes:
 
 # First steps in R
 
-## How to learn R
+## 
+
+### How to learn R
 
 - [Manuals on the R-project webpage](http://cran.r-project.org/manuals.html)
 
@@ -542,7 +617,9 @@ I will try to keep it simple and provide lots of resources.
 
 
 
-## Basic R
+## 
+
+### Basic R
 
 ```{r,echo=F}
 if(internet){
@@ -553,7 +630,9 @@ if(internet){
 ```
 ![pic21](`r link1 `)
 
-## Download and install R
+## 
+
+### Download and install R
 
 - Click [here](http://mirrors.softliste.de/cran/bin/windows/base/R-3.2.2-win.exe) to download R for Windows.
 
@@ -562,7 +641,9 @@ if(internet){
 <http://mirrors.softliste.de/cran/>
 
 
-## Rstudio 
+## 
+
+### Rstudio 
 
 ```{r,echo=F}
 if(internet){
