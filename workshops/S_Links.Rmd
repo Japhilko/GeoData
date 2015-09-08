@@ -176,3 +176,5 @@ http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
 - [wine tasting map](http://www.r-bloggers.com/a-napa-valley-wine-tasting-map-made-with-r-and-ggmap/)
 
 - [rCrimemap](https://github.com/woobe/rCrimemap)
+
+- [Zeit Deutschlandkarte](http://www.zeit.de/serie/deutschlandkarte)
