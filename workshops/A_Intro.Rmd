@@ -1,11 +1,11 @@
 ---
-title: "Hello world"
+title: "Spatial visualisation"
 author: "Jan-Philipp Kolb"
-date: "07/17/2015"
+date: "Tue Sep 08 20:58:58 2015"
 output:
   revealjs::revealjs_presentation:
     theme: beige
-    transition: fade
+    transition: convex
     highlight: pygments
     center: true
 ---
@@ -21,7 +21,7 @@ if("revealjs" %in% rownames(installed.packages()) == FALSE){
 github.path <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/"
 ```
 
-# Motivation
+# Hello world
 
 ## 
 
@@ -75,7 +75,10 @@ Source: [The Independent](http://www.independent.co.uk/incoming/article10471117.
 
 - Data on the conflict in Syria - [UNHCR](http://data.unhcr.org/syrianrefugees/regional.php)
 
+
 - Analysis on [Syrian Refugee Settlement Clinic Locations](http://www.r-bloggers.com/syrian-refugee-settlement-clinic-locations/) with R
+
+# Motivation
 
 ## 
 
@@ -93,7 +96,6 @@ qtm(World, fill="income_grp",fill.title="Income group")
 
 ### GDP in German federal states
 
-GDP in billion Euro
 
 ```{r,echo=F}
 if(internet){
@@ -106,6 +108,8 @@ if(internet){
 
 
 ## 
+
+### GDP in German federal states
 
 - Map produced with R-package [sp](https://cran.r-project.org/web/packages/sp/index.html)
 
@@ -155,8 +159,8 @@ circumstances.
 
 ### But how to get the adequate data?
 
-* Often the necessary data is not available
-* More spatial visualisations are possible with data from web 2.0. If we use Application Programming Interface (API) 
+* Necessary data is often not available
+* More spatial visualisations are possible with web-data via  Application Programming Interface (API) 
 
 
 ## 
@@ -176,10 +180,10 @@ if(internet){
 
 ### Background info
 
-- maps of photographic/traffic activity around the world
-- data from [flickr](https://www.flickr.com/) used
-- guess about picture taker's mode of transportation
-- time stamps and distance traveled between a user's pictures
+- Map of photographic/traffic activity
+- Data from [flickr](https://www.flickr.com/) used
+- Guess about picture taker's mode of transportation
+- Time stamps and distance traveled between a user's pictures
     + Black is walking (less than 7mph), 
     + Red is bicycling or equivalent speed (less than 19mph), 
     + Blue is motor vehicles on normal roads (less than 43mph); 
@@ -192,6 +196,14 @@ if(internet){
 ![pic](`r link1 `)
 
   Source: [Eric Fischer](http://www.fastcompany.com/1652550/infographic-day-using-flickr-geotags-map-worlds-cities-updated)
+
+##
+
+### Two ideas combined
+
+* Map Of Touristiness
+
+* Tracking Taxis Across Manhattan
 
 - [The geotaggers world atlas](https://www.flickr.com/photos/walkingsf/sets/72157623971287575/)
 
@@ -211,6 +223,26 @@ if(internet){
 Source: [Touristiness](http://www.bluemoon.ee/~ahti/touristiness-map/)
 
 Based on tourist pictures uploaded on [panoramio](http://www.panoramio.com/)
+
+##
+
+### Locals and Tourists
+
+- Blue points on the map are pictures taken by locals (people who have taken pictures in this city dated over a range of a month or more).
+
+- Red points are pictures taken by tourists (people who seem to be a local of a different city and who took pictures in this city for less than a month).
+
+- Yellow points are pictures where it can't be determined whether or not the photographer was a tourist (because they haven't taken pictures anywhere for over a month).
+
+##
+
+### [Tourists and Locals](https://www.flickr.com/photos/walkingsf/sets/72157624209158632/)
+```{r,echo=F}
+  link1 <- paste(graph.path,"TouristsLocals.png",sep="")
+```
+
+![pic](`r link1 `)
+
 
 ## 
 
@@ -282,6 +314,26 @@ and applications.
 - ... show you how to produce your own maps/visualisations.
 - ... tell you where you can find data.
 
+
+##
+
+```{r,echo=F}
+  link1 <- paste(graph.path,"funny-comic-filming-cut-540x368.jpg",sep="")
+```
+
+[Source](http://loldamn.com/little-misunderstanding.html)
+
+![pic](`r link1 `) 
+
+##
+
+### Learning by doing
+```{r,echo=F}
+  link1 <- paste(graph.path,"seeWhatHappens.jpg",sep="")
+```
+
+
+[Source](http://gocomics.typepad.com/.a/6a00d8341c5f3053ef01a73dd12023970d-800wi)
 
 ## 
 
@@ -363,6 +415,27 @@ Source: [orangesmile](http://www.orangesmile.com/common/img_city_maps_560/lyon-m
 
 ## 
 
+Source: [Urban day](http://urbanday.de/index.62.de.html)
+
+```{r}
+  link1 <- paste(graph.path,"MannheimMap.jpg",sep="")
+# http://www.heimatundwelt.de/kartenansicht.xtp?artId=978-3-14-100260-7&stichwort=Quadrate&fs=1
+```
+
+![pic](`r link1 `)
+
+## 
+
+### Gesis Mannheim
+
+```{r}
+  link1 <- paste(graph.path,"GESISMannheim.png",sep="")
+```
+
+![pic](`r link1 `)
+
+## 
+
 ### Organisation Gesis
 
 Five departments
@@ -408,7 +481,8 @@ telephone-assisted surveys
 ### Your background?
 - Where do you come from?
 - What are you studying?
-- What are your main research interests?
+- What are your research interests?
+- Which map would be interesting for you?
 
 
 # Tools for this course
@@ -424,26 +498,26 @@ if(internet){
   link1 <- paste(graph.path,"Rlogo-5.jpg",sep="")
 }
 ```
-![pic](`r link1 `)
-
 
 ```{r,echo=F}
 if(internet){
   link1 <- "http://www.webmasterpro.de/portal/news/2010/11/25/microsoft-arbeitet-mit-openstreetmap-zusammen.html/image/800px-OSM_Logo.svg.png/scale/250x400/"  
 }else{
-  link1 <- paste(graph.path,"Logo_OSM.png",sep="")
+  link2 <- paste(graph.path,"Logo_OSM.png",sep="")
 }
 ```
-![pic21](`r link1 `)
 
 ```{r,echo=F}
 if(internet){
   link1 <- "http://wiki.openstreetmap.org/w/images/thumb/b/b5/Overpass_API_logo.svg/400px-Overpass_API_logo.svg.png"  
 }else{
-  link1 <- paste(graph.path,"400px-Overpass_API_logo.svg.png",sep="")
+  link3 <- paste(graph.path,"400px-Overpass_API_logo.svg.png",sep="")
 }
 ```
-![pic21](`r link1 `)
+
+![pic](`r link1 `)
+![pic21](`r link2 `)
+![pic21](`r link3 `)
 
 
 ```{r,echo=F}
