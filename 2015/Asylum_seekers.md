@@ -254,11 +254,11 @@ Refugees per 1000 inhabitants
 Global refugee trends
 ---------------------
 
-![pic](C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/RefugeesMap2014-15.jpg)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/RefugeesMap2014-15.jpg)
 
 Migrants by the sea
 -------------------
 
-![pic](C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/EuropeMigrationBySea2006to2014.jpg)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/EuropeMigrationBySea2006to2014.jpg)
 
 [Source](http://www.viewsoftheworld.net/?p=4298)
