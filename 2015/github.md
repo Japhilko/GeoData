@@ -18,7 +18,7 @@ Printing information
 
 -   Download the .pdf-files with the raw button
 
-![pic](C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/GithubDownload.bmp)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/GithubDownload.bmp)
 
 Links and resources
 -------------------
