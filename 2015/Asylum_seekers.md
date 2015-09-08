@@ -5,7 +5,7 @@ Data source
     Agency](http://popstats.unhcr.org/en/persons_of_concern)
 -   Data from 1951 until 2014
 
-![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/UNHCR2.PNG)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/UNHCR2.PNG)
 
 Data table
 ----------
@@ -66,50 +66,50 @@ Data table
 </tbody>
 </table>
 
-Asylum seekers in Germany 2000 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2000.png) <br> Total number: 70266
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2000 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2000.png) <br> Total number: 70266
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2001 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2001.png) <br> Total number: 85533
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2001 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2001.png) <br> Total number: 85533
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2002 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2002.png) <br> Total number: 164000
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2002 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2002.png) <br> Total number: 164000
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2003 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2003.png) <br> Total number: 128083
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2003 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2003.png) <br> Total number: 128083
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2004 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2004.png) <br> Total number: 86151
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2004 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2004.png) <br> Total number: 86151
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2005 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2005.png) <br> Total number: 71624
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2005 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2005.png) <br> Total number: 71624
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2006 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2006.png) <br> Total number: 52807
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2006 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2006.png) <br> Total number: 52807
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2007 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2007.png) <br> Total number: 34063
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2007 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2007.png) <br> Total number: 34063
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2008 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2008.png) <br> Total number: 33295
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2008 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2008.png) <br> Total number: 33295
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2009 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2009.png) <br> Total number: 38932
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2009 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2009.png) <br> Total number: 38932
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2010 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2010.png) <br> Total number: 51991
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2010 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2010.png) <br> Total number: 51991
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2011 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2011.png) <br> Total number: 62680
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2011 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2011.png) <br> Total number: 62680
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2012 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2012.png) <br> Total number: 85560
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2012 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2012.png) <br> Total number: 85560
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2013 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2013.png) <br> Total number: 135581
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2013 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2013.png) <br> Total number: 135581
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Asylum seekers in Germany 2014 <br> ![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Germany_Asylum_seekers_2014.png) <br> Total number: 226116
-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Asylum seekers in Germany 2014 <br> ![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Asylum_seekers_2014.png) <br> Total number: 226116
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Development over time
 ---------------------
@@ -119,7 +119,7 @@ Development over time
 Number of refugees per country
 ------------------------------
 
-![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Europe_Refugees_14.png)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Europe_Refugees_14.png)
 
 Number of refugees per country
 ------------------------------
@@ -239,17 +239,17 @@ Number of refugees per country
 Log number of refugees per country
 ----------------------------------
 
-![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/lEurope_Refugees_14.png)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/lEurope_Refugees_14.png)
 
 Number of refugees per *k**m*<sup>2</sup>
 -----------------------------------------
 
-![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Europe_Refugees2area_14.png)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Europe_Refugees2area_14.png)
 
 Refugees per 1000 inhabitants
 -----------------------------
 
-![pic](J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/Europe_Refugees2pop_14.png)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Europe_Refugees2pop_14.png)
 
 Global refugee trends
 ---------------------
