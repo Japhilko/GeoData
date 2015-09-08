@@ -1,0 +1,150 @@
+---
+title: "Asylum seekers"
+author: "Jan-Philipp Kolb"
+date: "Tue Sep 08 10:32:04 2015"
+output: beamer_presentation
+---
+
+```{r,echo=F}
+
+library(knitr)
+graph.path2 <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure/"
+data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/"
+
+graph.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/"
+
+
+setwd(data.path)
+load("dat2years.RData")
+dat2years <- dat2years[50:64]
+
+load("UNHCR_dat.RData")
+```
+
+## Data source
+
+- The [UN Refugee Agency](http://popstats.unhcr.org/en/persons_of_concern)
+- Data from 1951 until 2014
+
+```{r,echo=F}
+b <- paste("![pic](",graph.path2,"UNHCR2.PNG)",sep="")
+```
+
+`r b `
+
+## Data table
+
+```{r,echo=F}
+kable(head(dat[,c(1,2,3,4,6)]),row.names=F)
+```
+
+
+```{r,echo=F}
+years <- 2000:2014
+for (i in 1:length(years)){
+pic <- paste("Germany_Asylum_seekers_",years[i],".png",sep="")
+
+eval(parse(text=paste(paste("a",i," <- paste('## Asylum seekers in Germany ",years[i]," <br> ![pic](',graph.path2,pic,') <br> Total number: ",dat2years[i],"',sep='')",sep=""))))
+}
+```
+
+`r a1 `
+
+`r a2 `
+
+`r a3 `
+
+`r a4 `
+
+`r a5 `
+
+`r a6 `
+
+`r a7 `
+
+`r a8 `
+
+`r a9 `
+
+`r a10 `
+
+`r a11 `
+
+`r a12 `
+
+`r a13 `
+
+`r a14 `
+
+`r a15 `
+
+## Development over time
+
+```{r,echo=F}
+library(lattice)
+barchart(dat2years,col="royalblue")
+```
+
+
+## Number of refugees per country
+
+```{r,echo=F}
+b <- paste("![pic](",graph.path2,"Europe_Refugees_14.png)",sep="")
+```
+
+`r b `
+
+## Number of refugees per country
+
+```{r,echo=F}
+setwd(data.path)
+load("Europe.RData")
+Europe2 <- Europe@data[!is.na(Europe@data$Refugees_14),]
+Tab2 <- Europe2[order(Europe2$Refugees_14,decreasing=T),c("name","Refugees_14"),]
+
+kable(head(Tab2,n=20))
+```
+
+
+## Log number of refugees per country
+
+```{r,echo=F}
+b <- paste("![pic](",graph.path2,"lEurope_Refugees_14.png)",sep="")
+```
+
+`r b `
+
+## Number of refugees per $km^2$
+
+```{r,echo=F}
+b <- paste("![pic](",graph.path2,"Europe_Refugees2area_14.png)",sep="")
+```
+
+`r b `
+
+## Refugees per 1000 inhabitants
+
+```{r,echo=F}
+b1 <- paste("![pic](",graph.path2,"Europe_Refugees2pop_14.png)",sep="")
+```
+
+`r b1 `
+
+## Global refugee trends
+
+```{r,echo=F}
+b2 <- paste("![pic](",graph.path,"RefugeesMap2014-15.jpg)",sep="")
+```
+
+`r b2 `
+
+## Migrants by the sea
+
+```{r,echo=F}
+b2 <- paste("![pic](",graph.path,"EuropeMigrationBySea2006to2014.jpg)",sep="")
+```
+
+`r b2 `
+
+
+[Source](http://www.viewsoftheworld.net/?p=4298)
