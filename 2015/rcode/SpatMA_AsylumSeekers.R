@@ -16,10 +16,12 @@ graph.path2 <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/data/figure"
 # Load data
 #-------------------------------------#
 
-setwd(data.path)
+# Download data from http://popstats.unhcr.org/en/persons_of_concern
 # Extracted from the UNHCR Population Statistics Reference Database,"United Nations High Commissioner for Refugees"
 # Date extracted: 2015-08-20 17:18:16 +02:00
 
+# edit the data in Excel
+setwd(data.path)
 dat2 <- read.csv2("unhcr_data.csv")
 dat <- dat2
 
@@ -38,16 +40,13 @@ colnames(dat)[11] <- "Others"
 
 dat <- dat[,-c(6:10)]
 
-
 dat$Asylum_seekers <- as.character(dat$Asylum_seekers)
 dat$Asylum_seekers[dat$Asylum_seekers=="*"] <- NA
 dat$Asylum_seekers[dat$Asylum_seekers==""] <- NA
 dat$Asylum_seekers <- as.numeric(dat$Asylum_seekers)
-
-
 dat$Refugees <- as.numeric(as.character(dat$Refugees))
 
-save(dat,file="UNHCR_dat.RData")
+# save(dat,file="UNHCR_dat.RData")
 
 #-------------------------------------#
 # Find countries - preparation
@@ -234,3 +233,7 @@ for (i in 1:length(tmap_c)){
 
 # RefugeeMapGermany2015_tn.jpg
 # http://www.viewsoftheworld.net/?p=4556
+
+# http://www.viewsoftheworld.net/?p=4298
+
+# http://data.unhcr.org/syrianrefugees/regional.php
