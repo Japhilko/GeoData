@@ -332,6 +332,8 @@ and applications.
   link1 <- paste(graph.path,"seeWhatHappens.jpg",sep="")
 ```
 
+![pic](`r link1 `) 
+
 
 [Source](http://gocomics.typepad.com/.a/6a00d8341c5f3053ef01a73dd12023970d-800wi)
 
@@ -428,7 +430,7 @@ Source: [Urban day](http://urbanday.de/index.62.de.html)
 
 ### Gesis Mannheim
 
-```{r}
+```{r,echo=F}
   link1 <- paste(graph.path,"GESISMannheim.png",sep="")
 ```
 
