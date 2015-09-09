@@ -796,9 +796,6 @@ b <- paste("![pic](",github.path,"Contact.PNG)",sep="")
 
 `r b `
 
-
-
-
 ## 
 
 ```{r,echo=F}
@@ -807,5 +804,5 @@ b <- paste("![pic](",github.path,"Attention.jpg)",sep="")
 
 `r b `
 
-
+Source: [fotolia](https://de.fotolia.com/id/52212043)
 
