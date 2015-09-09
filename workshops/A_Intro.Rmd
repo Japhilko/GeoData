@@ -17,6 +17,15 @@ if("revealjs" %in% rownames(installed.packages()) == FALSE){
 github.path <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/"
 ```
 
+## Outline
+
+- Motivation
+- Use Case: Refugees
+- Organisation
+- Background
+- Tools for this course
+- Why use R?
+
 
 ## Hello world
 
@@ -777,6 +786,26 @@ if(internet){
 
 Source: [R-programming](http://rprogramming.net/)
 
+## If you have questions...
+
+... feel free to ask
+
+```{r,echo=F}
+b <- paste("![pic](",github.path,"Contact.PNG)",sep="")
+```
+
+`r b `
+
+
+
+
+## 
+
+```{r,echo=F}
+b <- paste("![pic](",github.path,"Attention.jpg)",sep="")
+```
+
+`r b `
 
 
 
