@@ -481,6 +481,7 @@ telephone-assisted surveys
 ### Your background?
 - Where do you come from?
 - What are you studying?
+- What are your expectations from this course
 - What are your research interests?
 - Which map would be interesting for you?
 
