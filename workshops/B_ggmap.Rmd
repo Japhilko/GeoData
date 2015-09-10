@@ -99,8 +99,10 @@ qmap(location = 'Mannheim', zoom = 14,
 ## ggmap - create an object 
 
 ```{r,warning=F,message=F}
-MA_map <- qmap(location = 'Mannheim', zoom = 14,
- maptype="toner",source="stamen")
+MA_map <- qmap(location = 'Mannheim', 
+               zoom = 14,
+               maptype="toner",
+               source="stamen")
 ```
 
 
