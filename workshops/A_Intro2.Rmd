@@ -1,0 +1,773 @@
+---
+title: "Spatial visualisation"
+author: "Jan-Philipp Kolb"
+date: "Tue Sep 08 20:58:58 2015"
+output:
+  revealjs::revealjs_presentation:
+    theme: beige
+    transition: convex
+    highlight: pygments
+    center: true
+---
+
+```{r,echo=F}
+internet=F
+graph.path <- "../data/figure/"
+
+if("revealjs" %in% rownames(installed.packages()) == FALSE){
+  devtools::install_github("jjallaire/revealjs")  
+}
+
+github.path <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/"
+```
+
+# Hello world
+
+## 
+
+### Fra Mauro Map
+
+```{r,echo=F}
+if(internet){
+  ab1 <- paste(github.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
+}else{
+  ab1<- paste(graph.path,"FraMauroDetailedMap.jpeg.jpg",sep="")
+}
+```
+
+![pic](`r ab1 `) 
+
+  - Drawing maps has a long history
+  - Fra Mauro map (1450) is the greatest memorial of medieval cartography
+  - Source: [Wikipedia](https://en.wikipedia.org/wiki/Fra_Mauro_map)
+
+## 
+
+### Migrant route to Germany
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://ichef.bbci.co.uk/news/624/cpsprodpb/32F6/production/_85164031_migrant_journeys_turkey_to_germany_624.png"  
+}else{
+  link1 <- paste(graph.path,"_85164031_migrant_journeys_turkey_to_germany_624.png",sep="")
+}
+```
+![pic](`r link1 `)
+
+- Used at BBC - get an overview of more maps like this [here](http://www.lib.utexas.edu/maps/)
+
+## 
+
+### The road to Europe
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg"  
+}else{
+  link1 <- paste(graph.path,"Migrant-Map-Website.jpg",sep="")
+}
+```
+Source: [The Independent](http://www.independent.co.uk/incoming/article10471117.ece/alternates/w460/Migrant-Map-Website.jpg)
+
+![pic](`r link1 `) 
+
+## 
+
+- Data on the conflict in Syria - [UNHCR](http://data.unhcr.org/syrianrefugees/regional.php)
+
+
+- Analysis on [Syrian Refugee Settlement Clinic Locations](http://www.r-bloggers.com/syrian-refugee-settlement-clinic-locations/) with R
+
+# Motivation
+
+## 
+
+### GDP per capita
+
+Data source: [World Development Indicators](http://data.worldbank.org/data-catalog/world-development-indicators)
+
+```{r,echo=F,warning=F}
+library(tmap)
+data(World)
+qtm(World, fill="income_grp",fill.title="Income group") 
+```
+
+## 
+
+### GDP in German federal states
+
+
+```{r,echo=F}
+if(internet){
+  link1 <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/BIP2BLA.png"  
+}else{
+  link1 <- paste(graph.path,"BIP2BLA.png",sep="")
+}
+```
+![pic](`r link1 `)
+
+
+## 
+
+### GDP in German federal states
+
+- Map produced with R-package [sp](https://cran.r-project.org/web/packages/sp/index.html)
+
+- Data source: [Wikipedia](https://de.wikipedia.org/wiki/Land_%28Deutschland%29)
+
+- Polygon source: Global Administrative Areas ([GADM](http://www.gadm.org/))
+
+## 
+
+### More detailed - more interesting?
+
+Social index - Proportion of social benefits recipients in Berlin
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg"  
+}else{
+  link1 <- paste(graph.path,"5-format11.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [Tagesspiegel](http://www.tagesspiegel.de/images/sozialhilfeempfaenger/1487336/5-format11.jpg)
+
+## 
+
+### Is the necessary data available?
+
+```{r,echo=F}
+if(internet){
+  link1 <- paste(github.path,"Zensus_Mannheim2.png" ,sep="")
+}else{
+  link1 <- paste(graph.path,"Zensus_Mannheim2.png",sep="")
+}
+```
+
+![pic](`r link1 `)[Source](https://atlas.zensus2011.de/)
+
+## 
+
+### The spatial perspective...
+
+- ... is relevant to get an overview of current developments
+
+- ... is relevant to understand
+circumstances.
+
+### But how to get the adequate data?
+
+* Necessary data is often not available
+* More spatial visualisations are possible with web-data via  Application Programming Interface (API) 
+
+
+## 
+
+### A little quiz - which town is it?
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://images.fastcompany.com/upload/4621770959_383261aebe_b.jpg"  
+}else{
+  link1 <- paste(graph.path,"4621770959_383261aebe_b.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+## 
+
+### Background info
+
+- Map of photographic/traffic activity
+- Data from [flickr](https://www.flickr.com/) used
+- Guess about picture taker's mode of transportation
+- Time stamps and distance traveled between a user's pictures
+    + Black is walking (less than 7mph), 
+    + Red is bicycling or equivalent speed (less than 19mph), 
+    + Blue is motor vehicles on normal roads (less than 43mph); 
+    + Green is freeways or rapid transit. 
+
+## 
+
+### New York
+
+![pic](`r link1 `)
+
+  Source: [Eric Fischer](http://www.fastcompany.com/1652550/infographic-day-using-flickr-geotags-map-worlds-cities-updated)
+
+##
+
+### Two ideas combined
+
+* Map Of Touristiness
+
+* Tracking Taxis Across Manhattan
+
+- [The geotaggers world atlas](https://www.flickr.com/photos/walkingsf/sets/72157623971287575/)
+
+## 
+
+### World Map Of Touristiness
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://s3.amazonaws.com/infobeautiful2/550_touristyness.jpg"  
+}else{
+  link1 <- paste(graph.path,"550_touristyness.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [Touristiness](http://www.bluemoon.ee/~ahti/touristiness-map/)
+
+Based on tourist pictures uploaded on [panoramio](http://www.panoramio.com/)
+
+##
+
+### Locals and Tourists
+
+- Blue points on the map are pictures taken by locals (people who have taken pictures in this city dated over a range of a month or more).
+
+- Red points are pictures taken by tourists (people who seem to be a local of a different city and who took pictures in this city for less than a month).
+
+- Yellow points are pictures where it can't be determined whether or not the photographer was a tourist (because they haven't taken pictures anywhere for over a month).
+
+##
+
+### [Tourists and Locals](https://www.flickr.com/photos/walkingsf/sets/72157624209158632/)
+```{r,echo=F}
+  link1 <- paste(graph.path,"TouristsLocals.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## 
+
+### Tracking Taxis Across Manhattan
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://images.fastcompany.com/upload/Screen%20shot%202010-04-05%20at%209.05.50%20AM.png"  
+}else{
+  link1 <- paste(graph.path,"Screen%20shot%202010-04-05%20at%209.05.50%20AM.png",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [The New York Times](http://www.fastcompany.com/1607065/infographic-day-tracking-taxis-across-manhattan)
+
+## 
+
+### Target / Motivation
+
+<strong>The target is to visualize <FONT COLOR="red"> social </FONT> aspects in maps.</strong>
+
+```{r,echo=F}
+if(internet){
+a <- "<a href=\"http://spatial.ly/2015/07/15minutemap/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2015/07/hurricanes.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+  <a href=\"https://www.mapbox.com/blog/osm-community-visualized/\" target=\"_blank\"><img src=\"https://farm3.staticflickr.com/2849/9774592706_3c2eafe310_c.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+    <a href=\"https://uchicagoconsulting.wordpress.com/\" target=\"_blank\"><img src=\"https://uchicagoconsulting.files.wordpress.com/2011/04/5.png?w=450&h=309\" width=\"240\" height=\"180\" border=\"10\" /></a>"
+      
+b<-"<a href=\"http://blogs.casa.ucl.ac.uk/category/r/\" target=\"_blank\"><img src=\"http://spatial.ly/wp-content/uploads/2014/07/journey_to_work_web.gif\" width=\"240\" height=\"180\" border=\"10\" /></a>
+        <a href=\"http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/\" target=\"_blank\"><img src=\"http://statmatt.com/wp-content/uploads/2014/01/Baltimore_3.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>
+          <a href=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" target=\"_blank\"><img src=\"http://www.pilod.nl/w/images/6/62/D9-fig4.jpg\" width=\"240\" height=\"180\" border=\"10\" /></a>"
+}else{
+  a <- paste("![pic](",graph.path,"D9-fig4.jpg)",sep="")
+  b <- paste("![pic](",graph.path,"WhiteNoise.PNG)",sep="")
+}
+```
+  
+`r a ` `r b `
+
+More [examples](http://spatial.ly/blog/) 
+
+
+## 
+
+### Spatial? - Motivation
+
+- Massive amounts of data ... and growing!
+- Often freely accessible on the web (e.g. through APIs)
+- Often unstructured or semi-structured (e.g. web documents, news archives), often heterogeneous
+- Often not intended for geographic purposes, but implicitly containing geographic info implicitly (Web 2.0)
+- Often with little or no metadata
+
+
+[Examples](https://www.flickr.com/groups/qgis/pool)
+
+# Organisation
+
+
+## 
+
+### Targets
+
+I want to....
+
+- ... show you examples of useful and less useful visualisations
+and applications.
+- ... talk about the developments of maps/geography.
+- ... clarify, why it is important for social sciences.
+- ... show you how to produce your own maps/visualisations.
+- ... tell you where you can find data.
+
+
+##
+
+```{r,echo=F}
+  link1 <- paste(graph.path,"funny-comic-filming-cut-540x368.jpg",sep="")
+```
+
+[Source](http://loldamn.com/little-misunderstanding.html)
+
+![pic](`r link1 `) 
+
+##
+
+### Learning by doing
+```{r,echo=F}
+  link1 <- paste(graph.path,"seeWhatHappens.jpg",sep="")
+```
+
+
+[Source](http://gocomics.typepad.com/.a/6a00d8341c5f3053ef01a73dd12023970d-800wi)
+
+## 
+
+### Targets 
+
+Every participant should present his/her own maps.
+
+- Presentation of toolbox (R, Google API, OpenStreetMap etc.)
+- Learning by doing is very important
+
+# Background
+
+## 
+
+### Personal information
+
+```{r,cache=T,echo=F,message=F,warning=F}
+if(internet){
+library(ggmap)
+library(geosmdata2)
+places <- c("Sippersfeld","Trier, Universitaetsring 15","Lyon, Universite Jean Moulin Lyon 3","Gesis Mannheim")
+descr <- c("Origin","Study, Diploma and PhD","Erasmus","Current employer")
+
+coords <- data.frame(places,lat=NA,lon=NA)
+if(internet){
+for (i in 1: length(places)){
+  coords[i,2:3] <- geocode_osm(places[i])  
+}
+}
+}
+```
+
+
+```{r,warning=F,message=F,echo=F}
+library(magrittr)
+library(leaflet)
+if(internet){
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=coords$lon, lat=coords$lat, popup=coords$descr)  # Print the map
+m
+  a <- paste(github.path,"Places.png",sep="")
+}else{
+    a <- paste(graph.path,"Places.png",sep="")
+}
+```
+
+![pic](`r a `)
+
+## 
+
+### University of Trier
+
+```{r,echo=F}
+if(internet){
+  link1 <- "https://www.uni-trier.de/fileadmin/_processed_/csm_campus_01_dbe11f5d99.gif"  
+}else{
+  link1 <- paste(graph.path,"csm_campus_01_dbe11f5d99.gif",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [Website with city maps](https://www.uni-trier.de/fileadmin/_processed_/csm_campus_01_dbe11f5d99.gif)
+
+## 
+
+### Erasmus - Univerity Lyon III
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.orangesmile.com/common/img_city_maps_560/lyon-map-0.jpg"  
+}else{
+  link1 <- paste(graph.path,"lyon-map-0.jpg",sep="")
+}
+```
+![pic](`r link1 `)
+
+Source: [orangesmile](http://www.orangesmile.com/common/img_city_maps_560/lyon-map-0.jpg)
+
+## 
+
+Source: [Urban day](http://urbanday.de/index.62.de.html)
+
+```{r}
+  link1 <- paste(graph.path,"MannheimMap.jpg",sep="")
+# http://www.heimatundwelt.de/kartenansicht.xtp?artId=978-3-14-100260-7&stichwort=Quadrate&fs=1
+```
+
+![pic](`r link1 `)
+
+## 
+
+### Gesis Mannheim
+
+```{r}
+  link1 <- paste(graph.path,"GESISMannheim.png",sep="")
+```
+
+![pic](`r link1 `)
+
+## 
+
+### Organisation Gesis
+
+Five departments
+- Survey Design and Methodology
+
+- Monitoring Society and Social Change
+
+- Data Archive for the Social Sciences
+
+- Computational Social Science
+
+- Knowledge Technologies for the Social Sciences
+
+## 
+
+### Gesis
+
+GESIS is:
+
+- Infrastructure Services for social sciences
+
+- over 250 employees at three sites (Mannheim, Cologne)
+
+GESIS offers:
+
+- Consulting for research projects in all phases
+
+- Research based services
+
+## 
+
+### Tasks GESIS-Team Statistics:
+
+Consulting and research on ...
+
+- Planning of survey designs
+- Development of sample designs for face-to-face, written, and
+telephone-assisted surveys
+- Data analysis and visualisation
+
+## 
+
+### Your background?
+- Where do you come from?
+- What are you studying?
+- What are your research interests?
+- Which map would be interesting for you?
+
+
+# Tools for this course
+
+## 
+
+### Tools and services
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://developer.r-project.org/Logo/Rlogo-5.jpg"  
+}else{
+  link1 <- paste(graph.path,"Rlogo-5.jpg",sep="")
+}
+```
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.webmasterpro.de/portal/news/2010/11/25/microsoft-arbeitet-mit-openstreetmap-zusammen.html/image/800px-OSM_Logo.svg.png/scale/250x400/"  
+}else{
+  link2 <- paste(graph.path,"Logo_OSM.png",sep="")
+}
+```
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://wiki.openstreetmap.org/w/images/thumb/b/b5/Overpass_API_logo.svg/400px-Overpass_API_logo.svg.png"  
+}else{
+  link3 <- paste(graph.path,"400px-Overpass_API_logo.svg.png",sep="")
+}
+```
+
+![pic](`r link1 `)
+![pic21](`r link2 `)
+![pic21](`r link3 `)
+
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://st1.bgr.in/wp-content/uploads/2014/06/google-maps-logo.jpg"  
+}else{
+  link1 <- paste(graph.path,"google-maps-logo.jpg",sep="")
+}
+```
+![pic21](`r link1 `)
+
+##
+
+### R programming language
+
+> R is a programming language and software environment for statistical computing and graphics. The R language is widely used among statisticians and data miners for developing statistical software and data analysis. Polls, surveys of data miners, and studies of scholarly literature databases show that R's popularity has increased substantially in recent years.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/R_%28programming_language%29)
+
+##
+
+### Google maps
+
+> Google Maps is a desktop web mapping service developed by Google. It offers satellite imagery, street maps, 360° panoramic views of streets (Street View), real-time traffic conditions (Google Traffic), and route planning for traveling by foot, car, bicycle (in beta), or public transportation. Google Maps offers an API that allows maps to be embedded on third-party websites, and offers a locator for urban businesses and other organizations in numerous countries around the world.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Google_Maps)
+
+##
+
+### Open Street Map
+
+> OpenStreetMap (OSM) is a collaborative project to create a free editable map of the world. Two major driving forces behind the establishment and growth of OSM have been restrictions on use or availability of map information across much of the world and the advent of inexpensive portable satellite navigation devices.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/OpenStreetMap)
+
+##
+
+### Github
+
+> GitHub is a Web-based Git repository hosting service, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features. [...] GitHub provides a Web-based graphical interface and desktop as well as mobile integration. It also provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/GitHub)
+  
+
+# Why use R
+
+## 
+
+### Why use R - It's open source
+
+- It's free
+- It's open source
+- ...
+
+
+> R is the leading tool for statistics, data analysis, and machine learning.  It is more than a statistical package; it’s a programming language, so you can create your own objects, functions, and packages.
+
+Source: <http://www.r-bloggers.com/why-use-r/>
+
+
+## 
+
+### Why use R - many specific packages
+
+A big number of (very specific) packages:
+
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.kdnuggets.com/wp-content/uploads/top-20-r-packages-downloads.jpg"  
+}else{
+  link1 <- paste(graph.path,"top-20-r-packages-downloads.jpg",sep="")
+}
+```
+![pic21](`r link1 `)
+
+[Overview of available packages on CRAN](http://www.r-pkg.org/)
+
+
+## 
+
+### Why use R - overview of reasons
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://www.edureka.co/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png"  
+}else{
+  link1 <- paste(graph.path,"bar-learn-r-img11.png",sep="")
+}
+```
+![pic21](`r link1 `)
+
+## 
+
+### Why use R - interfaces
+
+- Interfaces with other programs, for example [Javascript](http://www.w3schools.com/js/), [ArcGis](http://uwm.edu/software/arcgis/), [GDAL](http://www.gdal.org/) and others... 
+
+```{r,echo=F}
+if(internet){
+  link1 <- "https://jresponse.net/blog/wp-content/uploads/2015/04/javascript-logo-png-200x200.png"  
+}else{
+  link1 <- paste(graph.path,"javascript-logo-png-200x200.png",sep="")
+}
+```
+
+```{r,echo=F}
+if(internet){
+  link2 <- "http://uwm.edu/software/wp-content/uploads/sites/76/2014/06/ESRI_ARCMAP_transparente.png"  
+}else{
+  link2 <- paste(graph.path,"ESRI_ARCMAP_transparente.png",sep="")
+}
+```
+
+
+![pic21](`r link1 `)
+![p](`r link2 `) 
+
+
+## 
+
+### Why use R - GIS
+
+R can be used as geographic information systems (GIS)
+
+- R and [qgis](http://upload.wikimedia.org/wikipedia/commons/thumb/7/71/QGis_Logo.png/300px-QGis_Logo.png)
+
+- Virgilio Gómez-Rubio - [Applied Spatial Data Analysis with R](http://www.uclm.es/profesorado/vgomez/useR2015/) 
+
+- [spatstat: Spatial Point Pattern Analysis](http://cran.r-project.org/web/packages/spatstat/index.html)
+
+- [Task view mapping](https://github.com/ropensci/maptools)
+
+- [giswerk](http://giswerk.org/)
+
+
+## 
+
+### Why use R - visualisation
+
+Because it is possible to create nice graphics:
+
+- [Producing Simple Graphs with R](http://www.harding.edu/fmccown/r/)
+
+- [Lattice](http://stat.ethz.ch/R-manual/R-devel/library/lattice/html/Lattice.html)
+
+- [R Graphics by Paul Murrell](https://www.stat.auckland.ac.nz/~paul/RGraphics/rgraphics.html)
+
+- [Possibilities to visualize](http://mesa.ac.nz/wp-content/uploads/2012/05/all_presentations.pdf)
+
+- [ggplot2 Tutorial](http://www.ceb-institute.org/bbs/wp-content/uploads/2011/09/handout_ggplot2.pdf)
+
+- [Visualizing data in R](https://dl.dropboxusercontent.com/u/24648660/ggmap%201.pdf)
+
+- [Interview Hadley Wickham - R-Project Data Visualization Guru](http://decisionstats.com/2010/01/12/interview-hadley-wickham-r-project-data-visualization-guru/)
+
+##
+
+### Visualisation example
+
+```{r}
+  link1 <- paste(graph.path,"ggplotEx.jpg",sep="")
+```
+
+![pic](`r link1 `)
+
+
+
+
+## 
+
+### [Github](https://github.com/) stack
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://40.media.tumblr.com/19f7c16e223f2bd2e12c0bb4b6f5f666/tumblr_mzr6zsI3TK1tqzc7ko1_1280.png"  
+}else{
+  link1 <- paste(graph.path,"tumblr_mzr6zsI3TK1tqzc7ko1_1280.png",sep="")
+}
+```
+![pic21](`r link1 `)
+
+
+# Using Github
+
+## 
+
+### Github page
+
+- All relevant resources for this course will be available at:
+
+<https://github.com/Japhilko/GeoData>
+
+If you are interested in what is behind the scenes:
+
+- [Introduction to Github](http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1)
+
+
+# First steps in R
+
+## 
+
+### How to learn R
+
+- [Manuals on the R-project webpage](http://cran.r-project.org/manuals.html)
+
+-  Thomas Girke - [Programming in R](http://manuals.bioinformatics.ucr.edu/home/programming-in-r)
+
+
+- Use [Reference cards](http://cran.r-project.org/doc/contrib/Baggott-refcard-v2.pdf), plot them and have them next to your computer
+
+- [How to get help in R](http://itfeature.com/tag/how-to-get-help-in-r)
+
+I will try to keep it simple and provide lots of resources.
+
+
+
+## 
+
+### Basic R
+
+```{r,echo=F}
+if(internet){
+  link1 <- "https://erpinr.files.wordpress.com/2014/04/rsession.png%3Fw%3D620%26h%3D500"  
+}else{
+  link1 <- paste(graph.path,"rsession.png",sep="")
+}
+```
+![pic21](`r link1 `)
+
+## 
+
+### Download and install R
+
+- Click [here](http://mirrors.softliste.de/cran/bin/windows/base/R-3.2.2-win.exe) to download R for Windows.
+
+- R for other platforms (Linux and Mac OS) is available under:
+
+<http://mirrors.softliste.de/cran/>
+
+
+## 
+
+### Rstudio 
+
+```{r,echo=F}
+if(internet){
+  link1 <- "http://rprogramming.net/wp-content/uploads/2012/10/RStudio-Screenshot.png"  
+}else{
+  link1 <- paste(graph.path,"RStudio-Screenshot.png",sep="")
+}
+```
+![pic21](`r link1 `) Source: [R-programming](http://rprogramming.net/)
