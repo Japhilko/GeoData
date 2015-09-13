@@ -2,14 +2,25 @@
 title: "ggmap"
 author: "Jan-Philipp Kolb"
 date: "04/13/2015"
-output: slidy_presentation
+output: beamer_presentation
 ---
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 Ex <- T
 Ca <- T
 library(knitr)
+
+graph.path <- "../data/figure/"
 ```
+
+
+## Outline
+
+- Map types
+- The package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
+  - Road maps with `ggmap`
+  - Satellite maps with `ggmap`
+
 
 ## Road maps
 
@@ -27,15 +38,41 @@ interest like parks, campgrounds and monuments.
 
 ## Road maps
 
-```{r,echo=F,warnings=F,message=F}
+```{r,echo=F,warning=F,message=F}
+if(internet){
 library(leaflet)
 library(magrittr)
 m <- leaflet() %>% setView(lng = 8.47955, lat = 49.49671, zoom = 12)
-m %>% addTiles() 
+m %>% addTiles()   
+}else{
+  paste(graph.path,"RoadMap.PNG",sep="")
+}
+
 ```
 
 
+## Install the library
+
+- We'll need package ggmap 
+
+```{r,eval=F}
+install.packages("ggmap")
+```
+
+```{r,echo=F}
+link1 <- paste(graph.path,"Installpackages1.PNG",sep="")
+```
+![pic](`r link1 `)
+
+```{r,echo=F}
+link1 <- paste(graph.path,"Installpackages2.PNG",sep="")
+```
+![pic](`r link1 `)
+
+
 ## Library ggmap
+
+- To load the lbrary we use the command `library`
 
 ```{r,message=F,warning=F}
 library(ggmap)
@@ -43,16 +80,45 @@ library(ggmap)
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap("Mannheim")
-MA_map <- qmap("Mannheim",zoom=14)
+MA_map <- qmap("Mannheim")
 ```
 
 - We load a library with `library()`
+
+## Map for other place
+
+```{r,message=F}
+qmap("Berlin Brandenburger Tor")
+```
+
+## Map for other place
+
+- We need another zoom level
+
+```{r,message=F}
+qmap("Germany")
+```
+
+## Get help
+
+```{r,eval=F}
+?qmap
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path,"qmapExample.PNG",sep="")
+```
+![pic](`r link1 `)
+
+```
+
 
 
 ## Other zoom level
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 12)
+qmap("Mannheim", zoom = 12)
 ```
 
 ## Get closer
@@ -65,45 +131,83 @@ qmap(location = 'Mannheim', zoom = 13)
 ## Get very close
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 20)
+qmap('Mannheim', zoom = 20)
 ```
 
 ## ggmap - source
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 14, source="osm")
+qmap('Mannheim', zoom = 14, source="osm")
 ```
 
 
 ## ggmap - maptype
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 14, maptype="satellite")
+qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
 ## ggmap - maptype
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 14, maptype="hybrid")
+qmap('Mannheim', zoom = 14, maptype="hybrid")
 ```
 
 
 ## ggmap - maptype
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 14,
+qmap('Mannheim', zoom = 14,
  maptype="toner",source="stamen")
+```
+
+
+## ggmap - maptype watercolor
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14,
+ maptype="watercolor",source="stamen")
+```
+
+## ggmap - maptype toner-lite
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14,
+ maptype="toner-lite",source="stamen")
+```
+
+## ggmap - maptype toner-hybrid
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14,
+ maptype="toner-hybrid",source="stamen")
+```
+
+## ggmap - maptype terrain-lines
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14,
+ maptype="terrain-lines",source="stamen")
 ```
 
 
 ## ggmap - create an object 
 
-```{r,warning=F,message=F}
-MA_map <- qmap(location = 'Mannheim', 
+```{r,warning=F,message=F,cache=T}
+MA_map <- qmap('Mannheim', 
                zoom = 14,
                maptype="toner",
                source="stamen")
 ```
+
+
+## Save graphics
+
+```{r,echo=F}
+link1 <- paste(graph.path,"RstudioExport.PNG",sep="")
+```
+
+![pic](`r link1 `)
 
 
 ## Geocoding
@@ -120,6 +224,19 @@ geocode("Mannheim Wasserturm",source="google")
 MAgc <- geocode("Mannheim University",source="google")
 kable(MAgc)
 ```
+
+
+## Reverse geocoding
+
+> Reverse geocoding is the process of back (reverse) coding of a point location (latitude, longitude) to a readable address or place name. This permits the identification of nearby street addresses, places, and/or areal subdivisions such as neighbourhoods, county, state, or country.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Reverse_geocoding)
+
+```{r,cache=T}
+revgeocode(c(48,8))
+```
+
+
 
 ## Get the distance between 2 points
 
@@ -185,10 +302,32 @@ data = ListPOI)
 ```
 
 
+## Get a route from Google maps
+
+```{r,message=F,warning=F,cache=T}
+from <- "Mannheim Hbf"
+to <- "Mannheim B2 , 1"
+route_df <- route(from, to, structure = "route")
+```
+
+[More information](http://rpackages.ianhowson.com/cran/ggmap/man/route.html)
+
+## Draw a map with this information
+
+```{r,message=F,warning=F,cache=T}
+qmap("Mannheim Hbf", zoom = 14) +
+  geom_path(
+    aes(x = lon, y = lat),  colour = "red", size = 1.5,
+    data = route_df, lineend = "round"
+  )
+```
+
+
 
 ## Resources
 
 - [Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
+- [Grab a map](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
 
 More about adding points
 

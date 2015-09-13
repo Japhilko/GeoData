@@ -1,0 +1,80 @@
+---
+title: "ggmap add on"
+author: "Jan-Philipp Kolb"
+date: "13. September 2015"
+output: slidy_presentation
+---
+
+```{r,echo=F}
+library(ggmap)
+```
+
+## The Google API for maps
+
+- <https://developers.google.com/maps/>
+
+
+## ggmap - without argument extent
+
+- We get the information about the axis
+
+```{r,warning=F,message=F,cache=T}
+AM_map <- get_map(location = 'Amsterdem')
+```
+
+## ggmap - with argument extent
+
+- We get only the picture
+
+```{r,warning=F,message=F,cache=T}
+ggmap(location = 'Amsterdem',extent="device")
+```
+
+
+## 
+
+```{r}
+from <- "houson, texas"
+to <- "waco, texas"
+route_df <- route(from, to, structure = "route")
+```
+
+
+
+## 
+
+```{r,cache=T}
+qmap("Schriesheim", maptype = "terrain-background", source = "stamen",zoom=12)
+```
+
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14,
+ maptype="terrain-lines",source="stamen")
+```
+
+```{r}
+# http://rpackages.ianhowson.com/cran/ggmap/man/get_navermap.html
+map <- get_navermap(key="c75a09166a38196955adee04d3a51bf8", uri="www.r-project.org")
+ggmap(map)
+
+geocode("Mannheim",source="google")
+MA-map <- get_navermap(center = c(lon = 8.466039, lat = 49.48746),key="c75a09166a38196955adee04d3a51bf8", zoom = 4, uri="www.r-project.org")
+
+```
+
+
+```{r}
+lonR <- c(1.01,.99)*c(-124.73,-66.95)
+latR <- c(.99,1.01)*c(24.52, 49.38)
+qmap(lonR = lonR, latR = latR, source = 'osm', scale = 325E5)
+
+```
+
+
+```{r}
+ gc <- as.numeric(geocode('Baylor University')) 
+revgeocode(c(48,8))
+```
+
+
