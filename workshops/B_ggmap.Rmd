@@ -321,7 +321,7 @@ kable(MAgc)
 cities <- c("Hamburg","Koeln","Dresden","Muenchen")
 lon <- vector()
 lat <- vector()
-for (i in 1:length(orte)){
+for (i in 1:length(cities)){
   gc <- geocode(cities[i],source="google")
   lon[i] <- gc$lon
   lat[i] <- gc$lat
