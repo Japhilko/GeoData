@@ -2,10 +2,11 @@
 title: "ggmap"
 author: "Jan-Philipp Kolb"
 date: "04/13/2015"
-output: beamer_presentation
+output: slidy_presentation
 ---
 
 ```{r,echo=F,warning=F}
+internet=T
 Ex <- T
 Ca <- T
 library(knitr)
@@ -18,8 +19,9 @@ graph.path <- "../data/figure/"
 
 - Map types
 - The package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
-  - Road maps with `ggmap`
-  - Satellite maps with `ggmap`
+  * [Road maps](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf) with qmap
+  * Satellite maps with qmap
+  * Terrain maps with qmap
 
 
 ## Road maps
@@ -72,7 +74,7 @@ link1 <- paste(graph.path,"Installpackages2.PNG",sep="")
 
 ## Library ggmap
 
-- To load the lbrary we use the command `library`
+- To load the library we use the command `library`
 
 ```{r,message=F,warning=F}
 library(ggmap)
@@ -80,18 +82,21 @@ library(ggmap)
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap("Mannheim")
+```
+
+```{r,echo=F,message=F,warning=F,cache=T}
 MA_map <- qmap("Mannheim")
 ```
 
-- We load a library with `library()`
-
-## Map for other place
+## Map for a sight
 
 ```{r,message=F}
 qmap("Berlin Brandenburger Tor")
 ```
 
-## Map for other place
+
+
+## Map for a whole country
 
 - We need another zoom level
 
@@ -99,21 +104,45 @@ qmap("Berlin Brandenburger Tor")
 qmap("Germany")
 ```
 
-## Get help
+## Use another zoom level
+
+- level 3 - continent
+- level 10 - city
+- level 21 - building
+
+```{r,message=F}
+qmap("Germany", zoom = 6)
+```
+
+```{r,echo=F}
+# https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf
+```
+
+
+## Get help with the questionmark
 
 ```{r,eval=F}
 ?qmap
 ```
 
+Different components in the help
+
+- Description
+- Usage
+- Arguments
+- Value
+- Author(s)
+- See Also
+- Examples
+
+
+## The examples section of help
 
 ```{r,echo=F}
 link1 <- paste(graph.path,"qmapExample.PNG",sep="")
 ```
 ![pic](`r link1 `)
-
 ```
-
-
 
 ## Other zoom level
 
@@ -134,10 +163,16 @@ qmap(location = 'Mannheim', zoom = 13)
 qmap('Mannheim', zoom = 20)
 ```
 
-## ggmap - source
+## ggmap - source OpenStreetMap
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14, source="osm")
+```
+
+## ggmap - OpenStreetMap - black and white
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14, source="osm",color="bw")
 ```
 
 
@@ -151,6 +186,13 @@ qmap('Mannheim', zoom = 14, maptype="satellite")
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14, maptype="hybrid")
+```
+
+## ggmap - terrain map
+
+```{r,message=F,cache=T}
+qmap('Schriesheim', zoom = 14,
+ maptype="terrain")
 ```
 
 
@@ -328,6 +370,7 @@ qmap("Mannheim Hbf", zoom = 14) +
 
 - [Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
 - [Grab a map](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
+- [Making Maps in R](http://www.kevjohnson.org/making-maps-in-r-part-2/)
 
 More about adding points
 
