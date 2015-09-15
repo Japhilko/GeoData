@@ -17,11 +17,13 @@ graph.path <- "../data/figure/"
 
 ## Outline
 
-- Map types
-- The package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
-  * [Road maps](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf) with qmap
-  * Satellite maps with qmap
-  * Terrain maps with qmap
+The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) will be used in the following to 
+
+produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap)
+
+- [Road map](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf) 
+- Satellite map 
+- Terrain map/physical map
 
 
 ## Road maps
@@ -138,11 +140,24 @@ Different components in the help
 
 ## The examples section of help
 
+
+Extract from the help file on qmap:
+
 ```{r,echo=F}
 link1 <- paste(graph.path,"qmapExample.PNG",sep="")
 ```
 ![pic](`r link1 `)
 ```
+
+This examples can be directly copy-pasted to the console
+
+```{r,eval=F}
+qmap(location = "baylor university")
+qmap(location = "baylor university", zoom = 14)
+# and so on
+```
+
+
 
 ## Other zoom level
 
@@ -169,24 +184,42 @@ qmap('Mannheim', zoom = 20)
 qmap('Mannheim', zoom = 14, source="osm")
 ```
 
-## ggmap - OpenStreetMap - black and white
+## ggmap - OpenStreetMap - black/white
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14, source="osm",color="bw")
 ```
 
 
-## ggmap - maptype
+## ggmap - maptype satellite
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
-## ggmap - maptype
+## ggmap - maptype satellite zoom 21
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 21, maptype="hybrid")
+```
+
+
+## ggmap - maptype hybrid
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14, maptype="hybrid")
 ```
+
+
+## Terrain/physical maps
+
+Physical maps illustrate the physical features of an area, such as the mountains, rivers and lakes.
+Colors are used to show relief differences in land elevations.
+
+- The water is usually shown in blue.
+- a lighter color is typically used at lower elevation and
+- darker color indicate higher elevations.
+- Contour lines can also be used to show elevation changes (they are normally spaced at regular intervals)
 
 ## ggmap - terrain map
 
@@ -195,8 +228,13 @@ qmap('Schriesheim', zoom = 14,
  maptype="terrain")
 ```
 
+## Stamen maps
 
-## ggmap - maptype
+These high-contrast B+W (black and white) maps are featured in our Dotspotting project. They are perfect for data mashups and exploring river meanders and coastal zones. 
+
+Source: <http://maps.stamen.com/>
+
+## ggmap - source stamen
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14,
@@ -232,17 +270,6 @@ qmap('Mannheim', zoom = 14,
  maptype="terrain-lines",source="stamen")
 ```
 
-
-## ggmap - create an object 
-
-```{r,warning=F,message=F,cache=T}
-MA_map <- qmap('Mannheim', 
-               zoom = 14,
-               maptype="toner",
-               source="stamen")
-```
-
-
 ## Save graphics
 
 ```{r,echo=F}
@@ -252,6 +279,19 @@ link1 <- paste(graph.path,"RstudioExport.PNG",sep="")
 ![pic](`r link1 `)
 
 
+## ggmap - create an object 
+
+- `<-` is an assignment operator which can be used to create an object
+- This is useful if you work with several maps at the same time
+
+```{r,warning=F,message=F,cache=T}
+MA_map <- qmap('Mannheim', 
+               zoom = 14,
+               maptype="toner",
+               source="stamen")
+```
+
+
 ## Geocoding
 
 > Geocoding (...) uses a description of a location, most typically a postal address or place name, to find geographic coordinates from spatial reference data ... 
@@ -259,12 +299,36 @@ link1 <- paste(graph.path,"RstudioExport.PNG",sep="")
 [Wikipedia - Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)
 
 ```{r,message=F,eval=F,warning=F}
+library(ggmap)
 geocode("Mannheim Wasserturm",source="google")
 ```
 
-```{r,echo=F,message=F,cache=Ca}
+```{r,echo=F,message=F,warning=F,cache=Ca}
 MAgc <- geocode("Mannheim University",source="google")
 kable(MAgc)
+```
+
+
+## Latitude and Longitude
+
+![pic](http://modernsurvivalblog.com/wp-content/uploads/2013/09/definition-of-latitude-longitude.jpg)
+
+[Source](http://modernsurvivalblog.com/survival-skills/basic-map-reading-latitude-longitude/)
+
+## Coords of different places in Germany
+
+```{r,echo=F}
+cities <- c("Hamburg","Koeln","Dresden","Muenchen")
+lon <- vector()
+lat <- vector()
+for (i in 1:length(orte)){
+  gc <- geocode(cities[i],source="google")
+  lon[i] <- gc$lon
+  lat[i] <- gc$lat
+}
+
+Dat <- data.frame(cities,lon,lat)
+kable(Dat)
 ```
 
 
@@ -274,7 +338,7 @@ kable(MAgc)
 
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Reverse_geocoding)
 
-```{r,cache=T}
+```{r,cache=T,message=F}
 revgeocode(c(48,8))
 ```
 
