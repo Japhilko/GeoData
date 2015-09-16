@@ -27,3 +27,5 @@ produce different types of maps with the command [qmap](http://www.inside-r.org/
 
 - Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
 
+- Use case: [points of interest](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/) for backpackers in Amsterdam
+

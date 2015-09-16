@@ -347,7 +347,7 @@ kable(MAgc)
 
 ## Coords of different places in Germany
 
-```{r,echo=F}
+```{r,echo=F,message=F}
 cities <- c("Hamburg","Koeln","Dresden","Muenchen")
 lon <- vector()
 lat <- vector()
