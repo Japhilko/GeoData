@@ -1,7 +1,7 @@
 ---
-title: "ggmap"
+title: "Map Types with ggmap"
 author: "Jan-Philipp Kolb"
-date: "04/13/2015"
+date: "Wed Sep 16 08:25:56 2015"
 output: slidy_presentation
 ---
 
@@ -17,27 +17,36 @@ graph.path <- "../data/figure/"
 
 ## Outline
 
+Various map types: 
+
+- [Road maps](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf) 
+- Satellite maps
+- Terrain maps/physical maps
+- [Abstracted maps](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
+
+
+There are more which will be presented next week...
+
 The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) will be used in the following to 
-
 produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap)
-
-- [Road map](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf) 
-- Satellite map 
-- Terrain map/physical map
 
 
 ## Road maps
+
+```{r,echo=F}
+link1 <- paste(graph.path,"Road_Map.jpg",sep="")
+```
+
+![pic](`r link1 `)
+[Source](http://www.awtechnology.com/images/Road_Map.jpg)
 
 A road map is one of the most widely used map types. 
 
 - These maps show major and minor highways and roads (depending on
 detail) 
-
 - as well as things like airports, city locations and points of
 interest like parks, campgrounds and monuments. 
-
 - Major highways on a road map are generally red and larger than other roads, 
-
 - while minor roads are a lighter color and a narrower line.
 
 ## Road maps
@@ -51,18 +60,20 @@ m %>% addTiles()
 }else{
   paste(graph.path,"RoadMap.PNG",sep="")
 }
-
 ```
 
 
 ## Install the library
 
-- We'll need package ggmap 
+- We'll need package ggmap - so we have to install it:
 
+1. possibility 
 ```{r,eval=F}
 install.packages("ggmap")
 ```
 
+
+2. possibility:
 ```{r,echo=F}
 link1 <- paste(graph.path,"Installpackages1.PNG",sep="")
 ```
@@ -74,7 +85,7 @@ link1 <- paste(graph.path,"Installpackages2.PNG",sep="")
 ![pic](`r link1 `)
 
 
-## Library ggmap
+## Library ggmap - Hello world
 
 - To load the library we use the command `library`
 
@@ -97,14 +108,13 @@ qmap("Berlin Brandenburger Tor")
 ```
 
 
-
 ## Map for a whole country
-
-- We need another zoom level
 
 ```{r,message=F}
 qmap("Germany")
 ```
+
+- We need another zoom level
 
 ## Use another zoom level
 
@@ -146,8 +156,9 @@ Extract from the help file on qmap:
 ```{r,echo=F}
 link1 <- paste(graph.path,"qmapExample.PNG",sep="")
 ```
+
 ![pic](`r link1 `)
-```
+
 
 This examples can be directly copy-pasted to the console
 
@@ -207,7 +218,7 @@ qmap('Mannheim', zoom = 21, maptype="hybrid")
 ## ggmap - maptype hybrid
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap('Mannheim', zoom = 14, maptype="hybrid")
+qmap("Mannheim", zoom = 14, maptype="hybrid")
 ```
 
 
@@ -228,11 +239,28 @@ qmap('Schriesheim', zoom = 14,
  maptype="terrain")
 ```
 
-## Stamen maps
+## Abstracted maps
 
-These high-contrast B+W (black and white) maps are featured in our Dotspotting project. They are perfect for data mashups and exploring river meanders and coastal zones. 
 
-Source: <http://maps.stamen.com/>
+```{r,echo=F}
+link1 <- paste(graph.path,"NYabstracted.jpg",sep="")
+```
+
+![pic](`r link1 `)
+
+Source: [Design faves](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
+
+- Abstraction is used to create a map with only essential information
+- Example metro maps - directions and little information for orientation is included
+- In the following especially background maps
+
+## ggmap - maptype watercolor
+
+```{r,message=F,eval=Ex,cache=Ca}
+qmap('Mannheim', zoom = 14,
+ maptype="watercolor",source="stamen")
+```
+
 
 ## ggmap - source stamen
 
@@ -241,13 +269,6 @@ qmap('Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
 
-
-## ggmap - maptype watercolor
-
-```{r,message=F,eval=Ex,cache=Ca}
-qmap('Mannheim', zoom = 14,
- maptype="watercolor",source="stamen")
-```
 
 ## ggmap - maptype toner-lite
 
@@ -263,12 +284,21 @@ qmap('Mannheim', zoom = 14,
  maptype="toner-hybrid",source="stamen")
 ```
 
+
 ## ggmap - maptype terrain-lines
 
 ```{r,message=F,eval=Ex,cache=Ca}
 qmap('Mannheim', zoom = 14,
  maptype="terrain-lines",source="stamen")
 ```
+
+
+## Stamen maps
+
+These high-contrast B+W (black and white) maps are featured in our Dotspotting project. They are perfect for data mashups and exploring river meanders and coastal zones. 
+
+Source: <http://maps.stamen.com/>
+
 
 ## Save graphics
 
