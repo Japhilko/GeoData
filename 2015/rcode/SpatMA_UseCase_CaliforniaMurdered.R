@@ -28,14 +28,9 @@ data.path <- "D:/Dropbox/RForschung/SpatialMannheim/data"
 # Read data
 #--------------------------------#
 
-data(wrld_simpl)
-
+# https://www.fbi.gov/about-us/cjis/ucr/crime-in-the-u.s/2012/crime-in-the-u.s.-2012/tables/8tabledatadecpdf/table-8-state-cuts/table_8_offenses_known_to_law_enforcement_by_california_by_city_2012.xls
 setwd(data.path)
 murders <- read.xlsx("California Murder Rate 2012.xlsx",1)
-
-
-  # http://www.gadm.org/download
-# (load("USA_adm2.RData"))
 
 gadm <- getData('GADM', country='USA', level=2)
 
@@ -48,25 +43,15 @@ California <- gadm[gadm$NAME_1=="California",]
 ind <- match(murders[,1],California$NAME_2)
 
 California@data$Murders2012 <- murders[ind,2]
-California@data$Color.Code <- murders[ind,3]
-
-#--------------------------------#
-# Save data
-#--------------------------------#
-
-save(California,file="California.RData")
 
 #--------------------------------#
 # Plot data
 #--------------------------------#
 
-plot(California,col=California$Color.Code)
-
-
 spplot(California,"Murders2012")
 
 #--------------------------------#
-# Read data
+# link
 #--------------------------------#
 
-load("California.RData")
+# http://www.disastercenter.com/crime/cacrime.htm
