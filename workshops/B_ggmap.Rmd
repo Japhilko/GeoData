@@ -163,8 +163,8 @@ link1 <- paste(graph.path,"qmapExample.PNG",sep="")
 This examples can be directly copy-pasted to the console
 
 ```{r,eval=F}
-qmap(location = "baylor university")
-qmap(location = "baylor university", zoom = 14)
+qmap("baylor university")
+qmap("baylor university", zoom = 14)
 # and so on
 ```
 
@@ -179,7 +179,7 @@ qmap("Mannheim", zoom = 12)
 ## Get closer
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap(location = 'Mannheim', zoom = 13)
+qmap('Mannheim', zoom = 13)
 ```
 
 
@@ -391,7 +391,23 @@ mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
 
-## Geocoding - points of interest
+
+## Take Home Messages/Homework
+
+What you should know:
+
+- How to create a quick map
+- How to get a geocode
+- How to compute a distance
+
+Homework:
+
+- Please send me a map of a place/city you like very much
+
+And now some more advanced stuff....
+
+
+## Geocoding - various points of interest
 
 ```{r,cache=Ca,message=F,warning=F}
 POI1 <- geocode("B2, 1 Mannheim",source="google")
