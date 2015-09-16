@@ -3,6 +3,9 @@ Spatial visualisations
 
 In this directory you can find files from my course on spatial visualisation. 
 
+Introduction
+---------------------
+
 - Introduction  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.pdf))
 
@@ -16,4 +19,8 @@ In this directory you can find files from my course on spatial visualisation.
 
 Please download and install [R](https://cran.uni-muenster.de/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/) to follow this course. The installation process is straightforward. 
 
+Various Map Types with ggmap
+---------------------
+
+- Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/MapTypes.pdf))
 

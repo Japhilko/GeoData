@@ -5,16 +5,6 @@ date: "Wed Sep 16 08:25:56 2015"
 output: slidy_presentation
 ---
 
-```{r,echo=F,warning=F}
-internet=T
-Ex <- T
-Ca <- T
-library(knitr)
-
-graph.path <- "../data/figure/"
-```
-
-
 ## Outline
 
 Various map types: 
@@ -29,6 +19,16 @@ There are more which will be presented next week...
 
 The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) will be used in the following to 
 produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap)
+
+
+```{r,echo=F,warning=F}
+internet=T
+Ex <- T
+Ca <- T
+library(knitr)
+
+graph.path <- "../data/figure/"
+```
 
 
 ## Road maps
