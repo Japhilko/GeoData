@@ -22,5 +22,8 @@ Please download and install [R](https://cran.uni-muenster.de/) and [Rstudio](htt
 Various Map Types with ggmap
 ---------------------
 
-- Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/MapTypes.pdf))
+The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) will be used in this section to 
+produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap).
+
+- Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
 
