@@ -184,3 +184,5 @@ http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
 - [mapview](http://environmentalinformatics-marburg.github.io/web-presentations/20150723_mapView.html)
 
 - [Topic - terrain maps](http://www.innovativegis.com/basis/mapanalysis/Topic26/Topic26.htm)
+
+- [Building spatial objects in R](https://slipiste.wordpress.com/2014/10/04/building-spatial-objects-with-r/#more-142)

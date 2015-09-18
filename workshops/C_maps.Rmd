@@ -1,8 +1,8 @@
 ---
 title: "maps package"
 author: "Jan-Philipp Kolb"
-date: "17. Juli 2015"
-output: ioslides_presentation
+date: "Fri Sep 18 14:22:39 2015"
+output: slidy_presentation
 ---
 
 ```{r,echo=F}
@@ -26,7 +26,7 @@ south international borders (map of the United States).
 
 ## Political Map
 
-```{r,echo=F,message=F,warning=F}
+```{r,echo=F,message=F,warning=F,eval=F}
 library(maps)
 library(magrittr)
 library(leaflet)
@@ -34,6 +34,12 @@ mapStates = map("state", fill = TRUE, plot = FALSE)
 leaflet(data = mapStates) %>% addTiles() %>%
   addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
 ```
+
+```{r,echo=F,message=F}
+library(maps)
+map("state",fill=T,col=1:10)
+```
+
 
 
 ## The maps package
@@ -121,6 +127,21 @@ If you want to know, which region is at which place:
 italy <- map("italy", plot = F)
 head(italy$names)
 ```
+
+## Maps with only one argument
+
+```{r,eval=F}
+map("county")
+```
+
+
+```{r,echo=F}
+Argument <- c("county","france","italy","nz","state","usa","world")
+What <- c("US Counties","France","Italy","New Zealand","US States","USA","Countries of the world")
+
+kable(data.frame(Argument,What))
+```
+
 
 ## A map for Germany
 
