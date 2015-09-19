@@ -2,10 +2,10 @@
 title: "maps package"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 18 14:22:39 2015"
-output: slidy_presentation
+output: beamer_presentation
 ---
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(knitr)
 ```
 
@@ -35,7 +35,7 @@ leaflet(data = mapStates) %>% addTiles() %>%
   addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
 ```
 
-```{r,echo=F,message=F}
+```{r,echo=F,message=F,warning=F}
 library(maps)
 map("state",fill=T,col=1:10)
 ```
@@ -166,6 +166,7 @@ col=c("red","green"))
 ```
 
 
+
 ## Choropleths - package maps - additional features
 
 ```{r}
@@ -276,15 +277,21 @@ colors <- blue2red(6)
 barplot(1:6,col=colors)
 ```
 
+## Example: US Unemployment - color coding
+
+```{r}
+unemp$colorSteps <- cut(unemp$unemp, 
+          c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
+          unemp$fips)]
+```
 
 
 ## Example: US Unemployment 
 
 ```{r}
-unemp$colorSteps <- cut(unemp$unemp, c(0, 2, 4, 6, 8,10, 100))
-colorsmatch <- unemp$colorSteps[match(county.fips$fips, unemp$fips)]
-
-map("county", col = colors[colorsmatch], fill = TRUE)
+map("county", col = colors[colorsmatch], 
+    fill = TRUE)
 ```
 
 ## Further links and resources

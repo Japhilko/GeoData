@@ -29,3 +29,9 @@ produce different types of maps with the command [qmap](http://www.inside-r.org/
 
 - Use case: [points of interest](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/) for backpackers in Amsterdam
 
+Political maps
+---------------------
+
+A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries.
+
+- Political maps with R-package maps

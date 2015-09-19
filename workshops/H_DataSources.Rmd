@@ -25,6 +25,24 @@ data(quakes)
 kable(head(quakes))
 ```
 
+## FIPS code
+
+Federal Information Processing Standard ([FIPS](https://en.wikipedia.org/wiki/FIPS_county_code))
+
+```{r}
+data(county.fips)
+```
+
+```{r,echo=F}
+kable(head(county.fips))
+```
+
+
+```{r}
+library(UScensus2010)
+```
+
+
 ## World Bank Data
 
 [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html) - World Development Indicators (World Bank)
