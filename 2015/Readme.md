@@ -34,4 +34,4 @@ Political maps
 
 A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries.
 
-- Political maps with R-package maps
+- Political maps with R-package maps ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/C_maps.pdf) )
