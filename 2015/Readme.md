@@ -32,6 +32,6 @@ produce different types of maps with the command [qmap](http://www.inside-r.org/
 Political maps
 ---------------------
 
-A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries.
+A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries. In the following 3 approaches are presented to produce political maps.
 
-- Political maps with R-package maps ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/C_maps.pdf) )
+- Political maps with R-package maps ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/C_maps.pdf) | [browser](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )

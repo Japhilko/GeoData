@@ -1,3 +1,7 @@
+# Spatial visualisation
+# Jan-Philipp Kolb
+# Mon Sep 21 19:23:24 2015
+
 
 library(maps)
 map("state",fill=T,col=1:10)

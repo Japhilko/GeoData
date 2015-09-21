@@ -1,13 +1,14 @@
 ---
 title: "Library maptools"
 author: "Jan-Philipp Kolb"
-date: "04/21/2015"
-output: ioslides_presentation
+date: "Mon Sep 21 19:23:24 2015"
+output: slidy_presentation
 ---
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(knitr)
 ca=T
+library(sp)
 ```
 
 
@@ -16,7 +17,7 @@ ca=T
 
 - The data set `wrld_simpl` from package [maptools](https://cran.r-project.org/web/packages/maptools/index.html) has polygons for the most countries in the world
 
-```{r,message=F,cache=ca}
+```{r,message=F,cache=ca,warning=F}
 library(maptools)
 data(wrld_simpl)
 ```
@@ -27,12 +28,16 @@ kable(wrld_simpl@data[1:4,1:5])
 
 ## Hello world
 
-```{r}
+```{r,warning=F}
+data(wrld_simpl)
 plot(wrld_simpl)
 ```
 
 
 ## The data set behind
+
+- Information is saved in a data.frame
+- With head you get only the first entries
 
 ```{r,eval=F}
 head(wrld_simpl@data)
@@ -46,8 +51,6 @@ kable(wrld_simpl@data[1:4,1:5])
 
 
 ## The structure of the data set
-
-- with head you get only the first entries
 
 ```{r}
 head(wrld_simpl@data$NAME)
@@ -79,6 +82,7 @@ plot(SouthAfrica)
 ```{r}
 EuropeList <- c('Germany', 'France')
 my_map <- wrld_simpl[wrld_simpl$NAME %in% EuropeList, ]
+par(mai=c(0,0,0,0))
 plot(my_map)
 ```
 
@@ -92,7 +96,7 @@ plot(my_map,col=my_map@data$color)
 ## More color for the world
 
 ```{r}
-plot(wrld_simpl, bg='azure2', col='khaki', border='#AAAAAA')
+plot(wrld_simpl, bg='azure2', col='green', border='lightgray')
 ```
 
 ## A map for Europe
