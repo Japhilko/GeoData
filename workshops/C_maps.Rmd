@@ -2,7 +2,7 @@
 title: "maps package"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 18 14:22:39 2015"
-output: beamer_presentation
+output: slidy_presentation
 ---
 
 ```{r,echo=F,warning=F}
