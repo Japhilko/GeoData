@@ -34,4 +34,5 @@ Political and thematic maps with R-packages maps and maptools
 
 A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries. In the following 3 approaches are presented to produce political maps. The thematic map is designed to show a particular theme connected with a specific geographic area ([Wikipedia](https://en.wikipedia.org/wiki/Thematic_map)). 
 
+- Organisation and Background Information ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/SpatialMA_Course3.pdf))
 - Political maps with R-package maps ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/C_maps.pdf) | [browser](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
