@@ -46,7 +46,7 @@ plot(DEU3)
 
 <http://datahub.io/de/dataset/postal-codes-de>
 
-```{r,cache=ca,warning=F}
+```{r,cache=ca,warning=F,message=F}
 setwd("D:/Daten/Daten/GeoDaten")
 library(rgdal)
 PLZ <- readOGR ("post_pl.shp","post_pl")
@@ -72,6 +72,15 @@ git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData"
 setwd(git.path)
 library(mapdata)
 ```
+
+
+## Further sources
+
+- [Eurostat maps](http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/
+references/administrative_units_statistical_units_1)
+
+- [Open linked data](https://www.ordnancesurvey.co.uk/business-and-government/products/opendata-products-grid.html)
+
 
 ## More sources
 
