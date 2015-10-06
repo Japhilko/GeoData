@@ -1,13 +1,15 @@
 ---
 title: "Preparation Course 4"
 author: "Jan-Philipp Kolb"
-date: "6. Oktober 2015"
+date: "Tue Oct 06 16:27:59 2015"
 output: slidy_presentation
 ---
 
+## swirl
 
 ```{r,echo=F}
-internet=T
+internet=F
+graph.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/"
 github.path <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/"
 ```
 
@@ -17,9 +19,19 @@ if(internet){
 }else{
   ab1<- paste(graph.path,"swirl_new_large_final.png",sep="")
 }
+
+# ![pic](`r ab1 `)
 ```
 
-![pic](`r ab1 `) 
+To get started in R just use the package swirl:
+
+```{r,eval=F}
+install.packages("swirl")
+library("swirl")
+swirl()
+```
+
+... and everything else will be explained
 
 
 
