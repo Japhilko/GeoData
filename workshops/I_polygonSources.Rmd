@@ -2,7 +2,7 @@
 title: "Sources for polygons"
 author: "Jan-Philipp Kolb"
 date: "04/24/2015"
-output: ioslides_presentation
+output: beamer_presentation
 ---
 
 
