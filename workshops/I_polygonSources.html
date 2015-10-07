@@ -114,10 +114,11 @@ plot(LUX1)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Let&#39;s have a look at the data</h2></hgroup><article  id="lets-have-a-look-at-the-data">
 
-<pre class = 'prettyprint lang-r'>LUXA &lt;- LUX1[1,]
-plot(LUXA)</pre>
+<p>How to get the information on the polygons</p>
 
-</article></slide><slide class=''><hgroup><h2>Polygon slot</h2></hgroup><article  id="polygon-slot">
+<pre class = 'prettyprint lang-r'>LUX1@polygons[[1]]@Polygons[[1]]@coords</pre>
+
+</article></slide><slide class=''><hgroup><h2>Coordinates in polygon slot</h2></hgroup><article  id="coordinates-in-polygon-slot">
 
 <table class = 'rmdtable'>
 <tr class="odd">
