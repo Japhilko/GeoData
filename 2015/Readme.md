@@ -41,7 +41,8 @@ A political map does not show any topographic features or information about road
 Polygons with R-package maptools
 ---------------------
 
-- Recap of important R commands ()
-- Introduction to R-package maptools ()
-- Polygon sources ()
-- Hints on map ideas ()
+- Recap of important R commands ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/RcommandsRecap.pdf))
+- Introduction to R-package maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/D_maptools.pdf) 
+| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
+- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/PolygonSources.pdf))
+- Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/MapIdeas.pdf))

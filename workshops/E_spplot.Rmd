@@ -120,3 +120,13 @@ spplot(my_map,c("POP2005","Pop2010"),
 - Edzer Pebesma and Roger S. Bivand - [S Classes and Methods for Spatial Data: the `sp` Package](https://cran.r-project.org/web/packages/sp/vignettes/intro_sp.pdf)
 
 - Edzer Pebesma - [Map overlay and spatial aggregation in sp](https://cran.r-project.org/web/packages/sp/vignettes/over.pdf)
+
+
+
+## Projections
+
+- [Spatial Reference Identifier](https://en.wikipedia.org/wiki/SRID)
+
+- [Working with shapefiles](http://lincolnmullen.com/projects/dh-r/geospatial-data.html)
+
+- [srid for OpenStreetMap](http://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet)
