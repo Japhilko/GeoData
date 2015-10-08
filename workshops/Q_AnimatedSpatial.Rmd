@@ -29,6 +29,8 @@ m  # Print the map
 
 - [The Map Widget](http://rstudio.github.io/leaflet/map_widget.html)
 
+- [Radar and leaflet](http://www.r-bloggers.com/playing-with-leaflet-and-radar-locations/)
+
 
 ## 
 

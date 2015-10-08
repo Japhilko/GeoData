@@ -188,3 +188,11 @@ http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
 - [Building spatial objects in R](https://slipiste.wordpress.com/2014/10/04/building-spatial-objects-with-r/#more-142)
 
 - [Intro spatial](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
+
+- [Maps with leaflet](http://www.r-bloggers.com/a-segmentation-of-the-world-according-to-migration-flows-ft-leaflet/)
+
+- [Leaflet kissing](http://www.r-bloggers.com/the-map-of-romantic-kissing-with-leaflet-and-r/)
+
+- [chorpleths and reference maps](http://www.r-bloggers.com/combining-choropleth-maps-and-reference-maps-in-r/)
+
+- [maps Amanda Cox](http://www.r-bloggers.com/amanda-cox-on-using-r-at-the-nyt/)
