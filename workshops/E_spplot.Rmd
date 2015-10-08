@@ -2,7 +2,7 @@
 title: "sp package"
 author: "Jan-Philipp Kolb"
 date: "04/22/2015"
-output: md_document
+output: beamer_presentation
 ---
 
 
@@ -28,8 +28,15 @@ library(sp)
 ```{r,message=F,cache=ca,warning=F}
 library(maptools)
 data("wrld_simpl")
-ind <- wrld_simpl@data$ISO2%in%c("FR","DE","AT","CH")
+ISO2codes <- wrld_simpl@data$ISO2
+countries <- c("FR","DE","AT","CH")
+ind <- match(countries,ISO2codes)
 my_map <- wrld_simpl[ind,]
+```
+
+## Plot my map
+
+```{r}
 plot(my_map)
 ```
 

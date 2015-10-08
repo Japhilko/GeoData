@@ -8,9 +8,7 @@ Introduction
 
 - Introduction  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.pdf))
-
 - Use case - Asylum seekers ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.pdf) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2015/rcode/SpatMA_AsylumSeekers.R) )
-
 - Organisation and background ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Organisation_and_background.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Organisation_and_background.pdf))
 
@@ -26,7 +24,6 @@ The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.
 produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap).
 
 - Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
-
 - Use case: [points of interest](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/) for backpackers in Amsterdam
 
 Political and thematic maps with R-package maps 
@@ -44,5 +41,5 @@ Polygons with R-package maptools
 - Recap of important R commands ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/RcommandsRecap.pdf))
 - Introduction to R-package maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/D_maptools.pdf) 
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
-- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/PolygonSources.pdf))
+- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/PolygonSources.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 - Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/MapIdeas.pdf))
