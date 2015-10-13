@@ -43,3 +43,14 @@ Polygons with R-package maptools
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
 - Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/PolygonSources.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 - Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/MapIdeas.pdf))
+
+
+Data Sources and Color coding
+---------------------
+It is the target of this session to show how map data can be linked with other data to produce spatial visualisations. To produce the visualisations the R-package spplot is used.
+
+
+- R recap: Import and combination of data sources
+- Example with R-package spplot ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+- Use Case: Maps with Eurostat data ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
+

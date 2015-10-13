@@ -29,11 +29,13 @@ kable(head(quakes))
 
 Federal Information Processing Standard ([FIPS](https://en.wikipedia.org/wiki/FIPS_county_code))
 
-```{r}
+```{r,eval=T}
+library(maps)
+
 data(county.fips)
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=T}
 kable(head(county.fips))
 ```
 
