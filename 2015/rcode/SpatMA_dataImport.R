@@ -1,3 +1,8 @@
+# Spatial Visualisations
+# Data Import
+# Jan-Philipp Kolb
+# Tue Oct 13 08:30:11 2015
+
 
 ## ----echo=F--------------------------------------------------------------
 data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"

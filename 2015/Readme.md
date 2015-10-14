@@ -50,8 +50,13 @@ Data Sources and Color coding
 It is the target of this session to show how map data can be linked with other data to produce spatial visualisations. To produce the visualisations the R-package spplot is used.
 
 
-- R recap: Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/dataImport.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) and combination ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Matching.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
+- R recap: Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) and combination ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Matching.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
-- Example with R-package spplot ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+- Example with R-package spplot ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf)  | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
 - Use Case: Maps with Eurostat data ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
+- Use Case: Webscraping data on nursery ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/WebScraping.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
+
+
+
+Assignment: Please download data for one of the Principal European Economic Indicators ([PEEI](http://ec.europa.eu/eurostat/web/euro-indicators/peeis)) and visualise it in a map.
 
