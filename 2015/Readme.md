@@ -45,13 +45,19 @@ Polygons with R-package maptools
 - Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/MapIdeas.pdf))
 
 
-Data Sources and Color coding
+Data Import and Data Linkage
 ---------------------
 It is the target of this session to show how map data can be linked with other data to produce spatial visualisations. To produce the visualisations the R-package spplot is used.
 
 
-- R recap: Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) and combination ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Matching.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
+- Data Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+- Data Linkage ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Matching.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
+
+
+Use Cases: Data Import and Data Linkage
+---------------------
+
 - Example with R-package spplot ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf)  | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
 - Use Case: Maps with Eurostat data ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 - Use Case: Webscraping data on nursery ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/WebScraping.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
