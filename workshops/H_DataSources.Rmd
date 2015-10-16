@@ -204,7 +204,9 @@ info <- read.csv(link,sep="\t",header=F)
 
 [enigma](https://app.enigma.io/table/org.worldbank.hnp.data)
 
+## Amazon Web Services
 
+[AWS](http://aws.amazon.com/de/public-data-sets/) 
 
 
 ## Further resources
