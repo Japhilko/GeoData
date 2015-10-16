@@ -62,3 +62,4 @@ d <- SPARQL(url="http://www.ebi.ac.uk/rdf/services/atlas/sparql",
 
 # https://code.google.com/p/r-sparql/wiki/GettingStarted
 # http://semanticweb.cs.vu.nl/R/sparql_lop/sparql_lop.html
+#http://linkedscience.org/tools/sparql-package-for-r/tutorial-on-sparql-package-for-r/
