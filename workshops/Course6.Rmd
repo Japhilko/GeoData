@@ -1,8 +1,8 @@
 ---
-title: "Course 6"
+title: "Data for Use Cases"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 21 12:57:49 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 ```{r,echo=F}
@@ -13,16 +13,16 @@ library(knitr)
 ## Datasets
 
 ```{r,echo=F}
-Toppics <- c("London Soccer","World Heritage Sites","Nursery Data","Backpacker","Economic Crisis","Camping")
-DataSet <- c("Lfb_df.csv","whcSites.csv","df_pflege.csv","Hostels_Madrid.csv","Unemployment.csv","CampSites_Bayern.csv")
+Toppics <- c("London Soccer","World Heritage Sites","Nursery Data","Backpacker","Economic Crisis","Camping","Refugee Routes","Rivers")
+DataSet <- c("Lfb_df.csv","whcSites.csv","df_pflege.csv","Hostels_Madrid.csv","Unemployment.csv","CampSites_Bayern.csv","","")
 
 topics_df <- data.frame(Toppics,DataSet)
 kable(topics_df)
 ```
 
-## London Soccer
-
 You can find the data [here](https://github.com/Japhilko/GeoData/tree/master/2015/data)
+
+## London Soccer
 
 ```{r soccer data,cache=T}
 url <- "https://raw.githubusercontent.com/Japhilko/

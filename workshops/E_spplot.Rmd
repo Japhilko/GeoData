@@ -2,7 +2,7 @@
 title: "R-package sp"
 author: "Jan-Philipp Kolb"
 date: "04/22/2015"
-output: html_document
+output: md_document
 ---
 
 
