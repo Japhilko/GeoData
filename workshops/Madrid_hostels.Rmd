@@ -11,7 +11,9 @@ library(knitr)
 
 ## Backpacking Routes
 
-![pic](figure/BackpackingRoutes.jpg)
+![pic](http://www.indietraveller.co/wp-content/uploads/2014/11/download-930x473.jpg)
+
+[Source](http://www.indietraveller.co/map-of-where-to-go-backpacking/)
 
 ## The geosmdata2 package
 
@@ -26,7 +28,7 @@ library(geosmdata2)
 [OSM map features](http://wiki.openstreetmap.org/wiki/Map_Features)
 
 ```{r,eval=F,cache=T}
-place <- "Barcelona"
+place <- "Madrid"
 object <- "hostel"
 obj <- get_osm_nodes(object,place)
 ```
@@ -34,7 +36,7 @@ obj <- get_osm_nodes(object,place)
 
 
 ```{r,echo=F,cache=T}
-place <- "Barcelona"
+place <- "Madrid"
 objectL <- c("hostel","bar","fast_food")
 i <- 1
 object <- objectL[i]

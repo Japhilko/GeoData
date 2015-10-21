@@ -1,7 +1,9 @@
 Backpacking Routes
 ------------------
 
-![pic](figure/BackpackingRoutes.jpg)
+![pic](http://www.indietraveller.co/wp-content/uploads/2014/11/download-930x473.jpg)
+
+[Source](http://www.indietraveller.co/map-of-where-to-go-backpacking/)
 
 The geosmdata2 package
 ----------------------
@@ -21,7 +23,7 @@ Download Information from OpenStreetMap
 
 [OSM map features](http://wiki.openstreetmap.org/wiki/Map_Features)
 
-    place <- "Barcelona"
+    place <- "Madrid"
     object <- "hostel"
     obj <- get_osm_nodes(object,place)
 
@@ -349,7 +351,7 @@ Get a map
                               source="stamen")
     place_map12stamen
 
-![](Barcelona_hostels_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](Madrid_hostels_files/figure-markdown_strict/unnamed-chunk-11-1.png)
 
 Plot results
 ------------
@@ -357,7 +359,7 @@ Plot results
     place_map12stamen + geom_point(aes(x = lon, y = lat),
                            data = op,size=3,col="red") 
 
-![](Barcelona_hostels_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](Madrid_hostels_files/figure-markdown_strict/unnamed-chunk-12-1.png)
 
 Get other points of interest
 ----------------------------
@@ -378,7 +380,7 @@ Combine data
     place_map12stamen + geom_point(aes(x = lon, y = lat,col=objN),
                            data = op_df,size=3) 
 
-![](Barcelona_hostels_files/figure-markdown_strict/unnamed-chunk-19-1.png)
+![](Madrid_hostels_files/figure-markdown_strict/unnamed-chunk-19-1.png)
 
 Add more Information
 --------------------
@@ -388,4 +390,4 @@ Where to get some fast food
     place_map12stamen + geom_point(aes(x = lon, y = lat,col=objN),
                            data = op_df,size=2,alpha=.5) 
 
-![](Barcelona_hostels_files/figure-markdown_strict/unnamed-chunk-23-1.png)
+![](Madrid_hostels_files/figure-markdown_strict/unnamed-chunk-23-1.png)
