@@ -1,0 +1,13 @@
+CircSearch              function CircSearch
+CountNodes              function to count nodes in an osm xml object
+extract_info_op         function extract_info_op
+extract_position_op     function extract_position_op
+geocode_osm             function geocode_osm
+get_osm_area            function get_osm_area
+get_osm_nodes           function get_osm_nodes
+get_osm_relation        function get_osm_relation
+get_osm_ways            function get_osm_ways
+get_xapi_info           function get_xapi_info
+osm_df                  data frame map features OpenStreetMap
+plotbui                 function plotbui
+repluml                 function to replace umlauts
