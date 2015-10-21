@@ -57,8 +57,11 @@ of data sources
 
 Use Cases: Data Import and Data Linkage
 ---------------------
+In this session example datasets for different use cases are presented. And it is shown how to combine these datasets with spatial information.
 
-- Example with R-package spplot ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf)  | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+
+- R-package spplot and Color coding ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf)  | [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/E_spplot.md) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
 - Use Case: Maps with Eurostat data ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 - Use Case: Webscraping data on nursery ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/WebScraping.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
 
