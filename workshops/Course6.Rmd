@@ -2,7 +2,7 @@
 title: "Course 6"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 21 12:57:49 2015"
-output: html_document
+output: md_document
 ---
 
 ```{r,echo=F}
