@@ -2,7 +2,7 @@
 title: "Use Case Backpacker"
 author: "Jan-Philipp Kolb"
 date: "20. Oktober 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 ```{r,echo=F}

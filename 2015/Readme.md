@@ -67,6 +67,7 @@ In this session example datasets for different use cases are presented. And it i
 )
 - Use Case: Maps with Eurostat data ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 - Use Case: Webscraping data on nursery ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/WebScraping.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
+- Use Case: Hostels Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/Madrid_hostels.md))
 
 
 
