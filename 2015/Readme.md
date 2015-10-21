@@ -71,5 +71,5 @@ In this session example datasets for different use cases are presented. And it i
 
 
 
-Assignment: Please download data for one of the Principal European Economic Indicators ([PEEI](http://ec.europa.eu/eurostat/web/euro-indicators/peeis)) and visualise it in a map.
+Assignment: Please download the data for your use case and visualise it in a map.
 
