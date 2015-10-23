@@ -42,10 +42,33 @@ cafes <- get_osm_nodes("cafe",place="Concord")
 cafes_cc <- extract_info_op(OSM.Data=cafes,value="cafe")
 ```
 
+Get information about Hostels in a city:
+
+```{r hostels,cache=T}
+library(geosmdata2)
+place <- "Madrid"
+object <- "hostel"
+obj <- get_osm_nodes(object,place)
+op <- extract_info_op(obj,object)
+```
 
 
 
 The `ggmap` function from package [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html) can be used to download a background map. 
+
+
+```{r stamenMap,message=F,cache=T}
+place_map12stamen <- qmap(place, zoom = 12,
+                          maptype="toner-lite",
+                          source="stamen")
+```
+
+
+```{r}
+place_map12stamen + geom_point(aes(x = lon, y = lat),
+                       data = op,size=3,col="red") 
+```
+
 
 ```{r,cache=ca,eval=Val_eval}
 library(ggmap)
