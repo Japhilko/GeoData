@@ -29,11 +29,13 @@ kable(head(quakes))
 
 Federal Information Processing Standard ([FIPS](https://en.wikipedia.org/wiki/FIPS_county_code))
 
-```{r}
+```{r,eval=T}
+library(maps)
+
 data(county.fips)
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=T}
 kable(head(county.fips))
 ```
 
@@ -196,10 +198,15 @@ info <- read.csv(link,sep="\t",header=F)
 ```
 
 
-## 
+## Data portal
 
+[okfn](http://data.okfn.org/)
 
+[enigma](https://app.enigma.io/table/org.worldbank.hnp.data)
 
+## Amazon Web Services
+
+[AWS](http://aws.amazon.com/de/public-data-sets/) 
 
 
 ## Further resources

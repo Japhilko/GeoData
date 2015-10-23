@@ -3,6 +3,7 @@ library(htmltab)
 library(geosmdata2)
 library(geocodeHERE)
 library(ggmap)
+library(xtable)
 
 
 #---------------------------------------------#
@@ -15,6 +16,12 @@ link <- "https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_in_Germany"
 
 heritageG <- htmltab(doc = link, which = "//th[text() = 'Site']/ancestor::table")
 head(heritageG)
+
+heritage_df <- data.frame(Site=heritageG$Site,
+                          Year=heritageG$Year,
+                          Area=heritageG[,6])
+
+xtable(head(heritage_df))
 
 
 lat1 <- vector()
@@ -70,6 +77,9 @@ ukLang <- htmltab(doc = url, which = "//th[text() = 'Ability']/ancestor::table")
 head(ukLang)
 
 
+#---------------------------------------------#
+# Links
+#---------------------------------------------#
 
 
 

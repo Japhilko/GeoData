@@ -21,7 +21,7 @@ extract_info_op <- function(OSM.Data,value){
     }
   }
   if(length(node_id)>0){
-    pb <- txtProgressBar(min = 0, max = length(node_id), style = 3)
+    # pb <- txtProgressBar(min = 0, max = length(node_id), style = 3)
     lat_x <- xpathApply(OSM.Data,paste("//tag[@",kov," = '",value,"']/parent::",Element,"/@ lat",sep=""))
     lon_x <- xpathApply(OSM.Data,paste("//tag[@",kov," = '",value,"']/parent::",Element,"/@ lon",sep=""))
     Liste <- list()
@@ -35,7 +35,7 @@ extract_info_op <- function(OSM.Data,value){
                              id=rep(unlist(node_id[i]),length(ind_k))
       )
       # cat("Object", i, "from",length(node_id), "\n")
-      setTxtProgressBar(pb, i)
+      # setTxtProgressBar(pb, i)
     }
     DF_x <- do.call(rbind,Liste)
     DF_x1 <- data.frame(with(DF_x,tapply(v,list(id,k),function(x)as.character(x))))

@@ -1,0 +1,46 @@
+"","created_by","name","phone","tourism","website","stars","operator","beds","wheelchair","addr.city","addr.housenumber","addr.postcode","addr.street","contact.email","contact.phone","contact.website","source","addr.country","internet_access","internet_access.fee","smoking","email","fax","amenity","name.en","name.es","wheelchair.description","contact.facebook","lat","lon"
+"143098199","JOSM","Habitaciones ""Aránzazu""","917291572","hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.485932,-3.6901415
+"151223418","JOSM","Pensión ""Mónica""","913584778","hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4855764,-3.6896661
+"286312700","Potlatch 0.10b","Albergue Juvenil",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.5795642,-4.1467939
+"621118487",NA,"La Hospedería de Antonia","91 884 49 75","hostel","www.hospederiadeantonia.es",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.5332523,-3.4799679
+"1013493190",NA,"Alaska",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.0462639,-3.6165694
+"1572572830",NA,NA,NA,"hostel",NA,"2",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4126025,-3.7032679
+"1743983862",NA,"Ballesta",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4215446,-3.7035787
+"1819460987",NA,"Acogida de Peregrino Cercedilla",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.7414527,-4.0480942
+"1828865799",NA,"Albergue de Peregrinos Tres Cantos",NA,"hostel",NA,NA,"Ayuntamiento",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.5993437,-3.712279
+"1937730956",NA,"Albergue juvenil Santa Cruz de Marcenado",NA,"hostel",NA,NA,"Comunidad de Madrid","72","yes",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4298438,-3.7132689
+"1987703776",NA,"Hostal Longinos El Aribel","+34 918 52 15 11","hostel","http://www.hostalaribel.com/index.html",NA,NA,NA,NA,"Cercedilla","41","28470","Calle de Emilio Serrano",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.7381378,-4.0663912
+"2043171005",NA,"Apartahotel Rosales",NA,"hostel",NA,NA,NA,NA,NA,NA,"23",NA,"Calle del Marqués de Urquijo",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4297298,-3.7186412
+"2043576532",NA,"Hostal Argentina",NA,"hostel",NA,NA,NA,NA,NA,"Madrid","14","28045","Calle de Méndez Álvaro","info@hostalargentina.es","+34 915275229","http://www.hostalargentina.es/","observation 10 Nov 2012",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4062398,-3.6921657
+"2078129743",NA,"Hostal Cartagena",NA,"hostel",NA,NA,NA,NA,"no","Madrid","21",NA,"Paseo de Santa Maria de la Cabeza",NA,NA,NA,NA,"ES","wlan","no","no",NA,NA,NA,NA,NA,NA,NA,40.405588,-3.694818
+"2087632261",NA,"El Refugio de la Sauca","0034 647 453 152","hostel",NA,NA,NA,NA,NA,NA,"3","28749","Travesía de la Huertas",NA,NA,NA,"Survey",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9187724,-3.8421036
+"2087671151",NA,"El Pajar de Alameda",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9200876,-3.8439677
+"2134238034",NA,"Hostal Vilches",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.5521021,-3.3768188
+"2134285295",NA,"Hostal La Posada del Diablo",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4807016,-3.3730037
+"2134285297",NA,"Hostal Torero",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4807751,-3.3740417
+"2139528583",NA,"Hostal Goyma",NA,"hostel",NA,NA,NA,NA,"limited",NA,"11","28830","Calle de Gonzalo de Córdoba",NA,"916711441",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4241047,-3.5339892
+"2140419461",NA,"Hostal Castilla","91 891 26 27","hostel","www.hostalaranjuez.com",NA,NA,NA,NA,NA,"98","28300","Calle de Andalucía",NA,NA,NA,NA,NA,"wlan","no",NA,"hostalcastlla@yahoo.es","91 891 61 33",NA,NA,NA,NA,NA,40.0295932,-3.605549
+"2149177125",NA,NA,NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.6299881,-4.0205429
+"2246112891",NA,"Las Musas","+34 915 394 984","hostel","http://www.lasmusashostel.com/",NA,NA,NA,NA,"Madrid","12","28012","Calle de Jesús y María",NA,NA,NA,NA,NA,"wlan",NA,NA,"info@lasmusasresidence.com",NA,NA,NA,NA,NA,NA,40.41147,-3.704066
+"2334279953",NA,"Hierba buena",NA,"hostel",NA,"2",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"cafe",NA,NA,NA,NA,40.3978729,-3.7683873
+"2386535331",NA,"Hostal Rural El Cańo"," (034) 91 857 50 00","hostel","http://www.hostal-alpedrete.com/index.php",NA,NA,NA,NA,"Alpedrete ","29","28430","Calle del Caño"," info@hostal-alpedrete.com ",NA,NA,NA,NA,"wlan",NA,NA,NA,NA,NA,NA,NA,NA,NA,40.66069,-4.022586
+"2388718988",NA,"Hostal Era","915314258","hostel","http://hostelera.es/",NA,NA,NA,"no",NA,"2",NA,"Calle de San Mateo",NA,NA,NA,NA,NA,"yes","no","no",NA,NA,NA,"Hostel Era","Hostal Era",NA,NA,40.424881,-3.7006366
+"2546770612",NA,"Hostal San Blas","+34 914202474","hostel",NA,NA,NA,NA,"limited","Madrid","117",NA,"Calle de Atocha",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"On the ground floor there are bedrooms which have been occupated by people on the wheelchair, but never alone. Without addpated bathrooms.",NA,40.4101268,-3.6941229
+"2577045957",NA,"San Antonio",NA,"hostel",NA,NA,NA,NA,NA,"Madrid","13","28014","Calle del León",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4140295,-3.6987811
+"2694323129",NA,"La Posada de Huertas","+34 914 295 526","hostel","http://www.posadadehuertas.com/en/",NA,NA,NA,NA,"Madrid","21","28014","Calle de las Huertas",NA,NA,NA,NA,NA,NA,NA,NA,"info@posadadehuertas.com",NA,NA,NA,NA,NA,NA,40.413762,-3.6993245
+"2989030233",NA,"Cat's Hostel","+34 913 69 28 07","hostel","http://www.catshostel.com/",NA,NA,NA,NA,NA,"6","28012","Calle de los Cañizares",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4129348,-3.7017544
+"3034491752",NA,"Hospedería Nerea",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4283598,-3.5367233
+"3034491753",NA,"Hostal Sanfer",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4288246,-3.5369481
+"3283874766",NA,"Tirso de Molina Hostel",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4113516,-3.7049865
+"3374152199",NA,"Albergue juvenil. Mejía Lequerica",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4281214,-3.6995391
+"3381180433",NA,"San Juan Hostel",NA,"hostel",NA,NA,NA,NA,NA,"Madrid","1","28013","Calle de San Alberto","info@sanjuanhostelmadrid.com","+34 693 021 669","http://sanjuanhostelmadrid.com/",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,"https://es-es.facebook.com/sanjuanhostelmadrid",40.4182356,-3.7027184
+"3495677022",NA,"Campamento Sierra Norte Juvenocio",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9636832,-3.5830464
+"3495733195",NA,"Alojamientos rurales El Bulin",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,41.0068902,-3.5598235
+"3497154851",NA,"Alojamiento Las Runas",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9883332,-3.5385242
+"3497154855",NA,"Posada Peñaparda",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9898288,-3.5368534
+"3522056580",NA,"Albergue Municipal",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9229082,-3.530093
+"3522056587",NA,"Hostal El Lago",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.9217932,-3.5303758
+"3577159293",NA,"Esmeralda",NA,"hostel",NA,NA,NA,NA,NA,"Madrid","1","28012","Calle de la Victoria","reservas@hresmeralda.net","+34 91 521 00 77","http://hresmeralda.net/",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4164501,-3.7015692
+"3641468947",NA,"Hosal Zoraya",NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4493392,-3.567813
+"3682163460",NA,"Barbieri International Hostel",NA,"hostel",NA,NA,NA,NA,NA,"Madrid","15","28004","Calle de Barbieri","booking@barbierihostel.com","+34 91 531 02 58","http://s404304060.web-inicial.es/",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.4215805,-3.6980797
+"3788924249",NA,NA,NA,"hostel",NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,40.6705435,-4.0862236

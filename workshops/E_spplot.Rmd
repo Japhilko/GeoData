@@ -1,5 +1,5 @@
 ---
-title: "sp package"
+title: "R-package sp"
 author: "Jan-Philipp Kolb"
 date: "04/22/2015"
 output: md_document
@@ -12,9 +12,11 @@ library(knitr)
 ca <- T
 ```
 
-## The package sp
+## The package [sp](https://cran.r-project.org/web/packages/sp/index.html)
 
-- classes and methods for spatial data
+- Classes and methods for spatial data
+- Authors: Edzer Pebesma, Roger Bivand, Barry Rowlingson, Virgilio Gomez-Rubio et. al.
+- Many [Introductions](http://ifgi.uni-muenster.de/~epebe_01/Aufbaukurs/R/slides_R.pdf) available
 
 ```{r,message=F,cache=ca,warning=F}
 library(sp)
@@ -28,8 +30,15 @@ library(sp)
 ```{r,message=F,cache=ca,warning=F}
 library(maptools)
 data("wrld_simpl")
-ind <- wrld_simpl@data$ISO2%in%c("FR","DE","AT","CH")
+ISO2codes <- wrld_simpl@data$ISO2
+countries <- c("FR","DE","AT","CH")
+ind <- match(countries,ISO2codes)
 my_map <- wrld_simpl[ind,]
+```
+
+## Plot my map
+
+```{r}
 plot(my_map)
 ```
 
@@ -43,7 +52,7 @@ head(my_map@data)
 
 ```{r,echo=F,cache=ca,warning=F}
 library(knitr)
-kable(my_map@data[1:4,1:5])
+kable(my_map@data[1:4,c("ISO2","NAME","AREA","POP2005","REGION")])
 ```
 
 
@@ -89,7 +98,7 @@ Generating synthetic data (Population 2010)
 
 ```{r,cache=ca,warning=F}
 my_map$Pop2010 <- my_map$POP2005 + 
-runif(length(my_map),-10000,10000)
+                    runif(length(my_map),-10000,10000)
 ```
 
 
@@ -120,3 +129,13 @@ spplot(my_map,c("POP2005","Pop2010"),
 - Edzer Pebesma and Roger S. Bivand - [S Classes and Methods for Spatial Data: the `sp` Package](https://cran.r-project.org/web/packages/sp/vignettes/intro_sp.pdf)
 
 - Edzer Pebesma - [Map overlay and spatial aggregation in sp](https://cran.r-project.org/web/packages/sp/vignettes/over.pdf)
+
+
+
+## Projections
+
+- [Spatial Reference Identifier](https://en.wikipedia.org/wiki/SRID)
+
+- [Working with shapefiles](http://lincolnmullen.com/projects/dh-r/geospatial-data.html)
+
+- [srid for OpenStreetMap](http://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet)

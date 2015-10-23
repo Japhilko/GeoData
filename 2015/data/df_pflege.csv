@@ -1,0 +1,445 @@
+"","NUTS1","NUTS2","AreaType","Anz"
+"1","Brandenburg",NA,"federal state",527
+"2","Berlin",NA,"federal state",451
+"3","Baden WÃ¼rttemberg",NA,"federal state",1929
+"4","Bayern",NA,"federal state",2195
+"5","Bremen",NA,"federal state",175
+"6","Hessen",NA,"federal state",1013
+"7","Hamburg",NA,"federal state",240
+"8","Mecklenburg Vorpommern",NA,"federal state",395
+"9","Niedersachsen",NA,"federal state",2039
+"10","Nordrhein-Westfalen",NA,"federal state",3312
+"11","Rheinland-Pfalz",NA,"federal state",544
+"12","Schleswig Holstein",NA,"federal state",787
+"13","Saarland",NA,"federal state",183
+"14","Sachsen",NA,"federal state",1043
+"15","Sachsen Anhalt",NA,"federal state",589
+"16","ThÃ¼ringen",NA,"federal state",506
+"17","Brandenburg","Barnim","district",42
+"18","Brandenburg","Brandenburg an der Havel","district",10
+"19","Brandenburg","Cottbus","district",29
+"20","Brandenburg","Dahme-Spreewald","district",25
+"21","Brandenburg","Elbe-Elster","district",24
+"22","Brandenburg","Frankfurt (Oder)","district",13
+"23","Brandenburg","Havelland","district",31
+"24","Brandenburg","MÃ¤rkisch-Oderland","district",41
+"25","Brandenburg","Oberhavel","district",37
+"26","Brandenburg","Oberspreewald-Lausitz","district",25
+"27","Brandenburg","Oder-Spree","district",33
+"28","Brandenburg","Ostprignitz-Ruppin","district",28
+"29","Brandenburg","Potsdam","district",25
+"30","Brandenburg","Potsdam-Mittelmark","district",51
+"31","Brandenburg","Prignitz","district",26
+"32","Brandenburg","Spree-NeiÃe","district",31
+"33","Brandenburg","Teltow-FlÃ¤ming","district",31
+"34","Brandenburg","Uckermark","district",25
+"35","BB","Barnim","district",42
+"36","BB","Brandenburg an der Havel","district",10
+"37","BB","Cottbus","district",29
+"38","BB","Dahme-Spreewald","district",25
+"39","BB","Elbe-Elster","district",24
+"40","BB","Frankfurt (Oder)","district",13
+"41","BB","Havelland","district",31
+"42","BB","MÃ¤rkisch-Oderland","district",41
+"43","BB","Oberhavel","district",37
+"44","BB","Oberspreewald-Lausitz","district",25
+"45","BB","Oder-Spree","district",33
+"46","BB","Ostprignitz-Ruppin","district",28
+"47","BB","Potsdam","district",25
+"48","BB","Potsdam-Mittelmark","district",51
+"49","BB","Prignitz","district",26
+"50","BB","Spree-NeiÃe","district",31
+"51","BB","Teltow-FlÃ¤ming","district",31
+"52","BB","Uckermark","district",25
+"53","BE","Kreisfreie Stadt Berlin","district",451
+"54","BW","Alb-Donau-Kreis","district",34
+"55","BW","Baden-Baden","district",17
+"56","BW","Biberach","district",33
+"57","BW","BÃ¶blingen","district",51
+"58","BW","Bodenseekreis","district",41
+"59","BW","Breisgau-Hochschwarzwald","district",40
+"60","BW","Calw","district",34
+"61","BW","Emmendingen","district",23
+"62","BW","Enzkreis","district",39
+"63","BW","Esslingen","district",78
+"64","BW","Freiburg im Breisgau","district",25
+"65","BW","Freudenstadt","district",39
+"66","BW","GÃ¶ppingen","district",42
+"67","BW","Heidelberg","district",15
+"68","BW","Heidenheim","district",25
+"69","BW","Heilbronn","district",88
+"70","BW","Hohenlohekreis","district",28
+"71","BW","Karlsruhe","district",133
+"72","BW","Konstanz","district",52
+"73","BW","Landkreis BÃ¶blingen","district",3
+"74","BW","LÃ¶rrach","district",41
+"75","BW","Ludwigsburg","district",81
+"76","BW","Main-Tauber-Kreis","district",35
+"77","BW","Mannheim","district",38
+"78","BW","Neckar-Odenwald-Kreis","district",41
+"79","BW","Ortenaukreis","district",89
+"80","BW","Ostalbkreis","district",69
+"81","BW","Pforzheim","district",20
+"82","BW","Rastatt","district",26
+"83","BW","Ravensburg","district",62
+"84","BW","Rems-Murr-Kreis","district",81
+"85","BW","Reutlingen","district",45
+"86","BW","Rhein-Neckar-Kreis","district",86
+"87","BW","Rottweil","district",28
+"88","BW","SchwÃ¤bisch Hall","district",45
+"89","BW","Schwarzwald-Baar-Kreis","district",37
+"90","BW","Sigmaringen","district",25
+"91","BW","Stuttgart","district",87
+"92","BW","TÃ¼bingen","district",41
+"93","BW","Tuttlingen","district",20
+"94","BW","Ulm","district",18
+"95","BW","Waldshut","district",36
+"96","BW","Zollernalbkreis","district",37
+"97","BY","Aichach-Friedberg","district",20
+"98","BY","AltÃ¶tting","district",22
+"99","BY","Amberg","district",8
+"100","BY","Amberg-Sulzbach","district",25
+"101","BY","Ansbach","district",42
+"102","BY","Aschaffenburg","district",37
+"103","BY","Augsburg","district",80
+"104","BY","Bad Kissingen","district",44
+"105","BY","Bad TÃ¶lz-Wolfratshausen","district",20
+"106","BY","Bamberg","district",54
+"107","BY","Bayreuth","district",51
+"108","BY","Berchtesgadener Land","district",22
+"109","BY","Cham","district",27
+"110","BY","Coburg","district",30
+"111","BY","Dachau","district",20
+"112","BY","Deggendorf","district",23
+"113","BY","Dillingen a.d.Donau","district",14
+"114","BY","Dingolfing-Landau","district",14
+"115","BY","Donau-Ries","district",16
+"116","BY","Ebersberg","district",11
+"117","BY","EichstÃ¤tt","district",22
+"118","BY","Erding","district",22
+"119","BY","Erlangen","district",14
+"120","BY","Erlangen-HÃ¶chstadt","district",25
+"121","BY","Forchheim","district",25
+"122","BY","Freising","district",16
+"123","BY","Freyung-Grafenau","district",14
+"124","BY","FÃ¼rstenfeldbruck","district",24
+"125","BY","FÃ¼rth","district",37
+"126","BY","Garmisch-Partenkirchen","district",22
+"127","BY","GÃ¼nzburg","district",22
+"128","BY","HaÃberge","district",13
+"129","BY","Hof","district",35
+"130","BY","Ingolstadt","district",16
+"131","BY","Kaufbeuren","district",10
+"132","BY","Kelheim","district",16
+"133","BY","Kempten (AllgÃ¤u)","district",12
+"134","BY","Kitzingen","district",16
+"135","BY","Kronach","district",15
+"136","BY","Kulmbach","district",15
+"137","BY","Landsberg am Lech","district",14
+"138","BY","Landshut","district",39
+"139","BY","Lichtenfels","district",16
+"140","BY","Lindau (Bodensee)","district",22
+"141","BY","Main-Spessart","district",19
+"142","BY","Memmingen","district",7
+"143","BY","Miesbach","district",11
+"144","BY","Miltenberg","district",24
+"145","BY","MÃ¼hldorf a.Inn","district",23
+"146","BY","MÃ¼nchen","district",117
+"147","BY","Neu-Ulm","district",17
+"148","BY","Neuburg-Schrobenhausen","district",16
+"149","BY","Neumarkt i.d.OPf.","district",32
+"150","BY","Neustadt a.d.Aisch-Bad Windsheim","district",21
+"151","BY","Neustadt a.d.Waldnaab","district",19
+"152","BY","NÃ¼rnberg","district",75
+"153","BY","NÃ¼rnberger Land","district",47
+"154","BY","OberallgÃ¤u","district",29
+"155","BY","OstallgÃ¤u","district",32
+"156","BY","Passau","district",47
+"157","BY","Pfaffenhofen a.d.Ilm","district",17
+"158","BY","Regen","district",22
+"159","BY","Regensburg","district",54
+"160","BY","RhÃ¶n-Grabfeld","district",18
+"161","BY","Rosenheim","district",84
+"162","BY","Roth","district",33
+"163","BY","Rottal-Inn","district",24
+"164","BY","Schwandorf","district",31
+"165","BY","Schweinfurt","district",32
+"166","BY","Starnberg","district",28
+"167","BY","Straubing","district",15
+"168","BY","Straubing-Bogen","district",13
+"169","BY","Tirschenreuth","district",15
+"170","BY","Traunstein","district",31
+"171","BY","UnterallgÃ¤u","district",30
+"172","BY","Weiden i.d.OPf.","district",9
+"173","BY","Weilheim-Schongau","district",25
+"174","BY","WeiÃenburg-Gunzenhausen","district",23
+"175","BY","Wunsiedel i.Fichtelgebirge","district",20
+"176","BY","WÃ¼rzburg","district",73
+"177","HB","Bremen","district",158
+"178","HB","Bremerhaven","district",16
+"179","HE","BergstraÃe","district",43
+"180","HE","Darmstadt","district",18
+"181","HE","Darmstadt-Dieburg","district",40
+"182","HE","Frankfurt am Main","district",61
+"183","HE","Fulda","district",52
+"184","HE","GieÃen","district",36
+"185","HE","GroÃ-Gerau","district",27
+"186","HE","Hersfeld-Rotenburg","district",22
+"187","HE","Hochtaunuskreis","district",36
+"188","HE","Kassel","district",101
+"189","HE","Kreisfreie Stadt Wiesbaden","district",1
+"190","HE","Lahn-Dill-Kreis","district",57
+"191","HE","Limburg-Weilburg","district",46
+"192","HE","Main-Kinzig-Kreis","district",67
+"193","HE","Main-Taunus-Kreis","district",22
+"194","HE","Marburg-Biedenkopf","district",43
+"195","HE","Odenwaldkreis","district",28
+"196","HE","Offenbach","district",28
+"197","HE","Offenbach am Main","district",14
+"198","HE","Rheingau-Taunus-Kreis","district",29
+"199","HE","Schwalm-Eder-Kreis","district",49
+"200","HE","Vogelsbergkreis","district",27
+"201","HE","Waldeck-Frankenberg","district",53
+"202","HE","Werra-MeiÃner-Kreis","district",39
+"203","HE","Wetteraukreis","district",41
+"204","HE","Wiesbaden","district",33
+"205","HH","Hamburg","district",239
+"206","MV","Bad Doberan","district",42
+"207","MV","Demmin","district",14
+"208","MV","Greifswald","district",13
+"209","MV","GÃ¼strow","district",35
+"210","MV","Ludwigslust","district",33
+"211","MV","Mecklenburg-Strelitz","district",18
+"212","MV","MÃ¼ritz","district",28
+"213","MV","Neubrandenburg","district",17
+"214","MV","Nordvorpommern","district",27
+"215","MV","Nordwestmecklenburg","district",31
+"216","MV","Ostvorpommern","district",23
+"217","MV","Parchim","district",25
+"218","MV","Rostock","district",23
+"219","MV","RÃ¼gen","district",13
+"220","MV","Schwerin","district",21
+"221","MV","Stralsund","district",15
+"222","MV","Uecker-Randow","district",17
+"223","NI","Ammerland","district",20
+"224","NI","Aurich","district",35
+"225","NI","Braunschweig","district",38
+"226","NI","Celle","district",68
+"227","NI","Cloppenburg","district",33
+"228","NI","Cuxhaven","district",68
+"229","NI","Delmenhorst","district",9
+"230","NI","Diepholz","district",66
+"231","NI","Emden","district",9
+"232","NI","Emsland","district",71
+"233","NI","Friesland","district",22
+"234","NI","Gifhorn","district",30
+"235","NI","Goslar","district",57
+"236","NI","GÃ¶ttingen","district",55
+"237","NI","Grafschaft Bentheim","district",34
+"238","NI","Hameln-Pyrmont","district",68
+"239","NI","Harburg","district",49
+"240","NI","Helmstedt","district",23
+"241","NI","Hildesheim","district",84
+"242","NI","Holzminden","district",40
+"243","NI","Leer","district",34
+"244","NI","LÃ¼chow-Dannenberg","district",18
+"245","NI","LÃ¼neburg","district",45
+"246","NI","Nienburg (Weser)","district",41
+"247","NI","Northeim","district",42
+"248","NI","Oldenburg","district",42
+"249","NI","Oldenburg (Oldenburg)","district",30
+"250","NI","OsnabrÃ¼ck","district",124
+"251","NI","Osterholz","district",37
+"252","NI","Osterode am Harz","district",41
+"253","NI","Peine","district",40
+"254","NI","Region Hannover","district",256
+"255","NI","Rotenburg (WÃ¼mme)","district",42
+"256","NI","Salzgitter","district",19
+"257","NI","Schaumburg","district",65
+"258","NI","Soltau-Fallingbostel","district",27
+"259","NI","Stade","district",34
+"260","NI","Uelzen","district",39
+"261","NI","Vechta","district",31
+"262","NI","Verden","district",46
+"263","NI","Wesermarsch","district",31
+"264","NI","Wilhelmshaven","district",30
+"265","NI","Wittmund","district",13
+"266","NI","WolfenbÃ¼ttel","district",18
+"267","NI","Wolfsburg","district",15
+"268","NW","Bielefeld","district",49
+"269","NW","Bochum","district",42
+"270","NW","Bonn","district",65
+"271","NW","Borken","district",71
+"272","NW","Bottrop","district",18
+"273","NW","Coesfeld","district",53
+"274","NW","Dortmund","district",81
+"275","NW","Duisburg","district",83
+"276","NW","DÃ¼ren","district",68
+"277","NW","DÃ¼sseldorf","district",95
+"278","NW","Ennepe-Ruhr-Kreis","district",66
+"279","NW","Essen","district",106
+"280","NW","Euskirchen","district",51
+"281","NW","Gelsenkirchen","district",31
+"282","NW","GÃ¼tersloh","district",52
+"283","NW","Hagen","district",30
+"284","NW","Hamm","district",30
+"285","NW","Heinsberg","district",73
+"286","NW","Herford","district",40
+"287","NW","Herne","district",30
+"288","NW","Hochsauerlandkreis","district",50
+"289","NW","HÃ¶xter","district",38
+"290","NW","Kleve","district",76
+"291","NW","KÃ¶ln","district",127
+"292","NW","Krefeld","district",48
+"293","NW","Kreisfreie Stadt Aachen","district",45
+"294","NW","Kreisfreie Stadt Duisburg","district",7
+"295","NW","Landkreis Aachen","district",5
+"296","NW","Leverkusen","district",18
+"297","NW","Lippe","district",81
+"298","NW","MÃ¤rkischer Kreis","district",78
+"299","NW","Mettmann","district",94
+"300","NW","Minden-LÃ¼bbecke","district",71
+"301","NW","MÃ¶nchengladbach","district",50
+"302","NW","MÃ¼lheim an der Ruhr","district",28
+"303","NW","MÃ¼nster","district",56
+"304","NW","Oberbergischer Kreis","district",86
+"305","NW","Oberhausen","district",41
+"306","NW","Olpe","district",29
+"307","NW","Paderborn","district",48
+"308","NW","Recklinghausen","district",106
+"309","NW","Remscheid","district",30
+"310","NW","Rhein-Erft-Kreis","district",71
+"311","NW","Rhein-Kreis Neuss","district",58
+"312","NW","Rhein-Sieg-Kreis","district",113
+"313","NW","Rheinisch-Bergischer Kreis","district",53
+"314","NW","Siegen-Wittgenstein","district",48
+"315","NW","Soest","district",84
+"316","NW","Solingen","district",44
+"317","NW","StÃ¤dteregion Aachen","district",58
+"318","NW","Steinfurt","district",83
+"319","NW","Unna","district",77
+"320","NW","Viersen","district",46
+"321","NW","Warendorf","district",49
+"322","NW","Wesel","district",98
+"323","NW","Wuppertal","district",84
+"324","RP","Ahrweiler","district",19
+"325","RP","Altenkirchen (Westerwald)","district",20
+"326","RP","Alzey-Worms","district",14
+"327","RP","Bad DÃ¼rkheim","district",17
+"328","RP","Bad Kreuznach","district",21
+"329","RP","Bernkastel-Wittlich","district",23
+"330","RP","Birkenfeld","district",17
+"331","RP","Cochem-Zell","district",15
+"332","RP","Donnersbergkreis","district",13
+"333","RP","Eifelkreis Bitburg-PrÃ¼m","district",15
+"334","RP","Frankenthal (Pfalz)","district",7
+"335","RP","Germersheim","district",13
+"336","RP","Kaiserslautern","district",25
+"337","RP","Koblenz","district",17
+"338","RP","Kusel","district",10
+"339","RP","Ludwigshafen am Rhein","district",15
+"340","RP","Mainz","district",19
+"341","RP","Mainz-Bingen","district",18
+"342","RP","Mayen-Koblenz","district",27
+"343","RP","Neustadt an der WeinstraÃe","district",5
+"344","RP","Neuwied","district",27
+"345","RP","Pirmasens","district",7
+"346","RP","Rhein-HunsrÃ¼ck-Kreis","district",14
+"347","RP","Rhein-Lahn-Kreis","district",14
+"348","RP","Rhein-Pfalz-Kreis","district",15
+"349","RP","Speyer","district",9
+"350","RP","SÃ¼dliche WeinstraÃe","district",17
+"351","RP","SÃ¼dwestpfalz","district",13
+"352","RP","Trier","district",10
+"353","RP","Trier-Saarburg","district",15
+"354","RP","Vulkaneifel","district",16
+"355","RP","Westerwaldkreis","district",37
+"356","RP","Worms","district",15
+"357","RP","ZweibrÃ¼cken","district",4
+"358","SH","Dithmarschen","district",39
+"359","SH","Flensburg","district",9
+"360","SH","Herzogtum Lauenburg","district",58
+"361","SH","Kiel","district",37
+"362","SH","Landkreis Schleswig-Flensburg","district",5
+"363","SH","LÃ¼beck","district",47
+"364","SH","NeumÃ¼nster","district",16
+"365","SH","Nordfriesland","district",46
+"366","SH","Ostholstein","district",57
+"367","SH","Pinneberg","district",66
+"368","SH","PlÃ¶n","district",41
+"369","SH","Rendsburg-EckernfÃ¶rde","district",85
+"370","SH","Schleswig-Flensburg","district",87
+"371","SH","Segeberg","district",75
+"372","SH","Steinburg","district",39
+"373","SH","Stormarn","district",80
+"374","SL","Merzig-Wadern","district",24
+"375","SL","Neunkirchen","district",29
+"376","SL","Regionalverband SaarbrÃ¼cken","district",52
+"377","SL","Saarlouis","district",35
+"378","SL","Saarpfalz-Kreis","district",22
+"379","SL","St. Wendel","district",21
+"380","SN"," Chemnitz","district",1
+"381","SN","Bautzen","district",86
+"382","SN","Chemnitz","district",5
+"383","SN","Dresden","district",100
+"384","SN","Erzgebirgskreis","district",85
+"385","SN","GÃ¶rlitz","district",88
+"386","SN","Kreisfreie Stadt Chemnitz","district",48
+"387","SN","Kreisfreie Stadt GÃ¶rlitz","district",7
+"388","SN","Kreisfreie Stadt Leipzig","district",87
+"389","SN","Landkreis LÃ¶bau-Zittau","district",2
+"390","SN","Landkreis Riesa-GroÃenhain","district",4
+"391","SN","Leipzig","district",65
+"392","SN","MeiÃen","district",63
+"393","SN","Mittelsachsen","district",92
+"394","SN","Nordsachsen","district",63
+"395","SN","SÃ¤chsische Schweiz-Osterzgebirge","district",72
+"396","SN","Vogtlandkreis","district",70
+"397","SN","Zwickau","district",105
+"398","ST","Altmarkkreis Salzwedel","district",21
+"399","ST","Anhalt-Bitterfeld","district",32
+"400","ST","BÃ¶rde","district",38
+"401","ST","Burgenlandkreis","district",48
+"402","ST","Dessau-RoÃlau","district",16
+"403","ST","Halle (Saale)","district",69
+"404","ST","Harz","district",73
+"405","ST","Jerichower Land","district",28
+"406","ST","Kreisfreie Stadt Halle","district",3
+"407","ST","Landkreis Anhalt-Zerbst","district",3
+"408","ST","Landkreis Aschersleben-StaÃfurt","district",3
+"409","ST","Landkreis Bitterfeld","district",9
+"410","ST","Landkreis Halberstadt","district",5
+"411","ST","Landkreis KÃ¶then","district",2
+"412","ST","Landkreis Mansfelder Land","district",6
+"413","ST","Landkreis SchÃ¶nebeck","district",2
+"414","ST","Landkreis Wernigerode","district",2
+"415","ST","Magdeburg","district",44
+"416","ST","Mansfeld-SÃ¼dharz","district",35
+"417","ST","Ohrekreis","district",1
+"418","ST","Saalekreis","district",28
+"419","ST","Salzlandkreis","district",73
+"420","ST","Stendal","district",26
+"421","ST","Wittenberg","district",20
+"422","TH","Altenburger Land","district",24
+"423","TH","Eichsfeld","district",30
+"424","TH","Eisenach","district",15
+"425","TH","Erfurt","district",28
+"426","TH","Gera","district",20
+"427","TH","Gotha","district",29
+"428","TH","Greiz","district",28
+"429","TH","Hildburghausen","district",25
+"430","TH","Ilm-Kreis","district",23
+"431","TH","Jena","district",17
+"432","TH","KyffhÃ¤userkreis","district",21
+"433","TH","Nordhausen","district",28
+"434","TH","Saale-Holzland-Kreis","district",12
+"435","TH","Saale-Orla-Kreis","district",18
+"436","TH","Saalfeld-Rudolstadt","district",29
+"437","TH","Schmalkalden-Meiningen","district",30
+"438","TH","SÃ¶mmerda","district",15
+"439","TH","Sonneberg","district",17
+"440","TH","Suhl","district",12
+"441","TH","Unstrut-Hainich-Kreis","district",30
+"442","TH","Wartburgkreis","district",24
+"443","TH","Weimar","district",17
+"444","TH","Weimarer Land","district",13

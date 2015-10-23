@@ -8,9 +8,7 @@ Introduction
 
 - Introduction  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.pdf))
-
 - Use case - Asylum seekers ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.pdf) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2015/rcode/SpatMA_AsylumSeekers.R) )
-
 - Organisation and background ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Organisation_and_background.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Organisation_and_background.pdf))
 
@@ -26,13 +24,52 @@ The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.
 produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap).
 
 - Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
-
 - Use case: [points of interest](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/) for backpackers in Amsterdam
 
-Political and thematic maps with R-packages maps and maptools
+Political and thematic maps with R-package maps 
 ---------------------
 
 A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries. In the following 3 approaches are presented to produce political maps. The thematic map is designed to show a particular theme connected with a specific geographic area ([Wikipedia](https://en.wikipedia.org/wiki/Thematic_map)). 
 
 - Organisation and Background Information ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/SpatialMA_Course3.pdf))
 - Political maps with R-package maps ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/C_maps.pdf) | [browser](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
+
+
+Polygons with R-package maptools
+---------------------
+
+- Recap of important R commands ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/RcommandsRecap.pdf))
+- Introduction to R-package maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/D_maptools.pdf) 
+| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
+- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/PolygonSources.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
+- Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/MapIdeas.pdf))
+
+
+Data Import and Data Linkage
+---------------------
+It is the target of this session to show how map data can be linked with other data to produce spatial visualisations. To produce the visualisations the R-package spplot is used.
+
+
+- Data Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+- Data Linkage ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Matching.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
+of data sources
+
+
+Use Cases: Data Import and Data Linkage
+---------------------
+In this session example datasets for different use cases are presented. And it is shown how to combine these datasets with spatial information.
+
+
+- R-package spplot and Color coding ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/E_spplot.pdf)  | [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/E_spplot.md) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+- Data for the use cases ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/Course6.md) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
+)
+- Use Case: Maps with Eurostat data ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
+- Use Case: Webscraping data on nursery ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/WebScraping.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
+- Use Case: Hostels Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/Madrid_hostels.md))
+
+
+
+Assignment: Please download the data for your use case and visualise it in a map.
+
