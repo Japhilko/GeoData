@@ -2,10 +2,10 @@
 \alias{get_osm_nodes_around}
 \title{function get_osm_nodes_around}
 \usage{
-get_osm_nodes(place,radius)
+get_osm_nodes_around(place,radius)
 }
 \arguments{
-\item{place}{Point/place}
+\item{place}{Point or place}
 \item{radius}{radius around point}
 
 }
@@ -19,5 +19,5 @@ Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 \code{\link{get_osm_nodes}}, \url{http://www.r-project.org}
 }
 \examples{
-# info <- get_osm_nodes_around("Mannheim",radius=5)
+info <- get_osm_nodes_around("Mannheim",radius=5)
 }

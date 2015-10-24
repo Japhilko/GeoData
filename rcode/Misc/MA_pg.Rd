@@ -1,8 +1,8 @@
-\name{uaBerlin}
-\alias{uaBerlin}
-\title{Dataset uaBerlin}
+\name{MA_pg}
+\alias{MA_pg}
+\title{Dataset MA_pg}
 \usage{
-data("uaBerlin")
+data("MA_pg")
 }
 \description{
 Is the result of a download of OSM data using the osmar project

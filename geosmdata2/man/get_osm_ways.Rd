@@ -2,7 +2,7 @@
 \alias{get_osm_ways}
 \title{function get_osm_ways}
 \usage{
-get_osm_nodes(object2,place)
+get_osm_ways(object2,place)
 }
 \arguments{
 \item{object2}{Value for map feature you are searching for}
