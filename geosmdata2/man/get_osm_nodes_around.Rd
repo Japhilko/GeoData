@@ -9,9 +9,6 @@ get_osm_nodes(place,radius)
 \item{radius}{radius around point}
 
 }
-\value{
-
-}
 \description{
 Returns info on nodes from \url{http://www.overpass-api.de/api/}
 }

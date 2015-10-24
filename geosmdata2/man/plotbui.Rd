@@ -17,6 +17,6 @@ Converts osmar object in polygons
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-data(uaBerlin)
+data("uaBerlin")
 pol_Berlin <- plotbui(uaBerlin)
 }
