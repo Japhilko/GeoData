@@ -4,7 +4,7 @@ data.path <- "C:/Forschung/GeoData/geosmdata2/data"
 setwd(data.path)
 load("osm_df.RData")
 
-save(osm_df,file="osm_df.RData",compress='xz')
+save(osm_df,file="osm_df.rds",compress='xz')
 
 load("uaBerlin.RData")
 save(uaBerlin,file="uaBerlin.RData",compress='xz')
