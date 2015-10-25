@@ -7,8 +7,7 @@ output: ioslides_presentation
 
 ## Hello World
 
-```{r}
-opts_chunk$set(fig.width=18, fig.height=10)
+```{r plot, fig.width=8, fig.height=4}
 plot(1:10)
 ```
 

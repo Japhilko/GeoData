@@ -107,7 +107,7 @@ kable(info_df)
 ```
 
 
-The ISO codes: 
+## The ISO codes: 
 
 
 ```{r,echo=F,cache=T}
@@ -152,7 +152,8 @@ qtm(Europe, fill="pop_est",fill.title="Population")
 ## Population density
 
 ```{r,cache=T}
-qtm(Europe, fill="pop_est_dens",fill.title="Population density") 
+qtm(Europe, fill="pop_est_dens",
+    fill.title="Population density") 
 ```
 
 
@@ -179,7 +180,7 @@ datatable(World@data)
 
 ```{r,echo=F,eval=T}
 data(World)
-kable(World@data)
+kable(World@data[1:15,])
 ```
 
 
@@ -206,7 +207,7 @@ data(NLD_prov)
 NLD_df <- NLD_prov@data
 NLD_df[,6] <- round(NLD_df[,6])
 
-kable(NLD_df[,1:6])
+kable(NLD_df[,c("name","name.data","province")])
         
 ```
 
@@ -270,7 +271,7 @@ prop65plus <- pop65plus/pop
 NLD_prov@data$proportion65plus <- prop65plus
 ```
 
-Plot this proportion
+## Plot proportion over 65
 ```{r,cache=T}
 qtm(NLD_prov, fill="proportion",fill.title="proportion") 
 ```
@@ -296,8 +297,7 @@ datatable(NLD_df[,1:6], class = 'cell-border stripe',rownames = FALSE,
 NLD_df <- NLD_muni@data
 NLD_df[,6] <- round(NLD_df[,6])
 
-kable(NLD_df[,1:6])
-      
+kable(NLD_df[,c("name","province","population")])
 ```
 
 ## Population of municipalities in the Netherlands
@@ -311,13 +311,21 @@ qtm(NLD_muni, fill="population")
 
 ## Two maps
 
-```{r}
+```{r,eval=F}
 tm_shape(Europe) +
     tm_fill(c("pop_est_dens", "gdp_cap_est"), 
-        title=c("Population density", "GDP per capita")) +
-tm_layout_Europe()
+        title=c("Population density", "GDP per capita"))
++ tm_layout_Europe()
 ```
 
+## Two maps
+
+```{r,eval=T,echo=F}
+tm_shape(Europe) +
+    tm_fill(c("pop_est_dens", "gdp_cap_est"), 
+        title=c("Population density", "GDP per capita"))
++ tm_layout_Europe()
+```
 
 
 ## Spatial data of global land cover
@@ -330,7 +338,7 @@ datatable(info_df)
 
 ```{r,echo=F,eval=T}
 data(land)
-info_df <- land@data[1:100,]
+info_df <- land@data[1:15,]
 kable(info_df)
 ```
 
