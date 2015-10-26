@@ -9,9 +9,6 @@ get_osm_area(object2,place)
 \item{place}{Place for the map features}
 
 }
-\value{
-
-}
 \description{
 Returns info on ways from \url{http://www.overpass-api.de/api/}
 }

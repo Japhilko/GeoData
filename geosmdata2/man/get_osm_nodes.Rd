@@ -7,10 +7,6 @@ get_osm_nodes(object2,place)
 \arguments{
 \item{object2}{Value for map feature you are searching for}
 \item{place}{Place for the map features}
-
-}
-\value{
-
 }
 \description{
 Returns info on nodes from \url{http://www.overpass-api.de/api/}

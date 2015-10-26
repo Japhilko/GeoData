@@ -5,7 +5,7 @@
 CircSearch(what,lat,lon,radius)
 }
 \arguments{
-\item{what,lat,lon,radius}{Map feature}
+\item{what}{Map feature}
 \item{lat}{Latitude}
 \item{lon}{Longitude}
 \item{radius}{Radius}

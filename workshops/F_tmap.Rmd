@@ -1,11 +1,11 @@
 ---
 title: "tmap"
 author: "Jan-Philipp Kolb"
-date: "08/04/2015"
-output: slidy_presentation
+date: "25/10/2015"
+output: beamer_presentation
 ---
 
-```{r,echo=F}
+```{r,echo=F,warning=F,message=F}
 library(knitr)
 library(DT)
 ```
@@ -40,7 +40,7 @@ EUR <- Europe@data
 ```
 
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 # http://rstudio.github.io/DT/
 datatable(Europe@data[,1:4], class = 'cell-border stripe',rownames = FALSE,
           options = list(pageLength = 10, autoWidth = TRUE)
@@ -48,6 +48,9 @@ datatable(Europe@data[,1:4], class = 'cell-border stripe',rownames = FALSE,
 # to see the options http://datatables.net/reference/option/
 ```
 
+```{r,echo=F}
+kable(Europe@data[,1:4])
+```
 
 ## For a map with other colors
 
@@ -67,7 +70,8 @@ qtm(Europe, fill="gdp_cap_est", text="iso_a3")
 ## A theme which fits better
 
 ```{r}
-qtm(Europe, fill="gdp_cap_est", text="iso_a3", text.size="AREA", root=5, fill.title="GDP per capita", 
+qtm(Europe, fill="gdp_cap_est", text="iso_a3", 
+    text.size="AREA", root=5, fill.title="GDP per capita", 
     fill.textNA="Non-European countries", theme="Europe")
 ```
 
@@ -103,7 +107,7 @@ kable(info_df)
 ```
 
 
-The ISO codes: 
+## The ISO codes: 
 
 
 ```{r,echo=F,cache=T}
@@ -148,7 +152,8 @@ qtm(Europe, fill="pop_est",fill.title="Population")
 ## Population density
 
 ```{r,cache=T}
-qtm(Europe, fill="pop_est_dens",fill.title="Population density") 
+qtm(Europe, fill="pop_est_dens",
+    fill.title="Population density") 
 ```
 
 
@@ -168,10 +173,16 @@ qtm(Europe, fill="income_grp",fill.title="Income group")
 
 ## The World data set in R-package `tmap`
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 data(World)
 datatable(World@data)
 ```
+
+```{r,echo=F,eval=T}
+data(World)
+kable(World@data[1:15,])
+```
+
 
 ## World - countries by income group
 
@@ -181,7 +192,7 @@ qtm(World, fill="income_grp",fill.title="Income group")
 
 ## A data set about the provinces in the Netheralnds (R-package `tmap`)
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 data(NLD_prov)
 NLD_df <- NLD_prov@data
 NLD_df[,6] <- round(NLD_df[,6])
@@ -189,6 +200,15 @@ NLD_df[,6] <- round(NLD_df[,6])
 datatable(NLD_df[,1:6], class = 'cell-border stripe',rownames = FALSE,
           options = list(pageLength = 10, autoWidth = TRUE)
           )
+```
+
+```{r,echo=F,eval=T}
+data(NLD_prov)
+NLD_df <- NLD_prov@data
+NLD_df[,6] <- round(NLD_df[,6])
+
+kable(NLD_df[,c("name","name.data","province")])
+        
 ```
 
 ## Netherlands - population in provinces
@@ -251,7 +271,7 @@ prop65plus <- pop65plus/pop
 NLD_prov@data$proportion65plus <- prop65plus
 ```
 
-Plot this proportion
+## Plot proportion over 65
 ```{r,cache=T}
 qtm(NLD_prov, fill="proportion",fill.title="proportion") 
 ```
@@ -264,7 +284,7 @@ data(NLD_muni)
 ```
 
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 NLD_df <- NLD_muni@data
 NLD_df[,6] <- round(NLD_df[,6])
 
@@ -273,6 +293,12 @@ datatable(NLD_df[,1:6], class = 'cell-border stripe',rownames = FALSE,
           )
 ```
 
+```{r,echo=F,eval=T}
+NLD_df <- NLD_muni@data
+NLD_df[,6] <- round(NLD_df[,6])
+
+kable(NLD_df[,c("name","province","population")])
+```
 
 ## Population of municipalities in the Netherlands
 
@@ -285,23 +311,36 @@ qtm(NLD_muni, fill="population")
 
 ## Two maps
 
-```{r}
+```{r,eval=F}
 tm_shape(Europe) +
     tm_fill(c("pop_est_dens", "gdp_cap_est"), 
-        title=c("Population density", "GDP per capita")) +
-tm_layout_Europe()
+        title=c("Population density", "GDP per capita"))
++ tm_layout_Europe()
 ```
 
+## Two maps
+
+```{r,eval=T,echo=F}
+tm_shape(Europe) +
+    tm_fill(c("pop_est_dens", "gdp_cap_est"), 
+        title=c("Population density", "GDP per capita"))
++ tm_layout_Europe()
+```
 
 
 ## Spatial data of global land cover
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 data(land)
 info_df <- land@data[1:100,]
 datatable(info_df)
 ```
 
+```{r,echo=F,eval=T}
+data(land)
+info_df <- land@data[1:15,]
+kable(info_df)
+```
 
 ## Map of global Land Cover
 
@@ -315,12 +354,20 @@ tm_shape(land,  relative=FALSE) +
 
 ## Spatial data of metropolitan areas
 
-```{r}
+```{r,eval=F,echo=F}
 data(metro)
 
 info_df <- metro@data[1:100,]
 datatable(info_df)
 ```
+
+```{r,eval=T,echo=F}
+data(metro)
+
+info_df <- metro@data[1:100,]
+kable(info_df)
+```
+
 
 ## Plot only one country
 
