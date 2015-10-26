@@ -9,8 +9,6 @@ library(tmap)
 library(shiny)
 GDP <- readRDS("data/EurostatGDP.rds")
 
-source("helpers.R")
-
 data(Europe)
 ind <- match(Europe@data$name,GDP$geo)
 Europe@data$GDP <- as.numeric(GDP$X2012Q3[ind])

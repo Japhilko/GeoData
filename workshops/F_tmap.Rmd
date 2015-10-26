@@ -315,7 +315,7 @@ qtm(NLD_muni, fill="population")
 tm_shape(Europe) +
     tm_fill(c("pop_est_dens", "gdp_cap_est"), 
         title=c("Population density", "GDP per capita"))
-+ tm_layout_Europe()
+# + tm_layout_Europe()
 ```
 
 ## Two maps
