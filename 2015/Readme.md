@@ -71,11 +71,16 @@ In this session example datasets for different use cases are presented. And it i
 
 Assignment: Please download the data for your use case and visualise it in a map.
 
-Thematic maps and Choropleths
+Thematic / Interactive maps and Choropleths
 ---------------------
 
 - Thematic maps with R-package tmap ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/F_tmap.pdf) |
 [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
+
+- Interactive maps with R-package leaflet 
+([pdf](https://github.com/Japhilko/GeoData/blob/master/Interactive_maps.pdf) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive maps.R))
+
 
 
