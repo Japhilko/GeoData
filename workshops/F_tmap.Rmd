@@ -1,8 +1,8 @@
 ---
 title: "tmap"
 author: "Jan-Philipp Kolb"
-date: "25/10/2015"
-output: beamer_presentation
+date: "Tue Oct 27 13:03:13 2015"
+output: md_document
 ---
 
 ```{r,echo=F,warning=F,message=F}
@@ -324,7 +324,7 @@ tm_shape(Europe) +
 tm_shape(Europe) +
     tm_fill(c("pop_est_dens", "gdp_cap_est"), 
         title=c("Population density", "GDP per capita"))
-+ tm_layout_Europe()
+# + tm_layout_Europe()
 ```
 
 
@@ -400,8 +400,6 @@ tm_layout_World(inner.margins=0,
 
 
 
-
-
 ## Small multiples
 
 ```{r,cache=T}
@@ -430,10 +428,6 @@ tm_shape(buildings_schloss$buildings, bbox=bb_schloss) +
   tm_polygons(col = "darkolivegreen3")
 ```
 
-## Download information - bigger area
 
-```{r,cache=T,eval=F}
-bb_Mannheim <- bb(q="Mannheim")
 
-```
 
