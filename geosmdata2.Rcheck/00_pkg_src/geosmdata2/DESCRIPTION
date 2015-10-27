@@ -10,4 +10,5 @@ License: GPL-2
 LazyData: TRUE
 Imports: osmar,sp
 Depends: RCurl,rjson,stringr,XML
-
+NeedsCompilation: no
+Packaged: 2015-10-27 21:34:51 UTC; Kolb

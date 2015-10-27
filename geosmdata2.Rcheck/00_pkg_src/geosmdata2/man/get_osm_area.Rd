@@ -1,8 +1,8 @@
-\name{get_osm_ways}
-\alias{get_osm_ways}
-\title{function get_osm_ways}
+\name{get_osm_area}
+\alias{get_osm_area}
+\title{function get_osm_area}
 \usage{
-get_osm_ways(object2,place)
+get_osm_area(object2,place)
 }
 \arguments{
 \item{object2}{Value for map feature you are searching for}
@@ -16,7 +16,5 @@ Returns info on ways from \url{http://www.overpass-api.de/api/}
 Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 }
 \examples{
-#  roads <- get_osm_ways(object2="secondary",place="Sandhofen")
-  bike_routes <- get_osm_ways(object2="cycleway",place="Berkeley")
-
+  roads <- get_osm_area(object2="pedestrian",place="Rom")
 }

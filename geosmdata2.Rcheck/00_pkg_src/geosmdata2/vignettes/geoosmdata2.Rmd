@@ -1,0 +1,113 @@
+---
+title: "Download and work with data from OpenStreetMap"
+author: "Jan-Philipp Kolb"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r,echo=F}
+ca <- T
+Val_eval=F
+```
+
+
+
+## Introduction
+
+The `geoosmdata2` package is designed for the download and work with data from OpenStreetMap. 
+The [Overpass](http://wiki.openstreetmap.org/wiki/Overpass_API)-API is used to get data out of OpenStreetMap.
+
+
+
+
+```{r,cache=ca,eval=Val_eval}
+library(geosmdata2)
+```
+
+## Geocoding with nominatim
+
+```{r,cache=ca,eval=Val_eval}
+gc <- geocode_osm("rue Saint Vincent Paris",output="all")
+```
+
+## Get information on points of interest (POI)
+
+```{r,cache=ca,eval=Val_eval}
+cafes <- get_osm_nodes("cafe",place="Concord")
+
+cafes_cc <- extract_info_op(OSM.Data=cafes,value="cafe")
+```
+
+Get information about Hostels in a city:
+
+```{r hostels,cache=T}
+library(geosmdata2)
+place <- "Madrid"
+object <- "hostel"
+obj <- get_osm_nodes(object,place)
+op <- extract_info_op(obj,object)
+```
+
+
+
+The `ggmap` function from package [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html) can be used to download a background map. 
+
+
+```{r stamenMap,message=F,cache=T}
+place_map12stamen <- qmap(place, zoom = 12,
+                          maptype="toner-lite",
+                          source="stamen")
+```
+
+
+```{r}
+place_map12stamen + geom_point(aes(x = lon, y = lat),
+                       data = op,size=3,col="red") 
+```
+
+
+```{r,cache=ca,eval=Val_eval}
+library(ggmap)
+Concord_map <- get_googlemap("Concord")
+ggmap(Concord_map)+ geom_point(aes(x = lon, y = lat),
+data = cafes_cc)
+```
+
+
+
+## Area
+
+```{r,cache=ca,eval=Val_eval}
+
+Rom_pedestrian <- get_osm_area(object2="pedestrian",
+                               place="Rom")
+info_pedestrian <- extract_info_op(OSM.Data=Rom_pedestrian,
+                                    value="pedestrian")
+
+```
+
+## Get information about bicycle routes
+
+```{r,cache=ca,eval=Val_eval}
+MA_cycle1 <- get_osm_ways(object2="cycleway",place="Mannheim")
+MA_bike_routes <- extract_position_op(MA_cycle1,"cycleway")
+```
+
+
+
+## Relation
+
+> "A relation is one of the core data elements that consists of one or more tags and also an ordered list of one or more nodes, ways and/or relations as members which is used to define logical or geographic relationships between other elements. A member of a relation can optionally have a role which describe the part that a particular feature plays within a relation. "
+([via](http://wiki.openstreetmap.org/wiki/Relation))
+
+```{r,eval=F,cache=ca,eval=Val_eval}
+MA_bike_routes <- get_osm_relation("bicycle","Mannheim")
+
+info_bike_routes <- extract_info_op(OSM.Data=MA_bike_routes,
+                                    value="bicycle")
+```
+

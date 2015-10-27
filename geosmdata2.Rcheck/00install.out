@@ -1,0 +1,22 @@
+* installing *source* package 'geosmdata2' ...
+** R
+** data
+*** moving datasets to lazyload DB
+** preparing package for lazy loading
+Warnung: package 'RCurl' was built under R version 3.2.2
+Warnung: package 'rjson' was built under R version 3.2.2
+Warnung: package 'XML' was built under R version 3.2.2
+** help
+*** installing help indices
+** building package indices
+** installing vignettes
+** testing if installed package can be loaded
+*** arch - i386
+Warnung: package 'RCurl' was built under R version 3.2.2
+Warnung: package 'rjson' was built under R version 3.2.2
+Warnung: package 'XML' was built under R version 3.2.2
+*** arch - x64
+Warnung: package 'RCurl' was built under R version 3.2.2
+Warnung: package 'rjson' was built under R version 3.2.2
+Warnung: package 'XML' was built under R version 3.2.2
+* DONE (geosmdata2)
