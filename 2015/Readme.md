@@ -74,7 +74,7 @@ Assignment: Please download the data for your use case and visualise it in a map
 Thematic / Interactive maps and Choropleths
 ---------------------
 
-- Organisation and Background Information ()
+- Organisation and Background Information ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Course7.pdf))
 - Thematic maps with R-package tmap ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/F_tmap.pdf) |
 [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
