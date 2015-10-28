@@ -79,7 +79,7 @@ Thematic / Interactive maps and Choropleths
 [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
 - Interactive maps with R-package leaflet 
-([pdf](https://github.com/Japhilko/GeoData/blob/master/Interactive_maps.pdf) |
+([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Interactive_maps.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive maps.R))
 
 
