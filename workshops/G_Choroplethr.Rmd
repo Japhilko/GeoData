@@ -157,4 +157,4 @@ datatable(df_president_ts, options = list(pageLength = 5))
 
 - [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)
 
-
+- [Presentation Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/)
