@@ -2,16 +2,8 @@
 title: "Georeferenzierung"
 author: "Jan-Philipp Kolb"
 date: "7 Mai 2015"
-output: slidy_presentation
+output: md_document
 ---
-
-## Allgemein
-
-Unter dem Vorgang der Georeferenzierung, Geokodierung, Geotagging oder Verortung versteht man die Zuweisung raumbezogener Informationen, der Georeferenz, zu einem Datensatz.
-
-<http://de.wikipedia.org/wiki/Georeferenzierung>
-
-
 
 
 ```{r,eval=F,echo=F}
@@ -19,4 +11,48 @@ main.path <- "J:/Work/Statistik/Kolb/Vorträge/20151101_LifBi_Georeferenzierung/
 main.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/presentations"
 setwd(main.path)
 ```
+
+
+
+
+## Allgemein
+
+Unter dem Vorgang der Georeferenzierung, Geokodierung, Geotagging oder Verortung versteht man die Zuweisung raumbezogener Informationen, der Georeferenz, zu einem Datensatz.
+
+<http://de.wikipedia.org/wiki/Georeferenzierung>
+
+```{r coord_lifbi,cache=T}
+library(ggmap)
+coord_lifbi <- geocode("Bamberg Wilhelmplatz",source="google")
+coord_lifbi
+```
+
+```{r Bamb1,cache=T}
+library(ggmap)
+Bamb1 <- qmap("Bamberg Wilhelmplatz", zoom = 17, 
+maptype="satellite")
+Bamb1
+```
+
+```{r googleDist,cache=T}
+MA <- geocode("Mannheim Hbf")
+MA2 <- geocode("Mannheim Neckarstadt")
+mapdist("Hbf Mannheim","Hbf Koeln")
+```
+
+```{r}
+library(SoDA)
+googleDist <- geoDist(MA$lat,MA$lon,MA2$lat,MA2$lon)
+```
+
+
+
+
+## Geokodierung geocodeHERE
+
+```{r}
+library(geocodeHERE)
+citation("geocodeHERE")
+```
+
 
