@@ -21,20 +21,34 @@ Unter dem Vorgang der Georeferenzierung, Geokodierung, Geotagging oder Verortung
 
 <http://de.wikipedia.org/wiki/Georeferenzierung>
 
-```{r coord_lifbi,cache=T}
+
+## Ausgangspunkt
+
+[Bericht RatSWD](http://www.ratswd.de/Geodaten/downloads/RatSWD_Endbericht_Geo-AG.pdf)
+
+
+## Geokodierung ggmap
+
+```{r}
 library(ggmap)
+citation("ggmap")
+```
+
+
+
+```{r coord_lifbi,cache=T}
 coord_lifbi <- geocode("Bamberg Wilhelmplatz",source="google")
 coord_lifbi
 ```
 
-```{r Bamb1,cache=T}
+```{r Bamb1,cache=T,message=F,warning=F}
 library(ggmap)
 Bamb1 <- qmap("Bamberg Wilhelmplatz", zoom = 17, 
 maptype="satellite")
 Bamb1
 ```
 
-```{r googleDist,cache=T}
+```{r googleDist,cache=T,message=F,warning=F}
 MA <- geocode("Mannheim Hbf")
 MA2 <- geocode("Mannheim Neckarstadt")
 mapdist("Hbf Mannheim","Hbf Koeln")
@@ -50,9 +64,87 @@ googleDist <- geoDist(MA$lat,MA$lon,MA2$lat,MA2$lon)
 
 ## Geokodierung geocodeHERE
 
+[Get started](http://developer.here.com/get-started)
+
+
 ```{r}
 library(geocodeHERE)
 citation("geocodeHERE")
+coord_WP <- geocodeHERE_simple("Bamberg Wilhelmsplatz 1")
 ```
+
+## Geokdoierung mit OpenStreetMap
+
+- [Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim)
+- [Osmar](https://cran.r-project.org/web/packages/osmar/index.html)
+
+
+```{r,cache=T}
+library(geosmdata2)
+
+geo_osm <- geocode_osm("Bamberg Wilhelmsplatz 1")
+geo_osm
+```
+
+
+
+
+
+```{r}
+bb_mas <- array(c(10.82845,10.96508,49.84427,49.93073),c(2,2))
+
+colnames(bb_mas) <- c("min","max")
+rownames(bb_mas) <- c("x","y")
+
+bb22 <- center_bbox(poinTs2[i,1],poinTs2[i,2],Dist_m_x/v_dist, Dist_m_y/v_dist)
+```
+
+```{r,cache=T}
+  bb22 <- center_bbox(10.89684,49.89196,490, 490)
+  ua <- get_osm(bb22, source = api)
+```
+
+```{r}
+tagsK <- ua$nodes$tags$k
+tagsV <- ua$nodes$tags$v
+```
+
+```{r wordcloud}
+library(wordcloud)
+wordcloud(tagsK)
+```
+
+```{r buildingsBamberg, cache=T}
+library(geosmdata2)
+
+bg <- plotbui(ua)
+
+plot(bg)
+```
+
+## Geokodierung mit QGIS
+
+- [QGIS](http://www.stevencanplan.com/2009/02/how-to-geocode-in-open-source-qgis/)
+
+## BKG Dienste
+
+- [Manuel Fischer](http://www.bkg.bund.de/nn_197766/SharedDocs/Download/Aktuelles/VortraegeGewusstWo/2015/2015-02-25__GewusstWo__BKG__Geokodierung_20einfach_20gemacht,templateId=raw,property=publicationFile.pdf/2015-02-25_GewusstWo_BKG_Geokodierung%20einfach%20gemacht.pdf) 
+Geokodierung einfach gemacht
+
+- [Gewusst wo 2015](http://www.bkg.bund.de/nn_197766/DE/Aktu/Veranstaltungen/GewusstWo__2015/GewusstWo2015.html)
+
+- [Projekt Georefum](http://www.gesis.org/forschung/drittmittelprojekte/projektuebersicht-drittmittel/georefum/)
+
+
+## Kontextdaten
+
+- Nur wenn Zuordnung zu Raum möglich, können Kontextdaten angespielt werden.
+- Geokodierung kann Grundlage für Anspielung von Kontextdaten sein.
+
+- Frage ist auf welcher Ebene Kontextdaten angespielt werden sollen/dürfen.
+
+## Polygonzüge für verschiedene Einheiten in Deutschland
+
+
 
 
