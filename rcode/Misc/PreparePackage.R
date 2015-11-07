@@ -1,3 +1,4 @@
+library(roxygen2)
 
 data.path <- "C:/Forschung/GeoData/geosmdata2/data"
 
