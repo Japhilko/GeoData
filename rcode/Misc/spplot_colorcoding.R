@@ -194,3 +194,9 @@ spplot(EUR, "AREA",
 # http://geog.uoregon.edu/GeogR/topics/maps02.html
 
 # https://ryouready.wordpress.com/2009/11/16/infomaps-using-r-visualizing-german-unemployment-rates-by-color-on-a-map/
+
+# http://www.milanor.net/blog/?p=634
+
+# http://www.r-bloggers.com/stamen-maps-with-spplot/
+
+# http://gis.stackexchange.com/questions/116857/polygon-fill-colour-specified-by-column-r-spplot
