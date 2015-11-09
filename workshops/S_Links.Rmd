@@ -24,7 +24,7 @@ output: ioslides_presentation
 
 - [Robinlovelace - Open Street Map: loading, analysing and visualising free maps with R and QGIS](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
 
-
+<
 ## Making more maps
 
 [Example 1](http://www.r-bloggers.com/reot-empirical-orthogonal-teleconnections-in-r/)
@@ -196,3 +196,5 @@ http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
 - [chorpleths and reference maps](http://www.r-bloggers.com/combining-choropleth-maps-and-reference-maps-in-r/)
 
 - [maps Amanda Cox](http://www.r-bloggers.com/amanda-cox-on-using-r-at-the-nyt/)
+
+- [Youtube - Intro spatial](https://www.youtube.com/watch?v=u4AAlnsfAAU)

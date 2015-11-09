@@ -6,7 +6,7 @@ output: slidy_presentation
 ---
 
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(knitr)
 ```
 
@@ -15,7 +15,7 @@ library(knitr)
 
 Install package from [github](https://github.com/Japhilko/GeoData)
 
-```{r,eval=F}
+```{r,eval=F,warning=F}
 library(devtools)
 devtools::install_github("Japhilko/GeoData/geosmdata2")
 ```
@@ -32,14 +32,14 @@ info <- extract_info_op(xml_obj,"bakery")
 
 ## The resulting data frame
 
-```{r,echo=F,cache=T}
+```{r,echo=F,cache=T,warning=F}
 kable(info[1:8,c("addr.city","name","lat","lon")])
 ```
 
 
 ## The resulting data frame (summarized)
 
-```{r,cache=T}
+```{r,cache=T,warning=F}
 nr_mf <- apply(info,2,function(x)sum(!is.na(x)))
 nr_mf
 ```
@@ -48,7 +48,7 @@ nr_mf
 
 ## Get a map from [stamen](http://maps.stamen.com/)
 
-```{r,cache=T,message=F}
+```{r,cache=T,message=F,warning=F}
 library(ggmap)
 Imap <- qmap(location = place, zoom = 11, maptype="toner",source="stamen")
 Imap
