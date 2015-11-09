@@ -82,5 +82,7 @@ Thematic / Interactive maps and Choropleths
 ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Interactive_maps.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive maps.R))
 
+Choropleths
+---------------------
 
-
+- Package presentation choroplethr

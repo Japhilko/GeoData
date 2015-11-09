@@ -63,8 +63,8 @@ Jan-Philipp Kolb
 <div id="population-estimates-for-us-states" class="slide section level2">
 <h1>Population estimates for US States</h1>
 <p><code>df_pop_state</code> is a dataset which is included in the package <code>choroplethr</code>, containing population estimates for US States in 2012.</p>
-<p><div id="htmlwidget-5668" style="width:100%;height:auto;" class="datatables"></div>
-<script type="application/json" data-for="htmlwidget-5668">{"x":{"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware","district of columbia","florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky","louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi","missouri","montana","nebraska","nevada","new hampshire","new jersey","new mexico","new york","north carolina","north dakota","ohio","oklahoma","oregon","pennsylvania","rhode island","south carolina","south dakota","tennessee","texas","utah","vermont","virginia","washington","west virginia","wisconsin","wyoming"],[4777326,711139,6410979,2916372,37325068,5042853,3572213,900131,605759,18885152,9714569,1362730,1567803,12823860,6485530,3047646,2851183,4340167,4529605,1329084,5785496,6560595,9897264,5313081,2967620,5982413,990785,1827306,2704204,1317474,8793888,2055287,19398125,9544249,676253,11533561,3749005,3836628,12699589,1052471,4630351,815871,6353226,25208897,2766233,625498,8014955,6738714,1850481,5687219,562803]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> </th>\n      <th>region</th>\n      <th>value</th>\n    </tr>\n  </thead>\n</table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"callback":null,"filter":"none"},"evals":[]}</script></p>
+<p><div id="htmlwidget-4340" style="width:100%;height:auto;" class="datatables"></div>
+<script type="application/json" data-for="htmlwidget-4340">{"x":{"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51"],["alabama","alaska","arizona","arkansas","california","colorado","connecticut","delaware","district of columbia","florida","georgia","hawaii","idaho","illinois","indiana","iowa","kansas","kentucky","louisiana","maine","maryland","massachusetts","michigan","minnesota","mississippi","missouri","montana","nebraska","nevada","new hampshire","new jersey","new mexico","new york","north carolina","north dakota","ohio","oklahoma","oregon","pennsylvania","rhode island","south carolina","south dakota","tennessee","texas","utah","vermont","virginia","washington","west virginia","wisconsin","wyoming"],[4777326,711139,6410979,2916372,37325068,5042853,3572213,900131,605759,18885152,9714569,1362730,1567803,12823860,6485530,3047646,2851183,4340167,4529605,1329084,5785496,6560595,9897264,5313081,2967620,5982413,990785,1827306,2704204,1317474,8793888,2055287,19398125,9544249,676253,11533561,3749005,3836628,12699589,1052471,4630351,815871,6353226,25208897,2766233,625498,8014955,6738714,1850481,5687219,562803]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> </th>\n      <th>region</th>\n      <th>value</th>\n    </tr>\n  </thead>\n</table>","options":{"pageLength":5,"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[5,10,25,50,100]},"callback":null,"filter":"none"},"evals":[]}</script></p>
 </div>
 <div id="choroplethr---hello-world" class="slide section level2">
 <h1><code>choroplethr</code> - Hello World</h1>
@@ -136,18 +136,6 @@ Jan-Philipp Kolb
 <li><a href="http://www.htmlwidgets.org/showcase_datatables.html">datatable</a></li>
 </ul>
 </div>
-<div id="animated-1" class="slide section level2">
-<h1>Animated</h1>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="co"># create a list of choropleths of presidential election results for each year</span>
-choropleths =<span class="st"> </span><span class="kw">list</span>()
-for (i in <span class="dv">2</span>:<span class="kw">ncol</span>(df_president_ts)) {
-  df           =<span class="st"> </span>df_president_ts[, <span class="kw">c</span>(<span class="dv">1</span>, i)]
-  <span class="kw">colnames</span>(df) =<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;region&quot;</span>, <span class="st">&quot;value&quot;</span>)
-  title        =<span class="st"> </span><span class="kw">paste0</span>(<span class="st">&quot;Presidential Election Results: &quot;</span>, <span class="kw">colnames</span>(df_president_ts)[i])
-  choropleths[[i<span class="dv">-1</span>]] =<span class="st"> </span><span class="kw">state_choropleth</span>(df, <span class="dt">title=</span>title)
-}</code></pre>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">choroplethr_animate</span>(choropleths)</code></pre>
-</div>
 <div id="resources-links" class="slide section level2">
 <h1>Resources / Links</h1>
 <ul>
@@ -157,6 +145,7 @@ for (i in <span class="dv">2</span>:<span class="kw">ncol</span>(df_president_ts
 <li><p><a href="https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html">Mapping World Bank Data</a></p></li>
 <li><p><a href="http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html">Revolutions-blog</a></p></li>
 <li><p><a href="http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/">trulia</a></p></li>
+<li><p><a href="http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/">Presentation Ari Lamstein</a></p></li>
 </ul>
 </div>
 
