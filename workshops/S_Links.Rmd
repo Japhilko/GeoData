@@ -1,30 +1,32 @@
 ---
 title: "Interesting Geo Links"
 author: "Jan-Philipp Kolb"
-date: "24. April 2015"
+date: "Tue Nov 10 20:18:46 2015"
 output: ioslides_presentation
 ---
 
-## Learning R
+## Introduction R
 
 - [Learning R](https://learnr.wordpress.com/)
 
 - [Useful tutorials](http://robjhyndman.com/hyndsight/useful-tutorials/)
 
 
-## Making maps
+## R as GIS
+
+- [FWTools: Open Source GIS Binary Kit for Windows and Linux](http://fwtools.maptools.org/)
 
 - A very [comprehensive tutorial](http://pakillo.github.io/R-GIS-tutorial) was published by [Francisco Rodriguez-Sanchez](https://sites.google.com/site/rodriguezsanchezf/). 
 
 - [Hints](http://giswerk.org/) on the usage of OpenStreetMap data with R
 
-- [Task view for mapping tools](https://github.com/ropensci/maptools)
+## Examples on github
 
-- [Another Intro on making maps](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+- [Task view for mapping tools](https://github.com/ropensci/maptools)
 
 - [Robinlovelace - Open Street Map: loading, analysing and visualising free maps with R and QGIS](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
 
-<
+
 ## Making more maps
 
 [Example 1](http://www.r-bloggers.com/reot-empirical-orthogonal-teleconnections-in-r/)
@@ -45,22 +47,30 @@ output: ioslides_presentation
 
 - [Use ggmap and maptools to create choropleths](http://www.milanor.net/blog/?p=634)
 
-## R as GIS
+## [R as GIS](http://www.r-bloggers.com/r-an-integrated-statistical-programming-environment-and-gis/)
 
-- [R as GIS](http://www.r-bloggers.com/r-an-integrated-statistical-programming-environment-and-gis/)
+![pic](https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/vignettes/figure/Aggregated_data_for_culters.png)
+
 
 ## More Intros - making maps with R
 
-- [part 1](http://procomun.wordpress.com/2012/02/18/maps_with_r_1/)
-- [part 3](http://procomun.wordpress.com/2012/02/23/maps_with_r_3/)
+- [Part 1](http://procomun.wordpress.com/2012/02/18/maps_with_r_1/) (a shapefile of spain), [Part 2](https://procomun.wordpress.com/2012/02/20/maps_with_r_2/) and [Part 3](http://procomun.wordpress.com/2012/02/23/maps_with_r_3/)
+
+![pic](https://procomun.files.wordpress.com/2012/04/spainvotes.jpeg?w=1280&h=1064)
+
+
+
+
+
+## David Kahle - ggmap 
 
 - [David Kahle's Homepage](https://sites.google.com/site/davidkahle/ggmap)
+
+![pic](https://sites.google.com/site/davidkahle/_/rsrc/1334335869242/ggmap/bin2d.jpg?height=400&width=400)
 
 ## Work with OpenStreetMap data
 
 In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tutorial-umkreissuche/))
-
-- [Mapping the world with tweets](http://rcrastinate.blogspot.de/)
 
 - [Ryan Peek - Making Maps](file:///D:/Dropbox/RForschung/SpatialCourse/Rcode/makingmaps/makingmaps.html)
 
@@ -72,26 +82,26 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 
 - [Visualizing GIS data with R and Open Street Map](http://www.r-bloggers.com/visualizing-gis-data-with-r-and-open-street-map/>)
 
-- [John snow and openstreetmap](http://www.r-bloggers.com/john-snow-and-openstreetmap/)
-
-## Videos on OSM
-
-- Roland Olbricht: [Schatzsuche in OpenStreetMap](https://www.youtube.com/watch?v=VJItOHImN7A&noredirect=1)
-- Claas Leiner: [Daten aus OSM extrahieren und in QGIS weiterverarbeiten](https://www.youtube.com/watch?v=VhGeaTBfFuA)
+- [John Snow and openstreetmap](http://www.r-bloggers.com/john-snow-and-openstreetmap/)
 
 ## Interactive maps
 
 - [Exchange data between R and the Google Maps API using Shiny](http://r-video-tutorial.blogspot.ch/2015/05/exchange-data-between-r-and-google-maps.html)
 
+- [Leaflet](http://www.r-bloggers.com/mapping-the-past-and-the-future-with-leaflet/)
+
+- [Maps with leaflet](http://www.r-bloggers.com/a-segmentation-of-the-world-according-to-migration-flows-ft-leaflet/)
+
+- [Leaflet kissing](http://www.r-bloggers.com/the-map-of-romantic-kissing-with-leaflet-and-r/)
+
+
 ## Flowing data
 
 - [Where people run](http://flowingdata.com/2014/02/05/where-people-run/)
 
+![pic](http://i1.wp.com/flowingdata.com/wp-content/uploads/2014/02/DC-feature.png?zoom=1.5&resize=954%2C473)
+
 ## Interesting geolinks
-
-- [gis-mannheim](http://www.gis-mannheim.de/)
-
-- [FWTools: Open Source GIS Binary Kit for Windows and Linux](http://fwtools.maptools.org/)
 
 - [More people tweet more](http://rcrastinate.blogspot.de/2013/10/no-surprises-more-people-tweet-more.html)
 
@@ -99,21 +109,7 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 
 - [Openlayers](http://openlayers.org/en/v3.2.0/doc/tutorials/introduction.html)
 
-
-## Twitter and Maps
-
-- [The USA in two words](https://aschinchon.wordpress.com/2015/02/20/the-united-states-in-two-words/)
-
-<img src="https://aschinchon.files.wordpress.com/2015/02/states-in-two-words-v2.jpeg?w=906&h=453" width="900x" height="500x">
-
-- [Twitter data analysis](http://statistik-stuttgart.de/r-twitter-data-analysis/)
-
-```{r,eval=F}
-library(streamR)
-library(twitteR)
-library(RCurl)
-```
-
+- [Another Intro on making maps](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
 
 
 ## More links
@@ -122,8 +118,6 @@ library(RCurl)
 
 - [Merge Shapefile](http://www.r-bloggers.com/how-to-merge-a-shapefile-and-set-the-encoding-with-r/)
 
-- [Football tribes](http://theinformationcapital.com/project/football-tribes/)
-
 - [Map projections](http://psychologist590.rssing.com/chan-35984540/all_p2.html)
 
 - [CartoDB](https://cartodb.com/)
@@ -131,8 +125,6 @@ library(RCurl)
 ```{r,echo=F}
 # http://www.r-bloggers.com/can-you-track-me-now-visualizing-xfinity-wi-fi-hotspot-coverage-part-1/
 # http://citycartographer.com/tag/r-programming/
-
-# http://www.r-bloggers.com/mapping-the-past-and-the-future-with-leaflet/
 
 # Suche:
 # r-project + ggmap
@@ -163,6 +155,8 @@ library(RCurl)
 
 - [R ggmap examples: CloudMade Maps](http://statmatt.com/r-ggmap-examples-cloudmade-maps/)
  and [spatial maps](http://statmatt.com/r-ggmap-examples-plot-overlay-spatial-data/) and [data visualisation](http://statmatt.com/data-visualization/)
+
+## More maps
  
 http://stackoverflow.com/questions/22387624/ggplot2-with-ggmap-odd-shaped-polygon-r
 
@@ -172,12 +166,11 @@ http://blogs.casa.ucl.ac.uk/category/r-spatial-tips/
 
 http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
   
+## Examples 
 
 - [wine tasting map](http://www.r-bloggers.com/a-napa-valley-wine-tasting-map-made-with-r-and-ggmap/)
 
 - [rCrimemap](https://github.com/woobe/rCrimemap)
-
-- [Zeit Deutschlandkarte](http://www.zeit.de/serie/deutschlandkarte)
 
 - [Refugees destination - origin](http://pejl.svt.se/flyktingstrommar-en/?utm_content=buffer97b11&utm_medium=social&utm_source=facebook.com&utm_campaign=buffer#ru2010)
 
@@ -189,12 +182,46 @@ http://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/
 
 - [Intro spatial](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
 
-- [Maps with leaflet](http://www.r-bloggers.com/a-segmentation-of-the-world-according-to-migration-flows-ft-leaflet/)
+- [Choropleths and reference maps](http://www.r-bloggers.com/combining-choropleth-maps-and-reference-maps-in-r/)
 
-- [Leaflet kissing](http://www.r-bloggers.com/the-map-of-romantic-kissing-with-leaflet-and-r/)
+## Maps with web data
 
-- [chorpleths and reference maps](http://www.r-bloggers.com/combining-choropleth-maps-and-reference-maps-in-r/)
+Twitter and Maps
 
-- [maps Amanda Cox](http://www.r-bloggers.com/amanda-cox-on-using-r-at-the-nyt/)
+- [Mapping the world with tweets](http://rcrastinate.blogspot.de/)
+
+- [The USA in two words](https://aschinchon.wordpress.com/2015/02/20/the-united-states-in-two-words/)
+
+<img src="https://aschinchon.files.wordpress.com/2015/02/states-in-two-words-v2.jpeg?w=906&h=453" width="900x" height="500x">
+
+- [Twitter data analysis](http://statistik-stuttgart.de/r-twitter-data-analysis/)
+
+```{r,eval=F}
+library(streamR)
+library(twitteR)
+library(RCurl)
+```
+
+
+## Videos
 
 - [Youtube - Intro spatial](https://www.youtube.com/watch?v=u4AAlnsfAAU)
+
+German videos on OSM
+
+- Roland Olbricht: [Schatzsuche in OpenStreetMap](https://www.youtube.com/watch?v=VJItOHImN7A&noredirect=1)
+- Claas Leiner: [Daten aus OSM extrahieren und in QGIS weiterverarbeiten](https://www.youtube.com/watch?v=VhGeaTBfFuA)
+
+## Further Links
+
+- [Maps Amanda Cox](http://www.r-bloggers.com/amanda-cox-on-using-r-at-the-nyt/)
+
+## Other examples 
+
+- [Football tribes](http://theinformationcapital.com/project/football-tribes/)
+
+- [gis-mannheim](http://www.gis-mannheim.de/)
+
+- [Maps on Germany in newspaper Zeit](http://www.zeit.de/serie/deutschlandkarte)
+
+![pic](http://www.zeit.de/zeit-magazin/2015-08/wein-deutschlandkarte/bitblt-920x958-2dcd4fea315c8a2be01f7b926409de502e4ca416/wein-deutschlandkarte-full.jpg)
