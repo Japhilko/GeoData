@@ -11,16 +11,16 @@ library(knitr)
 
 ## Organisation
 
-- Send me your presentation until November 17.
-- If you have interactive graphs please be shure to have also an offline version
-- If you use data please provide the source (OpenStreetMap, Google etc.)
-- Please give some background information also about the source
-- If you use R to produce maps please send me your code (myCode.R)
+- Send me your presentation until Tuesday November 17, 2015
+- If you have interactive graphs please be shure to have them also in an offline version
+- If you use data please provide the source (OpenStreetMap, Google, Eurostat etc.)
+- Please give some background information about the data source
+- If you use R to produce maps, please send me your code (Example: myCode.R)
 
 
 ## Presentation techniques
 
-- You can use LaTeX Beamer/Powerpoint/Rstudio
+- You can use LaTeX Beamer/Powerpoint/Rstudio or whatever you want
 - If you use Powerpoint please produce also a pdf version
 - You can also use Rstudio to produce presentations (makes sense for interactive maps)
 
