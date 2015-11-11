@@ -229,3 +229,7 @@ German videos on OSM
 ## Further Links
 
 - [micromaps](http://www.thefunctionalart.com/2013/07/falling-in-love-with-micromaps.html)
+
+- ggmap - [map of Africa](http://nrelscience.org/2013/05/30/this-is-how-i-did-it-mapping-in-r-with-ggplot2/)
+
+- [Example](http://www.molecularecologist.com/2012/09/making-maps-with-r/)

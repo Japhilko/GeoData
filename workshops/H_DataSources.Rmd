@@ -228,3 +228,7 @@ info <- read.csv(link,sep="\t",header=F)
 - [OpenCellID](http://opencellid.org/)
 
 - [Data on CO2 emmissions](http://databank.worldbank.org/data/reports.aspx?source=2&country=DEU&series=&period=)
+
+- [New York data](https://data.cityofnewyork.us/)
+
+- [Example New York data](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)

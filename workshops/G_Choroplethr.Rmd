@@ -46,7 +46,7 @@ datatable(df_pop_state,options = list(pageLength = 5))
 ```
 
 ```{r,echo=F,eval=Nint}
-kable(df_pop_state)
+kable(df_pop_state[1:10,])
 ```
 
 ## `choroplethr` - Hello World
