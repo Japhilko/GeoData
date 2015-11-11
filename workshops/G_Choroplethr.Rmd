@@ -2,7 +2,7 @@
 title: "Package Choroplethr"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 04 14:08:29 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 ```{r,echo=F}
