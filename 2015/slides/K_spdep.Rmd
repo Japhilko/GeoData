@@ -2,7 +2,7 @@
 title: "Package spdep"
 author: "Jan-Philipp Kolb"
 date: "20. Juli 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 
