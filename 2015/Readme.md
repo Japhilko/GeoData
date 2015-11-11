@@ -86,7 +86,7 @@ Choropleths
 ---------------------
 
 - Organisation ()
-- R-Package presentation choroplethr
+- R-Package presentation choroplethr ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.Rm))
 - R-Package spdep - neighbours and distance  
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/K_spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
