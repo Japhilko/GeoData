@@ -41,6 +41,7 @@ library(knitr)
 
 - How to get popups in interactive plots?
 - How to plot two maps side by side?
+- How to deal with extreme values in color coding of spplot?
 - How to save plots?
 
 
