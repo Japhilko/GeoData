@@ -18,9 +18,8 @@ plot(Africa)
 
 ## Get the center of a polygon
 
-```{r,warning=F}
+```{r,warning=F,message=F}
 library(sp)
-library(spdep)
 Af <- coordinates(Africa)
 plot(Africa)
 points(x=Af[1,1],y=Af[1,2],col="red",pch=20)
@@ -29,6 +28,7 @@ points(x=Af[1,1],y=Af[1,2],col="red",pch=20)
 ## Find the nearest neighbours
 
 ```{r,warning=F,message=F}
+library(spdep)
 Af_nb <- tri2nb(Af)
 ```
 
