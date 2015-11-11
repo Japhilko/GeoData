@@ -2,7 +2,7 @@
 title: "Course 8"
 author: "Jan-Philipp Kolb"
 date: "Mon Nov 09 12:42:50 2015"
-output: md_document
+output: ioslides_presentation
 ---
 
 ```{r,echo=F,warning=F}
@@ -39,9 +39,9 @@ library(knitr)
 
 ## Questions
 
+- How to get popups in interactive plots?
 - How to plot two maps side by side?
 - How to save plots?
-- How to get popups in interactive plots?
 
 
 ## Example on Campsites

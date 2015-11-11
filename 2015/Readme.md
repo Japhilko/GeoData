@@ -91,5 +91,5 @@ The material for this session gives some hints on the preparation of your presen
 - Example: Interactive Map ([Browser](http://rpubs.com/Japhilko82/Campsites))
 - R-Package presentation choroplethr ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
-- R-Package spdep - neighbours and distance ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/K_spdep.md) |
+- R-Package spdep - neighbours and distance ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/K_spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
