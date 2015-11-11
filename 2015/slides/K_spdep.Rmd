@@ -66,7 +66,7 @@ pointDistance(Af[1:4,], lonlat=TRUE) # compute distance
 
 ## Compute/plot a distance matrix
 
-```{r,warning=F,message=F}
+```{r Africa Distance,warning=F,message=F}
 Dist_Af <- pointDistance(Af, lonlat=TRUE)
 Af_color <- Dist_Af[,1]
 Af_color <- Af_color/max(Af_color)

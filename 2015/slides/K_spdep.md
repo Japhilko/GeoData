@@ -73,7 +73,7 @@ Compute/plot a distance matrix
     Af_color <- rgb(Af_color,0,0)
     plot(Africa,col=Af_color)
 
-![](K_spdep_files/figure-markdown_strict/unnamed-chunk-8-1.png)
+![](K_spdep_files/figure-markdown_strict/Africa%20Distance-1.png)
 
 Links
 -----

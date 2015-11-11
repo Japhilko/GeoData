@@ -8,7 +8,7 @@ Introduction
 
 - Introduction  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Introduction.pdf))
-- Use case - Asylum seekers ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.pdf) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2015/rcode/SpatMA_AsylumSeekers.R) )
+- Use case - Asylum seekers ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Asylum_seekers.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Asylum_seekers.pdf) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2015/rcode/SpatMA_AsylumSeekers.R) )
 - Organisation and background ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/Organisation_and_background.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/Organisation_and_background.pdf))
 
@@ -85,4 +85,7 @@ Thematic / Interactive maps and Choropleths
 Choropleths
 ---------------------
 
-- Package presentation choroplethr
+- R-Package presentation choroplethr
+- R-Package spdep - neighbours and distance  
+([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/K_spdep.md) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
