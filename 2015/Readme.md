@@ -85,6 +85,7 @@ Thematic / Interactive maps and Choropleths
 Choropleths
 ---------------------
 
+- Organisation ()
 - R-Package presentation choroplethr
 - R-Package spdep - neighbours and distance  
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/K_spdep.md) |

@@ -225,3 +225,7 @@ German videos on OSM
 - [Maps on Germany in newspaper Zeit](http://www.zeit.de/serie/deutschlandkarte)
 
 ![pic](http://www.zeit.de/zeit-magazin/2015-08/wein-deutschlandkarte/bitblt-920x958-2dcd4fea315c8a2be01f7b926409de502e4ca416/wein-deutschlandkarte-full.jpg)
+
+## Further Links
+
+- [micromaps](http://www.thefunctionalart.com/2013/07/falling-in-love-with-micromaps.html)

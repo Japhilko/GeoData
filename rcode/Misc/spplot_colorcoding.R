@@ -1,7 +1,9 @@
 # Jan-Philipp kOLB
 # Sat Nov 07 13:13:22 2015
 
-
+#-----------------------------------#
+# Libraries
+#-----------------------------------#
 
 library(sp)
 library(maptools)
@@ -79,6 +81,7 @@ qtm(Europe,"pop_est")
 # Further example
 #---------------------------------------#
 
+library(classInt)
 # https://rstudio-pubs-static.s3.amazonaws.com/45950_5cfa0392d2d449a2a83144a5f66ad9b5.html
 
 col.b<-colorRampPalette(brewer.pal(9,"Blues"))(47)

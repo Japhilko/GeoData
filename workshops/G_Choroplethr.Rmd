@@ -2,12 +2,14 @@
 title: "Package Choroplethr"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 04 14:08:29 2015"
-output: slidy_presentation
+output: md_document
 ---
 
 ```{r,echo=F}
 library(knitr)
 library(DT)
+internet <- F
+Nint <- !internet
 ```
 
 ## Introduction
@@ -39,8 +41,12 @@ data(df_pop_state)
 
 `df_pop_state` is a dataset which is included in the package `choroplethr`, containing population estimates for US States in 2012.
 
-```{r,echo=F}
+```{r,echo=F,eval=internet}
 datatable(df_pop_state,options = list(pageLength = 5))
+```
+
+```{r,echo=F,eval=Nint}
+kable(df_pop_state)
 ```
 
 ## `choroplethr` - Hello World
@@ -137,7 +143,7 @@ With the questionmark we get help
 
 ## The datatable
 
-```{r,cache=F,echo=F,warning=F}
+```{r,cache=F,echo=F,warning=F,eval=internet}
 datatable(df_president_ts, options = list(pageLength = 5))
 ```
 
@@ -145,16 +151,16 @@ datatable(df_president_ts, options = list(pageLength = 5))
 
 ## Resources / Links
 
-- [Description](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html)
-
 - [Intro - What is a choropleth](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
 
-- [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+- [Description](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html) on the usage of the `choroplethr` package
 
-- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+- Plot the [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html) with `choroplethr`
 
-- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html)
+- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html) with `choroplethr`
 
-- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html) on the `choroplethr` package
 
-- [Presentation Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/)
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)-blog on the `choroplethr` package
+
+- [Presentation Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/) on the `choroplethr` package
