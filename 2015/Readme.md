@@ -86,7 +86,8 @@ Color Coding, Choropleths and point maps
 ---------------------
 The material for this session gives some hints on the preparation of your presentation. 
 
-- Organisation ()
+- Organisation ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/Course8.md)
+| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R))
 - Example: Interactive Map ([Browser](http://rpubs.com/Japhilko82/Campsites))
 - R-Package presentation choroplethr ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))

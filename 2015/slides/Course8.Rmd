@@ -1,0 +1,295 @@
+---
+title: "Course 8"
+author: "Jan-Philipp Kolb"
+date: "Mon Nov 09 12:42:50 2015"
+output: md_document
+---
+
+```{r,echo=F,warning=F}
+library(knitr)
+```
+
+## Organisation
+
+- Send me your presentation until November 17.
+- If you have interactive graphs please be shure to have also an offline version
+- If you use data please provide the source (OpenStreetMap, Google etc.)
+- Please give some background information also about the source
+- If you use R to produce maps please send me your code (myCode.R)
+
+
+## Presentation techniques
+
+- You can use LaTeX Beamer/Powerpoint/Rstudio
+- If you use Powerpoint please produce also a pdf version
+- You can also use Rstudio to produce presentations (makes sense for interactive maps)
+
+## Presentations with Rstudio I
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Rmarkdown1.png)
+
+## Presentations with Rstudio II
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Rmarkdown2.PNG)
+
+## Presentations with Rstudio III
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/knitR.png)
+
+
+## Questions
+
+- How to plot two maps side by side?
+- How to save plots?
+- How to get popups in interactive plots?
+
+
+## Example on Campsites
+
+- Data downloaded from:
+
+http://www.openstreetmap.de/
+
+- With usage of:
+
+http://wiki.openstreetmap.org/wiki/Overpass_API
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/CampSites_Germany.csv"
+CampSites <- read.csv(url)
+```
+
+## Overview of Campsite data
+
+```{r}
+kable(CampSites[1:8,1:4])
+```
+
+
+## Get a map for Germany
+
+```{r Get map of Germany,message=F,warning=F}
+library(raster)
+DEU1 <- getData('GADM', country='DEU', level=1)
+plot(DEU1)
+```
+
+
+## Add Campsites
+
+```{r plot Campsites}
+plot(DEU1)
+points(y=CampSites$lat,x=CampSites$lon,col="red",pch=20)
+```
+
+## Change the alpha level
+
+```{r}
+plot(DEU1)
+points(y=CampSites$lat,x=CampSites$lon,col=rgb(0,1,0,.2),
+       pch=20)
+```
+
+## Get a google map for Germany
+
+```{r,message=F,warning=F}
+library(ggmap)
+DE_Map <- qmap("Germany", zoom=6, maptype="hybrid")
+DE_Map
+```
+
+## Plot points on google map
+
+```{r,warning=F}
+DE_Map + geom_point(aes(x = lon, y = lat),
+                    data = CampSites)
+```
+
+## Density plot
+
+```{r}
+DE_Map + geom_density2d(data = CampSites,                  aes(x = lon, y = lat),lwd=1.5)
+```
+
+## Another density plot
+
+```{r}
+DE_Map + stat_density2d(data = CampSites, 
+aes(x = lon, y = lat,fill = ..level..), bins = 100, 
+geom = 'polygon')
+```
+
+
+## Another density plot
+
+```{r}
+DE_Map + stat_density2d(data=CampSites, 
+                        aes(x=lon,y=lat,fill=..level..,
+alpha = ..level..),bins=80,geom='polygon')
+```
+
+
+## Make the interactive map
+
+Prepare an interactive map
+
+```{r,warning=F,message=F,eval=F}
+library(magrittr)
+library(leaflet)
+```
+
+
+```{r,eval=F}
+m <- leaflet() %>%
+  addTiles() %>%  
+  addMarkers(lng=CampSites$lon, 
+             lat=CampSites$lat, 
+             popup=CampSites$name)
+m
+```
+
+## Push more information
+
+```{r}
+popupInfo <- paste(CampSites$name,"\n",CampSites$website)
+```
+
+```{r,eval=F}
+m <- leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=CampSites$lon, 
+             lat=CampSites$lat, 
+             popup=popupInfo)
+m
+```
+
+Result is here:
+
+http://rpubs.com/Japhilko82/CampSitesHL
+
+## The resulting map
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany_Campsites.PNG)
+
+## Popups in interactive map
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Camping_Mannheim.PNG)
+
+I uploaded the result to Rpubs:
+http://rpubs.com/Japhilko82/Campsites
+
+## How to publish on Rpubs
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/PublishCampSitesGermany.PNG)
+
+## ggmap: two plots side by side
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/whcSites.csv"
+UNESCO <- read.csv(url)
+```
+
+```{r,echo=F}
+kable(UNESCO[1:4,c("name_en","latitude","longitude")])
+```
+
+## Get sites for Germany
+
+```{r,cache=T,message=F}
+library(ggmap)
+ind <- UNESCO$states_name_en=="Germany"
+UNESCO_DE <- UNESCO[ind,]
+```
+
+## Plot first map
+
+```{r,message=F}
+library(ggplot2)
+DE_Map + geom_point(aes(x = longitude, y = latitude),
+                    data = UNESCO_DE)
+```
+
+
+## Produce two maps
+
+```{r}
+library(ggplot2)
+DNunesco <- UNESCO_DE[UNESCO_DE$category=="Natural",]
+DCunesco <- UNESCO_DE[UNESCO_DE$category=="Cultural",]
+
+Csites <- DE_Map + geom_point(aes(x = longitude, 
+                                  y = latitude),
+                              data =DCunesco,
+                              col="orange", size= 3)
+
+Nsites <- DE_Map + geom_point(aes(x = longitude, 
+                                  y = latitude),
+                              data = DNunesco,
+                              col="green", size= 3)
+```
+
+
+## Two plots [side by side](http://stackoverflow.com/questions/1249548/side-by-side-plots-with-ggplot2)
+
+```{r}
+library(gridExtra)
+grid.arrange(Csites, Nsites, ncol=2)
+```
+
+
+
+## Load the data
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/Unemployment07a13.csv"
+
+Unemp <- read.csv(url) 
+```
+
+## Overview data
+
+```{r,warning=F,echo=F}
+kable(Unemp[1:8,c(2,3,4)])
+```
+
+
+## Usage of package tmap
+
+```{r,warning=F}
+library(tmap)
+data(Europe)
+```
+
+## Match the data
+
+```{r}
+iso_a2<- substr(Europe@data$iso_a3,1,2)
+ind <- match(iso_a2,Unemp$GEO)
+Europe@data$Val2007M12 <- Unemp$Val2007M12[ind]
+Europe@data$Val2013M01 <- Unemp$Val2013M01[ind]
+```
+
+## Make the map
+
+```{r}
+qtm(Europe,c("Val2007M12","Val2013M01"))
+```
+
+## A pie chart
+
+```{r}
+Students <- c(100, 200,30)
+pie(Students)
+```
+
+## Save graphics
+
+```{r}
+pdf("pie_Students.pdf")
+pie(Students)
+dev.off()
+```
+
