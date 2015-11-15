@@ -14,8 +14,6 @@ output: ioslides_presentation
 
 ## R as GIS
 
-- [FWTools: Open Source GIS Binary Kit for Windows and Linux](http://fwtools.maptools.org/)
-
 - A very [comprehensive tutorial](http://pakillo.github.io/R-GIS-tutorial) was published by [Francisco Rodriguez-Sanchez](https://sites.google.com/site/rodriguezsanchezf/). 
 
 - [Hints](http://giswerk.org/) on the usage of OpenStreetMap data with R
@@ -110,6 +108,10 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 - [Openlayers](http://openlayers.org/en/v3.2.0/doc/tutorials/introduction.html)
 
 - [Another Intro on making maps](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+
+## Overview of tools
+
+- [FWTools: Open Source GIS Binary Kit for Windows and Linux](http://fwtools.maptools.org/)
 
 
 ## More links
