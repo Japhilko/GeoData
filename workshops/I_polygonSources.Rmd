@@ -200,3 +200,5 @@ references/administrative_units_statistical_units_1)
 - [National Historical Information System](https://www.nhgis.org/)
 
 - [Free polygon data for the US](http://www.freemapdata.com/html/free_polygon_data.html)
+
+- [Spatial Data in R](https://science.nature.nps.gov/im/datamgmt/statistics/r/advanced/spatial.cfm)
