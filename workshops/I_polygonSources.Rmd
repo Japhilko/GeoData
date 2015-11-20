@@ -202,3 +202,5 @@ references/administrative_units_statistical_units_1)
 - [Free polygon data for the US](http://www.freemapdata.com/html/free_polygon_data.html)
 
 - [Spatial Data in R](https://science.nature.nps.gov/im/datamgmt/statistics/r/advanced/spatial.cfm)
+
+- [ggmap and shapefiles](http://www.r-bloggers.com/shapefile-polygons-plotted-on-google-maps-using-ggmap-in-r-throw-some-throw-some-stats-on-that-mappart-2/)
