@@ -18,11 +18,10 @@ Val_eval=F
 
 ## Introduction
 
-The `geoosmdata2` package is designed for the download and work with data from OpenStreetMap. 
-The [Overpass](http://wiki.openstreetmap.org/wiki/Overpass_API)-API is used to get data out of OpenStreetMap.
+The `geoosmdata2` package is designed to download and process data from OpenStreetMap. 
+The [Overpass](http://wiki.openstreetmap.org/wiki/Overpass_API)-API is used to get data out of OpenStreetMap.The package is a wrapper for this API.
 
-
-
+Many functions are available which will be desrcibed in the following. The first section is about geocoding with geosmadata2 package which uses the [Nominatim](http://wiki.openstreetmap.org/wiki/Nominatim) functionality. 
 
 ```{r,cache=ca,eval=Val_eval}
 library(geosmdata2)

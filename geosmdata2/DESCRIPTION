@@ -5,9 +5,12 @@ Version: 0.1
 Date: 2015-04-24
 Author: Jan-Philipp Kolb
 Maintainer: <Jan-Philipp_Kolb@gmx.net>
-Description: This package is a wrapper for some functions to access information on OpenStreetMap.
+Description: This package is a wrapper for some functions to access information
+    on OpenStreetMap.
 License: GPL-2
 LazyData: TRUE
-Imports: osmar,sp
-Depends: RCurl,rjson,stringr,XML
-
+Imports:
+    osmar,sp
+Depends:
+    RCurl,rjson,stringr,XML
+RoxygenNote: 5.0.0

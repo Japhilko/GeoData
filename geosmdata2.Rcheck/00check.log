@@ -29,19 +29,43 @@
 * checking whether the namespace can be loaded with stated dependencies ... OK
 * checking whether the namespace can be unloaded cleanly ... OK
 * checking loading without being on the library search path ... OK
-* checking dependencies in R code ... OK
+* checking dependencies in R code ... NOTE
+Namespace in Imports field not imported from: 'sp'
+  All declared Imports should be used.
+Packages in Depends field not imported from:
+  'RCurl' 'XML' 'rjson' 'stringr'
+  These packages need to be imported from (in the NAMESPACE file)
+  for when this namespace is loaded but not attached.
 * checking S3 generic/method consistency ... OK
 * checking replacement functions ... OK
 * checking foreign function calls ... OK
 * checking R code for possible problems ... NOTE
 CircSearch: no visible binding for global variable 'osm_df'
+CircSearch: no visible global function definition for 'xmlParse'
+CountNodes: no visible global function definition for 'xmlRoot'
+CountNodes: no visible global function definition for 'xmlSApply'
+CountNodes: no visible binding for global variable 'xmlAttrs'
 extract_info_op: no visible binding for global variable 'osm_df'
+extract_info_op: no visible global function definition for 'xpathApply'
 extract_position_op: no visible binding for global variable 'osm_df'
+extract_position_op: no visible global function definition for
+  'xpathApply'
+geocode_osm: no visible global function definition for
+  'str_replace_all'
+geocode_osm: no visible global function definition for 'str_c'
+geocode_osm: no visible global function definition for 'fromJSON'
 get_osm_area: no visible binding for global variable 'osm_df'
+get_osm_area: no visible global function definition for 'xmlParse'
 get_osm_nodes: no visible binding for global variable 'osm_df'
+get_osm_nodes: no visible global function definition for 'xmlParse'
+get_osm_nodes_around: no visible global function definition for
+  'xmlParse'
 get_osm_relation: no visible binding for global variable 'osm_df'
+get_osm_relation: no visible global function definition for 'xmlParse'
 get_osm_ways: no visible binding for global variable 'osm_df'
+get_osm_ways: no visible global function definition for 'xmlParse'
 plotbui: no visible binding for global variable 'k'
+plotbui: no visible global function definition for 'as_sp'
 * checking Rd files ... OK
 * checking Rd metadata ... OK
 * checking Rd line widths ... OK
@@ -60,4 +84,20 @@ plotbui: no visible binding for global variable 'k'
 * checking data for ASCII and uncompressed saves ... WARNING
   Warning: package needs dependence on R (>= 2.10)
 * checking files in 'vignettes' ... OK
-* checking examples ...
+* checking examples ... ERROR
+Running examples in 'geosmdata2-Ex.R' failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: CircSearch
+> ### Title: function CircSearch
+> ### Aliases: CircSearch
+> 
+> ### ** Examples
+> 
+> gc <- geocode_osm(place="Venice beach",output="all")
+Error: could not find function "geocode_osm"
+Execution halted
+* checking PDF version of manual ... OK
+* DONE
+Status: 1 ERROR, 1 WARNING, 3 NOTEs
