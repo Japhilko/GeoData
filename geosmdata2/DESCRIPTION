@@ -12,5 +12,5 @@ LazyData: TRUE
 Imports:
     osmar,sp
 Depends:
-    RCurl,rjson,stringr,XML
+    RCurl,rjson,stringr,R(>= 2.10.0),XML
 RoxygenNote: 5.0.0

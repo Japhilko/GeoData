@@ -18,6 +18,10 @@ save(osm_df,file="osm_df.RData",compress='xz')
 load("uaBerlin.RData")
 save(uaBerlin,file="uaBerlin.RData",compress='xz')
 
+#------------------------------------------
+# depends warning
+
+# https://stat.ethz.ch/pipermail/bioc-devel/2012-February/003145.html
 
 #-------------------------------------#
 # LaTeX warning

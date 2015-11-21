@@ -81,8 +81,7 @@ plotbui: no visible global function definition for 'as_sp'
     Zeichenkette '+493024720552 b\0\016' enthält nul Zeichen
   Ruft auf: print ... format.check_package_datasets -> paste0 -> iconv0 -> paste0 -> iconv
   Ausführung angehalten
-* checking data for ASCII and uncompressed saves ... WARNING
-  Warning: package needs dependence on R (>= 2.10)
+* checking data for ASCII and uncompressed saves ... OK
 * checking files in 'vignettes' ... OK
 * checking examples ... ERROR
 Running examples in 'geosmdata2-Ex.R' failed
@@ -100,4 +99,4 @@ Error: could not find function "geocode_osm"
 Execution halted
 * checking PDF version of manual ... OK
 * DONE
-Status: 1 ERROR, 1 WARNING, 3 NOTEs
+Status: 1 ERROR, 3 NOTEs

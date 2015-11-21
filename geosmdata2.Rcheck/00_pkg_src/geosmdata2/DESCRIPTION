@@ -10,7 +10,7 @@ Description: This package is a wrapper for some functions to access information
 License: GPL-2
 LazyData: TRUE
 Imports: osmar,sp
-Depends: RCurl,rjson,stringr,XML
+Depends: RCurl,rjson,stringr,R(>= 2.10.0),XML
 RoxygenNote: 5.0.0
 NeedsCompilation: no
-Packaged: 2015-11-21 12:20:38 UTC; Kolb
+Packaged: 2015-11-21 12:59:03 UTC; Kolb
