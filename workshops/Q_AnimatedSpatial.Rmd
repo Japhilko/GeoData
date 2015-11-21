@@ -31,6 +31,7 @@ m  # Print the map
 
 - [Radar and leaflet](http://www.r-bloggers.com/playing-with-leaflet-and-radar-locations/)
 
+- Vivek H. Patil - [Getting Started with Geographic Data Displays using R](http://patilv.com/INRUG-IntroToMapping/IntroToMapping.html#31)
 
 ## 
 

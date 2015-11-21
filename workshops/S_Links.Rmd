@@ -235,3 +235,5 @@ German videos on OSM
 - ggmap - [map of Africa](http://nrelscience.org/2013/05/30/this-is-how-i-did-it-mapping-in-r-with-ggplot2/)
 
 - [Example](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+
+- [Example - New York Taxi Routes](http://www.r-bloggers.com/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/)

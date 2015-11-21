@@ -1,0 +1,29 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+Conflicts:
+	rcode/Misc/Migration_Interactive.R
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 8 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   2015/data/RefugeePlaces.csv
+#	new file:   data/Deutschland_generator.csv
+#	modified:   workshops/I_polygonSources.Rmd
+#	modified:   workshops/Q_AnimatedSpatial.Rmd
+#	modified:   workshops/R_geoosmdata2.Rmd
+#	modified:   workshops/S_Links.Rmd
+#
+
