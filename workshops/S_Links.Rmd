@@ -2,7 +2,7 @@
 title: "Interesting Geo Links"
 author: "Jan-Philipp Kolb"
 date: "Tue Nov 10 20:18:46 2015"
-output: ioslides_presentation
+output: html_document
 ---
 
 ## Introduction R
@@ -16,7 +16,8 @@ output: ioslides_presentation
 
 - A very [comprehensive tutorial](http://pakillo.github.io/R-GIS-tutorial) was published by [Francisco Rodriguez-Sanchez](https://sites.google.com/site/rodriguezsanchezf/). 
 
-- [Hints](http://giswerk.org/) on the usage of OpenStreetMap data with R
+
+- Hints on the usage of OpenStreetMap data with R - [giswerk](http://giswerk.org/)
 
 ## Examples on github
 
@@ -29,13 +30,20 @@ output: ioslides_presentation
 
 [Example 1](http://www.r-bloggers.com/reot-empirical-orthogonal-teleconnections-in-r/)
 
+![pic](http://i0.wp.com/metvurst.files.wordpress.com/2014/04/wpid-unnamed-chunk-17.png?zoom=1.5&w=456)
+
 [Example 2](http://blog.revolutionanalytics.com/2013/08/visualizing-katrinas-strongest-winds-with-r.html)
+
+![pic](http://revolution-computing.typepad.com/.a/6a010534b1db25970b01901ec7254c970b-450wi)
 
 [Example 3](http://www.r-bloggers.com/here-comes-the-sun/)
 
+![pic](http://i2.wp.com/procomun.files.wordpress.com/2011/05/bo0.png?resize=456%2C168)
+
 [Example 4](http://www.r-bloggers.com/maps-of-solar-radiation/)
 
-[Example 5](http://www.r-bloggers.com/choropleths-made-easy/)
+![pic](http://i0.wp.com/procomun.files.wordpress.com/2011/04/nasageftwo.png?zoom=1.5&resize=456%2C456)
+
 
 ## Even more maps...
 
@@ -82,6 +90,13 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 
 - [John Snow and openstreetmap](http://www.r-bloggers.com/john-snow-and-openstreetmap/)
 
+
+## Geocoding with OpenStreetMap
+
+- [Introducing the nominatim geocoding package](http://www.r-bloggers.com/introducing-the-nominatim-geocoding-package/)
+
+
+
 ## Interactive maps
 
 - [Exchange data between R and the Google Maps API using Shiny](http://r-video-tutorial.blogspot.ch/2015/05/exchange-data-between-r-and-google-maps.html)
@@ -92,6 +107,7 @@ In general ([three osm apis](http://www.d-mueller.de/blog/open-streetmap-api-tut
 
 - [Leaflet kissing](http://www.r-bloggers.com/the-map-of-romantic-kissing-with-leaflet-and-r/)
 
+- [Leaflet + osm](http://www.r-bloggers.com/leaflet-interactive-web-maps-with-r/)
 
 ## Flowing data
 
@@ -218,16 +234,6 @@ German videos on OSM
 
 - [Maps Amanda Cox](http://www.r-bloggers.com/amanda-cox-on-using-r-at-the-nyt/)
 
-## Other examples 
-
-- [Football tribes](http://theinformationcapital.com/project/football-tribes/)
-
-- [gis-mannheim](http://www.gis-mannheim.de/)
-
-- [Maps on Germany in newspaper Zeit](http://www.zeit.de/serie/deutschlandkarte)
-
-![pic](http://www.zeit.de/zeit-magazin/2015-08/wein-deutschlandkarte/bitblt-920x958-2dcd4fea315c8a2be01f7b926409de502e4ca416/wein-deutschlandkarte-full.jpg)
-
 ## Further Links
 
 - [micromaps](http://www.thefunctionalart.com/2013/07/falling-in-love-with-micromaps.html)
@@ -237,3 +243,29 @@ German videos on OSM
 - [Example](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
 
 - [Example - New York Taxi Routes](http://www.r-bloggers.com/analyzing-1-1-billion-nyc-taxi-and-uber-trips-with-a-vengeance/)
+
+## Example Building Coverage
+
+[OpenStreetMap: London Building Coverage](http://oobrien.com/2015/07/openstreetmap-london-building-coverage/)
+
+![pic](http://oobrien.com/wordpress/wp-content/uploads/2015/07/osm_londondetail.png)
+
+## Example: Cycle Routes in northern Germany
+
+[A step towards Bikemap as a real bike map](http://www.toursprung.com/2014/03/a-step-towards-bikemap-as-a-real-bike-map/)
+
+![http://www.toursprung.com/wp-content/uploads/2014/03/cycle-network-norther-germany-3.jpg]
+
+
+## Other examples 
+
+- [Football tribes](http://theinformationcapital.com/project/football-tribes/)
+
+![pic](http://theinformationcapital.com/wp-content/uploads/2014/09/TheFootballTribes_spread1.jpg)
+
+- [gis-mannheim](http://www.gis-mannheim.de/)
+
+- [Maps on Germany in newspaper Zeit](http://www.zeit.de/serie/deutschlandkarte)
+
+![pic](http://www.zeit.de/zeit-magazin/2015-08/wein-deutschlandkarte/bitblt-920x958-2dcd4fea315c8a2be01f7b926409de502e4ca416/wein-deutschlandkarte-full.jpg)
+
