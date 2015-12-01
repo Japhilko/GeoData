@@ -11,7 +11,6 @@ output: html_document
 
 - [Useful tutorials](http://robjhyndman.com/hyndsight/useful-tutorials/)
 
-
 ## R as GIS
 
 - A very [comprehensive tutorial](http://pakillo.github.io/R-GIS-tutorial) was published by [Francisco Rodriguez-Sanchez](https://sites.google.com/site/rodriguezsanchezf/). 
