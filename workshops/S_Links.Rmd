@@ -11,6 +11,15 @@ output: html_document
 
 - [Useful tutorials](http://robjhyndman.com/hyndsight/useful-tutorials/)
 
+
+
+
+Robin Lovelace - [Introduction to spatial visualisation](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
+
+
+
+
+
 ## R as GIS
 
 - A very [comprehensive tutorial](http://pakillo.github.io/R-GIS-tutorial) was published by [Francisco Rodriguez-Sanchez](https://sites.google.com/site/rodriguezsanchezf/). 
@@ -56,6 +65,10 @@ output: html_document
 
 ![pic](https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/vignettes/figure/Aggregated_data_for_culters.png)
 
+
+[Average Expenses for TV across states of USA](http://www.r-bloggers.com/average-expenses-for-tv-across-states-of-usa/)
+
+![pic](http://i0.wp.com/2.bp.blogspot.com/-iFl67wzCnJM/Vlw0y4YGTMI/AAAAAAAAATY/rRO0KDcie5U/s640/Avg_Spending_1.PNG?zoom=1.5&resize=456%2C247)
 
 ## More Intros - making maps with R
 
