@@ -1,0 +1,82 @@
+---
+title: "Overview Portfolio"
+author: "Jan-Philipp Kolb"
+date: "Fri Dec 11 13:12:42 2015"
+output: ioslides_presentation
+---
+
+## Download data from OpenStreetMap
+
+```{r}
+library(devtools)
+# install_github("Japhilko/GeoData/geosmdata2")
+```
+
+```{r}
+graph.path <- "F:/GESIS/Vorträge/20160127_MMSDays/report/figure"
+```
+
+
+```{r}
+plz.path <- "F:/GESIS/GeoDaten/"
+setwd(plz.path)
+library(rgdal)
+PLZ=readOGR("." ,"post_pl")
+```
+
+```{r}
+plot(PLZ,border="lightgray",col="blue")
+```
+
+## Plot only a region
+
+```{r}
+ft <- substr(PLZ@data$PLZ99,1,1)
+
+plz6 <- PLZ[ft%in% "6",]
+setwd(graph.path)
+png("plz6.png")
+plot(plz6,col="blue",border="white")
+dev.off()
+```
+
+
+## 
+
+```{r}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_generator.csv"
+
+generators <- read.csv(link)
+```
+
+
+```{r}
+
+coordinates(generators) <- ~  lon + lat
+proj4string(generators) <- proj4string(plz6)
+
+
+poi2plz <- over(generators, plz6)
+
+generators_plz6 <- generators[!is.na(poi2plz$PLZ99_N),]
+```
+
+```{r}
+info <- tapply(poi2plz$PLZ99_N,poi2plz$PLZ99_N,length)
+ind <- match(poi2plz$PLZ99_N,names(info))
+```
+
+
+
+
+
+```{r}
+library(geosmdata2)
+```
+
+```{r}
+# mit offenen Karten
+# https://www.youtube.com/watch?v=16il37eMUZ0
+vittorio magnago lampugnani
+```
+
