@@ -93,3 +93,10 @@ The material for this session gives some hints on the preparation of your presen
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
 - R-Package spdep - neighbours and distance ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/K_spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
+
+
+Context and Conclusion
+---------------------
+In this session the context is presented, buzz words are spatial turn, vernacular geography and neogeography.
+
+- Context and conclusion ()
