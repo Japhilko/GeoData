@@ -99,4 +99,4 @@ Context and Conclusion
 ---------------------
 In this session the context is presented, buzz words are spatial turn, vernacular geography and neogeography.
 
-- Context and conclusion ()
+- Context and conclusion ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/SpatialMA_Course11.pdf))
