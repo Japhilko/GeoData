@@ -6,6 +6,25 @@ link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschl
 
 dat <- read.csv(link)
 
+link2 <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/FDS_ISO"
+
+fds <- read.csv(link2,sep="\t")
+
+fds[,2] <- gsub("DE-","",fds[,2])
+
+tab_generator <- table(dat$generator.source)
+info <- names(tab_generator)[tab_generator==1]
+dat$generator.source[dat$generator.source%in%info]<- "other"
+
+
+table(dat$generator.source)
+
+
+#-----------------------------------------#
+# Misc
+#-----------------------------------------#
+
+
 dat$generator.source[dat$generator.source=="Wind"] <- "wind"
 
 dat$generator.source[dat$generator.source=="hydrogen"] <- "hydro"
@@ -14,15 +33,6 @@ dat$generator.source[dat$generator.source=="http://www.hedayati.eu/wkw/wkw03.htm
 
 
 dat$generator.source[dat$generator.source%in%c("Gas; Ã–l"
-, "oil;gas")] <- "gas"
+                                               , "oil;gas")] <- "gas"
 
 dat$generator.source <- as.character(dat$generator.source)
-
-tab_generator <- table(dat$generator.source)
-
-info <- names(tab_generator)[tab_generator==1]
-
-dat$generator.source[dat$generator.source%in%info]<- "other"
-
-
-table(dat$generator.source)
