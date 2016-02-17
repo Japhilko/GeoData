@@ -5,6 +5,40 @@ date: "17 Februar 2016"
 output: html_document
 ---
 
+## Gründe für die Nutzung von R
+
+- Als Weg kreativ zu sein ...
+- Graphiken, Graphiken, Graphiken
+- In Kombination mit anderen Programmen nutzbar
+- Zur Verbindung von Datenstrukturen
+- Zum Automatisieren
+- Um die Intelligenz anderer Leute zu nutzen ;-)
+- ...
+
+
+## Gründe
+
+- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
+
+- R ist eine Skriptsprache 
+- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
+
+- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
+
+## Übersicht - warum R
+
+![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
+## R Nutzer rund um die Welt
+
+![R Welt](http://revolution-computing.typepad.com/.a/6a010534b1db25970b0191035099d8970c-pi)
+
+## Wo sind die aktivsten Nutzer?
+
+![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
+
+
+
 ## 
 
 Andreas Plank [Grafiken und Statistik in R](http://www.chironomidaeproject.com/fileadmin/downloads/Formeln_in_R.pdf)
