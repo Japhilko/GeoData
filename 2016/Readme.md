@@ -9,7 +9,7 @@ Der Schwerpunkt liegt auf der Vermittlung von Methoden der grafisch gestützten 
 Einleitung
 ---------------------
 
-- Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.md) |
+- Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.pdf)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 [Hier](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des `github` Verzeichnisses zu finden.
@@ -24,7 +24,15 @@ Das R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pd
 - Various map types with ggmap ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/slides/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
 - Use case: [points of interest](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/) for backpackers in Amsterdam
 
-Political and thematic maps with R-package maps 
+
+Datenquellen
+---------------------
+
+[Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd)
+
+
+
+Politische und thematische Karten mit dem R-Paket maps 
 ---------------------
 
 A political map does not show any topographic features or information about roads or important buildings. The political map focuses on administrative boundaries. In the following 3 approaches are presented to produce political maps. The thematic map is designed to show a particular theme connected with a specific geographic area ([Wikipedia](https://en.wikipedia.org/wiki/Thematic_map)). 

@@ -1,5 +1,5 @@
 ---
-title: "Eine Karte der Gemeinden im Saarland"
+title: "Nutzung von Geodaten in den Sozialwissenschaften - Global Administrative Areas"
 author: "Jan-Philipp Kolb"
 date: "9 Februar 2016"
 output: beamer_presentation
@@ -9,15 +9,22 @@ output: beamer_presentation
 
 Global Administrative Boundaries (GADM)
 
+![pic](http://www.gadm.org/img/gadm2.png)
+
+## Schnittstelle in R-Paket raster
+
+Daten für Deutschland auf Gemeindeebene:
+
+
 ```{r}
 library("raster")
-DEU4 <- getData('GADM', country='DEU', level=4)
+DEU0 <- getData('GADM', country='DEU', level=0)
 ```
 
 ## Overview data
 
 ```{r}
-head(DEU4@data)
+DEU0@data
 ```
 
 
