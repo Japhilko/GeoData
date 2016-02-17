@@ -12,16 +12,11 @@ Einleitung
 - Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.md) |
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.pdf)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
-- Use case - Asylum seekers ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Asylum_seekers.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Asylum_seekers.pdf) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2015/rcode/SpatMA_AsylumSeekers.R) )
-- Organisation and background ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Organisation_and_background.md) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Organisation_and_background.pdf))
+[Hier](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des `github` Verzeichnisses zu finden.
 
+Um den Kurs zu verfolgen muss [R](https://cran.uni-muenster.de/) und [Rstudio](https://www.rstudio.com/products/rstudio/download/) installiert werden. Der Installationsprozess ist relativ einfach. 
 
-[Here](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) you can find information about the usage of the `github` repo.
-
-Please download and install [R](https://cran.uni-muenster.de/) and [Rstudio](https://www.rstudio.com/products/rstudio/download/) to follow this course. The installation process is straightforward. 
-
-Various Map Types with ggmap
+Verschiedene Kartentypen mit ggmap
 ---------------------
 
 The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) will be used in this section to 
