@@ -1,0 +1,135 @@
+---
+title: "Einführung in die Datenanalyse mit R - ggplot2"
+author: "Jan-Philipp Kolb"
+date: "15 Februar  2016"
+output: beamer_presentation
+---
+
+## Das Paket ggplot2
+
+- Entwickelt von Hadley Wickham
+- Viele Informationen unter:
+- <http://ggplot2.org/>
+- Den Graphiken liegt eine eigene Grammitik zu Grunde
+
+## Bibliothek ggplot2
+
+<www.r-bloggers.com/basic-introduction-to-ggplot2/>
+
+```{r,message=F}
+library(ggplot2)
+```
+
+## Der Datensatz
+
+```{r}
+head(diamonds)
+```
+
+## Wie nutzt man qplot
+
+- qplot wird für schnelle Graphiken verwendet
+- bei ggplot kann man alles bis ins Detail kontrollieren
+
+```{r,message=F}
+# histogram
+qplot(depth, data=diamonds)
+```
+
+
+## Barplot
+
+```{r}
+qplot(cut, depth, data=diamonds)
+```
+
+## Barplot
+
+```{r}
+qplot(factor(cyl), data=mtcars,geom="bar")
+```
+
+
+## Boxplot
+
+```{r}
+qplot(data=diamonds,x=cut,y=depth,geom="boxplot")
+```
+
+
+## Scatterplot
+
+```{r}
+# scatterplot
+qplot(carat, depth, data=diamonds)
+```
+
+
+## Farbe hinzu:
+
+```{r}
+qplot(carat, depth, data=diamonds,color=cut)
+```
+
+
+## Trendlinie hinzufügen
+
+```{r}
+myGG<-qplot(data=diamonds,x=carat,y=depth,color=carat) 
+myGG + stat_smooth(method="lm")
+```
+
+## Graphik drehen
+
+```{r}
+qplot(factor(cyl), data=mtcars, geom="bar") + 
+coord_flip()
+```
+
+
+## Wie nutzt man ggplot
+
+```{r}
+ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
+```
+
+
+
+## Farben selber wählen
+
+Es wird das Paket RColorBrewer verwendet um die Farbpalette zu ändern
+
+```{r}
+library(RColorBrewer)
+myColors <- brewer.pal(5,"Accent")
+names(myColors) <- levels(diamonds$cut)
+colScale <- scale_colour_manual(name = "cut",
+                                values = myColors)
+```
+
+<http://stackoverflow.com/questions/6919025/>
+
+## Plot mit den Farben
+
+```{r}
+p <- ggplot(diamonds,aes(carat, depth,colour = cut)) + 
+  geom_point()
+p + colScale
+```
+
+
+## Speichern mit ggsave
+
+```{r,eval=F}
+ggsave("Graphik.jpg")
+```
+
+## Links
+
+- [Warum man ggplot2 für einfache Grafiken nutzen sollte](http://www.r-bloggers.com/why-i-use-ggplot2/)
+
+- [Einführung in ggplot2](https://opr.princeton.edu/workshops/Downloads/2015Jan_ggplot2Koffman.pdf)
+
+- [ggplot2 Basics](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html)
+
+- Noam Ross - [Quick Introduction to ggplot2](http://www.noamross.net/blog/2012/10/5/ggplot-introduction.html)

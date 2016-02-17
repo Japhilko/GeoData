@@ -1,0 +1,17 @@
+---
+title: "Einleitung"
+author: "Jan-Philipp Kolb"
+date: "17 Februar 2016"
+output: html_document
+---
+
+## 
+
+Andreas Plank [Grafiken und Statistik in R](http://www.chironomidaeproject.com/fileadmin/downloads/Formeln_in_R.pdf)
+
+## 
+
+```{r,eval=F}
+download.file("http://osmar.r-forge.r-project.org/fossgis2012.R","fossgis2012.R")
+```
+
