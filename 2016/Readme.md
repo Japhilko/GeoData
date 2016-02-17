@@ -9,8 +9,8 @@ Der Schwerpunkt liegt auf der Vermittlung von Methoden der grafisch gestützten 
 Einleitung
 ---------------------
 
-- Intro ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.md) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.pdf))
+- Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.md) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.pdf)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 - Use case - Asylum seekers ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Asylum_seekers.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Asylum_seekers.pdf) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2015/rcode/SpatMA_AsylumSeekers.R) )
 - Organisation and background ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Organisation_and_background.md) |

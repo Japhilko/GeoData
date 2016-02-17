@@ -3,3 +3,8 @@
 # A list of important packages for Geo Visualisation
 
 install.packages("fBasics")
+install.packages("plotrix")
+
+
+# Interactive maps
+install.packages("leaflet")
