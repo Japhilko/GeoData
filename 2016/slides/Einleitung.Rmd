@@ -49,11 +49,14 @@ output: html_document
 
 - [Wahl USA](http://fivethirtyeight.com/)
 
-
+- [Namem London](http://names.mappinglondon.co.uk/)
 
 - pegel-online
 
 - [driven by data](http://driven-by-data.net/)
+
+- [Fahrradunfälle](http://michael-hoerz.de/maps/berlin-bike/)
+
 
 ## 
 
