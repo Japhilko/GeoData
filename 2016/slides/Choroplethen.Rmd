@@ -1,0 +1,108 @@
+---
+title: "Course 7 - background information"
+author: "Jan-Philipp Kolb"
+date: "Tue Oct 27 13:05:03 2015"
+output: beamer_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+```
+
+
+## New Dataset - Refugee Routes
+
+```{r,eval=T}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/RefugeePlaces.csv"
+
+dat <- read.csv(url) 
+```
+
+## Overview of Refugee Data
+```{r,echo=F}
+kable(dat[1:6,c("Place","Country","lat","lon")])
+```
+
+
+## Updated Dataset - Camp Sites
+
+```{r,eval=T}
+url2 <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/CampSites_Germany.csv"
+
+dat2 <- read.csv(url2) 
+```
+
+## Overview of Camp Site Data
+
+```{r,echo=F}
+dat2$lat <- round(dat2$lat,digits=1)
+dat2$lon <- round(dat2$lon,digits=1)
+
+kable(dat2[c(2,6,9,16,39,25,16),])
+```
+
+## New Dataset - Nursery
+
+```{r,eval=T}
+url3 <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/DatNursery.csv"
+
+dat3 <- read.csv(url3) 
+```
+
+## Get Polygons for federal states
+
+```{r,cache=T}
+library(raster)
+DEU1 <- getData('GADM', country='DEU', level=1)
+```
+
+## Problems with Umlauts
+
+```{r}
+dat3$Namen
+```
+
+
+
+## Combine Polygons with data
+
+```{r}
+dat3$Namen <- as.character(dat3$Namen)
+dat3$Namen[1]<-"Baden-Württemberg"
+dat3$Namen[16]<-"Thüringen"
+ind <- match(DEU1@data$NAME_1,dat3$Namen)
+DEU1@data$In_tsd_07 <- dat3$In_tsd_07
+```
+
+## Produce a map
+
+```{r}
+library(sp)
+spplot(DEU1,"In_tsd_07")
+```
+
+
+## Use a Shiny-App - Eurostat data
+
+```{r,eval=F}
+# install.packages("shiny")
+library(shiny)
+shiny::runGitHub(repo='ShinyApps', username='Japhilko',
+                 subdir='EurostatMapApp/')
+```
+
+```{r,eval=F}
+library(shiny)
+shiny::runGitHub(repo='ShinyApps', username='Japhilko',
+                 subdir='Choropleths/')
+```
+
+## An interesting E-Book
+
+- [R-graphics](http://www.e-reading.club/bookreader.php/137370/R_Graphics.pdf) by Paul Murrell 
+
+<www.e-reading.club/bookreader.php/137370/R_Graphics.pdf>
+

@@ -77,12 +77,9 @@ In this session example datasets for different use cases are presented. And it i
 - Use Case: Webscraping data on nursery ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/WebScraping.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
 - Use Case: Hostels Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/Madrid_hostels.md))
 
-Assignment: Please download the data for your use case and visualise it in a map.
 
-Thematic / Interactive maps and Choropleths
----------------------
-
-- Organisation and Background Information ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Course7.pdf))
+- Choroplethen 
+ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd))
 - Thematic maps with R-package tmap ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf) |
 [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
