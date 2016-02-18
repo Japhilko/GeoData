@@ -2,7 +2,7 @@
 title: "Einleitung"
 author: "Jan-Philipp Kolb"
 date: "17 Februar 2016"
-output: html_document
+output: pdf_document
 ---
 
 ## Gründe für die Nutzung von R
@@ -46,6 +46,18 @@ output: html_document
 - Andreas Plank [Grafiken und Statistik in R](http://www.chironomidaeproject.com/fileadmin/downloads/Formeln_in_R.pdf)
 
 - Beispiel: [Walmarts in den USA](https://rpubs.com/Radcliffe/walmart)
+
+- pegel-online
+
+## 
+
+[wind map](http://hint.fm/wind/)
+
+![pic](http://www.flowjustflow.com/wp-content/gallery/hint-fm/high-res-3600.jpg)
+
+## 
+
+![pic](http://driven-by-data.net/images/working-women-full.png)
 
 ## 
 
