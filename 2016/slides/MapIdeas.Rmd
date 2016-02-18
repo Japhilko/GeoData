@@ -1,0 +1,26 @@
+---
+title: "Mapping Ideas"
+author: "Jan-Philipp Kolb"
+date: "7. Oktober 2015"
+output: slidy_presentation
+---
+
+## Refugee routes
+
+- Refugee issue on [R-bloggers](http://www.migrationpolicy.org/programs/data-hub)
+- [Frontex](http://frontex.europa.eu/)
+- [Süddeutsche](http://www.sueddeutsche.de/politik/europaeische-fluechtlingspolitik-routen-der-hoffnung-wege-der-verzweifelten-1.2259006)
+- [UN data on migration](http://unstats.un.org/unsd/demographic/sconcerns/migration/)
+
+- [migration in the US](http://www.migrationpolicy.org/programs/data-hub)
+
+## 
+
+```{r}
+graph.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure"
+  ab1<- paste(graph.path,"NiceMap.png",sep="")
+```
+
+
+![pic](`r ab1 `) 
+

@@ -2,8 +2,10 @@
 title: "Nutzung von Geodaten in den Sozialwissenschaften - Global Administrative Areas"
 author: "Jan-Philipp Kolb"
 date: "9 Februar 2016"
-output: beamer_presentation
+output: html_document
 ---
+
+
 
 ## Datenquelle
 
@@ -13,45 +15,62 @@ Global Administrative Boundaries (GADM)
 
 ## Schnittstelle in R-Paket raster
 
-Daten für Deutschland auf Gemeindeebene:
 
+```{r,echo=F}
+Ex <- F
+library("knitr")
+```
 
-```{r}
+Daten für Deutschland auf Bundesebene:
+
+```{r,eval=Ex}
 library("raster")
 DEU0 <- getData('GADM', country='DEU', level=0)
 ```
 
 ## Overview data
 
-```{r}
+```{r,eval=F,eval=Ex}
 DEU0@data
+```
+
+```{r,echo=F,eval=Ex}
+kable(DEU0@data[,1:5])
+```
+
+## Daten Gemeindeebene:
+
+```{r,eval=Ex}
+library("raster")
+DEU3 <- getData('GADM', country='DEU', level=3)
 ```
 
 
 ## Subselect
 
-```{r}
+```{r,eval=Ex}
 SAL <- DEU4[DEU4@data$ID_1==12,]
 ```
 
-```{r}
+```{r,eval=Ex}
 plot(SAL)
 ```
 
 ## Karten mit Farbe
 
-```{r}
+```{r,eval=Ex}
 plot(SAL,col="blue")
 ```
 
 ## Neue Variable erzeugen
 
-```{r}
+```{r,eval=Ex}
 SAL$Zufall <- runif(length(SAL))
 ```
 
 ## Das Paket sp
-```{r}
+
+```{r,eval=Ex}
 library(sp)
 spplot(SAL,"Zufall")
 ```
