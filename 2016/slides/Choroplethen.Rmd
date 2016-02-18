@@ -2,7 +2,7 @@
 title: "Course 7 - background information"
 author: "Jan-Philipp Kolb"
 date: "Tue Oct 27 13:05:03 2015"
-output: beamer_presentation
+output: html_document
 ---
 
 ```{r,echo=F}
