@@ -47,7 +47,13 @@ output: pdf_document
 
 - Beispiel: [Walmarts in den USA](https://rpubs.com/Radcliffe/walmart)
 
+- [Wahl USA](http://fivethirtyeight.com/)
+
+
+
 - pegel-online
+
+- [driven by data](http://driven-by-data.net/)
 
 ## 
 
