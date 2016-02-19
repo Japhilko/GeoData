@@ -47,19 +47,18 @@ Einfärbung und Editierung von Polygonen
 ---------------------
 
 - Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/RcommandsRecap.pdf))
-- Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/MapIdeas.pdf))
+- Ideen für Karten ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/MapIdeas.pdf))
 
 Sozialwissenschaftliche Datenquellen
 ---------------------
 
-- datahub
+- [datahub](https://datahub.io/de/)
 
-Data Import and Data Linkage
+Daten Import und Verbindung von Daten
 ---------------------
-It is the target of this session to show how map data can be linked with other data to produce spatial visualisations. To produce the visualisations the R-package spplot is used.
+In diesem Abschnitt wird gezeigt, wie raum- und sozialwissenschaftliche Daten miteinander verknüpft werden können um räumliche Visualisierungen zu erzeugen. 
 
-
-- Data Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+- Daten Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 - Data Linkage ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Matching.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
 
@@ -90,18 +89,17 @@ In this session example datasets for different use cases are presented. And it i
 
 Color Coding, Choropleths and point maps
 ---------------------
-The material for this session gives some hints on the preparation of your presentation. 
 
-- Organisation and Interactive maps ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
+- Organisation und Interaktive Karten ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R))
-- Example: Interactive Map ([Browser](http://rpubs.com/Japhilko82/Campsites))
-- R-Package presentation choroplethr ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.md) | 
+- Beispiel: Interaktive Karte ([Browser](http://rpubs.com/Japhilko82/Campsites))
+- Das R-Packet  choroplethr ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
-- R-Package spdep - neighbours and distance ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/K_spdep.md) |
+- Das R-Packet spdep - Nachbarschaft und Distanz ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/K_spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
 
 
-Context and Conclusion
+Kontext und Ausblick
 ---------------------
 In this session the context is presented, buzz words are spatial turn, vernacular geography and neogeography.
 
