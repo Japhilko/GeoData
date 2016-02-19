@@ -53,6 +53,8 @@ output: html_document
 
 - pegel-online
 
+- [Zeit - Eisenbahnbrücken](http://detektor.fm/digital/datenjournalismus-interaktive-karte-zeigt-marode-deutsche-bahn-bruecken)
+
 - [driven by data](http://driven-by-data.net/)
 
 - [Fahrradunfälle](http://michael-hoerz.de/maps/berlin-bike/)

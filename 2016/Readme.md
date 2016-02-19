@@ -36,16 +36,17 @@ Quellen für räumliche Daten
 - Administrative Grenzen mit [GADM](http://www.gadm.org/) 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd))
 
-- Karten mit dem R-Paket maptools
+- Karten mit dem R-Paket maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/D_maptools.pdf) 
+| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
+
+
+- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/PolygonSources.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 
 
 Einfärbung und Editierung von Polygonen
 ---------------------
 
-- Recap of important R commands ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/RcommandsRecap.pdf))
-- Introduction to R-package maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/D_maptools.pdf) 
-| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
-- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/PolygonSources.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
+- Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/RcommandsRecap.pdf))
 - Hints on map ideas ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/MapIdeas.pdf))
 
 Sozialwissenschaftliche Datenquellen
