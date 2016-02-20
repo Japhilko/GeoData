@@ -36,7 +36,7 @@ Quellen für räumliche Daten
 - Administrative Grenzen mit [GADM](http://www.gadm.org/) 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd))
 
-- Karten mit dem R-Paket maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/D_maptools.pdf) 
+- Karten mit dem R-Paket maptools ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf) 
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
 
 
