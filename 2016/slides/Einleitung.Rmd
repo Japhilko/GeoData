@@ -49,6 +49,8 @@ output: html_document
 
 - [Wahl USA](http://fivethirtyeight.com/)
 
+- [Race Gap Police USA](http://www.nytimes.com/interactive/2014/09/03/us/the-race-gap-in-americas-police-departments.html?_r=0)
+
 - [Namem London](http://names.mappinglondon.co.uk/)
 
 - pegel-online
@@ -59,20 +61,19 @@ output: html_document
 
 - [Fahrradunfälle](http://michael-hoerz.de/maps/berlin-bike/)
 
+- [Verteilung Fußballfans](http://interaktiv.morgenpost.de/beta-fussballkarte/#7/51.258/10.756)
 
-## 
+- [Plastiktüten im Meer](http://news.nationalgeographic.com/news/2014/07/140715-ocean-plastic-debris-trash-pacific-garbage-patch/)
 
-[wind map](http://hint.fm/wind/)
+## [Wind Map](http://hint.fm/wind/)
 
 ![pic](http://www.flowjustflow.com/wp-content/gallery/hint-fm/high-res-3600.jpg)
 
-## 
+## [Driven by Data](www.driven-by-data.net/)
 
 ![pic](http://driven-by-data.net/images/working-women-full.png)
 
-## 
-
-
+## FossGIS 
 
 ```{r,eval=F}
 download.file("http://osmar.r-forge.r-project.org/fossgis2012.R","fossgis2012.R")
