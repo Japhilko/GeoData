@@ -28,12 +28,7 @@ Verschiedene Kartentypen mit ggmap
 Quellen für räumliche Daten
 ---------------------
 
-- Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html) ([browser I](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.Rmd) | [browser](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
-
-
-
-- Administrative Grenzen mit [GADM](http://www.gadm.org/) 
-([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd))
+- Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html) ([browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.Rmd) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
 
 - Karten mit dem R-Paket maptools ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/D_maptools.pdf) 
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
@@ -41,13 +36,11 @@ Quellen für räumliche Daten
 
 - Quellen für Geodaten ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.Rmd)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 
-
-Einfärbung und Editierung von Polygonen
----------------------
+- Administrative Grenzen mit [GADM](http://www.gadm.org/) 
+([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd))
 
 - Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
 
-- Ideen für Karten ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/MapIdeas.pdf))
 
 Sozialwissenschaftliche Datenquellen
 ---------------------
@@ -76,27 +69,37 @@ of data sources
 
 - Choroplethen 
  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd))
+
+
+Einfärbung und Editierung von Polygonen
+---------------------
+
 - Thematic maps with R-package tmap ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf) |
 [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
-- Interactive maps with R-package leaflet 
-([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Interactive_maps.pdf) |
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive maps.R))
 
-Color Coding, Choropleths and point maps
+- Das R-Packet `choroplethr` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.Rmd) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
+
+
+Interaktive Karten
 ---------------------
 
 - Organisation und Interaktive Karten ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R))
 - Beispiel: Interaktive Karte ([Browser](http://rpubs.com/Japhilko82/Campsites))
-- Das R-Packet  choroplethr ([Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.md) | 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
+
 - Das R-Packet spdep - Nachbarschaft und Distanz ([Browser](https://github.com/Japhilko/GeoData/blob/master/2015/slides/K_spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
+
+- Interactive maps with R-package leaflet 
+([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Interactive_maps.pdf) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive maps.R))
+
 
 
 Kontext und Ausblick
 ---------------------
 In this session the context is presented, buzz words are spatial turn, vernacular geography and neogeography.
 
-- Context and conclusion ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/SpatialMA_Course11.pdf))
+- Kontext und Ausblick ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/SpatialMA_Course11.pdf))

@@ -11,7 +11,7 @@ library(knitr)
 ```
 
 
-## Target: Get data on nursing homes
+## Ziel: Eine Karte mit Pflegeheimen in Deutschland
 
 ![pic](figure/Pflegeheime.PNG) 
 
