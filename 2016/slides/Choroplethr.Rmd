@@ -35,7 +35,7 @@ Choropleths are useful for visualizing data where geographic boundaries are a na
 ## Population estimates for US States
 
 ```{r,warning=F,message=F,echo=F}
-library(choroplethr)
+library("choroplethr")
 data(df_pop_state)
 ```
 
