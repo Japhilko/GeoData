@@ -21,13 +21,12 @@ Verschiedene Kartentypen mit ggmap
 
 - Das R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) wird in diesem Abschnitt genutzt um verschiedene Kartentypen zu erzeugen.  [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap).
 ([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/slides/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
-- Beispiel: [points of interest](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/) für Backpacker in Amsterdam
+
+- Beispiel: Points of interest ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
 
 Quellen für räumliche Daten
 ---------------------
-
- 
 
 - Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html) ([browser I](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.Rmd) | [browser](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
 
@@ -40,13 +39,14 @@ Quellen für räumliche Daten
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
 
 
-- Polygon sources ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/PolygonSources.pdf)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
+- Quellen für Geodaten ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.Rmd)| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 
 
 Einfärbung und Editierung von Polygonen
 ---------------------
 
-- Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/RcommandsRecap.pdf))
+- Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
+
 - Ideen für Karten ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/MapIdeas.pdf))
 
 Sozialwissenschaftliche Datenquellen
@@ -58,15 +58,9 @@ Daten Import und Verbindung von Daten
 ---------------------
 In diesem Abschnitt wird gezeigt, wie raum- und sozialwissenschaftliche Daten miteinander verknüpft werden können um räumliche Visualisierungen zu erzeugen. 
 
-- Daten Import ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/dataImport.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+- Daten Import ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 - Data Linkage ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Matching.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
-
-
-Use Cases: Data Import and Data Linkage
----------------------
-In this session example datasets for different use cases are presented. And it is shown how to combine these datasets with spatial information.
-
 
 - R-package spplot and Color coding ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/E_spplot.pdf)  | [Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/E_spplot.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))

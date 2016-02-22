@@ -1,0 +1,206 @@
+---
+title: "Sources for polygons"
+author: "Jan-Philipp Kolb"
+date: "04/24/2015"
+output: beamer_presentation
+---
+
+
+
+```{r,echo=F}
+library(knitr)
+ca <- T
+```
+
+## The shapefile format ... 
+
+- ... is a popular geospatial vector data format for geographic information system (GIS) software. 
+- It is developed and regulated by Esri as a (mostly) open specification for data interoperability among Esri and other GIS software products. 
+- The shapefile format can spatially describe vector features: points, lines, and polygons, representing, for example, water wells, rivers, and lakes. 
+- Each item usually has attributes that describe it, such as name or temperature.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Shapefile)
+
+## Global Adminastrative Boundaries - [GADM](http://www.gadm.org/) - NUTS level 1
+
+```{r,cache=ca,warning=F,message=F}
+library(raster)
+LUX1 <- getData('GADM', country='LUX', level=1)
+plot(LUX1)
+```
+
+## Let's have a look at the data
+
+```{r,eval=F,echo=F}
+LUXA <- LUX1[1,]
+plot(LUXA)
+```
+
+How to get the information on the polygons 
+
+```{r,eval=F}
+LUX1@polygons[[1]]@Polygons[[1]]@coords
+```
+
+
+## Coordinates in polygon slot
+
+```{r,echo=F}
+kable(head(LUX1@polygons[[1]]@Polygons[[1]]@coords))
+```
+
+## Data slot
+
+```{r}
+head(LUX1@data)
+```
+
+
+## [GADM](http://www.gadm.org/)- NUTS level 3
+
+```{r,cache=ca,warning=F}
+LUX3 <- getData('GADM', country='LUX', level=3)
+plot(LUX3)
+```
+
+## [GADM](http://www.gadm.org/)- NUTS level 4
+
+```{r,cache=ca,warning=F}
+LUX4 <- getData('GADM', country='LUX', level=4)
+plot(LUX4)
+```
+
+## [GADM](http://www.gadm.org/)- NUTS level 3
+
+```{r,cache=ca,warning=F}
+DEU3 <- getData('GADM', country='DEU', level=3)
+plot(DEU3)
+```
+
+
+## Postal codes for Germany
+
+<http://datahub.io/de/dataset/postal-codes-de>
+
+
+```{r,eval=T,echo=F,message=F}
+setwd("D:/Daten/Daten/GeoDaten")
+library(rgdal)
+PLZ <- readOGR ("post_pl.shp","post_pl")
+```
+
+
+
+```{r,cache=ca,warning=F,message=F,eval=F}
+library(maptools)
+PLZ <- readShapePoly("post_pl.shp")
+```
+
+## R-command readShapePoly
+
+To read shapefiles it is necessary to have three files with the following file extensions in the same directory:
+
+- .shp
+- .dbf
+- .shx
+
+## Plot Mannheim
+
+```{r,echo=F}
+#bbox4 <- bbox(MA)
+```
+
+```{r,cache=ca,warning=F}
+MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
+plot(MA)
+```
+
+
+## [Source GeoData Germany](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=14&gdz_user_id=0)
+
+
+```{r,cache=T,message=F,warning=F}
+library(maptools)
+setwd("D:/Daten/Daten/GeoDaten/vg250_ebenen")
+krs <- readShapePoly("vg250_krs.shp")
+plot(krs)
+```
+
+## Districts for one federal state
+
+```{r}
+fds <- substr(krs@data$AGS,1,2)
+
+plot(krs[fds=="05",])
+```
+
+
+## [primary election-areas (Germany)](http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/ONB_Grenzen.html)
+
+```{r,cache=T}
+setwd("D:/Daten/Daten/GeoDaten")
+onb <- readShapePoly("onb_grenzen.shp")
+
+kable(head(onb@data))
+```
+
+## The primary election-areas 06
+
+```{r,cache=T}
+VW <- substr(onb@data$VORWAHL,1,2)
+plot(onb[VW=="06",])
+```
+
+## Which is Mannheim?
+
+```{r,cache=T}
+Com <- onb@data$NAME
+plot(onb[VW=="06",])
+plot(onb[Com=="Mannheim",],col="red",add=T)
+plot(onb[Com=="Heidelberg",],col="green",add=T)
+plot(onb[Com=="Kaiserslautern",],col="blue",add=T)
+```
+
+
+## [World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
+
+```{r,message=F,warning=F,eval=F,echo=F}
+setwd("D:/Daten/Daten/GeoDaten/WPI_Shapefile")
+WPI <- readShapePoly("WPI.shp")
+library(rgdal)
+WPI <- readOGR ("WPI.shp","WPI")
+plot(WPI)
+```
+
+
+
+## Other sources
+
+```{r,eval=F,echo=F}
+git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData"
+setwd(git.path)
+```
+
+Extra Map Databases
+
+```{r,message=F,warning=F}
+library(mapdata)
+```
+
+- Information about rivers
+
+## Further sources
+
+- [Eurostat maps](http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/
+references/administrative_units_statistical_units_1)
+
+- [Open linked data](https://www.ordnancesurvey.co.uk/business-and-government/products/opendata-products-grid.html)
+
+- [World Borders Dataset](http://thematicmapping.org/downloads/world_borders.php)
+- [National Historical Information System](https://www.nhgis.org/)
+
+- [Free polygon data for the US](http://www.freemapdata.com/html/free_polygon_data.html)
+
+- [Spatial Data in R](https://science.nature.nps.gov/im/datamgmt/statistics/r/advanced/spatial.cfm)
+
+- [ggmap and shapefiles](http://www.r-bloggers.com/shapefile-polygons-plotted-on-google-maps-using-ggmap-in-r-throw-some-throw-some-stats-on-that-mappart-2/)

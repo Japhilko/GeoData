@@ -1,0 +1,131 @@
+---
+title: "Data Import"
+author: "Jan-Philipp Kolb"
+date: "Wed Oct 14 07:54:24 2015"
+output: beamer_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+```
+
+
+## Import von csv-Dateien
+
+You can download a statistic on dead refugees from [unitedagainstracism.org](unitedagainstracism.org)
+
+[Link datahub.io](http://datahub.io/dataset/list-of-deaths-on-the-borders-of-europe-1993-2012/resource/cc85b8fc-99be-4503-9040-099ee3a42efd)
+
+```{r,echo=F}
+data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
+setwd(data.path)
+load("listofdeath_small.Rdata")
+```
+
+
+```{r,eval=F}
+data.path <- "C:/Work/data/"
+setwd(data.path)
+lod <- read.csv("listofdeath.csv")
+```
+
+- Für Deutsche Daten sollte `read.csv2` verwendet werden
+
+## csv-Dateien aus dem Internet direkt einlesen
+
+```{r,cache=T,eval=F}
+link <- "https://raw.githubusercontent.com/
+mihi-tr/list-of-deaths-dpkg/master/data/
+listofdeath.csv"
+lod <- read.csv(link)
+```
+
+## Show the data
+
+```{r,echo=F}
+kable(lod[1:6,1:4])
+```
+
+```{r}
+colnames(lod)
+```
+
+
+## Import Excel-files
+
+Unesco world heritage sites:
+[Link datahub.io](http://datahub.io/dataset/unesco-world-heritage-sites/resource/d4116195-44d8-4bc1-9f91-9b570870dc19)
+
+```{r,echo=F,cache=T}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
+load("whc.RData")
+```
+
+- You have to provide a sheet index as second argument
+- For German data use read.xlsx2 because of the comma separation
+
+```{r,eval=F}
+library(xlsx)
+whc <- read.xlsx("whc-sites-2015.xls",1)
+```
+
+
+## Overview of World Heritage Dataset
+
+```{r}
+table(whc$category)
+```
+
+```{r}
+colnames(whc)
+```
+
+
+## Create a barplot
+
+```{r}
+barplot(table(whc$category))
+```
+
+
+## Import sav-files
+
+```{r,echo=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
+load("mz10_small.Rdata")
+```
+
+```{r,eval=F}
+library(foreign)
+mz10 <- read.spss("mz2010_cf.sav",to.data.frame=T)
+```
+
+## Command read.spss
+
+![pic](figure/ReadSPSS.PNG) 
+
+## Read stata-files
+
+- Datset about students (2000) from [Forschungsdatenzentrum](http://www.forschungsdatenzentrum.de/bestand/studenten/cf/2000/index.asp)
+- Datset has 206.867 entries
+
+```{r,message=F,warning=F,eval=F}
+studis <- read.dta("studenten_cf_2000.dta")
+```
+
+- Blog post about reading and writing stata files on [is.R](http://is-r.tumblr.com/post/37181850668/readingwriting-stata-dta-files-with-foreign)
+
+## Quick R on data import
+
+![pic](figure/sminput.jpg) 
+
+http://www.statmethods.net/input/index.html
+
+## Data management a bit similar to SPSS
+
+```{r,eval=F}
+install.packages("Rz")
+library(Rz)
+```
+
+
