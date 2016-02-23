@@ -132,3 +132,5 @@ lego_movie %>%
 ## Links
 
 Beispiel: [GiventheData](http://giventhedata.blogspot.de/2012/08/r-and-web-for-beginners-part-iii.html)
+
+[Five easy steps for webscraping](http://www.unt.edu/rss/class/Jon/Benchmarks/ScrapingData_L_JDS_Nov2013.pdf)
