@@ -2,7 +2,7 @@
 title: "Map Types with ggmap"
 author: "Jan-Philipp Kolb"
 date: "Wed Feb 17 08:19:18 2016"
-output: md_document
+output: slidy_presentation
 ---
 
 ## Gliederung

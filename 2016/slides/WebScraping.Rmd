@@ -11,6 +11,7 @@ library(knitr)
 ```
 
 
+
 ## Ziel: Eine Karte mit Pflegeheimen in Deutschland
 
 ![pic](figure/Pflegeheime.PNG) 
@@ -28,8 +29,8 @@ library(XML)
 ## Import the data to R
 
 ```{r,eval=F}
-l<-"http://www.pflegesuche.de/bundesland_pflegeheime.html"
-ab <- readHTMLList(l)
+l<-"https://www.pflegesuche.de/bundesland_pflegeheime_RP.html"
+ab <- readLines(l)
 ```
 
 The result is quite unstructured:
@@ -47,21 +48,6 @@ bla <- unlist(lapply(tab2,function(x)x[2]))
 df_pflege <- data.frame(bla,
           Anz=as.numeric(as.character(dat)))
 ```
-
-
-```{r,echo=F,eval=F}
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/WebScraping/data")
-save(df_pflege,file="df_pflege.RData")
-```
-
-
-
-```{r,echo=F}
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/WebScraping/data")
-
-load("df_pflege.RData")
-```
-
 
 
 ## Overview of data
@@ -108,3 +94,39 @@ library(sp)
 spplot(DEU1,"nursingHomes")
 ```
 
+
+## Das Paket `rvest`
+
+```{r,eval=F}
+install.packages("rvest")
+```
+
+```{r,eval=F}
+library("rvest")
+land_DE <- "https://de.wikipedia.org/w/index.php?title=Land_%28Deutschland%29&action=edit"
+
+ # URL of interest:
+mps <- "https://de.wikipedia.org/wiki/Land_%28Deutschland%29" 
+
+# parse the document for R representation:
+mps.doc <- htmlParse(mps)
+
+# get all the tables in mps.doc as data frames
+mps.tabs <- readHTMLTable(mps.doc) 
+```
+
+
+```{r,eval=F}
+ab <- html(land_DE)
+
+lego_movie %>% 
+  html_node("strong span") %>%
+  html_text() %>%
+  as.numeric()
+```
+
+
+
+## Links
+
+Beispiel: [GiventheData](http://giventhedata.blogspot.de/2012/08/r-and-web-for-beginners-part-iii.html)
