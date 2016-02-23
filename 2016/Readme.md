@@ -46,6 +46,8 @@ Sozialwissenschaftliche Datenquellen
 
 - [datahub](https://datahub.io/de/)
 
+- Beispiel: Webscraping data on nursery ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
+
 Daten Import und Verbindung von Daten
 ---------------------
 In diesem Abschnitt wird gezeigt, wie raum- und sozialwissenschaftliche Daten miteinander verknüpft werden können um räumliche Visualisierungen zu erzeugen. 
@@ -62,7 +64,6 @@ of data sources
 )
 - Beispiel: "Maps with Eurostat data" ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 
-- Beispiel: Webscraping data on nursery ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
 
 - Beispiel: Hostels Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd))
 
@@ -100,6 +101,5 @@ Interaktive Karten
 
 Kontext und Ausblick
 ---------------------
-In this session the context is presented, buzz words are spatial turn, vernacular geography and neogeography.
 
 - Kontext und Ausblick ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/SpatialMA_Course11.pdf))
