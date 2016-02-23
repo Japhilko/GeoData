@@ -1,0 +1,551 @@
+---
+title: "Map Types"
+author: "Jan-Philipp Kolb"
+date: "Wed Sep 16 08:22:22 2015"
+output: beamer_presentation
+---
+
+
+```{r,echo=F}
+graph.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/"
+graph.path2 <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/paper/figure/"
+```
+
+
+## Outline
+
+Various map types: 
+
+- [Road maps](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf) 
+- Satellite maps
+- Terrain maps/physical maps
+- [Abstracted maps](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
+
+
+There are more which will be presented next week...
+
+The R-package [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) will be used in the following to 
+produce different types of maps with the command [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap)
+
+
+## Road maps
+
+```{r,echo=F}
+link1 <- paste(graph.path,"Road_Map.jpg",sep="")
+```
+
+![pic](`r link1 `)
+
+[Source](http://www.awtechnology.com/images/Road_Map.jpg)
+
+A road map is one of the most widely used map types. 
+
+- These maps show major and minor highways and roads (depending on
+detail) 
+- as well as things like airports, city locations and points of
+interest like parks, campgrounds and monuments. 
+- Major highways on a road map are generally red and larger than other roads, 
+- while minor roads are a lighter color and a narrower line.
+
+
+## Install the library
+
+- We'll need package ggmap - so we have to install it:
+
+1. possibility 
+```{r,eval=F}
+install.packages("ggmap")
+```
+
+
+2. possibility:
+```{r,echo=F}
+link1 <- paste(graph.path,"Installpackages1.PNG",sep="")
+```
+![pic](`r link1 `)
+
+
+## Install packages
+
+```{r,echo=F}
+link1 <- paste(graph.path,"Installpackages2.PNG",sep="")
+```
+![pic](`r link1 `)
+
+
+## Library ggmap - Hello world
+
+- To load the library we use the command `library`
+
+```{r,message=F,warning=F,eval=F}
+library(ggmap)
+```
+
+```{r,message=F,eval=F}
+qmap("Mannheim")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path,"ggmapRoadmapMannheim.png",sep="")
+```
+![pic](`r link1 `)
+
+
+## Use another zoom level
+
+- level 3 - continent
+- level 10 - city
+- level 21 - building
+
+```{r,message=F,eval=F}
+qmap("Germany", zoom = 6)
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Germany.png",sep="")
+```
+![pic](`r link1 `)
+
+
+## Get help with the questionmark
+
+```{r,eval=F}
+?qmap
+```
+
+Different components in the help
+
+- Description
+- Usage
+- Arguments
+- Value
+- Author(s)
+- See Also
+- Examples
+
+
+## The examples section of help
+
+
+Extract from the help file on qmap:
+
+```{r,echo=F}
+link1 <- paste(graph.path,"qmapExample.PNG",sep="")
+```
+
+![pic](`r link1 `)
+
+
+This examples can be directly copy-pasted to the console
+
+```{r,eval=F}
+qmap(location = "baylor university")
+qmap(location = "baylor university", zoom = 14)
+# and so on
+```
+
+
+## ggmap - source OpenStreetMap
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14, source="osm")
+```
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+
+
+## ggmap - OpenStreetMap - black/white
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14, source="osm",color="bw")
+```
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14_osm_bw.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## ggmap - maptype satellite
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14, maptype="satellite")
+```
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14_satellite.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## ggmap - maptype satellite zoom 21
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 21, maptype="hybrid")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim21_hybrid.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+
+## Terrain/physical maps
+
+Physical maps illustrate the physical features of an area, such as the mountains, rivers and lakes.
+Colors are used to show relief differences in land elevations.
+
+- The water is usually shown in blue.
+- a lighter color is typically used at lower elevation and
+- darker color indicate higher elevations.
+- Contour lines can also be used to show elevation changes (they are normally spaced at regular intervals)
+
+## ggmap - terrain map
+
+```{r,message=F,eval=F}
+qmap('Schriesheim', zoom = 14,
+ maptype="terrain")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Schriesheim14.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## Abstracted maps
+
+
+```{r,echo=F}
+link1 <- paste(graph.path,"NYabstracted.jpg",sep="")
+```
+
+![pic](`r link1 `)
+
+Source: [Design faves](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
+
+- Abstraction is used to create a map with only essential information
+- Example metro maps - directions and little information for orientation is included
+- In the following especially background maps
+
+
+## ggmap - maptype watercolor
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14,
+ maptype="watercolor",source="stamen")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheimwatercolor14.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## ggmap - source stamen
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14,
+ maptype="toner",source="stamen")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14stamen_toner.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## ggmap - maptype toner-lite
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14,
+ maptype="toner-lite",source="stamen")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14stamen_tonerlite.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+
+## ggmap - maptype toner-hybrid
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14,
+ maptype="toner-hybrid",source="stamen")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14stamen_tonerhybrid.png",sep="")
+```
+
+![pic](`r link1 `)
+
+## ggmap - maptype terrain-lines
+
+```{r,message=F,eval=F}
+qmap('Mannheim', zoom = 14,
+ maptype="terrain-lines",source="stamen")
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14stamen_tonerterrain-lines.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## Stamen maps
+
+These high-contrast B+W (black and white) maps are featured in our Dotspotting project. They are perfect for data mashups and exploring river meanders and coastal zones. 
+
+Source: <http://maps.stamen.com/>
+
+
+## Save graphics
+
+```{r,echo=F}
+link1 <- paste(graph.path,"RstudioExport.PNG",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## ggmap - create an object 
+
+- `<-` is an assignment operator which can be used to create an object
+- This is useful if you work with several maps at the same time
+
+```{r,eval=F}
+MA_map <- qmap("Mannheim", 
+               zoom = 14,
+               maptype="toner",
+               source="stamen")
+```
+
+
+## Geocoding
+
+> Geocoding (...) uses a description of a location, most typically a postal address or place name, to find geographic coordinates from spatial reference data ... 
+
+[Wikipedia - Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)
+
+```{r,message=F,eval=F,warning=F}
+library(ggmap)
+geocode("Mannheim Wasserturm",source="google")
+```
+
+       lon      lat
+1 8.473664 49.48483
+
+
+## Latitude and Longitude
+
+![pic](http://modernsurvivalblog.com/wp-content/uploads/2013/09/definition-of-latitude-longitude.jpg)
+
+[Source](http://modernsurvivalblog.com/survival-skills/basic-map-reading-latitude-longitude/)
+
+
+## Reverse geocoding
+
+> Reverse geocoding is the process of back (reverse) coding of a point location (latitude, longitude) to a readable address or place name. This permits the identification of nearby street addresses, places, and/or areal subdivisions such as neighbourhoods, county, state, or country.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Reverse_geocoding)
+
+```{r,eval=F}
+revgeocode(c(48,8))
+```
+
+[1] "Qoriley Rd, Somalia"
+
+
+## Get the distance between 2 points
+
+```{r,message=F,eval=F}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
+```
+
+            from             to   m    km     miles seconds
+1 Q1, 4 Mannheim B2, 1 Mannheim 746 0.746 0.4635644     211
+   minutes      hours
+1 3.516667 0.05861111
+
+```{r,message=F,eval=F}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
+```
+
+            from             to   m    km     miles seconds
+1 Q1, 4 Mannheim B2, 1 Mannheim 546 0.546 0.3392844     420
+  minutes     hours
+1       7 0.1166667
+
+
+## Get another distance
+
+```{r,message=F,eval=F}
+mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
+```
+
+            from             to   m    km    miles seconds
+1 Q1, 4 Mannheim B2, 1 Mannheim 555 0.555 0.344877     215
+   minutes      hours
+1 3.583333 0.05972222
+
+## Geocoding - points of interest
+
+```{r,eval=F}
+POI1 <- geocode("B2, 1 Mannheim",source="google")
+POI2 <- geocode("Hbf Mannheim",source="google")
+POI3 <- geocode("Wasserturm Mannheim",source="google")
+ListPOI <-rbind(POI1,POI2,POI3)
+POI1;POI2;POI3
+```
+
+       lon      lat
+1 8.462844 49.48569
+       lon      lat
+1 8.469879 49.47972
+       lon      lat
+1 8.473664 49.48483
+
+## Points in map
+
+```{r,eval=F}
+MA_map +
+geom_point(aes(x = lon, y = lat),
+data = ListPOI)
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14points.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+
+## Points in map
+
+```{r,eval=F}
+MA_map +
+geom_point(aes(x = lon, y = lat),col="red",
+data = ListPOI)
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14pointsred.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## ggmap - adding different colors
+
+```{r,eval=F}
+ListPOI$color <- c("A","B","C")
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color),
+data = ListPOI)
+```
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14pointsdiffcol.png",sep="")
+```
+
+![pic](`r link1 `)
+
+## ggmap - bigger dots
+
+```{r,eval=F}
+ListPOI$size <- c(10,20,30)
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color,size=size),
+data = ListPOI)
+```
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14pointsdiffcolsize.png",sep="")
+```
+
+![pic](`r link1 `)
+
+## Get a route from Google maps
+
+```{r,eval=F}
+from <- "Mannheim Hbf"
+to <- "Mannheim B2 , 1"
+route_df <- route(from, to, structure = "route")
+```
+
+[More information](http://rpackages.ianhowson.com/cran/ggmap/man/route.html)
+
+## Draw a map with this information
+
+```{r,eval=F}
+qmap("Mannheim Hbf", zoom = 14) +
+  geom_path(
+    aes(x = lon, y = lat),  colour = "red", size = 1.5,
+    data = route_df, lineend = "round"
+  )
+```
+
+
+```{r,echo=F}
+link1 <- paste(graph.path2,"Mannheim14route.png",sep="")
+```
+
+![pic](`r link1 `)
+
+
+## Resources
+
+- [Article by David Kahle and Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) on the usage of ggmap.
+- [Grab a map](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
+- [Making Maps in R](http://www.kevjohnson.org/making-maps-in-r-part-2/)
+
+More about adding points
+
+- Usage of [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
+- Question on [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
+
+![pic](http://i.stack.imgur.com/q3euq.png)
+
+## Cheatsheet
+
+- Cheatsheet on [data visualisation](https://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf)
+
+![pic](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.png)
+
+
+## Resources and literature
+
+[ggmap: Spatial Visualization with ggplot2](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&rep=rep1&type=pdf)
+
+by David Kahle and Hadley Wickham
+ 

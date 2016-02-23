@@ -63,12 +63,12 @@ img {
 
 <div id="nutzung-von-geodaten-in-den-sozialwissenschaften" class="section level1">
 <h1>Nutzung von Geodaten in den Sozialwissenschaften</h1>
-<p>Das OpenSource Software Paket R ist kostenfrei und bietet neben Standardverfahren der Datenanalyse ein umfangreiches Repertoire von hoch spezialisierten Prozeduren und Verfahren auch für komplexe Anwendungen.</p>
-<p>Der Schwerpunkt liegt auf der Vermittlung von Methoden der grafisch gestützten Analyse von Geodaten.</p>
-<div id="motivation" class="section level2">
-<h2>Motivation</h2>
+<p>Thema ist die Beschaffung und Nutzung von räumlichen Informationen in einem (sozial-) wissenschaftlichen Kontext. Es geht um die Beschaffung von GeoDaten (bspw. Shapefiles, <a href="http://openstreetmap.de/">OpenStreetMap</a>) wie auch sozialwissenschaftlichen Daten. Dabei werden vor allem Quellen für frei verfügbare Daten vorgestellt.</p>
+<p>Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files der amtlichen Statistik auch Zensus-Ergebnisse und Daten von Eurostat, der Weltbank und freien Portalen wie <a href="https://datahub.io/">datahub.io</a> und <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page">Wikipedia</a> verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird ausschließlich die Programmiersprache R genutzt.</p>
+<div id="motivation-und-vorbereitung" class="section level2">
+<h2>Motivation und Vorbereitung</h2>
 <ul>
-<li><p>Einleitung (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.pdf">pdf</a>) - <a href="http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim">Regionales</a></p></li>
+<li><p>Einleitung (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd">Browser</a>) - <a href="http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim">Regionales</a></p></li>
 <li><p>Unter <a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md">Infos github</a> sind Informationen zur Nutzung des Verzeichnisses zu finden.</p></li>
 <li><p>Um den Kurs zu verfolgen muss <a href="https://cran.uni-muenster.de/">R</a> und <a href="https://www.rstudio.com/products/rstudio/download/">Rstudio</a> installiert werden. Der Installationsprozess ist relativ einfach.</p></li>
 </ul>
@@ -76,7 +76,7 @@ img {
 <div id="verschiedene-kartentypen-mit-ggmap" class="section level2">
 <h2>Verschiedene Kartentypen mit ggmap</h2>
 <ul>
-<li><p>Das R-Paket <a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">ggmap</a> wird in diesem Abschnitt genutzt um verschiedene Kartentypen zu erzeugen. <a href="http://www.inside-r.org/packages/cran/ggmap/docs/qmap">qmap</a>. (<a href="https://github.com/Japhilko/GeoData/raw/master/2015/slides/MapTypes.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R">rcode</a> )</p></li>
+<li><p>Nutzung von R-Paket <a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">ggmap</a> zur Erzeugung verschiedener Kartentypen. (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/MapTypes.Rmd">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R">rcode</a> )</p></li>
 <li><p>Beispiel: Points of interest (<a href="https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/">poi</a>) für Backpacker in Amsterdam</p></li>
 </ul>
 </div>
@@ -113,15 +113,15 @@ img {
 <div id="einfarbung-und-editierung-von-polygonen" class="section level2">
 <h2>Einfärbung und Editierung von Polygonen</h2>
 <ul>
-<li>Thematic maps with R-package tmap (<a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf">pdf</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R">rcode</a>)</li>
+<li><p>Thematic maps with R-package tmap (<a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf">pdf</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R">rcode</a>)</p></li>
+<li><p>Das R-Packet <code>choroplethr</code> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.Rmd">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R">rcode</a>)</p></li>
 </ul>
 </div>
 <div id="interaktive-karten" class="section level2">
 <h2>Interaktive Karten</h2>
 <ul>
 <li>Organisation und Interaktive Karten (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R">rcode</a>)</li>
-<li>Beispiel: Interaktive Karte (<a href="http://rpubs.com/Japhilko82/Campsites">Browser</a>)</li>
-<li>Das R-Packet choroplethr (<a href="https://github.com/Japhilko/GeoData/blob/master/workshops/G_Choroplethr.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R">rcode</a>)</li>
+<li><p>Beispiel: Interaktive Karte (<a href="http://rpubs.com/Japhilko82/Campsites">Browser</a>)</p></li>
 <li><p>Das R-Packet spdep - Nachbarschaft und Distanz (<a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/K_spdep.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R">rcode</a>)</p></li>
 <li><p>Interactive maps with R-package leaflet (<a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/Interactive_maps.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R">rcode</a>)</p></li>
 </ul>

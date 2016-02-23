@@ -1,16 +1,15 @@
 Nutzung von Geodaten in den Sozialwissenschaften
 ====================
 
-Das OpenSource Software Paket R ist kostenfrei und bietet neben Standardverfahren der Datenanalyse ein umfangreiches Repertoire von hoch spezialisierten Prozeduren und Verfahren auch für komplexe Anwendungen.
+Thema ist die Beschaffung und Nutzung von räumlichen Informationen in einem (sozial-) wissenschaftlichen Kontext. Es geht um die Beschaffung von GeoDaten (bspw. Shapefiles, [OpenStreetMap](http://openstreetmap.de/)) wie auch sozialwissenschaftlichen Daten. Dabei werden vor allem Quellen für frei verfügbare Daten vorgestellt. 
 
-Der Schwerpunkt liegt auf der Vermittlung von Methoden der grafisch gestützten Analyse von Geodaten. 
+Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files der amtlichen Statistik auch Zensus-Ergebnisse und Daten von Eurostat, der Weltbank und freien Portalen wie [datahub.io](https://datahub.io/) und [Wikipedia](https://www.wikidata.org/wiki/Wikidata:Main_Page) verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird ausschließlich die Programmiersprache R genutzt. 
 
 
-Motivation
+Motivation und Vorbereitung
 ---------------------
 
-- Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/Introduction.pdf)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+- Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 - Unter [Infos github](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des  Verzeichnisses zu finden.
 
@@ -19,8 +18,7 @@ Motivation
 Verschiedene Kartentypen mit ggmap
 ---------------------
 
-- Das R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) wird in diesem Abschnitt genutzt um verschiedene Kartentypen zu erzeugen.  [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap).
-([pdf](https://github.com/Japhilko/GeoData/raw/master/2015/slides/MapTypes.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
+- Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/MapTypes.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
 
 - Beispiel: Points of interest ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
