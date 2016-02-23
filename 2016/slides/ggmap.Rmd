@@ -70,18 +70,13 @@ install.packages("ggmap")
 
 
 2. possibility:
-```{r,echo=F}
-link1 <- paste(graph.path,"Installpackages1.PNG",sep="")
-```
-![pic](`r link1 `)
 
-```{r,echo=F}
-link1 <- paste(graph.path,"Installpackages2.PNG",sep="")
-```
-![pic](`r link1 `)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Installpackages1.PNG)
+
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Installpackages2.PNG)
 
 
-## Library ggmap - Hello world
+## Library ggmap - Hallo Welt
 
 - To load the library we use the command `library`
 
@@ -97,14 +92,15 @@ qmap("Mannheim")
 MA_map <- qmap("Mannheim")
 ```
 
-## Map for a sight
+## Karte für eine Sehenswürdigkeit
 
 ```{r,message=F}
-qmap("Berlin Brandenburger Tor")
+BBT <- qmap("Berlin Brandenburger Tor")
+BBT
 ```
 
 
-## Map for a whole country
+## Karte für einen ganzen Staat
 
 ```{r,message=F}
 qmap("Germany")
