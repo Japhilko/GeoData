@@ -1,5 +1,5 @@
 ---
-title: "Package Choroplethr"
+title: "Packete Choroplethr und DT"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 04 14:08:29 2015"
 output: ioslides_presentation
@@ -42,6 +42,7 @@ data(df_pop_state)
 `df_pop_state` is a dataset which is included in the package `choroplethr`, containing population estimates for US States in 2012.
 
 ```{r,echo=F,eval=internet}
+library("choroplethrMaps")
 datatable(df_pop_state,options = list(pageLength = 5))
 ```
 
