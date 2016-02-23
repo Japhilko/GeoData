@@ -30,7 +30,9 @@ library(XML)
 
 ```{r,eval=F}
 l<-"https://www.pflegesuche.de/bundesland_pflegeheime_RP.html"
-ab <- readLines(l)
+mps <- "https://de.wikipedia.org/wiki/Land_%28Deutschland%29" 
+
+ab <- readLines(mps)
 ```
 
 The result is quite unstructured:
