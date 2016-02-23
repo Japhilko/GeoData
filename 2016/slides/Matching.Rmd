@@ -1,0 +1,161 @@
+---
+title: "Matching"
+author: "Jan-Philipp Kolb"
+date: "Wed Oct 14 10:22:30 2015"
+output: beamer_presentation
+---
+
+
+```{r,echo=F}
+library(knitr)
+data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
+```
+
+
+## The wrld_simpl data set
+
+```{r}
+library(maptools)
+data("wrld_simpl")
+```
+
+Get the dataset to the environment tab of Rstudio
+
+```{r}
+df_ws <- data.frame(wrld_simpl@data)
+```
+
+
+## Rstudio Data Browser
+
+Now you can use the Rstudio data browser
+
+![pic](figure/RstudioDataBrowser.PNG) 
+
+
+## The wrld_simpl data set
+
+Get the country names:
+
+```{r}
+CNames <- wrld_simpl@data$NAME
+head(CNames)
+```
+
+```{r}
+CNames <- as.character(CNames)
+head(CNames)
+```
+
+## Substrings of a Character Vector
+
+```{r}
+CNames1 <- substr(CNames,1,1)
+head(CNames1)
+```
+
+```{r}
+CNames2 <- substr(CNames,1,2)
+head(CNames2)
+```
+
+## Subsetting
+
+```{r}
+CNames[CNames2=="An"]
+```
+
+
+## Why matching?
+
+You can download a statistic on housing saving rate from [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis)
+
+[link](http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500)
+
+```{r,echo=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
+
+library(xlsx)
+HHsr <- read.xlsx2("HHsavingRate.xls",1)
+kable(HHsr[1:6,1:4])
+```
+
+Is it possible to match countries in this dataset and country name in wrld_simpl dataset?
+
+
+## Matching vectors
+
+How to match two vectors
+
+```{r}
+A <- c(1,2,3,4)
+B <- c(4,3)
+match(A,B)
+```
+
+```{r}
+match(B,A)
+```
+
+## Matching vectors
+
+```{r}
+D <- c(1,3,5,6,7)
+E <- c("A",1,98,4)
+match(D,E)
+```
+
+- Let's do the matching with country names to produce a map with economic indicators
+
+
+## The wrld_simpl data
+
+We only need the European continent
+
+```{r}
+EUR <- wrld_simpl[wrld_simpl$REGION==150,]
+plot(EUR)
+```
+
+## Europe without Russia
+
+- Russia is to big for our map:
+
+```{r}
+EUR <- EUR[-which(EUR@data$NAME=="Russia"),]
+plot(EUR)
+```
+
+
+
+## Matching Countries
+
+```{r}
+as.character(HHsr[5:10,1])
+```
+
+```{r}
+EUR_Names <- as.character(EUR@data$NAME)
+head(EUR_Names)
+```
+
+```{r}
+ind <- match(EUR_Names,HHsr[,1])
+head(ind)
+table(is.na(ind))
+```
+
+## Add the data to the polygon data
+
+```{r}
+EUR@data$HHsr <- as.numeric(as.character(HHsr[ind,2]))
+```
+
+```{r}
+# Plot the map:
+library(sp)
+spplot(EUR,"HHsr")
+```
+
+
+
