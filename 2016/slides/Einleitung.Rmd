@@ -37,9 +37,18 @@ output: html_document
 
 ![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
 
+## Warum die Darstellung in Karten
+
+- Besseres Verständnis sozialwissneschaftlicher Phänomene
+
+
 ## Beispiel Indikatoren für Europa
 
-[Indikatoren](https://japhilko.shinyapps.io/Choropleths/)
+[Indikatoren](https://japhilko.shinyapps.io/Choropleths/) für Europa
+
+<https://japhilko.shinyapps.io/Choropleths/>
+
+
 
 ## Links
 
