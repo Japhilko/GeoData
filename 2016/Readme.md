@@ -44,6 +44,9 @@ Quellen für räumliche Daten
 Sozialwissenschaftliche Datenquellen
 ---------------------
 
+- Daten Import ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+
+
 - [datahub](https://datahub.io/de/)
 
 - Beispiel: Webscraping data on nursery ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
@@ -52,31 +55,30 @@ Daten Import und Verbindung von Daten
 ---------------------
 In diesem Abschnitt wird gezeigt, wie raum- und sozialwissenschaftliche Daten miteinander verknüpft werden können um räumliche Visualisierungen zu erzeugen. 
 
-- Daten Import ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 - Data Linkage ([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.Rmd) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
 
-- R-package spplot and Color coding ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.Rmd)| 
+- R-Paket `spplot` und Farbkodierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.Rmd)| 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+
 - Daten für die Beispiele ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Course6.Rmd) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
-)
+), Datenquellen in R ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd))
+
+
 - Beispiel: "Maps with Eurostat data" ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 
 
-- Beispiel: Hostels Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd))
+- Weitere Beispiele: Hostels Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
-
-- Choroplethen 
- ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd))
 
 
 Einfärbung und Editierung von Polygonen
 ---------------------
 
 - Thematic maps with R-package tmap ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf) |
-[Browser](https://github.com/Japhilko/GeoData/blob/master/workshops/F_tmap.md) | 
+[Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.Rmd) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
 
 - Das R-Packet `choroplethr` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.Rmd) | 
