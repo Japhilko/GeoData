@@ -2,27 +2,33 @@
 title: "Web Scraping"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 11:19:52 2015"
-output: beamer_presentation
+output: ioslides_presentation
 ---
 
 
 ```{r,echo=F}
 library(knitr)
+Ex <- F
+Ex1 <- F
 ```
 
 
 
-## Ziel: Eine Karte mit Pflegeheimen in Deutschland
 
-![pic](figure/Pflegeheime.PNG) 
+## Das R-Paket `XML`
 
-## The XML library
-
-![pic](figure/GastonSanchez.PNG) 
+Gaston Sanchez - [Basics of XML and HTML](https://www.dropbox.com/s/eyd4t9h7n9fx0du/getting_web_data_r3_basics_xml_html.pdf?dl=0)
 
 ```{r}
 # install.packages("XML")
 library(XML)
+```
+
+
+
+```{r,eval=Ex1}
+BLA_link <- "http://www.bernhard-gaul.de/wissen/bundeslaender.php"
+BLA_tab <- readHTMLTable(BLA_link)
 ```
 
 
@@ -54,7 +60,7 @@ df_pflege <- data.frame(bla,
 
 ## Overview of data
 
-```{r,echo=F}
+```{r,echo=F,eval=Ex}
 kable(head(df_pflege))
 ```
 
@@ -68,19 +74,19 @@ plot(DEU1)
 
 ## Combine map and data
 
-```{r}
+```{r,eval=Ex}
 ind <- match(DEU1@data$NAME_1,df_pflege$bla)
 ind
 ```
 
 ## Match the missing entries
 
-```{r}
+```{r,eval=Ex}
 DEU1@data$NAME_1[is.na(ind)]
 which(is.na(ind))
 ```
 
-```{r}
+```{r,eval=Ex}
 ind[1] <- agrep("rttemberg",df_pflege$bla)
 ind[8] <- agrep("pommern",df_pflege$bla)
 ind[13] <- agrep("Anhalt",df_pflege$bla)
@@ -90,7 +96,7 @@ ind[16] <- agrep("ringen",df_pflege$bla)
 
 ## Combine data and map
 
-```{r}
+```{r,eval=Ex}
 DEU1@data$nursingHomes <- df_pflege$Anz[ind]
 library(sp)
 spplot(DEU1,"nursingHomes")
@@ -134,3 +140,10 @@ lego_movie %>%
 Beispiel: [GiventheData](http://giventhedata.blogspot.de/2012/08/r-and-web-for-beginners-part-iii.html)
 
 [Five easy steps for webscraping](http://www.unt.edu/rss/class/Jon/Benchmarks/ScrapingData_L_JDS_Nov2013.pdf)
+
+## References
+
+```{r}
+citation("XML")
+```
+
