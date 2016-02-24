@@ -8,3 +8,10 @@ output: slidy_presentation
 ## Datenquellen
 
 - Auf dem Portal [datahub.io](http://datahub.io/) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar. 
+
+
+## Links
+
+Roger Bivand - [Spatial Analysis of SIDS data](https://datahub.io/dataset/sudden-infant-death-syndrome/resource/b456a0ea-fa2c-4809-b2d2-fe109ecdf83e)
+
+[FAOSTAT and WDI](https://cran.r-project.org/web/packages/FAOSTAT/vignettes/FAOSTAT.pdf)
