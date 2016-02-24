@@ -48,7 +48,7 @@ output: html_document
 
 <https://japhilko.shinyapps.io/Choropleths/>
 
-
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/ShinyIndicators.PNG)
 
 ## Links
 
