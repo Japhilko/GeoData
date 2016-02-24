@@ -44,14 +44,15 @@ Quellen für räumliche Daten
 Sozialwissenschaftliche Datenquellen
 ---------------------
 
+- Öffentliche Daten ([Browser](https://datahub.io/de/) ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd)) zur freien Verfügung
+
+- Daten von [datahub.io](https://datahub.io/de/) ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datahub.Rmd))
+
 - Daten Import ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 
+- Beispiel: Webscraping ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
 
-- [datahub](https://datahub.io/de/)
-
-- Beispiel: Webscraping data on nursery ([browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
-
-Daten Import und Verbindung von Daten
+Import und Verbindung von Daten
 ---------------------
 In diesem Abschnitt wird gezeigt, wie raum- und sozialwissenschaftliche Daten miteinander verknüpft werden können um räumliche Visualisierungen zu erzeugen. 
 

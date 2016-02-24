@@ -1,0 +1,10 @@
+---
+title: "Datahub"
+author: "Jan-Philipp Kolb"
+date: "24. Februar 2016"
+output: slidy_presentation
+---
+
+## Datenquellen
+
+- Auf dem Portal [datahub.io](http://datahub.io/) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar. 
