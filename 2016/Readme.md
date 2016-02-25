@@ -6,10 +6,10 @@ Thema ist die Beschaffung und Nutzung von räumlichen Informationen (GeoDaten) i
 Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files der Bevölkerungsbefragungen auch Daten des Zensus-Atlas und Daten von Eurostat, der Weltbank und freien Portalen wie [datahub.io](https://datahub.io/) und [Wikipedia](https://www.wikidata.org/wiki/Wikidata:Main_Page) verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird ausschließlich die Programmiersprache R genutzt. 
 
 
-Motivation und Vorbereitung
+Einführung und Vorbereitung
 ---------------------
 
-- Einleitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+- Motivation ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 - Unter [Infos github](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des  Verzeichnisses zu finden.
 
@@ -53,7 +53,6 @@ Sozialwissenschaftliche Datenquellen
 
 Import und Verbindung von Daten
 ---------------------
-
 
 - Data Linkage ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.Rmd) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
