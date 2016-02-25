@@ -1,16 +1,43 @@
 ---
-title: "Die Nutzung von GeoDaten in den Sozialwissenschaften"
+title: "Die Nutzung von Geodaten in den Sozialwissenschaften"
 author: "Jan-Philipp Kolb"
 date: "25 Februar 2016"
-output: word_document
+output: html_document
 ---
 
-## Motivation und Vorbereitung
+## Motivation
 
-- Einleitung und Organisation
+Im vorliegenden Artikel geht es um Informationen mit Raumbezug. Im folgenden wird von Geodaten die Rede sein. Diesen Geodaten werden von vielen Seiten ein enormes Wertschöpfungspotential zugetraut.
 
-## Verschiedene Kartentypen
+zu erkennen ist gewinnt das Thema immer mehr an Bedeutung. Erkennen kann man dies unter anderem an dem Bericht des RatSWD „Georefernzierung von Daten - Situation und Zukunft der Geodatenlandschaft in Deutschland“.
 
-## Quellen für räumliche Daten
+Auch in den Sozialwissenschaften kann viel Mehrwert beispielsweise durch die Nutzung von georeferenzierten Kontextdaten geschaffen werden.
 
-## Sozialwissenschaftliche Datenquellen
+Insbesondere durch die INSPIRE-Richtlinie ist Bewegung in die Geschichte gekommen.
+Allerdings gibt es teilweise auch konfligierende Interessen zwischen der Veröffentlichung von Geodaten und dem Datenschutzinteresse. Es werden Lösungsansätze bezüglich des Konflikts von Geodaten mit dem Datenschutz benötigt.
+
+Da die Verwendungsmöglichkeiten sehr vielfältig sind, ist zunächst eine Differenzierung notwendig. 
+
+
+## Begriffsabgrenzung
+
+Geodaten werden sehr häufig genutzt um sozialwissenschafliche Forschungsergebnisse zu visualisieren. Sofern die Ergebnisse für räumliche Untergliederungen vorliegen bietet sich an dieser Stelle eine Choroplethen Darstellung an. 
+
+Bei der Darstellung der Einwohnerzahl pro Bundesland handelt es sich beispielsweise um eine solche Choroplethen Darstellung. Neben den Ergebnissen beispielsweise des Zensus 2011 auf Ebene der Bundesländer sind auch Polygonzüge der Bundesländer zur Darstellung notwendig. 
+
+
+Zu unterscheiden ist zwischen Geokodierung von Individualdaten (beispielsweise von Umfragedaten) und dem Anspielen von Kontextinformationen (Georeferenzierung). 
+
+Georeferenzierten Kontextdaten sind Metadaten zu einem geographischen Punkt (vgl. Radl et al., 2013). Dabei handelt es sich um Informationen die nicht personenbezogen sind, beispielsweise die Erreichbarkeit eines Punktes mit öffentlichen Verkehrsmitteln oder die Anzahl der Schulen oder Kindergärten in der Umgebung. Ein weiteres Beispiel für Kontextdaten wäre die Zahl der Krankenhäuser in einem Umkreis von 20 km handeln.
+Die Geokodierung von Umfragedaten darf in vielen Fällen wenn überhaupt nur zum Zeitpunkt der Erhebung durchgeführt werden. 
+
+## Datenquellen für räumliche Daten
+
+Wenn es um die Darstellung von Ergebnissen für administrative Grenzen geht, kann das Angebot der GADM-Seite verwendet werden.
+
+- Datenquellen für räumliche Daten
+
+- Sozialwissenschaftliche Datenquellen
+
+## Fazit und Ausblick
+
