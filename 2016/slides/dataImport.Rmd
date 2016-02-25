@@ -1,12 +1,13 @@
 ---
-title: "Data Import"
+title: "Daten Import"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 07:54:24 2015"
-output: beamer_presentation
+output: md_document
 ---
 
 ```{r,echo=F}
 library(knitr)
+Ex <- F
 ```
 
 
@@ -16,7 +17,7 @@ You can download a statistic on dead refugees from [unitedagainstracism.org](uni
 
 [Link datahub.io](http://datahub.io/dataset/list-of-deaths-on-the-borders-of-europe-1993-2012/resource/cc85b8fc-99be-4503-9040-099ee3a42efd)
 
-```{r,echo=F}
+```{r,echo=F,eval=Ex}
 data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
 setwd(data.path)
 load("listofdeath_small.Rdata")
@@ -33,7 +34,7 @@ lod <- read.csv("listofdeath.csv")
 
 ## csv-Dateien aus dem Internet direkt einlesen
 
-```{r,cache=T,eval=F}
+```{r,cache=T,eval=T}
 link <- "https://raw.githubusercontent.com/
 mihi-tr/list-of-deaths-dpkg/master/data/
 listofdeath.csv"
@@ -56,7 +57,7 @@ colnames(lod)
 Unesco world heritage sites:
 [Link datahub.io](http://datahub.io/dataset/unesco-world-heritage-sites/resource/d4116195-44d8-4bc1-9f91-9b570870dc19)
 
-```{r,echo=F,cache=T}
+```{r,echo=F,cache=T,eval=Ex}
 setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
 load("whc.RData")
 ```
@@ -72,25 +73,25 @@ whc <- read.xlsx("whc-sites-2015.xls",1)
 
 ## Overview of World Heritage Dataset
 
-```{r}
+```{r,eval=Ex}
 table(whc$category)
 ```
 
-```{r}
+```{r,eval=Ex}
 colnames(whc)
 ```
 
 
 ## Create a barplot
 
-```{r}
+```{r,eval=Ex}
 barplot(table(whc$category))
 ```
 
 
 ## Import sav-files
 
-```{r,echo=F}
+```{r,echo=F,eval=Ex}
 setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
 load("mz10_small.Rdata")
 ```
