@@ -33,6 +33,15 @@ setwd(data.path)
 lod <- read.csv("listofdeath.csv")
 ```
 
+## UNESCO Weltkulturerbe
+
+Unesco world heritage sites:
+[Link datahub.io](http://datahub.io/dataset/unesco-world-heritage-sites/resource/d4116195-44d8-4bc1-9f91-9b570870dc19)
+
+```{r,echo=F,cache=T,eval=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
+load("whc.RData")
+```
 
 
 ## Links

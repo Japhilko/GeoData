@@ -13,46 +13,43 @@ Ex <- F
 
 ## Import von csv-Dateien
 
-
-- Für Deutsche Daten sollte `read.csv2` verwendet werden
+```{r,eval=Ex}
+library("readr")
+```
 
 ## csv-Dateien aus dem Internet direkt einlesen
 
-```{r,cache=T,eval=T}
-link <- "https://raw.githubusercontent.com/
-mihi-tr/list-of-deaths-dpkg/master/data/
-listofdeath.csv"
-lod <- read.csv(link)
+```{r,eval=Ex}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/TrustData.csv"
+
+trust_data <- read_csv2(link)
 ```
 
-## Show the data
+- Für Deutsche Daten sollte `read_csv2` verwendet werden
 
-```{r,echo=F}
-kable(lod[1:6,1:4])
+## Sich die Daten anzeigen lassen
+
+```{r,echo=F,eval=Ex}
+kable(trust_data[1:6,1:4])
 ```
 
-```{r}
-colnames(lod)
+```{r,eval=Ex}
+colnames(trust_data)
 ```
 
 
 ## Import Excel-files
 
-Unesco world heritage sites:
-[Link datahub.io](http://datahub.io/dataset/unesco-world-heritage-sites/resource/d4116195-44d8-4bc1-9f91-9b570870dc19)
+```{r}
+library("readxl")
+```
 
-```{r,echo=F,cache=T,eval=Ex}
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
-load("whc.RData")
+
+```{r,eval=F}
+ab <- read_excel("dataset.xlsx",sheet=1)
 ```
 
 - You have to provide a sheet index as second argument
-- For German data use read.xlsx2 because of the comma separation
-
-```{r,eval=F}
-library(xlsx)
-whc <- read.xlsx("whc-sites-2015.xls",1)
-```
 
 
 ## Overview of World Heritage Dataset
