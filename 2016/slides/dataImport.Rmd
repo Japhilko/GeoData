@@ -13,22 +13,6 @@ Ex <- F
 
 ## Import von csv-Dateien
 
-You can download a statistic on dead refugees from [unitedagainstracism.org](unitedagainstracism.org)
-
-[Link datahub.io](http://datahub.io/dataset/list-of-deaths-on-the-borders-of-europe-1993-2012/resource/cc85b8fc-99be-4503-9040-099ee3a42efd)
-
-```{r,echo=F,eval=Ex}
-data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
-setwd(data.path)
-load("listofdeath_small.Rdata")
-```
-
-
-```{r,eval=F}
-data.path <- "C:/Work/data/"
-setwd(data.path)
-lod <- read.csv("listofdeath.csv")
-```
 
 - Für Deutsche Daten sollte `read.csv2` verwendet werden
 
