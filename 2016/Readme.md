@@ -15,13 +15,14 @@ Motivation und Vorbereitung
 
 - Um den Kurs zu verfolgen muss [R](https://cran.uni-muenster.de/) und [Rstudio](https://www.rstudio.com/products/rstudio/download/) installiert werden. Der Installationsprozess ist relativ einfach. 
 
-Verschiedene Kartentypen mit ggmap
+Verschiedene Kartentypen mit `ggmap`
 ---------------------
 
 - Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/MapTypes.Rmd) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
+- Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
 
 Quellen für räumliche Daten
 ---------------------
@@ -38,8 +39,6 @@ Quellen für räumliche Daten
 - Administrative Grenzen mit [GADM](http://www.gadm.org/) 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd))
 
-- Übersicht wichtiger R-Befehle ([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
-
 
 Sozialwissenschaftliche Datenquellen
 ---------------------
@@ -54,9 +53,9 @@ Sozialwissenschaftliche Datenquellen
 
 Import und Verbindung von Daten
 ---------------------
-In diesem Abschnitt wird gezeigt, wie raum- und sozialwissenschaftliche Daten miteinander verknüpft werden können um räumliche Visualisierungen zu erzeugen. 
 
-- Data Linkage ([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.Rmd) |
+
+- Data Linkage ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.Rmd) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
 

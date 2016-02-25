@@ -1,0 +1,7 @@
+---
+title: "Die Nutzung von GeoDaten in den Sozialwissenschaften"
+author: "Jan-Philipp Kolb"
+date: "25. Februar 2016"
+output: word_document
+---
+
