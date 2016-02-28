@@ -1,0 +1,83 @@
+---
+title: "Web Scraping"
+author: "Jan-Philipp Kolb"
+date: "Wed Oct 14 11:19:52 2015"
+output: ioslides_presentation
+---
+
+
+```{r,echo=F}
+library(knitr)
+Ex <- F
+Ex1 <- F
+```
+
+
+
+
+## Das R-Paket `XML`
+
+Gaston Sanchez - [Basics of XML and HTML](https://www.dropbox.com/s/eyd4t9h7n9fx0du/getting_web_data_r3_basics_xml_html.pdf?dl=0)
+
+```{r}
+# install.packages("XML")
+library(XML)
+```
+
+
+
+```{r,eval=Ex1}
+BLA_link <- "http://www.bernhard-gaul.de/wissen/bundeslaender.php"
+BLA_tab <- readHTMLTable(BLA_link)
+```
+
+## Überblick über die Daten
+
+```{r,echo=F,eval=Ex1}
+kable(BLA_tab)
+```
+
+## Das Paket `rvest`
+
+```{r,eval=F}
+install.packages("rvest")
+```
+
+```{r,eval=F}
+library("rvest")
+land_DE <- "https://de.wikipedia.org/w/index.php?title=Land_%28Deutschland%29&action=edit"
+
+ # URL of interest:
+mps <- "https://de.wikipedia.org/wiki/Land_%28Deutschland%29" 
+
+# parse the document for R representation:
+mps.doc <- htmlParse(mps)
+
+# get all the tables in mps.doc as data frames
+mps.tabs <- readHTMLTable(mps.doc) 
+```
+
+
+```{r,eval=F}
+ab <- html(land_DE)
+
+lego_movie %>% 
+  html_node("strong span") %>%
+  html_text() %>%
+  as.numeric()
+```
+
+
+
+## Links
+
+Beispiel: [GiventheData](http://giventhedata.blogspot.de/2012/08/r-and-web-for-beginners-part-iii.html)
+
+[Five easy steps for webscraping](http://www.unt.edu/rss/class/Jon/Benchmarks/ScrapingData_L_JDS_Nov2013.pdf)
+
+## References
+
+```{r}
+citation("XML")
+```
+

@@ -1,0 +1,207 @@
+---
+title: "Use Case Backpacker"
+author: "Jan-Philipp Kolb"
+date: "20. Oktober 2015"
+output: ioslides_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+```
+
+## Backpacking Routes
+
+![pic](http://www.indietraveller.co/wp-content/uploads/2014/11/download-930x473.jpg)
+
+[Source](http://www.indietraveller.co/map-of-where-to-go-backpacking/)
+
+## The geosmdata2 package
+
+```{r,eval=F}
+library("devtools")
+# devtools::install_github('Japhilko/GeoData/geosmdata2')
+```
+
+```{r}
+library(geosmdata2)
+```
+
+
+
+## Download Information from OpenStreetMap
+
+[OSM map features](http://wiki.openstreetmap.org/wiki/Map_Features)
+
+```{r,eval=F,cache=T}
+place <- "Madrid"
+object <- "hostel"
+obj <- get_osm_nodes(object,place)
+```
+
+
+
+```{r,echo=F,cache=T}
+place <- "Madrid"
+objectL <- c("hostel","bar","fast_food")
+i <- 1
+object <- objectL[i]
+obj <- get_osm_nodes(object,place)
+```
+
+
+```{r,eval=F,echo=F}
+library(XML)
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/BackpackerExample/data")
+saveXML(obj,file=paste(place,"_",object,".RData",sep=""))
+```
+
+
+
+## Extract information
+
+The following function extracts the tagged information
+
+```{r,cache=T,message=F,warning=F}
+op <- extract_info_op(obj,object)
+```
+
+```{r,eval=F}
+github.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/2015/data"
+setwd(github.path)
+Hostels_Madrid <- op
+write.csv(Hostels_Madrid,file="Hostels_Madrid.csv")
+```
+
+
+
+![pic](figure/OSMhostel.PNG) 
+
+
+## Data Overview
+
+```{r,echo=F,cache=T}
+ind <- is.na(op$addr.city)
+op <- op[-ind,]
+```
+
+```{r,warning=F,message=F}
+colnames(op)
+```
+
+## Dat Overview II
+
+```{r,echo=F}
+kable(op[,c("name","lat","lon")])
+```
+
+## Get a map 
+
+```{r,cache=T,message=F,warning=F}
+library(ggmap)
+place_map12stamen <- qmap(place, zoom = 12,
+                          maptype="toner-lite",
+                          source="stamen")
+place_map12stamen
+```
+
+## Plot results
+
+```{r,cache=T,warning=F,message=F}
+place_map12stamen + geom_point(aes(x = lon, y = lat),
+                       data = op,size=3,col="red") 
+```
+
+
+
+```{r,eval=F,echo=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/BackpackerExample/figure")
+png(paste(place,"_",object,".png",sep=""))
+place_map12stamen + geom_point(aes(x = lon, y = lat),
+                       data = op,size=3,col="red") 
+dev.off()
+```
+
+
+
+## Get other points of interest
+
+```{r,eval=F}
+place <- "Madrid"
+object <- "bar"
+obj <- get_osm_nodes(object,place)
+op2 <- extract_info_op(obj,object)
+```
+
+```{r,eval=F,echo=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/BackpackerExample/data")
+saveXML(obj,file=paste(place,"_",object,".RData",sep=""))
+```
+
+
+```{r,cache=T,echo=F}
+i <- 2
+
+object <- objectL[i]
+obj2 <- get_osm_nodes(object,place)
+
+op2 <- extract_info_op(obj2,object)
+```
+
+## Combine data
+
+```{r,eval=F}
+op_df1 <- data.frame(op[,c("lat","lon")],objN="hostel")
+op_df2 <-data.frame(op2[,c("lat","lon")],objN="bar")
+
+op_df <- rbind(op_df1,op_df2)
+```
+
+
+```{r,echo=F}
+op_df1 <- data.frame(op[,c("lat","lon")],objN=objectL[1])
+op_df2 <-data.frame(op2[,c("lat","lon")],objN=objectL[2])
+
+op_df <- rbind(op_df1,op_df2)
+```
+
+
+```{r,cache=T,warning=F,message=F}
+place_map12stamen + geom_point(aes(x = lon, y = lat,col=objN),
+                       data = op_df,size=3) 
+```
+
+
+```{r,eval=F,echo=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/BackpackerExample/figure")
+png(paste(place,"_",object,".png",sep=""))
+place_map12stamen + geom_point(aes(x = lon, y = lat,col=objN),
+                       data = op_df,size=3) 
+dev.off()
+```
+
+## Add more Information 
+
+Where to get some fast food
+
+```{r fast_food,cache=T,message=F,warning=F,echo=F}
+i <- 3
+object <- objectL[i]
+obj <- get_osm_nodes(object,place)
+op3 <- extract_info_op(obj,object)
+```
+
+```{r,eval=F,echo=F}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/BackpackerExample/data")
+saveXML(obj,file=paste(place,"_",object,".RData",sep=""))
+```
+
+```{r,echo=F}
+op_df3 <-data.frame(op3[,c("lat","lon")],objN=objectL[3])
+
+op_df <- rbind(op_df,op_df3)
+```
+
+```{r,cache=T,warning=F,message=F}
+place_map12stamen + geom_point(aes(x = lon, y = lat,col=objN),
+                       data = op_df,size=2,alpha=.5) 
+```

@@ -1,0 +1,181 @@
+---
+title: "Packete Choroplethr und DT"
+author: "Jan-Philipp Kolb"
+date: "Fri Sep 04 14:08:29 2015"
+output: md_document
+---
+
+```{r,echo=F}
+library(knitr)
+library(DT)
+internet <- F
+Nint <- !internet
+```
+
+## Introduction
+
+[`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Simplify the Creation of Choropleth Maps in R
+
+Package by [Ari Lamstein](http://www.arilamstein.com/)
+
+[`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
+- World Development Indicators (World Bank)
+
+The following relies heavily on the [vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) of the `choroplethr`-package
+
+## What is a choropleth map
+
+A choropleth is a map which
+
+- shows geographic boundaries.
+- colors those regions based on some metric.
+
+Choropleths are useful for visualizing data where geographic boundaries are a natural unit of aggregation. 
+
+## Population estimates for US States
+
+```{r,warning=F,message=F,echo=F}
+library("choroplethr")
+data(df_pop_state)
+```
+
+`df_pop_state` is a dataset which is included in the package `choroplethr`, containing population estimates for US States in 2012.
+
+```{r,echo=F,eval=internet}
+library("choroplethrMaps")
+datatable(df_pop_state,options = list(pageLength = 5))
+```
+
+```{r,echo=F,eval=Nint}
+kable(df_pop_state[1:10,])
+```
+
+## `choroplethr` - Hello World
+
+For example, here is a [choropleth](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) that shows 2012 US State Population Estimates:
+
+We get a choropleth map with only one argument:
+
+```{r}
+state_choropleth(df_pop_state)
+```
+
+
+But we can also create a title and name the legend:
+
+```{r}
+state_choropleth(df_pop_state, title="2012 US State Population Estimates", legend="Population")
+```
+
+## Show only three states
+
+[US State Chropleths](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+
+```{r}
+state_choropleth(df_pop_state,
+                 title      = "2012 Population Estimates",
+                 legend     = "Population",
+                 num_colors = 1,
+                 zoom       = c("california", "washington", "oregon"))
+```
+
+
+## US County Chropleths
+
+[Choropleth of US Counties](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html)
+
+```{r,eval=F}
+?df_pop_county
+
+?county_choropleth
+```
+
+
+```{r}
+data(df_pop_county)
+
+county_choropleth(df_pop_county)
+```
+
+
+## [Country Choropleths ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+
+```{r}
+data(df_pop_country)
+
+country_choropleth(df_pop_country,
+                 title      = "2012 Population Estimates",
+                 legend     = "Population",
+                 num_colors = 1,
+                 zoom       = c("united states of america", "mexico", "canada"))
+```
+
+
+
+## World Bank data
+
+```{r,cache=T,warning=F,message=F}
+library(choroplethr)
+library(WDI) 
+
+choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population", num_colors=1)
+```
+
+## [Life Expectancy](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+
+```{r,warning=F,message=F}
+library(WDI) 
+choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012, title="2012 Life Expectancy")
+```
+
+
+## Animated
+
+```{r,cache=T}
+data(df_president_ts)
+```
+
+With the questionmark we get help
+
+```{r,eval=F}
+?df_president_ts
+```
+
+
+## The datatable
+
+```{r,cache=F,echo=F,warning=F,eval=internet}
+datatable(df_president_ts, options = list(pageLength = 5))
+```
+
+- [datatable](http://www.htmlwidgets.org/showcase_datatables.html)
+
+## Reference
+
+```{r}
+citation("choroplethr")
+```
+
+
+## Reference
+
+```{r}
+citation("DT")
+```
+
+
+## Resources / Links
+
+- [Intro - What is a choropleth](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
+
+- [Description](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html) on the usage of the `choroplethr` package
+
+- Plot the [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html) with `choroplethr`
+
+- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html) with `choroplethr`
+
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html) on the `choroplethr` package
+
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)-blog on the `choroplethr` package
+
+- [Presentation Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/) on the `choroplethr` package

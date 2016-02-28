@@ -1,0 +1,24 @@
+---
+title: "Übersicht wichtiger R-Befehle"
+author: "Jan-Philipp Kolb"
+date: "22 Februar 2016"
+output: html_document
+---
+
+## Einführung in R
+
+[Intro](http://cran.r-project.org/doc/manuals/R-intro.html)
+
+
+## Modulares Programm
+
+- R is a modular program
+- Many functions are included in the basic R
+- But more specific functions are embedded in libraries
+
+```{r,eval=F}
+install.packages("ggmap")
+
+library(ggmap)
+```
+
