@@ -1,0 +1,84 @@
+---
+title: "Das R-Paket osmar"
+author: "Jan-Philipp Kolb"
+date: "Thu Jun 11 17:13:33 2015"
+output: slidy_presentation
+---
+
+```{r,echo=F}
+library(knitr)
+library(DT)
+Ex=F
+Ca=F
+```
+
+
+## Download von Information
+
+```{r,message=F}
+library(ggmap)
+library(osmar)
+api <- osmsource_api()
+```
+
+```{r,cache=Ca,message=F,eval=Ex}
+cityC <- geocode("Schwetzingen")
+bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
+ua <- get_osm(bb, source = api)
+```
+
+## What is inside:
+
+You get three types of objects:
+
+```{r,eval=Ex}
+names(ua)
+```
+
+![pic nodes](http://wiki.openstreetmap.org/w/images/thumb/7/76/Osm_element_node.svg/30px-Osm_element_node.svg.png) [Node](http://wiki.openstreetmap.org/wiki/Elements#Node)
+
+![pic ways](http://wiki.openstreetmap.org/w/images/thumb/e/ee/Osm_element_way.svg/30px-Osm_element_way.svg.png) [Way](http://wiki.openstreetmap.org/wiki/Elements#Way)
+
+![pic relation](http://wiki.openstreetmap.org/w/images/thumb/4/48/Osm_element_relation.svg/30px-Osm_element_relation.svg.png) [Relation](http://wiki.openstreetmap.org/wiki/Relation)
+
+
+## To access the nodes information:
+
+```{r,eval=Ex}
+summary(ua$nodes)
+```
+
+## Overview information
+
+```{r,eval=F}
+datatable(summary(ua$nodes)[[6]])
+```
+
+## Download information manually
+
+- The information can be exported from [OSM](https://www.openstreetmap.org/export)
+
+![sipp](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Sippersfeld.png)
+
+
+## Import to R using `osmar`
+
+```{r,eval=Ex}
+map <- get_osm(complete_file(), 
+                source = osmsource_file("map.osm"))
+```
+
+
+## What is behind:
+
+[Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29) is a command line Java application for processing OSM data.
+
+## Further tutorials on the usage of osmar and OpenStreetMap data:
+
+- [OpenStreetMap2R with osmar](http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest)
+
+- [Using data from OpenStreetMap to map](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
+
+
+- [Cookbook on using osmar](http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic)
+
