@@ -2,10 +2,10 @@
 \alias{get_osm_nodes}
 \title{function get_osm_nodes}
 \usage{
-get_osm_nodes(object2,place)
+get_osm_nodes(object,place)
 }
 \arguments{
-\item{object2}{Value for map feature you are searching for}
+\item{object}{Value for map feature you are searching for}
 \item{place}{Place for the map features}
 }
 \description{
@@ -18,6 +18,5 @@ Jan-Philipp Kolb \email{Jan-Philipp_Kolb@gmx.net}
 \url{http://www.r-project.org}
 }
 \examples{
-  # cafes <- get_osm_nodes("cafe",place="Emeryville")
-  # brewery <- get_osm_nodes("brewery",place="Ingolstadt")
+pg_MA <- get_osm_nodes(object="leisure=playground","Mannheim")
 }
