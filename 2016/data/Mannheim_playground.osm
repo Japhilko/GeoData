@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="Overpass API">
+<note>The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.</note>
+<meta osm_base="2016-02-29T07:51:03Z"/>
+
+  <node id="26593286" lat="49.6036334" lon="8.5208370">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="30560755" lat="49.5190994" lon="8.5028074">
+    <tag k="created_by" v="Potlatch 0.5d"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="76468450" lat="49.4963345" lon="8.5393963">
+    <tag k="created_by" v="Potlatch 0.4a"/>
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Rutsche, Schaukel, großer Sandkasten, Tischtennis"/>
+  </node>
+  <node id="76468533" lat="49.4948911" lon="8.5511826">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="76468534" lat="49.4967807" lon="8.5529589">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="76468535" lat="49.4923030" lon="8.5487501">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="76468536" lat="49.5024260" lon="8.5481399">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Schaukel, Rutsche, Sandkasten, Spielhäuser, Tischtennis"/>
+  </node>
+  <node id="76468558" lat="49.4975937" lon="8.5420356">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="82710517" lat="49.4599049" lon="8.4794942">
+    <tag k="created_by" v="eddiVonDerAlm"/>
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="149003008" lat="49.5010690" lon="8.5449391">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Sandkasten mit Spielhaus"/>
+  </node>
+  <node id="150546390" lat="49.5012270" lon="8.5458374">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Sandkasten, Rutschen, Schaukel, Wippe, Klettergerüst"/>
+  </node>
+  <node id="265872842" lat="49.4909808" lon="8.4988083">
+    <tag k="created_by" v="Potlatch 0.9a"/>
+    <tag k="leisure" v="playground"/>
+    <tag k="tourism" v="attraction"/>
+  </node>
+  <node id="266982871" lat="49.4769025" lon="8.4806787">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="267966344" lat="49.4713759" lon="8.5607075">
+    <tag k="created_by" v="JOSM"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="272293374" lat="49.4591120" lon="8.4859251">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="272293376" lat="49.4594951" lon="8.4873929">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="273179558" lat="49.4867116" lon="8.4904757">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Wasserspielplatz"/>
+  </node>
+  <node id="277195838" lat="49.6008550" lon="8.4735520">
+    <tag k="addr:city" v="Lampertheim"/>
+    <tag k="addr:country" v="DE"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="281799363" lat="49.5028685" lon="8.4692532">
+    <tag k="created_by" v="Potlatch 0.10"/>
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="limited"/>
+  </node>
+  <node id="297695924" lat="49.4826745" lon="8.5576391">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="298382142" lat="49.5006179" lon="8.4944823">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="299831600" lat="49.4844963" lon="8.4904088">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Ungarischer Spielplatz"/>
+  </node>
+  <node id="301220017" lat="49.5492898" lon="8.5665831">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="301220080" lat="49.5435701" lon="8.5649259">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="303140371" lat="49.5474464" lon="8.5672195">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="303140372" lat="49.5444689" lon="8.5673160">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="307722817" lat="49.5009843" lon="8.5477823">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Rutsche, Sandkasten, Kletterturm"/>
+  </node>
+  <node id="308818890" lat="49.4579891" lon="8.3805124">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Bruchspielplatz"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="311598615" lat="49.4782423" lon="8.5324006">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="316056150" lat="49.4643040" lon="8.4813916">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="322107605" lat="49.5511167" lon="8.5707516">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="323415054" lat="49.5903556" lon="8.4848620">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="331733589" lat="49.5014998" lon="8.5493475">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Rutsche, Schaukel, Sandkasten, Spielhaus"/>
+  </node>
+  <node id="331733590" lat="49.5006665" lon="8.5491872">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Sandkasten"/>
+  </node>
+  <node id="331733592" lat="49.5010568" lon="8.5508376">
+    <tag k="leisure" v="playground"/>
+    <tag k="note" v="Sandkasten"/>
+  </node>
+  <node id="364026714" lat="49.4795610" lon="8.4241787">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="375982689" lat="49.5450378" lon="8.5639067">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="392810532" lat="49.4962677" lon="8.5425162">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="401797835" lat="49.5005469" lon="8.5518980">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="409798280" lat="49.4996166" lon="8.5262253">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="414071458" lat="49.4642401" lon="8.5670606">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="418052847" lat="49.4867969" lon="8.4622371">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="limited"/>
+  </node>
+  <node id="418915691" lat="49.5579205" lon="8.4814782">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="430366475" lat="49.5470149" lon="8.4829256">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Bolzplatz"/>
+  </node>
+  <node id="435021596" lat="49.5223106" lon="8.3976249">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="435204387" lat="49.5162541" lon="8.3952681">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="435207197" lat="49.5212937" lon="8.3945170">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="435375154" lat="49.5271196" lon="8.4032452">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="442331514" lat="49.5359757" lon="8.5603079">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="443061922" lat="49.4803415" lon="8.5092208">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="443347010" lat="49.5335961" lon="8.5675137">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="459547127" lat="49.5356909" lon="8.5755853">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="471131322" lat="49.5292796" lon="8.5107184">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="513790609" lat="49.4721643" lon="8.4681322">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Spielplatz Landteilstraße"/>
+  </node>
+  <node id="553324193" lat="49.4674608" lon="8.5050496">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="554973521" lat="49.4642895" lon="8.5051626">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="572740561" lat="49.4605197" lon="8.4042986">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="579370931" lat="49.4941394" lon="8.5444107">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="579370935" lat="49.4945366" lon="8.5463740">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="599909718" lat="49.4865059" lon="8.5282221">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="601578458" lat="49.4931785" lon="8.4654622">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="747381396" lat="49.4817396" lon="8.4991332">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Matschspielplatz"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="747382007" lat="49.4872419" lon="8.4901770">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Spielplatz am Fernmeldeturm"/>
+  </node>
+  <node id="765899465" lat="49.4653833" lon="8.4564660">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="775865438" lat="49.4767238" lon="8.4649819">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="813566201" lat="49.4602612" lon="8.4706866">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="908620504" lat="49.4941099" lon="8.4689319">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="997542338" lat="49.4635799" lon="8.4051227">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1032142439" lat="49.4642955" lon="8.4011434">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1089419086" lat="49.5024096" lon="8.5046394">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1161489290" lat="49.5268406" lon="8.5627998">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Kinderland"/>
+  </node>
+  <node id="1177653631" lat="49.4627939" lon="8.4305437">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1223350844" lat="49.4773825" lon="8.4414002">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1232930711" lat="49.4757686" lon="8.4499562">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="limited"/>
+  </node>
+  <node id="1270706677" lat="49.4910115" lon="8.5037622">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1283778148" lat="49.4726901" lon="8.5718330">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Lange Morgen I"/>
+  </node>
+  <node id="1299583352" lat="49.4963749" lon="8.4578531">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1307576160" lat="49.4984240" lon="8.5395796">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1342175900" lat="49.5266738" lon="8.3533290">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1342898153" lat="49.5508437" lon="8.4671310">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1349422058" lat="49.5208057" lon="8.5254154">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1349423368" lat="49.5203112" lon="8.5259196">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1349424858" lat="49.5203931" lon="8.5270666">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1349425474" lat="49.5216498" lon="8.5259142">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1349426570" lat="49.5196739" lon="8.5251474">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1362211734" lat="49.5064094" lon="8.5270525">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1364859011" lat="49.5159272" lon="8.4974093">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1368130082" lat="49.5156056" lon="8.5356132">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1368130084" lat="49.5144841" lon="8.5304047">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1368130090" lat="49.5164728" lon="8.5348676">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1368173508" lat="49.5448036" lon="8.4734403">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1371734429" lat="49.5142795" lon="8.5392709">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="limited"/>
+  </node>
+  <node id="1406982821" lat="49.5133631" lon="8.5278303">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1414255899" lat="49.5148942" lon="8.5474239">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1421086008" lat="49.5466006" lon="8.4775656">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1423335784" lat="49.5008063" lon="8.4862566">
+    <tag k="leisure" v="playground"/>
+    <tag k="playground" v="playhouse;springy"/>
+  </node>
+  <node id="1449714257" lat="49.4912406" lon="8.4625808">
+    <tag k="leisure" v="playground"/>
+    <tag k="source" v="HiRes aerial imagery"/>
+  </node>
+  <node id="1485607944" lat="49.4814025" lon="8.4264897">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1517582926" lat="49.5044340" lon="8.5316247">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1539260757" lat="49.4565842" lon="8.4273353">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1554916987" lat="49.5297680" lon="8.4964605">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1557091206" lat="49.4912517" lon="8.4609209">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1578698665" lat="49.4904132" lon="8.5251593">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1579673662" lat="49.4788598" lon="8.5126418">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1579699951" lat="49.4803507" lon="8.5117963">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1584708741" lat="49.4677320" lon="8.5558709">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1598090663" lat="49.4546390" lon="8.4857705">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1606985101" lat="49.4965108" lon="8.4779669">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1617098575" lat="49.4774091" lon="8.4771775">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1620469803" lat="49.5267618" lon="8.3517813">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621854442" lat="49.5024560" lon="8.3614997">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621854453" lat="49.5037742" lon="8.3589992">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621854536" lat="49.5230368" lon="8.3524793">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621854785" lat="49.5372969" lon="8.3556827">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621854790" lat="49.5382839" lon="8.3662340">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621855045" lat="49.5425542" lon="8.3734637">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621855098" lat="49.5494810" lon="8.3739650">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1621936790" lat="49.4803949" lon="8.4888775">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1647501564" lat="49.4642446" lon="8.5120543">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1681479617" lat="49.5344654" lon="8.3560720">
+    <tag k="access" v="public"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1717500400" lat="49.5142109" lon="8.5384618">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="limited"/>
+  </node>
+  <node id="1737655919" lat="49.5052254" lon="8.4652755">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1747971152" lat="49.5154957" lon="8.5429503">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748050863" lat="49.5104248" lon="8.5439605">
+    <tag k="description" v="Spielplatz Dresdener Straße"/>
+    <tag k="leisure" v="playground"/>
+    <tag k="operator" v="Stadt Mannheim"/>
+  </node>
+  <node id="1748275558" lat="49.5211909" lon="8.5319991">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748277129" lat="49.5212716" lon="8.5333899">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748277130" lat="49.5211253" lon="8.5288247">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748277131" lat="49.5197463" lon="8.5321507">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748277135" lat="49.5193771" lon="8.5313085">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748277136" lat="49.5194677" lon="8.5294792">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1748919081" lat="49.5252678" lon="8.3576518">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749566381" lat="49.5194279" lon="8.5268135">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749566382" lat="49.5197561" lon="8.5277362">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749566642" lat="49.5186417" lon="8.5251010">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749570573" lat="49.5207904" lon="8.5279871">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749580375" lat="49.5215951" lon="8.5272498">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749582131" lat="49.5219790" lon="8.5281550">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749711437" lat="49.5177154" lon="8.5294346">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749711443" lat="49.5177955" lon="8.5267149">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749711448" lat="49.5173671" lon="8.5285548">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749713002" lat="49.5164860" lon="8.5297913">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749713003" lat="49.5184729" lon="8.5287909">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749713004" lat="49.5178146" lon="8.5282303">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1749716358" lat="49.5126200" lon="8.5284744">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1750177593" lat="49.5118382" lon="8.5392335">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1752701429" lat="49.5461838" lon="8.4736180">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1752724205" lat="49.5448098" lon="8.4712979">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755036142" lat="49.5154810" lon="8.5237142">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755036143" lat="49.5158188" lon="8.5242426">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755085800" lat="49.5166333" lon="8.5259548">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755085805" lat="49.5169006" lon="8.5262592">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755086034" lat="49.5170086" lon="8.5254076">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755086041" lat="49.5166978" lon="8.5251649">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755862369" lat="49.5235166" lon="8.5228260">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755862370" lat="49.5232729" lon="8.5239793">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755862371" lat="49.5211008" lon="8.5238023">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1755862372" lat="49.5214011" lon="8.5228045">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1765403700" lat="49.5303446" lon="8.4878337">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1772211856" lat="49.4838428" lon="8.5335442">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1773533864" lat="49.5181313" lon="8.5254576">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1777858316" lat="49.4733561" lon="8.4499288">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1784887280" lat="49.5103484" lon="8.5491582">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1784889625" lat="49.5095743" lon="8.5505597">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1786679090" lat="49.5069317" lon="8.5409303">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1788326727" lat="49.5109957" lon="8.5162948">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1802430374" lat="49.4718464" lon="8.4450699">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="limited"/>
+  </node>
+  <node id="1803956440" lat="49.4706900" lon="8.4299110">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1815059974" lat="49.4824275" lon="8.4397793">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1825199197" lat="49.4797348" lon="8.4382758">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1835092126" lat="49.5394082" lon="8.4503376">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1835829391" lat="49.5074440" lon="8.5378859">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1844954306" lat="49.4967500" lon="8.5525955">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1844957407" lat="49.5136938" lon="8.5431498">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1851930029" lat="49.5114126" lon="8.5457316">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1854868867" lat="49.5035345" lon="8.5283448">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1854904926" lat="49.5055358" lon="8.5280081">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1854940019" lat="49.4951965" lon="8.5500903">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1879912999" lat="49.5484560" lon="8.4771066">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1883498397" lat="49.5510181" lon="8.4765216">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1883498907" lat="49.5512304" lon="8.4727813">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1884978536" lat="49.5405110" lon="8.5599709">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1887330152" lat="49.5331622" lon="8.4949592">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1891097872" lat="49.4795696" lon="8.5572844">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1899797770" lat="49.4761139" lon="8.5690490">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1906577751" lat="49.5045263" lon="8.5281545">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1908047907" lat="49.5032966" lon="8.4893043">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1908379538" lat="49.4925642" lon="8.3797920">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1911676177" lat="49.4567511" lon="8.4103348">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1930450541" lat="49.4878355" lon="8.5444620">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1930813721" lat="49.5127950" lon="8.5385762">
+    <tag k="disused" v="yes"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1955170619" lat="49.4815091" lon="8.5387732">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1961775691" lat="49.4845414" lon="8.3940669">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1962254974" lat="49.4856003" lon="8.5282019">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1968377455" lat="49.4941389" lon="8.4066207">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1973911022" lat="49.5482001" lon="8.4785010">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="1974828847" lat="49.5476606" lon="8.4516034">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2023816435" lat="49.5409250" lon="8.4762001">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2057916624" lat="49.5334123" lon="8.4961732">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2058281829" lat="49.4616444" lon="8.4751415">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2063976663" lat="49.5653025" lon="8.4950092">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2087815599" lat="49.5244376" lon="8.3925515">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2087815600" lat="49.5252593" lon="8.3950299">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2087815601" lat="49.5246151" lon="8.3917415">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2087815602" lat="49.5256075" lon="8.3957568">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2087815603" lat="49.5245873" lon="8.3933187">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2096234832" lat="49.5251112" lon="8.4907437">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2120569677" lat="49.4855649" lon="8.5095310">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2146857142" lat="49.5234966" lon="8.3586527">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2156755048" lat="49.5345122" lon="8.3551556">
+    <tag k="access" v="public"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2189856395" lat="49.4589818" lon="8.4147882">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2189856396" lat="49.4594656" lon="8.4131115">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2199335513" lat="49.5023336" lon="8.4603569">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2209560453" lat="49.5386820" lon="8.4465899">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2210922808" lat="49.5430127" lon="8.4399623">
+    <tag k="leisure" v="playground"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="2295001693" lat="49.5480162" lon="8.4795949">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2318832095" lat="49.5130893" lon="8.5408216">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2344684080" lat="49.5079158" lon="8.5459636">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2355071365" lat="49.5501758" lon="8.4807853">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2400465370" lat="49.4874039" lon="8.3818104">
+    <tag k="leisure" v="playground"/>
+    <tag k="name:de" v="Stadtpark Ludwigshafen-Oggersheim"/>
+  </node>
+  <node id="2400465493" lat="49.4914888" lon="8.3840914">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2489181951" lat="49.4556709" lon="8.3782937">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2535647641" lat="49.5924100" lon="8.4901400">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2549436385" lat="49.4989154" lon="8.5513899">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2553211601" lat="49.5339398" lon="8.4865992">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2558733803" lat="49.5263027" lon="8.5068222">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2572871368" lat="49.5180899" lon="8.5301978">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2575457733" lat="49.5107254" lon="8.5446870">
+    <tag k="access" v="private"/>
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2613123224" lat="49.4941282" lon="8.3654420">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2651236788" lat="49.4627791" lon="8.4326216">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2714464281" lat="49.5447439" lon="8.4780462">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2717372766" lat="49.4874449" lon="8.4412097">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2721202808" lat="49.5486350" lon="8.4788557">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2721202812" lat="49.5486716" lon="8.4804112">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2816101842" lat="49.4731438" lon="8.4201479">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2839701842" lat="49.4552116" lon="8.4248282">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2855446297" lat="49.4588077" lon="8.4246204">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2872561009" lat="49.5152684" lon="8.4989186">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2872561024" lat="49.5153021" lon="8.4984231">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2872561038" lat="49.5153618" lon="8.4979080">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2930078064" lat="49.4678696" lon="8.4663816">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2940794232" lat="49.5117077" lon="8.5162818">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2981316229" lat="49.5048692" lon="8.5266902">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="2989642679" lat="49.4842350" lon="8.4906101">
+    <tag k="leisure" v="playground"/>
+    <tag k="name" v="Spielplatz am Seerestaurant"/>
+  </node>
+  <node id="3008551718" lat="49.4916792" lon="8.4353094">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3026995482" lat="49.5164766" lon="8.4026259">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3066402115" lat="49.5475428" lon="8.5719123">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3101485988" lat="49.5473298" lon="8.5746806">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3140719359" lat="49.5129795" lon="8.5183417">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3552199716" lat="49.4940053" lon="8.4838522">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3699593805" lat="49.4897566" lon="8.4125343">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3763978570" lat="49.5829548" lon="8.3555268">
+    <tag k="leisure" v="playground"/>
+  </node>
+  <node id="3802189892" lat="49.4927414" lon="8.4575843">
+    <tag k="leisure" v="playground"/>
+    <tag k="operator" v="Evangelische Hafenkirche"/>
+  </node>
+
+</osm>
