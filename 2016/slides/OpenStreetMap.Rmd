@@ -55,7 +55,7 @@ url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
 BE <- xmlParse(url)
 ```
 
-
+![Admin Berlin](https://github.com/Japhilko/GeoData/tree/master/data/figure/ExampleAdmBE.PNG)
 
 ## Complete file
 
