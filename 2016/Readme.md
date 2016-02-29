@@ -87,6 +87,8 @@ Einfärbung und Editierung von Polygonen
 Nutzung von OpenStreetMap Daten
 ---------------------
 
+- Import von OpenStreetMap Information ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.Rmd))
+
 - Das R-Paket `osmar` 
 
 

@@ -1,0 +1,72 @@
+---
+title: "OpenStreetMap"
+author: "Jan-Philipp Kolb"
+date: "Mon Feb 29 07:48:58 2016"
+output: slidy_presentation
+---
+
+```{r,echo=F}
+library("knitr")
+Ex=F
+```
+
+
+
+## Ausschnitte herunterladen
+
+<www.openstreetmap.org/export>
+
+![osm export](http://www.azavea.com/blogs/atlas/wp-content/uploads/2015/11/openstreetmap_export-1024x505.png)
+
+## Das R-Paket `XML` - Gaston Sanchez
+
+```{r}
+library("XML")
+```
+
+![picture](http://gastonsanchez.com/images/blog/dataflow_page.jpg)
+
+See his work [here](http://gastonsanchez.com/) and another [picture](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1).
+
+
+## But more important for me
+
+[work with XML data](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
+
+<img src="https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/GastonSanchez.PNG" alt="alt text" width="700x" height="500x">
+
+## Funktionen im XML Paket
+
+```{r,echo=F}
+names <- c("Function","Description","xmlName()","name of the node","xmlSize()","number of subnodes","xmlAttrs()","named character vector of all attributes","xmlGetAttr()","value of a single attribute","xmlValue()","contents of a leaf node","xmlParent()","name of parent node","xmlAncestors()","name of ancestor nodes","getSibling()","siblings to the right or to the left","xmlNamespace()","the namespace (if there’s one)")
+
+tab <- t(array(names,dim=c(2,length(names)/2)))
+# tab <- as.data.frame=
+kable(tab)
+```
+
+## Beispiel: administrative Grenzen Berlin
+
+[Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
+
+```{r,eval=Ex}
+url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
+
+BE <- xmlParse(url)
+```
+
+
+
+## Complete file
+
+- geofabrik
+- Shapefiles are not complete
+- but e.g. `germany-latest.osm.pbf`
+
+
+## Referenzen
+
+```{r}
+citation("XML")
+```
+
