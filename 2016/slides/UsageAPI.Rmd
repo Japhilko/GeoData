@@ -28,14 +28,21 @@ Ex=F
 
 ![playground Mannheim](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/BSPoverpassMannheim.PNG)
 
-
 ![Export Raw data](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/OverpassExportRohdaten.PNG)
 
-## Export from Overpass API
+## Import from Overpass API to R
 
 ```{r,eval=Ex}
-path <- "J:/Work/Statistik/Kolb/Workshops/2016/GeoData/data"
-setwd(path)
-MA <- xmlParse("Mannheim_playgound.kml")
+Link1 <- "http://www.overpass-api.de/api/interpreter?data=[maxsize:1073741824][timeout:900];area[name=\""
+place <- "Mannheim"
+type_obj <- "node"
+object <- "leisure=playground"
+
+InfoList <- xmlParse(paste(Link1,place,"\"];",
+                           type_obj,"(area)[",object,"];out;",sep=""))
 ```
+
+
+## Work with XML data
+
 
