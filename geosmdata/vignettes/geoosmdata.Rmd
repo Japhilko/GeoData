@@ -39,20 +39,8 @@ gc <- geocode_osm("rue Saint Vincent Paris",output="all")
 library(XML)
 pg_MA <- get_osm_nodes(object="leisure=playground","Mannheim")
 
-cafes_cc <- extract_info_op(OSM.Data=cafes,value="cafe")
+info <- extract_osm_nodes(OSM.Data=pg_MA,value="playground")
 ```
-
-Get information about Hostels in a city:
-
-```{r hostels,cache=T}
-library(geosmdata2)
-place <- "Madrid"
-object <- "hostel"
-obj <- get_osm_nodes(object,place)
-op <- extract_info_op(obj,object)
-```
-
-
 
 The `ggmap` function from package [ggmap](https://cran.r-project.org/web/packages/ggmap/index.html) can be used to download a background map. 
 
