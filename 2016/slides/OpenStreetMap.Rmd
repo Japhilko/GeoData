@@ -2,7 +2,7 @@
 title: "OpenStreetMap"
 author: "Jan-Philipp Kolb"
 date: "Mon Feb 29 07:48:58 2016"
-output: slidy_presentation
+output: html_document
 ---
 
 ```{r,echo=F}
@@ -26,10 +26,10 @@ library("XML")
 
 ![picture](http://gastonsanchez.com/images/blog/dataflow_page.jpg)
 
-See his work [here](http://gastonsanchez.com/) and another [picture](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1).
+Seine Arbeit sieht man [hier](http://gastonsanchez.com/) und ein anderes [Bild](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fsomelab.net%2Fwp-content%2Fuploads%2F2013%2F01%2FR_Dials.jpg&f=1).
 
 
-## But more important for me
+## Wichtiger für mich:
 
 [work with XML data](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
 
@@ -55,9 +55,47 @@ url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
 BE <- xmlParse(url)
 ```
 
-![Admin Berlin](https://github.com/Japhilko/GeoData/tree/master/data/figure/ExampleAdmBE.PNG)
+![Admin Berlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ExampleAdmBE.PNG)
 
-## Complete file
+## Das XML analysieren
+
+- [Tobi Bosede - Working with XML Data in R](http://www.informit.com/articles/article.aspx?p=2215520)
+
+```{r,eval=Ex}
+xmltop = xmlRoot(BE)
+class(xmltop)
+xmlSize(xmltop)
+xmlSize(xmltop[[1]])
+```
+
+[Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
+
+
+```{r,eval=Ex}
+xpathApply(BE,"//tag[@k = 'source:population']")
+```
+
+
+## More working example with XML files:
+
+
+- [Extracting data from XML](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+
+- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.org/RSXML/shortIntro.pdf)
+
+
+## Further information
+
+- [Manipulating Data from the Web](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
+
+- [Information on xquery](http://www.w3schools.com/xquery/)
+
+- [R and the web (for beginners), Part II: XML in R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
+
+
+- [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
+
+## Kompletter Datensatz
 
 - geofabrik
 - Shapefiles are not complete

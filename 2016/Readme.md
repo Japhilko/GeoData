@@ -87,7 +87,9 @@ Einfärbung und Editierung von Polygonen
 Nutzung von OpenStreetMap Daten
 ---------------------
 
-- Import von OpenStreetMap Information ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.Rmd))
+- Das Arbeiten mit XML-Dateien ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.Rmd))
+
+- Die Nutzung von Programmierschnittstellen
 
 - Das R-Paket `osmar` 
 
