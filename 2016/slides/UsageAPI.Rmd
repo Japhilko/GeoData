@@ -43,6 +43,20 @@ InfoList <- xmlParse(paste(Link1,place,"\"];",
 ```
 
 
-## Work with XML data
+## Work with XML data (xpath)
 
+The list of ID's with value playground:
 
+```{r,eval=Ex}
+node_id<- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ id")
+```
+
+## Get latitude and longitude
+
+```{r,eval=Ex}
+lat_x <- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ lat")
+```
+
+```{r,eval=Ex}
+lat_x <- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ lon")
+```
