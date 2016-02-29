@@ -3,8 +3,8 @@ Type: Package
 Title: What the Package Does (Title Case)
 Version: 0.1
 Date: 2016-02-23
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
+Author: Jan-Philipp Kolb
+Maintainer: Who to complain to <Jan-Philipp_Kolb@gmx.net>
 Description: More about what it does (maybe more than one line)
 License: What license is it under?
 LazyData: TRUE
