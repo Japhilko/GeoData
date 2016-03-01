@@ -2,7 +2,7 @@
 title: "Map Types"
 author: "Jan-Philipp Kolb"
 date: "Wed Sep 16 08:22:22 2015"
-output: beamer_presentation
+output: md_document
 ---
 
 
