@@ -76,7 +76,7 @@ of data sources
 Einfärbung und Editierung von Polygonen
 ---------------------
 
-- Thematische Karten mit dem R-PakeT `tmap` ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf) |
+- Thematische Karten mit dem R-Paket `tmap` ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf) |
 [Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.Rmd) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
 
@@ -89,9 +89,9 @@ Nutzung von OpenStreetMap Daten
 
 - Das Arbeiten mit XML-Dateien ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.Rmd))
 
-- Die Nutzung von Programmierschnittstellen
+- Die Nutzung von Programmierschnittstellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.Rmd))
 
-- Das R-Paket `osmar` 
+- Das R-Paket `osmar` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.Rmd))
 
 
 Interaktive Karten

@@ -7,3 +7,5 @@ install.packages("httr")
 
 install.packages("stringr")
 install.packages("RJSONIO")
+
+install.packages("SoDA")
