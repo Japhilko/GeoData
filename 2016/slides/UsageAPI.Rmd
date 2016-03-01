@@ -60,3 +60,8 @@ lat_x <- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ lat")
 ```{r,eval=Ex}
 lat_x <- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ lon")
 ```
+
+## Links
+
+[Tutorial for the Usage of the Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
+
