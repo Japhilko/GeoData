@@ -22,7 +22,7 @@ api <- osmsource_api()
 ```
 
 ```{r,cache=Ca,message=F,eval=Ex}
-cityC <- geocode("Schwetzingen")
+cityC <- geocode("Trier")
 bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
 ua <- get_osm(bb, source = api)
 ```
@@ -81,4 +81,10 @@ map <- get_osm(complete_file(),
 
 
 - [Cookbook on using osmar](http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic)
+
+## Resources
+
+```{r}
+citation("osmar")
+```
 
