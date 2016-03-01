@@ -2,7 +2,7 @@
 title: "Map Types with ggmap"
 author: "Jan-Philipp Kolb"
 date: "Wed Feb 17 08:19:18 2016"
-output: slidy_presentation
+output: md_document
 ---
 
 ## Gliederung
@@ -145,11 +145,7 @@ Different components in the help
 
 Extract from the help file on qmap:
 
-```{r,echo=F}
-link1 <- paste(graph.path,"qmapExample.PNG",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/qmapExample.PNG)
 
 
 This examples can be directly copy-pasted to the console
@@ -234,11 +230,7 @@ qmap('Schriesheim', zoom = 14,
 ## Abstracted maps
 
 
-```{r,echo=F}
-link1 <- paste(graph.path,"NYabstracted.jpg",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/NYabstracted.jpg)
 
 Source: [Design faves](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
 
@@ -294,11 +286,7 @@ Source: <http://maps.stamen.com/>
 
 ## Save graphics
 
-```{r,echo=F}
-link1 <- paste(graph.path,"RstudioExport.PNG",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/RstudioExport.PNG)
 
 
 ## ggmap - create an object 

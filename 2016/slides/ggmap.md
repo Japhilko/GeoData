@@ -48,12 +48,12 @@ Install the library
 
 1.  possibility:
 
-![pic](../data/figure/Installpackages1.PNG)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Installpackages1.PNG)
 
-![pic](../data/figure/Installpackages2.PNG)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Installpackages2.PNG)
 
-Library ggmap - Hello world
----------------------------
+Library ggmap - Hallo Welt
+--------------------------
 
 -   To load the library we use the command `library`
 
@@ -63,19 +63,20 @@ Library ggmap - Hello world
 
     qmap("Mannheim")
 
-Map for a sight
----------------
+Karte für eine Sehenswürdigkeit
+-------------------------------
 
-    qmap("Berlin Brandenburger Tor")
+    BBT <- qmap("Berlin Brandenburger Tor")
+    BBT
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
 
-Map for a whole country
------------------------
+Karte für einen ganzen Staat
+----------------------------
 
     qmap("Germany")
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-10-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-8-1.png)<!-- -->
 
 -   We need another zoom level
 
@@ -90,7 +91,7 @@ Use another zoom level
 
     qmap("Germany", zoom = 6)
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-11-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
 
 Get help with the questionmark
 ------------------------------
@@ -112,7 +113,7 @@ The examples section of help
 
 Extract from the help file on qmap:
 
-![pic](../data/figure/qmapExample.PNG)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/qmapExample.PNG)
 
 This examples can be directly copy-pasted to the console
 
@@ -179,12 +180,12 @@ ggmap - terrain map
     qmap('Schriesheim', zoom = 14,
      maptype="terrain")
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-21-1.png)<!-- -->
 
 Abstracted maps
 ---------------
 
-![pic](../data/figure/NYabstracted.jpg)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/NYabstracted.jpg)
 
 Source: [Design
 faves](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
@@ -236,7 +237,7 @@ Source: <http://maps.stamen.com/>
 Save graphics
 -------------
 
-![pic](../data/figure/RstudioExport.PNG)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/RstudioExport.PNG)
 
 ggmap - create an object
 ------------------------
@@ -430,7 +431,7 @@ Draw a map with this information
         data = route_df, lineend = "round"
       )
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-46-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-41-1.png)<!-- -->
 
 Resources
 ---------
