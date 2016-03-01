@@ -2,15 +2,8 @@
 title: "Map Types"
 author: "Jan-Philipp Kolb"
 date: "Wed Sep 16 08:22:22 2015"
-output: md_document
+output: html_document
 ---
-
-
-```{r,echo=F}
-graph.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData/data/figure/"
-graph.path2 <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/paper/figure/"
-```
-
 
 ## Outline
 
@@ -30,11 +23,7 @@ produce different types of maps with the command [qmap](http://www.inside-r.org/
 
 ## Road maps
 
-```{r,echo=F}
-link1 <- paste(graph.path,"Road_Map.jpg",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Road_Map.jpg)
 
 [Source](http://www.awtechnology.com/images/Road_Map.jpg)
 
@@ -59,18 +48,13 @@ install.packages("ggmap")
 
 
 2. possibility:
-```{r,echo=F}
-link1 <- paste(graph.path,"Installpackages1.PNG",sep="")
-```
-![pic](`r link1 `)
+
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Installpackages1.PNG)
 
 
 ## Install packages
 
-```{r,echo=F}
-link1 <- paste(graph.path,"Installpackages2.PNG",sep="")
-```
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Installpackages2.PNG)
 
 
 ## Library ggmap - Hello world
@@ -86,10 +70,7 @@ qmap("Mannheim")
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path,"ggmapRoadmapMannheim.png",sep="")
-```
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ggmapRoadmapMannheim.png)
 
 
 ## Use another zoom level
@@ -103,10 +84,7 @@ qmap("Germany", zoom = 6)
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Germany.png",sep="")
-```
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Germany.png)
 
 
 ## Get help with the questionmark
@@ -131,11 +109,7 @@ Different components in the help
 
 Extract from the help file on qmap:
 
-```{r,echo=F}
-link1 <- paste(graph.path,"qmapExample.PNG",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/qmapExample.PNG)
 
 
 This examples can be directly copy-pasted to the console
@@ -153,11 +127,8 @@ qmap(location = "baylor university", zoom = 14)
 qmap('Mannheim', zoom = 14, source="osm")
 ```
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14.png)
 
 
 
@@ -168,11 +139,8 @@ link1 <- paste(graph.path2,"Mannheim14.png",sep="")
 qmap('Mannheim', zoom = 14, source="osm",color="bw")
 ```
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14_osm_bw.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14_osm_bw.png)
 
 
 ## ggmap - maptype satellite
@@ -181,11 +149,8 @@ link1 <- paste(graph.path2,"Mannheim14_osm_bw.png",sep="")
 qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14_satellite.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14_satellite.png)
 
 
 ## ggmap - maptype satellite zoom 21
@@ -195,11 +160,8 @@ qmap('Mannheim', zoom = 21, maptype="hybrid")
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim21_hybrid.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim21_hybrid.png)
 
 
 
@@ -221,21 +183,14 @@ qmap('Schriesheim', zoom = 14,
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Schriesheim14.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Schriesheim14.png)
 
 
 ## Abstracted maps
 
 
-```{r,echo=F}
-link1 <- paste(graph.path,"NYabstracted.jpg",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/NYabstracted.jpg)
 
 Source: [Design faves](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
 
@@ -252,11 +207,8 @@ qmap('Mannheim', zoom = 14,
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheimwatercolor14.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheimwatercolor14.png)
 
 
 ## ggmap - source stamen
@@ -267,11 +219,7 @@ qmap('Mannheim', zoom = 14,
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14stamen_toner.png",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14stamen_toner.png)
 
 
 ## ggmap - maptype toner-lite
@@ -282,11 +230,7 @@ qmap('Mannheim', zoom = 14,
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14stamen_tonerlite.png",sep="")
-```
-
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14stamen_tonerlite.png)
 
 
 
@@ -298,11 +242,8 @@ qmap('Mannheim', zoom = 14,
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14stamen_tonerhybrid.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14stamen_tonerhybrid.png)
 
 ## ggmap - maptype terrain-lines
 
@@ -312,11 +253,8 @@ qmap('Mannheim', zoom = 14,
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14stamen_tonerterrain-lines.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14stamen_tonerterrain-lines.png)
 
 
 ## Stamen maps
@@ -328,11 +266,8 @@ Source: <http://maps.stamen.com/>
 
 ## Save graphics
 
-```{r,echo=F}
-link1 <- paste(graph.path,"RstudioExport.PNG",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/RstudioExport.PNG)
 
 
 ## ggmap - create an object 
@@ -441,11 +376,8 @@ data = ListPOI)
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14points.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14points.png)
 
 
 
@@ -458,11 +390,8 @@ data = ListPOI)
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14pointsred.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14pointsred.png)
 
 
 ## ggmap - adding different colors
@@ -474,11 +403,8 @@ geom_point(aes(x = lon, y = lat,col=color),
 data = ListPOI)
 ```
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14pointsdiffcol.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14pointsdiffcol.png)
 
 ## ggmap - bigger dots
 
@@ -489,11 +415,8 @@ geom_point(aes(x = lon, y = lat,col=color,size=size),
 data = ListPOI)
 ```
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14pointsdiffcolsize.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14pointsdiffcolsize.png)
 
 ## Get a route from Google maps
 
@@ -516,11 +439,8 @@ qmap("Mannheim Hbf", zoom = 14) +
 ```
 
 
-```{r,echo=F}
-link1 <- paste(graph.path2,"Mannheim14route.png",sep="")
-```
 
-![pic](`r link1 `)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Mannheim14route.png)
 
 
 ## Resources
