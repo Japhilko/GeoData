@@ -9,3 +9,4 @@ install.packages("stringr")
 install.packages("RJSONIO")
 
 install.packages("SoDA")
+install.packages("RPostgreSQL")
