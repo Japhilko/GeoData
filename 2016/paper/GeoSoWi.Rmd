@@ -5,6 +5,7 @@ date: "25 Februar 2016"
 output: html_document
 ---
 
+
 ## Motivation
 
 Im vorliegenden Artikel geht es um Informationen mit Raumbezug. Im folgenden wird von Geodaten die Rede sein. Diesen Geodaten werden von vielen Seiten ein enormes Wertschöpfungspotential zugetraut.
