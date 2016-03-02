@@ -2,7 +2,7 @@
 title: "Web Scraping"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 11:19:52 2015"
-output: ioslides_presentation
+output: md_document
 ---
 
 
@@ -11,9 +11,6 @@ library(knitr)
 Ex <- F
 Ex1 <- F
 ```
-
-
-
 
 ## Das R-Paket `XML`
 
@@ -45,29 +42,16 @@ install.packages("rvest")
 
 ```{r,eval=F}
 library("rvest")
-land_DE <- "https://de.wikipedia.org/w/index.php?title=Land_%28Deutschland%29&action=edit"
+link <- "https://de.wikipedia.org/wiki/Liste_der_St%C3%A4dte_in_Finnland"
 
- # URL of interest:
-mps <- "https://de.wikipedia.org/wiki/Land_%28Deutschland%29" 
+staedte_fi <- read_html(link)
 
 # parse the document for R representation:
-mps.doc <- htmlParse(mps)
+mps.doc <- htmlParse(staedte_fi)
 
 # get all the tables in mps.doc as data frames
 mps.tabs <- readHTMLTable(mps.doc) 
 ```
-
-
-```{r,eval=F}
-ab <- html(land_DE)
-
-lego_movie %>% 
-  html_node("strong span") %>%
-  html_text() %>%
-  as.numeric()
-```
-
-
 
 ## Links
 
@@ -75,9 +59,15 @@ Beispiel: [GiventheData](http://giventhedata.blogspot.de/2012/08/r-and-web-for-b
 
 [Five easy steps for webscraping](http://www.unt.edu/rss/class/Jon/Benchmarks/ScrapingData_L_JDS_Nov2013.pdf)
 
-## References
+## Reference XML
 
 ```{r}
 citation("XML")
+```
+
+## Reference `rvest`
+
+```{r}
+citation("rvest")
 ```
 
