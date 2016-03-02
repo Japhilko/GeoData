@@ -5,8 +5,6 @@ date: "Tue Mar 01 08:38:40 2016"
 output: html_document
 ---
 
-
-
 ## [Getting Started](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
 PostgreSQL has the advantage of being open source 
@@ -19,10 +17,13 @@ PostgreSQL has the advantage of being open source
 
 ## Connect with R
 
+- create a connection
+- save the password that we can "hide" it as best as we can by collapsing it
+
+
 ```{r,eval=F}
-require("RPostgreSQL")
-# create a connection
-# save the password that we can "hide" it as best as we can by collapsing it
+library("RPostgreSQL")
+
 pw <- {
   "new_user_password"
 }
@@ -31,46 +32,49 @@ pw <- {
 drv <- dbDriver("PostgreSQL")
 # creates a connection to the postgres database
 # note that "con" will be used later in each connection to the database
-con <- dbConnect(drv, dbname = "cartable",
+con <- dbConnect(drv, dbname = "OSMdata",
                  host = "localhost", port = 5432,
                  user = "postgres", password = pw)
 rm(pw) # removes the password
- 
-# check for the cartable
-dbExistsTable(con, "tab1")
-# TRUE
 ```
 
 ## Use OpenStreetMap data
 
 ```{r,eval=F}
 generator <- read.csv("https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_generator.csv")
+colnames(generator)[5] <- "source"
 ```
-
-
 
 
 ## Write and Load
 
-```{r,eval=F}
-data(mtcars)
-df <- data.frame(generator, 
-                 row.names = NULL)
+write to database:
 
-# writes df to the PostgreSQL database "postgres", table "cartable" 
-dbWriteTable(con, "tab1", 
-             value = df, append = TRUE, row.names = FALSE)
- 
-# query the data from postgreSQL 
-df_postgres <- dbGetQuery(con, "SELECT * from cartable")
- 
-# compares the two data.frames
-identical(df, df_postgres)
-# TRUE
- 
-# Basic Graph of the Data
-require(ggplot2)
-ggplot(df_postgres, aes(x = as.factor(cyl), y = mpg, fill = as.factor(cyl))) + 
-  geom_boxplot() + theme_bw()
+```{r,eval=F}
+dbWriteTable(con,name='generator',value=generator, row.names=FALSE)
 ```
 
+query the data from postgreSQL 
+
+```{r,eval=F}
+df_postgres <- dbGetQuery(con, "SELECT * from generator")
+```
+
+## [Append to existing table](http://www.r-bloggers.com/r-and-postgresql-using-rpostgresql-and-sqldf/)
+
+```{r,eval=F}
+dbWriteTable(con, c("generator"), value=generator,append=TRUE, row.names=FALSE)
+```
+
+
+
+## Disconnect from the database
+
+```{r,eval=F}
+dbDisconnect(con)
+```
+
+
+## Links
+
+[A quick how to](http://www.win-vector.com/blog/2016/02/using-postgresql-in-r/)

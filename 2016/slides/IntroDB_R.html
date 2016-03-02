@@ -79,9 +79,12 @@ img {
 </div>
 <div id="connect-with-r" class="section level2">
 <h2>Connect with R</h2>
-<pre class="r"><code>require(&quot;RPostgreSQL&quot;)
-# create a connection
-# save the password that we can &quot;hide&quot; it as best as we can by collapsing it
+<ul>
+<li>create a connection</li>
+<li>save the password that we can “hide” it as best as we can by collapsing it</li>
+</ul>
+<pre class="r"><code>library(&quot;RPostgreSQL&quot;)
+
 pw &lt;- {
   &quot;new_user_password&quot;
 }
@@ -90,14 +93,34 @@ pw &lt;- {
 drv &lt;- dbDriver(&quot;PostgreSQL&quot;)
 # creates a connection to the postgres database
 # note that &quot;con&quot; will be used later in each connection to the database
-con &lt;- dbConnect(drv, dbname = &quot;cartable&quot;,
+con &lt;- dbConnect(drv, dbname = &quot;OSMdata&quot;,
                  host = &quot;localhost&quot;, port = 5432,
                  user = &quot;postgres&quot;, password = pw)
-rm(pw) # removes the password
- 
-# check for the cartable
-dbExistsTable(con, &quot;tab1&quot;)
-# TRUE</code></pre>
+rm(pw) # removes the password</code></pre>
+</div>
+<div id="use-openstreetmap-data" class="section level2">
+<h2>Use OpenStreetMap data</h2>
+<pre class="r"><code>generator &lt;- read.csv(&quot;https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_generator.csv&quot;)
+colnames(generator)[5] &lt;- &quot;source&quot;</code></pre>
+</div>
+<div id="write-and-load" class="section level2">
+<h2>Write and Load</h2>
+<p>write to database:</p>
+<pre class="r"><code>dbWriteTable(con,name='generator',value=generator, row.names=FALSE)</code></pre>
+<p>query the data from postgreSQL</p>
+<pre class="r"><code>df_postgres &lt;- dbGetQuery(con, &quot;SELECT * from generator&quot;)</code></pre>
+</div>
+<div id="append-to-existing-table" class="section level2">
+<h2><a href="http://www.r-bloggers.com/r-and-postgresql-using-rpostgresql-and-sqldf/">Append to existing table</a></h2>
+<pre class="r"><code>dbWriteTable(con, c(&quot;generator&quot;), value=generator,append=TRUE, row.names=FALSE)</code></pre>
+</div>
+<div id="disconnect-from-the-database" class="section level2">
+<h2>Disconnect from the database</h2>
+<pre class="r"><code>dbDisconnect(con)</code></pre>
+</div>
+<div id="links" class="section level2">
+<h2>Links</h2>
+<p><a href="http://www.win-vector.com/blog/2016/02/using-postgresql-in-r/">A quick how to</a></p>
 </div>
 
 
