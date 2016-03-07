@@ -2,7 +2,7 @@
 title: "Web Scraping"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 11:19:52 2015"
-output: md_document
+output: slidy_presentation
 ---
 
 
@@ -42,12 +42,13 @@ install.packages("rvest")
 
 ```{r,eval=F}
 library("rvest")
+
 link <- "https://de.wikipedia.org/wiki/Liste_der_St%C3%A4dte_in_Finnland"
 
-staedte_fi <- read_html(link)
+link_data <- read_html(link)
 
 # parse the document for R representation:
-mps.doc <- htmlParse(staedte_fi)
+mps.doc <- htmlParse(link_data)
 
 # get all the tables in mps.doc as data frames
 mps.tabs <- readHTMLTable(mps.doc) 
