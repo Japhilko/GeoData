@@ -1,5 +1,5 @@
 ---
-title: "maps package"
+title: "R-Paket maps"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 18 14:22:39 2015"
 output: md_document
@@ -21,7 +21,7 @@ Ex=T
 
 - Ein typisches Beispiel ist eine Karte der US-Staaten
 
-## Political Map
+## Politische Karte
 
 ```{r,echo=F,message=F,warning=F,eval=F}
 library(maps)
@@ -75,13 +75,15 @@ map("france")
 ```
 
 ## Politische Karte - Italien
-Get the borders in blue color:
+
+Grenzen in blau:
+
 ```{r}
 library ( maps )
 map ("italy", col = "blue")
 ```
 
-## Choropleths - package maps
+## Choroplethen - R-Paket maps
 
 If we want the areas in blue:
 ```{r}
@@ -117,7 +119,7 @@ map("italy",fill=T, col = rgb(1,1,1))
 map("italy",fill=T, col = rgb(1,0.5,0.4))
 ```
 
-## Choropleths - package maps
+## Choropleths - R-Paket maps
 If you want to know, which region is at which place:
 
 ```{r}
@@ -147,7 +149,7 @@ library(maps)
 map("world", "Germany")
 ```
 
-## Package maps - two countries
+## R-Paket maps - two countries
 
 
 ```{r}
@@ -164,14 +166,14 @@ col=c("red","green"))
 
 
 
-## Package maps - additional features
+## R-Paket maps - additional features
 
 ```{r}
 map("world", "China")
 map.scale()
 ```
 
-## Package maps - additional features
+## R-Paket maps - additional features
 
 Like `map`, but labels the regions:
 
@@ -181,7 +183,7 @@ map.text("county", "penn")
 
 Pennsylvania counties
 
-## R-package maps - World cities
+## R-Paket maps - World cities
 
 `data` loads specified data sets, or lists the available data sets.
 
@@ -250,7 +252,7 @@ map.cities(FCit,col="blue",pch=20)
 map.cities(FCit_Bc,col="red",pch=20)
 ```
 
-## Thematic maps with R-package maps
+## Thematic maps with R-Paket maps
 
 Data basis - CIA World DataBank II
 
@@ -258,7 +260,7 @@ The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection 
 
 ## Example: US Unemployment 
 
-- [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) about the usage of package maps
+- [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) about the usage of Paket maps
 
 
 Get the data:
@@ -268,7 +270,7 @@ data(unemp)
 data(county.fips)
 ```
 
-## Color gradients 
+## Farbverläufe
 
 ```{r,warning=F}
 library(colorRamps)
