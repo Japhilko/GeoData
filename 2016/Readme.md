@@ -27,7 +27,7 @@ Verschiedene Kartentypen mit `ggmap`
 Quellen für räumliche Daten
 ---------------------
 
-- Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html) ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.Rmd) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
+- Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html) ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
 
 - Choroplethen mit dem R-Paket maptools ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.Rmd) 
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))

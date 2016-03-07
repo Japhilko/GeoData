@@ -5,20 +5,35 @@ date: "22 Februar 2016"
 output: html_document
 ---
 
-## Einführung in R
+## Manuals zur Einführung in R
 
-[Intro](http://cran.r-project.org/doc/manuals/R-intro.html)
+- [R-Intro](http://cran.r-project.org/doc/manuals/R-intro.html) auf cran.
 
 
 ## Modulares Programm
 
-- R is a modular program
-- Many functions are included in the basic R
-- But more specific functions are embedded in libraries
+- R-Pakete müssen installiert und geladen werden
 
 ```{r,eval=F}
 install.packages("ggmap")
 
-library(ggmap)
+library("ggmap")
+```
+
+## Sequenzen
+
+```{r}
+1:4
+4:1
+seq(1,4,by=.5)
+```
+
+
+## Schleifen
+
+```{r,eval=F}
+for (i in 1:4){
+  paste(i,"\n")
+}
 ```
 
