@@ -39,6 +39,8 @@ Quellen für räumliche Daten
 - Administrative Grenzen mit [GADM](http://www.gadm.org/) 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/KartenErstellen.Rmd))
 
+- OpenStreetMap ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
+
 
 Sozialwissenschaftliche Datenquellen
 ---------------------

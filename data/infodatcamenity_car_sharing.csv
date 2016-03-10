@@ -1,0 +1,1445 @@
+"","place","lat","lon","mapfeature","kvalue","operator","capacity"
+"330262541","Hessen",51.2921561,9.4448597,"car_sharing","amenity","StattAuto",NA
+"349301520","Hessen",50.0700994,8.2462942,"car_sharing","amenity","book-n-drive","14"
+"359939969","Hessen",49.8818234,8.6574274,"car_sharing","amenity","book-n-drive",NA
+"370378012","Hessen",49.8795692,8.6552804,"car_sharing","amenity","book-n-drive",NA
+"414105987","Hessen",49.8782381,8.6569915,"car_sharing","amenity","book-n-drive",NA
+"434142358","Hessen",50.7989114,8.7622328,"car_sharing","amenity","einfach mobil","1"
+"436620706","Hessen",50.805485,8.7712962,"car_sharing","amenity","einfach mobil","2"
+"470821041","Hessen",50.8183369,8.7746236,"car_sharing","amenity","einfach mobil","7"
+"470824231","Hessen",50.7997591,8.7889108,"car_sharing","amenity","einfach mobil","1"
+"470835153","Hessen",50.8030327,8.7691483,"car_sharing","amenity","einfach mobil","4"
+"470840221","Hessen",50.7910933,8.7676229,"car_sharing","amenity","einfach mobil","2"
+"470842227","Hessen",50.8152754,8.7498524,"car_sharing","amenity","einfach mobil","1"
+"470843855","Hessen",50.8149269,8.772498,"car_sharing","amenity","einfach mobil","1"
+"470844155","Hessen",50.808802,8.7838273,"car_sharing","amenity","einfach mobil","1"
+"470985109","Hessen",50.8357892,8.7607631,"car_sharing","amenity","einfach mobil","1"
+"470988091","Hessen",50.7943782,8.7665366,"car_sharing","amenity","einfach mobil","1"
+"470990947","Hessen",50.776628,8.7679945,"car_sharing","amenity","einfach mobil","1"
+"471005478","Hessen",50.80101,8.7488525,"car_sharing","amenity","einfach mobil","1"
+"471009640","Hessen",50.8034134,8.7562103,"car_sharing","amenity","einfach mobil","1"
+"471011676","Hessen",50.803899,8.7620304,"car_sharing","amenity","einfach mobil","2"
+"505125869","Hessen",49.8641939,8.6477491,"car_sharing","amenity","book-n-drive",NA
+"517853445","Hessen",49.8707323,8.6472,"car_sharing","amenity","book-n-drive",NA
+"518606566","Hessen",49.8687749,8.6476804,"car_sharing","amenity","book-n-drive",NA
+"519659689","Hessen",49.8810417,8.661113,"car_sharing","amenity","book-n-drive",NA
+"519661748","Hessen",49.8792795,8.6557668,"car_sharing","amenity","book-n-drive",NA
+"520469541","Hessen",49.8732449,8.630776,"car_sharing","amenity","book-n-drive",NA
+"529632968","Hessen",51.3143474,9.4816036,"car_sharing","amenity","Stattauto","3"
+"529636192","Hessen",51.3170158,9.4780997,"car_sharing","amenity","Stattauto","1"
+"529640610","Hessen",51.3162191,9.4675355,"car_sharing","amenity","Stattauto","1"
+"529640611","Hessen",51.31366,9.4739606,"car_sharing","amenity","Stattauto","2"
+"564182673","Hessen",50.1076895,8.651452,"car_sharing","amenity",NA,NA
+"583308023","Hessen",50.8019279,8.7676216,"car_sharing","amenity","einfach mobil","2"
+"623539169","Hessen",50.1193138,8.6487869,"car_sharing","amenity","book-n-drive","1"
+"655181553","Hessen",50.1239756,8.6447886,"car_sharing","amenity","book-n-drive","1"
+"701717691","Hessen",50.8021237,8.7598401,"car_sharing","amenity","einfach mobil",NA
+"966094807","Hessen",50.1188884,8.6402621,"car_sharing","amenity","DB Carsharing",NA
+"1478742105","Hessen",50.8069355,8.7721066,"car_sharing","amenity","einfach mobil","1"
+"1607634084","Hessen",50.8049023,8.7598613,"car_sharing","amenity","einfach mobil","2"
+"1665255751","Hessen",50.1297928,8.6946127,"car_sharing","amenity",NA,NA
+"1696469669","Hessen",51.3126002,9.4582463,"car_sharing","amenity",NA,NA
+"1756921724","Hessen",51.3176969,9.4726357,"car_sharing","amenity","Stattauto","1"
+"1777965863","Hessen",50.1029969,8.6635179,"car_sharing","amenity",NA,NA
+"1797666647","Hessen",50.5702746,8.66223,"car_sharing","amenity","einfach mobil",NA
+"1797666648","Hessen",50.5741009,8.6849266,"car_sharing","amenity","einfach mobil",NA
+"1797666651","Hessen",50.5789629,8.6644716,"car_sharing","amenity","einfach mobil",NA
+"1797666655","Hessen",50.5791367,8.6740211,"car_sharing","amenity","einfach mobil",NA
+"1797666669","Hessen",50.5800799,8.665468,"car_sharing","amenity","einfach mobil",NA
+"1797666672","Hessen",50.580773,8.6738256,"car_sharing","amenity","einfach mobil",NA
+"1797666673","Hessen",50.5839174,8.6793474,"car_sharing","amenity","einfach mobil",NA
+"1797666674","Hessen",50.5881977,8.673087,"car_sharing","amenity","einfach mobil",NA
+"1797666676","Hessen",50.5884294,8.6645356,"car_sharing","amenity","einfach mobil",NA
+"1962772283","Hessen",49.8720691,8.6279313,"car_sharing","amenity","Flinkster","2"
+"1962772310","Hessen",49.8720762,8.6280761,"car_sharing","amenity","book-n-drive","2"
+"1962772315","Hessen",49.8705169,8.6247341,"car_sharing","amenity","book-n-drive","1"
+"1962787570","Hessen",49.8738248,8.6366686,"car_sharing","amenity","book-n-drive","3"
+"2126069739","Hessen",50.0059121,8.0319235,"car_sharing","amenity","Flinkster","1"
+"2126069747","Hessen",50.0116868,8.0505649,"car_sharing","amenity","Flinkster","1"
+"2126091784","Hessen",50.0706826,8.2398055,"car_sharing","amenity","book-n-drive","1"
+"2126091785","Hessen",50.0695877,8.2431904,"car_sharing","amenity","Flinkster","2"
+"2126091786","Hessen",50.0609256,8.2413534,"car_sharing","amenity",NA,"1"
+"2126091787","Hessen",50.0726741,8.2369063,"car_sharing","amenity","book-n-drive","2"
+"2126091788","Hessen",50.0707945,8.2470606,"car_sharing","amenity","Flinkster","1"
+"2126091789","Hessen",50.0658823,8.2395802,"car_sharing","amenity","book-n-drive","1"
+"2338942322","Hessen",49.530377,8.5740887,"car_sharing","amenity",NA,NA
+"2448456936","Hessen",50.0681982,8.243416,"car_sharing","amenity","book-n-drive","3"
+"2448456938","Hessen",50.0720859,8.2363062,"car_sharing","amenity","book-n-drive","2"
+"2448456939","Hessen",50.0757018,8.2231214,"car_sharing","amenity","book-n-drive",NA
+"2448456940","Hessen",50.0733687,8.2290113,"car_sharing","amenity","book-n-drive",NA
+"2448456943","Hessen",50.0787453,8.2314465,"car_sharing","amenity","book-n-drive",NA
+"2521458082","Hessen",49.8612817,8.655618,"car_sharing","amenity","book-n-drive",NA
+"2527099050","Hessen",49.8662692,8.6535248,"car_sharing","amenity",NA,NA
+"2550936900","Hessen",50.1059433,8.6522789,"car_sharing","amenity","Flinkster","5"
+"2871485360","Hessen",50.1066039,8.6402492,"car_sharing","amenity",NA,NA
+"2871485361","Hessen",50.104467,8.6418618,"car_sharing","amenity",NA,"2"
+"2948967070","Hessen",50.8076865,8.7673765,"car_sharing","amenity","einfach mobil","2"
+"2948967071","Hessen",50.8108187,8.7714726,"car_sharing","amenity","einfach mobil","1"
+"3182445317","Hessen",49.8609167,8.6803619,"car_sharing","amenity","book-n-drive | AStA TU-Darmstadt","3"
+"3209346529","Hessen",50.1261453,8.6844519,"car_sharing","amenity","Stadtmobil","1"
+"3211037005","Hessen",50.1525224,8.6337856,"car_sharing","amenity","book-n-drive","1"
+"3211037006","Hessen",50.1570759,8.6387002,"car_sharing","amenity","book-n-drive","1"
+"3211037007","Hessen",50.1625284,8.6428582,"car_sharing","amenity","book-n-drive","1"
+"3678957799","Hessen",50.0996951,8.7610908,"car_sharing","amenity","book-n-drive","2"
+"3678999884","Hessen",50.1024775,8.7784288,"car_sharing","amenity","stadtmobil",NA
+"3691459801","Hessen",50.0987217,8.7670804,"car_sharing","amenity","stadtmobil","1"
+"3693539307","Hessen",50.1099292,8.7448374,"car_sharing","amenity","stadtmobil","1"
+"3695336907","Hessen",50.0828482,8.7488287,"car_sharing","amenity","stadtmobil",NA
+"3695379817","Hessen",50.1057223,8.7669141,"car_sharing","amenity","book-n-drive","2"
+"3695383715","Hessen",50.1088143,8.7512118,"car_sharing","amenity","book-n-drive","1"
+"3704769514","Hessen",50.1029787,8.7679463,"car_sharing","amenity","CiteeCar","1"
+"3704775019","Hessen",50.1014581,8.7542461,"car_sharing","amenity","CiteeCar","1"
+"3704777434","Hessen",50.1054221,8.7477995,"car_sharing","amenity","CiteeCar","1"
+"3705237644","Hessen",50.0993386,8.7233873,"car_sharing","amenity","book-n-drive","1"
+"3740383534","Hessen",50.8177739,8.7749268,"car_sharing","amenity","einfach mobil","9"
+"3742530098","Hessen",50.5540394,9.6843506,"car_sharing","amenity","Flinkster","3"
+"3775019057","Hessen",50.1248128,8.6837213,"car_sharing","amenity","book-n-drive","2"
+"3775019058","Hessen",50.1272066,8.6406857,"car_sharing","amenity","book-n-drive","1"
+"3775019059","Hessen",50.1175365,8.649145,"car_sharing","amenity","book-n-drive","1"
+"3775019067","Hessen",50.1182608,8.6441421,"car_sharing","amenity","book-n-drive","1"
+"3775019068","Hessen",50.1188791,8.6402741,"car_sharing","amenity","book-n-drive",NA
+"3775019069","Hessen",50.1316108,8.7117246,"car_sharing","amenity","book-n-drive",NA
+"3775032430","Hessen",50.1333331,8.7128412,"car_sharing","amenity","book-n-drive",NA
+"3775032431","Hessen",50.1281123,8.7156415,"car_sharing","amenity","book-n-drive",NA
+"3775032432","Hessen",50.1471179,8.6730409,"car_sharing","amenity","book-n-drive",NA
+"3775032433","Hessen",50.1582366,8.6547839,"car_sharing","amenity","book-n-drive",NA
+"4038201215","Hessen",50.185837,8.919551,"car_sharing","amenity","Flinkster","1"
+"269729207","Bayern",48.1498264,11.4585782,"car_sharing","amenity","Stattauto München",NA
+"288979129","Bayern",48.0424481,10.7054038,"car_sharing","amenity","Opel",NA
+"297933540","Bayern",48.1355577,11.5873698,"car_sharing","amenity",NA,NA
+"308199085","Bayern",48.0998352,11.5388263,"car_sharing","amenity","Stattauto München",NA
+"308199307","Bayern",48.1033866,11.544054,"car_sharing","amenity","Stattauto München",NA
+"308200508","Bayern",48.1206041,11.5427831,"car_sharing","amenity","Stattauto München",NA
+"310415836","Bayern",48.1213174,11.425275,"car_sharing","amenity",NA,"3"
+"310415853","Bayern",48.122334,11.4375177,"car_sharing","amenity",NA,NA
+"312593552","Bayern",49.5944689,11.0016955,"car_sharing","amenity","DB Carsharing","2"
+"318345898","Bayern",48.1285091,11.5426916,"car_sharing","amenity","Stattauto München",NA
+"352843535","Bayern",48.3971167,10.004183,"car_sharing","amenity","Conficars","1"
+"366724607","Bayern",48.1054735,11.4146553,"car_sharing","amenity","Stattauto",NA
+"370853702","Bayern",48.1161799,11.5699163,"car_sharing","amenity","STATTAUTO München",NA
+"523697516","Bayern",48.1057159,11.7706958,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","3"
+"524354880","Bayern",48.1068778,11.764691,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"524355493","Bayern",48.1104619,11.7755241,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"524356443","Bayern",48.1070711,11.7814255,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"524357467","Bayern",48.1023629,11.7807087,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.",NA
+"524358349","Bayern",48.1039725,11.785297,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"524359410","Bayern",48.0956867,11.7806002,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"524365139","Bayern",48.0967938,11.7877102,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.",NA
+"703896425","Bayern",48.1458652,11.4711456,"car_sharing","amenity","StattAuto",NA
+"809213546","Bayern",48.1202792,11.520825,"car_sharing","amenity","Stattauto München",NA
+"1064094049","Bayern",47.8457672,11.158094,"car_sharing","amenity","Carsharing Pfaffenwinkel e.V.","2"
+"1096648807","Bayern",47.9043223,11.4459285,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG",NA
+"1098007131","Bayern",47.913729,11.4264663,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1098263550","Bayern",47.9140261,11.4190039,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","2"
+"1098274474","Bayern",47.9042322,11.4460688,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1122342614","Bayern",47.9139375,11.4321594,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1145452983","Bayern",47.9014004,11.4400733,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1186194155","Bayern",48.1292161,11.6062428,"car_sharing","amenity","STATTAUTO München",NA
+"1213584273","Bayern",48.0871418,11.6498688,"car_sharing","amenity","Deutsche Bahn AG",NA
+"1358923927","Bayern",47.874592,11.464977,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1435524883","Bayern",47.8578488,11.4787287,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1485638337","Bayern",48.1625621,11.5662777,"car_sharing","amenity",NA,NA
+"1485639708","Bayern",48.1671348,11.5670394,"car_sharing","amenity",NA,NA
+"1485641525","Bayern",48.156155,11.5749653,"car_sharing","amenity",NA,NA
+"1485641960","Bayern",48.1488738,11.5834599,"car_sharing","amenity",NA,NA
+"1485642409","Bayern",48.163929,11.5872418,"car_sharing","amenity",NA,NA
+"1486059444","Bayern",47.9143269,11.4208116,"car_sharing","amenity","Energiewende Oberland GmbH & Co. CarSharing KG","1"
+"1617823511","Bayern",49.9014822,10.8978746,"car_sharing","amenity","Ökobil e.V. (flinkster)","2"
+"1617851122","Bayern",49.8893617,10.8986147,"car_sharing","amenity","Ökobil e.V. (flinkster)","2"
+"1617863911","Bayern",49.8960096,10.8986484,"car_sharing","amenity","Ökobil e.V.","1"
+"1617879887","Bayern",49.8803782,10.8848674,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1617901709","Bayern",49.8960286,10.884257,"car_sharing","amenity","Ökobil e.V.","1"
+"1617901727","Bayern",49.9013711,10.8781656,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1617953252","Bayern",49.9032344,10.9170574,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1617959711","Bayern",49.9002921,10.8951076,"car_sharing","amenity","Ökobil e.V. (flinkster)","2"
+"1617961015","Bayern",49.9034228,10.8988569,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1617974864","Bayern",49.8928826,10.8731939,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1617984336","Bayern",49.9108454,10.9006316,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1617986613","Bayern",49.9118415,10.9048274,"car_sharing","amenity","Ökobil e.V. (flinkster)","1"
+"1674986214","Bayern",49.0167781,12.0755091,"car_sharing","amenity","Drive Carsharing","1"
+"1743978309","Bayern",48.1715734,11.8214884,"car_sharing","amenity","Poinger Autoteiler","1"
+"1743983353","Bayern",48.1718935,11.8107354,"car_sharing","amenity","Poinger Autoteiler","1"
+"1786252139","Bayern",48.1162351,11.5695533,"car_sharing","amenity","STATTAUTO München",NA
+"1838695179","Bayern",48.1865823,11.8687751,"car_sharing","amenity","Carsharing-Union Markt Schwaben e.V.",NA
+"1838704979","Bayern",48.1930186,11.8600431,"car_sharing","amenity","Carsharing-Union Markt Schwaben e.V.",NA
+"1838715704","Bayern",48.1943362,11.8677117,"car_sharing","amenity","Carsharing-Union Markt Schwaben e.V.",NA
+"1838718820","Bayern",48.1913309,11.8682836,"car_sharing","amenity","Carsharing-Union Markt Schwaben e.V.",NA
+"1915721213","Bayern",48.5753579,13.4684988,"car_sharing","amenity","Carsharing Passau","1"
+"1973952961","Bayern",48.121049,11.5465186,"car_sharing","amenity",NA,NA
+"2176291738","Bayern",48.6876113,10.919555,"car_sharing","amenity","Agip","1"
+"2176343611","Bayern",48.0829504,11.5043674,"car_sharing","amenity","STATTAUTO München",NA
+"2176343612","Bayern",48.0801486,11.5272178,"car_sharing","amenity","STATTAUTO München","2. Kleinwagen - Preisklasse B - 1 Fahrzeug"
+"2177084876","Bayern",48.1391135,11.5602509,"car_sharing","amenity","stadtmobil",NA
+"2320537483","Bayern",48.5710268,13.4559593,"car_sharing","amenity","Carsharing Passau","1"
+"2335172349","Bayern",48.1406043,11.567874,"car_sharing","amenity",NA,NA
+"2339546584","Bayern",50.051024,9.030046,"car_sharing","amenity","Noe-Stang GmbH & Co Autohaus KG",NA
+"2351669685","Bayern",48.0905661,11.4803372,"car_sharing","amenity","STATTAUTO München","1. Miniklasse - Preisklasse A(1 Fahrzeuge); 2. Kleinwagen - Preisklasse B(1 Fahrzeuge); 3. Mittelklasse - Preisklasse C(1 Fahrzeuge)"
+"2386059617","Bayern",48.3044401,11.9126289,"car_sharing","amenity","Carsharing Union Markt Schwaben e.V.","1"
+"2394399708","Bayern",48.1232736,11.5527368,"car_sharing","amenity",NA,NA
+"2410113166","Bayern",48.1690835,11.573297,"car_sharing","amenity",NA,NA
+"2411467499","Bayern",49.5924848,11.050554,"car_sharing","amenity",NA,"1"
+"2565956882","Bayern",48.1653795,11.5583706,"car_sharing","amenity",NA,NA
+"2565956895","Bayern",48.1661448,11.5549513,"car_sharing","amenity",NA,NA
+"2610754058","Bayern",48.1523987,11.5375316,"car_sharing","amenity","Stattauto München",NA
+"2792708909","Bayern",48.1108073,11.5684667,"car_sharing","amenity","STATTAUTO München",NA
+"2894497285","Bayern",48.1207884,11.6191743,"car_sharing","amenity",NA,NA
+"3115126470","Bayern",48.1376291,11.5470937,"car_sharing","amenity","STATTAUTO München",NA
+"3197595211","Bayern",48.1274573,11.6069605,"car_sharing","amenity","STATTAUTO München",NA
+"3197595213","Bayern",48.1264954,11.6637496,"car_sharing","amenity","STATTAUTO München",NA
+"3231070103","Bayern",48.7787738,12.8642177,"car_sharing","amenity","Vertriebsservice Ostbayern",NA
+"3346686696","Bayern",50.2116417,11.1432431,"car_sharing","amenity",NA,NA
+"3368034346","Bayern",48.1313002,11.5929977,"car_sharing","amenity","STATTAUTO München",NA
+"3396049288","Bayern",48.1287445,11.5856517,"car_sharing","amenity","STATTAUTO München","5"
+"3400295139","Bayern",48.0983244,11.5235155,"car_sharing","amenity","Stattauto München",NA
+"3431438893","Bayern",50.2562312,10.9613727,"car_sharing","amenity","Autoparat e. V.","2"
+"3436794991","Bayern",48.1294115,11.6925651,"car_sharing","amenity","STATTAUTO München",NA
+"3465809636","Bayern",48.3565865,10.8816622,"car_sharing","amenity","BeiAnrufAuto Augsburg e.V.","2"
+"3508249669","Bayern",49.9486941,11.57974,"car_sharing","amenity","Flinkster - local","1"
+"3545102853","Bayern",48.0959789,11.7610877,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545102854","Bayern",48.0981528,11.7680393,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545102855","Bayern",48.0969046,11.7761716,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545102856","Bayern",48.1016433,11.7707238,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545108459","Bayern",48.1022539,11.7806536,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","2"
+"3545111897","Bayern",48.1059036,11.7792772,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545113327","Bayern",48.104653,11.7879249,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545126346","Bayern",48.1006651,11.7881014,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545135371","Bayern",48.0971137,11.787103,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545135372","Bayern",48.0956256,11.7958606,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545135373","Bayern",48.0993723,11.7962462,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545135374","Bayern",48.1047515,11.7932529,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3545141773","Bayern",48.0972283,11.7750291,"car_sharing","amenity","Vaterstettener Auto-Teiler e.V.","1"
+"3564486106","Bayern",48.1012913,11.6406314,"car_sharing","amenity","STATTAUTO München",NA
+"3588515006","Bayern",48.2208021,11.80219,"car_sharing","amenity","Carsharing-Union Markt Schwaben e.V.",NA
+"3673496846","Bayern",49.1746691,12.8558527,"car_sharing","amenity","E-WALD","1"
+"3673503302","Bayern",49.2579647,12.9701017,"car_sharing","amenity","E-WALD",NA
+"3673636118","Bayern",49.2717757,12.8135231,"car_sharing","amenity","E-WALD","1"
+"3673719039","Bayern",49.0122995,12.1023528,"car_sharing","amenity","Drive Carsharing","2"
+"3677736728","Bayern",48.118977,11.6314932,"car_sharing","amenity","STATTAUTO München",NA
+"3678465565","Bayern",48.5745594,13.4504587,"car_sharing","amenity","E-WALD","1"
+"3720414579","Bayern",48.5711002,13.4697689,"car_sharing","amenity","Carsharing Passau","1"
+"3724653413","Bayern",48.098231,11.5220362,"car_sharing","amenity",NA,NA
+"3726646919","Bayern",49.6041354,11.0559005,"car_sharing","amenity",NA,"1"
+"3729227465","Bayern",49.0098854,12.0946185,"car_sharing","amenity","Drive Carsharing","3"
+"3729235034","Bayern",49.0155735,12.1090353,"car_sharing","amenity","Drive Carsharing","1"
+"3729339102","Bayern",48.5730658,13.4543544,"car_sharing","amenity","E-WALD","1"
+"3729358094","Bayern",49.1966436,13.0519702,"car_sharing","amenity","E-WALD","1"
+"3742496529","Bayern",49.0123795,12.1023466,"car_sharing","amenity","Greenwheels","1"
+"3742512125","Bayern",49.4442601,11.0840984,"car_sharing","amenity","Flinkster","4"
+"3742513507","Bayern",49.4436794,11.0812928,"car_sharing","amenity","Flinkster","3"
+"3742521325","Bayern",49.4578167,11.0908885,"car_sharing","amenity","Greenwheels","1"
+"3742525825","Bayern",49.2031717,12.9359877,"car_sharing","amenity","E-WALD","1"
+"3793915521","Bayern",49.7936669,9.90628,"car_sharing","amenity","Scouter","2"
+"3793915522","Bayern",49.7948874,9.9118858,"car_sharing","amenity","Scouter","2"
+"3793915523","Bayern",49.7967344,9.9281174,"car_sharing","amenity","Scouter","2"
+"3793915524","Bayern",49.7967881,9.9292493,"car_sharing","amenity","Scouter","2"
+"3793915525","Bayern",49.8006969,9.9243306,"car_sharing","amenity","Scouter","1"
+"3793915526","Bayern",49.8025163,9.9518304,"car_sharing","amenity","Scouter","1"
+"3811271868","Bayern",48.1198237,11.4928689,"car_sharing","amenity",NA,NA
+"3929291618","Bayern",48.1433242,11.5570123,"car_sharing","amenity",NA,NA
+"3929291619","Bayern",48.1517226,11.5619579,"car_sharing","amenity",NA,NA
+"3929291620","Bayern",48.152028,11.55157,"car_sharing","amenity",NA,NA
+"3929291631","Bayern",48.119466,11.576807,"car_sharing","amenity",NA,NA
+"3929291632","Bayern",48.099937,11.640626,"car_sharing","amenity",NA,NA
+"3959239098","Bayern",49.6692402,10.1454422,"car_sharing","amenity","Aral","1"
+"3992267300","Bayern",49.5795284,10.9970526,"car_sharing","amenity",NA,"1"
+"3992267301","Bayern",49.5867103,11.0222203,"car_sharing","amenity",NA,"1"
+"3992267302","Bayern",49.5896168,11.0141403,"car_sharing","amenity",NA,"1"
+"3992267303","Bayern",49.5933208,11.0360974,"car_sharing","amenity",NA,"1"
+"3992267307","Bayern",49.596363,10.9760028,"car_sharing","amenity",NA,"1"
+"3992267326","Bayern",49.5973735,11.0744573,"car_sharing","amenity",NA,"1"
+"255584030","Sachsen-Anhalt",51.4960012,11.9667334,"car_sharing","amenity","teilAuto","11"
+"321725453","Sachsen-Anhalt",51.8405746,12.2367424,"car_sharing","amenity","teilAuto",NA
+"360568132","Sachsen-Anhalt",52.1352417,11.6069078,"car_sharing","amenity","teilAuto",NA
+"360571112","Sachsen-Anhalt",52.1220433,11.6261291,"car_sharing","amenity","teilAuto",NA
+"603949833","Sachsen-Anhalt",52.1258354,11.6086825,"car_sharing","amenity","teilAuto",NA
+"1052715710","Sachsen-Anhalt",51.4875081,11.9692767,"car_sharing","amenity","teilAuto","3"
+"1052715714","Sachsen-Anhalt",51.5024551,11.9561398,"car_sharing","amenity","teilAuto","2"
+"1052715729","Sachsen-Anhalt",51.4905036,11.9659487,"car_sharing","amenity","teilAuto",NA
+"1117528040","Sachsen-Anhalt",51.4878286,11.9681457,"car_sharing","amenity",NA,NA
+"1161866232","Sachsen-Anhalt",51.4901116,11.9736103,"car_sharing","amenity",NA,NA
+"1305935029","Sachsen-Anhalt",51.4883833,11.9705877,"car_sharing","amenity","teilAuto","2"
+"1307721831","Sachsen-Anhalt",51.4962847,11.9369701,"car_sharing","amenity","teilAuto","3"
+"1307721832","Sachsen-Anhalt",51.4844911,11.9756299,"car_sharing","amenity","teilAuto","2"
+"1433637442","Sachsen-Anhalt",52.1310561,11.6089811,"car_sharing","amenity","Mobility Center GmbH","1"
+"1447505418","Sachsen-Anhalt",52.1279409,11.658639,"car_sharing","amenity","Mobility Center GmbH","1"
+"1808686388","Sachsen-Anhalt",52.1388494,11.6439769,"car_sharing","amenity","Mobility Center GmbH",NA
+"1822071987","Sachsen-Anhalt",52.135741,11.6114058,"car_sharing","amenity","Mobility Center GmbH","1"
+"2381014275","Sachsen-Anhalt",51.5008623,11.9325889,"car_sharing","amenity","teilAuto","1"
+"2542654583","Sachsen-Anhalt",51.8438873,12.2434805,"car_sharing","amenity","teilAuto","1"
+"2563270449","Sachsen-Anhalt",51.8482586,10.8088727,"car_sharing","amenity","Ford carsharing","1"
+"3074818273","Sachsen-Anhalt",51.4971338,11.9818041,"car_sharing","amenity","teilAuto","1"
+"3074820040","Sachsen-Anhalt",51.4943857,11.9750605,"car_sharing","amenity","teilAuto","2"
+"3120968933","Sachsen-Anhalt",52.1094914,11.6017127,"car_sharing","amenity","teilAuto","1"
+"3310647248","Sachsen-Anhalt",52.1323158,11.6146584,"car_sharing","amenity",NA,"1"
+"3663662688","Sachsen-Anhalt",51.5058379,11.9503746,"car_sharing","amenity","teilAuto","1"
+"3943426128","Sachsen-Anhalt",51.4573645,11.9766947,"car_sharing","amenity","teilauto","1"
+"3943491002","Sachsen-Anhalt",51.4611102,11.9851389,"car_sharing","amenity","teilauto","1"
+"3943491003","Sachsen-Anhalt",51.4666871,11.9791867,"car_sharing","amenity","teilauto","2"
+"3943491004","Sachsen-Anhalt",51.4703997,11.9740181,"car_sharing","amenity","teilauto","1"
+"3943491020","Sachsen-Anhalt",51.4739614,11.9677343,"car_sharing","amenity","teilauto","1"
+"3943491021","Sachsen-Anhalt",51.4765322,11.9767983,"car_sharing","amenity","teilauto","1"
+"3943491028","Sachsen-Anhalt",51.474158,11.986869,"car_sharing","amenity","teilauto","4"
+"3943491029","Sachsen-Anhalt",51.4768443,11.9858565,"car_sharing","amenity","teilauto","2"
+"3943491030","Sachsen-Anhalt",51.4797456,11.9692947,"car_sharing","amenity","teilauto","1"
+"3943491031","Sachsen-Anhalt",51.4805107,11.9633884,"car_sharing","amenity","teilauto","3"
+"3943491032","Sachsen-Anhalt",51.4862203,11.9812807,"car_sharing","amenity","teilauto","1"
+"3943594605","Sachsen-Anhalt",51.4902343,11.9727533,"car_sharing","amenity","teilauto","2"
+"3943594606","Sachsen-Anhalt",51.4911477,11.9656443,"car_sharing","amenity","teilauto","1"
+"3943594607","Sachsen-Anhalt",51.4898816,11.9636894,"car_sharing","amenity","teilauto","1"
+"3943594612","Sachsen-Anhalt",51.504937,11.9958005,"car_sharing","amenity","teilauto","1"
+"3943648518","Sachsen-Anhalt",51.5025653,11.9675449,"car_sharing","amenity","teilauto","1"
+"3943648519","Sachsen-Anhalt",51.4982756,11.9585453,"car_sharing","amenity","teilauto","1"
+"3943648520","Sachsen-Anhalt",51.4983373,11.9578882,"car_sharing","amenity","teilauto","1"
+"3943648521","Sachsen-Anhalt",51.5105657,11.962863,"car_sharing","amenity","teilauto","1"
+"3943648522","Sachsen-Anhalt",51.5154106,11.9612338,"car_sharing","amenity","teilauto","1"
+"26941201","Baden-Württemberg",48.9937781,8.4659853,"car_sharing","amenity","Stadtmobil",NA
+"26941264","Baden-Württemberg",48.9968719,8.4725516,"car_sharing","amenity","Stadtmobil",NA
+"32542994","Baden-Württemberg",48.9931804,8.3977128,"car_sharing","amenity","Stadtmobil",NA
+"108238356","Baden-Württemberg",48.9987503,8.3880173,"car_sharing","amenity","Stadtmobil",NA
+"108238449","Baden-Württemberg",48.9940433,8.3859687,"car_sharing","amenity","Stadtmobil",NA
+"108252137","Baden-Württemberg",48.9935043,8.3941365,"car_sharing","amenity","Stadtmobil",NA
+"110435602","Baden-Württemberg",49.0088629,8.409762,"car_sharing","amenity","Stadtmobil",NA
+"110440988","Baden-Württemberg",49.0040116,8.4237459,"car_sharing","amenity","Stadtmobil",NA
+"110461253","Baden-Württemberg",48.9976914,8.4096426,"car_sharing","amenity","Stadtmobil",NA
+"129966878","Baden-Württemberg",48.9944555,8.4585112,"car_sharing","amenity","Stadtmobil",NA
+"129966881","Baden-Württemberg",49.001387,8.4614755,"car_sharing","amenity","Stadtmobil","6"
+"129966883","Baden-Württemberg",48.999838,8.4726933,"car_sharing","amenity","Stadtmobil",NA
+"250044192","Baden-Württemberg",49.0750028,8.3974301,"car_sharing","amenity","Stadtmobil","3"
+"250044274","Baden-Württemberg",49.046514,8.3778115,"car_sharing","amenity","Stadtmobil","2"
+"250045037","Baden-Württemberg",49.0319297,8.3877369,"car_sharing","amenity","Stadtmobil","3"
+"252412574","Baden-Württemberg",49.0114563,8.3828641,"car_sharing","amenity","Stadtmobil",NA
+"260975654","Baden-Württemberg",47.9769465,7.825804,"car_sharing","amenity",NA,NA
+"261083613","Baden-Württemberg",47.9735937,7.8281744,"car_sharing","amenity",NA,NA
+"264975234","Baden-Württemberg",49.0063663,8.3802485,"car_sharing","amenity","Stadtmobil",NA
+"268953910","Baden-Württemberg",47.9753093,7.8223825,"car_sharing","amenity",NA,NA
+"269018565","Baden-Württemberg",49.0667242,8.4694543,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","2"
+"270264911","Baden-Württemberg",49.0082113,8.4055917,"car_sharing","amenity","Stadtmobil",NA
+"277949554","Baden-Württemberg",48.8024809,8.3205518,"car_sharing","amenity","Stadtmobil","2"
+"280408306","Baden-Württemberg",48.7917796,9.1793081,"car_sharing","amenity","stadtmobil",NA
+"280823130","Baden-Württemberg",48.7812353,9.1646969,"car_sharing","amenity","Stadtmobil Stuttgart","2"
+"280828357","Baden-Württemberg",48.7822953,9.1827551,"car_sharing","amenity","Stadtmobil Stuttgart",NA
+"283338419","Baden-Württemberg",49.4220712,8.674788,"car_sharing","amenity","stadtmobil","2 PKW"
+"283338763","Baden-Württemberg",49.4338914,8.6803397,"car_sharing","amenity","stadtmobil","2"
+"298725939","Baden-Württemberg",48.7826499,9.1589808,"car_sharing","amenity","Stadtmobil Stuttgart",NA
+"306350552","Baden-Württemberg",49.4248554,8.6842438,"car_sharing","amenity","stadtmobil","1 PKW"
+"310753178","Baden-Württemberg",48.5099395,9.0791909,"car_sharing","amenity","Ökostadt Tübingen e.V.",NA
+"311191425","Baden-Württemberg",48.9952895,8.3900549,"car_sharing","amenity","Stadtmobil",NA
+"312385181","Baden-Württemberg",49.0003755,8.4048283,"car_sharing","amenity","Stadtmobil",NA
+"313557733","Baden-Württemberg",48.510536,9.0794304,"car_sharing","amenity",NA,NA
+"332107722","Baden-Württemberg",49.4764771,8.6621294,"car_sharing","amenity","Stadtmobil Rhein-Neckar","3"
+"340477126","Baden-Württemberg",48.9917682,8.3975255,"car_sharing","amenity","Stadtmobil",NA
+"352699186","Baden-Württemberg",48.4143156,9.9480031,"car_sharing","amenity","Conficars","1"
+"352842521","Baden-Württemberg",48.4002434,9.9798739,"car_sharing","amenity","Conficars","1"
+"352842548","Baden-Württemberg",48.402405,9.9948189,"car_sharing","amenity","Conficars","1"
+"352863280","Baden-Württemberg",48.4097626,9.9602889,"car_sharing","amenity","Conficars","1"
+"361038833","Baden-Württemberg",49.0124157,8.4229029,"car_sharing","amenity","Stadtmobil",NA
+"361039226","Baden-Württemberg",49.0125647,8.4251319,"car_sharing","amenity","Stadtmobil",NA
+"361040681","Baden-Württemberg",49.0110158,8.4247479,"car_sharing","amenity","Stadtmobil",NA
+"361044782","Baden-Württemberg",49.0113227,8.4202467,"car_sharing","amenity","Stadtmobil",NA
+"367023930","Baden-Württemberg",49.0206488,8.3852382,"car_sharing","amenity","Stadtmobil",NA
+"406368108","Baden-Württemberg",49.0000439,8.4084611,"car_sharing","amenity","Stadtmobil",NA
+"409720385","Baden-Württemberg",49.0340033,8.4439983,"car_sharing","amenity","Stadtmobil",NA
+"412534569","Baden-Württemberg",48.4004519,10.0023349,"car_sharing","amenity","Conficars","1"
+"483000758","Baden-Württemberg",48.9405916,8.4020399,"car_sharing","amenity","Stadtmobil",NA
+"489417330","Baden-Württemberg",48.9457779,8.3991439,"car_sharing","amenity","Stadtmobil",NA
+"493410871","Baden-Württemberg",48.9387173,8.4080612,"car_sharing","amenity","Stadtmobil",NA
+"493410873","Baden-Württemberg",48.9395148,8.4094729,"car_sharing","amenity","Stadtmobil",NA
+"493410878","Baden-Württemberg",48.9451566,8.4093473,"car_sharing","amenity","Stadtmobil",NA
+"493412239","Baden-Württemberg",48.9290886,8.3895853,"car_sharing","amenity","Stadtmobil",NA
+"493414942","Baden-Württemberg",48.9120858,8.4322145,"car_sharing","amenity","Stadtmobil",NA
+"493669728","Baden-Württemberg",49.4134671,8.69235,"car_sharing","amenity","stadtmobil",NA
+"497002112","Baden-Württemberg",48.7186903,9.1073199,"car_sharing","amenity","stadtmobil carsharing AG","2"
+"520502473","Baden-Württemberg",49.0055603,8.4089017,"car_sharing","amenity","Stadtmobil",NA
+"520504850","Baden-Württemberg",49.0083317,8.3931352,"car_sharing","amenity","Stadtmobil",NA
+"520509109","Baden-Württemberg",49.0010046,8.4763438,"car_sharing","amenity","Stadtmobil",NA
+"520522563","Baden-Württemberg",49.0087843,8.3823705,"car_sharing","amenity","Stadtmobil",NA
+"520523539","Baden-Württemberg",49.0129828,8.3920987,"car_sharing","amenity","Stadtmobil",NA
+"521076452","Baden-Württemberg",49.0115568,8.3751278,"car_sharing","amenity","Stadtmobil",NA
+"521076661","Baden-Württemberg",49.010367,8.37906,"car_sharing","amenity","Stadtmobil",NA
+"521076707","Baden-Württemberg",48.9986144,8.4100926,"car_sharing","amenity","Stadtmobil",NA
+"521076767","Baden-Württemberg",49.0082995,8.401137,"car_sharing","amenity","Stadtmobil",NA
+"521077138","Baden-Württemberg",49.0087262,8.4238159,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG",NA
+"522393561","Baden-Württemberg",49.0100726,8.4303922,"car_sharing","amenity","Stadtmobil",NA
+"522397181","Baden-Württemberg",49.0102557,8.3803065,"car_sharing","amenity","Stadtmobil",NA
+"522399694","Baden-Württemberg",49.0196611,8.421532,"car_sharing","amenity","Stadtmobil",NA
+"522400677","Baden-Württemberg",49.0180328,8.3811326,"car_sharing","amenity","Stadtmobil",NA
+"522402605","Baden-Württemberg",49.0057162,8.3672247,"car_sharing","amenity","Stadtmobil",NA
+"522404149","Baden-Württemberg",49.0144468,8.3867967,"car_sharing","amenity","Stadtmobil",NA
+"523202045","Baden-Württemberg",49.016595,8.4441066,"car_sharing","amenity","Stadtmobil",NA
+"523205580","Baden-Württemberg",49.0104201,8.3622599,"car_sharing","amenity","Stadtmobil",NA
+"523206722","Baden-Württemberg",48.9844549,8.3988464,"car_sharing","amenity","Stadtmobil","4"
+"523210010","Baden-Württemberg",49.0245783,8.3684315,"car_sharing","amenity","Stadtmobil",NA
+"523211720","Baden-Württemberg",49.0030077,8.3873414,"car_sharing","amenity","Stadtmobil",NA
+"523214687","Baden-Württemberg",49.0032546,8.3962205,"car_sharing","amenity","Stadtmobil",NA
+"523216277","Baden-Württemberg",49.0119308,8.3604346,"car_sharing","amenity","Stadtmobil",NA
+"523217570","Baden-Württemberg",49.0136852,8.3745686,"car_sharing","amenity","Stadtmobil",NA
+"523218714","Baden-Württemberg",49.0304848,8.3446049,"car_sharing","amenity","Stadtmobil",NA
+"523220305","Baden-Württemberg",49.0121294,8.3849898,"car_sharing","amenity","Stadtmobil",NA
+"523221829","Baden-Württemberg",49.0192823,8.4398173,"car_sharing","amenity","Stadtmobil",NA
+"523224121","Baden-Württemberg",49.0265692,8.3907224,"car_sharing","amenity","Stadtmobil",NA
+"523226911","Baden-Württemberg",49.009777,8.4157447,"car_sharing","amenity","Stadtmobil",NA
+"523229507","Baden-Württemberg",49.0121024,8.4328612,"car_sharing","amenity","Stadtmobil",NA
+"523232405","Baden-Württemberg",49.0021407,8.4125098,"car_sharing","amenity","Stadtmobil",NA
+"523235535","Baden-Württemberg",49.0161493,8.3969994,"car_sharing","amenity","Stadtmobil",NA
+"523238312","Baden-Württemberg",49.0088901,8.4082852,"car_sharing","amenity","Stadtmobil",NA
+"528908837","Baden-Württemberg",49.0048536,8.3874366,"car_sharing","amenity","Stadtmobil",NA
+"534770397","Baden-Württemberg",49.4792577,8.4751947,"car_sharing","amenity","Stadtmobil Rhein-Neckar",NA
+"537932816","Baden-Württemberg",48.7783167,8.2025761,"car_sharing","amenity","Stadtmobil","2"
+"540222685","Baden-Württemberg",48.7859146,9.166248,"car_sharing","amenity","Stadtmobil",NA
+"540223398","Baden-Württemberg",48.7761269,9.1478982,"car_sharing","amenity","Stadtmobil","1"
+"575162538","Baden-Württemberg",47.6063034,7.6629816,"car_sharing","amenity","Car Sharing Südbaden-Freiburg",NA
+"575162541","Baden-Württemberg",47.6154965,7.6651953,"car_sharing","amenity","Car Sharing Südbaden-Freiburg",NA
+"631815570","Baden-Württemberg",49.1242379,8.5911224,"car_sharing","amenity","Stadtmobil",NA
+"631815572","Baden-Württemberg",49.1233634,8.5948271,"car_sharing","amenity","Stadtmobil",NA
+"631815573","Baden-Württemberg",49.1231546,8.6009439,"car_sharing","amenity","Stadtmobil",NA
+"632369581","Baden-Württemberg",48.7438417,9.0978184,"car_sharing","amenity","Flinkster","1"
+"632369582","Baden-Württemberg",48.7422183,9.1032123,"car_sharing","amenity","Flinkster","1"
+"645416288","Baden-Württemberg",47.7841548,9.6052873,"car_sharing","amenity","DB Carsharing","2"
+"645451179","Baden-Württemberg",47.7812943,9.5877397,"car_sharing","amenity","Die Autonative e.V.",NA
+"648771358","Baden-Württemberg",49.4986702,8.4669074,"car_sharing","amenity","stadtmobil",NA
+"662299857","Baden-Württemberg",49.4792944,8.4747389,"car_sharing","amenity","Stadtmobil Rhein-Neckar",NA
+"686426352","Baden-Württemberg",48.7434492,9.1028098,"car_sharing","amenity","Flinkster","1"
+"691220917","Baden-Württemberg",48.64171,8.9033603,"car_sharing","amenity","stadtmobil carsharing AG","2"
+"691220973","Baden-Württemberg",48.7271517,9.1138828,"car_sharing","amenity","Flinkster","2"
+"768853617","Baden-Württemberg",48.9833003,8.3656614,"car_sharing","amenity","Stadtmobil",NA
+"790571973","Baden-Württemberg",49.0109969,8.3799888,"car_sharing","amenity","Stadtmobil",NA
+"790573190","Baden-Württemberg",49.0050903,8.3681769,"car_sharing","amenity","Stadtmobil",NA
+"829887066","Baden-Württemberg",49.0123693,8.3656743,"car_sharing","amenity","Stadtmobil",NA
+"850152782","Baden-Württemberg",49.3811106,8.6779339,"car_sharing","amenity","Stadtmobil",NA
+"904348314","Baden-Württemberg",49.0275212,8.4536905,"car_sharing","amenity","Stadtmobil",NA
+"942400655","Baden-Württemberg",48.9826829,8.3926802,"car_sharing","amenity","Stadtmobil","2"
+"944899178","Baden-Württemberg",48.5232563,9.0530129,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"944926519","Baden-Württemberg",48.5197809,9.0472186,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"944928318","Baden-Württemberg",48.5202558,9.0530493,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"1007164946","Baden-Württemberg",48.5215507,9.0445027,"car_sharing","amenity","Ökostadt Tübingen e.V.","3"
+"1027945008","Baden-Württemberg",49.4116285,8.6967738,"car_sharing","amenity",NA,NA
+"1027945018","Baden-Württemberg",49.4112877,8.7120306,"car_sharing","amenity","Stadtmobil",NA
+"1027945021","Baden-Württemberg",49.4124821,8.7116749,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"1027945022","Baden-Württemberg",49.4105746,8.7045338,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"1027945035","Baden-Württemberg",49.4088982,8.6985594,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"1045479091","Baden-Württemberg",49.0062473,8.4337578,"car_sharing","amenity","Stadtmobil",NA
+"1051761464","Baden-Württemberg",49.0093316,8.3859656,"car_sharing","amenity","Stadtmobil",NA
+"1097786486","Baden-Württemberg",48.9941512,8.3913803,"car_sharing","amenity","Stadtmobil",NA
+"1112643996","Baden-Württemberg",48.3948579,9.9627656,"car_sharing","amenity","Conficars","1"
+"1126320968","Baden-Württemberg",49.0019232,8.4144006,"car_sharing","amenity","Stadtmobil",NA
+"1202240521","Baden-Württemberg",48.9865171,8.376469,"car_sharing","amenity","Stadtmobil",NA
+"1226095874","Baden-Württemberg",49.0098564,8.3881471,"car_sharing","amenity","Stadtmobil",NA
+"1235843118","Baden-Württemberg",47.5494605,7.6931467,"car_sharing","amenity","Ortsgruppe Grenzach Whylen","1"
+"1282763241","Baden-Württemberg",49.0855619,8.4022862,"car_sharing","amenity","Stadtmobil","1"
+"1316028947","Baden-Württemberg",49.0009068,8.3854736,"car_sharing","amenity","Stadtmobil",NA
+"1388689375","Baden-Württemberg",49.0539094,8.4006285,"car_sharing","amenity","Stadtmobil","1"
+"1390562219","Baden-Württemberg",48.9848612,8.3907992,"car_sharing","amenity","Stadtmobil","3"
+"1419019049","Baden-Württemberg",49.0059261,8.4935822,"car_sharing","amenity","Stadtmobil","6"
+"1432732051","Baden-Württemberg",48.7688932,9.1628004,"car_sharing","amenity","Stadtmobil Stuttgart","2"
+"1432732057","Baden-Württemberg",48.7810134,9.2039903,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1435395114","Baden-Württemberg",49.4893146,8.4630183,"car_sharing","amenity",NA,NA
+"1436729582","Baden-Württemberg",48.7711283,9.1566685,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1436729584","Baden-Württemberg",48.7701418,9.1599295,"car_sharing","amenity","Stadtmobil Stuttgart","2"
+"1436729585","Baden-Württemberg",48.7736401,9.1684362,"car_sharing","amenity","Stadtmobil Stuttgart","7"
+"1436795927","Baden-Württemberg",48.775543,9.1611962,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1436795928","Baden-Württemberg",48.7723296,9.1554782,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1436795929","Baden-Württemberg",48.7774767,9.1643425,"car_sharing","amenity","Stadtmobil Stuttgart","3"
+"1436795930","Baden-Württemberg",48.7733018,9.1575006,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1436795931","Baden-Württemberg",48.7748452,9.1615662,"car_sharing","amenity","Stadtmobil Stuttgart","2"
+"1436795932","Baden-Württemberg",48.7734536,9.1618452,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1438362322","Baden-Württemberg",48.7741079,9.1436496,"car_sharing","amenity","Stadtmobil","2"
+"1438362323","Baden-Württemberg",48.7740831,9.1445347,"car_sharing","amenity","Stadtmobil","1"
+"1438362329","Baden-Württemberg",48.7721529,9.1490677,"car_sharing","amenity","Stadtmobil","1"
+"1440227724","Baden-Württemberg",49.4181588,8.6814978,"car_sharing","amenity","stadtmobil Rhein-Neckar","6 PKW"
+"1440237579","Baden-Württemberg",49.418347,8.6872741,"car_sharing","amenity","stadtmobil Rhein-Neckar","1 PKW"
+"1440237586","Baden-Württemberg",49.4197789,8.6871221,"car_sharing","amenity","stadtmobil Rhein-Neckar","1 PKW"
+"1440237587","Baden-Württemberg",49.420775,8.68459,"car_sharing","amenity","stadtmobil Rhein-Neckar","1 PKW"
+"1440237590","Baden-Württemberg",49.4220217,8.6830623,"car_sharing","amenity","Stadtmobil","1 PKW"
+"1440237593","Baden-Württemberg",49.4248833,8.6877871,"car_sharing","amenity","Stadtmobil","1 PKW"
+"1440237597","Baden-Württemberg",49.4285458,8.6851837,"car_sharing","amenity","Stadtmobil","1 PKW"
+"1440239967","Baden-Württemberg",49.4312787,8.6910498,"car_sharing","amenity","Stadtmobil","1 PKW"
+"1456799614","Baden-Württemberg",48.7747723,9.1870921,"car_sharing","amenity","Stadtmobil Stuttgart","16"
+"1460915007","Baden-Württemberg",49.031114,8.3927306,"car_sharing","amenity","stadtmobil",NA
+"1480144415","Baden-Württemberg",49.0011627,8.4706826,"car_sharing","amenity","Stadtmobil",NA
+"1480191737","Baden-Württemberg",49.0098544,8.4273456,"car_sharing","amenity","Stadtmobil",NA
+"1481168682","Baden-Württemberg",49.0072178,8.424255,"car_sharing","amenity","Stadtmobil",NA
+"1537810433","Baden-Württemberg",48.5277102,9.0513739,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"1537816167","Baden-Württemberg",48.5161822,9.0564392,"car_sharing","amenity","Ökostadt Tübingen e.V.","6"
+"1537840105","Baden-Württemberg",48.5286858,9.0578824,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"1537840554","Baden-Württemberg",48.5279368,9.0618916,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"1578715767","Baden-Württemberg",49.0064143,8.5295817,"car_sharing","amenity","Stadtmobil","2"
+"1583914378","Baden-Württemberg",47.996635,7.8392486,"car_sharing","amenity","Carsharing Freiburg",NA
+"1583914476","Baden-Württemberg",47.996595,7.8391616,"car_sharing","amenity","Car-Sharing Südbaden - Freiburg e.V.",NA
+"1598001201","Baden-Württemberg",48.3818105,9.8964016,"car_sharing","amenity","car2go",NA
+"1631900168","Baden-Württemberg",48.7844668,9.1613968,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1631900172","Baden-Württemberg",48.7820256,9.1669885,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1631900180","Baden-Württemberg",48.7803012,9.1566522,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1693903248","Baden-Württemberg",48.5290984,9.0644488,"car_sharing","amenity","Ökostadt Tübingen e.V.","1"
+"1709914551","Baden-Württemberg",49.4329833,8.6806293,"car_sharing","amenity","stadtmobil","1 PKW"
+"1731463876","Baden-Württemberg",48.5106056,9.0774691,"car_sharing","amenity",NA,NA
+"1731463879","Baden-Württemberg",48.5105217,9.0759402,"car_sharing","amenity",NA,NA
+"1736456376","Baden-Württemberg",49.1123391,9.7225894,"car_sharing","amenity",NA,NA
+"1736456418","Baden-Württemberg",49.1016257,9.7227739,"car_sharing","amenity",NA,NA
+"1738365627","Baden-Württemberg",48.5105873,9.0775415,"car_sharing","amenity",NA,NA
+"1738365644","Baden-Württemberg",48.5105964,9.0775061,"car_sharing","amenity",NA,NA
+"1742831218","Baden-Württemberg",48.9100607,8.7443475,"car_sharing","amenity","Stadtmobil","1 PKW"
+"1767737899","Baden-Württemberg",49.0134033,8.4163672,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","3"
+"1782364889","Baden-Württemberg",48.6867657,9.0043342,"car_sharing","amenity","stadtmobil carsharing AG","1"
+"1788287270","Baden-Württemberg",48.3983769,9.9813429,"car_sharing","amenity","Conficars","1"
+"1808517720","Baden-Württemberg",47.6879873,9.1480871,"car_sharing","amenity","Car-Sharing Südbaden - Bodensee","1"
+"1815321736","Baden-Württemberg",48.7598567,8.2375036,"car_sharing","amenity","stadtmobil","1"
+"1815321802","Baden-Württemberg",48.7673534,8.2283192,"car_sharing","amenity","stadtmobil","2"
+"1821630033","Baden-Württemberg",49.1434403,9.2131224,"car_sharing","amenity","stadtmobil","4"
+"1834414917","Baden-Württemberg",49.1266348,9.2133423,"car_sharing","amenity","Stadtmobil","1"
+"1835256269","Baden-Württemberg",48.4777675,9.20233,"car_sharing","amenity","teilAuto Reutlingen","1"
+"1835256279","Baden-Württemberg",48.4847673,9.1882869,"car_sharing","amenity","teilAuto","1"
+"1835256282","Baden-Württemberg",48.4885577,9.2123494,"car_sharing","amenity","teilAuto","4"
+"1835256290","Baden-Württemberg",48.4931586,9.2035619,"car_sharing","amenity","teilAuto","1"
+"1835256294","Baden-Württemberg",48.4963416,9.1960504,"car_sharing","amenity","teilAuto","1"
+"1835256298","Baden-Württemberg",48.4989716,9.174675,"car_sharing","amenity","teilAuto","1"
+"1845262227","Baden-Württemberg",48.7402396,9.1298135,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1845374374","Baden-Württemberg",48.5933294,8.8621559,"car_sharing","amenity","Stadtmobil Stuttgart","3"
+"1845374375","Baden-Württemberg",48.5944942,8.8715144,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1873548575","Baden-Württemberg",49.4036198,8.6878647,"car_sharing","amenity","stadtmobil Rhein-Neckar","3"
+"1899288007","Baden-Württemberg",49.4143251,8.7187531,"car_sharing","amenity","stadtmobil Rhein-Neckar","2"
+"1913151069","Baden-Württemberg",48.7452263,9.1073359,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"1932959663","Baden-Württemberg",49.0044913,8.4012063,"car_sharing","amenity","Stadtmobil",NA
+"1934346180","Baden-Württemberg",49.0513835,8.3863233,"car_sharing","amenity","Stadtmobil",NA
+"1934346181","Baden-Württemberg",48.9803021,8.4622547,"car_sharing","amenity","Stadtmobil",NA
+"1935193589","Baden-Württemberg",48.764799,9.1737844,"car_sharing","amenity","Stadtmobil Stuttgart","2"
+"1935193599","Baden-Württemberg",48.7651688,9.1728791,"car_sharing","amenity","Stadtmobil Stuttgart","4"
+"1936082215","Baden-Württemberg",48.9921916,8.3925756,"car_sharing","amenity","Stadtmobil",NA
+"1938459082","Baden-Württemberg",48.989957,8.3803525,"car_sharing","amenity","Stadtmobil",NA
+"1939461043","Baden-Württemberg",49.0030003,8.3361016,"car_sharing","amenity","Stadtmobil",NA
+"1939618283","Baden-Württemberg",48.9986359,8.3516929,"car_sharing","amenity","Stadtmobil",NA
+"1939618284","Baden-Württemberg",49.0014194,8.3525528,"car_sharing","amenity","Stadtmobil",NA
+"1939618287","Baden-Württemberg",49.0060485,8.3567374,"car_sharing","amenity","Stadtmobil",NA
+"1940159996","Baden-Württemberg",49.010778,8.3722944,"car_sharing","amenity","Stadtmobil",NA
+"1940159997","Baden-Württemberg",49.0121695,8.3687799,"car_sharing","amenity","Stadtmobil",NA
+"1941973484","Baden-Württemberg",49.0150509,8.3576239,"car_sharing","amenity","Stadtmobil",NA
+"1943364698","Baden-Württemberg",49.0259714,8.3875174,"car_sharing","amenity","Stadtmobil",NA
+"1943364741","Baden-Württemberg",49.0265085,8.3904725,"car_sharing","amenity","Stadtmobil",NA
+"1943364746","Baden-Württemberg",49.0216231,8.3668316,"car_sharing","amenity","Stadtmobil",NA
+"1943364749","Baden-Württemberg",49.0277866,8.3617304,"car_sharing","amenity","Stadtmobil",NA
+"1943364797","Baden-Württemberg",49.0304993,8.3754561,"car_sharing","amenity","Stadtmobil",NA
+"1955678780","Baden-Württemberg",49.0378013,8.4528967,"car_sharing","amenity","Stadtmobil",NA
+"1957237916","Baden-Württemberg",49.0160544,8.4414375,"car_sharing","amenity","Stadtmobil",NA
+"1957237922","Baden-Württemberg",49.015255,8.4978546,"car_sharing","amenity","Stadtmobil",NA
+"1957238062","Baden-Württemberg",48.9978269,8.4784012,"car_sharing","amenity","Stadtmobil",NA
+"1957238203","Baden-Württemberg",48.986143,8.4749882,"car_sharing","amenity","Stadtmobil",NA
+"1959177002","Baden-Württemberg",48.9779196,8.4093306,"car_sharing","amenity","Stadtmobil",NA
+"1959177229","Baden-Württemberg",48.9742968,8.4046281,"car_sharing","amenity","Stadtmobil",NA
+"1959177253","Baden-Württemberg",48.9668221,8.4001745,"car_sharing","amenity","Stadtmobil",NA
+"1959177303","Baden-Württemberg",48.9661331,8.4057292,"car_sharing","amenity","Stadtmobil",NA
+"1959178067","Baden-Württemberg",48.9875527,8.4545872,"car_sharing","amenity","Stadtmobil",NA
+"1961083481","Baden-Württemberg",48.9911662,8.4017027,"car_sharing","amenity","DB Rent GmbH",NA
+"1961083485","Baden-Württemberg",48.993742,8.3989492,"car_sharing","amenity","DB Rent GmbH",NA
+"1961083488","Baden-Württemberg",48.9984297,8.3981181,"car_sharing","amenity","Flinkster",NA
+"1961200277","Baden-Württemberg",48.9756322,8.3073483,"car_sharing","amenity",NA,NA
+"1961235380","Baden-Württemberg",48.9590529,8.2943324,"car_sharing","amenity",NA,NA
+"1985505114","Baden-Württemberg",49.3777874,8.6694462,"car_sharing","amenity","Stadtmobil",NA
+"1985510043","Baden-Württemberg",49.3739035,8.683104,"car_sharing","amenity","Stadtmobil",NA
+"1985510374","Baden-Württemberg",49.3769857,8.6847203,"car_sharing","amenity","Stadtmobil",NA
+"1985512577","Baden-Württemberg",49.3763424,8.6904918,"car_sharing","amenity","Stadtmobil",NA
+"1985514956","Baden-Württemberg",49.3806318,8.6903397,"car_sharing","amenity","Stadtmobil",NA
+"1985515065","Baden-Württemberg",49.3845467,8.6890952,"car_sharing","amenity","Stadtmobil Rhein-Neckar","1"
+"1985517165","Baden-Württemberg",49.38671,8.6889664,"car_sharing","amenity","Stadtmobil Rhein-Neckar","1"
+"1985519762","Baden-Württemberg",49.3940819,8.6861279,"car_sharing","amenity","stadtmobil Rhein-Neckar","1"
+"1985522075","Baden-Württemberg",49.3995012,8.6869038,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"2020721552","Baden-Württemberg",49.0968671,8.4000305,"car_sharing","amenity","Stadtmobil",NA
+"2037278707","Baden-Württemberg",48.7637915,9.1673095,"car_sharing","amenity","Flinkster","2"
+"2075179597","Baden-Württemberg",49.4023964,8.6765116,"car_sharing","amenity","stadtmobil Rhein-Neckar","2"
+"2122161094","Baden-Württemberg",49.4723285,8.4693641,"car_sharing","amenity","stadtmobil",NA
+"2148001820","Baden-Württemberg",48.793781,9.2029152,"car_sharing","amenity","Flinkster","1"
+"2176776460","Baden-Württemberg",48.9431499,9.4271318,"car_sharing","amenity","Stadtmobil","2"
+"2196590264","Baden-Württemberg",49.1496467,9.2149656,"car_sharing","amenity","stadtmobil","1"
+"2208760320","Baden-Württemberg",49.4056017,8.6751788,"car_sharing","amenity","stadtmobil Rhein-Neckar","3"
+"2210234523","Baden-Württemberg",49.0067676,8.5209894,"car_sharing","amenity","Stadtmobil","1"
+"2247156948","Baden-Württemberg",48.6875146,9.0025159,"car_sharing","amenity","stadtmobil carsharing AG","1"
+"2267930042","Baden-Württemberg",48.1034629,9.7716059,"car_sharing","amenity","teilAuto Biberach/Riss e.V.","1"
+"2267934837","Baden-Württemberg",48.0972737,9.7905045,"car_sharing","amenity","teilAuto Biberach/Riss e.V.","1"
+"2277946920","Baden-Württemberg",49.4277498,8.6794326,"car_sharing","amenity","stadtmobil","1"
+"2277946924","Baden-Württemberg",49.437606,8.6778079,"car_sharing","amenity","stadtmobil","3 PKW"
+"2279212401","Baden-Württemberg",48.6810115,8.9747093,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"2284015342","Baden-Württemberg",49.4064375,8.6918384,"car_sharing","amenity","stadtmobil","3"
+"2284021120","Baden-Württemberg",49.4075653,8.6902108,"car_sharing","amenity","stadtmobil Rhein-Neckar","3"
+"2293773566","Baden-Württemberg",48.4011798,9.9833889,"car_sharing","amenity","Flinkster","5"
+"2302852265","Baden-Württemberg",49.445487,8.6681418,"car_sharing","amenity","stadtmobil","1 PKW"
+"2302852270","Baden-Württemberg",49.4487368,8.6710487,"car_sharing","amenity","stadtmobil","4 PKW"
+"2302852275","Baden-Württemberg",49.4515436,8.6749544,"car_sharing","amenity","stadtmobil","1 PKW"
+"2335100685","Baden-Württemberg",49.4868649,8.4643545,"car_sharing","amenity",NA,NA
+"2335111824","Baden-Württemberg",49.4874155,8.4625622,"car_sharing","amenity",NA,NA
+"2335119549","Baden-Württemberg",49.4858954,8.4634001,"car_sharing","amenity",NA,NA
+"2335120731","Baden-Württemberg",49.4912417,8.4603148,"car_sharing","amenity",NA,NA
+"2335121051","Baden-Württemberg",49.4922729,8.4638607,"car_sharing","amenity",NA,NA
+"2335122116","Baden-Württemberg",49.4907357,8.4764625,"car_sharing","amenity",NA,NA
+"2335123253","Baden-Württemberg",49.4876732,8.4745091,"car_sharing","amenity",NA,NA
+"2335123776","Baden-Württemberg",49.4879208,8.4737741,"car_sharing","amenity",NA,NA
+"2335125509","Baden-Württemberg",49.4855476,8.4760591,"car_sharing","amenity",NA,NA
+"2335154653","Baden-Württemberg",49.4845717,8.4699493,"car_sharing","amenity","Stadtmobil Rhein-Neckar AG",NA
+"2335155709","Baden-Württemberg",49.4824599,8.4742406,"car_sharing","amenity",NA,NA
+"2335155967","Baden-Württemberg",49.4841151,8.4706038,"car_sharing","amenity","Stadtmobil Rhein-Neckar AG",NA
+"2335158698","Baden-Württemberg",49.494538,8.468388,"car_sharing","amenity",NA,NA
+"2335175903","Baden-Württemberg",49.5001191,8.5444131,"car_sharing","amenity",NA,NA
+"2335179524","Baden-Württemberg",49.4904727,8.5307467,"car_sharing","amenity",NA,NA
+"2335203622","Baden-Württemberg",49.5063692,8.486112,"car_sharing","amenity",NA,NA
+"2335203640","Baden-Württemberg",49.5081111,8.5133743,"car_sharing","amenity",NA,NA
+"2335205495","Baden-Württemberg",49.5001607,8.4901022,"car_sharing","amenity","stadtmobil",NA
+"2335206115","Baden-Württemberg",49.4999523,8.4801253,"car_sharing","amenity",NA,NA
+"2335206404","Baden-Württemberg",49.5054356,8.4689995,"car_sharing","amenity","stadtmobil",NA
+"2335206668","Baden-Württemberg",49.499576,8.4711882,"car_sharing","amenity","stadtmobil",NA
+"2335207635","Baden-Württemberg",49.4966773,8.4716496,"car_sharing","amenity","stadtmobil",NA
+"2335208197","Baden-Württemberg",49.4948476,8.4784994,"car_sharing","amenity","stadtmobil",NA
+"2335208912","Baden-Württemberg",49.4936853,8.481821,"car_sharing","amenity","stadtmobil",NA
+"2335209493","Baden-Württemberg",49.496524,8.4789773,"car_sharing","amenity","stadtmobil",NA
+"2335209634","Baden-Württemberg",49.4976929,8.4819126,"car_sharing","amenity","stadtmobil",NA
+"2335212222","Baden-Württemberg",49.4987455,8.4780507,"car_sharing","amenity","stadtmobil",NA
+"2335219530","Baden-Württemberg",49.5232149,8.4865255,"car_sharing","amenity","stadtmobil",NA
+"2335220526","Baden-Württemberg",49.4971163,8.4571764,"car_sharing","amenity",NA,NA
+"2335222787","Baden-Württemberg",49.4862167,8.4811982,"car_sharing","amenity",NA,NA
+"2335223633","Baden-Württemberg",49.4787446,8.4866055,"car_sharing","amenity",NA,NA
+"2335223863","Baden-Württemberg",49.4787167,8.4841808,"car_sharing","amenity","Stadtmobil Rhein-Neckar",NA
+"2335225263","Baden-Württemberg",49.4798878,8.4779045,"car_sharing","amenity",NA,NA
+"2335225518","Baden-Württemberg",49.4793022,8.4748253,"car_sharing","amenity",NA,NA
+"2335226036","Baden-Württemberg",49.4771552,8.4806296,"car_sharing","amenity",NA,NA
+"2335226484","Baden-Württemberg",49.4770715,8.478634,"car_sharing","amenity",NA,NA
+"2335229003","Baden-Württemberg",49.4778139,8.4737041,"car_sharing","amenity",NA,NA
+"2335229830","Baden-Württemberg",49.472324,8.4693375,"car_sharing","amenity",NA,NA
+"2335230359","Baden-Württemberg",49.4680327,8.470008,"car_sharing","amenity",NA,NA
+"2335234099","Baden-Württemberg",49.4643651,8.4826734,"car_sharing","amenity",NA,NA
+"2335235577","Baden-Württemberg",49.4566141,8.4821265,"car_sharing","amenity",NA,NA
+"2335235963","Baden-Württemberg",49.4532246,8.4912672,"car_sharing","amenity",NA,NA
+"2335241036","Baden-Württemberg",49.4566332,8.4742353,"car_sharing","amenity",NA,NA
+"2335247731","Baden-Württemberg",49.460943,8.4898376,"car_sharing","amenity",NA,NA
+"2335253646","Baden-Württemberg",49.4382621,8.525283,"car_sharing","amenity",NA,NA
+"2335305541","Baden-Württemberg",49.4688741,8.5540284,"car_sharing","amenity",NA,NA
+"2335382447","Baden-Württemberg",49.4467206,8.6115235,"car_sharing","amenity",NA,NA
+"2335382606","Baden-Württemberg",49.4004472,8.6339317,"car_sharing","amenity",NA,NA
+"2335393642","Baden-Württemberg",49.4059958,8.6255954,"car_sharing","amenity",NA,NA
+"2335395751","Baden-Württemberg",49.3989303,8.6277358,"car_sharing","amenity",NA,NA
+"2335402053","Baden-Württemberg",49.4736004,8.6134425,"car_sharing","amenity",NA,NA
+"2335403695","Baden-Württemberg",49.4706758,8.6067745,"car_sharing","amenity",NA,NA
+"2335404685","Baden-Württemberg",49.4714706,8.6075415,"car_sharing","amenity",NA,NA
+"2335408287","Baden-Württemberg",49.3490662,8.685476,"car_sharing","amenity",NA,NA
+"2335413051","Baden-Württemberg",49.383934,8.8061769,"car_sharing","amenity","stadtmobil Rhein-Neckar","1"
+"2335413092","Baden-Württemberg",49.3844312,8.8049405,"car_sharing","amenity","stadtmobil Rhein-Neckar","1"
+"2335421798","Baden-Württemberg",49.3954731,8.6005137,"car_sharing","amenity",NA,NA
+"2335423193","Baden-Württemberg",49.3873167,8.5679785,"car_sharing","amenity",NA,NA
+"2335426955","Baden-Württemberg",49.3855602,8.5826234,"car_sharing","amenity",NA,NA
+"2335432034","Baden-Württemberg",49.4761651,8.6603484,"car_sharing","amenity",NA,NA
+"2338946556","Baden-Württemberg",49.5235401,8.6676254,"car_sharing","amenity",NA,NA
+"2339006946","Baden-Württemberg",49.5462425,8.6704899,"car_sharing","amenity",NA,NA
+"2339009600","Baden-Württemberg",49.5510055,8.6674027,"car_sharing","amenity",NA,NA
+"2339010263","Baden-Württemberg",49.5453253,8.6484717,"car_sharing","amenity",NA,NA
+"2339010472","Baden-Württemberg",49.5439087,8.6588894,"car_sharing","amenity",NA,NA
+"2339013816","Baden-Württemberg",49.2932335,8.7017055,"car_sharing","amenity",NA,NA
+"2339014939","Baden-Württemberg",49.2913897,8.6856257,"car_sharing","amenity",NA,NA
+"2339089169","Baden-Württemberg",49.4151221,8.7620371,"car_sharing","amenity","Stadtmobil Rhein-Neckar AG","1"
+"2339162300","Baden-Württemberg",49.4087408,8.6948581,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"2339182116","Baden-Württemberg",49.4057652,8.6829089,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"2339184004","Baden-Württemberg",49.377057,8.7037872,"car_sharing","amenity",NA,NA
+"2340204863","Baden-Württemberg",49.382802,8.6689721,"car_sharing","amenity",NA,NA
+"2340225604","Baden-Württemberg",49.4145642,8.6791001,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"2340227227","Baden-Württemberg",49.4135694,8.6925166,"car_sharing","amenity",NA,NA
+"2340228089","Baden-Württemberg",49.4159532,8.6836921,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"2340228958","Baden-Württemberg",49.415674,8.6813317,"car_sharing","amenity","stadtmobil Rhein-Neckar",NA
+"2340250034","Baden-Württemberg",49.4204972,8.6680274,"car_sharing","amenity",NA,NA
+"2340254916","Baden-Württemberg",49.3976942,8.6424612,"car_sharing","amenity",NA,NA
+"2340256714","Baden-Württemberg",49.4050115,8.6392987,"car_sharing","amenity",NA,NA
+"2340276764","Baden-Württemberg",49.3862379,8.6927467,"car_sharing","amenity","Stadtmobil Rhein-Neckar",NA
+"2340298571","Baden-Württemberg",49.4093291,8.659655,"car_sharing","amenity","stadtmobil","2"
+"2340300436","Baden-Württemberg",49.4253936,8.6440139,"car_sharing","amenity",NA,NA
+"2340300481","Baden-Württemberg",49.4213425,8.6473022,"car_sharing","amenity",NA,NA
+"2340301417","Baden-Württemberg",49.4270161,8.6422111,"car_sharing","amenity",NA,NA
+"2351889169","Baden-Württemberg",49.1473075,9.2172188,"car_sharing","amenity","stadtmobil","1"
+"2351889171","Baden-Württemberg",49.1414692,9.2234543,"car_sharing","amenity","stadtmobil","1"
+"2351889172","Baden-Württemberg",49.1432828,9.2216942,"car_sharing","amenity","stadtmobil","1"
+"2351889173","Baden-Württemberg",49.1457768,9.2196055,"car_sharing","amenity","stadtmobil","1"
+"2351889174","Baden-Württemberg",49.13387,9.2203388,"car_sharing","amenity","stadtmobil","1"
+"2352273711","Baden-Württemberg",49.0058228,8.4316847,"car_sharing","amenity","Stadtmobil",NA
+"2354959634","Baden-Württemberg",48.8093638,9.2742569,"car_sharing","amenity","Stadtmobil",NA
+"2354962177","Baden-Württemberg",48.8132823,9.2700053,"car_sharing","amenity","Stadtmobil",NA
+"2354963165","Baden-Württemberg",48.8051986,9.2793912,"car_sharing","amenity","Stadtmobil",NA
+"2360438570","Baden-Württemberg",49.1429803,9.1238946,"car_sharing","amenity","stadtmobil","1"
+"2375373930","Baden-Württemberg",49.1319781,9.2171459,"car_sharing","amenity","stadtmobil","1"
+"2389178350","Baden-Württemberg",49.1429628,9.2202114,"car_sharing","amenity","stadtmobil","1"
+"2407302723","Baden-Württemberg",49.4010895,8.6737918,"car_sharing","amenity","stadtmobil","2"
+"2435258082","Baden-Württemberg",48.7735507,9.1536265,"car_sharing","amenity","Stadtmobil Stuttgart","3"
+"2437878911","Baden-Württemberg",49.1202151,9.7339406,"car_sharing","amenity",NA,NA
+"2462018100","Baden-Württemberg",48.5235752,9.0607547,"car_sharing","amenity","Ökostadt Tübingen e.V.","2"
+"2479478255","Baden-Württemberg",48.5206711,9.048631,"car_sharing","amenity","Ökostadt Tübingen e.V.","2"
+"2505321012","Baden-Württemberg",48.3609047,9.9810983,"car_sharing","amenity","Conficars","1"
+"2509175461","Baden-Württemberg",48.9948841,8.3955533,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","3"
+"2611506962","Baden-Württemberg",48.5038919,9.1931058,"car_sharing","amenity","http://teilauto-reutlingen.de/",NA
+"2613795404","Baden-Württemberg",48.495958,9.2151227,"car_sharing","amenity","http://teilauto-reutlingen.de/","1"
+"2613796371","Baden-Württemberg",48.4920386,9.2227321,"car_sharing","amenity","http://teilauto-reutlingen.de/",NA
+"2631423591","Baden-Württemberg",49.0106937,8.3941671,"car_sharing","amenity","Stadtmobil",NA
+"2673286598","Baden-Württemberg",49.4171231,8.7603742,"car_sharing","amenity",NA,NA
+"2704426060","Baden-Württemberg",49.0009235,8.4150778,"car_sharing","amenity","Stadtmobil","2"
+"2704428360","Baden-Württemberg",49.0019098,8.4143598,"car_sharing","amenity","Stadtmobil","3"
+"2724400938","Baden-Württemberg",48.763333,9.1703315,"car_sharing","amenity","Stadtmobil Stuttgart","4"
+"2738568597","Baden-Württemberg",49.4017075,8.6672838,"car_sharing","amenity","stadtmobil","2"
+"2845526879","Baden-Württemberg",48.3905555,9.9641887,"car_sharing","amenity","Conficars","1"
+"2863171510","Baden-Württemberg",48.4011073,9.9902872,"car_sharing","amenity","Conficars","1"
+"2910063180","Baden-Württemberg",48.4781594,9.2056219,"car_sharing","amenity","teilAuto Reutlingen","1"
+"2920629542","Baden-Württemberg",48.6939066,9.1922232,"car_sharing","amenity","car2go","4"
+"2930724252","Baden-Württemberg",49.0114235,8.4115502,"car_sharing","amenity","Stadtmobil",NA
+"2947473684","Baden-Württemberg",49.485673,8.4660375,"car_sharing","amenity",NA,NA
+"2947475996","Baden-Württemberg",49.4900604,8.5236513,"car_sharing","amenity",NA,NA
+"2947477191","Baden-Württemberg",49.4904524,8.530448,"car_sharing","amenity",NA,NA
+"2947483822","Baden-Württemberg",49.4838225,8.5387146,"car_sharing","amenity",NA,NA
+"2984509951","Baden-Württemberg",48.384226,9.971283,"car_sharing","amenity","Conficars","1"
+"3122147447","Baden-Württemberg",49.137243,9.2280822,"car_sharing","amenity","stadtmobil","2"
+"3129582482","Baden-Württemberg",48.9999796,8.4152634,"car_sharing","amenity","Stadtmobil Karlsruhe","2"
+"3140964569","Baden-Württemberg",49.0470039,8.4606953,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","1"
+"3140964570","Baden-Württemberg",49.0575616,8.4668138,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","1"
+"3140964571","Baden-Württemberg",49.0596531,8.4742102,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","1"
+"3140964572","Baden-Württemberg",49.062769,8.4713322,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","2"
+"3148288040","Baden-Württemberg",48.9326937,8.2717459,"car_sharing","amenity","Stadtmobil","1"
+"3183773127","Baden-Württemberg",49.4083514,8.6761325,"car_sharing","amenity","stadtmobil Rhein-Neckar","1"
+"3183815679","Baden-Württemberg",49.3943535,8.7896967,"car_sharing","amenity","stadtmobil Rhein-Neckar","1"
+"3202793275","Baden-Württemberg",48.7381837,9.1281905,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"3212351971","Baden-Württemberg",49.4036252,8.681428,"car_sharing","amenity","stadtmobil","11"
+"3213726686","Baden-Württemberg",49.4855054,8.4643785,"car_sharing","amenity","stadtmobil Rhein-Main GmbH",NA
+"3349960295","Baden-Württemberg",48.7910981,9.1789725,"car_sharing","amenity","Car2go","2"
+"3350002193","Baden-Württemberg",48.7911267,9.1789906,"car_sharing","amenity","Stadtmobil","disabled"
+"3354434654","Baden-Württemberg",48.7708789,8.9361569,"car_sharing","amenity","Ökostadt Renningen e.V.","2"
+"3354435738","Baden-Württemberg",48.7688972,8.9385105,"car_sharing","amenity","Ökostadt Renningen e.V.","5"
+"3354446097","Baden-Württemberg",48.7674555,8.9339669,"car_sharing","amenity","Ökostadt Renningen e.V.","5"
+"3354446098","Baden-Württemberg",48.7760785,8.9410868,"car_sharing","amenity","Ökostadt Renningen e.V.","2"
+"3354449102","Baden-Württemberg",48.7750789,8.9039489,"car_sharing","amenity","Ökostadt Renningen","2"
+"3354449685","Baden-Württemberg",48.7743445,8.9080245,"car_sharing","amenity","Ökostadt Renningen e.V.","2"
+"3370551863","Baden-Württemberg",48.0029471,7.8261923,"car_sharing","amenity","Stadtmobil Südbaden","1"
+"3370551865","Baden-Württemberg",48.0242369,7.8114571,"car_sharing","amenity","Grüne Flotte","2"
+"3370551867","Baden-Württemberg",48.0140913,7.8142037,"car_sharing","amenity","Grüne Flotte","2"
+"3370551868","Baden-Württemberg",48.0143784,7.8076967,"car_sharing","amenity","Stadtmobil Südbaden","1"
+"3370551870","Baden-Württemberg",48.0117677,7.8367691,"car_sharing","amenity","Stadtmobil Südbaden","2"
+"3370551871","Baden-Württemberg",48.0068599,7.8297686,"car_sharing","amenity","Grüne Flotte","2"
+"3370551872","Baden-Württemberg",48.0060589,7.8182425,"car_sharing","amenity","Grüne Flotte","2"
+"3370551874","Baden-Württemberg",48.0148172,7.8220566,"car_sharing","amenity","Grüne Flotte","1"
+"3370551875","Baden-Württemberg",48.0127917,7.827316,"car_sharing","amenity","Stadtmobil Südbaden","1"
+"3370551878","Baden-Württemberg",48.0114591,7.8355485,"car_sharing","amenity","Stadtmobil Südbaden","1"
+"3370551879","Baden-Württemberg",48.0086538,7.8161637,"car_sharing","amenity","Stadtmobil Südbaden","1"
+"3370551880","Baden-Württemberg",48.0114646,7.8052451,"car_sharing","amenity","Grüne Flotte","2"
+"3370551881","Baden-Württemberg",48.0073984,7.8305435,"car_sharing","amenity","Stadtmobil Südbaden","2"
+"3386425466","Baden-Württemberg",49.1130207,8.5048885,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG","1"
+"3395887084","Baden-Württemberg",48.7689636,9.1588472,"car_sharing","amenity","Stadtmobil Stuttgart","1"
+"3395891063","Baden-Württemberg",48.7755068,9.1518574,"car_sharing","amenity","Stadtmobil Stuttgarrt","1"
+"3419575821","Baden-Württemberg",49.0045957,8.416391,"car_sharing","amenity","Stadtmobil CarSharing GmbH & Co. KG",NA
+"3428246901","Baden-Württemberg",48.9979952,8.4692353,"car_sharing","amenity","Stadtmobil",NA
+"3430083671","Baden-Württemberg",49.1449615,9.1211724,"car_sharing","amenity","stadtmobil","1"
+"3463131555","Baden-Württemberg",49.3951758,8.6836065,"car_sharing","amenity","Stadtmobil Rhein-Neckar","1"
+"3527777452","Baden-Württemberg",48.4009124,9.9945188,"car_sharing","amenity","Conficars","2"
+"3534481418","Baden-Württemberg",49.4714921,8.6608204,"car_sharing","amenity","stadtmobil","1"
+"3571672422","Baden-Württemberg",48.8267085,9.1209506,"car_sharing","amenity","Stadtmobil","2"
+"3571673413","Baden-Württemberg",48.8240347,9.0680582,"car_sharing","amenity","Stadtmobil","2"
+"3613533282","Baden-Württemberg",48.7691147,9.1560897,"car_sharing","amenity","Stadtmobil Stuttgart",NA
+"3618349523","Baden-Württemberg",48.8015557,9.2190869,"car_sharing","amenity","Stadtmobil",NA
+"3619358607","Baden-Württemberg",49.477154,8.4860099,"car_sharing","amenity","stadtmobil",NA
+"3621425429","Baden-Württemberg",48.9973056,8.462302,"car_sharing","amenity","Stadtmobil","3"
+"3656475114","Baden-Württemberg",49.0373783,8.6969951,"car_sharing","amenity","Stadtmobil Karlsruhe","1"
+"3656482696","Baden-Württemberg",49.0351726,8.705026,"car_sharing","amenity","Stadtmobil Karlsruhe","1"
+"3656484717","Baden-Württemberg",49.0364355,8.7046694,"car_sharing","amenity","Stadtmobil Karlsruhe","1"
+"3656485513","Baden-Württemberg",49.0109573,8.6110177,"car_sharing","amenity","Stadtmobil Karlsruhe","2"
+"3656493324","Baden-Württemberg",49.0288088,8.5743465,"car_sharing","amenity","Stadtmobil Karlsruhe","1"
+"3674779504","Baden-Württemberg",49.0085376,8.3458403,"car_sharing","amenity","Sportjugend Vereinshilfe e.V. Karlsruhe",NA
+"3680196218","Baden-Württemberg",48.6953419,8.1286713,"car_sharing","amenity","Stadtmobil Südbaden","1"
+"3701292433","Baden-Württemberg",48.8598846,8.2015151,"car_sharing","amenity","stadtmobil","2"
+"3711441639","Baden-Württemberg",48.9972829,8.3857816,"car_sharing","amenity","Stadtmobil",NA
+"3737291580","Baden-Württemberg",48.4904751,9.2206593,"car_sharing","amenity","teilAuto","3"
+"3741493452","Baden-Württemberg",49.0058853,8.3837014,"car_sharing","amenity","Stadtmobil","5"
+"3753319603","Baden-Württemberg",48.7745415,8.9321843,"car_sharing","amenity","Ökostadt Renningen e.V.","2"
+"3753331460","Baden-Württemberg",48.7719356,8.90319,"car_sharing","amenity","Ökostadt Renningen e.V.","2"
+"3753374841","Baden-Württemberg",48.7757313,8.9138844,"car_sharing","amenity","Ökostadt Renningen e.V.","2"
+"3780157564","Baden-Württemberg",48.8838285,8.6967292,"car_sharing","amenity","Stadtmobil","2"
+"3791746611","Baden-Württemberg",47.7202715,8.3183846,"car_sharing","amenity","Hochschwarzwald Tourismus GmbH","1"
+"3791746612","Baden-Württemberg",47.7931284,8.2467332,"car_sharing","amenity","Hochschwarzwald Tourismus GmbH","1"
+"3804621729","Baden-Württemberg",49.0284572,8.3754579,"car_sharing","amenity","Stadtmobil",NA
+"3824634705","Baden-Württemberg",48.1021149,9.7923866,"car_sharing","amenity","teilAuto Biberach/Riss e.V.","1"
+"3826085448","Baden-Württemberg",48.7062378,9.1455587,"car_sharing","amenity","car2go",NA
+"3826096156","Baden-Württemberg",48.706023,9.1452361,"car_sharing","amenity","car2go black",NA
+"3828176157","Baden-Württemberg",48.6895952,9.1914485,"car_sharing","amenity","car2go black",NA
+"3828197057","Baden-Württemberg",48.7797839,9.1728356,"car_sharing","amenity","car2go black",NA
+"3828204757","Baden-Württemberg",48.7744739,9.1699323,"car_sharing","amenity","car2go black",NA
+"3828207566","Baden-Württemberg",48.8133903,9.2118971,"car_sharing","amenity","car2go black",NA
+"3828215457","Baden-Württemberg",48.8102677,9.1803017,"car_sharing","amenity","car2go black",NA
+"3828223757","Baden-Württemberg",48.7824645,9.1799643,"car_sharing","amenity","car2go black",NA
+"3935946026","Baden-Württemberg",49.0353497,8.3356516,"car_sharing","amenity","Stadtmobil",NA
+"3935998497","Baden-Württemberg",47.9812995,7.8949503,"car_sharing","amenity","Grüne Flotte Freiburg",NA
+"3959158856","Baden-Württemberg",49.498237,9.7611,"car_sharing","amenity","Avia",NA
+"3962606278","Baden-Württemberg",49.4000461,8.6703539,"car_sharing","amenity","stadtmobil","2"
+"4004151425","Baden-Württemberg",49.1372702,10.0668135,"car_sharing","amenity","Ford",NA
+"4004151426","Baden-Württemberg",49.1390279,10.0641987,"car_sharing","amenity","Ford","1"
+"4021171943","Baden-Württemberg",48.7735928,9.1683463,"car_sharing","amenity","Stadtmobil Stuttgart","10"
+"310768681","Saarland",49.2310488,6.9899303,"car_sharing","amenity","cambio CarSharing",NA
+"378359806","Saarland",49.2335932,7.0012997,"car_sharing","amenity","cambio Mobilitätsservice GmbH & Co KG, Bremen",NA
+"1268698755","Saarland",49.2387303,6.997159,"car_sharing","amenity","Cambio",NA
+"1383386645","Saarland",49.2296986,7.0120875,"car_sharing","amenity","cambio Mobilitätsservice GmbH & Co KG","4"
+"2228760619","Saarland",49.2355259,6.9868353,"car_sharing","amenity","cambio CarSharing",NA
+"30898327","Thüringen",50.9627044,11.0179174,"car_sharing","amenity",NA,NA
+"290164563","Thüringen",50.9823284,11.3262805,"car_sharing","amenity","teilAuto",NA
+"291933102","Thüringen",50.970936,11.0206388,"car_sharing","amenity",NA,NA
+"297961332","Thüringen",50.9753282,11.3245109,"car_sharing","amenity","teilAuto",NA
+"299939327","Thüringen",51.3554908,11.0915127,"car_sharing","amenity","privat",NA
+"308161618","Thüringen",50.9741945,11.0408885,"car_sharing","amenity","teilAuto","6"
+"412052277","Thüringen",50.9900776,11.0266489,"car_sharing","amenity",NA,NA
+"473196403","Thüringen",50.9678312,11.0256878,"car_sharing","amenity",NA,NA
+"473196404","Thüringen",50.9651087,11.036922,"car_sharing","amenity",NA,NA
+"475336381","Thüringen",50.9630924,11.0363257,"car_sharing","amenity",NA,NA
+"571153806","Thüringen",50.9259689,11.5858229,"car_sharing","amenity","teilAuto","1"
+"571154955","Thüringen",50.9286976,11.5776261,"car_sharing","amenity","teilAuto","1"
+"571155745","Thüringen",50.9308234,11.5767584,"car_sharing","amenity","teilAuto","2"
+"571159297","Thüringen",50.9354999,11.5894814,"car_sharing","amenity","teilAuto","1"
+"571163695","Thüringen",50.9307298,11.6040311,"car_sharing","amenity","teilAuto","1"
+"571166606","Thüringen",50.9012077,11.5774866,"car_sharing","amenity","teilAuto","1"
+"915732723","Thüringen",50.9294708,11.5924364,"car_sharing","amenity","teilAuto",NA
+"1423319255","Thüringen",50.981754,11.027835,"car_sharing","amenity","teilAuto",NA
+"1615589198","Thüringen",50.9911742,11.3253311,"car_sharing","amenity","teilAuto",NA
+"1672146928","Thüringen",50.9901811,11.3341378,"car_sharing","amenity","teilAuto",NA
+"2505247606","Thüringen",50.9754045,11.0390383,"car_sharing","amenity","teilAuto",NA
+"2518709384","Thüringen",50.9824771,11.0134359,"car_sharing","amenity","teilAuto",NA
+"2578083843","Thüringen",50.9256658,11.5861703,"car_sharing","amenity","Flinkster","2"
+"2585168831","Thüringen",50.9863724,11.3297518,"car_sharing","amenity",NA,NA
+"3092604329","Thüringen",50.9802681,11.0229833,"car_sharing","amenity","teilAuto",NA
+"3093993029","Thüringen",50.9815335,11.0462224,"car_sharing","amenity","teilAuto",NA
+"3094038829","Thüringen",50.9843984,11.0438218,"car_sharing","amenity","teilAuto",NA
+"3513612936","Thüringen",50.6960603,10.562622,"car_sharing","amenity",NA,NA
+"3619816893","Thüringen",50.9676966,11.0203946,"car_sharing","amenity","teilAuto",NA
+"3747758827","Thüringen",50.975868,11.0245043,"car_sharing","amenity","teilAuto","2"
+"3999309358","Thüringen",51.0059594,11.0140047,"car_sharing","amenity",NA,NA
+"254014474","Sachsen",51.3289107,12.3283366,"car_sharing","amenity","teilAuto",NA
+"255190543","Sachsen",51.346232,12.3790711,"car_sharing","amenity","teilAuto",NA
+"266201356","Sachsen",51.3457353,12.3937945,"car_sharing","amenity",NA,NA
+"314954587","Sachsen",51.3513957,12.4323008,"car_sharing","amenity",NA,NA
+"332297669","Sachsen",51.3526681,12.4603143,"car_sharing","amenity","teilAuto",NA
+"332374761","Sachsen",51.3629046,12.365824,"car_sharing","amenity","Teilauto",NA
+"334617135","Sachsen",51.338865,12.3878615,"car_sharing","amenity","teilAuto",NA
+"415591071","Sachsen",51.3311046,12.4117005,"car_sharing","amenity","teilAuto",NA
+"415592462","Sachsen",51.3325865,12.3948941,"car_sharing","amenity","teilAuto",NA
+"415592530","Sachsen",51.3271847,12.38871,"car_sharing","amenity","teilAuto",NA
+"415642854","Sachsen",51.3244711,12.4127466,"car_sharing","amenity","teilAuto",NA
+"415651762","Sachsen",51.3345548,12.3830422,"car_sharing","amenity","teilAuto",NA
+"415651763","Sachsen",51.3319197,12.3735294,"car_sharing","amenity","Mobility Center GmbH","600"
+"417265173","Sachsen",51.3127012,12.372214,"car_sharing","amenity",NA,NA
+"440902602","Sachsen",51.0768573,13.7209625,"car_sharing","amenity","teilAuto","3"
+"451705383","Sachsen",51.0267169,13.7155064,"car_sharing","amenity","teilAuto",NA
+"595700952","Sachsen",51.0295502,13.7024235,"car_sharing","amenity","teilAuto","3"
+"599207067","Sachsen",51.3325352,12.3715403,"car_sharing","amenity","teilAuto",NA
+"599728971","Sachsen",51.0946325,13.7197874,"car_sharing","amenity","teilAuto",NA
+"725380567","Sachsen",51.3113426,12.3763225,"car_sharing","amenity","teilAuto",NA
+"729645192","Sachsen",51.0544151,13.7255828,"car_sharing","amenity","teilAuto",NA
+"730000335","Sachsen",51.0674794,13.7547573,"car_sharing","amenity","teilAuto","3"
+"735183065","Sachsen",51.0645209,13.7394001,"car_sharing","amenity","teilAuto","12"
+"739349279","Sachsen",51.0121414,13.8251996,"car_sharing","amenity","teilAuto",NA
+"741559667","Sachsen",51.0838274,13.7098992,"car_sharing","amenity","teilAuto",NA
+"741563018","Sachsen",51.042464,13.7883303,"car_sharing","amenity","teilAuto",NA
+"741569301","Sachsen",51.0497697,13.7557595,"car_sharing","amenity","teilAuto",NA
+"741580038","Sachsen",51.0529856,13.7845669,"car_sharing","amenity","teilAuto",NA
+"741583649","Sachsen",51.0556238,13.7229356,"car_sharing","amenity","teilAuto",NA
+"741597513","Sachsen",51.0452929,13.7774134,"car_sharing","amenity","teilAuto",NA
+"741604381","Sachsen",51.0559458,13.7650095,"car_sharing","amenity","teilAuto",NA
+"741608863","Sachsen",51.0386921,13.7306571,"car_sharing","amenity","teilAuto",NA
+"741617756","Sachsen",51.0378876,13.6938492,"car_sharing","amenity","teilAuto",NA
+"741627676","Sachsen",51.044227,13.8003597,"car_sharing","amenity","teilAuto",NA
+"876423679","Sachsen",51.068302,13.7552785,"car_sharing","amenity","teilAuto","4"
+"982610335","Sachsen",51.0381785,13.7046104,"car_sharing","amenity","teilAuto",NA
+"982610340","Sachsen",51.0436101,13.6930712,"car_sharing","amenity","teilAuto","1"
+"1014537805","Sachsen",51.0467766,13.7693674,"car_sharing","amenity",NA,NA
+"1108250133","Sachsen",51.3077183,12.3781282,"car_sharing","amenity","teilAuto",NA
+"1119052494","Sachsen",51.3081701,12.3718148,"car_sharing","amenity","teilAuto",NA
+"1139271706","Sachsen",51.3341471,12.3258813,"car_sharing","amenity","teilAuto",NA
+"1272001546","Sachsen",50.921653,13.3441062,"car_sharing","amenity","teilAuto","2"
+"1515072940","Sachsen",51.2962196,12.3876801,"car_sharing","amenity",NA,NA
+"1526123110","Sachsen",51.310503,12.3966877,"car_sharing","amenity","teilAuto",NA
+"1658105128","Sachsen",51.0265304,13.7612138,"car_sharing","amenity","teilAuto","3"
+"1695291643","Sachsen",51.0340905,13.7235579,"car_sharing","amenity","teilAuto","2"
+"1722955565","Sachsen",51.046356,13.796164,"car_sharing","amenity","teilAuto","1"
+"1756753302","Sachsen",51.3312023,12.3460252,"car_sharing","amenity","teilAuto","2"
+"1756761333","Sachsen",51.3376974,12.3399409,"car_sharing","amenity","teilAuto","1"
+"1780116577","Sachsen",51.0504527,13.7791891,"car_sharing","amenity","teilAuto",NA
+"1851647113","Sachsen",51.0332772,13.709285,"car_sharing","amenity","teilAuto",NA
+"1878710623","Sachsen",51.0691963,13.7541902,"car_sharing","amenity","teilAuto","1"
+"1905433824","Sachsen",51.3202252,12.337907,"car_sharing","amenity","teilAuto","2"
+"1911941366","Sachsen",51.3285682,12.3479986,"car_sharing","amenity","teilAuto","3"
+"2058586754","Sachsen",51.0390564,13.732662,"car_sharing","amenity","teilAuto","1"
+"2110430109","Sachsen",51.0186165,13.704819,"car_sharing","amenity","teilAuto",NA
+"2295756992","Sachsen",51.0401243,13.8057104,"car_sharing","amenity","teilAuto","1"
+"2356354147","Sachsen",51.279472,12.3774926,"car_sharing","amenity","teilAuto","1"
+"2400335783","Sachsen",51.3325577,12.4020867,"car_sharing","amenity","teilAuto",NA
+"2400335784","Sachsen",51.3385911,12.3993551,"car_sharing","amenity","teilAuto",NA
+"2400494492","Sachsen",51.3386981,12.3931616,"car_sharing","amenity","teilAuto",NA
+"2408764566","Sachsen",51.3379573,12.406762,"car_sharing","amenity","teilAuto",NA
+"2417607764","Sachsen",51.3426831,12.3975123,"car_sharing","amenity","teilAuto",NA
+"2419666212","Sachsen",51.0444414,13.7854115,"car_sharing","amenity","teilAuto",NA
+"2423886502","Sachsen",51.3016495,12.4316209,"car_sharing","amenity","teilAuto",NA
+"2433988425","Sachsen",51.0760635,13.7476279,"car_sharing","amenity","teilAuto","2"
+"2455349027","Sachsen",51.3233992,12.4013848,"car_sharing","amenity","teilAuto",NA
+"2463620521","Sachsen",51.345414,12.3575512,"car_sharing","amenity","teilAuto",NA
+"2488142831","Sachsen",51.0593986,13.7840463,"car_sharing","amenity","teilAuto",NA
+"2504623675","Sachsen",50.9616525,13.9305748,"car_sharing","amenity","teilAuto","1"
+"2504623676","Sachsen",50.9630112,13.9379414,"car_sharing","amenity","teilAuto","1"
+"2505021522","Sachsen",51.0446223,13.807613,"car_sharing","amenity","teilAuto","1"
+"2505021523","Sachsen",51.0480699,13.7912518,"car_sharing","amenity","teilAuto","1"
+"2505021524","Sachsen",51.0412458,13.800311,"car_sharing","amenity","teilAuto","2"
+"2505021525","Sachsen",51.0464356,13.8119342,"car_sharing","amenity","teilAuto","2"
+"2505021526","Sachsen",51.0425421,13.7982093,"car_sharing","amenity","teilAuto","2"
+"2505021527","Sachsen",51.0461302,13.795205,"car_sharing","amenity","teilAuto","1"
+"2559970218","Sachsen",51.0362811,13.730303,"car_sharing","amenity","teilAuto","4"
+"2612313608","Sachsen",51.3637096,12.3827593,"car_sharing","amenity","teilAuto","2"
+"2711460011","Sachsen",51.3167255,12.4217164,"car_sharing","amenity","teilAuto",NA
+"2713212195","Sachsen",51.3262264,12.3793981,"car_sharing","amenity","teilAuto","2"
+"2812875239","Sachsen",51.332903,12.3750974,"car_sharing","amenity","teilAuto","1"
+"2819358349","Sachsen",51.0282951,13.7481798,"car_sharing","amenity","teilAuto","1"
+"2847650062","Sachsen",51.3634362,12.3596392,"car_sharing","amenity","teilAuto",NA
+"2998943133","Sachsen",51.0713755,13.7588436,"car_sharing","amenity","teilAuto",NA
+"3065810796","Sachsen",51.3177418,12.3258014,"car_sharing","amenity",NA,NA
+"3065810798","Sachsen",51.327216,12.3302056,"car_sharing","amenity",NA,NA
+"3076381307","Sachsen",51.0661453,13.7551655,"car_sharing","amenity","teilAuto","2"
+"3076518729","Sachsen",51.0632548,13.7531842,"car_sharing","amenity","teilAuto","3"
+"3076531531","Sachsen",51.0625556,13.7580808,"car_sharing","amenity","teilAuto","1"
+"3076535302","Sachsen",51.0642059,13.7594943,"car_sharing","amenity","teilAuto","3"
+"3132702590","Sachsen",51.04314,13.7738856,"car_sharing","amenity",NA,NA
+"3168638607","Sachsen",51.0287632,13.8010653,"car_sharing","amenity",NA,NA
+"3168639511","Sachsen",51.0339071,13.7466831,"car_sharing","amenity",NA,NA
+"3186255664","Sachsen",51.0519568,13.803495,"car_sharing","amenity",NA,NA
+"3219611293","Sachsen",51.3189691,12.3413615,"car_sharing","amenity","teilAuto","3"
+"3268626226","Sachsen",51.0610187,13.7190004,"car_sharing","amenity","teilAuto","2"
+"3328400832","Sachsen",51.0618597,13.8516353,"car_sharing","amenity",NA,NA
+"3362043932","Sachsen",51.3039544,12.4254729,"car_sharing","amenity","teilAuto",NA
+"3372224902","Sachsen",51.3462524,12.447158,"car_sharing","amenity","teilAuto",NA
+"3380828485","Sachsen",51.320887,12.3969105,"car_sharing","amenity","teilAuto",NA
+"3389536740","Sachsen",50.8339418,12.8992466,"car_sharing","amenity",NA,"2"
+"3430935117","Sachsen",51.3349532,12.3362903,"car_sharing","amenity","teilAuto","2"
+"3430935118","Sachsen",51.3306668,12.3396974,"car_sharing","amenity","teilAuto","1"
+"3430935119","Sachsen",51.3321179,12.335748,"car_sharing","amenity","teilAuto","2"
+"3430935120","Sachsen",51.3373799,12.3336496,"car_sharing","amenity","teilAuto","3"
+"3430935121","Sachsen",51.3356508,12.3283533,"car_sharing","amenity","teilAuto","1"
+"3430936995","Sachsen",51.3378342,12.3305088,"car_sharing","amenity","teilAuto","1"
+"3430936996","Sachsen",51.330384,12.3307064,"car_sharing","amenity","teilAuto","3"
+"3430936997","Sachsen",51.3304471,12.3321208,"car_sharing","amenity","teilAuto","2"
+"3452457503","Sachsen",51.0715227,13.7714462,"car_sharing","amenity","teilAuto","2"
+"3452460247","Sachsen",51.0692045,13.7798238,"car_sharing","amenity","teilAuto","1"
+"3470973389","Sachsen",51.3337314,12.4070538,"car_sharing","amenity","teilAuto",NA
+"3470975093","Sachsen",51.3244114,12.3899574,"car_sharing","amenity","teilAuto",NA
+"3494551254","Sachsen",51.0675729,13.7459729,"car_sharing","amenity","teilAuto","3"
+"3503679030","Sachsen",50.9095061,13.3434281,"car_sharing","amenity","teilAuto","1"
+"3641952086","Sachsen",51.3384761,12.3913597,"car_sharing","amenity","teilAuto",NA
+"3673676973","Sachsen",50.9181582,13.3379741,"car_sharing","amenity","teilAuto","1"
+"3673691118","Sachsen",50.8371062,12.9292667,"car_sharing","amenity","teilAuto","2"
+"3686315049","Sachsen",51.0520409,13.7312203,"car_sharing","amenity","TeilAuto",NA
+"3688503818","Sachsen",51.3429861,12.3777209,"car_sharing","amenity",NA,NA
+"3733234260","Sachsen",50.8196619,12.9352737,"car_sharing","amenity","teilAuto","1"
+"3733236042","Sachsen",50.8277165,12.9036037,"car_sharing","amenity","teilAuto","1"
+"3733240071","Sachsen",50.8325364,12.9168875,"car_sharing","amenity","teilAuto","2"
+"3733243888","Sachsen",50.8350567,12.8934338,"car_sharing","amenity","teilAuto","1"
+"3761762628","Sachsen",51.3353701,12.4125539,"car_sharing","amenity","teilAuto",NA
+"3769888503","Sachsen",51.3300465,12.3846278,"car_sharing","amenity","teilAuto",NA
+"3780431430","Sachsen",50.9176928,13.3380649,"car_sharing","amenity","teilAuto",NA
+"3804945257","Sachsen",50.8408285,12.9258821,"car_sharing","amenity","teilAuto","2"
+"3844997163","Sachsen",51.0762956,13.7335486,"car_sharing","amenity","teilAuto","2"
+"3961868849","Sachsen",51.315088,12.3680723,"car_sharing","amenity","teilAuto","2"
+"343864074","Hamburg",53.4564667,9.9905289,"car_sharing","amenity","greenwheels",NA
+"405793232","Hamburg",53.582168,10.0625086,"car_sharing","amenity","greenwheels.com",NA
+"405794876","Hamburg",53.5776387,10.0599474,"car_sharing","amenity","greenwheels.com",NA
+"405798534","Hamburg",53.5784628,10.0448017,"car_sharing","amenity","greenwheels.com",NA
+"405801258","Hamburg",53.5856497,10.0459553,"car_sharing","amenity","greenwheels.com",NA
+"405806609","Hamburg",53.5910869,10.0560348,"car_sharing","amenity","greenwheels.com",NA
+"405817034","Hamburg",53.5666136,9.9862854,"car_sharing","amenity","greenwheels.com",NA
+"495434638","Hamburg",53.582655,10.0489042,"car_sharing","amenity","Cambio","2"
+"612621168","Hamburg",53.5543339,9.923073,"car_sharing","amenity","cambio",NA
+"612621176","Hamburg",53.5634917,9.9599651,"car_sharing","amenity","cambio",NA
+"663118913","Hamburg",53.6066266,9.9073905,"car_sharing","amenity",NA,NA
+"670253660","Hamburg",53.5628297,9.9498778,"car_sharing","amenity",NA,NA
+"682865869","Hamburg",53.5531292,9.9332294,"car_sharing","amenity","Cambio",NA
+"683730301","Hamburg",53.5608733,9.9070818,"car_sharing","amenity",NA,NA
+"683738377","Hamburg",53.5649868,9.9561275,"car_sharing","amenity",NA,NA
+"687859637","Hamburg",53.5671377,10.0398469,"car_sharing","amenity","Cambio",NA
+"687859661","Hamburg",53.5806378,10.0204867,"car_sharing","amenity","Cambio",NA
+"687894593","Hamburg",53.5553759,9.9432777,"car_sharing","amenity","Cambio","3"
+"860274023","Hamburg",53.585414,9.971827,"car_sharing","amenity",NA,NA
+"1148740091","Hamburg",53.5633226,10.0369152,"car_sharing","amenity","Cambio","4"
+"1148745542","Hamburg",53.5709028,10.0315851,"car_sharing","amenity","Cambio",NA
+"1433782911","Hamburg",53.5777206,9.9435864,"car_sharing","amenity","Cambio",NA
+"1622614736","Hamburg",53.5779392,10.0171272,"car_sharing","amenity","Cambio",NA
+"2127161556","Hamburg",53.5499281,9.9313955,"car_sharing","amenity","Cambio",NA
+"2168540585","Hamburg",53.5847525,10.0472838,"car_sharing","amenity","cambio",NA
+"2168543575","Hamburg",53.6043452,10.0399134,"car_sharing","amenity","cambio",NA
+"2168544723","Hamburg",53.4886607,10.2058726,"car_sharing","amenity","cambio",NA
+"2487903939","Hamburg",53.5615322,9.9277272,"car_sharing","amenity","Cambio",NA
+"2631619707","Hamburg",53.5665236,9.8333526,"car_sharing","amenity","Cambio",NA
+"3527721052","Hamburg",53.5665954,9.8659803,"car_sharing","amenity","CiteeCar","1"
+"3682310499","Hamburg",53.5871641,10.0342962,"car_sharing","amenity","Cambio",NA
+"3826704110","Hamburg",53.5722355,10.0282289,"car_sharing","amenity","car2go black",NA
+"3826724095","Hamburg",53.5529421,10.0007404,"car_sharing","amenity","car2go black",NA
+"3826746496","Hamburg",53.552416,9.9361174,"car_sharing","amenity","car2go black",NA
+"3826781225","Hamburg",53.4567129,9.992569,"car_sharing","amenity","car2go black",NA
+"3826806288","Hamburg",53.5885955,10.0330073,"car_sharing","amenity","car2go black",NA
+"3826851292","Hamburg",53.5897991,9.9892311,"car_sharing","amenity","car2go black",NA
+"3826882357","Hamburg",53.4903174,10.2057455,"car_sharing","amenity","car2go black",NA
+"3826911454","Hamburg",53.5719563,10.0689575,"car_sharing","amenity","car2go black",NA
+"3828143665","Hamburg",53.553721,10.0232695,"car_sharing","amenity","car2go black",NA
+"3828150757","Hamburg",53.6331833,10.0054691,"car_sharing","amenity","car2go black",NA
+"3828160642","Hamburg",53.6004834,9.9951799,"car_sharing","amenity","car2go black",NA
+"3968068266","Hamburg",53.5900769,9.9637725,"car_sharing","amenity","Cambio","2"
+"30352328","Berlin",52.5133372,13.2842603,"car_sharing","amenity",NA,NA
+"410135893","Berlin",52.4915174,13.4368516,"car_sharing","amenity","Greenwheels",NA
+"616672198","Berlin",52.536068,13.1917177,"car_sharing","amenity","Sixt",NA
+"1334289987","Berlin",52.469438,13.3410535,"car_sharing","amenity","Greenwheels",NA
+"1471803058","Berlin",52.5309405,13.4111657,"car_sharing","amenity",NA,NA
+"1624501787","Berlin",52.4999645,13.4209218,"car_sharing","amenity",NA,NA
+"1633714633","Berlin",52.4866691,13.4229735,"car_sharing","amenity","Flinkster","1"
+"1826897235","Berlin",52.4997903,13.4201248,"car_sharing","amenity",NA,NA
+"1826931830","Berlin",52.5051208,13.4316834,"car_sharing","amenity",NA,NA
+"3363900043","Berlin",52.5421072,13.4203672,"car_sharing","amenity",NA,NA
+"3363902823","Berlin",52.542694,13.4188196,"car_sharing","amenity",NA,NA
+"3711088991","Berlin",52.5100418,13.4193784,"car_sharing","amenity","Stadtmobil","1"
+"3826313983","Berlin",52.523198,13.412321,"car_sharing","amenity","car2go black",NA
+"3826355077","Berlin",52.5502147,13.2972464,"car_sharing","amenity","car2go black",NA
+"3826549572","Berlin",52.4749764,13.3635523,"car_sharing","amenity","car2go black",NA
+"3826569557","Berlin",52.5240664,13.3657112,"car_sharing","amenity","car2go black",NA
+"3826596558","Berlin",52.5009664,13.3248958,"car_sharing","amenity","car2go black",NA
+"3826648357","Berlin",52.5070214,13.3745802,"car_sharing","amenity","car2go black",NA
+"3875852629","Berlin",52.5449905,13.4269668,"car_sharing","amenity",NA,NA
+"446296160","Brandenburg",52.3920687,13.0887132,"car_sharing","amenity","Greenwheels","2"
+"1309501092","Brandenburg",52.4036626,13.0554681,"car_sharing","amenity","Greenwheels GmbH",NA
+"3826533967","Brandenburg",52.3899525,13.5182192,"car_sharing","amenity","car2go black",NA
+"359831","Nordrhein-Westfalen",50.9056542,6.9635812,"car_sharing","amenity",NA,NA
+"208528330","Nordrhein-Westfalen",50.7787928,6.0956284,"car_sharing","amenity","cambio",NA
+"256222117","Nordrhein-Westfalen",50.9588072,6.9552877,"car_sharing","amenity","cambio CarSharing","3"
+"259435411","Nordrhein-Westfalen",52.038333,8.4947315,"car_sharing","amenity","Cambio",NA
+"268371221","Nordrhein-Westfalen",50.7823666,6.0778848,"car_sharing","amenity","cambio",NA
+"268371222","Nordrhein-Westfalen",50.7700744,6.0722006,"car_sharing","amenity","cambio","6"
+"270906467","Nordrhein-Westfalen",50.7611442,6.0940217,"car_sharing","amenity","cambio",NA
+"272054176","Nordrhein-Westfalen",50.8285767,6.8992614,"car_sharing","amenity",NA,NA
+"280510326","Nordrhein-Westfalen",52.0268612,8.5245398,"car_sharing","amenity","Cambio","4"
+"280510379","Nordrhein-Westfalen",52.028476,8.5233441,"car_sharing","amenity","Cambio","2"
+"280510497","Nordrhein-Westfalen",52.0303916,8.5239977,"car_sharing","amenity","Cambio",NA
+"280510751","Nordrhein-Westfalen",52.0291777,8.5353622,"car_sharing","amenity","Cambio",NA
+"303147500","Nordrhein-Westfalen",51.9362742,7.6037943,"car_sharing","amenity","Stadtteilauto",NA
+"304576743","Nordrhein-Westfalen",50.953401,6.9195304,"car_sharing","amenity","cambio CarSharing","3"
+"345767657","Nordrhein-Westfalen",52.0299806,8.5213533,"car_sharing","amenity",NA,NA
+"348133033","Nordrhein-Westfalen",52.0091839,8.5215745,"car_sharing","amenity",NA,NA
+"350157416","Nordrhein-Westfalen",50.9456007,6.9563935,"car_sharing","amenity","Cambio",NA
+"352919121","Nordrhein-Westfalen",51.1816733,6.8095261,"car_sharing","amenity",NA,NA
+"353298507","Nordrhein-Westfalen",50.7734769,6.1026156,"car_sharing","amenity","cambio",NA
+"363993755","Nordrhein-Westfalen",50.7675861,6.0881078,"car_sharing","amenity","cambio",NA
+"366274063","Nordrhein-Westfalen",50.7702806,6.1157946,"car_sharing","amenity","Cambio",NA
+"369993373","Nordrhein-Westfalen",50.772688,6.094443,"car_sharing","amenity","cambio",NA
+"388111136","Nordrhein-Westfalen",50.7686937,6.0782327,"car_sharing","amenity","cambio",NA
+"391545475","Nordrhein-Westfalen",50.9520626,6.9192942,"car_sharing","amenity","Deutsche Bahn AG","1"
+"418167907","Nordrhein-Westfalen",51.5116093,7.4747625,"car_sharing","amenity",NA,NA
+"418232588","Nordrhein-Westfalen",51.5163043,7.4691361,"car_sharing","amenity",NA,NA
+"418232594","Nordrhein-Westfalen",51.5167309,7.4578087,"car_sharing","amenity",NA,NA
+"418232611","Nordrhein-Westfalen",51.5079125,7.4462794,"car_sharing","amenity",NA,NA
+"418232629","Nordrhein-Westfalen",51.5044293,7.4428891,"car_sharing","amenity",NA,NA
+"418232634","Nordrhein-Westfalen",51.5013038,7.4500903,"car_sharing","amenity",NA,NA
+"418232644","Nordrhein-Westfalen",51.50107,7.465194,"car_sharing","amenity",NA,NA
+"418232650","Nordrhein-Westfalen",51.5040286,7.475891,"car_sharing","amenity",NA,NA
+"418232655","Nordrhein-Westfalen",51.5053429,7.4880961,"car_sharing","amenity",NA,NA
+"418232659","Nordrhein-Westfalen",51.5000161,7.480749,"car_sharing","amenity",NA,NA
+"418232669","Nordrhein-Westfalen",51.5130303,7.4901165,"car_sharing","amenity",NA,NA
+"418232679","Nordrhein-Westfalen",51.5144744,7.507025,"car_sharing","amenity",NA,NA
+"430122279","Nordrhein-Westfalen",50.7814939,6.087879,"car_sharing","amenity","cambio",NA
+"430124561","Nordrhein-Westfalen",50.794622,6.0570816,"car_sharing","amenity","cambio",NA
+"442129667","Nordrhein-Westfalen",50.9375858,6.9551793,"car_sharing","amenity","Flinkster",NA
+"458705701","Nordrhein-Westfalen",50.9525652,6.9240597,"car_sharing","amenity","Deutsche Bahn AG","1"
+"462185706","Nordrhein-Westfalen",51.2598845,7.1519107,"car_sharing","amenity","Stadtwerke Wuppertal",NA
+"463302598","Nordrhein-Westfalen",51.2548099,7.1492253,"car_sharing","amenity","Deutsche Bahn AG",NA
+"470939089","Nordrhein-Westfalen",51.2603402,7.1383526,"car_sharing","amenity","Stadtwerke Wuppertal",NA
+"475284521","Nordrhein-Westfalen",50.7683256,6.0982687,"car_sharing","amenity","cambio",NA
+"482745875","Nordrhein-Westfalen",50.7670859,6.0831658,"car_sharing","amenity","cambio",NA
+"539772273","Nordrhein-Westfalen",50.9235086,6.931856,"car_sharing","amenity","Flinkster",NA
+"539772274","Nordrhein-Westfalen",50.9483346,6.9151252,"car_sharing","amenity","Flinkster",NA
+"547437285","Nordrhein-Westfalen",50.9633142,6.958373,"car_sharing","amenity",NA,NA
+"556441154","Nordrhein-Westfalen",50.8928276,6.9093402,"car_sharing","amenity","Flinkster",NA
+"560892417","Nordrhein-Westfalen",51.2298458,7.065591,"car_sharing","amenity","cambio Wuppertal","3"
+"576990100","Nordrhein-Westfalen",50.9579952,7.012224,"car_sharing","amenity","Flinkster",NA
+"634987521","Nordrhein-Westfalen",50.9087285,6.9194062,"car_sharing","amenity","cambio CarSharing","3"
+"634987522","Nordrhein-Westfalen",50.91863,6.91831,"car_sharing","amenity","cambio CarSharing","3"
+"635736883","Nordrhein-Westfalen",50.93262,6.942662,"car_sharing","amenity","cambio CarSharing",NA
+"635736884","Nordrhein-Westfalen",50.9382568,6.9362258,"car_sharing","amenity","cambio CarSharing",NA
+"645105730","Nordrhein-Westfalen",51.2741253,7.2205258,"car_sharing","amenity","Cambio GmbH",NA
+"646954179","Nordrhein-Westfalen",50.9429185,6.9506093,"car_sharing","amenity","Cambio Car",NA
+"652407674","Nordrhein-Westfalen",50.9159129,6.9255037,"car_sharing","amenity","cambio",NA
+"667786670","Nordrhein-Westfalen",51.4932707,7.4086611,"car_sharing","amenity","Greenwheels",NA
+"667786672","Nordrhein-Westfalen",51.4811271,7.4391934,"car_sharing","amenity","Greenwheels",NA
+"676073097","Nordrhein-Westfalen",51.2188911,6.795164,"car_sharing","amenity",NA,NA
+"706090549","Nordrhein-Westfalen",50.950025,6.9156581,"car_sharing","amenity","Deutsche Bahn AG","1"
+"749779000","Nordrhein-Westfalen",50.94638,6.924133,"car_sharing","amenity","cambio CarSharing",NA
+"768447037","Nordrhein-Westfalen",50.7688877,6.1067442,"car_sharing","amenity","cambio",NA
+"817784160","Nordrhein-Westfalen",50.7785357,6.0858553,"car_sharing","amenity","cambio",NA
+"889956643","Nordrhein-Westfalen",50.7756243,6.0785371,"car_sharing","amenity","cambio",NA
+"920055437","Nordrhein-Westfalen",51.954896,7.6276986,"car_sharing","amenity","Stadtteilauto",NA
+"937066006","Nordrhein-Westfalen",50.7839331,6.0978014,"car_sharing","amenity","cambio",NA
+"967028709","Nordrhein-Westfalen",51.4476799,7.3301671,"car_sharing","amenity",NA,NA
+"1003612242","Nordrhein-Westfalen",51.9546794,7.6448195,"car_sharing","amenity","Stadtteilauto - CarSharing Münster GmbH","3"
+"1052477675","Nordrhein-Westfalen",50.92834,6.936429,"car_sharing","amenity","cambio CarSharing",NA
+"1052477679","Nordrhein-Westfalen",50.9287324,6.944015,"car_sharing","amenity","cambio CarSharing",NA
+"1069442812","Nordrhein-Westfalen",51.9714229,7.6123417,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"1108033858","Nordrhein-Westfalen",50.9589946,6.913995,"car_sharing","amenity","Cambio",NA
+"1119837517","Nordrhein-Westfalen",51.2560126,7.1537554,"car_sharing","amenity","Cambio, Aachen","2"
+"1198976462","Nordrhein-Westfalen",50.9632015,7.0058882,"car_sharing","amenity","Cambiocar",NA
+"1224052434","Nordrhein-Westfalen",50.7703969,6.0884133,"car_sharing","amenity","cambio","2"
+"1244069335","Nordrhein-Westfalen",50.7726036,6.0838341,"car_sharing","amenity","cambio",NA
+"1288942632","Nordrhein-Westfalen",50.7975897,6.0632878,"car_sharing","amenity","cambio",NA
+"1338523469","Nordrhein-Westfalen",50.9518156,6.9551016,"car_sharing","amenity",NA,NA
+"1359848220","Nordrhein-Westfalen",50.7521664,6.1587224,"car_sharing","amenity","cambio","3"
+"1390494374","Nordrhein-Westfalen",51.9726957,7.6208336,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"1401714414","Nordrhein-Westfalen",51.984092,7.6088935,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"1486253331","Nordrhein-Westfalen",50.7591954,6.1096838,"car_sharing","amenity","cambio","2"
+"1491468191","Nordrhein-Westfalen",50.9180985,6.9495425,"car_sharing","amenity","Flinkster","1"
+"1587586511","Nordrhein-Westfalen",51.2407958,6.8024334,"car_sharing","amenity","Greenwheels","4"
+"1607230322","Nordrhein-Westfalen",51.9702429,7.5920732,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"1625969921","Nordrhein-Westfalen",50.8854113,7.0605504,"car_sharing","amenity","cambio CarSharing","3"
+"2007018448","Nordrhein-Westfalen",51.955059,7.6210971,"car_sharing","amenity","Stadtteilauto","1"
+"2052563834","Nordrhein-Westfalen",50.7812859,6.1531787,"car_sharing","amenity","cambio","2"
+"2052859638","Nordrhein-Westfalen",50.939785,6.97089,"car_sharing","amenity","cambio CarSharing",NA
+"2057464690","Nordrhein-Westfalen",50.90932,6.941117,"car_sharing","amenity","cambio CarSharing",NA
+"2057464700","Nordrhein-Westfalen",50.90855,6.970058,"car_sharing","amenity","cambio CarSharing",NA
+"2059453017","Nordrhein-Westfalen",50.9371675,6.9099194,"car_sharing","amenity","cambio CarSharing",NA
+"2059453018","Nordrhein-Westfalen",50.93903,6.950462,"car_sharing","amenity","cambio CarSharing",NA
+"2059453019","Nordrhein-Westfalen",50.9654694,6.9459383,"car_sharing","amenity","cambio CarSharing","10"
+"2059453020","Nordrhein-Westfalen",50.94546,6.956427,"car_sharing","amenity","cambio CarSharing",NA
+"2059453021","Nordrhein-Westfalen",50.9514324,6.9193636,"car_sharing","amenity","cambio CarSharing",NA
+"2059453022","Nordrhein-Westfalen",50.9554,6.963197,"car_sharing","amenity","cambio CarSharing",NA
+"2059453023","Nordrhein-Westfalen",50.9123286,6.9628594,"car_sharing","amenity","cambio CarSharing",NA
+"2059453024","Nordrhein-Westfalen",50.92609,6.959592,"car_sharing","amenity","cambio CarSharing",NA
+"2059453025","Nordrhein-Westfalen",50.921964,6.958348,"car_sharing","amenity","cambio CarSharing",NA
+"2059453026","Nordrhein-Westfalen",50.94494,6.943231,"car_sharing","amenity","cambio CarSharing",NA
+"2059453027","Nordrhein-Westfalen",50.938155,6.979644,"car_sharing","amenity","cambio CarSharing",NA
+"2059453028","Nordrhein-Westfalen",50.9373151,6.9734041,"car_sharing","amenity","cambio CarSharing",NA
+"2059453029","Nordrhein-Westfalen",50.9618951,6.9563094,"car_sharing","amenity","cambio CarSharing",NA
+"2059453030","Nordrhein-Westfalen",50.9204165,6.9577061,"car_sharing","amenity","cambio CarSharing",NA
+"2059453031","Nordrhein-Westfalen",50.9680308,6.9507859,"car_sharing","amenity","cambio CarSharing",NA
+"2059453032","Nordrhein-Westfalen",50.9631763,6.9583589,"car_sharing","amenity","cambio CarSharing",NA
+"2059453033","Nordrhein-Westfalen",50.92845,6.913962,"car_sharing","amenity","cambio CarSharing",NA
+"2059453034","Nordrhein-Westfalen",50.9468004,6.9168266,"car_sharing","amenity","cambio CarSharing",NA
+"2059453035","Nordrhein-Westfalen",50.9713384,6.9538314,"car_sharing","amenity","cambio CarSharing",NA
+"2059453036","Nordrhein-Westfalen",50.959467,6.99518,"car_sharing","amenity","cambio CarSharing",NA
+"2059453037","Nordrhein-Westfalen",50.94952,6.953799,"car_sharing","amenity","cambio CarSharing",NA
+"2059453038","Nordrhein-Westfalen",50.936424,6.9612865,"car_sharing","amenity","cambio CarSharing",NA
+"2059453040","Nordrhein-Westfalen",50.98383,6.896453,"car_sharing","amenity","cambio CarSharing",NA
+"2059453041","Nordrhein-Westfalen",50.94447,6.961437,"car_sharing","amenity","cambio CarSharing",NA
+"2059453043","Nordrhein-Westfalen",50.97568,7.074326,"car_sharing","amenity","cambio CarSharing",NA
+"2059453044","Nordrhein-Westfalen",50.9223904,6.907346,"car_sharing","amenity","cambio CarSharing",NA
+"2059453045","Nordrhein-Westfalen",50.919762,6.960418,"car_sharing","amenity","cambio CarSharing",NA
+"2059453046","Nordrhein-Westfalen",50.95361,6.9129,"car_sharing","amenity","cambio CarSharing",NA
+"2059453047","Nordrhein-Westfalen",50.923465,6.9508403,"car_sharing","amenity","cambio CarSharing",NA
+"2059453048","Nordrhein-Westfalen",50.94177,6.9344,"car_sharing","amenity","cambio CarSharing",NA
+"2059453049","Nordrhein-Westfalen",50.9396137,6.9803402,"car_sharing","amenity","cambio CarSharing",NA
+"2059453050","Nordrhein-Westfalen",50.95176,6.955172,"car_sharing","amenity","cambio CarSharing",NA
+"2059453051","Nordrhein-Westfalen",50.9462344,6.8872078,"car_sharing","amenity","cambio CarSharing",NA
+"2059453053","Nordrhein-Westfalen",50.95893,6.913973,"car_sharing","amenity","cambio CarSharing",NA
+"2059453054","Nordrhein-Westfalen",50.96297,6.943874,"car_sharing","amenity","cambio CarSharing",NA
+"2059453055","Nordrhein-Westfalen",50.96268,7.005769,"car_sharing","amenity","cambio CarSharing",NA
+"2059453056","Nordrhein-Westfalen",50.91768,6.926922,"car_sharing","amenity","cambio CarSharing",NA
+"2226688592","Nordrhein-Westfalen",51.4507624,7.0154655,"car_sharing","amenity","unknown","unknown"
+"2294732790","Nordrhein-Westfalen",52.0957204,8.5176095,"car_sharing","amenity","Cambio Bielefeld","1"
+"2294732793","Nordrhein-Westfalen",52.0102488,8.5243422,"car_sharing","amenity","Cambio Bielefeld","2"
+"2328286631","Nordrhein-Westfalen",52.0409992,8.5184459,"car_sharing","amenity","Cambio Bielefeld","1"
+"2329966255","Nordrhein-Westfalen",50.7667746,6.1085785,"car_sharing","amenity","Cambio","3"
+"2354156551","Nordrhein-Westfalen",51.4047199,7.4331294,"car_sharing","amenity",NA,"1"
+"2422388526","Nordrhein-Westfalen",51.6042796,7.5189761,"car_sharing","amenity",NA,NA
+"2435849220","Nordrhein-Westfalen",50.7746894,6.0443101,"car_sharing","amenity","cambio","3"
+"2437426082","Nordrhein-Westfalen",51.9720036,7.623342,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"2445662238","Nordrhein-Westfalen",52.0329165,8.5553866,"car_sharing","amenity",NA,NA
+"2453516915","Nordrhein-Westfalen",51.957647,7.6375715,"car_sharing","amenity","Stadtteilauto",NA
+"2529748625","Nordrhein-Westfalen",51.9954847,7.6154336,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"2529748626","Nordrhein-Westfalen",51.9952859,7.6029129,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"2595759333","Nordrhein-Westfalen",51.9641714,7.6318585,"car_sharing","amenity","Stadtteilauto Carsharing Münster GmbH",NA
+"2614715766","Nordrhein-Westfalen",50.7683291,6.0922246,"car_sharing","amenity","cambio","1"
+"2614715767","Nordrhein-Westfalen",50.7805843,6.0677451,"car_sharing","amenity","cambio","2"
+"2634847466","Nordrhein-Westfalen",50.7166622,7.1088253,"car_sharing","amenity","Flinkster",NA
+"2645606573","Nordrhein-Westfalen",50.7293691,7.1036039,"car_sharing","amenity","DB Rent","1"
+"2704136743","Nordrhein-Westfalen",50.7674944,6.0892113,"car_sharing","amenity","Flinkster","3"
+"2724963429","Nordrhein-Westfalen",51.3329226,6.5676445,"car_sharing","amenity","Stadtmobil Rhein-Ruhr","4"
+"2754555622","Nordrhein-Westfalen",52.0161505,8.5351819,"car_sharing","amenity","Cambio",NA
+"2765476792","Nordrhein-Westfalen",50.9297431,6.9330898,"car_sharing","amenity",NA,NA
+"2939354081","Nordrhein-Westfalen",50.9681152,6.9554193,"car_sharing","amenity","Flinkster","2"
+"3016922803","Nordrhein-Westfalen",50.9256908,6.9416396,"car_sharing","amenity","Cambio",NA
+"3074816504","Nordrhein-Westfalen",51.2075971,6.7666083,"car_sharing","amenity","Drive Carsharing","1"
+"3074816505","Nordrhein-Westfalen",51.2182036,6.8241998,"car_sharing","amenity","Drive Carsharing","1"
+"3074816506","Nordrhein-Westfalen",51.2346424,6.7421522,"car_sharing","amenity","Drive Carsharing","1"
+"3170147397","Nordrhein-Westfalen",51.3459818,6.6186706,"car_sharing","amenity","Stadtmobil Rhein-Ruhr","2"
+"3216629184","Nordrhein-Westfalen",50.7316335,7.0968621,"car_sharing","amenity","Flinkster",NA
+"3216629185","Nordrhein-Westfalen",50.737012,7.099779,"car_sharing","amenity","Flinkster",NA
+"3216629186","Nordrhein-Westfalen",50.7386875,7.0935366,"car_sharing","amenity","Flinkster",NA
+"3216630791","Nordrhein-Westfalen",50.7424691,7.0916261,"car_sharing","amenity","Flinkster","1"
+"3302902378","Nordrhein-Westfalen",50.7805919,6.0507767,"car_sharing","amenity","cambio","1"
+"3302902838","Nordrhein-Westfalen",50.7698965,6.0615367,"car_sharing","amenity","cambio","1"
+"3309467286","Nordrhein-Westfalen",50.915598,6.9923538,"car_sharing","amenity","cambio CarSharing",NA
+"3309469361","Nordrhein-Westfalen",50.74245,7.0927455,"car_sharing","amenity","Flinkster","1"
+"3321157197","Nordrhein-Westfalen",51.6777713,7.8091069,"car_sharing","amenity","Flinkster","2"
+"3390783102","Nordrhein-Westfalen",52.0370671,8.5239801,"car_sharing","amenity","Cambio",NA
+"3470834611","Nordrhein-Westfalen",50.7626235,6.0748634,"car_sharing","amenity","cambio",NA
+"3557793776","Nordrhein-Westfalen",51.2143477,6.7679049,"car_sharing","amenity","Greenwheels","2"
+"3557793818","Nordrhein-Westfalen",51.2149703,6.7613065,"car_sharing","amenity","Greenwheels","1"
+"3558024096","Nordrhein-Westfalen",51.2076399,6.7665854,"car_sharing","amenity","Flinkster","1"
+"3567742808","Nordrhein-Westfalen",51.1802445,6.8271823,"car_sharing","amenity","Drive Carsharing","1"
+"3621462267","Nordrhein-Westfalen",50.7720934,6.0978008,"car_sharing","amenity","cambio",NA
+"3621473758","Nordrhein-Westfalen",50.7471938,6.1640375,"car_sharing","amenity","cambio",NA
+"3621478024","Nordrhein-Westfalen",50.7633106,6.0879552,"car_sharing","amenity","cambio",NA
+"3621483447","Nordrhein-Westfalen",50.7803397,6.0618593,"car_sharing","amenity","cambio",NA
+"3621484717","Nordrhein-Westfalen",50.7724471,6.0373892,"car_sharing","amenity","cambio","2"
+"3621487554","Nordrhein-Westfalen",50.7720568,6.0793452,"car_sharing","amenity","cambio","2"
+"3630317974","Nordrhein-Westfalen",51.1973672,6.4457355,"car_sharing","amenity","Flinkster","1"
+"3673508303","Nordrhein-Westfalen",50.8285959,6.081432,"car_sharing","amenity","Cambio","2"
+"3673511301","Nordrhein-Westfalen",50.8699749,6.0944379,"car_sharing","amenity","cambio","2"
+"3673630773","Nordrhein-Westfalen",50.7839526,6.0741164,"car_sharing","amenity","studibus.de","4"
+"3675269729","Nordrhein-Westfalen",51.9906942,8.5071613,"car_sharing","amenity","Cambio Bielefeld",NA
+"3675269730","Nordrhein-Westfalen",52.0021385,8.5888541,"car_sharing","amenity","Cambio Bielefeld",NA
+"3695555165","Nordrhein-Westfalen",50.8321551,6.0752654,"car_sharing","amenity","Cambio","2"
+"3727844091","Nordrhein-Westfalen",50.8182622,6.2705161,"car_sharing","amenity","cambio","2"
+"3727858249","Nordrhein-Westfalen",50.9205435,6.3553117,"car_sharing","amenity","cambio",NA
+"3744084988","Nordrhein-Westfalen",50.7725509,7.2885073,"car_sharing","amenity","Autohaus Bergland / Stadt Hennef","1"
+"3744084989","Nordrhein-Westfalen",50.7729797,7.2836942,"car_sharing","amenity","Autohaus Bergland / Stadt Hennef","2"
+"3767971503","Nordrhein-Westfalen",50.9349367,6.9461425,"car_sharing","amenity","Flinkster","2"
+"3782995073","Nordrhein-Westfalen",51.2188441,6.7948805,"car_sharing","amenity","Stadtmobil Rhein-Ruhr","6"
+"3908919355","Nordrhein-Westfalen",51.2205292,6.7974433,"car_sharing","amenity","Flinkster","1"
+"3974738793","Nordrhein-Westfalen",50.9572375,7.0122626,"car_sharing","amenity","Flinkster","2"
+"1140977210","Mecklenburg-Vorpommern",54.0813756,12.1402583,"car_sharing","amenity","Greenwheels",NA
+"1140977213","Mecklenburg-Vorpommern",54.0879593,12.1157694,"car_sharing","amenity","Greenwheels",NA
+"1140977215","Mecklenburg-Vorpommern",54.0896583,12.1173954,"car_sharing","amenity","Greenwheels",NA
+"1140977225","Mecklenburg-Vorpommern",54.0890055,12.1411279,"car_sharing","amenity","Greenwheels",NA
+"1140977231","Mecklenburg-Vorpommern",54.0698042,12.1185153,"car_sharing","amenity","Greenwheels",NA
+"1219632355","Mecklenburg-Vorpommern",54.0912809,12.1604952,"car_sharing","amenity",NA,NA
+"1381594461","Mecklenburg-Vorpommern",53.6337826,11.4069325,"car_sharing","amenity","Deutsche Bahn",NA
+"1697675236","Mecklenburg-Vorpommern",54.1378672,12.0544966,"car_sharing","amenity",NA,NA
+"3255321529","Mecklenburg-Vorpommern",54.0926651,13.3869152,"car_sharing","amenity","Drive Carsharing",NA
+"287091458","Rheinland-Pfalz",49.3135585,8.4334389,"car_sharing","amenity","Stadtmobil Rhein-Neckar AG",NA
+"287095536","Rheinland-Pfalz",49.311119,8.4252065,"car_sharing","amenity","Stadtmobil Rhein-Neckar AG",NA
+"287095538","Rheinland-Pfalz",49.3233387,8.4284568,"car_sharing","amenity","Stadtmobil Rhein-Neckar AG",NA
+"471083935","Rheinland-Pfalz",49.9803885,8.2370386,"car_sharing","amenity","book-n-drive",NA
+"471555518","Rheinland-Pfalz",49.9933396,8.2728337,"car_sharing","amenity","book-n-drive",NA
+"471555664","Rheinland-Pfalz",49.994792,8.2688188,"car_sharing","amenity","book-n-drive",NA
+"471556912","Rheinland-Pfalz",50.0007463,8.2599407,"car_sharing","amenity","book-n-drive",NA
+"471558923","Rheinland-Pfalz",50.003943,8.2569661,"car_sharing","amenity","book-n-drive",NA
+"475654595","Rheinland-Pfalz",50.0004626,8.2664253,"car_sharing","amenity","book-n-drive",NA
+"475663138","Rheinland-Pfalz",50.0013785,8.2762873,"car_sharing","amenity","book-n-drive",NA
+"479759398","Rheinland-Pfalz",50.0009639,8.2738158,"car_sharing","amenity","book-n-drive",NA
+"479768692","Rheinland-Pfalz",50.0110935,8.24842,"car_sharing","amenity","book-n-drive",NA
+"479773297","Rheinland-Pfalz",50.0126759,8.2599403,"car_sharing","amenity","book-n-drive",NA
+"479782432","Rheinland-Pfalz",50.0035349,8.2265868,"car_sharing","amenity","book-n-drive",NA
+"570700018","Rheinland-Pfalz",49.7559772,6.6510085,"car_sharing","amenity","DB Rent",NA
+"755856990","Rheinland-Pfalz",50.3574426,7.8462223,"car_sharing","amenity",NA,NA
+"938337477","Rheinland-Pfalz",50.662573,7.8193298,"car_sharing","amenity",NA,NA
+"1338166956","Rheinland-Pfalz",49.9639195,8.2797394,"car_sharing","amenity","Flinkster / Bahn",NA
+"1767970281","Rheinland-Pfalz",49.4285917,7.7577062,"car_sharing","amenity","stadtmobil Carsharing",NA
+"1851743101","Rheinland-Pfalz",49.4359599,7.7673789,"car_sharing","amenity","Flinkster",NA
+"1875936222","Rheinland-Pfalz",49.7691659,6.6269353,"car_sharing","amenity","DB Rent",NA
+"1875936242","Rheinland-Pfalz",49.7590237,6.6326753,"car_sharing","amenity","DB Rent",NA
+"2004733778","Rheinland-Pfalz",49.4325669,7.7541701,"car_sharing","amenity","stadtmobil Carsharing",NA
+"2233973368","Rheinland-Pfalz",49.3276463,8.4184314,"car_sharing","amenity","Stadtmobil",NA
+"2304777760","Rheinland-Pfalz",49.2060474,8.1065109,"car_sharing","amenity","stadtmobil",NA
+"2308319428","Rheinland-Pfalz",49.198459,8.1108003,"car_sharing","amenity","stadtmobil",NA
+"2335308096","Rheinland-Pfalz",49.4430507,7.7747614,"car_sharing","amenity","stadtmobil Carsharing",NA
+"2335308894","Rheinland-Pfalz",49.4371626,7.7654703,"car_sharing","amenity","stadtmobil Carsharing",NA
+"2335310530","Rheinland-Pfalz",49.4461792,7.7669851,"car_sharing","amenity","stadtmobil Carsharing",NA
+"2335315409","Rheinland-Pfalz",49.4925562,8.4190873,"car_sharing","amenity",NA,NA
+"2335315853","Rheinland-Pfalz",49.4960475,8.4225849,"car_sharing","amenity",NA,NA
+"2335320069","Rheinland-Pfalz",49.4919524,8.4356419,"car_sharing","amenity",NA,NA
+"2335321626","Rheinland-Pfalz",49.4835297,8.4487713,"car_sharing","amenity",NA,NA
+"2335323068","Rheinland-Pfalz",49.4786957,8.4388418,"car_sharing","amenity",NA,NA
+"2335327182","Rheinland-Pfalz",49.4840002,8.4407199,"car_sharing","amenity",NA,NA
+"2335331726","Rheinland-Pfalz",49.4751613,8.4444744,"car_sharing","amenity",NA,NA
+"2335334450","Rheinland-Pfalz",49.4725103,8.4460878,"car_sharing","amenity",NA,NA
+"2335338063","Rheinland-Pfalz",49.4712897,8.4527337,"car_sharing","amenity",NA,NA
+"2338936890","Rheinland-Pfalz",49.3234557,8.4169434,"car_sharing","amenity",NA,NA
+"3689310875","Rheinland-Pfalz",50.3724658,7.5285395,"car_sharing","amenity","ED",NA
+"3873734057","Rheinland-Pfalz",49.9944037,8.2760485,"car_sharing","amenity","book-n-drive",NA
+"3935939962","Rheinland-Pfalz",49.0522713,8.2499959,"car_sharing","amenity","Stadtmobil",NA
+"3935943363","Rheinland-Pfalz",49.0794768,8.1992642,"car_sharing","amenity","Stadtmobil",NA
+"267632835","Bremen",53.094869,8.8090458,"car_sharing","amenity","cambio CarSharing",NA
+"310592581","Bremen",53.1024038,8.7858888,"car_sharing","amenity","cambio CarSharing",NA
+"310595530","Bremen",53.0969298,8.7871833,"car_sharing","amenity","cambio CarSharing",NA
+"312599120","Bremen",53.0976675,8.8709535,"car_sharing","amenity","cambio CarSharing",NA
+"359913043","Bremen",53.0621246,8.8075053,"car_sharing","amenity","cambio CarSharing",NA
+"359913046","Bremen",53.0639698,8.8047771,"car_sharing","amenity","cambio CarSharing",NA
+"393356091","Bremen",53.0870071,8.8513034,"car_sharing","amenity","cambio CarSharing",NA
+"459033174","Bremen",53.1238823,8.8994649,"car_sharing","amenity","cambio CarSharing",NA
+"633704048","Bremen",53.0699678,8.8001233,"car_sharing","amenity","cambio CarSharing",NA
+"825475845","Bremen",53.1206129,8.7521826,"car_sharing","amenity","cambio CarSharing",NA
+"902433662","Bremen",53.0833108,8.8174166,"car_sharing","amenity","cambio CarSharing",NA
+"1095009356","Bremen",53.0689857,8.8469559,"car_sharing","amenity","cambio CarSharing",NA
+"1251170144","Bremen",53.0854361,8.8398979,"car_sharing","amenity","cambio CarSharing",NA
+"1322342139","Bremen",53.0789263,8.8329732,"car_sharing","amenity","cambio CarSharing",NA
+"1338312550","Bremen",53.070949,8.8190112,"car_sharing","amenity","cambio CarSharing",NA
+"1381802359","Bremen",53.0782644,8.8229368,"car_sharing","amenity","cambio CarSharing",NA
+"1721708371","Bremen",53.0637213,8.7936703,"car_sharing","amenity","cambio CarSharing",NA
+"1879266691","Bremen",53.0927523,8.7845437,"car_sharing","amenity","cambio CarSharing",NA
+"1914010247","Bremen",53.0713089,8.8380445,"car_sharing","amenity","cambio CarSharing",NA
+"1914241194","Bremen",53.071056,8.830532,"car_sharing","amenity","cambio CarSharing",NA
+"1918872360","Bremen",53.0720395,8.8369242,"car_sharing","amenity","cambio CarSharing",NA
+"1918874962","Bremen",53.0684356,8.849423,"car_sharing","amenity","cambio CarSharing",NA
+"1938883503","Bremen",53.0788309,8.8380194,"car_sharing","amenity","cambio CarSharing",NA
+"2113942750","Bremen",53.0822799,8.8561291,"car_sharing","amenity","cambio CarSharing",NA
+"2113942756","Bremen",53.0931587,8.846232,"car_sharing","amenity","cambio CarSharing",NA
+"2113942761","Bremen",53.0783695,8.8181684,"car_sharing","amenity","cambio CarSharing",NA
+"2114131768","Bremen",53.0917375,8.8046634,"car_sharing","amenity","cambio CarSharing",NA
+"2114131769","Bremen",53.0744963,8.8207474,"car_sharing","amenity","cambio CarSharing",NA
+"2114131770","Bremen",53.1039988,8.8627127,"car_sharing","amenity","cambio CarSharing",NA
+"2114131771","Bremen",53.0821109,8.8076708,"car_sharing","amenity","cambio CarSharing",NA
+"2114131772","Bremen",53.0793638,8.8032237,"car_sharing","amenity","cambio CarSharing",NA
+"2114131773","Bremen",53.0848083,8.8140446,"car_sharing","amenity","cambio CarSharing",NA
+"2114131774","Bremen",53.0573646,8.8883674,"car_sharing","amenity","cambio CarSharing",NA
+"2114131775","Bremen",53.0742966,8.8073898,"car_sharing","amenity","cambio CarSharing",NA
+"2114131776","Bremen",53.0683135,8.7855173,"car_sharing","amenity","cambio CarSharing",NA
+"2114131777","Bremen",53.1700688,8.6259207,"car_sharing","amenity","cambio CarSharing",NA
+"2114131778","Bremen",53.0656572,8.8580215,"car_sharing","amenity","cambio CarSharing",NA
+"2114131779","Bremen",53.0963102,8.8100675,"car_sharing","amenity","cambio CarSharing",NA
+"2114131780","Bremen",53.0722219,8.7942292,"car_sharing","amenity","cambio CarSharing",NA
+"2114131781","Bremen",53.0597074,8.899975,"car_sharing","amenity","cambio CarSharing",NA
+"2114131782","Bremen",53.0846422,8.8212204,"car_sharing","amenity","cambio CarSharing",NA
+"2114131783","Bremen",53.0965839,8.8029645,"car_sharing","amenity","cambio CarSharing",NA
+"2114131784","Bremen",53.0634577,8.9500498,"car_sharing","amenity","cambio CarSharing",NA
+"2612910084","Bremen",53.0743975,8.8268102,"car_sharing","amenity","cambio CarSharing",NA
+"2669964983","Bremen",53.1732238,8.6155689,"car_sharing","amenity","cambio CarSharing",NA
+"2713311740","Bremen",53.0841558,8.8095811,"car_sharing","amenity","Flinkster",NA
+"3168104087","Bremen",53.0732017,8.8517022,"car_sharing","amenity","cambio carSharing",NA
+"3186227069","Bremen",53.0818356,8.7967895,"car_sharing","amenity","cambio CarSharing",NA
+"3186255232","Bremen",53.0706782,8.8151345,"car_sharing","amenity","cambio CarSharing",NA
+"3186261143","Bremen",53.0752745,8.8279234,"car_sharing","amenity","cambio CarSharing",NA
+"3186264329","Bremen",53.0755882,8.834216,"car_sharing","amenity",NA,NA
+"3186268767","Bremen",53.0726177,8.825496,"car_sharing","amenity","cambio CarSharing",NA
+"3610816894","Bremen",53.0666449,8.8673319,"car_sharing","amenity","cambio CarSharing",NA
+"3616118384","Bremen",53.0781401,8.8460839,"car_sharing","amenity","cambio CarSharing",NA
+"3625258493","Bremen",53.0946604,8.8000607,"car_sharing","amenity","cambio CarSharing",NA
+"3673581725","Bremen",53.0686183,8.793621,"car_sharing","amenity","cambio CarSharing",NA
+"3673616125","Bremen",53.0759397,8.819193,"car_sharing","amenity","cambio CarSharing",NA
+"3679753431","Bremen",53.0687482,8.8419586,"car_sharing","amenity","cambio CarSharing",NA
+"3711763225","Bremen",53.0789549,8.8123933,"car_sharing","amenity","cambio CarSharing",NA
+"3713404525","Bremen",53.0908659,8.8093113,"car_sharing","amenity","cambio CarSharing",NA
+"3713411125","Bremen",53.0944905,8.8135654,"car_sharing","amenity","cambio CarSharing",NA
+"3714609426","Bremen",53.0523998,8.8213581,"car_sharing","amenity","cambio CarSharing",NA
+"3714627034","Bremen",53.0729772,8.7999426,"car_sharing","amenity","cambio CarSharing",NA
+"3714650438","Bremen",53.0612307,8.8004062,"car_sharing","amenity","cambio CarSharing",NA
+"3885844256","Bremen",53.0590068,8.9228261,"car_sharing","amenity",NA,NA
+"3885851800","Bremen",53.0848644,8.8794665,"car_sharing","amenity",NA,NA
+"3885855970","Bremen",53.065236,8.9502633,"car_sharing","amenity",NA,NA
+"3885857316","Bremen",53.1059576,8.8480199,"car_sharing","amenity",NA,NA
+"3885875435","Bremen",53.0915216,8.7727,"car_sharing","amenity",NA,NA
+"3885884226","Bremen",53.1069521,8.8486041,"car_sharing","amenity",NA,NA
+"3885887548","Bremen",53.0832697,8.8996201,"car_sharing","amenity",NA,NA
+"3885924937","Bremen",53.109367,8.8602146,"car_sharing","amenity",NA,NA
+"332323185","Schleswig-Holstein",53.8690908,10.6948133,"car_sharing","amenity","StattAuto eG","6"
+"596262394","Schleswig-Holstein",54.2361849,10.2839595,"car_sharing","amenity","StattAuto eG","6"
+"766747730","Schleswig-Holstein",53.8612497,10.6729709,"car_sharing","amenity","StattAuto eG","6"
+"787197001","Schleswig-Holstein",53.8522217,10.7012295,"car_sharing","amenity","StattAuto eG","6"
+"861235241","Schleswig-Holstein",53.8686069,10.677161,"car_sharing","amenity","StattAuto eG","6"
+"923932205","Schleswig-Holstein",53.8704525,10.6737971,"car_sharing","amenity","StattAuto eG","6"
+"987958493","Schleswig-Holstein",53.8473235,10.6840737,"car_sharing","amenity","StattAuto eG","6"
+"1240157842","Schleswig-Holstein",53.877201,10.6942206,"car_sharing","amenity","StattAuto eG","6"
+"1466313738","Schleswig-Holstein",54.3138574,10.1303228,"car_sharing","amenity","StattAuto eG","6"
+"1466325715","Schleswig-Holstein",54.3367601,10.1310009,"car_sharing","amenity","StattAuto eG","6"
+"1607001263","Schleswig-Holstein",53.8639207,10.7025965,"car_sharing","amenity","StattAuto eG","6"
+"1757047596","Schleswig-Holstein",54.3150193,10.1176661,"car_sharing","amenity","StattAuto eG","6"
+"1757047597","Schleswig-Holstein",54.3117881,10.1105413,"car_sharing","amenity","StattAuto eG","6"
+"1797918200","Schleswig-Holstein",53.86571,10.7180267,"car_sharing","amenity","StattAuto eG","6"
+"2021432134","Schleswig-Holstein",53.834919,10.696553,"car_sharing","amenity","StattAuto eG","6"
+"2140023421","Schleswig-Holstein",54.3229985,10.1219515,"car_sharing","amenity","StattAuto eG","6"
+"2140026818","Schleswig-Holstein",54.3263633,10.1321542,"car_sharing","amenity","StattAuto eG","6"
+"2140036641","Schleswig-Holstein",54.3353841,10.1362943,"car_sharing","amenity","StattAuto eG","6"
+"2140039865","Schleswig-Holstein",54.3221428,10.1321517,"car_sharing","amenity","StattAuto eG","6"
+"2140045687","Schleswig-Holstein",54.3602125,10.1323774,"car_sharing","amenity","StattAuto eG","6"
+"2292674633","Schleswig-Holstein",53.8700624,10.6687911,"car_sharing","amenity","StattAuto eG","6"
+"2388285307","Schleswig-Holstein",53.8711612,10.6886581,"car_sharing","amenity","StattAuto eG","6"
+"2402139282","Schleswig-Holstein",53.8692759,10.6987048,"car_sharing","amenity","StattAuto eG","6"
+"2402139283","Schleswig-Holstein",53.8693215,10.6962887,"car_sharing","amenity","StattAuto eG","6"
+"2402160624","Schleswig-Holstein",53.8780702,10.677278,"car_sharing","amenity","StattAuto eG","6"
+"2407671696","Schleswig-Holstein",53.8681388,10.684718,"car_sharing","amenity","StattAuto eG","6"
+"2411473528","Schleswig-Holstein",53.8486632,10.7442557,"car_sharing","amenity","StattAuto eG","6"
+"2420189322","Schleswig-Holstein",53.8620146,10.6946932,"car_sharing","amenity","StattAuto eG","6"
+"2420191555","Schleswig-Holstein",53.8612325,10.6843054,"car_sharing","amenity","StattAuto eG","6"
+"2420194886","Schleswig-Holstein",54.3324637,10.1247165,"car_sharing","amenity","StattAuto eG","6"
+"2420212066","Schleswig-Holstein",54.3131589,10.1473601,"car_sharing","amenity","StattAuto eG","6"
+"2820970999","Schleswig-Holstein",53.8891596,10.7116265,"car_sharing","amenity","StattAuto eG","6"
+"2968783627","Schleswig-Holstein",53.8920812,10.6805559,"car_sharing","amenity","StattAuto eG","6"
+"2968831953","Schleswig-Holstein",53.8542874,10.6874217,"car_sharing","amenity","StattAuto eG","6"
+"2968859862","Schleswig-Holstein",53.8421388,10.7078373,"car_sharing","amenity","StattAuto eG","6"
+"2968871225","Schleswig-Holstein",53.8630587,10.7153069,"car_sharing","amenity","StattAuto eG","6"
+"2968877206","Schleswig-Holstein",53.8384694,10.7079059,"car_sharing","amenity","StattAuto eG","6"
+"2968885290","Schleswig-Holstein",54.3256473,10.1835574,"car_sharing","amenity","StattAuto eG","6"
+"2968890705","Schleswig-Holstein",54.3316086,10.1354746,"car_sharing","amenity","StattAuto eG","6"
+"2968913541","Schleswig-Holstein",54.3093413,10.1049133,"car_sharing","amenity","StattAuto eG","6"
+"2968922190","Schleswig-Holstein",54.3170408,10.0666361,"car_sharing","amenity","StattAuto eG","6"
+"2968934763","Schleswig-Holstein",54.3196801,10.1350697,"car_sharing","amenity","StattAuto eG","6"
+"2977498337","Schleswig-Holstein",54.3338701,10.1156339,"car_sharing","amenity","StattAuto eG","6"
+"3128880125","Schleswig-Holstein",53.8667489,10.7037944,"car_sharing","amenity","StattAuto eG","6"
+"3203775099","Schleswig-Holstein",53.8896901,10.6490945,"car_sharing","amenity","StattAuto eG","6"
+"3524847551","Schleswig-Holstein",53.9202589,10.6959235,"car_sharing","amenity","StattAuto eG","6"
+"3583698350","Schleswig-Holstein",54.7801136,9.4344472,"car_sharing","amenity","Cambio","6"
+"3583698351","Schleswig-Holstein",54.7849752,9.4373811,"car_sharing","amenity","Cambio","6"
+"3583698352","Schleswig-Holstein",54.7855881,9.4332473,"car_sharing","amenity","Cambio","6"
+"3583698353","Schleswig-Holstein",54.7824731,9.4419984,"car_sharing","amenity","Cambio","6"
+"3583698354","Schleswig-Holstein",54.7959032,9.4514224,"car_sharing","amenity","Cambio","6"
+"3601762627","Schleswig-Holstein",53.8602433,10.6587896,"car_sharing","amenity","StattAuto eG","6"
+"3602010356","Schleswig-Holstein",53.8815755,10.6541065,"car_sharing","amenity","StattAuto eG","6"
+"3684964152","Schleswig-Holstein",53.87384,10.6647487,"car_sharing","amenity","StattAuto eG","6"
+"3711993788","Schleswig-Holstein",53.8622486,10.7107763,"car_sharing","amenity","StattAuto eG","6"
+"3742490850","Schleswig-Holstein",53.8682236,10.6698086,"car_sharing","amenity","Flinkster","6"
+"3978851659","Schleswig-Holstein",53.8292166,10.6872141,"car_sharing","amenity","StattAuto eG","6"
+"267465038","Niedersachsen",52.47855,9.7316579,"car_sharing","amenity",NA,NA
+"277494282","Niedersachsen",51.5361865,9.9264042,"car_sharing","amenity",NA,NA
+"348302134","Niedersachsen",52.3961939,9.6777863,"car_sharing","amenity","Stadtmobil",NA
+"359744910","Niedersachsen",53.151667,8.1998141,"car_sharing","amenity","cambio",NA
+"371684504","Niedersachsen",52.3772104,9.6843271,"car_sharing","amenity",NA,NA
+"390482625","Niedersachsen",53.1450075,8.2225478,"car_sharing","amenity","Cambio",NA
+"390482626","Niedersachsen",53.1459624,8.2108237,"car_sharing","amenity","Cambio",NA
+"390482627","Niedersachsen",53.1357629,8.2179764,"car_sharing","amenity","Cambio",NA
+"390482628","Niedersachsen",53.1335858,8.1932874,"car_sharing","amenity","Cambio",NA
+"390482629","Niedersachsen",53.1439234,8.1913982,"car_sharing","amenity","Cambio",NA
+"393422699","Niedersachsen",52.3782646,9.7410787,"car_sharing","amenity","Deutsche Bahn",NA
+"420538154","Niedersachsen",51.5346122,9.9214827,"car_sharing","amenity","Rent a Car",NA
+"432519217","Niedersachsen",51.5327422,9.9271238,"car_sharing","amenity","Stadt-Teil-Auto Göttingen",NA
+"507247731","Niedersachsen",52.2533112,10.5405582,"car_sharing","amenity","Drive Carsharing",NA
+"618841397","Niedersachsen",52.381405,9.7498698,"car_sharing","amenity","Stadtmobil",NA
+"663008283","Niedersachsen",51.530051,9.9307659,"car_sharing","amenity","Grünes Auto Göttingen",NA
+"663008289","Niedersachsen",51.5361686,9.9265539,"car_sharing","amenity","Grünes Auto Göttingen",NA
+"663033202","Niedersachsen",51.5427273,9.9378157,"car_sharing","amenity","Grünes Auto Göttingen",NA
+"748627884","Niedersachsen",51.5116717,9.9556172,"car_sharing","amenity","stadt-teil-auto Göttingen",NA
+"752183427","Niedersachsen",51.5300306,9.9250071,"car_sharing","amenity","Stadt-Teil-Auto Göttingen",NA
+"1015049573","Niedersachsen",52.2683519,10.548701,"car_sharing","amenity","Greenwheels",NA
+"1015051993","Niedersachsen",52.265027,10.5279464,"car_sharing","amenity","Drive Carsharing",NA
+"1110231068","Niedersachsen",52.2712472,10.5369745,"car_sharing","amenity","Stadtmobil",NA
+"1110282123","Niedersachsen",52.2679594,10.5256478,"car_sharing","amenity","Stadtmobil",NA
+"1110282124","Niedersachsen",52.2697656,10.5342607,"car_sharing","amenity","Drive Carsharing",NA
+"1110282125","Niedersachsen",52.2747929,10.5194558,"car_sharing","amenity","Drive Carsharing",NA
+"1110282127","Niedersachsen",52.2767336,10.5387692,"car_sharing","amenity","Drive Carsharing",NA
+"1110282132","Niedersachsen",52.2737825,10.5403605,"car_sharing","amenity","Stadtmobil",NA
+"1256882603","Niedersachsen",52.3847366,9.7476747,"car_sharing","amenity","stadtmobil",NA
+"1291892187","Niedersachsen",52.276938,10.5379613,"car_sharing","amenity","Greenwheels",NA
+"1317374933","Niedersachsen",51.5225595,9.9371222,"car_sharing","amenity","Grünes Auto Göttingen",NA
+"1317378003","Niedersachsen",51.5280243,9.9401973,"car_sharing","amenity","Grünes Auto Göttingen",NA
+"1321008607","Niedersachsen",51.5332613,9.9437183,"car_sharing","amenity","Grünes Auto Göttingen",NA
+"1334054385","Niedersachsen",51.5427845,9.9382208,"car_sharing","amenity","Stadt-Teil-Auto Göttingen",NA
+"1688252176","Niedersachsen",52.2803679,8.083384,"car_sharing","amenity",NA,NA
+"1694592189","Niedersachsen",52.4205274,9.7977825,"car_sharing","amenity","Quicar",NA
+"1752338792","Niedersachsen",52.2669242,10.5258738,"car_sharing","amenity","Drive Carsharing",NA
+"1754762129","Niedersachsen",52.2575404,10.5159703,"car_sharing","amenity","Greenwheels",NA
+"1754762130","Niedersachsen",52.268238,10.5406474,"car_sharing","amenity","Greenwheels",NA
+"1765091782","Niedersachsen",52.2757994,10.532074,"car_sharing","amenity","Drive Carsharing",NA
+"1777152414","Niedersachsen",53.1455127,8.2134794,"car_sharing","amenity","cambio",NA
+"1841136400","Niedersachsen",53.2280395,10.4021238,"car_sharing","amenity","Cambio",NA
+"1951228240","Niedersachsen",52.3687663,9.7535375,"car_sharing","amenity","Quicar",NA
+"1951228244","Niedersachsen",52.368815,9.7535773,"car_sharing","amenity","Stadtmobil",NA
+"1951228253","Niedersachsen",52.3780231,9.7617829,"car_sharing","amenity","Quicar",NA
+"1951228260","Niedersachsen",52.3780473,9.7618545,"car_sharing","amenity","Stadtmobil",NA
+"1981130834","Niedersachsen",52.2309266,10.5391299,"car_sharing","amenity","Drive Carsharing",NA
+"1981130836","Niedersachsen",52.2644826,10.5056631,"car_sharing","amenity","Drive Carsharing",NA
+"1981130838","Niedersachsen",52.2843757,10.5186622,"car_sharing","amenity","Drive Carsharing",NA
+"1981130841","Niedersachsen",52.3001618,10.5446492,"car_sharing","amenity","Drive Carsharing",NA
+"2017319531","Niedersachsen",51.5365686,9.9278743,"car_sharing","amenity","Stadtteilauto",NA
+"2116092477","Niedersachsen",52.2629159,10.5446458,"car_sharing","amenity","Drive Carsharing",NA
+"2235009573","Niedersachsen",52.2690649,10.5395307,"car_sharing","amenity","Flinkster",NA
+"2235009574","Niedersachsen",52.2733767,10.5402052,"car_sharing","amenity",NA,NA
+"2235009576","Niedersachsen",52.2743593,10.5429334,"car_sharing","amenity","Flinkster",NA
+"2248538496","Niedersachsen",52.265956,10.5445114,"car_sharing","amenity","Stadtmobil",NA
+"2362945672","Niedersachsen",52.2620369,10.5287563,"car_sharing","amenity","Drive Carsharing",NA
+"2405838249","Niedersachsen",52.3161039,10.5597167,"car_sharing","amenity","Quicar",NA
+"2482779996","Niedersachsen",52.4525658,9.7390972,"car_sharing","amenity","Quicar",NA
+"2709764838","Niedersachsen",52.2821439,8.0428481,"car_sharing","amenity","Stadtteilauto OS GmbH",NA
+"2734361966","Niedersachsen",52.4092497,9.7997445,"car_sharing","amenity",NA,NA
+"2877580655","Niedersachsen",53.1400585,8.2191657,"car_sharing","amenity","cambio",NA
+"3007388950","Niedersachsen",52.3923274,9.5969688,"car_sharing","amenity","Quicar",NA
+"3089274499","Niedersachsen",53.1466218,8.1799815,"car_sharing","amenity","Cambio",NA
+"3138381504","Niedersachsen",52.4111338,9.80492,"car_sharing","amenity",NA,NA
+"3172264365","Niedersachsen",52.4382197,9.7418405,"car_sharing","amenity","Quicar",NA
+"3258573268","Niedersachsen",53.1493036,8.1994947,"car_sharing","amenity","Ford Carsharing",NA
+"3258573270","Niedersachsen",53.1462858,8.1873791,"car_sharing","amenity","Ford Carsharing",NA
+"3706915776","Niedersachsen",53.156743,8.220919,"car_sharing","amenity","cambio",NA
+"3903679834","Niedersachsen",52.3817716,9.7190427,"car_sharing","amenity",NA,NA
