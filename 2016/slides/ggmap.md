@@ -20,46 +20,40 @@ man eine schnelle Karte erzeugen.
 Straßenkarten
 -------------
 
-[Mannheim](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+-   Straßenkarte werden sehr häufig verwendet.
+-   Diese Karten zeigen Haupt- und Nebenstraßen (abhängig vom Detail)
+-   oft sind auch weitere Informationen enthalten. Wie beispielsweise
+    Flughäfen, Städte, Campingplätze oder andere Orte von Interesse
+-   Beispiel einer Straßenkarte für
+    [Mannheim](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim).
 
-A road map is one of the most widely used map types.
+Installieren des Paketes
+------------------------
 
--   These maps show major and minor highways and roads (depending on
-    detail)
--   as well as things like airports, city locations and points of
-    interest like parks, campgrounds and monuments.
--   Major highways on a road map are generally red and larger than other
-    roads,
--   while minor roads are a lighter color and a narrower line.
+-   Zur Erstellung der Karten brauchen wir das Paket `ggmap`:
 
-Road maps
----------
-
-Install the library
--------------------
-
--   We'll need package ggmap - so we have to install it:
-
-1.  possibility
+1.  Möglichkeit:
 
 <!-- -->
 
     install.packages("ggmap")
 
-1.  possibility:
+1.  Möglichkeit:
 
-![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Installpackages1.PNG)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Installpackages1.PNG)
 
-![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Installpackages2.PNG)
+![pic](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Installpackages2.PNG)
 
-Library ggmap - Hallo Welt
---------------------------
+Paket ggmap - Hallo Welt
+------------------------
 
--   To load the library we use the command `library`
+-   Um das Paket zu laden verwenden wir den Befehl `library`
 
 <!-- -->
 
     library(ggmap)
+
+Und schon kann die erste Karte erstellt werden:
 
     qmap("Mannheim")
 
@@ -69,36 +63,36 @@ Karte für eine Sehenswürdigkeit
     BBT <- qmap("Berlin Brandenburger Tor")
     BBT
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
 
 Karte für einen ganzen Staat
 ----------------------------
 
     qmap("Germany")
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-8-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
 
--   We need another zoom level
+-   Wir brauchen ein anderes *zoom level*
 
-Use another zoom level
-----------------------
+Ein anderes *zoom level*
+------------------------
 
--   level 3 - continent
--   level 10 - city
--   level 21 - building
+-   level 3 - Kontinent
+-   level 10 - Stadt
+-   level 21 - Gebäude
 
 <!-- -->
 
     qmap("Germany", zoom = 6)
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-8-1.png)<!-- -->
 
-Get help with the questionmark
-------------------------------
+Hilfe bekommen wir mit dem Fragezeichen
+---------------------------------------
 
     ?qmap
 
-Different components in the help
+Verschiedene Abschnitte in der Hilfe:
 
 -   Description
 -   Usage
@@ -108,41 +102,41 @@ Different components in the help
 -   See Also
 -   Examples
 
-The examples section of help
-----------------------------
+Die Beispiele in der Hilfe
+--------------------------
 
-Extract from the help file on qmap:
+Ausschnitt aus der Hilfe Seite zum Befehl `qmap`:
 
 ![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/qmapExample.PNG)
 
-This examples can be directly copy-pasted to the console
+Das Beispiel kann man direkt in die Konsole kopieren:
 
     qmap("baylor university")
     qmap("baylor university", zoom = 14)
-    # and so on
+    # und so weiter
 
-Other zoom level
-----------------
+Ein anderes *zoom level*
+------------------------
 
     qmap("Mannheim", zoom = 12)
 
-Get closer
-----------
+Näher rankommen
+---------------
 
     qmap('Mannheim', zoom = 13)
 
-Get very close
---------------
+Ganz nah dran
+-------------
 
     qmap('Mannheim', zoom = 20)
 
-ggmap - source OpenStreetMap
+ggmap - Quelle OpenStreetMap
 ----------------------------
 
     qmap('Mannheim', zoom = 14, source="osm")
 
-ggmap - OpenStreetMap - black/white
------------------------------------
+ggmap - OpenStreetMap - schwarz/weiß
+------------------------------------
 
     qmap('Mannheim', zoom = 14, source="osm",color="bw")
 
@@ -164,15 +158,8 @@ ggmap - maptype hybrid
 Terrain/physical maps
 ---------------------
 
-Physical maps illustrate the physical features of an area, such as the
-mountains, rivers and lakes. Colors are used to show relief differences
-in land elevations.
-
--   The water is usually shown in blue.
--   a lighter color is typically used at lower elevation and
--   darker color indicate higher elevations.
--   Contour lines can also be used to show elevation changes (they are
-    normally spaced at regular intervals)
+Aus Physischen Karten kann man Informationen über Berge, Flüsse und Seen
+ablesen. Farben werden oft genutzt um Höhenunterschiede zu visualisieren
 
 ggmap - terrain map
 -------------------
@@ -180,20 +167,24 @@ ggmap - terrain map
     qmap('Schriesheim', zoom = 14,
      maptype="terrain")
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-21-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-20-1.png)<!-- -->
 
-Abstracted maps
----------------
+Abstrahierte Karten
+-------------------
 
 ![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/NYabstracted.jpg)
 
-Source: [Design
+Quelle: [Design
 faves](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities)
 
--   Abstraction is used to create a map with only essential information
--   Example metro maps - directions and little information for
-    orientation is included
--   In the following especially background maps
+-   Abstraktion wird genutzt um nur die essentiellen Informationen einer
+    Karte zu zeigen.
+
+-   Beispiel U-Bahn Karten - wichtig sind die Richtungen und ein wenig
+    Information zur Orientierung
+
+-   Im folgenden werden Karten vorgestellt, die sich gut als
+    Hintergrundkarten eignen.
 
 ggmap - maptype watercolor
 --------------------------
@@ -225,25 +216,17 @@ ggmap - maptype terrain-lines
     qmap('Mannheim', zoom = 14,
      maptype="terrain-lines",source="stamen")
 
-Stamen maps
------------
-
-These high-contrast B+W (black and white) maps are featured in our
-Dotspotting project. They are perfect for data mashups and exploring
-river meanders and coastal zones.
-
-Source: <http://maps.stamen.com/>
-
-Save graphics
--------------
+Graphiken speichern
+-------------------
 
 ![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/RstudioExport.PNG)
 
-ggmap - create an object
-------------------------
+ggmap - ein Objekt erzeugen
+---------------------------
 
--   `<-` is an assignment operator which can be used to create an object
--   This is useful if you work with several maps at the same time
+-   `<-` ist der Zuweisungspfeil um ein Objekt zu erzeugen
+-   Dieses Vorgehen macht bspw. Sinn, wenn mehrere Karten nebeneinander
+    gebraucht werden.
 
 <!-- -->
 
@@ -252,8 +235,8 @@ ggmap - create an object
                    maptype="toner",
                    source="stamen")
 
-Geocoding
----------
+Geokodierung
+------------
 
 > Geocoding (...) uses a description of a location, most typically a
 > postal address or place name, to find geographic coordinates from
@@ -280,15 +263,15 @@ Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#bloc
 </tbody>
 </table>
 
-Latitude and Longitude
+Latitude und Longitude
 ----------------------
 
 ![pic](http://modernsurvivalblog.com/wp-content/uploads/2013/09/definition-of-latitude-longitude.jpg)
 
 [Source](http://modernsurvivalblog.com/survival-skills/basic-map-reading-latitude-longitude/)
 
-Coords of different places in Germany
--------------------------------------
+Koordinaten verschiedener Orte in Deutschland
+---------------------------------------------
 
 <table>
 <thead>
@@ -322,8 +305,8 @@ Coords of different places in Germany
 </tbody>
 </table>
 
-Reverse geocoding
------------------
+Reverse Geokodierung
+--------------------
 
 > Reverse geocoding is the process of back (reverse) coding of a point
 > location (latitude, longitude) to a readable address or place name.
@@ -331,41 +314,26 @@ Reverse geocoding
 > and/or areal subdivisions such as neighbourhoods, county, state, or
 > country.
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Reverse_geocoding)
+Quelle: [Wikipedia](https://en.wikipedia.org/wiki/Reverse_geocoding)
 
     revgeocode(c(48,8))
 
     ## [1] "Unnamed Road, Somalia"
 
-Get the distance between 2 points
+Die Distanz zwischen zwei Punkten
 ---------------------------------
 
     mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
 
     mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 
-Get another distance
---------------------
+Eine andere Distanz bekommen
+----------------------------
 
     mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 
-Take Home Messages/Homework
----------------------------
-
-What you should know:
-
--   How to create a quick map
--   How to get a geocode
--   How to compute a distance
-
-Homework:
-
--   Please send me a map of a place/city you like very much
-
-And now some more advanced stuff....
-
-Geocoding - various points of interest
---------------------------------------
+Geokodierung - verschiedene Punkte von Interesse
+------------------------------------------------
 
     POI1 <- geocode("B2, 1 Mannheim",source="google")
     POI2 <- geocode("Hbf Mannheim",source="google")
@@ -382,48 +350,48 @@ Geocoding - various points of interest
     ##        lon      lat
     ## 1 8.466039 49.48746
 
-Points in map
--------------
+Punkte in der Karte
+-------------------
 
     MA_map +
     geom_point(aes(x = lon, y = lat),
     data = ListPOI)
 
-Points in map
--------------
+Punkte in der Karte
+-------------------
 
     MA_map +
     geom_point(aes(x = lon, y = lat),col="red",
     data = ListPOI)
 
-ggmap - adding different colors
--------------------------------
+ggmap - verschiedene Farben
+---------------------------
 
     ListPOI$color <- c("A","B","C")
     MA_map +
     geom_point(aes(x = lon, y = lat,col=color),
     data = ListPOI)
 
-ggmap - bigger dots
--------------------
+ggmap - größere Punkte
+----------------------
 
     ListPOI$size <- c(10,20,30)
     MA_map +
     geom_point(aes(x = lon, y = lat,col=color,size=size),
     data = ListPOI)
 
-Get a route from Google maps
-----------------------------
+Eine Route von Google maps bekommen
+-----------------------------------
 
     from <- "Mannheim Hbf"
     to <- "Mannheim B2 , 1"
     route_df <- route(from, to, structure = "route")
 
-[More
-information](http://rpackages.ianhowson.com/cran/ggmap/man/route.html)
+[Mehr
+Information](http://rpackages.ianhowson.com/cran/ggmap/man/route.html)
 
-Draw a map with this information
---------------------------------
+Eine Karte mit dieser Information zeichnen
+------------------------------------------
 
     qmap("Mannheim Hbf", zoom = 14) +
       geom_path(
@@ -431,23 +399,13 @@ Draw a map with this information
         data = route_df, lineend = "round"
       )
 
-![](ggmap_files/figure-markdown_strict/unnamed-chunk-41-1.png)<!-- -->
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-40-1.png)<!-- -->
 
-Resources
----------
+Wie fügt man Punkte hinzu
 
--   [Article by David Kahle and Hadley
-    Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
-    on the usage of ggmap.
--   [Grab a
-    map](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
--   [Making Maps in
-    R](http://www.kevjohnson.org/making-maps-in-r-part-2/)
-
-More about adding points
-
--   Usage of
+-   Nutzung von
     [geom\_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
+
 -   Question on
     [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
 
@@ -456,15 +414,32 @@ More about adding points
 Cheatsheet
 ----------
 
--   Cheatsheet on [data
+-   Cheatsheet zu [data
     visualisation](https://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf)
 
 ![pic](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.png)
 
-Resources and literature
-------------------------
+Resourcen und Literatur
+-----------------------
+
+-   [Artikel von David Kahle und Hadley
+    Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
+    on the usage of ggmap.
+-   [Eine Karte
+    greifen](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
+-   [Karten machen mit
+    R](http://www.kevjohnson.org/making-maps-in-r-part-2/)
 
 [ggmap: Spatial Visualization with
 ggplot2](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.375.8693&rep=rep1&type=pdf)
 
-by David Kahle and Hadley Wickham
+von David Kahle und Hadley Wickham
+
+Take Home Message
+-----------------
+
+Was klar sein sollte:
+
+-   Wie man eine schnelle Karte erzeugt
+-   wie man geokodiert
+-   Wie man eine Distanz berechnet

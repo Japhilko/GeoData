@@ -1,0 +1,14 @@
+---
+title: "Aufgabe - Nutzung von ggmap"
+author: "Jan-Philipp Kolb"
+date: "14. März 2016"
+output: html_document
+---
+
+## Aufgabe - Nutzung von ggmap
+
+- Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses Kurses speichern
+
+- Erzeugen Sie eine Karte von einem Ort, der Ihnen besonders gut gefällt und speichern Sie diesen
+
+- Versuchen Sie ihren Anreiseweg in einer Karte darzustellen
