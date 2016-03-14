@@ -9,7 +9,7 @@ Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files d
 Einführung und Vorbereitung
 ---------------------
 
-- Motivation ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.Rmd)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+- Motivation ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 - Unter [Infos github](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des  Verzeichnisses zu finden.
 

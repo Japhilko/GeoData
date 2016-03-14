@@ -2,7 +2,7 @@
 title: "Map Types with ggmap"
 author: "Jan-Philipp Kolb"
 date: "Wed Feb 17 08:19:18 2016"
-output: md_document
+output: html_document
 ---
 
 ## Gliederung
@@ -34,18 +34,13 @@ graph.path <- "../data/figure/"
 
 ## Straßenkarten
 
-[Mannheim](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+- Straßenkarte werden sehr häufig verwendet. 
+- Diese Karten zeigen Haupt- und Nebenstraßen (abhängig vom Detail) 
+- oft sind auch weitere Informationen enthalten. Wie beispielsweise Flughäfen, Städte, Campingplätze oder andere Orte von Interesse 
+- Beispiel einer Straßenkarte für [Mannheim](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim). 
 
-A road map is one of the most widely used map types. 
 
-- These maps show major and minor highways and roads (depending on
-detail) 
-- as well as things like airports, city locations and points of
-interest like parks, campgrounds and monuments. 
-- Major highways on a road map are generally red and larger than other roads, 
-- while minor roads are a lighter color and a narrower line.
-
-## Road maps
+## Straßenkarten
 
 ```{r,echo=F,warning=F,message=F,eval=Ex}
 if(internet){

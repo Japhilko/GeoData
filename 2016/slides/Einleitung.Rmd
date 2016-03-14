@@ -1,9 +1,44 @@
 ---
-title: "Einleitung"
+title: "Einleitung und Motivation"
 author: "Jan-Philipp Kolb"
-date: "17 Februar 2016"
-output: html_document
+date: "7 April 2016"
+output: md_document
 ---
+
+## Motivation - Geschichte
+
+- Räumliche Darstellungen haben eine lange Geschichte
+
+![DiMauroMap](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/FraMauroDetailedMap.jpeg.jpg)
+
+## Motivation - aktuelle Phänomene
+
+- Die räumliche Darstellung hilt beim Verstehen (aktueller) sozialwissenschaftlicher Phänomene.
+
+
+![migrantroute](https://camo.githubusercontent.com/5cb1ec9daa4eac2f5ecfd2a6af1de67d8536bd2b/687474703a2f2f69636865662e626263692e636f2e756b2f6e6577732f3632342f63707370726f6470622f333246362f70726f64756374696f6e2f5f38353136343033315f6d696772616e745f6a6f75726e6579735f7475726b65795f746f5f6765726d616e795f3632342e706e67)
+
+## Detailtreue
+
+Anteil der Sozialhilfeempfänger in Berlin 
+
+![Berlinmap](https://camo.githubusercontent.com/112bcb5d023a4bb5abfb4a3fedc8ec6f510fd4e0/687474703a2f2f7777772e74616765737370696567656c2e64652f696d616765732f736f7a69616c68696c6665656d706661656e6765722f313438373333362f352d666f726d617431312e6a7067)
+
+
+## Verfügbarkeit der Daten
+
+![ZensusAtlas](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Zensus_Mannheim2.png)
+
+
+## Motivation
+
+- Durch die INSPIRE Richtlinie und *Collaborative Mapping* wächst der verfügbare Bestand an Geodaten.
+
+
+- Daten sind oft frei verfügbar im Internet (z.B. durch die Nutzung von APIs)
+- Die Daten sind allerdings oft wenig oder gar nicht strukturiert (z.B. Internet Dokumente), heterogen und
+- meistens nicht für die Nutzung zur räumlichen Visualisierung vorgesehen, beinhalten aber implizit  geographische Informationen (Web 2.0)
+- Oftmals sind wenig oder keine Metadaten vorhanden
 
 ## Gründe für die Nutzung von R
 
@@ -16,7 +51,7 @@ output: html_document
 - ...
 
 
-## Gründe
+## Noch mehr Gründe
 
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
 
@@ -62,37 +97,30 @@ output: html_document
 
 ![Surnames London](http://mappinglondon.co.uk/wp-content/uploads/2011/11/surnames1.png)
 
-## Beispiel Indikatoren für Europa
 
-[Indikatoren](https://japhilko.shinyapps.io/Choropleths/) für Europa
+## Links mit Beispielen
 
-<https://japhilko.shinyapps.io/Choropleths/>
+- Shiny App zu [Indikatoren](https://japhilko.shinyapps.io/Choropleths/) für Europa
 
+- Räumliche Visualisierung in den USA - [Walmarts in den USA](https://rpubs.com/Radcliffe/walmart)
+- [Race Gap Police USA](http://www.nytimes.com/interactive/2014/09/03/us/the-race-gap-in-americas-police-departments.html?_r=0) - [Wahl USA](http://fivethirtyeight.com/)
 
-## Links
+- Zeit Artikel zum Zustand der [Eisenbahnbrücken](http://detektor.fm/digital/datenjournalismus-interaktive-karte-zeigt-marode-deutsche-bahn-bruecken) 
 
-- Andreas Plank [Grafiken und Statistik in R](http://www.chironomidaeproject.com/fileadmin/downloads/Formeln_in_R.pdf)
-
-Beispiel Interaktive Karten - [Walmarts in den USA](https://rpubs.com/Radcliffe/walmart)
-
-
-- [Race Gap Police USA](http://www.nytimes.com/interactive/2014/09/03/us/the-race-gap-in-americas-police-departments.html?_r=0)
-
-
-- [Wahl USA](http://fivethirtyeight.com/)
-
-- pegel-online
-
-- [Zeit - Eisenbahnbrücken](http://detektor.fm/digital/datenjournalismus-interaktive-karte-zeigt-marode-deutsche-bahn-bruecken)
-
-- [driven by data](http://driven-by-data.net/)
-
-- [Fahrradunfälle](http://michael-hoerz.de/maps/berlin-bike/)
-
-## Weitere Beispiele
-
+- [Fahrradunfälle](http://michael-hoerz.de/maps/berlin-bike/) in Berlin
 
 - [Verteilung Fußballfans](http://interaktiv.morgenpost.de/beta-fussballkarte/#7/51.258/10.756)
 
+
 - [Plastiktüten im Meer](http://news.nationalgeographic.com/news/2014/07/140715-ocean-plastic-debris-trash-pacific-garbage-patch/)
+
+
+Datenquellen: 
+
+- [Pegelstände](https://www.pegelonline.wsv.de/gast/start) in Deutschland
+- [driven by data](http://driven-by-data.net/)
+
+## Resourcen
+
+- Andreas Plank [Grafiken und Statistik in R](http://www.chironomidaeproject.com/fileadmin/downloads/Formeln_in_R.pdf)
 

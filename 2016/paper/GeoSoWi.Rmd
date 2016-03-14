@@ -8,6 +8,8 @@ output: html_document
 
 ## Motivation
 
+Die räumliche Darstellung hilt beim verstehen sozialwissenschaftlicher Phänomene. 
+
 Im vorliegenden Artikel geht es um Informationen mit Raumbezug. Im folgenden wird von Geodaten die Rede sein. Diesen Geodaten werden von vielen Seiten ein enormes Wertschöpfungspotential zugetraut.
 
 zu erkennen ist gewinnt das Thema immer mehr an Bedeutung. Erkennen kann man dies unter anderem an dem Bericht des RatSWD „Georefernzierung von Daten - Situation und Zukunft der Geodatenlandschaft in Deutschland“.
