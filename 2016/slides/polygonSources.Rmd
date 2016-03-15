@@ -1,7 +1,7 @@
 ---
-title: "Sources for polygons"
+title: "Quellen für Polygonzüge"
 author: "Jan-Philipp Kolb"
-date: "04/24/2015"
+date: "07 April 2016"
 output: beamer_presentation
 ---
 
@@ -10,21 +10,21 @@ output: beamer_presentation
 ```{r,echo=F}
 library(knitr)
 ca <- T
+Ex2 <- T
 ```
 
-## The shapefile format ... 
+## Das shapefile Format ... 
 
-- ... is a popular geospatial vector data format for geographic information system (GIS) software. 
-- It is developed and regulated by Esri as a (mostly) open specification for data interoperability among Esri and other GIS software products. 
-- The shapefile format can spatially describe vector features: points, lines, and polygons, representing, for example, water wells, rivers, and lakes. 
-- Each item usually has attributes that describe it, such as name or temperature.
+- ... ist ein beliebtes Format räumlicher Vektordaten für geographisches Informationssysteme (GIS).
+- Es wurde entwickelt und reguliert von [ESRI](http://www.esri.com/)
 
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Shapefile)
+- (meist) offene Spezifikation um Daten Interoperabilität zwischen Esri und anderen Formaten zu sichern. 
 
-## Bundesamt für Kartographie und Geodäsie (BKG)
+- Es können Punkte, Linien und Polygone beschrieben werden
 
-[Link zum Download der Karten](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
+- Jedes Element hat Attribute, wie bspw. Name oder Temperatur die es beschreiben.
 
+Quelle: [Wikipedia](https://en.wikipedia.org/wiki/Shapefile)
 
 
 ## Global Adminastrative Boundaries - [GADM](http://www.gadm.org/) - NUTS level 1
@@ -35,27 +35,27 @@ LUX1 <- getData('GADM', country='LUX', level=1)
 plot(LUX1)
 ```
 
-## Let's have a look at the data
+## Ein Blick auf die Daten
 
 ```{r,eval=F,echo=F}
 LUXA <- LUX1[1,]
 plot(LUXA)
 ```
 
-How to get the information on the polygons 
+Wie bekommt man zusätzliche Infos ins Objekt 
 
 ```{r,eval=F}
 LUX1@polygons[[1]]@Polygons[[1]]@coords
 ```
 
 
-## Coordinates in polygon slot
+## Koordinaten im polygon slot
 
 ```{r,echo=F}
 kable(head(LUX1@polygons[[1]]@Polygons[[1]]@coords))
 ```
 
-## Data slot
+## Daten slot
 
 ```{r}
 head(LUX1@data)
@@ -84,12 +84,12 @@ plot(DEU3)
 ```
 
 
-## Postal codes for Germany
+## PLZ für Deutschland
 
 <http://datahub.io/de/dataset/postal-codes-de>
 
 
-```{r,eval=T,echo=F,message=F}
+```{r,eval=Ex2,echo=T,message=F}
 setwd("D:/Daten/Daten/GeoDaten")
 library(rgdal)
 PLZ <- readOGR ("post_pl.shp","post_pl")
@@ -97,20 +97,21 @@ PLZ <- readOGR ("post_pl.shp","post_pl")
 
 
 
-```{r,cache=ca,warning=F,message=F,eval=F}
+```{r,cache=ca,warning=F,message=F,eval=F,echo=F}
 library(maptools)
 PLZ <- readShapePoly("post_pl.shp")
 ```
 
-## R-command readShapePoly
+## Der R Befehl readShapePoly
 
-To read shapefiles it is necessary to have three files with the following file extensions in the same directory:
+Um Shape-Dateien zu lesen, ist es notwendig, 
+die drei Dateien mit den folgenden Dateierweiterungen im gleichen Verzeichnis zu haben:
 
 - .shp
 - .dbf
 - .shx
 
-## Plot Mannheim
+## Mannheim zeichnen
 
 ```{r,echo=F}
 #bbox4 <- bbox(MA)
@@ -122,8 +123,11 @@ plot(MA)
 ```
 
 
-## [Source GeoData Germany](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=14&gdz_user_id=0)
+## Gemeinden in Deutschland
 
+Bundesamt für Kartographie und Geodäsie (BKG)
+
+[Link zum Download der Karten](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
 
 ```{r,cache=T,message=F,warning=F}
 library(maptools)
@@ -132,7 +136,7 @@ krs <- readShapePoly("vg250_krs.shp")
 plot(krs)
 ```
 
-## Districts for one federal state
+## Kreise eines Bundeslandes
 
 ```{r}
 fds <- substr(krs@data$AGS,1,2)
@@ -141,7 +145,7 @@ plot(krs[fds=="05",])
 ```
 
 
-## [primary election-areas (Germany)](http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/ONB_Grenzen.html)
+## [Wahlkreise in Deutschland](http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/ONB_Grenzen.html)
 
 ```{r,cache=T}
 setwd("D:/Daten/Daten/GeoDaten")
@@ -150,14 +154,14 @@ onb <- readShapePoly("onb_grenzen.shp")
 kable(head(onb@data))
 ```
 
-## The primary election-areas 06
+## Vorwahlbereich 06
 
 ```{r,cache=T}
 VW <- substr(onb@data$VORWAHL,1,2)
 plot(onb[VW=="06",])
 ```
 
-## Which is Mannheim?
+## Wo ist Mannheim?
 
 ```{r,cache=T}
 Com <- onb@data$NAME
@@ -170,7 +174,7 @@ plot(onb[Com=="Kaiserslautern",],col="blue",add=T)
 
 ## [World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
 
-```{r,message=F,warning=F,eval=F,echo=F}
+```{r,message=F,warning=F,eval=F,echo=T}
 setwd("D:/Daten/Daten/GeoDaten/WPI_Shapefile")
 WPI <- readShapePoly("WPI.shp")
 library(rgdal)
@@ -178,35 +182,29 @@ WPI <- readOGR ("WPI.shp","WPI")
 plot(WPI)
 ```
 
-
-
-## Other sources
+## Andere Quellen
 
 ```{r,eval=F,echo=F}
 git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData"
 setwd(git.path)
 ```
 
-Extra Map Databases
+Datenbanken für Karten
 
 ```{r,message=F,warning=F}
 library(mapdata)
 ```
 
-- Information about rivers
-
-## Further sources
-
-- [Eurostat maps](http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/
+- [Eurostat Karten](http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/
 references/administrative_units_statistical_units_1)
 
 - [Open linked data](https://www.ordnancesurvey.co.uk/business-and-government/products/opendata-products-grid.html)
 
-- [World Borders Dataset](http://thematicmapping.org/downloads/world_borders.php)
+- [World Borders Datensatz](http://thematicmapping.org/downloads/world_borders.php)
 - [National Historical Information System](https://www.nhgis.org/)
 
-- [Free polygon data for the US](http://www.freemapdata.com/html/free_polygon_data.html)
+- [Freie polygon Daten für die USA](http://www.freemapdata.com/html/free_polygon_data.html)
 
 - [Spatial Data in R](https://science.nature.nps.gov/im/datamgmt/statistics/r/advanced/spatial.cfm)
 
-- [ggmap and shapefiles](http://www.r-bloggers.com/shapefile-polygons-plotted-on-google-maps-using-ggmap-in-r-throw-some-throw-some-stats-on-that-mappart-2/)
+- [ggmap und shapefiles](http://www.r-bloggers.com/shapefile-polygons-plotted-on-google-maps-using-ggmap-in-r-throw-some-throw-some-stats-on-that-mappart-2/)

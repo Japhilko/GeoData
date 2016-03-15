@@ -15,7 +15,7 @@ Einführung und Vorbereitung
 
 - Um den Kurs zu verfolgen muss [R](https://cran.uni-muenster.de/) und [Rstudio](https://www.rstudio.com/products/rstudio/download/) installiert werden. Der Installationsprozess ist relativ einfach. 
 
-Verschiedene Kartentypen mit `ggmap`
+Verschiedene Kartentypen mit ggmap
 ---------------------
 
 - Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
@@ -29,11 +29,11 @@ Quellen für räumliche Daten
 
 - Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html) ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
 
-- Choroplethen mit dem R-Paket maptools ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.Rmd) 
+- Choroplethen mit dem R-Paket maptools ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md) 
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
 
 
-- Quellen für Geodaten ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.Rmd)|
+- Quellen für Geodaten ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)|
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 
 - Administrative Grenzen mit [GADM](http://www.gadm.org/) 
