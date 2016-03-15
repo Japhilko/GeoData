@@ -5,3 +5,32 @@ date: "Thu Mar 10 08:27:12 2016"
 output: html_document
 ---
 
+## OpenStreetMap Projekt
+
+## [PostgreSQL](http://www.postgresql.org/)
+
+
+
+
+## PostGIS
+
+- [PostGIS Erweiterung](http://postgis.net/install/)
+
+```
+CREATE EXTENSION postgis;
+```
+
+
+## osm2pgsql
+
+- Läuft unter Linux deutlich besser
+
+```
+osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
+```
+
+## Nutze [QGIS](http://www.qgis.org/de/site/)
+
+![qgis](https://www.qgis.org/de/_images/qgisdesktopscreenshot.jpg)
+
+
