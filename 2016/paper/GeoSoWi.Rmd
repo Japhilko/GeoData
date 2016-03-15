@@ -12,7 +12,7 @@ Die räumliche Darstellung hilt beim verstehen sozialwissenschaftlicher Phänome
 
 Im vorliegenden Artikel geht es um Informationen mit Raumbezug. Im folgenden wird von Geodaten die Rede sein. Diesen Geodaten werden von vielen Seiten ein enormes Wertschöpfungspotential zugetraut.
 
-zu erkennen ist gewinnt das Thema immer mehr an Bedeutung. Erkennen kann man dies unter anderem an dem Bericht des RatSWD „Georefernzierung von Daten - Situation und Zukunft der Geodatenlandschaft in Deutschland“.
+Erkennen kann man dies unter anderem an dem Bericht des RatSWD „Georefernzierung von Daten - Situation und Zukunft der Geodatenlandschaft in Deutschland“.
 
 Auch in den Sozialwissenschaften kann viel Mehrwert beispielsweise durch die Nutzung von georeferenzierten Kontextdaten geschaffen werden.
 
@@ -33,6 +33,9 @@ Zu unterscheiden ist zwischen Geokodierung von Individualdaten (beispielsweise v
 
 Georeferenzierten Kontextdaten sind Metadaten zu einem geographischen Punkt (vgl. Radl et al., 2013). Dabei handelt es sich um Informationen die nicht personenbezogen sind, beispielsweise die Erreichbarkeit eines Punktes mit öffentlichen Verkehrsmitteln oder die Anzahl der Schulen oder Kindergärten in der Umgebung. Ein weiteres Beispiel für Kontextdaten wäre die Zahl der Krankenhäuser in einem Umkreis von 20 km handeln.
 Die Geokodierung von Umfragedaten darf in vielen Fällen wenn überhaupt nur zum Zeitpunkt der Erhebung durchgeführt werden. 
+
+## Verschiedene Kartentypen
+
 
 ## Datenquellen für räumliche Daten
 
