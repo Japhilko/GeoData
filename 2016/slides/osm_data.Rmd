@@ -14,7 +14,13 @@ output: html_document
 
 ## [PostgreSQL](http://www.postgresql.org/)
 
+- [Einführung](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)
 
+- PostgreSQL hat den Vorteil, dass es Open-Source ist.
+
+- [Download PostreSQL](http://www.postgresql.org/download/windows/)
+- Starte pgAdmin III
+- Um Verknüpfung zu einer Datenbank herzustellen - Doppelklick auf den Server in pgAdmin III
 
 
 ## PostGIS
@@ -36,6 +42,6 @@ osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
 
 ## Nutze [QGIS](http://www.qgis.org/de/site/)
 
-![qgis](https://www.qgis.org/de/_images/qgisdesktopscreenshot.jpg)
+![qgis](https://underdark.files.wordpress.com/2012/07/stamen_watercolor1.png?w=700)
 
 - [Plugin OpenLayers](http://www.qgistutorials.com/de/docs/downloading_osm_data.html)
