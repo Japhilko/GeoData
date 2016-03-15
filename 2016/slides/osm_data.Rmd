@@ -5,7 +5,12 @@ date: "Thu Mar 10 08:27:12 2016"
 output: html_document
 ---
 
-## OpenStreetMap Projekt
+## [OpenStreetMap](http://www.openstreetmap.de/) Projekt
+
+
+> OpenStreetMap.org ist ein im Jahre 2004 gegründetes internationales Projekt mit dem Ziel, eine freie Weltkarte zu erschaffen. Dafür sammeln wir weltweit Daten über Straßen, Eisenbahnen, Flüsse, Wälder, Häuser und vieles mehr. 
+
+<http://www.openstreetmap.de/>
 
 ## [PostgreSQL](http://www.postgresql.org/)
 
@@ -33,4 +38,4 @@ osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
 
 ![qgis](https://www.qgis.org/de/_images/qgisdesktopscreenshot.jpg)
 
-
+- [Plugin OpenLayers](http://www.qgistutorials.com/de/docs/downloading_osm_data.html)
