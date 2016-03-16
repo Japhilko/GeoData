@@ -57,6 +57,8 @@ Und schon kann die erste Karte erstellt werden:
 
     qmap("Mannheim")
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
+
 Karte für eine Sehenswürdigkeit
 -------------------------------
 
@@ -120,40 +122,56 @@ Ein anderes *zoom level*
 
     qmap("Mannheim", zoom = 12)
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-12-1.png)<!-- -->
+
 Näher rankommen
 ---------------
 
     qmap('Mannheim', zoom = 13)
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-13-1.png)<!-- -->
 
 Ganz nah dran
 -------------
 
     qmap('Mannheim', zoom = 20)
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-14-1.png)<!-- -->
+
 ggmap - Quelle OpenStreetMap
 ----------------------------
 
     qmap('Mannheim', zoom = 14, source="osm")
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-15-1.png)<!-- -->
 
 ggmap - OpenStreetMap - schwarz/weiß
 ------------------------------------
 
     qmap('Mannheim', zoom = 14, source="osm",color="bw")
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-16-1.png)<!-- -->
+
 ggmap - maptype satellite
 -------------------------
 
     qmap('Mannheim', zoom = 14, maptype="satellite")
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-17-1.png)<!-- -->
 
 ggmap - maptype satellite zoom 21
 ---------------------------------
 
     qmap('Mannheim', zoom = 21, maptype="hybrid")
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-18-1.png)<!-- -->
+
 ggmap - maptype hybrid
 ----------------------
 
     qmap("Mannheim", zoom = 14, maptype="hybrid")
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-19-1.png)<!-- -->
 
 Terrain/physical maps
 ---------------------
@@ -192,11 +210,15 @@ ggmap - maptype watercolor
     qmap('Mannheim', zoom = 14,
      maptype="watercolor",source="stamen")
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-21-1.png)<!-- -->
+
 ggmap - source stamen
 ---------------------
 
     qmap('Mannheim', zoom = 14,
      maptype="toner",source="stamen")
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-22-1.png)<!-- -->
 
 ggmap - maptype toner-lite
 --------------------------
@@ -204,17 +226,23 @@ ggmap - maptype toner-lite
     qmap('Mannheim', zoom = 14,
      maptype="toner-lite",source="stamen")
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-23-1.png)<!-- -->
+
 ggmap - maptype toner-hybrid
 ----------------------------
 
     qmap('Mannheim', zoom = 14,
      maptype="toner-hybrid",source="stamen")
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-24-1.png)<!-- -->
+
 ggmap - maptype terrain-lines
 -----------------------------
 
     qmap('Mannheim', zoom = 14,
      maptype="terrain-lines",source="stamen")
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->
 
 Graphiken speichern
 -------------------
@@ -325,12 +353,27 @@ Die Distanz zwischen zwei Punkten
 
     mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
 
+    ##             from             to   m    km     miles seconds  minutes
+    ## 1 Q1, 4 Mannheim B2, 1 Mannheim 746 0.746 0.4635644     187 3.116667
+    ##        hours
+    ## 1 0.05194444
+
     mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
+
+    ##             from             to   m    km     miles seconds minutes
+    ## 1 Q1, 4 Mannheim B2, 1 Mannheim 546 0.546 0.3392844     420       7
+    ##       hours
+    ## 1 0.1166667
 
 Eine andere Distanz bekommen
 ----------------------------
 
     mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
+
+    ##             from             to   m    km    miles seconds  minutes
+    ## 1 Q1, 4 Mannheim B2, 1 Mannheim 555 0.555 0.344877     215 3.583333
+    ##        hours
+    ## 1 0.05972222
 
 Geokodierung - verschiedene Punkte von Interesse
 ------------------------------------------------
@@ -357,12 +400,16 @@ Punkte in der Karte
     geom_point(aes(x = lon, y = lat),
     data = ListPOI)
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
+
 Punkte in der Karte
 -------------------
 
     MA_map +
     geom_point(aes(x = lon, y = lat),col="red",
     data = ListPOI)
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-36-1.png)<!-- -->
 
 ggmap - verschiedene Farben
 ---------------------------
@@ -372,6 +419,8 @@ ggmap - verschiedene Farben
     geom_point(aes(x = lon, y = lat,col=color),
     data = ListPOI)
 
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-37-1.png)<!-- -->
+
 ggmap - größere Punkte
 ----------------------
 
@@ -379,6 +428,8 @@ ggmap - größere Punkte
     MA_map +
     geom_point(aes(x = lon, y = lat,col=color,size=size),
     data = ListPOI)
+
+![](ggmap_files/figure-markdown_strict/unnamed-chunk-38-1.png)<!-- -->
 
 Eine Route von Google maps bekommen
 -----------------------------------

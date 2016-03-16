@@ -24,7 +24,7 @@ Mit [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap) kann man eine 
 
 ```{r,echo=F,warning=F}
 internet=F
-Ex <- F
+Ex <- T
 Ca <- T
 library(knitr)
 
