@@ -177,10 +177,10 @@ qmap('Mannheim', zoom = 14, source="osm",color="bw")
 qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
-## ggmap - maptype satellite zoom 21
+## ggmap - maptype satellite zoom 20
 
 ```{r,message=F,eval=Ex,cache=Ca}
-qmap('Mannheim', zoom = 21, maptype="hybrid")
+qmap('Mannheim', zoom = 20, maptype="hybrid")
 ```
 
 
