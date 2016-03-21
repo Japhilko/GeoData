@@ -10,3 +10,4 @@ install.packages("RJSONIO")
 
 install.packages("SoDA")
 install.packages("RPostgreSQL")
+install.packages("tmap")
