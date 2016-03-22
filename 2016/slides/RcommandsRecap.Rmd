@@ -20,6 +20,13 @@ install.packages("ggmap")
 library("ggmap")
 ```
 
+## Hilfe bekommen
+
+```{r,eval=F}
+?qmap
+```
+
+
 ## Sequenzen
 
 ```{r}

@@ -9,8 +9,8 @@ Politische Karte:
 
 -   Ein typisches Beispiel ist eine Karte der US-Staaten
 
-Political Map
--------------
+Politische Karte
+----------------
 
 ![](maps_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
 
@@ -49,15 +49,15 @@ Eine Frankreichkarte
 Politische Karte - Italien
 --------------------------
 
-Get the borders in blue color:
+Grenzen in blau:
 
     library ( maps )
     map ("italy", col = "blue")
 
 ![](maps_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
 
-Choropleths - package maps
---------------------------
+Choroplethen - R-Paket maps
+---------------------------
 
 If we want the areas in blue:
 
@@ -96,7 +96,7 @@ Try also
     map("italy",fill=T, col = rgb(1,1,1))
     map("italy",fill=T, col = rgb(1,0.5,0.4))
 
-Choropleths - package maps
+Choropleths - R-Paket maps
 --------------------------
 
 If you want to know, which region is at which place:
@@ -159,7 +159,7 @@ A map for Germany
 
 ![](maps_files/figure-markdown_strict/unnamed-chunk-18-1.png)<!-- -->
 
-Package maps - two countries
+R-Paket maps - two countries
 ----------------------------
 
     map("world", c("Germany","Poland"))
@@ -174,7 +174,7 @@ Two countries with color
 
 ![](maps_files/figure-markdown_strict/unnamed-chunk-20-1.png)<!-- -->
 
-Package maps - additional features
+R-Paket maps - additional features
 ----------------------------------
 
     map("world", "China")
@@ -182,7 +182,7 @@ Package maps - additional features
 
 ![](maps_files/figure-markdown_strict/unnamed-chunk-21-1.png)<!-- -->
 
-Package maps - additional features
+R-Paket maps - additional features
 ----------------------------------
 
 Like `map`, but labels the regions:
@@ -193,8 +193,8 @@ Like `map`, but labels the regions:
 
 Pennsylvania counties
 
-R-package maps - World cities
------------------------------
+R-Paket maps - World cities
+---------------------------
 
 `data` loads specified data sets, or lists the available data sets.
 
@@ -367,8 +367,8 @@ Different sizes - different colors
 
 ![](maps_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
 
-Thematic maps with R-package maps
----------------------------------
+Thematic maps with R-Paket maps
+-------------------------------
 
 Data basis - CIA World DataBank II
 
@@ -381,7 +381,7 @@ Example: US Unemployment
 ------------------------
 
 -   [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html)
-    about the usage of package maps
+    about the usage of Paket maps
 
 Get the data:
 
@@ -389,8 +389,8 @@ Get the data:
     data(unemp)
     data(county.fips)
 
-Color gradients
----------------
+Farbverläufe
+------------
 
     library(colorRamps)
     colors <- blue2red(6)

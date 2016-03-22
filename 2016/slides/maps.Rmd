@@ -2,7 +2,7 @@
 title: "R-Paket maps"
 author: "Jan-Philipp Kolb"
 date: "Fri Sep 18 14:22:39 2015"
-output: md_document
+output: html_document
 ---
 
 ```{r,echo=F,warning=F}
