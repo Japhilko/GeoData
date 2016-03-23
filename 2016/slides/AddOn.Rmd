@@ -1,0 +1,15 @@
+---
+title: "Add On"
+author: "Jan-Philipp Kolb"
+date: "23. März 2016"
+output: html_document
+---
+
+## TwittR
+
+```{r,eval=F,cache=ca,warning=F}
+library(twitteR)
+library(streamR)
+```
+
+<http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/>

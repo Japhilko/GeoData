@@ -13,6 +13,14 @@ output: html_document
 <http://www.openstreetmap.de/>
 
 
+## OpenStreetMap
+
+> OpenStreetMap (OSM) ist ein kollaboratives Projekt um eine editierbare Weltkarte zu erzeugen.
+
+[Wikipedia - OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap)
+
+
+
 ## [OSM Map Features](http://wiki.openstreetmap.org/wiki/DE:Map_Features)
 
 ![osmMapFeatues](http://docs.cartodb.com/img/layout/tutorials/overpassturbo/img2.efe758ad.png)
@@ -32,6 +40,16 @@ node
 out;
 ```
 
+## Download von OpenStreetMap Daten
+
+- Ausschnitte von OpenStreetMap für einzelne Städte ([metro extracts](https://mapzen.com/data/metro-extracts/))
+
+- Liste möglicher Datenquellen für räumliche Analysen ([weltweit](http://wiki.openstreetmap.org/wiki/Potential_Datasources), [Deutschland](http://wiki.openstreetmap.org/wiki/DE:Potential_Datasources)
+)
+
+- [SALB](http://wiki.openstreetmap.org/wiki/SALB) - Administrative Grenzen
+
+- Kartendaten ([openaprs](http://www.openaprs.net/))
 
 ## [PostgreSQL](http://www.postgresql.org/)
 

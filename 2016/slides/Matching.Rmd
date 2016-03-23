@@ -1,8 +1,11 @@
 ---
 title: "Daten verbinden"
 author: "Jan-Philipp Kolb"
-date: "Wed Oct 14 10:22:30 2015"
-output: html_document
+date: "07 April 2016"
+output:
+  html_document:
+    keep_md: true
+
 ---
 
 

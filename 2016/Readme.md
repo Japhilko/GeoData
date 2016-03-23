@@ -41,14 +41,14 @@ Quellen für räumliche Daten
 Sozialwissenschaftliche Datenquellen
 ---------------------
 
-- Daten Import ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
-
-
 - Öffentliche Daten zur freien Verfügung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd))
 
 - Daten von [datahub.io](https://datahub.io/de/) ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datahub.Rmd))
 
 - Beispiel: Webscraping ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
+
+- R-Recap: Daten Import ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+
 
 Verbindung, Editierung und Einfärbung
 ---------------------

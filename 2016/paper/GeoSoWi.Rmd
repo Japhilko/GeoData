@@ -43,7 +43,12 @@ Wenn es um die Darstellung von Ergebnissen für administrative Grenzen geht, kan
 
 - Datenquellen für räumliche Daten
 
-- Sozialwissenschaftliche Datenquellen
+## Sozialwissenschaftliche Datenquellen
+
+Die meisten Daten liegen nicht im proprietären R Format vor und müssen deshalb importiert werden. Eines der häufigsten Formate ist das csv Format. Solche Dateien können auch direkt aus dem Internet geladen werden. 
+
+
+
 
 ## Fazit und Ausblick
 

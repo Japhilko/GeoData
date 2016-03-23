@@ -1,17 +1,8 @@
----
-title: "Sozialwissenschaftliche Datenquellen"
-author: "Jan-Philipp Kolb"
-date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
----
+# Sozialwissenschaftliche Datenquellen
+Jan-Philipp Kolb  
+07 April 2016  
 
-```{r,echo=F,warning=F}
-library(knitr)
-ca=F
-Ex=F
-```
+
 
 
 ## Datenzugang
@@ -31,14 +22,9 @@ Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/euro
 
 [link](http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500)
 
-```{r,echo=F}
-# setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
-```
 
-```{r,echo=F,eval=F}
-library(xlsx)
-HHsr <- read.xlsx2("HHsavingRate.xls",1)
-```
+
+
 
 ## Zensus Atlas
 
@@ -55,7 +41,8 @@ Amazon Web Services ([AWS](http://aws.amazon.com/de/public-data-sets/))
 
 - [FAO Datenbank](http://cran.r-project.org/web/packages/FAOSTAT/index.html)
 
-```{r,eval=Ex}
+
+```r
 library("FAOSTAT")
 ```
 
@@ -63,7 +50,8 @@ library("FAOSTAT")
 
 - National health and nutrition examination survey
 
-```{r,eval=Ex}
+
+```r
 library(survey)
 data(nhanes)
 ```
@@ -71,24 +59,25 @@ data(nhanes)
 
 ## Das R-Paket datasets
 
-```{r,eval=Ex}
+
+```r
 library(datasets)
 ```
 
 Beispiel Erdbeben Datensatz:
 
-```{r,eval=Ex}
+
+```r
 head(quakes)
 ```
 
 
-```{r,echo=F,eval=Ex}
-kable(head(quakes))
-```
+
 
 ## Datensatz zum US Zensus
 
-```{r,message=F,eval=Ex}
+
+```r
 library(UScensus2010)
 ```
 
@@ -96,43 +85,39 @@ library(UScensus2010)
 
 [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html) - World Development Indicators (World Bank) - [Einführung in das Paket](https://github.com/vincentarelbundock/WDI)
 
-```{r,message=F,eval=Ex}
+
+```r
 library(WDI)
 ```
 
-```{r,eval=F,eval=Ex}
+
+```r
 WDIsearch('gdp')[1:10,]
 ```
 
-```{r,echo=F,eval=Ex}
-kable(WDIsearch('gdp')[1:10,])
-```
+
 
 
 ## Nutzung von WDI Daten
 
-```{r,cache=ca,eval=Ex}
+
+```r
 dat <-  WDI(indicator='NY.GDP.PCAP.KD', country=c('MX','CA','US'), start=1960, end=2012)
 head(dat)
 ```
 
-```{r,echo=F,eval=Ex}
-kable(head(dat))
-```
+
 
 ## Erste Grafik mit WDI Daten
 
-```{r,echo=F,cache=ca,eval=Ex}
-library(ggplot2)
-ggplot(dat, aes(year, NY.GDP.PCAP.KD, color=country)) + geom_line() + 
-    xlab('Year') + ylab('GDP per capita')
-```
+
 
 
 
 ## worldHires Daten
 
-```{r,cache=ca,warning=F,message=F,eval=Ex}
+
+```r
 library(mapdata)
 data(worldHiresMapEnv)
 map('worldHires', col=1:10)
@@ -145,7 +130,8 @@ map('worldHires', col=1:10)
 
 - [Paket HistData](http://www.inside-r.org/packages/cran/HistData)
 
-```{r,cache=ca,warning=F,eval=Ex}
+
+```r
 library(HistData)
 data(Arbuthnot)
 ```
@@ -157,7 +143,8 @@ data(Arbuthnot)
 - Nutzung von GDELT Daten ([Beispiel 1](http://quantifyingmemory.blogspot.de/2013/04/mapping-gdelt-data-in-r-and-some.html), 
 [Beispiel 2](http://www.kalevleetaru.com/))
 
-```{r,eval=F,cache=ca,warning=F,eval=Ex}
+
+```r
 library(GDELTtools)
 test.filter <- list(ActionGeo_ADM1Code=c("NI", "US"), ActionGeo_CountryCode="US")
 test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
@@ -174,7 +161,8 @@ test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
 
 - Mehr Daten [hier](http://openflights.org/data.html)
 
-```{r,eval=F}
+
+```r
 link1 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
 openflights/data/airports.dat"
 airport <- read.csv(link1, header = F)
@@ -196,7 +184,8 @@ route <- read.csv(link2, header = F)
 
 - [ADFC/opengeodb](http://www.fa-technik.adfc.de/code/opengeodb/)
 
-```{r,eval=Ex}
+
+```r
 link <- "http://www.fa-technik.adfc.de/code/opengeodb/DE9.tab"
 info <- read.csv(link,sep="\t",header=F)
 ```
