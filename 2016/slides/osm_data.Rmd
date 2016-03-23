@@ -12,6 +12,27 @@ output: html_document
 
 <http://www.openstreetmap.de/>
 
+## R-Paket osmar
+
+```{r,eval=F}
+library(osmar)
+api <- osmsource_api()
+```
+
+
+## Beispiel: Daten für Schwetzingen
+
+```{r,eval=F}
+library(ggmap)
+cityC <- geocode("Schwetzingen")
+bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
+ua <- get_osm(bb, source = api)
+```
+
+## [Overpass Turbo](https://overpass-turbo.eu/)
+
+![OverpassTurbo](http://blog.openstreetmap.de/wp-uploads/2014/01/Overpass_turbo_query_wizard_result_DE.png)
+
 ## [PostgreSQL](http://www.postgresql.org/)
 
 - [Einführung](https://datashenanigan.wordpress.com/2015/05/18/getting-started-with-postgresql-in-r/)

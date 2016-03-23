@@ -171,8 +171,9 @@ plot(onb[Com=="Heidelberg",],col="green",add=T)
 plot(onb[Com=="Kaiserslautern",],col="blue",add=T)
 ```
 
+## Andere Quellen
 
-## [World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
+[World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
 
 ```{r,message=F,warning=F,eval=F,echo=T}
 setwd("D:/Daten/Daten/GeoDaten/WPI_Shapefile")
@@ -182,7 +183,6 @@ WPI <- readOGR ("WPI.shp","WPI")
 plot(WPI)
 ```
 
-## Andere Quellen
 
 ```{r,eval=F,echo=F}
 git.path <- "C:/Users/kolbjp/Documents/GitHub/GeoData"

@@ -1,8 +1,8 @@
 ---
-title: "Map Types with ggmap"
+title: "Kartentypen mit ggmap"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: md_document
+output: ioslides_presentation
 ---
 
 ## Gliederung

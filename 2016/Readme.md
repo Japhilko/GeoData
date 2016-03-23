@@ -1,9 +1,9 @@
 Nutzung von Geodaten in den Sozialwissenschaften
 ====================
 
-Thema ist die Beschaffung und Nutzung von räumlichen Informationen (GeoDaten) in einem (sozial-) wissenschaftlichen Kontext.  Dabei handelt es sich bei den GeoDaten bspw. um Shapefiles oder  [OpenStreetMap](http://openstreetmap.de/) Daten.  Es werden vor allem Quellen f?r frei verf?gbare Daten vorgestellt. 
+Thema ist die Beschaffung und Nutzung von räumlichen Informationen (GeoDaten) in einem (sozial-) wissenschaftlichen Kontext.  Dabei handelt es sich bei den GeoDaten bspw. um Shapefiles oder  [OpenStreetMap](http://openstreetmap.de/) Daten.  Es werden vor allem Quellen für frei verfügbare Daten vorgestellt. 
 
-Als Beispiele f?r sozialwissenschaftliche Daten werden neben Public-Use-Files der Bev?kerungsbefragungen auch Daten des Zensus-Atlas und Daten von Eurostat, der Weltbank und freien Portalen wie [datahub.io](https://datahub.io/) und [Wikipedia](https://www.wikidata.org/wiki/Wikidata:Main_Page) verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird nur die Programmiersprache R genutzt. 
+Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files der Bev?kerungsbefragungen auch Daten des Zensus-Atlas und Daten von Eurostat, der Weltbank und freien Portalen wie [datahub.io](https://datahub.io/) und [Wikipedia](https://www.wikidata.org/wiki/Wikidata:Main_Page) verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird nur die Programmiersprache R genutzt. 
 
 
 Intro und Vorbereitung
@@ -22,7 +22,7 @@ Verschiedene Kartentypen mit ggmap
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
-- Übersicht wichtiger R-Befehle ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
+- R-Recap - Zuweisungen und Objekte  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
 
 Quellen für räumliche Daten
 ---------------------
