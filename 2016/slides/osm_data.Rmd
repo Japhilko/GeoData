@@ -12,26 +12,26 @@ output: html_document
 
 <http://www.openstreetmap.de/>
 
-## R-Paket osmar
 
-```{r,eval=F}
-library(osmar)
-api <- osmsource_api()
-```
+## [OSM Map Features](http://wiki.openstreetmap.org/wiki/DE:Map_Features)
 
+![osmMapFeatues](http://docs.cartodb.com/img/layout/tutorials/overpassturbo/img2.efe758ad.png)
 
-## Beispiel: Daten für Schwetzingen
-
-```{r,eval=F}
-library(ggmap)
-cityC <- geocode("Schwetzingen")
-bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
-ua <- get_osm(bb, source = api)
-```
 
 ## [Overpass Turbo](https://overpass-turbo.eu/)
 
 ![OverpassTurbo](http://blog.openstreetmap.de/wp-uploads/2014/01/Overpass_turbo_query_wizard_result_DE.png)
+
+
+## Query Overpass
+
+```
+node
+  [amenity=bar]
+  ({{bbox}});
+out;
+```
+
 
 ## [PostgreSQL](http://www.postgresql.org/)
 
@@ -66,3 +66,7 @@ osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
 ![qgis](https://underdark.files.wordpress.com/2012/07/stamen_watercolor1.png?w=700)
 
 - [Plugin OpenLayers](http://www.qgistutorials.com/de/docs/downloading_osm_data.html)
+
+## Links
+
+- [Wiki zum Downlaod](http://wiki.openstreetmap.org/wiki/Downloading_data)

@@ -2,7 +2,9 @@
 title: "Daten Import"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 07:54:24 2015"
-output: md_document
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r,echo=F}
@@ -13,11 +15,7 @@ Ex <- F
 
 ## Import von csv-Dateien
 
-```{r,eval=Ex}
-library("readr")
-```
-
-## csv-Dateien aus dem Internet direkt einlesen
+- csv-Dateien aus dem Internet direkt einlesen
 
 ```{r,eval=Ex}
 link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/TrustData.csv"
@@ -28,6 +26,11 @@ trust_data <- read_csv2(link)
 - Für Deutsche Daten sollte `read_csv2` verwendet werden
 
 ## Sich die Daten anzeigen lassen
+
+```{r,eval=F}
+head(trust_data)
+```
+
 
 ```{r,echo=F,eval=Ex}
 kable(trust_data[1:6,1:4])
@@ -40,7 +43,7 @@ colnames(trust_data)
 
 ## Import Excel-files
 
-```{r}
+```{r,warning=F}
 library("readxl")
 ```
 
@@ -49,10 +52,10 @@ library("readxl")
 ab <- read_excel("dataset.xlsx",sheet=1)
 ```
 
-- You have to provide a sheet index as second argument
+- Blatt Index als zweites Argument nötig
 
 
-## Overview of World Heritage Dataset
+## Übersicht zum Weltkulturerbe Datensatz
 
 ```{r,eval=Ex}
 table(whc$category)
@@ -63,14 +66,14 @@ colnames(whc)
 ```
 
 
-## Create a barplot
+## Ein Balkendiagramm erzeugen
 
 ```{r,eval=Ex}
 barplot(table(whc$category))
 ```
 
 
-## Import sav-files
+## Import .sav-Daten
 
 ```{r,echo=F,eval=Ex}
 setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
@@ -82,28 +85,30 @@ library(foreign)
 mz10 <- read.spss("mz2010_cf.sav",to.data.frame=T)
 ```
 
-## Command read.spss
+## Der Befehl read.spss
 
-![pic](figure/ReadSPSS.PNG) 
+```{r}
+?read.spss
+```
 
-## Read stata-files
 
-- Datset about students (2000) from [Forschungsdatenzentrum](http://www.forschungsdatenzentrum.de/bestand/studenten/cf/2000/index.asp)
-- Datset has 206.867 entries
+## stata-Dateien lesen
+
+- Datensatz über Studierende (2000) vom [Forschungsdatenzentrum](http://www.forschungsdatenzentrum.de/bestand/studenten/cf/2000/index.asp)
+- Datensatz hat 206867 Einträge
 
 ```{r,message=F,warning=F,eval=F}
 studis <- read.dta("studenten_cf_2000.dta")
 ```
 
-- Blog post about reading and writing stata files on [is.R](http://is-r.tumblr.com/post/37181850668/readingwriting-stata-dta-files-with-foreign)
+- Blog post zum lesen und schreiben von stata Dateien auf [is.R](http://is-r.tumblr.com/post/37181850668/readingwriting-stata-dta-files-with-foreign)
 
-## Quick R on data import
+## Quick R zum Datenimport
 
-![pic](figure/sminput.jpg) 
 
 http://www.statmethods.net/input/index.html
 
-## Data management a bit similar to SPSS
+## Datenmanagement ein wenig wie bei SPSS
 
 ```{r,eval=F}
 install.packages("Rz")
