@@ -12,3 +12,5 @@ install.packages("SoDA")
 install.packages("RPostgreSQL")
 install.packages("tmap")
 install.packages("RANN")
+
+install.packages("FAOSTAT")

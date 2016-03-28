@@ -5,13 +5,12 @@ date: "07 April 2016"
 output:
   html_document:
     keep_md: true
-
 ---
 
 
 ```{r,echo=F}
 library(knitr)
-data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
+# data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
 ```
 
 
@@ -69,7 +68,7 @@ CNames[CNames2=="An"]
 ```
 
 
-## Warum matching?
+## Warum Matching?
 
 Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
 
