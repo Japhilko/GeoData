@@ -16,3 +16,6 @@ install.packages("RANN")
 install.packages("FAOSTAT")
 install.packages("RANN")
 install.packages("rvest")
+
+
+install.packages("translateR")
