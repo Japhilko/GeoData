@@ -2,7 +2,7 @@
 title: "Webscraping"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 11:19:52 2015"
-output: slidy_presentation
+output: beamer_presentation
 ---
 
 
@@ -10,6 +10,7 @@ output: slidy_presentation
 library(knitr)
 Ex <- F
 Ex1 <- T
+Ex3 <- F
 ```
 
 ## Das R-Paket `XML`
@@ -25,8 +26,9 @@ library(XML)
 Einlesen einer Tabelle mit der Funktion `readHTMLTable`:
 
 Beispieldaten für die Bundesländer
-```{r,eval=Ex1}
-BLA_link <- "http://www.bernhard-gaul.de/wissen/bundeslaender.php"
+```{r,eval=Ex1,cache=T}
+BLA_link <- "http://www.bernhard-gaul.de/wissen/
+bundeslaender.php"
 BLA_tab <- readHTMLTable(BLA_link)
 ```
 
@@ -80,25 +82,76 @@ BLA_tab[,4] <- as.numeric(gsub(" ","",BLA_tab[,4]))
 
 Das Editing ist also aufwändiger als das eigentliche Scraping
 
+## Die Daten speichern
+
+```{r,eval=F,echo=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/data")
+```
+
+```{r,eval=F}
+write.csv(BLA_tab,file="BLA_tab.csv")
+```
+
+
 ## Das Paket `rvest`
 
 ```{r,eval=F}
 install.packages("rvest")
 ```
 
-```{r,eval=F}
+```{r,eval=F,cache=T}
 library("rvest")
 
-link <- "https://de.wikipedia.org/wiki/Liste_der_St%C3%A4dte_in_Finnland"
+link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlingskrise_in_Europa_ab_2015"
 
 link_data <- read_html(link)
+```
 
+```{r}
 # parse the document for R representation:
 mps.doc <- htmlParse(link_data)
+```
 
-# get all the tables in mps.doc as data frames
+
+Alle Tabellen bekommen:
+
+```{r}
 mps.tabs <- readHTMLTable(mps.doc) 
 ```
+
+## Daten zu Asylanträgen
+
+```{r}
+mps.tabs
+```
+
+## Daten bearbeiten
+
+```{r}
+mps.tabs <- mps.tabs[[2]]
+mps.tabs <- mps.tabs[-c(1,34),]
+```
+
+## Geburtenrate
+
+```{r,cache=T;eval=Ex3}
+link2 <- "http://www.laenderdaten.de/bevoelkerung/geburtenrate.aspx"
+link_data2 <- read_html(link2)
+doc <- htmlParse(link_data2)
+tab <- readHTMLTable(doc)
+tab1 <- tab[[2]]
+```
+
+## 
+
+```{r,cache=T}
+link3 <- "https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_fertility_rate"
+link_data3 <- read_html(link3)
+doc3 <- htmlParse(link_data3)
+tab3 <- readHTMLTable(doc3)
+tab4 <- tab3[[2]]
+```
+
 
 ## Links
 
