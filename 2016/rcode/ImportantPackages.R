@@ -14,3 +14,4 @@ install.packages("tmap")
 install.packages("RANN")
 
 install.packages("FAOSTAT")
+install.packages("RANN")
