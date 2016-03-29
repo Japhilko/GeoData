@@ -2,7 +2,9 @@
 title: "Datenquelle OpenStreetMap"
 author: "Jan-Philipp Kolb"
 date: "Thu Mar 10 08:27:12 2016"
-output: html_document
+output:
+  html_document:
+    keep_md: true
 ---
 
 ## [OpenStreetMap](http://www.openstreetmap.de/) Projekt

@@ -1,15 +1,15 @@
 ---
-title: "Web Scraping"
+title: "Webscraping"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 11:19:52 2015"
 output: slidy_presentation
 ---
 
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(knitr)
 Ex <- F
-Ex1 <- F
+Ex1 <- T
 ```
 
 ## Das R-Paket `XML`
@@ -22,7 +22,9 @@ library(XML)
 ```
 
 
+Einlesen einer Tabelle mit der Funktion `readHTMLTable`:
 
+Beispieldaten für die Bundesländer
 ```{r,eval=Ex1}
 BLA_link <- "http://www.bernhard-gaul.de/wissen/bundeslaender.php"
 BLA_tab <- readHTMLTable(BLA_link)
@@ -30,8 +32,36 @@ BLA_tab <- readHTMLTable(BLA_link)
 
 ## Überblick über die Daten
 
+```{r}
+BLA_tab <- BLA_tab[[1]]
+```
+
+
 ```{r,echo=F,eval=Ex1}
 kable(BLA_tab)
+```
+
+
+## Daten bearbeiten
+
+Die erste und 18. Zeile entfernen:
+
+```{r}
+BLA_tab <- BLA_tab[-c(1,18),-1]
+```
+
+
+## Die Daten editieren
+
+```{r}
+mean(BLA_tab[,2])
+```
+
+um dies zu ändern ist ein wenig Kosmetik notwendig:
+
+```{r}
+BLA_tab[,2] <- gsub(" ","",BLA_tab[,2])
+BLA_tab[,2] <- gsub(" ","",BLA_tab[,2])
 ```
 
 ## Das Paket `rvest`

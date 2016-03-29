@@ -8,20 +8,20 @@ output:
 ---
 
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(knitr)
 # data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
 ```
 
 
-## The wrld_simpl data set
+## Die `wrld_simpl` Daten 
 
 ```{r}
-library(maptools)
+library("maptools")
 data("wrld_simpl")
 ```
 
-Datensatz in die Daten-Registerkarte von Rstudio
+Datensatz in die Daten-Registerkarte von Rstudio schreiben
 
 ```{r}
 df_ws <- data.frame(wrld_simpl@data)
@@ -32,7 +32,7 @@ df_ws <- data.frame(wrld_simpl@data)
 
 Jetzt können wir den Rstudio Daten-Browser verwenden
 
-![pic](figure/RstudioDataBrowser.PNG) 
+![pic](https://github.com/Japhilko/GeoData/blob/master/data/figure/RstudioDataBrowser.PNG) 
 
 
 ## Der wrld_simpl Datensatz
