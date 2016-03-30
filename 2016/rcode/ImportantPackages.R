@@ -1,9 +1,14 @@
 # Packages
 
+install.packages("sp")
+install.packages("raster")
+
 install.packages("readr")
+install.packages("rvest")
 install.packages("readxl")
 install.packages("haven")
 install.packages("httr")
+install.packages("XML")
 
 install.packages("stringr")
 install.packages("RJSONIO")

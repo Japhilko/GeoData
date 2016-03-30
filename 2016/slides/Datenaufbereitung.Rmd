@@ -26,4 +26,24 @@ tab <- readHTMLTable(doc)
 
 ```{r,eval=Ex4}
 str(tab)
+tab[[1]]
+tab[[2]]
 ```
+
+## Auf die Daten schauen
+
+```{r,eval=Ex4}
+tab2 <- tab[[2]]
+head(tab2)
+```
+
+## Daten speichern
+
+```{r,eval=F,echo=F}
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/data")
+```
+
+```{r}
+write.csv(tab2,file="CO2emissions.csv")
+```
+
