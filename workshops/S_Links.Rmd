@@ -283,7 +283,4 @@ German videos on OSM
 
 ## [Hexamaps](http://www.r-bloggers.com/create-your-own-hexamaps/)
 
-![pic](http://www.56n.dk/wp-content/uploads/2016/01/hex_new.png)
-
-
-![]
+[pic](http://www.56n.dk/wp-content/uploads/2016/01/hex_new.png)

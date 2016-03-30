@@ -1,0 +1,1 @@
+# http://www.r-bloggers.com/easier-composite-u-s-choropleths-with-albersusa/
