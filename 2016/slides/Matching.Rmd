@@ -11,6 +11,7 @@ output:
 ```{r,echo=F,warning=F}
 library(knitr)
 # data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
+Ex2 <- F
 ```
 
 
@@ -68,23 +69,15 @@ CNames[CNames2=="An"]
 ```
 
 
-## Warum Matching?
+## CO2 Emissionen
 
-Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
-
-[link](http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500)
-
-```{r,echo=F}
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
+```{r}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/CO2emissions.csv"
+co2 <- read.csv(link)
 ```
 
 ```{r,echo=F}
-library(xlsx)
-HHsr <- read.xlsx2("HHsavingRate.xls",1)
-```
-
-```{r,echo=F}
-kable(HHsr[1:6,1:4])
+kable(co2[1:4,1:8])
 ```
 
 Wir müssen Länder in diesem Datensatz und Ländernamen in wrld_simpl-Datensatz zusammenbringen
@@ -112,7 +105,47 @@ E <- c("A",1,98,4)
 match(D,E)
 ```
 
-- Matching mit Ländernamen, um eine Karte mit wirtschaftlichen Indikatoren zu produzieren
+- Matching mit Ländernamen, um eine Karte mit CO2 Indikatoren zu produzieren
+
+## Matching
+
+```{r}
+ind <- match(wrld_simpl@data$NAME,co2$V2)
+ind
+```
+
+
+## Daten anspielen
+
+```{r}
+wrld_simpl@data$co2_90 <- co2$V3[ind]
+```
+
+```{r}
+library(sp)
+spplot(wrld_simpl,"co2_90")
+```
+
+
+## Matching mit Eurostat Daten
+
+Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
+
+[link](http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500)
+
+```{r,echo=F,eval=Ex2}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
+```
+
+```{r,echo=F,eval=Ex2}
+library(xlsx)
+HHsr <- read.xlsx2("HHsavingRate.xls",1)
+```
+
+```{r,echo=F,eval=Ex2}
+kable(HHsr[1:6,1:4])
+```
+
 
 
 ## Der wrld_simpl Datensatz
@@ -133,11 +166,9 @@ EUR <- EUR[-which(EUR@data$NAME=="Russia"),]
 plot(EUR)
 ```
 
-
-
 ## Matching Staaten
 
-```{r}
+```{r,eval=Ex2}
 as.character(HHsr[5:10,1])
 ```
 
@@ -146,7 +177,7 @@ EUR_Names <- as.character(EUR@data$NAME)
 head(EUR_Names)
 ```
 
-```{r}
+```{r,eval=Ex2}
 ind <- match(EUR_Names,HHsr[,1])
 head(ind)
 table(is.na(ind))
@@ -154,11 +185,11 @@ table(is.na(ind))
 
 ## Die Daten an Polygondaten anfügen
 
-```{r}
+```{r,eval=Ex2}
 EUR@data$HHsr <- as.numeric(as.character(HHsr[ind,2]))
 ```
 
-```{r}
+```{r,eval=Ex2}
 # Plot the map:
 library(sp)
 spplot(EUR,"HHsr")
