@@ -1,0 +1,29 @@
+---
+title: "Datenaufbereitung"
+author: "Jan-Philipp Kolb"
+date: "30 März 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,echo=F}
+Ex4=F
+```
+
+
+## CO2 Verbrauch
+
+```{r,cache=T,eval=Ex4}
+link <- "https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions_per_capita"
+link_data <- read_html(link)
+doc <- htmlParse(link_data)
+tab <- readHTMLTable(doc)
+```
+
+
+```{r,eval=Ex4}
+str(tab)
+```

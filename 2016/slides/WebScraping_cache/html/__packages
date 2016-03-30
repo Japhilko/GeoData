@@ -1,11 +1,7 @@
 base
-methods
-datasets
-utils
-grDevices
-graphics
-stats
 knitr
 XML
 sp
 raster
+xml2
+rvest

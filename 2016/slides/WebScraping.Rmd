@@ -2,15 +2,17 @@
 title: "Webscraping"
 author: "Jan-Philipp Kolb"
 date: "Wed Oct 14 11:19:52 2015"
-output: beamer_presentation
+output: html_document
 ---
 
 
 ```{r,echo=F,warning=F}
 library(knitr)
 Ex <- F
-Ex1 <- T
+Ex1 <- F
+Ex2 <- T
 Ex3 <- F
+Ex4 <- F
 ```
 
 ## Das R-Paket `XML`
@@ -34,7 +36,7 @@ BLA_tab <- readHTMLTable(BLA_link)
 
 ## Überblick über die Daten
 
-```{r}
+```{r,eval=Ex1}
 BLA_tab <- BLA_tab[[1]]
 ```
 
@@ -48,34 +50,34 @@ kable(BLA_tab)
 
 Die erste und 18. Zeile entfernen:
 
-```{r}
+```{r,eval=Ex1}
 BLA_tab <- BLA_tab[-c(1,18),-1]
 ```
 
 
 ## Die Daten editieren
 
-```{r}
+```{r,eval=Ex1}
 mean(BLA_tab[,2])
 ```
 
 um dies zu ändern ist ein wenig Kosmetik notwendig:
 
-```{r}
+```{r,eval=Ex1}
 BLA_tab[,2] <- gsub(" ","",BLA_tab[,2])
 BLA_tab[,2] <- gsub(",",".",BLA_tab[,2])
 BLA_tab[,2] <- as.numeric(BLA_tab[,2])
 ```
 
 
-```{r}
+```{r,eval=Ex1}
 mean(BLA_tab[,2])
 ```
 
 
 ## Die weiteren Spalten bearbeiten
 
-```{r}
+```{r,eval=Ex1}
 BLA_tab[,3] <- as.numeric(gsub(" ","",BLA_tab[,3]))
 BLA_tab[,4] <- as.numeric(gsub(" ","",BLA_tab[,4]))
 ```
@@ -95,11 +97,11 @@ write.csv(BLA_tab,file="BLA_tab.csv")
 
 ## Das Paket `rvest`
 
-```{r,eval=F}
+```{r,eval=F,message=F}
 install.packages("rvest")
 ```
 
-```{r,eval=F,cache=T}
+```{r,eval=Ex2,cache=T}
 library("rvest")
 
 link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlingskrise_in_Europa_ab_2015"
@@ -107,7 +109,7 @@ link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlingskrise_in_Europa_ab_2015"
 link_data <- read_html(link)
 ```
 
-```{r}
+```{r,eval=Ex2}
 # parse the document for R representation:
 mps.doc <- htmlParse(link_data)
 ```
@@ -115,34 +117,32 @@ mps.doc <- htmlParse(link_data)
 
 Alle Tabellen bekommen:
 
-```{r}
+```{r,eval=Ex2}
 mps.tabs <- readHTMLTable(mps.doc) 
 ```
 
 ## Daten zu Asylanträgen
 
-```{r}
+```{r,eval=Ex2}
 mps.tabs
 ```
 
 ## Daten bearbeiten
 
-```{r}
+```{r,eval=Ex2}
 mps.tabs <- mps.tabs[[2]]
 mps.tabs <- mps.tabs[-c(1,34),]
 ```
 
 ## Geburtenrate
 
-```{r,cache=T;eval=Ex3}
+```{r,cache=T,eval=Ex3}
 link2 <- "http://www.laenderdaten.de/bevoelkerung/geburtenrate.aspx"
 link_data2 <- read_html(link2)
 doc <- htmlParse(link_data2)
 tab <- readHTMLTable(doc)
 tab1 <- tab[[2]]
 ```
-
-## 
 
 ```{r,cache=T}
 link3 <- "https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_fertility_rate"
@@ -151,7 +151,6 @@ doc3 <- htmlParse(link_data3)
 tab3 <- readHTMLTable(doc3)
 tab4 <- tab3[[2]]
 ```
-
 
 ## Links
 
