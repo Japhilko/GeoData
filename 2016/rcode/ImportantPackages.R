@@ -24,3 +24,5 @@ install.packages("rvest")
 
 
 install.packages("translateR")
+install.packages("ggalt")
+install.packages("ggthemes")
