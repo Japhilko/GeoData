@@ -17,7 +17,7 @@ Ex2 <- F
 
 ## Die `wrld_simpl` Daten 
 
-```{r}
+```{r,warning=F,message=F}
 library("maptools")
 data("wrld_simpl")
 ```
