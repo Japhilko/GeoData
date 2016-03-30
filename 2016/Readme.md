@@ -47,6 +47,9 @@ Sozialwissenschaftliche Datenquellen
 
 - Beispiel: Webscraping ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
 
+- Datenaufbereitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md)) 
+
+
 - R-Recap: Daten Import ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 
 
