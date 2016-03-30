@@ -1,428 +1,403 @@
-Politische Karte:
------------------
+# R-Paket maps
+Jan-Philipp Kolb  
+07 April 2016  
 
--   Eine politische Karte zeigt keine topographischen Informationen.
 
--   Hauptsächlich sollen adminstrative Grenzen dargestellt werden.
 
--   Teilweise werden auch Städte mit eingezeichnet
 
--   Ein typisches Beispiel ist eine Karte der US-Staaten
+## Politische Karte:
 
-Politische Karte
-----------------
+- Eine politische Karte zeigt keine topographischen Informationen.
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
+- Hauptsächlich sollen adminstrative Grenzen dargestellt werden.
 
-Das R-Paket maps
-----------------
+- Teilweise werden auch Städte mit eingezeichnet
 
-    library(maps)
+- Ein typisches Beispiel ist eine Karte der US-Staaten
+
+## Politische Karte
+
+
+
+![](maps_files/figure-html/unnamed-chunk-3-1.png)
+
+
+
+## Das R-Paket maps
+
+
+```r
+library(maps)
+```
 
 Wie man Hilfe bekommt:
 
-    ?map
 
-Hallo Welt
-----------
+```r
+?map
+```
 
-    map()
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
 
-Ein erstes Argument
--------------------
+## Hallo Welt
+
+
+```r
+map()
+```
+
+![](maps_files/figure-html/unnamed-chunk-6-1.png)
+
+
+## Ein erstes Argument
 
 Der gleiche Befehl mit einem Argument:
 
-    map("usa")
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
+```r
+map("usa")
+```
 
-Eine Frankreichkarte
---------------------
+![](maps_files/figure-html/unnamed-chunk-7-1.png)
 
-    map("france")
+## Eine Frankreichkarte
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-8-1.png)<!-- -->
 
-Politische Karte - Italien
---------------------------
+```r
+map("france")
+```
+
+![](maps_files/figure-html/unnamed-chunk-8-1.png)
+
+## Politische Karte - Italien
 
 Grenzen in blau:
 
-    library ( maps )
-    map ("italy", col = "blue")
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
 
-Choroplethen - R-Paket maps
----------------------------
+```r
+library ( maps )
+map ("italy", col = "blue")
+```
 
-If we want the areas in blue:
+![](maps_files/figure-html/unnamed-chunk-9-1.png)
 
-    map ("italy",fill =T, col = "blue")
+## Choroplethen - R-Paket maps
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-10-1.png)<!-- -->
+Wir wollen die Flächen blau einfärben:
 
-More colors
------------
+```r
+map ("italy",fill =T, col = "blue")
+```
 
-Create a vector:
+![](maps_files/figure-html/unnamed-chunk-10-1.png)
 
-    colors <- c("blue","red","yellow")
+## Mehr Farben
 
-and use the vector to specify the color
+Einen Vektor erzeugen:
 
-    map ("italy",fill =T, col = colors)
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-12-1.png)<!-- -->
+```r
+colors <- c("blue","red","yellow")
+```
 
-Excursus: more colors!
-----------------------
+nun nutzrn wir den Vektor um die Farbe zu spezifizieren
 
-You can also use the
-[rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html)
-command to create your own colors:
 
-    map("italy",fill=T, col = rgb(0,1,0))
+```r
+map ("italy",fill =T, col = colors)
+```
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-13-1.png)<!-- -->
+![](maps_files/figure-html/unnamed-chunk-12-1.png)
 
-Try also
---------
+## Excurs: mehr Farben!
+Wir können auch den [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) Befehl nutzen um eigene Farben zu erzeugen:
 
-    map("italy",fill=T, col = rgb(1,0,0))
-    map("italy",fill=T, col = rgb(1,1,1))
-    map("italy",fill=T, col = rgb(1,0.5,0.4))
 
-Choropleths - R-Paket maps
---------------------------
+```r
+map("italy",fill=T, col = rgb(0,1,0))
+```
 
-If you want to know, which region is at which place:
+![](maps_files/figure-html/unnamed-chunk-13-1.png)
 
-    italy <- map("italy", plot = F)
-    head(italy$names)
+## Auch ausprobieren:
 
-    ## [1] "Bolzano-Bozen" "Belluno"       "Udine"         "Sondrio"      
-    ## [5] "Trento"        "Novara"
 
-Maps with only one argument
----------------------------
+```r
+map("italy",fill=T, col = rgb(1,0,0))
+map("italy",fill=T, col = rgb(1,1,1))
+map("italy",fill=T, col = rgb(1,0.5,0.4))
+```
 
-    map("county")
+## Choroplethen - R-Paket maps
+Wenn man wissen will, welche Region sich wohinter verbirgt:
 
-<table>
-<thead>
-<tr class="header">
-<th align="left">Argument</th>
-<th align="left">What</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">county</td>
-<td align="left">US Counties</td>
-</tr>
-<tr class="even">
-<td align="left">france</td>
-<td align="left">France</td>
-</tr>
-<tr class="odd">
-<td align="left">italy</td>
-<td align="left">Italy</td>
-</tr>
-<tr class="even">
-<td align="left">nz</td>
-<td align="left">New Zealand</td>
-</tr>
-<tr class="odd">
-<td align="left">state</td>
-<td align="left">US States</td>
-</tr>
-<tr class="even">
-<td align="left">usa</td>
-<td align="left">USA</td>
-</tr>
-<tr class="odd">
-<td align="left">world</td>
-<td align="left">Countries of the world</td>
-</tr>
-</tbody>
-</table>
-
-A map for Germany
------------------
-
-    library(maps)
-    map("world", "Germany")
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-18-1.png)<!-- -->
-
-R-Paket maps - two countries
-----------------------------
-
-    map("world", c("Germany","Poland"))
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-19-1.png)<!-- -->
-
-Two countries with color
-------------------------
-
-    map("world", c("Germany","Austria"),fill=T,
-    col=c("red","green"))
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-20-1.png)<!-- -->
-
-R-Paket maps - additional features
-----------------------------------
-
-    map("world", "China")
-    map.scale()
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-21-1.png)<!-- -->
-
-R-Paket maps - additional features
-----------------------------------
-
-Like `map`, but labels the regions:
-
-    map.text("county", "penn")
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-22-1.png)<!-- -->
-
-Pennsylvania counties
-
-R-Paket maps - World cities
----------------------------
-
-`data` loads specified data sets, or lists the available data sets.
-
-    data(world.cities)
-
-`head` - Return the First Part of an Object
-
-    head(world.cities)
-
-Overview of world cities data
------------------------------
-
-<table>
-<thead>
-<tr class="header">
-<th align="left">name</th>
-<th align="left">country.etc</th>
-<th align="right">pop</th>
-<th align="right">lat</th>
-<th align="right">long</th>
-<th align="right">capital</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">'Abasan al-Jadidah</td>
-<td align="left">Palestine</td>
-<td align="right">5629</td>
-<td align="right">31.31</td>
-<td align="right">34.34</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">'Abasan al-Kabirah</td>
-<td align="left">Palestine</td>
-<td align="right">18999</td>
-<td align="right">31.32</td>
-<td align="right">34.35</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">'Abdul Hakim</td>
-<td align="left">Pakistan</td>
-<td align="right">47788</td>
-<td align="right">30.55</td>
-<td align="right">72.11</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">'Abdullah-as-Salam</td>
-<td align="left">Kuwait</td>
-<td align="right">21817</td>
-<td align="right">29.36</td>
-<td align="right">47.98</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">'Abud</td>
-<td align="left">Palestine</td>
-<td align="right">2456</td>
-<td align="right">32.03</td>
-<td align="right">35.07</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">'Abwein</td>
-<td align="left">Palestine</td>
-<td align="right">3434</td>
-<td align="right">32.03</td>
-<td align="right">35.20</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-
-Map the cities of the world
----------------------------
-
-    map()
-    map.cities(world.cities)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-26-1.png)<!-- -->
-
-Cities of France
-----------------
-
-    data(world.cities)
-    map("france")
-    map.cities(world.cities)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-27-1.png)<!-- -->
-
-Only cities of France
----------------------
-
-    FrenchCity <- world.cities$country.etc=="France"
-    FCit <- world.cities[FrenchCity,]
-
-<table>
-<thead>
-<tr class="header">
-<th align="left"></th>
-<th align="left">name</th>
-<th align="left">country.etc</th>
-<th align="right">pop</th>
-<th align="right">lat</th>
-<th align="right">long</th>
-<th align="right">capital</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">195</td>
-<td align="left">Abbeville</td>
-<td align="left">France</td>
-<td align="right">26656</td>
-<td align="right">50.12</td>
-<td align="right">1.83</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">318</td>
-<td align="left">Acheres</td>
-<td align="left">France</td>
-<td align="right">23219</td>
-<td align="right">48.97</td>
-<td align="right">2.06</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
-<td align="left">477</td>
-<td align="left">Agde</td>
-<td align="left">France</td>
-<td align="right">23477</td>
-<td align="right">43.33</td>
-<td align="right">3.46</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">479</td>
-<td align="left">Agen</td>
-<td align="left">France</td>
-<td align="right">34742</td>
-<td align="right">44.20</td>
-<td align="right">0.62</td>
-<td align="right">0</td>
-</tr>
-</tbody>
-</table>
-
-Only cities of France
----------------------
-
-Now it is possible to map only the french cities:
-
-    map("france")
-    map.cities(FCit,col="blue",pch=20)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
-
-`pch` - plotting character, i.e., symbol to use.
-
-Different sizes - different colors
-----------------------------------
-
-    FCit_Bc<-FCit[FCit$pop>50000,]
-    map("france")
-    map.cities(FCit,col="blue",pch=20)
-    map.cities(FCit_Bc,col="red",pch=20)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-31-1.png)<!-- -->
-
-Thematic maps with R-Paket maps
--------------------------------
-
-Data basis - CIA World DataBank II
-
-The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a
-collection of world map data, consisting of vector descriptions of land
-outlines, rivers, / political boundaries. It was created by U.S.
-government in the 1980s.
-
-Example: US Unemployment
-------------------------
-
--   [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html)
-    about the usage of Paket maps
-
-Get the data:
-
-    library(maps)
-    data(unemp)
-    data(county.fips)
-
-Farbverläufe
-------------
-
-    library(colorRamps)
-    colors <- blue2red(6)
-    barplot(1:6,col=colors)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-33-1.png)<!-- -->
-
-Example: US Unemployment - color coding
----------------------------------------
-
-    unemp$colorSteps <- cut(unemp$unemp, 
-              c(0, 2, 4, 6, 8,10, 100))
-    colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
-              unemp$fips)]
-
-Example: US Unemployment
-------------------------
-
-    map("county", col = colors[colorsmatch], 
-        fill = TRUE)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
-
-Further links and resources
----------------------------
-
--   [Using R — Working with Geospatial
-    Data](http://mazamascience.com/WorkingWithData/?p=1277)
-
--   Robin Lovelace, James Cheshire - [Introduction to visualising
-    spatial data in
-    R](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
-
--   [Maps in R: Introduction - Drawing the map of
-    Europe](http://www.milanor.net/blog/?p=534)
+
+```r
+italy <- map("italy", plot = F)
+head(italy$names)
+```
+
+```
+## [1] "Bolzano-Bozen" "Belluno"       "Udine"         "Sondrio"      
+## [5] "Trento"        "Novara"
+```
+
+## Karten mit nur einem Argument
+
+
+```r
+map("county")
+```
+
+
+
+Argument   What                   
+---------  -----------------------
+county     US Counties            
+france     France                 
+italy      Italy                  
+nz         New Zealand            
+state      US States              
+usa        USA                    
+world      Countries of the world 
+
+
+## Eine Karte für Deutschland
+
+
+```r
+library(maps)
+map("world", "Germany")
+```
+
+![](maps_files/figure-html/unnamed-chunk-18-1.png)
+
+## R-Paket maps - zwei Länder
+
+
+
+```r
+map("world", c("Germany","Poland"))
+```
+
+![](maps_files/figure-html/unnamed-chunk-19-1.png)
+
+
+## Zwei Länder mit mehr Farbe 
+
+
+```r
+map("world", c("Germany","Austria"),fill=T,
+col=c("red","green"))
+```
+
+![](maps_files/figure-html/unnamed-chunk-20-1.png)
+
+
+
+## R-Paket maps - mehr Feature
+
+
+```r
+map("world", "China")
+map.scale()
+```
+
+![](maps_files/figure-html/unnamed-chunk-21-1.png)
+
+## R-Paket maps - mehr Feature
+
+Wie `map`, aber mit Bezeichnungen für die Regionen:
+
+
+```r
+map.text("county", "penn")
+```
+
+![](maps_files/figure-html/unnamed-chunk-22-1.png)
+
+Counties in Pennsylvania 
+
+## R-Paket maps - Städte der Welt
+
+mit dem Befehl `data` kann man spezifische Datensätze einlesen.
+
+
+```r
+data(world.cities)
+```
+
+`head` - den ersten Teil eines Objekts zurück geben
+
+
+```r
+head(world.cities)
+```
+
+## Übebrlick über Datensatz Städte der Welt
+
+
+name                 country.etc      pop     lat    long   capital
+-------------------  ------------  ------  ------  ------  --------
+'Abasan al-Jadidah   Palestine       5629   31.31   34.34         0
+'Abasan al-Kabirah   Palestine      18999   31.32   34.35         0
+'Abdul Hakim         Pakistan       47788   30.55   72.11         0
+'Abdullah-as-Salam   Kuwait         21817   29.36   47.98         0
+'Abud                Palestine       2456   32.03   35.07         0
+'Abwein              Palestine       3434   32.03   35.20         0
+
+## Die Städte der Welt kartieren 
+
+
+
+```r
+map()
+map.cities(world.cities)
+```
+
+![](maps_files/figure-html/unnamed-chunk-26-1.png)
+
+## Frankreichs Städte
+
+
+```r
+data(world.cities)
+map("france")
+map.cities(world.cities)
+```
+
+![](maps_files/figure-html/unnamed-chunk-27-1.png)
+
+## Nur französische Städte 
+
+
+```r
+FrenchCity <- world.cities$country.etc=="France"
+FCit <- world.cities[FrenchCity,]
+```
+
+
+      name        country.etc      pop     lat   long   capital
+----  ----------  ------------  ------  ------  -----  --------
+195   Abbeville   France         26656   50.12   1.83         0
+318   Acheres     France         23219   48.97   2.06         0
+477   Agde        France         23477   43.33   3.46         0
+479   Agen        France         34742   44.20   0.62         0
+
+
+## Nur französische Städte 
+
+Jetzt ist es möglich nur die französischen Städte zu kartieren:
+
+
+```r
+map("france")
+map.cities(FCit,col="blue",pch=20)
+```
+
+![](maps_files/figure-html/unnamed-chunk-30-1.png)
+
+`pch` - plotting character, z.B., das Symbol das genutzt werden soll.
+
+
+## Verschiedene Größen - verschiedene Farben 
+
+
+```r
+FCit_Bc<-FCit[FCit$pop>50000,]
+map("france")
+map.cities(FCit,col="blue",pch=20)
+map.cities(FCit_Bc,col="red",pch=20)
+```
+
+![](maps_files/figure-html/unnamed-chunk-31-1.png)
+
+## Beispiel für Fortgeschrittene 
+
+[Where people live](http://www.r-bloggers.com/where-people-live/)
+
+
+```r
+library(maps)
+data("world.cities")
+ X <- world.cities[,c("lat","pop")]
+ liss <- function(x,h){
+   w=dnorm(x-X[,"lat"],0,h)
+   sum(X[,"pop"]*w)
+ }
+ vx=seq(-80,80)
+ vy=Vectorize(function(x) liss(x,1))(vx)
+ vy=vy/max(vy)
+```
+
+## Wo leben viele Menschen
+
+
+```r
+plot(world.cities$lon,world.cities$lat,)
+ for(i in 1:length(vx)) 
+ abline(h=vx[i],col=rgb(1,0,0,vy[i]),lwd=2.7)
+```
+
+![](maps_files/figure-html/unnamed-chunk-33-1.png)
+
+
+## Thematische Karten mit dem R-Paket maps
+
+Datenbasis - CIA World DataBank II
+
+> The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+
+## Beispiel: US Arbeitslosigkeit 
+
+- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
+
+
+Die Daten bekommen:
+
+
+```r
+library(maps)
+data(unemp)
+data(county.fips)
+```
+
+## Farbverläufe
+
+
+```r
+library(colorRamps)
+colors <- blue2red(6)
+barplot(1:6,col=colors)
+```
+
+![](maps_files/figure-html/unnamed-chunk-35-1.png)
+
+## Beispiel: US Arbeitslosigkeit - Farbschattierung
+
+
+```r
+unemp$colorSteps <- cut(unemp$unemp, 
+          c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
+          unemp$fips)]
+```
+
+
+## Beispiel: US Arbeitslosigkeit
+
+
+```r
+map("county", col = colors[colorsmatch], 
+    fill = TRUE)
+```
+
+![](maps_files/figure-html/unnamed-chunk-37-1.png)
+
+## Mehr Links und Quellen
+
+- [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
+
+- Robin Lovelace, James Cheshire - [Introduction to visualising spatial data in R](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
+
+- [Maps in R: Introduction - Drawing the map of Europe](http://www.milanor.net/blog/?p=534)

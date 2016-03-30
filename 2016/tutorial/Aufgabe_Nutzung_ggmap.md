@@ -1,11 +1,6 @@
----
-title: "Aufgabe - Nutzung von ggmap"
-author: "Jan-Philipp Kolb"
-date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
----
+# Aufgabe - Nutzung von ggmap
+Jan-Philipp Kolb  
+14. März 2016  
 
 ## Aufgabe - Nutzung von ggmap
 

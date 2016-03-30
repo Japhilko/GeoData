@@ -1,8 +1,10 @@
 ---
 title: "R-Paket maps"
 author: "Jan-Philipp Kolb"
-date: "Fri Sep 18 14:22:39 2015"
-output: html_document
+date: "07 April 2016"
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r,echo=F,warning=F}
@@ -85,33 +87,33 @@ map ("italy", col = "blue")
 
 ## Choroplethen - R-Paket maps
 
-If we want the areas in blue:
+Wir wollen die Flächen blau einfärben:
 ```{r}
 map ("italy",fill =T, col = "blue")
 ```
 
-## More colors
+## Mehr Farben
 
-Create a vector:
+Einen Vektor erzeugen:
 
 ```{r}
 colors <- c("blue","red","yellow")
 ```
 
-and use the vector to specify the color
+nun nutzrn wir den Vektor um die Farbe zu spezifizieren
 
 ```{r}
 map ("italy",fill =T, col = colors)
 ```
 
-## Excursus: more colors!
-You can also use the [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) command to create your own colors:
+## Excurs: mehr Farben!
+Wir können auch den [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) Befehl nutzen um eigene Farben zu erzeugen:
 
 ```{r}
 map("italy",fill=T, col = rgb(0,1,0))
 ```
 
-## Try also
+## Auch ausprobieren:
 
 ```{r,eval=F}
 map("italy",fill=T, col = rgb(1,0,0))
@@ -119,15 +121,15 @@ map("italy",fill=T, col = rgb(1,1,1))
 map("italy",fill=T, col = rgb(1,0.5,0.4))
 ```
 
-## Choropleths - R-Paket maps
-If you want to know, which region is at which place:
+## Choroplethen - R-Paket maps
+Wenn man wissen will, welche Region sich wohinter verbirgt:
 
 ```{r}
 italy <- map("italy", plot = F)
 head(italy$names)
 ```
 
-## Maps with only one argument
+## Karten mit nur einem Argument
 
 ```{r,eval=F}
 map("county")
@@ -142,14 +144,14 @@ kable(data.frame(Argument,What))
 ```
 
 
-## A map for Germany
+## Eine Karte für Deutschland
 
 ```{r}
 library(maps)
 map("world", "Germany")
 ```
 
-## R-Paket maps - two countries
+## R-Paket maps - zwei Länder
 
 
 ```{r}
@@ -157,7 +159,7 @@ map("world", c("Germany","Poland"))
 ```
 
 
-## Two countries with color
+## Zwei Länder mit mehr Farbe 
 
 ```{r}
 map("world", c("Germany","Austria"),fill=T,
@@ -166,44 +168,44 @@ col=c("red","green"))
 
 
 
-## R-Paket maps - additional features
+## R-Paket maps - mehr Feature
 
 ```{r}
 map("world", "China")
 map.scale()
 ```
 
-## R-Paket maps - additional features
+## R-Paket maps - mehr Feature
 
-Like `map`, but labels the regions:
+Wie `map`, aber mit Bezeichnungen für die Regionen:
 
 ```{r}
 map.text("county", "penn")
 ```
 
-Pennsylvania counties
+Counties in Pennsylvania 
 
-## R-Paket maps - World cities
+## R-Paket maps - Städte der Welt
 
-`data` loads specified data sets, or lists the available data sets.
+mit dem Befehl `data` kann man spezifische Datensätze einlesen.
 
 ```{r}
 data(world.cities)
 ```
 
-`head` - Return the First Part of an Object
+`head` - den ersten Teil eines Objekts zurück geben
 
 ```{r,eval=F}
 head(world.cities)
 ```
 
-## Overview of world cities data
+## Übebrlick über Datensatz Städte der Welt
 
 ```{r,echo=F}
 kable(head(world.cities))
 ```
 
-## Map the cities of the world
+## Die Städte der Welt kartieren 
 
 
 ```{r}
@@ -211,7 +213,7 @@ map()
 map.cities(world.cities)
 ```
 
-## Cities of France
+## Frankreichs Städte
 
 ```{r}
 data(world.cities)
@@ -219,7 +221,7 @@ map("france")
 map.cities(world.cities)
 ```
 
-## Only cities of France
+## Nur französische Städte 
 
 ```{r}
 FrenchCity <- world.cities$country.etc=="France"
@@ -231,19 +233,19 @@ kable(head(FCit,n=4))
 ```
 
 
-## Only cities of France
+## Nur französische Städte 
 
-Now it is possible to map only the french cities:
+Jetzt ist es möglich nur die französischen Städte zu kartieren:
 
 ```{r}
 map("france")
 map.cities(FCit,col="blue",pch=20)
 ```
 
-`pch` - plotting character, i.e., symbol to use.
+`pch` - plotting character, z.B., das Symbol das genutzt werden soll.
 
 
-## Different sizes - different colors 
+## Verschiedene Größen - verschiedene Farben 
 
 ```{r}
 FCit_Bc<-FCit[FCit$pop>50000,]
@@ -252,18 +254,45 @@ map.cities(FCit,col="blue",pch=20)
 map.cities(FCit_Bc,col="red",pch=20)
 ```
 
-## Thematic maps with R-Paket maps
+## Beispiel für Fortgeschrittene 
 
-Data basis - CIA World DataBank II
+[Where people live](http://www.r-bloggers.com/where-people-live/)
 
-The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+```{r}
+library(maps)
+data("world.cities")
+ X <- world.cities[,c("lat","pop")]
+ liss <- function(x,h){
+   w=dnorm(x-X[,"lat"],0,h)
+   sum(X[,"pop"]*w)
+ }
+ vx=seq(-80,80)
+ vy=Vectorize(function(x) liss(x,1))(vx)
+ vy=vy/max(vy)
+```
 
-## Example: US Unemployment 
+## Wo leben viele Menschen
 
-- [More](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) about the usage of Paket maps
+```{r}
+plot(world.cities$lon,world.cities$lat,)
+ for(i in 1:length(vx)) 
+ abline(h=vx[i],col=rgb(1,0,0,vy[i]),lwd=2.7)
+```
 
 
-Get the data:
+## Thematische Karten mit dem R-Paket maps
+
+Datenbasis - CIA World DataBank II
+
+> The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+
+## Beispiel: US Arbeitslosigkeit 
+
+- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
+
+
+Die Daten bekommen:
+
 ```{r}
 library(maps)
 data(unemp)
@@ -278,7 +307,7 @@ colors <- blue2red(6)
 barplot(1:6,col=colors)
 ```
 
-## Example: US Unemployment - color coding
+## Beispiel: US Arbeitslosigkeit - Farbschattierung
 
 ```{r}
 unemp$colorSteps <- cut(unemp$unemp, 
@@ -288,14 +317,14 @@ colorsmatch <- unemp$colorSteps[match(county.fips$fips,
 ```
 
 
-## Example: US Unemployment 
+## Beispiel: US Arbeitslosigkeit
 
 ```{r}
 map("county", col = colors[colorsmatch], 
     fill = TRUE)
 ```
 
-## Further links and resources
+## Mehr Links und Quellen
 
 - [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
 

@@ -24,7 +24,7 @@ Verschiedene Kartentypen mit ggmap
 
 - R-Recap - Zuweisungen und Objekte  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
 
-**Aufgabe**
+**Aufgabe:** [Vorbereitung und Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
 
 Quellen für räumliche Daten
 ---------------------
