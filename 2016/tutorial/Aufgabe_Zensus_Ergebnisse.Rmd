@@ -1,0 +1,17 @@
+---
+title: "Zensus 2011 Ergebnisse"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output:
+  html_document:
+    keep_md: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aufgabe
+
+- Laden Sie die Gemeindeergebnisse für den Zensus 2011 herunter: <https://ergebnisse.zensus2011.de/>
+- Erzeugen Sie einen Datensatz, der nur die Ergebnisse für die Saarländischen Gemeinden enthält.

@@ -1,0 +1,108 @@
+---
+title: "Gitterzellen"
+author: "Jan-Philipp Kolb"
+date: "08 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Ex1 <- F
+```
+
+
+## Beispieldaten importieren
+
+```{r,eval=Ex1}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_bar.csv"
+bars <- read.csv(link)
+```
+
+## Erste Distanz berechnen mit dem Paket `SoDa`
+
+```{r,eval=Ex1}
+library(SoDA)
+geoDist(lat1 = bars$lat[1],
+        lon1 = bars$lon[1],
+        lat2 = bars$lat[2],
+        lon2 = bars$lon[2])
+```
+
+## Mehr Distanzen berechnen
+
+```{r,eval=Ex1}
+Dist <- vector()
+for(i in 1:100){
+  Dist[i] <- geoDist(lat1 = bars$lat[i],
+        lon1 = bars$lon[i],
+        lat2 = bars$lat[i+1],
+        lon2 = bars$lon[i+1])
+}
+Dist
+```
+
+
+## Beispiel für Berlin
+
+Den Datensatz auf Berlin einschränken:
+
+```{r,eval=Ex1}
+be_bar <- bars[bars$place=="Berlin",]
+```
+
+Eine Karte für Berlin
+
+```{r,message=F,warning=F,cache=T}
+library(ggmap)
+be_map12 <- qmap("Berlin",zoom=12,
+ maptype="terrain-lines",source="stamen")
+```
+
+## Karte für Berlin
+
+```{r}
+be_map12
+```
+
+## Distanzen zu einem Punkt
+
+```{r,message=F}
+geo_be <- geocode("Berlin Brandenburger Tor")
+geo_be
+```
+
+Die Distanzen der Bars zu diesem Punkt:
+
+```{r,cache=T,eval=Ex1}
+Dist_bars <- vector()
+for(i in 1:nrow(be_bar)){
+  Dist_bars[i] <- geoDist(lat1 = geo_be$lat,
+        lon1 = geo_be$lon,
+        lat2 = be_bar$lat[i],
+        lon2 = be_bar$lon[i])
+}
+
+be_bar$dist <- Dist_bars
+```
+
+## Die Distanzen 
+
+```{r,eval=Ex1}
+hist(be_bar$dist)
+be_bar$dist[which.max(be_bar$dist)] <- NA
+```
+
+
+## Distanzen visualisieren
+
+```{r,eval=F,eval=Ex1}
+be_map12  + 
+  geom_point(data = be_bar, 
+             mapping = aes(lon, lat, colour=dist), 
+             size=1.5, alpha=0.4, shape=15) + 
+  scale_colour_gradient(low = 'green', high = 'red')
+```
+
+## Links und Resourcen
+
+- R-bloggers - [Kontouren zeichnen](http://stackoverflow.com/questions/27594257/plotting-contours-on-map-using-ggmap)

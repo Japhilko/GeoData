@@ -44,7 +44,7 @@ HHsr <- read.xlsx2("HHsavingRate.xls",1)
 
 <https://ergebnisse.zensus2011.de/>
 
-![](Zensusdatenbank.PNG)
+![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/Zensusdatenbank.PNG)
 
 ## Weitere Portale: 
 
