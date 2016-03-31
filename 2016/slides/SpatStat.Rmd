@@ -69,6 +69,7 @@ be_map12
 ## Distanzen zu einem Punkt
 
 ```{r,message=F}
+library(ggmap)
 geo_be <- geocode("Berlin Brandenburger Tor")
 geo_be
 ```
@@ -104,6 +105,31 @@ be_map12  +
              size=1.5, alpha=0.4, shape=15) + 
   scale_colour_gradient(low = 'green', high = 'red')
 ```
+
+
+## Der Umfang von Polygonzügen
+
+Beispiel Berlin
+
+```{r,eval=Ex1}
+(load("data/Berlin_adm10.RData"))
+```
+
+```{r,eval=Ex1}
+library(rgeos)
+be_area <- vector()
+for (i in 1:length(be10)){
+  be_area[i] <- gArea(be10[i,])    
+}
+```
+
+## Flächen im Histogramm
+
+```{r,eval=Ex1}
+hist(be_area,main="Größe der Flächen",
+     col="royalblue")
+```
+
 
 ## Links und Resourcen
 

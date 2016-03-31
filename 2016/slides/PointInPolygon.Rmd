@@ -19,10 +19,6 @@ Die Polygonzüge können hier heruntergeladen werden:
 
 <https://github.com/Japhilko/GeoData/blob/master/data/Berlin_adm10.RData>
 
-```{r,echo=F,eval=F}
-setwd("J:/Work/Statistik/Kolb/Workshops/2016/GeoData/data")
-```
-
 ```{r,eval=Ex1}
 (load("data/Berlin_adm10.RData"))
 ```

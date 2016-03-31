@@ -97,6 +97,7 @@ be_map12
 
 
 ```r
+library(ggmap)
 geo_be <- geocode("Berlin Brandenburger Tor")
 geo_be
 ```
@@ -147,6 +148,50 @@ be_map12  +
 ```
 
 ![](SpatStat_files/figure-html/unnamed-chunk-10-1.png)
+
+
+## Der Umfang von Polygonzügen
+
+Beispiel Berlin
+
+
+```r
+(load("data/Berlin_adm10.RData"))
+```
+
+```
+## [1] "be10"
+```
+
+
+```r
+library(rgeos)
+```
+
+```
+## rgeos version: 0.3-17, (SVN revision 520)
+##  GEOS runtime version: 3.5.0-CAPI-1.9.0 r4084 
+##  Linking to sp version: 1.2-2 
+##  Polygon checking: TRUE
+```
+
+```r
+be_area <- vector()
+for (i in 1:length(be10)){
+  be_area[i] <- gArea(be10[i,])    
+}
+```
+
+## Flächen im Histogramm
+
+
+```r
+hist(be_area,main="Größe der Flächen",
+     col="royalblue")
+```
+
+![](SpatStat_files/figure-html/unnamed-chunk-13-1.png)
+
 
 ## Links und Resourcen
 
