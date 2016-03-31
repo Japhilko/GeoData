@@ -86,6 +86,7 @@ Distanzen und Räumliche Statistik
 
 - Weitere Pakete ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/SpatStat.Rmd))
 
+- Daten räumlich aggregieren ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PointInPolygon.Rmd))
 
 
 Nutzung von OpenStreetMap Daten

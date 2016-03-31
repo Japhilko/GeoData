@@ -1,0 +1,81 @@
+---
+title: "Daten für Polygone aggregieren"
+author: "Jan-Philipp Kolb"
+date: "31 März 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Ex1 <- T
+```
+
+## Administrative Grenzen Berlin
+
+Die Polygonzüge können hier heruntergeladen werden:
+
+<https://github.com/Japhilko/GeoData/blob/master/data/Berlin_adm10.RData>
+
+```{r,echo=F,eval=Ex1}
+setwd("J:/Work/Statistik/Kolb/Workshops/2016/GeoData/data")
+```
+
+```{r,eval=Ex1}
+(load("Berlin_adm10.RData"))
+```
+
+## Administrative Grenzen Berlin
+
+- Die Daten stammen von OpenStreetMap und wurden mit PostGIS und QGIS extrahiert.
+
+```{r,eval=Ex1}
+plot(be10)
+```
+
+## Daten zu Bars einlesen
+
+```{r,eval=Ex1}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_bar.csv"
+bars <- read.csv(link)
+```
+
+## Basisdatensatz einschränken
+
+```{r,eval=Ex1}
+be_bar <- bars[bars$place=="Berlin",]
+```
+
+in einen spatialpoints Datensatz umwandeln
+```{r,eval=Ex1}
+library(sp)
+pts <- cbind(be_bar$lon,be_bar$lat)
+sp_df <- SpatialPointsDataFrame(pts,be_bar)
+```
+
+
+## Ist der Punkt im Polygon
+
+```{r,eval=Ex1}
+tmp <- over(sp_df,be10)
+nrow(tmp)
+length(be10)
+nrow(be_bar)
+```
+
+```{r,eval=Ex1}
+ind <- match(tmp$way_area,be10@data$way_area)
+ind
+```
+
+```{r,eval=Ex1}
+tab_bars <- table(tmp$way_area)
+ind_bars <- match(be10@data$way_area,names(tab_bars))
+be10@data$bars <- tab_bars[ind_bars]
+```
+
+## Karte mit Bars in Berlin
+
+```{r,eval=Ex1}
+spplot(be10,"bars")
+```
+
