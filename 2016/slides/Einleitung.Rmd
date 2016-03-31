@@ -120,6 +120,11 @@ Datenquellen:
 - [Pegelstände](https://www.pegelonline.wsv.de/gast/start) in Deutschland
 - [driven by data](http://driven-by-data.net/)
 
+
+## Beispiel: Straßen in Berlin
+
+![StrassenBerlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/streets_Berlin2.png)
+
 ## Resourcen
 
 - Andreas Plank [Grafiken und Statistik in R](http://www.chironomidaeproject.com/fileadmin/downloads/Formeln_in_R.pdf)
