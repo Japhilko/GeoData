@@ -84,7 +84,7 @@ Distanzen und Räumliche Statistik
 - Das R-Paket `spdep` - Nachbarschaft und Distanz ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.Rmd) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
 
-- Weitere Pakete ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/SpatStat.Rmd))
+- Weitere geographische Berechnungen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/SpatStat.md))
 
 - Daten räumlich aggregieren ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PointInPolygon.Rmd))
 

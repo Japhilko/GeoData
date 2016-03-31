@@ -1,13 +1,15 @@
 ---
-title: "Gitterzellen"
+title: "Geographische Berechnungen"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: html_document
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-Ex1 <- F
+Ex1 <- T
 ```
 
 
@@ -95,7 +97,7 @@ be_bar$dist[which.max(be_bar$dist)] <- NA
 
 ## Distanzen visualisieren
 
-```{r,eval=F,eval=Ex1}
+```{r,eval=F,eval=Ex1,warning=F}
 be_map12  + 
   geom_point(data = be_bar, 
              mapping = aes(lon, lat, colour=dist), 
