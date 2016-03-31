@@ -96,7 +96,7 @@ Nutzung von OpenStreetMap Daten
 
 - Die Nutzung von Programmierschnittstellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.Rmd))
 
-- Das R-Paket `osmar` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.Rmd))
+- Das R-Paket `osmar` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md))
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 

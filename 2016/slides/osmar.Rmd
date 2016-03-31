@@ -1,8 +1,10 @@
 ---
 title: "Das R-Paket osmar"
 author: "Jan-Philipp Kolb"
-date: "Thu Jun 11 17:13:33 2015"
-output: slidy_presentation
+date: "08 April 2016"
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r,echo=F}
@@ -13,13 +15,24 @@ Ca=F
 ```
 
 
-## Download von Information
+## Die relevanten Pakete
+
+Das R-Paket [osmar](https://cran.r-project.org/web/packages/osmar/index.html) wurde von Thomas Schlesinger und Manuel J. A. Eugster erstellt um OpenStreetMap Daten in R zu importieren und zu verarbeiten. 
 
 ```{r,message=F}
 library(ggmap)
 library(osmar)
+```
+
+Die folgende Zeile ist sehr wichtig um die API zu nutzen
+```{r}
 api <- osmsource_api()
 ```
+
+## Download von Information
+
+- Der Download dauert eine Weile
+- Der Download Ausschnitt ist stark begrenzt
 
 ```{r,cache=Ca,message=F,eval=Ex}
 cityC <- geocode("Trier")
@@ -27,9 +40,9 @@ bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
 ua <- get_osm(bb, source = api)
 ```
 
-## What is inside:
+## Welche Informationen hat man nun:
 
-You get three types of objects:
+Man bekommt drei Arten von Informationen:
 
 ```{r,eval=Ex}
 names(ua)
@@ -42,26 +55,31 @@ names(ua)
 ![pic relation](http://wiki.openstreetmap.org/w/images/thumb/4/48/Osm_element_relation.svg/30px-Osm_element_relation.svg.png) [Relation](http://wiki.openstreetmap.org/wiki/Relation)
 
 
-## To access the nodes information:
+## Um sich die Information zu den nodes anzuschauen:
 
 ```{r,eval=Ex}
 summary(ua$nodes)
 ```
 
-## Overview information
+## Überblick über die Information
 
-```{r,eval=F}
+```{r,eval=F,echo=F}
 datatable(summary(ua$nodes)[[6]])
 ```
 
-## Download information manually
+```{r,eval=Ex,echo=F}
+kable(summary(ua$nodes)[[6]])
+```
+
+
+## Die Informationen manuell herunterladen
 
 - The information can be exported from [OSM](https://www.openstreetmap.org/export)
 
 ![sipp](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Sippersfeld.png)
 
 
-## Import to R using `osmar`
+## In R Importieren unter Nutzung von `osmar`
 
 ```{r,eval=Ex}
 map <- get_osm(complete_file(), 
@@ -69,20 +87,21 @@ map <- get_osm(complete_file(),
 ```
 
 
-## What is behind:
+## Was ist dahinter:
 
-[Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29) is a command line Java application for processing OSM data.
+[Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29) ist eine Kommandozeilen Java Applikation um OSM Daten zu verarbeiten.
 
-## Further tutorials on the usage of osmar and OpenStreetMap data:
+## Mehr Tutorien zur Nutzung von `osmar` und OpenStreetMap Daten:
 
-- [OpenStreetMap2R with osmar](http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest)
+- [giswerk.org](http://giswerk.org/)
+ist eine Sammlung von Informationen zu den Themen Geographie und Geoinformatik. Es gibt auch Informationen wie man OpenStreetMap Daten in R importiert und verarbeitet ([OpenStreetMap2R ](http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest))
 
-- [Using data from OpenStreetMap to map](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
+- [Nutzung von OpenStreetMap Daten um Karten zu erzeugen](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
 
 
-- [Cookbook on using osmar](http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic)
+- [Kochbuch zur Nutzung von osmar](http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic)
 
-## Resources
+## Resourcen
 
 ```{r}
 citation("osmar")

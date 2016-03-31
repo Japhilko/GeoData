@@ -1,5 +1,7 @@
 # Packages
 
+install.packages("maptools")
+install.packages("ggmap")
 install.packages("sp")
 install.packages("raster")
 
@@ -26,3 +28,9 @@ install.packages("rvest")
 install.packages("translateR")
 install.packages("ggalt")
 install.packages("ggthemes")
+
+#----------------------------#
+# Add On packages
+#----------------------------#
+
+install.packages("downloader")

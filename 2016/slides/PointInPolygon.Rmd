@@ -2,12 +2,15 @@
 title: "Daten für Polygone aggregieren"
 author: "Jan-Philipp Kolb"
 date: "31 März 2016"
-output: html_document
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 Ex1 <- T
+library(knitr)
 ```
 
 ## Administrative Grenzen Berlin
@@ -16,19 +19,20 @@ Die Polygonzüge können hier heruntergeladen werden:
 
 <https://github.com/Japhilko/GeoData/blob/master/data/Berlin_adm10.RData>
 
-```{r,echo=F,eval=Ex1}
+```{r,echo=F,eval=F}
 setwd("J:/Work/Statistik/Kolb/Workshops/2016/GeoData/data")
 ```
 
 ```{r,eval=Ex1}
-(load("Berlin_adm10.RData"))
+(load("data/Berlin_adm10.RData"))
 ```
 
 ## Administrative Grenzen Berlin
 
 - Die Daten stammen von OpenStreetMap und wurden mit PostGIS und QGIS extrahiert.
 
-```{r,eval=Ex1}
+```{r,eval=Ex1,message=F}
+library(maptools)
 plot(be10)
 ```
 
@@ -38,6 +42,16 @@ plot(be10)
 link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_bar.csv"
 bars <- read.csv(link)
 ```
+
+Der Datensatz wurde auf Basis von OpenStreetMap Informationen unter der Nutzung der Overpass API erstellt.
+
+## Der Datensatz
+
+```{r,eval=Ex1,echo=F}
+kable(bars[1:8,1:5])
+```
+
+
 
 ## Basisdatensatz einschränken
 
