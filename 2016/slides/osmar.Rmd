@@ -10,8 +10,8 @@ output:
 ```{r,echo=F}
 library(knitr)
 library(DT)
-Ex=F
-Ca=F
+Ex=T
+Ca=T
 ```
 
 
@@ -68,7 +68,28 @@ datatable(summary(ua$nodes)[[6]])
 ```
 
 ```{r,eval=Ex,echo=F}
-kable(summary(ua$nodes)[[6]])
+kable(head(summary(ua$nodes)[[6]]))
+```
+
+## Shapefile für die Gebäude
+
+```{r,eval=Ex,cache=Ca}
+bg_ids <- find(ua, way(tags(k=="building")))
+bg_ids <- find_down(ua, way(bg_ids))
+bg <- subset(ua, ids = bg_ids)
+```
+
+## Die Gebäude zeichnen
+
+```{r,eval=Ex,cache=Ca}
+plot(bg)
+```
+
+## Einen Shapefile erzeugen
+
+```{r,eval=Ex,cache=Ca}
+bg_poly <- as_sp(bg, "polygons")  
+plot(bg_poly)
 ```
 
 
@@ -81,7 +102,7 @@ kable(summary(ua$nodes)[[6]])
 
 ## In R Importieren unter Nutzung von `osmar`
 
-```{r,eval=Ex}
+```{r,eval=F}
 map <- get_osm(complete_file(), 
                 source = osmsource_file("map.osm"))
 ```
