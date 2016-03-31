@@ -130,6 +130,14 @@ hist(be_area,main="Größe der Flächen",
      col="royalblue")
 ```
 
+## Eine umgebende Box
+
+Koordinaten der Box, die Shapefiles umgibt:
+
+```{r,eval=Ex1}
+bbox(be10)
+```
+
 
 ## Links und Resourcen
 

@@ -4,6 +4,9 @@ install.packages("maptools")
 install.packages("ggmap")
 install.packages("sp")
 install.packages("raster")
+install.packages("osmar")
+
+install.packages("colorRamps")
 
 install.packages("readr")
 install.packages("rvest")
@@ -16,6 +19,7 @@ install.packages("stringr")
 install.packages("RJSONIO")
 
 install.packages("SoDA")
+install.packages("rgdal")
 install.packages("RPostgreSQL")
 install.packages("tmap")
 install.packages("RANN")
@@ -24,13 +28,14 @@ install.packages("FAOSTAT")
 install.packages("RANN")
 install.packages("rvest")
 
-
 install.packages("translateR")
 install.packages("ggalt")
 install.packages("ggthemes")
+install.packages("leaflet")
 
 #----------------------------#
 # Add On packages
 #----------------------------#
 
-install.packages("downloader")
+install.packages("devtools")
+install.packages("DT")

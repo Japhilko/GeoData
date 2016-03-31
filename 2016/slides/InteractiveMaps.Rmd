@@ -2,11 +2,13 @@
 title: "Interactive maps"
 author: "Jan-Philipp Kolb"
 date: "Tue Oct 27 13:36:25 2015"
-output: beamer_presentation
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r,echo=F}
-internet=F
+internet=T
 ```
 
 
@@ -45,6 +47,7 @@ m <- leaflet() %>%
   addMarkers(lng=whcSites$lon, 
              lat=whcSites$lat, 
              popup=whcSites$name_en)
+m
 ```
 
 ## Die Karte zeigen

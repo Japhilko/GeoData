@@ -1,17 +1,9 @@
----
-title: "R-package sp"
-author: "Jan-Philipp Kolb"
-date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
----
+# R-package sp
+Jan-Philipp Kolb  
+07 April 2016  
 
 
-```{r,echo=F}
-library(knitr)
-ca <- T
-```
+
 
 ## Das R-Paket [sp](https://cran.r-project.org/web/packages/sp/index.html)
 
@@ -19,7 +11,8 @@ ca <- T
 - Authoren: Edzer Pebesma, Roger Bivand, Barry Rowlingson, Virgilio Gomez-Rubio et. al.
 - Viele [Einführungen](http://ifgi.uni-muenster.de/~epebe_01/Aufbaukurs/R/slides_R.pdf) sind verfügbar
 
-```{r,message=F,cache=ca,warning=F}
+
+```r
 library(sp)
 ```
 
@@ -28,7 +21,8 @@ library(sp)
 - Ein erstes Beispiel unter Verwendung von Daten aus `maptools` ([ISO2-codes](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
 
 
-```{r,message=F,cache=ca,warning=F}
+
+```r
 library(maptools)
 data("wrld_simpl")
 ISO2codes <- wrld_simpl@data$ISO2
@@ -39,66 +33,103 @@ my_map <- wrld_simpl[ind,]
 
 ## Die Karte zeichnen
 
-```{r}
+
+```r
 library(maptools)
+```
+
+```
+## Loading required package: sp
+```
+
+```
+## Checking rgeos availability: TRUE
+```
+
+```r
 plot(my_map)
 ```
+
+![](spplot_files/figure-html/unnamed-chunk-4-1.png)
 
 
 ## Der Datensatz
 
-```{r,eval=F,cache=ca,warning=F}
+
+```r
 head(my_map@data)
 ```
 
 
-```{r,echo=F,cache=ca,warning=F}
-library(knitr)
-kable(my_map@data[1:4,c("ISO2","NAME","AREA","POP2005","REGION")])
-```
+
+      ISO2   NAME            AREA    POP2005   REGION
+----  -----  ------------  ------  ---------  -------
+FRA   FR     France         55010   60990544      150
+DEU   DE     Germany        34895   82652369      150
+AUT   AT     Austria         8245    8291979      150
+CHE   CH     Switzerland     4000    7424389      150
 
 
 
 ## Ein weiteres Beispiel
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005")
 ```
 
+![](spplot_files/figure-html/unnamed-chunk-7-1.png)
+
 ## Nutzung von `colorRamps`
 
-```{r,message=F,cache=ca,warning=F}
+
+```r
 library(colorRamps)
 spplot(my_map,"POP2005",col.regions=blue2red(100))
 ```
 
+![](spplot_files/figure-html/unnamed-chunk-8-1.png)
+
 ## Nutzung von `colorRamps`
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=blue2green(100))
 ```
 
+![](spplot_files/figure-html/unnamed-chunk-9-1.png)
+
 ## Nutzung von `colorRamps`
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=green2red(100))
 ```
 
+![](spplot_files/figure-html/unnamed-chunk-10-1.png)
+
 ## Nutzung von `colorRamps`
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=blue2yellow(100))
 ```
 
+![](spplot_files/figure-html/unnamed-chunk-11-1.png)
+
 ## Nutzung von `colorRamps`
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=matlab.like(100))
 ```
+
+![](spplot_files/figure-html/unnamed-chunk-12-1.png)
 
 ## Nutzung von synthetischen Daten
 
 Synthetische Daten erzeugen (Bevölkerung 2010)
 
-```{r,cache=ca,warning=F}
+
+```r
 my_map$Pop2010 <- my_map$POP2005 + 
                     runif(length(my_map),-10000,10000)
 ```
@@ -106,10 +137,13 @@ my_map$Pop2010 <- my_map$POP2005 +
 
 ## Farben wie bei [matlab](http://de.mathworks.com/products/matlab/)
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,c("POP2005","Pop2010"),
        col.regions=matlab.like(100))
 ```
+
+![](spplot_files/figure-html/unnamed-chunk-14-1.png)
 
 ## Mehr Beispiele 
 
