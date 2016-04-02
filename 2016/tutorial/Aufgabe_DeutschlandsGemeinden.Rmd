@@ -2,10 +2,19 @@
 title: "Aufgabe - Deutschlands Gemeinden"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: html_document
+output:
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Aufgabe
+
+- Laden Sie die Shapefiles der Gemeinden Deutschlands
+
+- Schränken Sie die Daten auf das Saarland ein, und zeichnen Sie eine Karte.
+
+- Überlegen Sie welche Geodaten Sie zur Darstellung Ihres eigenen Themas benötigen.

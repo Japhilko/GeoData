@@ -14,3 +14,5 @@ output:
 - Erzeugen Sie eine Karte von einem Ort, der Ihnen besonders gut gefällt und speichern Sie diesen.
 
 - Versuchen Sie Ihren Anreiseweg in einer Karte darzustellen.
+
+- Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen wollen

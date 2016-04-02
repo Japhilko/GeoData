@@ -1,10 +1,16 @@
+## Allgemein
 
+# rcodes alle richtig machen
+
+## Spezielle Themen
 
 # Matchen von Daten
 
+# apply Familie
+
 ?agrep
 
-unionspatialpolygons
+# unionspatialpolygons + 
 
 intersect
 
