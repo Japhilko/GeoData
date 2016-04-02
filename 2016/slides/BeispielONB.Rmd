@@ -34,7 +34,33 @@ plot(onb)
 
 ## Einen Vorwahlbereich ausschneiden
 
-```{r}
-
+```{r,eval=F}
+vwb <- onb@data$ONB_NUMMER
+vwb1 <- substr(vwb, 1,1)
 ```
 
+```{r,eval=F}
+barchart(table(vwb1),col="royalblue",
+         xlab="Häufigkeit")
+```
+
+![vwb1freq](https://github.com/Japhilko/GeoData/blob/master/data/figure/vwb1freq.png)
+
+## Vorwahlbereich ausschneiden
+
+```{r,eval=F}
+vwb6 <- onb[vwb1==6,]
+plot(vwb6)
+```
+
+![vwb6](https://github.com/Japhilko/GeoData/blob/master/data/figure/vwb6.png)
+
+## Shapefiles zusammenfassen
+
+```{r,eval=F}
+vwb6c <- unionSpatialPolygons(vwb6,
+              rep(1,length(vwb6)))
+plot(vwb6c,col="royalblue")
+```
+
+![vwb6c](https://github.com/Japhilko/GeoData/blob/master/data/figure/vwb6c.png)
