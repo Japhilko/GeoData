@@ -1,0 +1,62 @@
+---
+title: "OSM und ggmap"
+author: "Jan-Philipp Kolb"
+date: "2 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+Ex1 <- T
+```
+
+## Datensatz laden
+
+```{r,eval=Ex1}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_bar.csv"
+bars <- read.csv(link)
+```
+
+
+## Beispiel für Berlin
+
+Den Datensatz auf Berlin einschränken:
+
+```{r,eval=Ex1}
+be_bar <- bars[bars$place=="Berlin",]
+```
+
+## Eine Karte für Berlin
+
+```{r,eval=Ex1}
+library(ggmap)
+be_map12 <- qmap("Berlin",zoom=12,
+ maptype="terrain-lines",source="stamen")
+```
+
+
+## Contourplot
+
+```{r,eval=Ex1}
+be_map12 + geom_density2d(data = be_bar, 
+                          aes(x = lon, 
+                              y = lat),
+                          lwd=2)
+```
+
+## Dichte farblich kennzeichnen
+
+```{r,eval=Ex1}
+be_map12 +
+geom_density2d(data = be_bar, aes(x = lon, y = lat)) +
+stat_density2d(data = be_bar, aes(x = lon, y = lat,  fill = ..level.., alpha = ..level..),
+        size = 0.01, bins = 16, geom = 'polygon') +
+ scale_fill_gradient(low = "green", high = "red") +
+   scale_alpha(range = c(0.00, 0.25), guide = FALSE) +
+  theme(legend.position = "none", axis.title = element_blank(), text = element_text(size = 12))
+```
+
+
+## Links und Resourcen
+
+- [Contourplots](http://www.r-bloggers.com/contour-and-density-layers-with-ggmap/)

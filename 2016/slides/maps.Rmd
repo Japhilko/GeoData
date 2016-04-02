@@ -121,6 +121,13 @@ Wir können auch den [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevic
 map("italy",fill=T, col = rgb(0,1,0))
 ```
 
+## [Hintergrund](https://dataveld.wordpress.com/2016/02/15/getting-started-with-r-maps-in-microsoft-power-bi/)
+
+```{r}
+map("state", col="#01B8AA", bg="#374649")
+```
+
+
 ## Auch ausprobieren:
 
 ```{r,eval=F}
@@ -330,6 +337,25 @@ colorsmatch <- unemp$colorSteps[match(county.fips$fips,
 ```{r}
 map("county", col = colors[colorsmatch], 
     fill = TRUE)
+```
+
+## Verschiedene Projektionen
+
+```{r,warning=F}
+library(mapproj)
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
+```
+
+## Eine andere Projektion
+
+```{r}
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
+```
+
+## Eine weitere Projektion
+
+```{r}
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
 ```
 
 ## Mehr Links und Quellen

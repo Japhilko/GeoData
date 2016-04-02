@@ -1,7 +1,7 @@
 ---
-title: "Packete Choroplethr und DT"
+title: "Pakete Choroplethr und DT"
 author: "Jan-Philipp Kolb"
-date: "Fri Sep 04 14:08:29 2015"
+date: "08 April 2016"
 output: md_document
 ---
 
@@ -25,10 +25,10 @@ The following relies heavily on the [vignette](https://cran.r-project.org/web/pa
 
 ## What is a choropleth map
 
-A choropleth is a map which
+Ein choropleth ist eine Karte, die
 
-- shows geographic boundaries.
-- colors those regions based on some metric.
+- geografische Grenzen zeigt.
+- bei denen Bereiche basierend auf Metriken eingefärbt werden.
 
 Choropleths are useful for visualizing data where geographic boundaries are a natural unit of aggregation. 
 

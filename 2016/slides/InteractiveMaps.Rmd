@@ -27,14 +27,14 @@ whcSites <- read.csv(url)
 
 [magrittr](https://cran.r-project.org/web/packages/magrittr/index.html) - für den Pipe Operator in R:
 
-```{r}
+```{r,warning=F}
 library("magrittr")
 ```
 
 
 [leaflet](https://rstudio.github.io/leaflet/) - um  interaktive Karten mit der JavaScript Bibliothek 'Leaflet' zu erzeugen
 
-```{r}
+```{r,warning=F}
 library("leaflet")
 ```
 
@@ -77,7 +77,9 @@ m1 <- leaflet() %>%
 
 ![pic](https://github.com/Japhilko/GeoData/tree/master/data/figure/WHCcircles.PNG) 
 
+## [Die Karte abspeichern](http://www.r-bloggers.com/interactive-mapping-with-leaflet-in-r-2/)
 
+![gui](http://i1.wp.com/spatialrecology.org/images/r_leaflet/snapshot2.png)
 
 ## Links und Quellen
 

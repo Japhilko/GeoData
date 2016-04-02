@@ -39,3 +39,12 @@ install.packages("leaflet")
 
 install.packages("devtools")
 install.packages("DT")
+
+#----------------------------#
+# Github packages
+#----------------------------#
+
+
+library(devtools)
+install_github('arilamstein/choroplethrZip@v1.1.1')
+
