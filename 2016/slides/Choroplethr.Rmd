@@ -12,34 +12,34 @@ internet <- F
 Nint <- !internet
 ```
 
-## Introduction
+## Einleitung
 
-[`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Simplify the Creation of Choropleth Maps in R
+[`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Vereinfachung der Erstellung von Choroplethen in R
 
-Package by [Ari Lamstein](http://www.arilamstein.com/)
+Paket von [Ari Lamstein](http://www.arilamstein.com/)
 
 [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
 - World Development Indicators (World Bank)
 
-The following relies heavily on the [vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) of the `choroplethr`-package
+Folgendes basiert auf der [vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) des `choroplethr`-Paketes
 
-## What is a choropleth map
+## Was ist ein Choropleth
 
-Ein choropleth ist eine Karte, die
+Ein Choropleth ist eine Karte, die
 
 - geografische Grenzen zeigt.
 - bei denen Bereiche basierend auf Metriken eingefärbt werden.
 
-Choropleths are useful for visualizing data where geographic boundaries are a natural unit of aggregation. 
+Choropleths sind nützlich für die Visualisierung von Daten, wo geografische Grenzen eine natürliche Einheit der Aggregation sind. 
 
-## Population estimates for US States
+## Bevölkerungsschätzungen für den US-Staaten
 
 ```{r,warning=F,message=F,echo=F}
 library("choroplethr")
 data(df_pop_state)
 ```
 
-`df_pop_state` is a dataset which is included in the package `choroplethr`, containing population estimates for US States in 2012.
+`df_pop_state` ist ein Datensatz , der in dem Paket `choroplethr` enthalten ist, es enthält Schätzungen zu den US-Staaten für das Jahr 2012.
 
 ```{r,echo=F,eval=internet}
 library("choroplethrMaps")
@@ -50,26 +50,28 @@ datatable(df_pop_state,options = list(pageLength = 5))
 kable(df_pop_state[1:10,])
 ```
 
-## `choroplethr` - Hello World
+## `choroplethr` - Hallo Welt
 
-For example, here is a [choropleth](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) that shows 2012 US State Population Estimates:
+Hier ist ein Beispiel [choropleth](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) 
 
-We get a choropleth map with only one argument:
+Die Karte zeigt die US State Bevölkerungsschätzung für das Jahr 2012:
+
+Wir bekommen eine Choroplethenkarte mit nur einem Argument:
 
 ```{r}
 state_choropleth(df_pop_state)
 ```
 
 
-But we can also create a title and name the legend:
+Aber wir können auch einen Titel erstellen und die Legende benennen:
 
 ```{r}
 state_choropleth(df_pop_state, title="2012 US State Population Estimates", legend="Population")
 ```
 
-## Show only three states
+## Nur drei Staaten darstellen
 
-[US State Chropleths](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+[US State Chroplethen](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
 
 ```{r}
 state_choropleth(df_pop_state,
@@ -80,9 +82,9 @@ state_choropleth(df_pop_state,
 ```
 
 
-## US County Chropleths
+## US County Chroplethen
 
-[Choropleth of US Counties](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html)
+[Choroplethen der US Counties](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html)
 
 ```{r,eval=F}
 ?df_pop_county
@@ -98,7 +100,7 @@ county_choropleth(df_pop_county)
 ```
 
 
-## [Country Choropleths ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+## [Country Choroplethen ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
 
 ```{r}
 data(df_pop_country)
@@ -112,7 +114,7 @@ country_choropleth(df_pop_country,
 
 
 
-## World Bank data
+## Weltbank Daten
 
 ```{r,cache=T,warning=F,message=F}
 library(choroplethr)
@@ -121,7 +123,7 @@ library(WDI)
 choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population", num_colors=1)
 ```
 
-## [Life Expectancy](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+## [Lebenserwartung](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
 
 ```{r,warning=F,message=F}
 library(WDI) 
@@ -129,20 +131,67 @@ choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012, title="2012 Life Expectancy")
 ```
 
 
-## Animated
+## Animiert
 
 ```{r,cache=T}
 data(df_president_ts)
 ```
 
-With the questionmark we get help
+Mit dem Fragezeichen bekommen wir Hilfe
 
 ```{r,eval=F}
 ?df_president_ts
 ```
 
 
-## The datatable
+## [Ein weiteres Beispiel](http://www.r-bloggers.com/how-to-change-the-reference-map-in-choroplethr/)
+
+
+```{r,warning=F}
+library(choroplethr)
+library(choroplethrZip)
+library(R6)
+library(RgoogleMaps)
+library(ggmap)
+ 
+ZipChoroplethSatellite = R6Class("ZipChoroplethSatellite", inherit = ZipChoropleth,
+  public = list(
+ 
+    get_reference_map = function()
+    {
+      # note: center is (long, lat) but MaxZoom is (lat, long)
+ 
+      center = c(mean(self$choropleth.df$long),
+      mean(self$choropleth.df$lat))
+ 
+      max_zoom = MaxZoom(range(self$choropleth.df$lat),
+      range(self$choropleth.df$long))
+ 
+      get_map(location = center,
+        zoom    = max_zoom,
+        maptype = "satellite",
+        color   = "color")
+    }
+  )
+)
+```
+
+## Satelitenkarte als Hintergrund
+
+```{r}
+data(df_zip_demographics)
+df_zip_demographics$value = df_zip_demographics$per_capita_income
+nyc_fips = c(36005, 36047, 36061, 36081, 36085)
+  
+c = ZipChoroplethSatellite$new(df_zip_demographics)
+c$set_zoom_zip(state_zoom=NULL, county_zoom = nyc_fips, zip_zoom=NULL, msa_zoom=NULL)
+c$set_num_colors(4)
+c$title  = "2013 New York City ZIP Code Tabulated Areas"
+c$legend = "Per Capita Income"
+c$render_with_reference_map()
+```
+
+## Das datatable
 
 ```{r,cache=F,echo=F,warning=F,eval=internet}
 datatable(df_president_ts, options = list(pageLength = 5))
@@ -150,7 +199,7 @@ datatable(df_president_ts, options = list(pageLength = 5))
 
 - [datatable](http://www.htmlwidgets.org/showcase_datatables.html)
 
-## Reference
+## Resourcen
 
 ```{r}
 citation("choroplethr")

@@ -10,12 +10,24 @@
 
 ?agrep
 
+# ggmap
+?fortify
+# http://www.r-bloggers.com/mapping-with-ggplot-create-a-nice-choropleth-map-in-r/
+
 # unionspatialpolygons + 
 
 intersect
 
 ?proj4string
 
+
+# http://strimas.com/spatial/long-flights/
+# http://www.r-bloggers.com/r-vs-qgis-for-sustainable-transport-planning/
+# http://www.r-bloggers.com/data-mining-the-california-solar-statistics-with-r-part-iii/
+# http://www.r-bloggers.com/nyc-motor-vehicle-collisions-street-level-heat-map/
+# http://www.r-bloggers.com/turning-r-into-a-gis-mapping-the-weather-in-germany/
+# http://www.r-bloggers.com/mapping-seattle-crime/
+# http://www.r-bloggers.com/cartography-with-complex-survey-data/
 
 ## ggmap
 

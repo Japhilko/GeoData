@@ -46,5 +46,4 @@ install.packages("DT")
 
 
 library(devtools)
-install_github('arilamstein/choroplethrZip@v1.1.1')
-
+install_github('arilamstein/choroplethrZip@v1.3.0')

@@ -57,6 +57,18 @@ stat_density2d(data = be_bar, aes(x = lon, y = lat,  fill = ..level.., alpha = .
 ```
 
 
+## [Gittergraphik](http://www.r-bloggers.com/ggmap-interesting-toolbox-for-spatial-analysis/)
+
+
+
+```{r,eval=Ex1}
+be_map12 + stat_bin2d(
+aes(x = lon, y = lat),
+size = .5, bins = 30, alpha = 1/2,
+data = be_bar)
+```
+
+
 ## Links und Resourcen
 
 - [Contourplots](http://www.r-bloggers.com/contour-and-density-layers-with-ggmap/)

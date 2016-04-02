@@ -214,3 +214,4 @@ info <- read.csv(link,sep="\t",header=F)
 
 - Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)
 
+
