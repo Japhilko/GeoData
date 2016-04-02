@@ -1,33 +1,26 @@
----
-title: "Telefonvorwahlen"
-author: "Jan-Philipp Kolb"
-date: "2 April 2016"
-output:
-  html_document:
-    keep_md: true
----
+# Telefonvorwahlen
+Jan-Philipp Kolb  
+2 April 2016  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Ortsnetzbereiche
 
 Quelle: [Bundesnetzagentur](http://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/GISDaten_ONBGrenzen/ONBGrenzen_Basepage.html)
 
-```{r,echo=F,eval=F}
-setwd("D:/GESIS/Workshops/GeoDaten/data")
-```
 
 
-```{r,eval=F}
+
+
+```r
 library(maptools)
 onb <- readShapePoly("ONB_DTAG_DHDN_Gauss3d-3.shp")
 ```
 
 ## Die Karte zeichnen
 
-```{r,eval=F}
+
+```r
 par(mai=c(0,0,0,0))
 plot(onb)
 ```
@@ -36,12 +29,14 @@ plot(onb)
 
 ## Einen Vorwahlbereich ausschneiden
 
-```{r,eval=F}
+
+```r
 vwb <- onb@data$ONB_NUMMER
 vwb1 <- substr(vwb, 1,1)
 ```
 
-```{r,eval=F}
+
+```r
 barchart(table(vwb1),col="royalblue",
          xlab="Häufigkeit")
 ```
@@ -50,7 +45,8 @@ barchart(table(vwb1),col="royalblue",
 
 ## Vorwahlbereich ausschneiden
 
-```{r,eval=F}
+
+```r
 vwb6 <- onb[vwb1==6,]
 plot(vwb6)
 ```
@@ -59,7 +55,8 @@ plot(vwb6)
 
 ## Shapefiles zusammenfassen
 
-```{r,eval=F}
+
+```r
 vwb6c <- unionSpatialPolygons(vwb6,
               rep(1,length(vwb6)))
 plot(vwb6c,col="royalblue")
