@@ -55,10 +55,6 @@ Sozialwissenschaftliche Datenquellen
 
 - Datenaufbereitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.Rmd)) 
 
-- **Aufgabe:** [Die Ergebnisse des Zensus 2011](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
-
-
-
 Verbindung, Editierung und Einfärbung
 ---------------------
 
@@ -66,8 +62,15 @@ Verbindung, Editierung und Einfärbung
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
 
-- R-Paket `spplot` und Farbkodierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md)| 
+- R-Paket `spplot` und Farbkodierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.Rmd)| 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+
+- Daten für die Beispiele ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Course6.Rmd) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
+), Datenquellen in R ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd))
+
+Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
+---------------------
 
 - Thematische Karten mit dem R-Paket `tmap` ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/F_tmap.pdf) |
 [Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.Rmd) | 
@@ -78,16 +81,6 @@ of data sources
 - Das R-Paket `choroplethr` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.Rmd) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
 
-Distanzen und Räumliche Statistik
----------------------
-
-- Das R-Paket `spdep` - Nachbarschaft und Distanz ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.md) |
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
-
-- Weitere geographische Berechnungen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/SpatStat.md))
-
-- Daten räumlich aggregieren ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PointInPolygon.Rmd))
-
 
 Nutzung von OpenStreetMap Daten
 ---------------------
@@ -96,7 +89,7 @@ Nutzung von OpenStreetMap Daten
 
 - Die Nutzung von Programmierschnittstellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.Rmd))
 
-- Das R-Paket `osmar` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md))
+- Das R-Paket `osmar` ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.Rmd))
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
@@ -107,6 +100,9 @@ Interaktive Karten und räumliche Statistik
 - Interaktive Karten und Präsentation ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R))
 Beispiel - [Campingplätze](http://rpubs.com/Japhilko82/Campsites)
+
+- Das R-Paket `spdep` - Nachbarschaft und Distanz ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.Rmd) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
 
 - Interaktive Karten mit dem R-Paket `leaflet` 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/InteractiveMaps.Rmd) |

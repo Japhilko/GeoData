@@ -85,6 +85,14 @@ library ( maps )
 map ("italy", col = "blue")
 ```
 
+## Add In: Colour Picker
+
+- RStudio Version 0.99.893 oder höher ist notwendig
+- Das Paket `shinyjs` muss installiert sein.
+
+![colourpicker](colourpicker.PNG)
+
+
 ## Choroplethen - R-Paket maps
 
 Wir wollen die Flächen blau einfärben:
