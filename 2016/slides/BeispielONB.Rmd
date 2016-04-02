@@ -1,0 +1,40 @@
+---
+title: "Telefonvorwahlen"
+author: "Jan-Philipp Kolb"
+date: "2 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Ortsnetzbereiche
+
+Quelle: [Bundesnetzagentur](http://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/GISDaten_ONBGrenzen/ONBGrenzen_Basepage.html)
+
+```{r,echo=F,eval=F}
+setwd("D:/GESIS/Workshops/GeoDaten/data")
+```
+
+
+```{r,eval=F}
+library(maptools)
+onb <- readShapePoly("ONB_DTAG_DHDN_Gauss3d-3.shp")
+```
+
+## Die Karte zeichnen
+
+```{r}
+par(mai=c(0,0,0,0))
+plot(onb)
+```
+
+![onbD](https://github.com/Japhilko/GeoData/blob/master/data/figure/onbGermany.png)
+
+## Einen Vorwahlbereich ausschneiden
+
+```{r}
+
+```
+
