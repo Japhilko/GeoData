@@ -9,9 +9,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r,eval=F,echo=F}
+setwd("D:/GESIS/Workshops/GeoDaten/data")
+```
+
 ## GADM als Datenquelle
 
-```{r,eval=F}
+```{r,eval=F,warning=F}
 library(raster)
 DEU4 <- getData('GADM', country='DEU', level=4)
 plot(DEU4)
@@ -35,6 +39,17 @@ plot(SAL)
 ```
 
 ![SALkarte](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/SALkarte.png)
+
+## Daten abspeichern
+
+```{r,eval=F,echo=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
+```
+
+```{r,eval=F}
+save(SAL,file="SAL.RData")
+```
+
 
 ## BKG als Datenquelle
 

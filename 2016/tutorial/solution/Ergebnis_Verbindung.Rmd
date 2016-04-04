@@ -18,3 +18,7 @@ dat <- read.csv(link)
 
 ## Karte laden
 
+```{r}
+load("data/SAL.RData")
+```
+
