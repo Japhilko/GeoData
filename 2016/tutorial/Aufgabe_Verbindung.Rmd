@@ -8,4 +8,4 @@ output: html_document
 ## Aufgabe
 
 - Verbinden Sie die Zensus Ergebnisse mit einer Karte für das Saarland.
-- Stellen Sie 
+- Stellen Sie den Anteil der Einjährigen und den Anteil der Zwanzigjährigen im Vergleich dar.

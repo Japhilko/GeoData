@@ -1,0 +1,20 @@
+---
+title: "Lösung Verbindung"
+author: "Jan-Philipp Kolb"
+date: "4 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Daten einlesen
+
+```{r}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/slides/data/datSAL.csv"
+dat <- read.csv(link)
+```
+
+## Karte laden
+

@@ -17,4 +17,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Schränken Sie die Daten auf das Saarland ein, und zeichnen Sie eine Karte.
 
+- Speichern Sie die Daten in geeigneter Form ab.
+
 - Überlegen Sie welche Geodaten Sie zur Darstellung Ihres eigenen Themas benötigen.

@@ -1,7 +1,7 @@
 ---
 title: "Daten Import"
 author: "Jan-Philipp Kolb"
-date: "Wed Oct 14 07:54:24 2015"
+date: "07 April"
 output:
   html_document:
     keep_md: true
@@ -105,8 +105,16 @@ studis <- read.dta("studenten_cf_2000.dta")
 
 ## Quick R zum Datenimport
 
+<http://www.statmethods.net/input/index.html>
 
-http://www.statmethods.net/input/index.html
+## Datenexport
+
+```{r,eval=F}
+x <- runif(1000)
+save(x, file="WasAuchImmer.RData")
+```
+
+
 
 ## Datenmanagement ein wenig wie bei SPSS
 

@@ -39,7 +39,7 @@ Quellen für räumliche Daten
 
 - OpenStreetMap ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
 
-- _R-Recap_: Daten Import ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+- _R-Recap_: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 
 
 - **Aufgabe:** [Eine Karte um Daten für Deutschlands Gemeinden darzustellen](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md)
@@ -71,6 +71,8 @@ of data sources
 - Shapefiles zusammenfassem ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
 ), Datenquellen in R ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd))
+
+
 
 Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 ---------------------
