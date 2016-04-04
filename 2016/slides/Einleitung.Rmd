@@ -1,5 +1,5 @@
 ---
-title: "Einleitung und Motivation"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Einleitung und Motivation"
 author: "Jan-Philipp Kolb"
 date: "7 April 2016"
 output: beamer_presentation
@@ -46,6 +46,12 @@ Quelle: <https://en.wikipedia.org/wiki/Fra_Mauro_map>
 
 <http://www.sowirdberlin.de/>
 ![Fahhrad Berlin](https://asset0.torial.com/system/portfolio_item_images/production/2014/07/21/m5we1vmq6_preview_image_9678.jpg)
+
+
+
+## Heterogener Datenbestand - Beispiel <http://names.mappinglondon.co.uk/>
+
+![Surnames London](http://mappinglondon.co.uk/wp-content/uploads/2011/11/surnames1.png)
 
 
 ## Motivation - Warum die Darstellung in Karten
@@ -97,11 +103,6 @@ Quelle: <https://en.wikipedia.org/wiki/Fra_Mauro_map>
 
 <http://spatial.ly/>
 ![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
-
-
-## [Namem London](http://names.mappinglondon.co.uk/)
-
-![Surnames London](http://mappinglondon.co.uk/wp-content/uploads/2011/11/surnames1.png)
 
 
 ## Links mit Beispielen

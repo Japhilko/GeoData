@@ -19,7 +19,7 @@ Jan-Philipp Kolb
 
 
 
-![](maps_files/figure-html/unnamed-chunk-3-1.png)
+![](maps_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 
 
@@ -46,7 +46,7 @@ Wie man Hilfe bekommt:
 map()
 ```
 
-![](maps_files/figure-html/unnamed-chunk-6-1.png)
+![](maps_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
 ## Ein erstes Argument
@@ -58,7 +58,7 @@ Der gleiche Befehl mit einem Argument:
 map("usa")
 ```
 
-![](maps_files/figure-html/unnamed-chunk-7-1.png)
+![](maps_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 ## Eine Frankreichkarte
 
@@ -67,7 +67,7 @@ map("usa")
 map("france")
 ```
 
-![](maps_files/figure-html/unnamed-chunk-8-1.png)
+![](maps_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ## Politische Karte - Italien
 
@@ -79,7 +79,15 @@ library ( maps )
 map ("italy", col = "blue")
 ```
 
-![](maps_files/figure-html/unnamed-chunk-9-1.png)
+![](maps_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+
+## Add In: Colour Picker
+
+- RStudio Version 0.99.893 oder höher ist notwendig
+- Das Paket `shinyjs` muss installiert sein.
+
+![colourpicker](https://github.com/Japhilko/GeoData/blob/master/data/figure/colourpicker.PNG)
+
 
 ## Choroplethen - R-Paket maps
 
@@ -89,7 +97,7 @@ Wir wollen die Flächen blau einfärben:
 map ("italy",fill =T, col = "blue")
 ```
 
-![](maps_files/figure-html/unnamed-chunk-10-1.png)
+![](maps_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ## Mehr Farben
 
@@ -107,7 +115,7 @@ nun nutzrn wir den Vektor um die Farbe zu spezifizieren
 map ("italy",fill =T, col = colors)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-12-1.png)
+![](maps_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ## Excurs: mehr Farben!
 Wir können auch den [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) Befehl nutzen um eigene Farben zu erzeugen:
@@ -117,7 +125,17 @@ Wir können auch den [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevic
 map("italy",fill=T, col = rgb(0,1,0))
 ```
 
-![](maps_files/figure-html/unnamed-chunk-13-1.png)
+![](maps_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+
+## [Hintergrund](https://dataveld.wordpress.com/2016/02/15/getting-started-with-r-maps-in-microsoft-power-bi/)
+
+
+```r
+map("state", col="#01B8AA", bg="#374649")
+```
+
+![](maps_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+
 
 ## Auch ausprobieren:
 
@@ -170,7 +188,7 @@ library(maps)
 map("world", "Germany")
 ```
 
-![](maps_files/figure-html/unnamed-chunk-18-1.png)
+![](maps_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 ## R-Paket maps - zwei Länder
 
@@ -180,7 +198,7 @@ map("world", "Germany")
 map("world", c("Germany","Poland"))
 ```
 
-![](maps_files/figure-html/unnamed-chunk-19-1.png)
+![](maps_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 
 ## Zwei Länder mit mehr Farbe 
@@ -191,7 +209,7 @@ map("world", c("Germany","Austria"),fill=T,
 col=c("red","green"))
 ```
 
-![](maps_files/figure-html/unnamed-chunk-20-1.png)
+![](maps_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 
 
@@ -203,7 +221,7 @@ map("world", "China")
 map.scale()
 ```
 
-![](maps_files/figure-html/unnamed-chunk-21-1.png)
+![](maps_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 ## R-Paket maps - mehr Feature
 
@@ -214,7 +232,7 @@ Wie `map`, aber mit Bezeichnungen für die Regionen:
 map.text("county", "penn")
 ```
 
-![](maps_files/figure-html/unnamed-chunk-22-1.png)
+![](maps_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
 
 Counties in Pennsylvania 
 
@@ -255,7 +273,7 @@ map()
 map.cities(world.cities)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-26-1.png)
+![](maps_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
 
 ## Frankreichs Städte
 
@@ -266,7 +284,7 @@ map("france")
 map.cities(world.cities)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-27-1.png)
+![](maps_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
 
 ## Nur französische Städte 
 
@@ -295,7 +313,7 @@ map("france")
 map.cities(FCit,col="blue",pch=20)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-30-1.png)
+![](maps_files/figure-html/unnamed-chunk-31-1.png)<!-- -->
 
 `pch` - plotting character, z.B., das Symbol das genutzt werden soll.
 
@@ -310,7 +328,7 @@ map.cities(FCit,col="blue",pch=20)
 map.cities(FCit_Bc,col="red",pch=20)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-31-1.png)
+![](maps_files/figure-html/unnamed-chunk-32-1.png)<!-- -->
 
 ## Beispiel für Fortgeschrittene 
 
@@ -339,7 +357,7 @@ plot(world.cities$lon,world.cities$lat,)
  abline(h=vx[i],col=rgb(1,0,0,vy[i]),lwd=2.7)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-33-1.png)
+![](maps_files/figure-html/unnamed-chunk-34-1.png)<!-- -->
 
 
 ## Thematische Karten mit dem R-Paket maps
@@ -371,7 +389,7 @@ colors <- blue2red(6)
 barplot(1:6,col=colors)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-35-1.png)
+![](maps_files/figure-html/unnamed-chunk-36-1.png)<!-- -->
 
 ## Beispiel: US Arbeitslosigkeit - Farbschattierung
 
@@ -392,7 +410,35 @@ map("county", col = colors[colorsmatch],
     fill = TRUE)
 ```
 
-![](maps_files/figure-html/unnamed-chunk-37-1.png)
+![](maps_files/figure-html/unnamed-chunk-38-1.png)<!-- -->
+
+## Verschiedene Projektionen
+
+
+```r
+library(mapproj)
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
+```
+
+![](maps_files/figure-html/unnamed-chunk-39-1.png)<!-- -->
+
+## Eine andere Projektion
+
+
+```r
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
+```
+
+![](maps_files/figure-html/unnamed-chunk-40-1.png)<!-- -->
+
+## Eine weitere Projektion
+
+
+```r
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
+```
+
+![](maps_files/figure-html/unnamed-chunk-41-1.png)<!-- -->
 
 ## Mehr Links und Quellen
 

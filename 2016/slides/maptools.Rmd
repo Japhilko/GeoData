@@ -1,8 +1,8 @@
 ---
-title: "Das Paket maptools"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das Paket maptools"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: md_document
+output: beamer_presentation
 ---
 
 ```{r,echo=F,warning=F}

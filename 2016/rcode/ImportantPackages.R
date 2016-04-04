@@ -24,6 +24,7 @@ install.packages("RPostgreSQL")
 install.packages("tmap")
 install.packages("RANN")
 
+install.packages("mapdata")
 install.packages("FAOSTAT")
 install.packages("RANN")
 install.packages("rvest")

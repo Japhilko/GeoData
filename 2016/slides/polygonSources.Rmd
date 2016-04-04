@@ -24,7 +24,7 @@ Ex2 <- T
 
 - Jedes Element hat Attribute, wie bspw. Name oder Temperatur die es beschreiben.
 
-Quelle: [Wikipedia](https://en.wikipedia.org/wiki/Shapefile)
+Quelle: <https://en.wikipedia.org/wiki/Shapefile>
 
 
 ## Global Adminastrative Boundaries - [GADM](http://www.gadm.org/) - NUTS level 1
@@ -42,20 +42,16 @@ LUXA <- LUX1[1,]
 plot(LUXA)
 ```
 
-Wie bekommt man zusätzliche Infos ins Objekt 
-
+Koordinaten im polygon slot
 ```{r,eval=F}
 LUX1@polygons[[1]]@Polygons[[1]]@coords
 ```
 
-
-## Koordinaten im polygon slot
-
 ```{r,echo=F}
-kable(head(LUX1@polygons[[1]]@Polygons[[1]]@coords))
+head(LUX1@polygons[[1]]@Polygons[[1]]@coords)
 ```
 
-## Daten slot
+## Der Datenslot
 
 ```{r}
 head(LUX1@data)
@@ -63,6 +59,8 @@ head(LUX1@data)
 
 
 ## [GADM](http://www.gadm.org/)- NUTS level 3
+
+<http://www.gadm.org/>
 
 ```{r,cache=ca,warning=F}
 LUX3 <- getData('GADM', country='LUX', level=3)
