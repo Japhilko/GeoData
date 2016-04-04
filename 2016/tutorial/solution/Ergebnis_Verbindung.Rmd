@@ -22,3 +22,50 @@ dat <- read.csv(link)
 load("data/SAL.RData")
 ```
 
+## Daten ansehen
+
+```{r}
+head(SAL@data)
+```
+
+```{r}
+head(dat)
+```
+
+Der Regionalschlüssel muss so verkürzt werden, dass er mit dem AGS gematcht werden kann.
+
+## Verkürzter Regionalschlüssel
+
+```{r}
+RS <- SAL@data$CCA_4
+AGS_t1 <- substr(RS,1,5)
+AGS_t2 <- substr(RS,10,12)
+
+AGS <- paste(AGS_t1,0,AGS_t2,sep="")
+```
+
+## Matchen
+
+```{r}
+ind <- match(AGS,dat$AGS)
+```
+
+```{r}
+SAL@data$Bev <- dat$Bev
+SAL@data$Bev1 <- dat$Bev1
+SAL@data$Bev20 <- dat$Bev20
+```
+
+## Anteil berechnen
+```{r}
+SAL@data$Bev20a <- with(SAL@data,Bev20/Bev)
+SAL@data$Bev1a <- with(SAL@data,Bev1/Bev)
+```
+
+## Karte erstellen
+
+```{r}
+library(sp)
+spplot(SAL,c("Bev1a","Bev20a"))
+```
+
