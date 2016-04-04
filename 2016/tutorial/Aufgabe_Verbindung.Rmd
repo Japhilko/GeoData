@@ -1,0 +1,11 @@
+---
+title: "Verbindung von Karte und Zensus Daten"
+author: "Jan-Philipp Kolb"
+date: "4 April 2016"
+output: html_document
+---
+
+## Aufgabe
+
+- Verbinden Sie die Zensus Ergebnisse mit einer Karte für das Saarland.
+- Stellen Sie 

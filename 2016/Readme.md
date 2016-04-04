@@ -55,6 +55,9 @@ Sozialwissenschaftliche Datenquellen
 
 - Datenaufbereitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.Rmd)) 
 
+- **Aufgabe:** [Zensus Ergebnisser herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
+
+
 Verbindung, Editierung und Einfärbung
 ---------------------
 

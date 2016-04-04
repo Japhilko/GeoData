@@ -61,15 +61,17 @@ AGS <- dat[,2]
 Gnamen <- dat[,3]
 Bev <- dat[,4]
 Bev1 <- dat[,5]
+Bev20 <- dat[,25]
 
 Bev <- as.numeric(gsub(" ","",Bev))
 Bev1 <- as.numeric(gsub(" ","",Bev1))
+Bev20 <- as.numeric(gsub(" ","",Bev20))
 ```
 
 ## Datensatz erzeugen 
 
 ```{r,eval=F}
-zdat <- data.frame(AGS,Gnamen,Bev,Bev1)
+zdat <- data.frame(AGS,Gnamen,Bev,Bev1,Bev20)
 ```
 
 ## Der amtliche Gemeindeschlüssel
@@ -98,5 +100,15 @@ datSAL <- zdat[AGS2=="10" & nchar(AGS)==9,]
 ant <- datSAL$Bev1/datSAL$Bev
 which.max(ant)
 datSAL[15,]
+```
+
+## Den Datensatz abspeichern
+
+```{r,echo=F,eval=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
+```
+
+```{r,eval=F}
+write.csv(datSAL,"datSAL.csv")
 ```
 
