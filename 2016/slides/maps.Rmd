@@ -2,7 +2,7 @@
 title: "R-Paket maps"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: rmarkdown::tufte_handout
+output: md_document
 ---
 
 ```{r,echo=F,warning=F}

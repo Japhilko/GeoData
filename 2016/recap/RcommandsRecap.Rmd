@@ -1,0 +1,65 @@
+---
+title: "Übersicht wichtiger R-Befehle"
+author: "Jan-Philipp Kolb"
+date: "22 Februar 2016"
+output: html_document
+---
+
+
+## Rstudio installieren/updaten
+
+Die aktuellste Version von Rstudio kann man hier herunterladen:
+
+<https://www.rstudio.com/products/rstudio/download/>
+
+## Nutzung von AddIns in Rstudio
+
+<https://rstudio.github.io/rstudioaddins/>
+
+Um den Colourpicker zu nutzen muss bspw. folgendes Paket installiert werden:
+
+```{r,eval=F}
+install.packages("shinyjs")
+```
+
+## Objekttypen
+
+```{r}
+a <- c(1,2,3,4)
+str(a)
+```
+
+```{r}
+b <- c("red","green","blue")
+str(b)
+```
+
+```{r}
+d <- c(1,2,"green")
+str(d)
+```
+
+
+
+## Manuals zur Einführung in R
+
+- [R-Intro](http://cran.r-project.org/doc/manuals/R-intro.html) auf cran.
+
+
+## Sequenzen
+
+```{r}
+1:4
+4:1
+seq(1,4,by=.5)
+```
+
+
+## Schleifen
+
+```{r,eval=F}
+for (i in 1:4){
+  paste(i,"\n")
+}
+```
+
