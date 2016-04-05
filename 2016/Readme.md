@@ -26,7 +26,7 @@ Verschiedene Kartentypen mit ggmap
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
-R-Recap: Zuweisungen und Objekte  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
+R-Recap: Objekte und Indizierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.Rmd))
 
 Aufgabe: [Vorbereitung und Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
 

@@ -387,25 +387,20 @@ Beispiel für Fortgeschrittene
 
 [Where people live](http://www.r-bloggers.com/where-people-live/)
 
+<http://www.r-bloggers.com/where-people-live/>
+
     library(maps)
     data("world.cities")
-     X <- world.cities[,c("lat","pop")]
-     liss <- function(x,h){
-       w=dnorm(x-X[,"lat"],0,h)
-       sum(X[,"pop"]*w)
-     }
-     vx=seq(-80,80)
-     vy=Vectorize(function(x) liss(x,1))(vx)
-     vy=vy/max(vy)
+    X <- world.cities[,c("lat","pop")]
+    plot(world.cities$lon,world.cities$lat)
+    for(i in 1:length(X$lat)) {
+      abline(h=X$lat[i],col=rgb(1,0,0,.001),lwd=2.7)  
+    }
 
 Wo leben viele Menschen
 -----------------------
 
-    plot(world.cities$lon,world.cities$lat,)
-     for(i in 1:length(vx)) 
-     abline(h=vx[i],col=rgb(1,0,0,vy[i]),lwd=2.7)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-34-1.png)<!-- -->
+![WherePeopleLive](figure/WherePeopleLive.png)
 
 Thematische Karten mit dem R-Paket maps
 ---------------------------------------
@@ -417,64 +412,27 @@ Datenbasis - CIA World DataBank II
 > land outlines, rivers, / political boundaries. It was created by U.S.
 > government in the 1980s.
 
-Beispiel: US Arbeitslosigkeit
------------------------------
-
--   [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html)
-    über die Nutzung des Paketes `maps`
-
-Die Daten bekommen:
-
-    library(maps)
-    data(unemp)
-    data(county.fips)
-
-Farbverläufe
-------------
-
-    library(colorRamps)
-    colors <- blue2red(6)
-    barplot(1:6,col=colors)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-36-1.png)<!-- -->
-
-Beispiel: US Arbeitslosigkeit - Farbschattierung
-------------------------------------------------
-
-    unemp$colorSteps <- cut(unemp$unemp, 
-              c(0, 2, 4, 6, 8,10, 100))
-    colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
-              unemp$fips)]
-
-Beispiel: US Arbeitslosigkeit
------------------------------
-
-    map("county", col = colors[colorsmatch], 
-        fill = TRUE)
-
-![](maps_files/figure-markdown_strict/unnamed-chunk-38-1.png)<!-- -->
-
 Verschiedene Projektionen
 -------------------------
 
     library(mapproj)
     map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-39-1.png)<!-- -->
+![](maps_files/figure-markdown_strict/unnamed-chunk-35-1.png)<!-- -->
 
 Eine andere Projektion
 ----------------------
 
     map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-40-1.png)<!-- -->
+![](maps_files/figure-markdown_strict/unnamed-chunk-36-1.png)<!-- -->
 
 Eine weitere Projektion
 -----------------------
 
     map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
 
-![](maps_files/figure-markdown_strict/unnamed-chunk-41-1.png)<!-- -->
+![](maps_files/figure-markdown_strict/unnamed-chunk-37-1.png)<!-- -->
 
 Mehr Links und Quellen
 ----------------------
@@ -482,9 +440,15 @@ Mehr Links und Quellen
 -   [Using R — Working with Geospatial
     Data](http://mazamascience.com/WorkingWithData/?p=1277)
 
+<http://mazamascience.com/WorkingWithData/?p=1277>
+
 -   Robin Lovelace, James Cheshire - [Introduction to visualising
     spatial data in
     R](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
 
+<https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf>
+
 -   [Maps in R: Introduction - Drawing the map of
     Europe](http://www.milanor.net/blog/?p=534)
+
+<http://www.milanor.net/blog/?p=534>

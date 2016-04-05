@@ -1,0 +1,126 @@
+---
+title: "Objekttypen und Indizierung"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output: md_document
+---
+
+
+## Rstudio installieren/updaten
+
+Die aktuellste Version von Rstudio kann man hier herunterladen:
+
+<https://www.rstudio.com/products/rstudio/download/>
+
+## Nutzung von AddIns in Rstudio
+
+<https://rstudio.github.io/rstudioaddins/>
+
+Um den Colourpicker zu nutzen muss bspw. folgendes Paket installiert werden:
+
+```{r,eval=F}
+install.packages("shinyjs")
+```
+
+## Objekttypen
+
+```{r}
+a <- c(1,2,3,4)
+str(a)
+```
+
+```{r}
+b <- c("red","green","blue")
+str(b)
+```
+
+```{r}
+d <- c(1,2,"green")
+str(d)
+```
+
+
+## Sequenzen
+
+```{r}
+1:4
+4:1
+seq(1,4,by=.5)
+rep(1,5)
+```
+
+
+
+## Farben in R
+
+```{r}
+barplot(rep(1,5),
+        col=c("red",1,"#01B8AA",
+              rgb(0,1,0),"purple"))
+```
+
+## Logische Abfragen
+
+```{r}
+vector1 <- 1:10
+vector1==5
+```
+
+```{r}
+vector1>5
+vector1<5
+```
+
+
+## Ein `data.frame`
+
+```{r}
+A <- 1:6
+B <- rep(1:2,3)
+C <- runif(6)
+```
+
+```{r}
+ABC <- data.frame(A,B,C)
+ABC
+```
+
+## Auswahl auf einem `data.frame`
+
+Nur eine Zeile:
+```{r}
+ABC[1,]
+```
+
+Nur eine Spalte:
+
+```{r}
+ABC[,1]
+```
+
+Gleiches Ergebnis:
+
+```{r}
+ABC$A
+```
+
+
+## Indizierung
+
+```{r}
+ABC[ABC$B==2,]
+```
+
+
+## Manuals zur Einführung in R
+
+- [R-Intro](http://cran.r-project.org/doc/manuals/R-intro.html) auf cran.
+
+## Schleifen
+
+```{r,eval=F}
+for (i in 1:4){
+  paste(i,"\n")
+}
+```
+
