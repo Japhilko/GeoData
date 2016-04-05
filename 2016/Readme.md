@@ -9,22 +9,25 @@ Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files d
 Intro und Vorbereitung
 ---------------------
 
-- Motivation ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+- __(A) Motivation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 - Unter [Infos github](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des  Verzeichnisses zu finden.
 
 - Um den Kurs zu verfolgen muss [R](https://cran.uni-muenster.de/) und [Rstudio](https://www.rstudio.com/products/rstudio/download/) installiert werden. Der Installationsprozess ist relativ einfach. 
 
+- R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+
+
 Verschiedene Kartentypen mit ggmap
 ---------------------
 
-- Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
+- __(B) Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)__ zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
-- __R-Recap__ - Zuweisungen und Objekte  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
+- R-Recap: Zuweisungen und Objekte  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd))
 
-- **Aufgabe:** [Vorbereitung und Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
+- Aufgabe: [Vorbereitung und Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
 
 Quellen für räumliche Daten
 ---------------------
@@ -37,9 +40,9 @@ Quellen für räumliche Daten
 - Internetquellen für Geodaten ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)|
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 
-- OpenStreetMap ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
+- OpenStreetMap als Datenquelle ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
 
-- _R-Recap_: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+- R-Recap: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 
 
 - **Aufgabe:** [Eine Karte um Daten für Deutschlands Gemeinden darzustellen](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md)

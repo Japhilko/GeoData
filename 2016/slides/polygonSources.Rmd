@@ -9,7 +9,7 @@ output: beamer_presentation
 
 ```{r,echo=F}
 library(knitr)
-ca <- T
+ca <- F
 Ex2 <- F
 Ex3 <- F
 Ex4 <- F
@@ -89,9 +89,12 @@ plot(DEU3)
 
 <http://datahub.io/de/dataset/postal-codes-de>
 
+```{r,eval=F,echo=F}
+setwd("D:/Daten/Daten/GeoDaten")
+```
+
 
 ```{r,eval=Ex2,echo=T,message=F}
-setwd("D:/Daten/Daten/GeoDaten")
 library(rgdal)
 PLZ <- readOGR ("post_pl.shp","post_pl")
 ```
@@ -118,7 +121,7 @@ die drei Dateien mit den folgenden Dateierweiterungen im gleichen Verzeichnis zu
 #bbox4 <- bbox(MA)
 ```
 
-```{r,cache=ca,warning=F}
+```{r,cache=ca,eval=F,warning=F}
 MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
 plot(MA)
 ```
@@ -196,16 +199,34 @@ Datenbanken für Karten
 library(mapdata)
 ```
 
+## Weitere Quellen
+
 - [Eurostat Karten](http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/
 references/administrative_units_statistical_units_1)
 
+<http://epp.eurostat.ec.europa.eu>
+
 - [Open linked data](https://www.ordnancesurvey.co.uk/business-and-government/products/opendata-products-grid.html)
 
+<https://www.ordnancesurvey.co.uk/>
+
 - [World Borders Datensatz](http://thematicmapping.org/downloads/world_borders.php)
+<http://thematicmapping.org>
+
 - [National Historical Information System](https://www.nhgis.org/)
+
+<https://www.nhgis.org/>
 
 - [Freie polygon Daten für die USA](http://www.freemapdata.com/html/free_polygon_data.html)
 
+<http://www.freemapdata.com/>
+
+## Noch mehr Quellen
+
 - [Spatial Data in R](https://science.nature.nps.gov/im/datamgmt/statistics/r/advanced/spatial.cfm)
 
+<https://science.nature.nps.gov/>
+
 - [ggmap und shapefiles](http://www.r-bloggers.com/shapefile-polygons-plotted-on-google-maps-using-ggmap-in-r-throw-some-throw-some-stats-on-that-mappart-2/)
+
+<http://www.r-bloggers.com/>

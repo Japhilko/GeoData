@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 
 
@@ -38,25 +38,7 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 
-
-</head>
-
-<body>
-
 <style type="text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
-}
 h1 {
   font-size: 34px;
 }
@@ -77,6 +59,27 @@ h5 {
 }
 h6 {
   font-size: 12px;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -108,6 +111,7 @@ $(document).ready(function () {
 
 
 
+
 </div>
 
 
@@ -118,7 +122,7 @@ $(document).ready(function () {
 <div id="intro-und-vorbereitung" class="section level2">
 <h2>Intro und Vorbereitung</h2>
 <ul>
-<li><p>Motivation (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md">Browser</a>) - <a href="http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim">Regionales</a></p></li>
+<li><p><strong>(A) Motivation</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md">Browser</a>) - <a href="http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim">Regionales</a></p></li>
 <li><p>Unter <a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md">Infos github</a> sind Informationen zur Nutzung des Verzeichnisses zu finden.</p></li>
 <li><p>Um den Kurs zu verfolgen muss <a href="https://cran.uni-muenster.de/">R</a> und <a href="https://www.rstudio.com/products/rstudio/download/">Rstudio</a> installiert werden. Der Installationsprozess ist relativ einfach.</p></li>
 </ul>
@@ -126,7 +130,7 @@ $(document).ready(function () {
 <div id="verschiedene-kartentypen-mit-ggmap" class="section level2">
 <h2>Verschiedene Kartentypen mit ggmap</h2>
 <ul>
-<li><p>Nutzung von R-Paket <a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">ggmap</a> zur Erzeugung verschiedener Kartentypen. (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R">rcode</a> )</p></li>
+<li><p><strong>(B) Nutzung von R-Paket <a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">ggmap</a></strong> zur Erzeugung verschiedener Kartentypen. (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R">rcode</a> )</p></li>
 <li><p>Beispiel: <em>Points of interest</em> (<a href="https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/">poi</a>) für Backpacker in Amsterdam</p></li>
 <li><p><strong>R-Recap</strong> - Zuweisungen und Objekte (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/RcommandsRecap.Rmd">Browser</a>)</p></li>
 <li><p><strong>Aufgabe:</strong> <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md">Vorbereitung und Nutzung von <code>ggmap</code></a></p></li>
@@ -138,8 +142,8 @@ $(document).ready(function () {
 <li><p>Politische und thematische Karten mit dem R-Paket <a href="https://cran.r-project.org/web/packages/maps/index.html">maps</a> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md">Browser</a> | <a href="https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/">blog</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R">rcode</a> )</p></li>
 <li><p>Choroplethen mit dem R-Paket maptools (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R">rcode</a>)</p></li>
 <li><p>Internetquellen für Geodaten (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R">rcode</a>)</p></li>
-<li><p>OpenStreetMap (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd">Browser</a>)</p></li>
-<li><p><em>R-Recap</em>: Daten Import (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R">rcode</a>)</p></li>
+<li><p>OpenStreetMap als Datenquelle (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd">Browser</a>)</p></li>
+<li><p><em>R-Recap</em>: Daten Import und Export (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R">rcode</a>)</p></li>
 <li><p><strong>Aufgabe:</strong> <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md">Eine Karte um Daten für Deutschlands Gemeinden darzustellen</a></p></li>
 </ul>
 </div>

@@ -1,0 +1,58 @@
+---
+title: "Hallo Welt"
+author: "Jan-Philipp Kolb"
+date: "5 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Pakete installieren und laden
+
+Ein Paket installieren
+
+```{r,eval=F}
+install.packages("ggmap")
+```
+
+Ein Paket laden
+
+```{r}
+library(ggmap)
+```
+
+## Funktionen durchführen
+
+```{r}
+# BSP Funktion die kein Argument braucht:
+date()
+```
+
+```{r}
+# BSP Funktion mit einem Argument
+sqrt(5)
+```
+
+```{r}
+# BSP Funktion mit mehr Argumenten
+sample(1:10,3)
+```
+
+## Der Zuweisungspfeil
+
+So wird ein Objekt a erzeugt:
+
+```{r}
+a <- 5
+```
+
+Dieses Objekt befindet sich dann im Workspace.
+
+Objekt b - Zahlen von 1 bis 10:
+
+```{r}
+b <- 1:10
+```
+
