@@ -1,8 +1,8 @@
 ---
 title: "Datenaufbereitung"
 author: "Jan-Philipp Kolb"
-date: "30 März 2016"
-output: html_document
+date: "07 April 2016"
+output: beamer_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -11,43 +11,95 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r,echo=F}
 Ex4=F
+Ex1 <- T
 ```
 
 
 ## Die Daten editieren
 
+```{r,eval=F,echo=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/")
+```
+
+
 ```{r,eval=Ex1}
-mean(BLA_tab[,2])
+load("data/refugeeTab.RData")
+```
+
+
+```{r,eval=Ex1}
+mean(refugeeTab[,2])
 ```
 
 um dies zu ändern ist ein wenig Kosmetik notwendig:
 
 ```{r,eval=Ex1}
-BLA_tab[,2] <- gsub(" ","",BLA_tab[,2])
-BLA_tab[,2] <- gsub(",",".",BLA_tab[,2])
-BLA_tab[,2] <- as.numeric(BLA_tab[,2])
+refugeeTab[,2] <- as.numeric(refugeeTab[,2])
 ```
 
 
 ```{r,eval=Ex1}
-mean(BLA_tab[,2])
+mean(refugeeTab[,2])
 ```
 
 
 ## Die weiteren Spalten bearbeiten
 
+- In R wird der Punkt als Dezimaltrennzeichen verwendet. 
+- Wenn ein Komma im Ausdruck ist, wird der Eintrag als `character` behandelt
+- dann kann bspw. kein Mittelwert berechnet werden
+
 ```{r,eval=Ex1}
-BLA_tab[,3] <- as.numeric(gsub(" ","",BLA_tab[,3]))
-BLA_tab[,4] <- as.numeric(gsub(" ","",BLA_tab[,4]))
+refugeeTab[,3] <- gsub(",",".",refugeeTab[,3])
+refugeeTab[,3] <- as.numeric(refugeeTab[,3])
 ```
+
+## Erste Spalte bearbeiten
+
+```{r,eval=Ex1}
+ab <- as.character(refugeeTab[,1])
+info <- round(nchar(ab)/2)
+Namen <- substr(ab,1,info)
+Namen[1:29] <- gsub(" ","",Namen[1:29])
+Namen[31]  <- "Zypern"
+refugeeTab[,1] <- Namen
+```
+
+Spaltennamen verändern
+
+```{r,eval=Ex1}
+colnames(refugeeTab) <- c("Land","2015",
+                          "pro_tsd_Einwohner")
+
+```
+
+
+## Das Ergebnis
+
+```{r,echo=F,eval=Ex1,warning=F}
+library(knitr)
+kable(head(refugeeTab))
+```
+
 
 Das Editing ist also aufwändiger als das eigentliche Scraping
 
 
 ## CO2 Verbrauch
 
-```{r,cache=T,eval=Ex4}
+```{r,eval=Ex4,echo=F}
 link <- "https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions_per_capita"
+```
+
+
+```{r,eval=F}
+link <- "https://en.wikipedia.org/wiki/
+List_of_countries_by_carbon_dioxide_
+emissions_per_capita"
+```
+
+
+```{r,cache=T,eval=Ex4}
 link_data <- read_html(link)
 doc <- htmlParse(link_data)
 tab <- readHTMLTable(doc)
@@ -73,7 +125,7 @@ head(tab2)
 setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/data")
 ```
 
-```{r}
+```{r,eval=F}
 write.csv(tab2,file="CO2emissions.csv")
 ```
 

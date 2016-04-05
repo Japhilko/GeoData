@@ -94,11 +94,20 @@ install.packages("rvest")
 ```{r,eval=Ex2,cache=T}
 library("rvest")
 
-link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlings
-krise_in_Europa_ab_2015"
+link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlingskrise_in_Europa_ab_2015"
+```
 
+
+```{r,eval=F,echo=F}
+link <- "https://de.wikipedia.org/wiki/Fl%C3%BC
+chtlingskrise_in_Europa_ab_2015"
+```
+
+```{r}
 link_data <- read_html(link)
 ```
+
+
 
 ```{r,eval=Ex2}
 # parse the document for R representation:
@@ -116,7 +125,7 @@ mps.tabs <- readHTMLTable(mps.doc)
 
 ```{r,eval=Ex2}
 mps.tabs <- mps.tabs[[2]]
-mps.tabs <- mps.tabs[-c(1,34),]
+refugeeTab <- mps.tabs[-c(1,34),]
 ```
 
 ```{r,echo=F,eval=F}
@@ -131,6 +140,12 @@ kable(head(mps.tabs))
 |5  |Deutschland Deutschland |476.510 |5,87 |
 |6  |Estland Estland         |230     |0,18 |
 |7  |Finnland Finnland       |32.345  |5,91 |
+
+```{r,eval=F,echo=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
+save(refugeeTab,file="refugeeTab.RData")
+```
+
 
 
 ## Geburtenrate
