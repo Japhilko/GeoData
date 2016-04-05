@@ -1,7 +1,7 @@
 ---
-title: "Datenquelle OpenStreetMap"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Datenquelle OpenStreetMap"
 author: "Jan-Philipp Kolb"
-date: "Thu Mar 10 08:27:12 2016"
+date: "07 April 2016"
 output: beamer_presentation
 ---
 

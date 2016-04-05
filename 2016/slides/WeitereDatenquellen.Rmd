@@ -1,0 +1,110 @@
+---
+title: "Weitere Datenquellen"
+author: "Jan-Philipp Kolb"
+date: "5 April 2016"
+output: html_document
+---
+
+
+
+```{r,echo=F}
+library(knitr)
+Ex <- F
+```
+
+
+## Datenquellen
+
+- Auf dem Portal [datahub.io](http://datahub.io/) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar. 
+
+You can download a statistic on dead refugees from [unitedagainstracism.org](unitedagainstracism.org)
+
+[Link datahub.io](http://datahub.io/dataset/list-of-deaths-on-the-borders-of-europe-1993-2012/resource/cc85b8fc-99be-4503-9040-099ee3a42efd)
+
+```{r,eval=F,echo=F}
+data.path <- "J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data"
+```
+
+
+```{r,echo=F,eval=Ex}
+setwd(data.path)
+load("listofdeath_small.Rdata")
+```
+
+
+```{r,eval=F,echo=F}
+data.path <- "C:/Work/data/"
+```
+
+
+```{r,eval=F}
+setwd(data.path)
+lod <- read.csv("listofdeath.csv")
+```
+
+
+```{r}
+link <- "https://raw.github.com/mihi-tr/list-of-deaths-dpkg/master/data/listofdeath.csv"
+
+lod <- read.csv(link)
+```
+
+```{r}
+kable(lod)
+```
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Weitere Portale: 
+
+- [OpenGov](http://ropengov.github.io/projects/) 
+- [okfn](http://data.okfn.org/), 
+- [enigma](https://app.enigma.io/table/org.worldbank.hnp.data), 
+- Amazon Web Services ([AWS](http://aws.amazon.com/de/public-data-sets/))
+
+
+## Andere Datenquellen
+
+- Public Use File für Soziales in den USA [Social security administration ](http://www.ssa.gov/policy/docs/data/index.html)
+
+- Umweltdaten ([National climatic data center](http://www.ncdc.noaa.gov/ibtracs/index.php?name=ibtracs-data))
+
+- Hafen Daten ([Natural earth data](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/))
+
+<http://www.naturalearthdata.com/downloads/10m-cultural-vectors/>
+
+- [Minimalistische Karten](http://www.r-bloggers.com/minimalist-maps/)
+
+- [Census results - Germany](https://ergebnisse.zensus2011.de/)
+- [Census results - Britain](http://www.r-bloggers.com/2011-census-open-atlas-project/) and [boundaries](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html)
+- [Data on airports](http://openflights.org/data.html) and an [example](http://www.milanor.net/blog/?p=594) on the usage in R
+
+
+- [ADFC/opengeodb](http://www.fa-technik.adfc.de/code/opengeodb/)
+
+```{r,eval=Ex}
+link <- "http://www.fa-technik.adfc.de/code/opengeodb/DE9.tab"
+info <- read.csv(link,sep="\t",header=F)
+```
+
+
+## Weitere Quellen
+
+
+- [ICEDS European Data Server](http://geocommons.com/overlays/96341)
+
+
+- [Mobilfunkdaten](http://opencellid.org/), [CO2 Emmissionen](http://databank.worldbank.org/data/reports.aspx?source=2&country=DEU&series=&period=)
+
+- Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)
+
+
+## Links
+
+Roger Bivand - [Spatial Analysis of SIDS data](https://datahub.io/dataset/sudden-infant-death-syndrome/resource/b456a0ea-fa2c-4809-b2d2-fe109ecdf83e)

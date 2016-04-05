@@ -22,6 +22,10 @@ intersect
 
 ?proj4string
 
+# http://www.columbia.edu/~cjd11/charles_dimaggio/DIRE/resources/spatialEpiBook.pdf
+# https://www.jstatsoft.org/article/view/v037i06
+
+# http://www.r-bloggers.com/minimalist-maps/
 
 # http://strimas.com/spatial/long-flights/
 # http://www.r-bloggers.com/r-vs-qgis-for-sustainable-transport-planning/

@@ -41,25 +41,29 @@ Quellen für räumliche Daten
 - __(C3) Internetquellen für Geodaten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)|
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
 
-- OpenStreetMap als Datenquelle ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
+- __(C4) OpenStreetMap als Datenquelle__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
 
-- R-Recap: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+R-Recap: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
 
 
-- **Aufgabe:** [Eine Karte um Daten für Deutschlands Gemeinden darzustellen](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md)
+Aufgabe: [Eine Karte um Daten für Deutschlands Gemeinden darzustellen](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md)
 
 Sozialwissenschaftliche Datenquellen
 ---------------------
 
-- Öffentliche Daten zur freien Verfügung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd))
+- __(D1) R interne Daten__
+([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RinternData.Rmd))
 
-- Daten von [datahub.io](https://datahub.io/de/) ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datahub.Rmd))
+- __(D2) Öffentliche Daten zur freien Verfügung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd))
 
-- Beispiel: Webscraping ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
+- __(D3) Beispiel: Webscraping__
+([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))
 
 - Datenaufbereitung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.Rmd)) 
 
-- **Aufgabe:** [Zensus Ergebnisser herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
+- Weitere Datenquellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WeitereDatenquellen.Rmd))
+
+Aufgabe: [Zensus Ergebnisser herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
 
 Verbindung, Editierung und Einfärbung

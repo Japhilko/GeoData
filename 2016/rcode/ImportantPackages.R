@@ -13,7 +13,6 @@ install.packages("rvest")
 install.packages("readxl")
 install.packages("haven")
 install.packages("httr")
-install.packages("XML")
 
 install.packages("stringr")
 install.packages("RJSONIO")
@@ -33,6 +32,27 @@ install.packages("translateR")
 install.packages("ggalt")
 install.packages("ggthemes")
 install.packages("leaflet")
+
+install.packages("survey")
+
+#----------------------------#
+# Data import
+#----------------------------#
+
+install.packages("xlsx")
+install.packages("XML")
+
+
+#----------------------------#
+# Data sources
+#----------------------------#
+
+install.packages("FAOSTAT")
+install.packages("UScensus2010")
+install.packages("WDI")
+install.packages("HistData")
+install.packages("GDELTtools")
+install.packages("UScensus2000")
 
 #----------------------------#
 # Add On packages

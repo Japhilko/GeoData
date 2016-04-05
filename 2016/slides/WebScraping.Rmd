@@ -1,8 +1,8 @@
 ---
-title: "Webscraping"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Webscraping"
 author: "Jan-Philipp Kolb"
-date: "Wed Oct 14 11:19:52 2015"
-output: html_document
+date: "07 April 2016"
+output: beamer_presentation
 ---
 
 
@@ -10,7 +10,7 @@ output: html_document
 library(knitr)
 Ex <- F
 Ex1 <- F
-Ex2 <- T
+Ex2 <- F
 Ex3 <- F
 Ex4 <- F
 ```
@@ -28,61 +28,51 @@ library(XML)
 Einlesen einer Tabelle mit der Funktion `readHTMLTable`:
 
 Beispieldaten für die Bundesländer
+
 ```{r,eval=Ex1,cache=T}
-BLA_link <- "http://www.bernhard-gaul.de/wissen/
-bundeslaender.php"
+BLA_link <- "http://www.bergziege-owl.de/deutschland-
+bundeslander-und-ihre-hauptstadte/"
 BLA_tab <- readHTMLTable(BLA_link)
 ```
 
-## Überblick über die Daten
+## Überblick über Daten
 
 ```{r,eval=Ex1}
 BLA_tab <- BLA_tab[[1]]
 ```
 
+```{r,eval=F,echo=F}
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/2016/slides/data")
 
-```{r,echo=F,eval=Ex1}
-kable(BLA_tab)
+save(BLA_tab,file="BLA_tab.RData")
 ```
 
+```{r,echo=F}
+load("data/BLA_tab.RData")
+```
+
+
+
+```{r,echo=F,eval=T}
+kable(head(BLA_tab))
+```
 
 ## Daten bearbeiten
 
-Die erste und 18. Zeile entfernen:
+Die erste Zeile ist die Überschrift:
 
-```{r,eval=Ex1}
-BLA_tab <- BLA_tab[-c(1,18),-1]
+```{r}
+colnames(BLA_tab) <- c("Bundesländer","Hauptstädte")
 ```
 
 
-## Die Daten editieren
+Die erste Zeile entfernen:
 
 ```{r,eval=Ex1}
-mean(BLA_tab[,2])
-```
-
-um dies zu ändern ist ein wenig Kosmetik notwendig:
-
-```{r,eval=Ex1}
-BLA_tab[,2] <- gsub(" ","",BLA_tab[,2])
-BLA_tab[,2] <- gsub(",",".",BLA_tab[,2])
-BLA_tab[,2] <- as.numeric(BLA_tab[,2])
+BLA_tab <- BLA_tab[-1,]
 ```
 
 
-```{r,eval=Ex1}
-mean(BLA_tab[,2])
-```
-
-
-## Die weiteren Spalten bearbeiten
-
-```{r,eval=Ex1}
-BLA_tab[,3] <- as.numeric(gsub(" ","",BLA_tab[,3]))
-BLA_tab[,4] <- as.numeric(gsub(" ","",BLA_tab[,4]))
-```
-
-Das Editing ist also aufwändiger als das eigentliche Scraping
 
 ## Die Daten speichern
 
@@ -104,7 +94,8 @@ install.packages("rvest")
 ```{r,eval=Ex2,cache=T}
 library("rvest")
 
-link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlingskrise_in_Europa_ab_2015"
+link <- "https://de.wikipedia.org/wiki/Fl%C3%BCchtlings
+krise_in_Europa_ab_2015"
 
 link_data <- read_html(link)
 ```
@@ -121,28 +112,52 @@ Alle Tabellen bekommen:
 mps.tabs <- readHTMLTable(mps.doc) 
 ```
 
-## Daten zu Asylanträgen
-
-```{r,eval=Ex2}
-mps.tabs
-```
-
-## Daten bearbeiten
+## Daten zu Asylanträgen bearbeiten
 
 ```{r,eval=Ex2}
 mps.tabs <- mps.tabs[[2]]
 mps.tabs <- mps.tabs[-c(1,34),]
 ```
 
+```{r,echo=F,eval=F}
+kable(head(mps.tabs))
+```
+
+|   |V1                      |V2      |V3   |
+|:--|:-----------------------|:-------|:----|
+|2  |Belgien Belgien         |44.665  |3,97 |
+|3  |Bulgarien Bulgarien     |20.375  |2,83 |
+|4  |Danemark Dänemark       |20.940  |3,70 |
+|5  |Deutschland Deutschland |476.510 |5,87 |
+|6  |Estland Estland         |230     |0,18 |
+|7  |Finnland Finnland       |32.345  |5,91 |
+
+
 ## Geburtenrate
 
 ```{r,cache=T,eval=Ex3}
-link2 <- "http://www.laenderdaten.de/bevoelkerung/geburtenrate.aspx"
+link2 <- "http://www.laenderdaten.de/bevoelkerung/
+geburtenrate.aspx"
 link_data2 <- read_html(link2)
 doc <- htmlParse(link_data2)
 tab <- readHTMLTable(doc)
 tab1 <- tab[[2]]
 ```
+
+```{r,echo=F,eval=F}
+kable(head(tab1))
+```
+
+|Land |Â            |Geburtenrate |Weltrang |
+|:----|:------------|:------------|:--------|
+|     |Niger        |45,45        |1        |
+|     |Mali         |44,99        |2        |
+|     |Uganda       |43,79        |3        |
+|     |Sambia       |42,13        |4        |
+|     |Burkina Faso |42,03        |5        |
+|     |Burundi      |42,01        |6        |
+
+## Fertility Rate
 
 ```{r,cache=T}
 link3 <- "https://en.wikipedia.org/wiki/List_of_sovereign_states_and_dependent_territories_by_fertility_rate"
@@ -151,6 +166,24 @@ doc3 <- htmlParse(link_data3)
 tab3 <- readHTMLTable(doc3)
 tab4 <- tab3[[2]]
 ```
+
+- [Die US Flughäfen und Fluglinien](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)
+
+<http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html>
+
+- Mehr Daten - <http://openflights.org/data.html>
+
+```{r,eval=F}
+link1 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
+openflights/data/airports.dat"
+airport <- read.csv(link1, header = F)
+
+link2 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
+openflights/data/routes.dat"
+route <- read.csv(link2, header = F)
+```
+
+
 
 ## Links
 

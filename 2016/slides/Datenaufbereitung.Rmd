@@ -14,6 +14,36 @@ Ex4=F
 ```
 
 
+## Die Daten editieren
+
+```{r,eval=Ex1}
+mean(BLA_tab[,2])
+```
+
+um dies zu ändern ist ein wenig Kosmetik notwendig:
+
+```{r,eval=Ex1}
+BLA_tab[,2] <- gsub(" ","",BLA_tab[,2])
+BLA_tab[,2] <- gsub(",",".",BLA_tab[,2])
+BLA_tab[,2] <- as.numeric(BLA_tab[,2])
+```
+
+
+```{r,eval=Ex1}
+mean(BLA_tab[,2])
+```
+
+
+## Die weiteren Spalten bearbeiten
+
+```{r,eval=Ex1}
+BLA_tab[,3] <- as.numeric(gsub(" ","",BLA_tab[,3]))
+BLA_tab[,4] <- as.numeric(gsub(" ","",BLA_tab[,4]))
+```
+
+Das Editing ist also aufwändiger als das eigentliche Scraping
+
+
 ## CO2 Verbrauch
 
 ```{r,cache=T,eval=Ex4}
