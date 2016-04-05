@@ -1,10 +1,8 @@
 ---
 title: "Daten verbinden"
 author: "Jan-Philipp Kolb"
-date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
+date: "08 April 2016"
+output: beamer_presentation
 ---
 
 

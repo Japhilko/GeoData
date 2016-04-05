@@ -1,5 +1,5 @@
 ---
-title: "Datenaufbereitung"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Datenaufbereitung"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
 output: beamer_presentation
@@ -54,7 +54,7 @@ refugeeTab[,3] <- gsub(",",".",refugeeTab[,3])
 refugeeTab[,3] <- as.numeric(refugeeTab[,3])
 ```
 
-## Erste Spalte bearbeiten
+## Erste Spalte bearbeiten und Daten speichern
 
 ```{r,eval=Ex1}
 ab <- as.character(refugeeTab[,1])
@@ -73,6 +73,16 @@ colnames(refugeeTab) <- c("Land","2015",
 
 ```
 
+Die Daten abspeichern
+
+```{r,eval=F,echo=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
+```
+
+```{r,eval=F}
+save(refugeeTab,file="refugeeTab_final.RData")
+```
+
 
 ## Das Ergebnis
 
@@ -80,7 +90,6 @@ colnames(refugeeTab) <- c("Land","2015",
 library(knitr)
 kable(head(refugeeTab))
 ```
-
 
 Das Editing ist also aufwändiger als das eigentliche Scraping
 
@@ -105,27 +114,75 @@ doc <- htmlParse(link_data)
 tab <- readHTMLTable(doc)
 ```
 
-
-```{r,eval=Ex4}
-str(tab)
-tab[[1]]
-tab[[2]]
+```{r,eval=F,echO=F}
+save(tab,file="co2tab.RData")
 ```
+
+```{r,echo=F}
+load("data/co2tab.RData")
+```
+
+```{r}
+str(tab)
+```
+
+## Die Elemente des Objektes
+
+```{r}
+tab[[1]]
+```
+
+```{r}
+head(tab[[2]][,1:7])
+```
+
 
 ## Auf die Daten schauen
 
-```{r,eval=Ex4}
+```{r}
 tab2 <- tab[[2]]
-head(tab2)
+Cnames <- c("Rank","Country",as.character(1990:2011))
+colnames(tab2) <- Cnames 
 ```
 
-## Daten speichern
+## Haben die Daten die richtige Struktur?
+
+```{r,warning=F}
+mean(tab2[,3])
+```
+
+```{r,warning=F}
+tab2[,3] <- as.numeric(as.character(tab2[,3]))
+```
+
+```{r,warning=F}
+for (i in 3:ncol(tab2)){
+  tab2[,i] <- as.numeric(as.character(tab2[,i]))
+}
+```
+
+Daten speichern
 
 ```{r,eval=F,echo=F}
-setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/data")
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
 ```
 
 ```{r,eval=F}
-write.csv(tab2,file="CO2emissions.csv")
+save(tab2,file="CO2emissions.RData")
 ```
 
+## Eine Graphik
+
+```{r,warning=F}
+library(lattice)
+emissions <- as.numeric(tab2[,3])
+names(emissions) <- tab2[,2]
+barchart(emissions[1:10],col="royalblue")
+```
+
+
+## Take Home Message
+
+- Mit Webscraping können sehr viele Daten gewonnen werden.
+- Allerdings kann die Datenaufbereitung sehr aufwändig sein. 
+- Oftmals ist viel rumprobieren notwendig.

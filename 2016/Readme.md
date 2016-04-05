@@ -69,7 +69,7 @@ Aufgabe: [Zensus Ergebnisser herunterladen und importieren](https://github.com/J
 Verbindung, Editierung und Einfärbung
 ---------------------
 
-- Data Linkage ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md) |
+- __(E1) Verbindung von Daten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
 
