@@ -126,6 +126,7 @@ MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
 plot(MA)
 ```
 
+![Mannheim PLZ](figure/MannheimPLZ.png)
 
 ## Gemeinden in Deutschland
 
@@ -133,12 +134,20 @@ Bundesamt für Kartographie und Geodäsie (BKG)
 
 [Link zum Download der Karten](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
 
+<http://www.geodatenzentrum.de/>
+
+```{r,eval=F,echo=F}
+setwd("D:/Daten/Daten/GeoDaten/vg250_ebenen")
+```
+
+
 ```{r,cache=F,message=F,warning=F,eval=Ex3}
 library(maptools)
-setwd("D:/Daten/Daten/GeoDaten/vg250_ebenen")
 krs <- readShapePoly("vg250_krs.shp")
 plot(krs)
 ```
+
+![Kreise Deutschland](figure/vg250_krs.png)
 
 ## Kreise eines Bundeslandes
 
@@ -148,26 +157,47 @@ fds <- substr(krs@data$AGS,1,2)
 plot(krs[fds=="05",])
 ```
 
+![Kreise NRW](figure/KreiseNRW.png)
 
-## [Wahlkreise in Deutschland](http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/ONB_Grenzen.html)
 
-```{r,cache=T}
+## [Vorwahlbereiche in Deutschland](http://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/ONB_Grenzen.html)
+
+<http://www.bundesnetzagentur.de/>
+
+```{r,eval=F,echo=F}
 setwd("D:/Daten/Daten/GeoDaten")
+par(mai=c(0,0,0,0))
+```
+
+
+```{r,eval=F}
 onb <- readShapePoly("onb_grenzen.shp")
 
 kable(head(onb@data))
 ```
 
+|   |VORWAHL |NAME                 |KENNUNG |
+|:--|:-------|:--------------------|:-------|
+|0  |04651   |Sylt                 |NA      |
+|1  |04668   |Klanxbüll            |NA      |
+|2  |04664   |Neukirchen b Niebüll |NA      |
+|3  |04663   |Süderlügum           |NA      |
+|4  |04666   |Ladelund             |NA      |
+|5  |04631   |Glücksburg Ostsee    |NA      |
+
+
 ## Vorwahlbereich 06
 
-```{r,cache=T}
+```{r,eval=F}
 VW <- substr(onb@data$VORWAHL,1,2)
 plot(onb[VW=="06",])
 ```
 
+![Vorwahlbereich 06](figure/Vorwahl06.png)
+
 ## Wo ist Mannheim?
 
-```{r,cache=T}
+```{r,eval=F}
 Com <- onb@data$NAME
 plot(onb[VW=="06",])
 plot(onb[Com=="Mannheim",],col="red",add=T)
@@ -175,17 +205,24 @@ plot(onb[Com=="Heidelberg",],col="green",add=T)
 plot(onb[Com=="Kaiserslautern",],col="blue",add=T)
 ```
 
+![Drei Städte](figure/DreiStaedte.png)
+
 ## Andere Quellen
 
 [World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
 
-```{r,message=F,warning=F,eval=F,echo=T}
+```{r,echo=F,eval=F}
 setwd("D:/Daten/Daten/GeoDaten/WPI_Shapefile")
-WPI <- readShapePoly("WPI.shp")
+```
+
+
+```{r,message=F,warning=F,eval=F,echo=T}
 library(rgdal)
 WPI <- readOGR ("WPI.shp","WPI")
 plot(WPI)
 ```
+
+![World Port Index](figure/WPI.png)
 
 
 ```{r,eval=F,echo=F}
