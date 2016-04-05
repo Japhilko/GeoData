@@ -7,12 +7,11 @@ output:
     keep_md: true
 ---
 
-## Aufgabe - Nutzung von ggmap
+## Aufgabe 2 - Nutzung von ggmap
 
-- Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses Kurses speichern.
 
 - Erzeugen Sie eine Karte von einem Ort, der Ihnen besonders gut gefällt und speichern Sie diesen.
 
 - Versuchen Sie Ihren Anreiseweg in einer Karte darzustellen.
 
-- Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen wollen
+

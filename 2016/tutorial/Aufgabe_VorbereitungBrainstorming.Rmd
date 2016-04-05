@@ -1,0 +1,12 @@
+---
+title: "Vorbereitung und Brainstorming"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output: md_document
+---
+
+## Aufgabe 1 - Vorbereitung und Brainstorming
+
+- Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses Kurses speichern.
+
+- Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen wollen
