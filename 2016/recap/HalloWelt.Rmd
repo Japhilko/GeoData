@@ -1,8 +1,8 @@
 ---
-title: "Hallo Welt"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Hallo Welt"
 author: "Jan-Philipp Kolb"
-date: "5 April 2016"
-output: html_document
+date: "07 April 2016"
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
@@ -54,5 +54,31 @@ Objekt b - Zahlen von 1 bis 10:
 
 ```{r}
 b <- 1:10
+```
+
+## So bekommt man Hilfe
+
+Mit einem Fragezeichen vor dem Befehlsnamen bekommt man die Hilfe angezeigt.
+
+```{r,eval=F}
+?mean
+```
+
+## Mehrere Zahlen zu einem Vektor verbinden
+
+```{r}
+ab <- c(1,5,6,7)
+```
+
+## Eine Graphik erzeugen
+
+```{r}
+hist(ab)
+```
+
+## Farbe hinzu
+
+```{r}
+hist(ab,col="red")
 ```
 
