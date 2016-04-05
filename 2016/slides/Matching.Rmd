@@ -1,5 +1,5 @@
 ---
-title: "Daten verbinden"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Daten verbinden"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
 output: beamer_presentation
@@ -31,7 +31,7 @@ df_ws <- data.frame(wrld_simpl@data)
 
 Jetzt können wir den Rstudio Daten-Browser verwenden
 
-![pic](https://github.com/Japhilko/GeoData/blob/master/data/figure/RstudioDataBrowser.PNG) 
+![Rstudio Daten Browser](figure/RstudioDataBrowser.PNG) 
 
 
 ## Der wrld_simpl Datensatz
@@ -69,10 +69,15 @@ CNames[CNames2=="An"]
 
 ## CO2 Emissionen
 
-```{r}
+```{r^,eval=F,echo=F}
 link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/CO2emissions.csv"
 co2 <- read.csv(link)
 ```
+
+```{r}
+(load("data/CO2emissions.RData"))
+```
+
 
 ```{r,echo=F}
 kable(co2[1:4,1:8])
@@ -108,7 +113,7 @@ match(D,E)
 ## Matching
 
 ```{r}
-ind <- match(wrld_simpl@data$NAME,co2$V2)
+ind <- match(wrld_simpl@data$NAME,co2$Country)
 ind
 ```
 
@@ -116,7 +121,7 @@ ind
 ## Daten anspielen
 
 ```{r}
-wrld_simpl@data$co2_90 <- co2$V3[ind]
+wrld_simpl@data$co2_90 <- co2$j1990[ind]
 ```
 
 ```{r}
@@ -124,18 +129,67 @@ library(sp)
 spplot(wrld_simpl,"co2_90")
 ```
 
+## Zusätzliche Länder matchen
+
+```{r}
+ind2 <- match(co2$Country,wrld_simpl@data$NAME)
+fehlt <- co2$Country[is.na(ind2)]
+fehlt
+```
+
+Die Funktion `agrep`
+
+```{r}
+fehlt[1]
+ind3 <- agrep(fehlt[1],wrld_simpl@data$NAME)
+ind3
+```
+
+```{r}
+wrld_simpl@data$NAME[ind3]
+```
+
+## Matching mit agrep
+
+```{r}
+Namen_ws <- as.character(wrld_simpl@data$NAME)
+Namen_co2 <- as.character(co2$Country)
+for (i in 1:length(ind)){
+  if(is.na(ind[i])){
+    ind4 <- agrep(Namen_ws[i],Namen_co2)
+    if(length(ind4)==1){
+      ind[i] <- ind4
+    }
+  }
+}
+```
+
+## Daten anspielen
+
+```{r}
+wrld_simpl@data$co2_91 <- co2$j1991[ind]
+```
+
+```{r}
+spplot(wrld_simpl,"co2_91")
+```
+
 
 ## Matching mit Eurostat Daten
 
-Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
+Sie können Statistik für wichtige ökonomische Indikatoren bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
 
-[link](http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500)
+<http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
+
+Beispiel Sparquote:
+
+<http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500>
 
 ```{r,echo=F,eval=Ex2}
 setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
 ```
 
-```{r,echo=F,eval=Ex2}
+```{r,eval=Ex2}
 library(xlsx)
 HHsr <- read.xlsx2("HHsavingRate.xls",1)
 ```
@@ -143,8 +197,6 @@ HHsr <- read.xlsx2("HHsavingRate.xls",1)
 ```{r,echo=F,eval=Ex2}
 kable(HHsr[1:6,1:4])
 ```
-
-
 
 ## Der wrld_simpl Datensatz
 
@@ -192,6 +244,4 @@ EUR@data$HHsr <- as.numeric(as.character(HHsr[ind,2]))
 library(sp)
 spplot(EUR,"HHsr")
 ```
-
-
 
