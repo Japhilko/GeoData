@@ -22,6 +22,16 @@ intersect
 
 ?proj4string
 
+## Projektionen
+
+- [Spatial Reference Identifier](https://en.wikipedia.org/wiki/SRID)
+
+- [Arbeiten mit Shapefiles](http://lincolnmullen.com/projects/dh-r/geospatial-data.html)
+
+- [srid für OpenStreetMap Daten](http://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet)
+
+
+
 # http://www.columbia.edu/~cjd11/charles_dimaggio/DIRE/resources/spatialEpiBook.pdf
 # https://www.jstatsoft.org/article/view/v037i06
 

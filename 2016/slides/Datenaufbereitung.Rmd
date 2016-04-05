@@ -140,24 +140,24 @@ head(tab[[2]][,1:7])
 ## Auf die Daten schauen
 
 ```{r}
-tab2 <- tab[[2]]
-Cnames <- c("Rank","Country",as.character(1990:2011))
-colnames(tab2) <- Cnames 
+co2<- tab[[2]]
+Cnames <- c("Rank","Country",paste("j",1990:2011,sep=""))
+colnames(co2) <- Cnames 
 ```
 
 ## Haben die Daten die richtige Struktur?
 
 ```{r,warning=F}
-mean(tab2[,3])
+mean(co2[,3])
 ```
 
 ```{r,warning=F}
-tab2[,3] <- as.numeric(as.character(tab2[,3]))
+co2[,3] <- as.numeric(as.character(co2[,3]))
 ```
 
 ```{r,warning=F}
 for (i in 3:ncol(tab2)){
-  tab2[,i] <- as.numeric(as.character(tab2[,i]))
+  co2[,i] <- as.numeric(as.character(co2[,i]))
 }
 ```
 
@@ -168,7 +168,7 @@ setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
 ```
 
 ```{r,eval=F}
-save(tab2,file="CO2emissions.RData")
+save(co2,file="CO2emissions.RData")
 ```
 
 ## Eine Graphik

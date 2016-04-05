@@ -1,10 +1,8 @@
 ---
-title: "Telefonvorwahlen"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Telefonvorwahlen"
 author: "Jan-Philipp Kolb"
-date: "2 April 2016"
-output:
-  html_document:
-    keep_md: true
+date: "08 April 2016"
+output: beamer_presentation
 ---
 
 ```{r setup, include=FALSE}

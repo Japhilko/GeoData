@@ -1,20 +1,20 @@
 ---
-title: "tmap"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das R-Paket tmap"
 author: "Jan-Philipp Kolb"
-date: "Tue Oct 27 13:03:13 2015"
-output: md_document
+date: "08 April 2016"
+output: beamer_presentation
 ---
 
 ```{r,echo=F,warning=F,message=F}
 library(knitr)
 library(DT)
-Ex <- F
+Ex <- T
 ```
 
-## Package [tmap](https://cran.r-project.org/web/packages/tmap/index.html)
+## Das Paket [tmap](https://cran.r-project.org/web/packages/tmap/index.html)
 
-- Load the package [tmap](http://twitter.com/sharon000/status/593028906820599808/photo/1?ref_src=twsrc%5Etfw)
-- The following examples are based on the [vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html) of the package tmap
+- Laden Sie das Paket [tmap](http://twitter.com/sharon000/status/593028906820599808/photo/1?ref_src=twsrc%5Etfw)
+- Die folgenden Beispiele sind auf der [Vignette](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html) des Paketes basiert.
 
 ```{r,warning=F,message=F}
 # install.packages("tmap")
@@ -24,9 +24,11 @@ library(tmap)
 
 
 
-## Quick thematic map
+## Schnelle thematische Karte
 
 - [qtm](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html) - Quick thematic map plot
+
+<https://cran.r-project.org/web/packages/tmap/vignettes/tmap-nutshell.html>
 
 ```{r,cache=T}
 data(Europe)
@@ -34,7 +36,7 @@ qtm(Europe)
 ```
 
 
-## The underlying data set of Europe
+## Der Europa-Datensatz
 
 ```{r,echo=F}
 EUR <- Europe@data
@@ -53,22 +55,24 @@ datatable(Europe@data[,1:4], class = 'cell-border stripe',rownames = FALSE,
 kable(Europe@data[,1:4])
 ```
 
-## For a map with other colors
+## Um mehr Farbe in die Karte zu bekommen
 
-- Visualising [Natural Earth](http://www.naturalearthdata.com/) data
+- Visualisierung von  [Natural Earth](http://www.naturalearthdata.com/) Daten
+
+<http://www.naturalearthdata.com/>
 
 ```{r,cache=T,eval=Ex}
 qtm(Europe, fill="gdp_cap_est")
 ```
 
 
-## For a map with with text 
+## Eine Karte mit Text 
 
 ```{r,eval=Ex}
 qtm(Europe, fill="gdp_cap_est", text="iso_a3")
 ```
 
-## A theme which fits better
+## Dieses Schema passt besser:
 
 ```{r,eval=Ex}
 qtm(Europe, fill="gdp_cap_est", text="iso_a3", 
@@ -79,23 +83,23 @@ qtm(Europe, fill="gdp_cap_est", text="iso_a3",
 
 
 
-## [Population density](https://en.wikipedia.org/wiki/Population_density)
+## [Bevölkerungsdichte](https://en.wikipedia.org/wiki/Population_density)
 
 ```{r,cache=T,eval=Ex}
 qtm(Europe, fill="pop_est_dens", fill.title="Population density")
 ```
 
-## Topics with Europe data
+## Themen des Europa-Datensatzes
 
-- [ISO classification](http://userpage.chemie.fu-berlin.de/diverse/doc/ISO_3166.html)
-- Country name
-- Sovereignt, continent, part of Europe, 
-- Area, Population, Population density, 
-- [Gross domestic product](https://en.wikipedia.org/wiki/Gross_domestic_product)
-- GDP [at purchasing power parity](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28PPP%29_per_capita)
-- Economy, Income group
+- [ISO Klassifikation](http://userpage.chemie.fu-berlin.de/diverse/doc/ISO_3166.html)
+- Ländername
+- Teil Europas 
+- Fläche, Bevölkerung, Bevölkerungsdichte, 
+- [Bruttoinlandsprodukt](https://en.wikipedia.org/wiki/Gross_domestic_product)
+- Bruttoinlandsprodukt [zu Kaufkraftparitäten](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_%28PPP%29_per_capita)
+- Ökonomie, Einkommensgruppe
 
-## Names and topics
+## Namen und Themen
 
 
 ```{r,echo=F,eval=Ex}
@@ -103,11 +107,11 @@ library(XML)
 info <- colnames(Europe@data)
 
 info_df <- data.frame(Europe@data)
-kable(info_df)
+kable(info_df[1:8,1:6])
 ```
 
 
-## The ISO codes: 
+## Die ISO Kodierung: 
 
 
 ```{r,echo=F,cache=T,eval=Ex}
@@ -123,33 +127,33 @@ Tab4
 ```
 
 
-## Part of Europe
+## Teil Europas?
 
 ```{r,cache=T}
 qtm(Europe, fill="continent")
 ```
 
 
-## Part of Europe
+## Teil Europas?
 
 ```{r,cache=T}
 qtm(Europe, fill="part",fill.title="part of Europe")
 ```
 
-## Area
+## Fläche
 
 ```{r,cache=T}
 qtm(Europe, fill="area") # Russia is huge
 ```
 
 
-## Population
+## Bevölkerung
 
 ```{r,cache=T}
 qtm(Europe, fill="pop_est",fill.title="Population") 
 ```
 
-## Population density
+## Bevölkerungsdichte
 
 ```{r,cache=T}
 qtm(Europe, fill="pop_est_dens",
@@ -157,13 +161,13 @@ qtm(Europe, fill="pop_est_dens",
 ```
 
 
-## Economy
+## Ökonomie
 
 ```{r,cache=T}
 qtm(Europe, fill="economy") 
 ```
 
-## Income group
+## Einkommensgruppe
 
 ```{r,cache=T}
 qtm(Europe, fill="income_grp",fill.title="Income group") 
@@ -171,7 +175,7 @@ qtm(Europe, fill="income_grp",fill.title="Income group")
 
 
 
-## The World data set in R-package `tmap`
+## Der Welt-Datensatz im Paket `tmap`
 
 ```{r,echo=F,eval=F}
 data(World)
@@ -184,13 +188,13 @@ kable(World@data[1:15,])
 ```
 
 
-## World - countries by income group
+## Welt - Länder nach Einkommensgruppe
 
 ```{r,cache=T}
 qtm(World, fill="income_grp",fill.title="Income group") 
 ```
 
-## A data set about the provinces in the Netheralnds (R-package `tmap`)
+## Ein Datensatz zu den Provinzen in den Niederlanden (R-Paket `tmap`)
 
 ```{r,echo=F,eval=F}
 data(NLD_prov)
@@ -205,19 +209,18 @@ datatable(NLD_df[,1:6], class = 'cell-border stripe',rownames = FALSE,
 ```{r,echo=F,eval=T}
 data(NLD_prov)
 NLD_df <- NLD_prov@data
-NLD_df[,6] <- round(NLD_df[,6])
 
-kable(NLD_df[,c("name","name.data","province")])
+kable(head(NLD_df))
         
 ```
 
-## Netherlands - population in provinces
+## Niederlande - Bevölkerung in den Provinzen
 
 ```{r,cache=T}
 qtm(NLD_prov, fill="population",fill.title="population") 
 ```
 
-## Compute Proportions
+## Anteile berechnen
 
 ```{r,cache=T}
 pop <- NLD_prov@data$population
@@ -235,23 +238,21 @@ prop <- popmen/pop
 prop
 ```
 
-## Excursus: Barplot of proportion men
-
-Barplot of proportion of men
+## Exkurs: Barplot vom Männeranteil
 
 ```{r,cache=T}
 barplot(prop)
 ```
 
-Barplot with color
+Barplot mit Farbe
 
 ```{r,warnings=F,cache=T}
 barplot(prop,col="blue")
 ```
 
-## Netherlands - proportion of men
+## Niederlnade - Anteil Männer
 
-Add information to dataframe
+Information in Datensatz einspeisen
 
 ```{r,cache=T}
 NLD_prov@data$proportion <- prop
@@ -261,23 +262,26 @@ NLD_prov@data$proportion <- prop
 qtm(NLD_prov, fill="proportion",fill.title="proportion") 
 ```
 
-## Netherlands - proportion 65 plus
+## Niederlande - Anteil der Personen 65 plus
 
-Compute the proportion of people over 65
+(kleiner Trick notwendig - Die Daten hatten sich verändert)
 
 ```{r,cache=T}
+ant <- runif(length(NLD_prov),.18,.28)
+NLD_prov@data$pop_65plus <- round(NLD_prov@data$population*ant)
 pop65plus <- NLD_prov@data$pop_65plus
 prop65plus <- pop65plus/pop
 NLD_prov@data$proportion65plus <- prop65plus
 ```
 
-## Plot proportion over 65
+## Den Anteil der über 65-jährigen visualisieren
+
 ```{r,cache=T}
 qtm(NLD_prov, fill="proportion",fill.title="proportion") 
 ```
 
 
-## A data set about the municipalities in the Netheralnds (R-package `tmap`)
+## Ein Datensatz zu den Gemeinden in den Niederlanden (R-Paket `tmap`)
 
 ```{r,cache=T}
 data(NLD_muni)
@@ -300,7 +304,7 @@ NLD_df[,6] <- round(NLD_df[,6])
 kable(NLD_df[,c("name","province","population")])
 ```
 
-## Population of municipalities in the Netherlands
+## Bevölkerung der Gemeinden in den Niederlanden
 
 
 ```{r,cache=T}
@@ -309,7 +313,7 @@ qtm(NLD_muni, fill="population")
 
 
 
-## Two maps
+## Zwei Karten
 
 ```{r,eval=F}
 tm_shape(Europe) +
@@ -318,7 +322,7 @@ tm_shape(Europe) +
 # + tm_layout_Europe()
 ```
 
-## Two maps
+## Zwei Karten
 
 ```{r,eval=T,echo=F}
 tm_shape(Europe) +
@@ -328,7 +332,7 @@ tm_shape(Europe) +
 ```
 
 
-## Spatial data of global land cover
+## Räumliche Daten zur Flächennutzung
 
 ```{r,echo=F,eval=F}
 data(land)
@@ -342,7 +346,7 @@ info_df <- land@data[1:15,]
 kable(info_df)
 ```
 
-## Map of global Land Cover
+## Weltweite Flächennutzung
 
 ```{r}
 data(land)
@@ -352,7 +356,7 @@ tm_shape(land,  relative=FALSE) +
 ```
 
 
-## Spatial data of metropolitan areas
+## Räumliche Daten zu Metropolregionen
 
 ```{r,eval=F,echo=F}
 data(metro)
@@ -369,7 +373,7 @@ kable(info_df)
 ```
 
 
-## Plot only one country
+## Nur ein Land visualisieren
 
 ```{r}
 tm_shape(Europe[Europe$name=="Austria", ]) +
@@ -377,9 +381,10 @@ tm_shape(Europe[Europe$name=="Austria", ]) +
 ```
 
 
-## Global Land Cover
 
-```{r,eval=Ex}
+```{r,eval=F,echo=F}
+## Weltweite Flächennutzung
+
 data(land)
 data(World)
 pal8 <- c("#33A02C", "#B2DF8A", "#FDBF6F", "#1F78B4", "#999999", "#E31A1C", "#E6E6E6", "#A6CEE3")
@@ -400,7 +405,7 @@ tm_layout_World(inner.margins=0,
 
 
 
-## Small multiples
+## Kleine und viele Karten
 
 ```{r,cache=T}
 tm_shape(Europe[Europe$continent=="Europe",]) +
@@ -410,16 +415,19 @@ tm_layout(legend.show = FALSE, title.position = c("center", "center"),
           title.size = 2)
 ```
 
-## The development version of `tmap`
 
-```{r,cache=T,eval=F}
+
+```{r,cache=T,eval=F,echo=F}
+# ## Die Entwicklungsversion des Paketes `tmap`
 devtools::install_github("mtennekes/tmap/pkg", ref = "45855fa")
 ```
 
 
-## Download information
 
-```{r,cache=T,eval=F}
+```{r,cache=T,eval=F,echo=F}
+## Informationen herunterladen
+
+
 library(tmap)
 bb_schloss <- bb(q="Mannheim Schloss")
 buildings_schloss <- read_osm(bb_schloss, buildings=osm_poly("building"))

@@ -7,7 +7,7 @@
 <meta charset="utf-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 
@@ -38,7 +38,25 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 
+
+</head>
+
+<body>
+
 <style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
 h1 {
   font-size: 34px;
 }
@@ -59,27 +77,6 @@ h5 {
 }
 h6 {
   font-size: 12px;
-}
-</style>
-
-
-</head>
-
-<body>
-
-<style type="text/css">
-.main-container {
-  max-width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
-img {
-  max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -108,7 +105,6 @@ $(document).ready(function () {
 
 
 <div class="fluid-row" id="header">
-
 
 
 
@@ -152,10 +148,10 @@ $(document).ready(function () {
 <div id="sozialwissenschaftliche-datenquellen" class="section level2">
 <h2>Sozialwissenschaftliche Datenquellen</h2>
 <ul>
-<li><p><strong>(D1) Öffentliche Daten zur freien Verfügung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd">Browser</a>)</p></li>
-<li><p><strong>(D2) Daten von <a href="https://datahub.io/de/">datahub.io</a></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datahub.Rmd">Browser</a>)</p></li>
-<li><p>Beispiel: Webscraping (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R">rcode</a>)</p></li>
-<li><p>Datenaufbereitung (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.Rmd">Browser</a>)</p></li>
+<li><p><strong>(D1) R interne Daten</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/RinternData.Rmd">Browser</a>)</p></li>
+<li><p><strong>(D2) Öffentliche Daten zur freien Verfügung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd">Browser</a>)</p></li>
+<li><p><strong>(D3) Beispiel: Webscraping</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R">rcode</a>)</p></li>
+<li><p><strong>(D4) Datenaufbereitung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.Rmd">Browser</a>)</p></li>
 <li><p>Weitere Datenquellen (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/WeitereDatenquellen.Rmd">Browser</a>)</p></li>
 </ul>
 <p>Aufgabe: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md">Zensus Ergebnisser herunterladen und importieren</a></p>
@@ -163,8 +159,8 @@ $(document).ready(function () {
 <div id="verbindung-editierung-und-einfarbung" class="section level2">
 <h2>Verbindung, Editierung und Einfärbung</h2>
 <ul>
-<li><p>Data Linkage (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R">rcode</a>) of data sources</p></li>
-<li><p>R-Paket <code>spplot</code> und Farbkodierung (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.Rmd">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R">rcode</a>)</p></li>
+<li><p><strong>(E1) Verbindung von Daten</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R">rcode</a>) of data sources</p></li>
+<li><p><strong>(E2) Das R-Paket <code>spplot</code> und Farbkodierung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.Rmd">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R">rcode</a>)</p></li>
 <li><p>Shapefiles zusammenfassem (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R">rcode</a> ), Datenquellen in R (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethen.Rmd">Browser</a>)</p></li>
 </ul>
 </div>
