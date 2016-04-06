@@ -5,3 +5,28 @@ date: "6 April 2016"
 output: html_document
 ---
 
+## Eine Karte von einem interessanten Ort
+
+```{r}
+library(ggmap)
+qmap('Amsterdam', zoom = 14, maptype="satellite")
+```
+
+## Anreiseweg in einer Karte darstellen
+
+```{r}
+from <- "Mannheim Heumarkt 2"
+to <- "Mannheim B2 , 1"
+route_df <- route(from, to, structure = "route")
+```
+
+## Eine Karte erzeugen
+
+```{r}
+qmap("Mannheim Hbf", zoom = 12) +
+  geom_path(
+    aes(x = lon, y = lat),  colour = "red", size = 1.5,
+    data = route_df, lineend = "round"
+  )
+```
+
