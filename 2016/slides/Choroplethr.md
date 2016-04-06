@@ -1,7 +1,3 @@
-    ## Warning: package 'knitr' was built under R version 3.2.4
-
-    ## Warning: package 'DT' was built under R version 3.2.4
-
 Einleitung
 ----------
 

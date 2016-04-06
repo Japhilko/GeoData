@@ -1,9 +1,14 @@
 ---
-title: "Lösung Eurostat Indikatoren"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Lösung Eurostat Indikatoren"
 author: "Jan-Philipp Kolb"
-date: "29 März 2016"
-output: html_document
+date: "08 April 2016"
+output: beamer_presentation
 ---
+
+```{r,echo=F,warning=F}
+library(knitr)
+```
+
 
 ## Download der Indikatoren
 
@@ -24,16 +29,120 @@ setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/tutorial/solution")
 dat <- read.csv("data/Inflation.csv",sep=";")
 ```
 
-## Daten bearbeiten
+Daten bearbeiten
 
 ```{r}
 dat$X2015M04 <- gsub(",",".",dat$X2015M04)
 dat$X2015M04 <- as.numeric(dat$X2015M04)  
 ```
 
-## Die Karte besorgen
+## Eine Weltkarte
+
+```{r,warning=F}
+library(choroplethr)
+data(df_pop_country)
+country_choropleth(df_pop_country)
+```
+
+## Die Region im Karten Datensatz
+
+```{r,warning=F}
+library(choroplethrMaps)
+data(country.map)
+```
+
+```{r,echo=F}
+kable(country.map[1:4,c("region","long","lat","subregion","continent")])
+```
+
+## Daten bearbeiten
 
 ```{r}
+ind_euro <- agrep("euro",dat$geo)
+dat <- dat[-ind_euro,]
 
+ind_eu <- which(as.character(dat$geo)%in%
+c("EU (28 countries)","United States","Malta"))
+
+dat <- dat[-ind_eu,]
+
+geo_names <- as.character(dat$geo)
+```
+
+
+
+## Die Daten matchen
+
+```{r}
+geo_names1 <- substr(geo_names,1,1)
+geo_names2 <- substr(geo_names,2,nchar(geo_names))
+
+geo_names1 <- tolower(geo_names1)
+
+geo_n <- paste(geo_names1,geo_names2,sep="")
+
+ind <- match(geo_n,country.map$region)
+```
+
+## Welche Länder fehlen noch?
+
+```{r}
+geo_n[is.na(ind)]
+
+geo_n[geo_n=="czech Republic"] <- "czech republic"
+geo_n[geo_n=="united Kingdom"] <- "united kingdom"
+```
+
+
+## Karte erzeugen
+
+Neuen Datensatz erzeugen
+
+```{r}
+df_inflation <- data.frame(region=geo_n,
+              value=dat$X2015M04)
+```
+
+
+```{r,warning=F,message=F}
+country_choropleth(df_inflation)
+```
+
+
+## Karte mit Zoom erzeugen
+
+```{r,message=F,warning=F}
+country_choropleth(df_inflation,
+      zoom=df_inflation$region)
+```
+
+
+## Noch besser ran zoomen
+
+<http://stackoverflow.com/questions/30076553/r-choropleth-maps-choroplethr-package>
+
+```{r,warning=F,message=F}
+library(ggmap)
+gg <- country_choropleth(df_inflation,
+                         legend="%",num_colors=1,
+                         zoom=df_inflation$region)
+
+gg <- gg + xlim(-31.266001, 39.869301)
+gg <- gg + ylim(27.636311, 81.008797)
+gg <- gg + coord_map("lambert", 
+lat0=27.636311, lat1=81.008797)
+```
+
+## Finale Version der Karte
+
+```{r}
+gg
+```
+
+
+```{r,echo=F}
+## Links 
+
+# <http://gis.stackexchange.com/questions/43534/how-to-create-an-attractive-choropleth-map-in-r>
 ```
 
