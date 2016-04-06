@@ -17,7 +17,7 @@ Intro und Vorbereitung
 
 R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.md) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.R)) 
 
-Aufgabe: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_VorbereitungBrainstorming.Rmd)
+Aufgabe 1: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_VorbereitungBrainstorming.Rmd)
 
 Verschiedene Kartentypen mit ggmap
 ---------------------
@@ -26,7 +26,7 @@ Verschiedene Kartentypen mit ggmap
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
-R-Recap: Objekte und Indizierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.md))
+R-Recap: Objekte und Indizierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.md) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.R))
 
 Aufgabe: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
 

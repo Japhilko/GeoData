@@ -1,0 +1,20 @@
+---
+title: "Lösung - Brainstorming und Vorbereitung"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+
+## Ordner anlegen
+
+![Ordnerstruktur](figure/Ordnerstruktur.PNG)
+
+## PDF von Github herunterladen
+
+![PDF herunterladen](figure/RawButton.png)
+
+## Die oberste Ebene für diesen Kurs
+
+<https://github.com/Japhilko/GeoData/tree/master/2016>
+
+![GeoData Oberste Ebene](figure/GeoDataObersteEbene.PNG)

@@ -1,0 +1,647 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften -  R-Recap"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output: pdf_document
+---
+
+```{r,echo=F}
+Ex=F
+library(knitr)
+```
+
+
+# Hallo Welt
+
+## Pakete installieren und laden
+
+Ein Paket installieren
+
+```{r,eval=F}
+install.packages("ggmap")
+```
+
+Ein Paket laden
+
+```{r}
+library(ggmap)
+```
+
+## Funktionen durchführen
+
+```{r}
+# BSP Funktion die kein Argument braucht:
+date()
+```
+
+```{r}
+# BSP Funktion mit einem Argument
+sqrt(5)
+```
+
+```{r}
+# BSP Funktion mit mehr Argumenten
+sample(1:10,3)
+```
+
+## Der Zuweisungspfeil
+
+So wird ein Objekt a erzeugt:
+
+```{r}
+a <- 5
+```
+
+Dieses Objekt befindet sich dann im Workspace.
+
+Objekt b - Zahlen von 1 bis 10:
+
+```{r}
+b <- 1:10
+```
+
+## So bekommt man Hilfe
+
+Mit einem Fragezeichen vor dem Befehlsnamen bekommt man die Hilfe angezeigt.
+
+```{r,eval=F}
+?mean
+```
+
+## Mehrere Zahlen zu einem Vektor verbinden
+
+```{r}
+ab <- c(1,5,6,7)
+```
+
+## Eine Graphik erzeugen
+
+```{r}
+hist(ab)
+```
+
+## Farbe hinzu
+
+```{r}
+hist(ab,col="red")
+```
+
+# Objekttypen und Indizierung
+
+## Rstudio installieren/updaten
+
+Die aktuellste Version von Rstudio kann man hier herunterladen:
+
+<https://www.rstudio.com/products/rstudio/download/>
+
+## Nutzung von AddIns in Rstudio
+
+<https://rstudio.github.io/rstudioaddins/>
+
+Um den Colourpicker zu nutzen muss bspw. folgendes Paket installiert werden:
+
+```{r,eval=F}
+install.packages("shinyjs")
+```
+
+## Objekttypen
+
+```{r}
+a <- c(1,2,3,4)
+str(a)
+```
+
+```{r}
+b <- c("red","green","blue")
+str(b)
+```
+
+```{r}
+d <- c(1,2,"green")
+str(d)
+```
+
+
+## Sequenzen
+
+```{r}
+1:4
+4:1
+seq(1,4,by=.5)
+rep(1,5)
+```
+
+
+
+## Farben in R
+
+```{r}
+barplot(rep(1,5),
+        col=c("red",1,"#01B8AA",
+              rgb(0,1,0),"purple"))
+```
+
+## Logische Abfragen
+
+```{r}
+vector1 <- 1:10
+vector1==5
+```
+
+```{r}
+vector1>5
+vector1<5
+```
+
+
+## Ein `data.frame`
+
+```{r}
+A <- 1:6
+B <- rep(1:2,3)
+C <- runif(6)
+```
+
+```{r}
+ABC <- data.frame(A,B,C)
+ABC
+```
+
+## Auswahl auf einem `data.frame`
+
+Nur eine Zeile:
+```{r}
+ABC[1,]
+```
+
+Nur eine Spalte:
+
+```{r}
+ABC[,1]
+```
+
+Gleiches Ergebnis:
+
+```{r}
+ABC$A
+```
+
+## Darstellung ohne erste Zeile
+
+```{r}
+ABC[-1,]
+```
+
+
+
+## Indizierung
+
+```{r}
+ABC[ABC$B==2,]
+```
+
+
+## Manuals zur Einführung in R
+
+- [R-Intro](http://cran.r-project.org/doc/manuals/R-intro.html) auf cran.
+
+## Schleifen
+
+```{r,eval=F}
+for (i in 1:4){
+  paste(i,"\n")
+}
+```
+
+# Daten Import
+
+
+## Import von csv-Dateien
+
+- csv-Dateien aus dem Internet direkt einlesen
+
+```{r,eval=Ex}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/TrustData.csv"
+
+trust_data <- read_csv2(link)
+```
+
+- Für Deutsche Daten sollte `read_csv2` verwendet werden
+
+## Sich die Daten anzeigen lassen
+
+```{r,eval=F}
+head(trust_data)
+```
+
+
+```{r,echo=F,eval=Ex}
+kable(trust_data[1:6,1:4])
+```
+
+```{r,eval=Ex}
+colnames(trust_data)
+```
+
+
+## Import Excel-files
+
+```{r,warning=F}
+library("readxl")
+```
+
+
+```{r,eval=F}
+ab <- read_excel("dataset.xlsx",sheet=1)
+```
+
+- Blatt Index als zweites Argument nötig
+
+
+## Übersicht zum Weltkulturerbe Datensatz
+
+```{r,eval=Ex}
+table(whc$category)
+```
+
+```{r,eval=Ex}
+colnames(whc)
+```
+
+
+## Ein Balkendiagramm erzeugen
+
+```{r,eval=Ex}
+barplot(table(whc$category))
+```
+
+
+## Import .sav-Daten
+
+```{r,echo=F,eval=Ex}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
+load("mz10_small.Rdata")
+```
+
+```{r,eval=F}
+library(foreign)
+mz10 <- read.spss("mz2010_cf.sav",to.data.frame=T)
+```
+
+## Der Befehl read.spss
+
+```{r}
+?read.spss
+```
+
+
+## stata-Dateien lesen
+
+- Datensatz über Studierende (2000) vom [Forschungsdatenzentrum](http://www.forschungsdatenzentrum.de/bestand/studenten/cf/2000/index.asp)
+- Datensatz hat 206867 Einträge
+
+```{r,message=F,warning=F,eval=F}
+studis <- read.dta("studenten_cf_2000.dta")
+```
+
+- Blog post zum lesen und schreiben von stata Dateien auf [is.R](http://is-r.tumblr.com/post/37181850668/readingwriting-stata-dta-files-with-foreign)
+
+## Quick R zum Datenimport
+
+<http://www.statmethods.net/input/index.html>
+
+## Datenexport
+
+```{r,eval=F}
+x <- runif(1000)
+save(x, file="WasAuchImmer.RData")
+```
+
+
+
+## Datenmanagement ein wenig wie bei SPSS
+
+```{r,eval=F}
+install.packages("Rz")
+library(Rz)
+```
+
+
+# Datentypen, Graphiken, Schleifen etc.
+
+
+## Ein `data.frame`
+
+```{r,eval=F}
+?data.frame
+```
+
+```{r}
+L3 <- LETTERS[1:3]
+fac <- sample(L3, 10, replace = TRUE)
+d <- data.frame(x = 1, y = 1:10, fac = fac)
+```
+
+```{r,echo=F}
+kable(d)
+```
+
+## Einen Überblick über die Daten
+
+```{r}
+head(d)
+```
+
+## Datentypen
+
+- Wenn ein Vektor als `factor` dargestellt wird, gibt es manchmal Probleme diesen mit einem anderen Vektor zu matchen.
+
+- Deshalb muss man den Datentyp verändern.
+
+- Am Besten ist es `character` zu matchen.
+
+
+## `integer` in `character` umwandeln
+
+```{r}
+A <- 1:10
+A
+str(A)
+```
+
+```{r}
+B <- as.character(A)
+B
+str(B)
+```
+
+## Ein `factor`
+
+```{r}
+AB <- sample(LETTERS,4)
+AB <- as.factor(AB)
+levels(AB) <- LETTERS
+table(AB)
+```
+
+## Das Matchen
+
+```{r,eval=F}
+?match
+```
+
+```{r}
+1:10 %in% c(1,3,5,9)
+```
+
+- Ergebnis ist ein `logical`.
+- Man bekommt die Aussagen wahr und falsch.
+
+```{r}
+match(1:10,c(1,3,5,9))
+```
+
+- Als Ergebnis bekommt man die Stelle an der sich die Zahl im zweiten Vektor wiederfindet.
+
+## Fehlende Werte
+
+- Fehlende Werte sind in R mit `NA` definiert.
+- Man bekommt die Information, ob es sich um einen fehlenden Wert handelt mit der Funktion `is.na`.
+
+```{r}
+A <- 1:10
+is.na(A)
+```
+
+```{r}
+A[5] <- NA
+is.na(A)
+```
+
+## Die Länge eines Vektors
+
+```{r}
+A <- 1:10
+length(A)
+```
+
+
+## if-Abfrage
+
+- Nur wenn Bedingung erfüllt ist, wird das Statement in den geschweiften Klammern ausgeführt.
+
+```{r}
+a <- 5
+if (a>4){
+  cat("Dies stimmt")
+}
+```
+
+```{r}
+a <- 3
+if (a>4){
+  cat("Dies stimmt")
+}
+```
+
+
+## Schleifen
+
+```{r}
+A <- 1
+for (i in 1:5){
+  A <- A + i
+  cat(A,"\n")
+}
+```
+
+## Matchen mit `agrep`
+
+```{r,eval=F}
+?agrep
+```
+
+```{r}
+agrep("lasy", "1 lazy 2")
+```
+
+## Die Funktion `which`
+
+```{r}
+A <- 1:10
+A
+which(A==5)
+which(A>5)
+```
+
+## Tabellieren
+
+```{r}
+A <- sample(1:10,100,replace=T)
+table(A)
+```
+
+## Die Funktion cut
+
+- Diese Funktion kann verwendet werden um zu kategorisieren
+
+```{r,eval=F}
+?cut
+```
+
+```{r}
+Z <- rnorm(10000)
+head(Z)
+```
+
+```{r}
+Zc <- cut(Z, breaks = -6:6)
+head(Zc)
+```
+
+```{r}
+table(Zc)
+```
+
+## Die Funktion `plot`
+
+- `plot` ist eine generische Funktion 
+- d.h. je nachdem welches Objekt man rein steckt kommt ein anderes Ergebnis heraus.
+
+```{r}
+plot(1:10)
+```
+
+## Ein weiterer plot
+
+```{r}
+A <- runif(100)
+B <- runif(100)
+mod1 <- lm(A~B)
+
+par(mfrow=c(2,2))
+plot(mod1)
+```
+
+## Eine Graphik ohne Rand
+
+- Optionen bei der Gestaltung von Basis-Graphiken
+
+```{r,eval=F}
+?par
+```
+
+
+```{r}
+par(mai=c(0,0,0,0))
+plot(hist(runif(1000)))
+```
+
+## Ein Balkendiagramm
+
+```{r}
+A <- sample(1:10,1000,replace=T)
+tabA <- table(A)
+
+barplot(tabA)
+```
+
+## Die Achsenbezeichnung
+
+```{r}
+barplot(tabA,xlab="Die Ausprägungen",
+        ylab="Häufigkeiten",
+        main="Ein Balkendiagramm")
+```
+
+# Zufallszahlen
+
+
+## Erzeugung von ganzzahligen Zufallszahlen
+
+```{r}
+Asample <- sample(1:5,1000,replace=T)
+head(Asample)
+table(Asample)
+```
+
+## Gleichverteilte Zufallszahlen
+
+```{r,eval=F}
+A <- runif(100)
+head(A)
+hist(A)
+```
+
+## Gleichverteilte Zufallszahlen in einem Rahmen
+
+```{r,eval=F}
+A2 <- runif(100,100,200)
+head(A2)
+hist(A2)
+```
+
+## Normalverteilte Zufallszahlen
+
+```{r}
+Bnrom <- rnorm(1000)
+hist(Bnrom,col="royalblue")
+```
+
+## Normalverteilte Zufallszahlen
+
+```{r,eval=F}
+?rnorm
+```
+
+
+```{r}
+Bnrom2 <- rnorm(1000,mean=-100,sd=20)
+hist(Bnrom2,col="red")
+```
+
+## Das Runden
+
+Zahlen runden:
+
+```{r}
+(A <- rnorm(10))
+```
+
+```{r}
+round(A)
+```
+
+```{r}
+round(A,digits=2)
+```
+
+## R als Taschenrechner
+
+```{r}
+2/4
+```
+
+```{r}
+2*4
+```
+
+```{r}
+sqrt(5)
+```
+
+## Ein Kreisdiagramm
+
+```{r}
+Students <- c(100, 200,30)
+pie(Students)
+```
+
+## Graphiken speichern
+
+```{r}
+pdf("pie_Students.pdf")
+pie(Students)
+dev.off()
+```
+

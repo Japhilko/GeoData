@@ -2,7 +2,9 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Kartentypen mit ggmap"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: beamer_presentation
+output:
+  html_document:
+    keep_md: true
 ---
 
 ## Gliederung
