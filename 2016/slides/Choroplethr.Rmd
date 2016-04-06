@@ -1,8 +1,8 @@
 ---
-title: "Pakete Choroplethr und DT"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - R-Paket Choroplethr"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: md_document
+output: beamer_presentation
 ---
 
 ```{r,echo=F}
@@ -21,7 +21,7 @@ Paket von [Ari Lamstein](http://www.arilamstein.com/)
 [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
 - World Development Indicators (World Bank)
 
-Folgendes basiert auf der [vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) des `choroplethr`-Paketes
+Folgendes basiert auf der [Vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) des `choroplethr`-Paketes
 
 ## Was ist ein Choropleth
 
@@ -30,7 +30,7 @@ Ein Choropleth ist eine Karte, die
 - geografische Grenzen zeigt.
 - bei denen Bereiche basierend auf Metriken eingefärbt werden.
 
-Choropleths sind nützlich für die Visualisierung von Daten, wo geografische Grenzen eine natürliche Einheit der Aggregation sind. 
+Choroplethen sind nützlich für die Visualisierung von Daten, wo geografische Grenzen eine natürliche Einheit der Aggregation sind. 
 
 ## Bevölkerungsschätzungen für den US-Staaten
 
@@ -46,15 +46,17 @@ library("choroplethrMaps")
 datatable(df_pop_state,options = list(pageLength = 5))
 ```
 
-```{r,echo=F,eval=Nint}
-kable(df_pop_state[1:10,])
+```{r}
+library("choroplethrMaps")
 ```
 
-## `choroplethr` - Hallo Welt
+```{r,echo=F}
+kable(head(df_pop_state))
+```
 
-Hier ist ein Beispiel [choropleth](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) 
+## `choroplethr` - [Hallo Welt](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) 
 
-Die Karte zeigt die US State Bevölkerungsschätzung für das Jahr 2012:
+Die Karte zeigt die US Bevölkerungsschätzung für die US-Staaten und das Jahr 2012:
 
 Wir bekommen eine Choroplethenkarte mit nur einem Argument:
 
@@ -86,16 +88,16 @@ state_choropleth(df_pop_state,
 
 [Choroplethen der US Counties](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html)
 
+<http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html>
+
 ```{r,eval=F}
 ?df_pop_county
-
 ?county_choropleth
 ```
 
 
 ```{r}
 data(df_pop_county)
-
 county_choropleth(df_pop_county)
 ```
 
@@ -104,12 +106,12 @@ county_choropleth(df_pop_county)
 
 ```{r}
 data(df_pop_country)
-
 country_choropleth(df_pop_country,
-                 title      = "2012 Population Estimates",
-                 legend     = "Population",
-                 num_colors = 1,
-                 zoom       = c("united states of america", "mexico", "canada"))
+              title      = "2012 Population Estimates",
+              legend     = "Population",
+              num_colors = 1,
+              zoom       = c("united states of america",
+                             "mexico", "canada"))
 ```
 
 
@@ -119,19 +121,21 @@ country_choropleth(df_pop_country,
 ```{r,cache=T,warning=F,message=F}
 library(choroplethr)
 library(WDI) 
-
-choroplethr_wdi(code="SP.POP.TOTL", year=2012, title="2012 Population", num_colors=1)
+choroplethr_wdi(code="SP.POP.TOTL", year=2012, 
+                title="2012 Population", 
+                num_colors=1)
 ```
 
 ## [Lebenserwartung](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
 
 ```{r,warning=F,message=F}
 library(WDI) 
-choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012, title="2012 Life Expectancy")
+choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012,
+                title="2012 Life Expectancy")
 ```
 
 
-## Animiert
+## Ein weiterer Datensatz
 
 ```{r,cache=T}
 data(df_president_ts)
@@ -143,61 +147,10 @@ Mit dem Fragezeichen bekommen wir Hilfe
 ?df_president_ts
 ```
 
-
-## [Ein weiteres Beispiel](http://www.r-bloggers.com/how-to-change-the-reference-map-in-choroplethr/)
-
-
-```{r,warning=F}
-library(choroplethr)
-library(choroplethrZip)
-library(R6)
-library(RgoogleMaps)
-library(ggmap)
- 
-ZipChoroplethSatellite = R6Class("ZipChoroplethSatellite", inherit = ZipChoropleth,
-  public = list(
- 
-    get_reference_map = function()
-    {
-      # note: center is (long, lat) but MaxZoom is (lat, long)
- 
-      center = c(mean(self$choropleth.df$long),
-      mean(self$choropleth.df$lat))
- 
-      max_zoom = MaxZoom(range(self$choropleth.df$lat),
-      range(self$choropleth.df$long))
- 
-      get_map(location = center,
-        zoom    = max_zoom,
-        maptype = "satellite",
-        color   = "color")
-    }
-  )
-)
-```
-
-## Satelitenkarte als Hintergrund
-
 ```{r}
-data(df_zip_demographics)
-df_zip_demographics$value = df_zip_demographics$per_capita_income
-nyc_fips = c(36005, 36047, 36061, 36081, 36085)
-  
-c = ZipChoroplethSatellite$new(df_zip_demographics)
-c$set_zoom_zip(state_zoom=NULL, county_zoom = nyc_fips, zip_zoom=NULL, msa_zoom=NULL)
-c$set_num_colors(4)
-c$title  = "2013 New York City ZIP Code Tabulated Areas"
-c$legend = "Per Capita Income"
-c$render_with_reference_map()
+kable(df_president_ts[1:8,1:8])
 ```
 
-## Das datatable
-
-```{r,cache=F,echo=F,warning=F,eval=internet}
-datatable(df_president_ts, options = list(pageLength = 5))
-```
-
-- [datatable](http://www.htmlwidgets.org/showcase_datatables.html)
 
 ## Resourcen
 
@@ -205,26 +158,29 @@ datatable(df_president_ts, options = list(pageLength = 5))
 citation("choroplethr")
 ```
 
-
-## Reference
-
-```{r}
-citation("DT")
-```
-
-
 ## Resources / Links
 
-- [Intro - What is a choropleth](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
+- [Einführung - Was sind Choroplethen](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
 
-- [Description](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html) on the usage of the `choroplethr` package
+<https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html>
 
+- [Beschreibung](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html) der Nutzung des  `choroplethr` Paketes
+
+<http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html>
 - Plot the [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html) with `choroplethr`
 
-- [Mapping World Bank Data](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html) with `choroplethr`
+- [Weltbankdaten in Karten darstellen](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html) mit `choroplethr`
 
-- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html) on the `choroplethr` package
+<https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html>
 
-- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)-blog on the `choroplethr` package
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html) über das `choroplethr` Paket
 
-- [Presentation Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/) on the `choroplethr` package
+<http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html>
+
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)-blog über das `choroplethr` Paket
+
+<http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/>
+
+- [Präsentation von Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/) über das `choroplethr` Paket
+
+<http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/>
