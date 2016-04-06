@@ -1,0 +1,16 @@
+---
+title: "Lösung tmap und OSM Daten"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+
+## Bibliotheken laden
+
+```{r,warning=F,message=F}
+library(osmar)
+
+
+library(tmap)
+```
+
