@@ -101,16 +101,15 @@ Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 
 Aufgabe: [Darstellung von Eurostat Daten mit `choroplethr`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_choroplethr.Rmd)
 
-R-Recap:  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/.md)) 
 
 Nutzung von OpenStreetMap Daten
 ---------------------
 
 - __(G1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.md))
 
-- __(G2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.Rmd))
+- __(G2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md))
 
-- __(G3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.Rmd))
+- __(G3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md))
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
@@ -120,7 +119,7 @@ Aufgabe: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoDat
 Räumliche Statistik und Interaktive Karten 
 ---------------------
 
-- __(H1) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.Rmd) |
+- __(H1) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
 
 
