@@ -63,7 +63,7 @@ Sozialwissenschaftliche Datenquellen
 
 - Weitere Datenquellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WeitereDatenquellen.Rmd))
 
-Aufgabe: [Zensus Ergebnisse herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
+Aufgabe 4: [Zensus Ergebnisse herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
 R-Recap: Schleifen, if-Abfragen und Tabellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Datentypen.md)) 
 
@@ -82,7 +82,7 @@ of data sources
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
 )
 
-Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.md)
+Aufgabe 5: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.md)
 
 R-Recap: Zufallszahlen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Zufallszahlen.md)) 
 
@@ -96,7 +96,7 @@ Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 
 - Beispiel: *Maps with Eurostat data* ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 
-- __(F2) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.Rmd) | 
+- __(F2) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
 
 Aufgabe: [Darstellung von Eurostat Daten mit `choroplethr`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_choroplethr.Rmd)
@@ -113,7 +113,7 @@ Nutzung von OpenStreetMap Daten
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
-Aufgabe: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd)
+Aufgabe 6: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd)
 
 
 Räumliche Statistik und Interaktive Karten 
