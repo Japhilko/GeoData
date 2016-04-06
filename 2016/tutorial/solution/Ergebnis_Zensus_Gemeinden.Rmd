@@ -1,5 +1,5 @@
 ---
-title: "Ergebnis Zensus Ergebnisse"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Lösung Zensus Ergebnisse"
 author: "Jan-Philipp Kolb"
 date: "2 April 2016"
 output:

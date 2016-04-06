@@ -1,5 +1,5 @@
 ---
-title: "Lösung Verbindung"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Lösung Verbindung"
 author: "Jan-Philipp Kolb"
 date: "4 April 2016"
 output: html_document

@@ -1,0 +1,9 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Lösung Distanzberechnung"
+author: "Jan-Philipp Kolb"
+date: "08 April 2016"
+output: html_document
+---
+
+## Aufgabe
+
