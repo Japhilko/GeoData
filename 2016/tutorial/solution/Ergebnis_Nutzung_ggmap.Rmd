@@ -1,0 +1,7 @@
+---
+title: "Lösung - ggmap"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+

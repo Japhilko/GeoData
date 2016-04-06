@@ -28,7 +28,7 @@ Verschiedene Kartentypen mit ggmap
 
 R-Recap: Objekte und Indizierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.md) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.R))
 
-Aufgabe: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
+Aufgabe 2: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
 
 Quellen für räumliche Daten
 ---------------------

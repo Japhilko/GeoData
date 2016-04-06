@@ -1,5 +1,5 @@
 ---
-title: "Vorbereitung und Brainstorming"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Vorbereitung und Brainstorming"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
 output: md_document
