@@ -65,7 +65,7 @@ Sozialwissenschaftliche Datenquellen
 
 Aufgabe: [Zensus Ergebnisse herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
-R-Recap: Schleifen, if-Abfragen und Tabellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datentypen.Rmd)) 
+R-Recap: Schleifen, if-Abfragen und Tabellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datentypen.md)) 
 
 
 Verbindung, Editierung und Einfärbung
@@ -84,12 +84,14 @@ of data sources
 
 Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.md)
 
+R-Recap: Zufallszahlen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Zufallszahlen.md)) 
+
 
 Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 ---------------------
 
 - __(F1) Thematische Karten mit dem R-Paket `tmap`__ 
-([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.Rmd) | 
+([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
 
 - Beispiel: *Maps with Eurostat data* ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))

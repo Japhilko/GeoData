@@ -2,7 +2,9 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das R-Paket tmap"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: beamer_presentation
+output:
+  slidy_presentation:
+    keep_md: true
 ---
 
 ```{r,echo=F,warning=F,message=F}

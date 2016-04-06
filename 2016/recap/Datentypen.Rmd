@@ -1,8 +1,10 @@
 ---
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Faktoren"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Datentypen, Graphiken, Schleifen etc."
 author: "Jan-Philipp Kolb"
-date: "6 April 2016"
-output: html_document
+date: "07 April 2016"
+output:
+  slidy_presentation:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -201,5 +203,36 @@ mod1 <- lm(A~B)
 
 par(mfrow=c(2,2))
 plot(mod1)
+```
+
+## Eine Graphik ohne Rand
+
+- Optionen bei der Gestaltung von Basis-Graphiken
+
+```{r,eval=F}
+?par
+```
+
+
+```{r}
+par(mai=c(0,0,0,0))
+plot(hist(runif(1000)))
+```
+
+## Ein Balkendiagramm
+
+```{r}
+A <- sample(1:10,1000,replace=T)
+tabA <- table(A)
+
+barplot(tabA)
+```
+
+## Die Achsenbezeichnung
+
+```{r}
+barplot(tabA,xlab="Die Ausprägungen",
+        ylab="Häufigkeiten",
+        main="Ein Balkendiagramm")
 ```
 
