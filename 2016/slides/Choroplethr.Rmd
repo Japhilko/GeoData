@@ -2,10 +2,10 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - R-Paket Choroplethr"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: beamer_presentation
+output: md_document
 ---
 
-```{r,echo=F}
+```{r,echo=F,warning=F}
 library(knitr)
 library(DT)
 internet <- F

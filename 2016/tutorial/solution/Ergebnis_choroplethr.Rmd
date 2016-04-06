@@ -1,0 +1,39 @@
+---
+title: "Lösung Eurostat Indikatoren"
+author: "Jan-Philipp Kolb"
+date: "29 März 2016"
+output: html_document
+---
+
+## Download der Indikatoren
+
+<http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
+
+- Den Datensatz ohne Fußnoten und Beschreibung auswählen.
+
+- Das Format xlsx wählen und die ersten beiden und letzten sechs Zeilen in Excel löschen.
+
+- Am einfachsten ist es den Datensatz als csv abzuspeichern.
+
+```{r,eval=F,echo=F}
+setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/tutorial/solution")
+```
+
+
+```{r}
+dat <- read.csv("data/Inflation.csv",sep=";")
+```
+
+## Daten bearbeiten
+
+```{r}
+dat$X2015M04 <- gsub(",",".",dat$X2015M04)
+dat$X2015M04 <- as.numeric(dat$X2015M04)  
+```
+
+## Die Karte besorgen
+
+```{r}
+
+```
+
