@@ -1,15 +1,8 @@
----
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Die Nutzung von Programmierschnittstellen"
-author: "Jan-Philipp Kolb"
-date: "08 April 2016"
-output:
-  slidy_presentation:
-    keep_md: true
----
+# Nutzung von GeoDaten in den Sozialwissenschaften - Die Nutzung von Programmierschnittstellen
+Jan-Philipp Kolb  
+08 April 2016  
 
-```{r,echo=F}
-Ex=F
-```
+
 
 
 
@@ -38,16 +31,16 @@ Ex=F
 
 ## Import von der Overpass API zu R
 
-```{r,echo=F}
-Link1 <- "http://www.overpass-api.de/api/interpreter?data=[maxsize:1073741824][timeout:900];area[name=\""
-```
 
-```{r,eval=F}
+
+
+```r
 Link1 <- "http://www.overpass-api.de/api/interpreter?
 data=[maxsize:1073741824][timeout:900];area[name=\""
 ```
 
-```{r,eval=Ex}
+
+```r
 place <- "Mannheim"
 type_obj <- "node"
 object <- "leisure=playground"
@@ -62,19 +55,22 @@ type_obj,"(area)[",object,
 
 Die Liste der ID's mit dem Wert *playground*:
 
-```{r,eval=Ex}
+
+```r
 node_id<- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ id")
 ```
 
 ## latitude und longitude bekommen
 
-```{r,eval=Ex}
+
+```r
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lat")
 ```
 
-```{r,eval=Ex}
+
+```r
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lon")
 ```

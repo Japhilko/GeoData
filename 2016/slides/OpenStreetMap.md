@@ -1,16 +1,8 @@
----
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das Arbeiten mit OpenStreetMap Daten"
-author: "Jan-Philipp Kolb"
-date: "08 April 2016"
-output:
-  slidy_presentation:
-    keep_md: true
----
+# Nutzung von GeoDaten in den Sozialwissenschaften - Das Arbeiten mit OpenStreetMap Daten
+Jan-Philipp Kolb  
+08 April 2016  
 
-```{r,echo=F}
-library("knitr")
-Ex=T
-```
+
 
 
 
@@ -22,7 +14,8 @@ Ex=T
 
 ## Das R-Paket `XML` - Gaston Sanchez
 
-```{r}
+
+```r
 library("XML")
 ```
 
@@ -42,29 +35,35 @@ Seine Arbeit sieht man [hier](http://gastonsanchez.com/) und ein anderes [Bild](
 
 ## Funktionen im XML Paket
 
-```{r,echo=F}
-names <- c("Function","Description","xmlName()","name of the node","xmlSize()","number of subnodes","xmlAttrs()","named character vector of all attributes","xmlGetAttr()","value of a single attribute","xmlValue()","contents of a leaf node","xmlParent()","name of parent node","xmlAncestors()","name of ancestor nodes","getSibling()","siblings to the right or to the left","xmlNamespace()","the namespace (if there’s one)")
 
-tab <- t(array(names,dim=c(2,length(names)/2)))
-# tab <- as.data.frame=
-kable(tab)
-```
+---------------  -----------------------------------------
+Function         Description                              
+xmlName()        name of the node                         
+xmlSize()        number of subnodes                       
+xmlAttrs()       named character vector of all attributes 
+xmlGetAttr()     value of a single attribute              
+xmlValue()       contents of a leaf node                  
+xmlParent()      name of parent node                      
+xmlAncestors()   name of ancestor nodes                   
+getSibling()     siblings to the right or to the left     
+xmlNamespace()   the namespace (if there’s one)           
+---------------  -----------------------------------------
 
 ## Beispiel: administrative Grenzen Berlin
 
 [Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
 
-```{r,echo=F}
-url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
-```
 
-```{r,eval=F}
+
+
+```r
 url <- "http://api.openstreetmap.org/api/0.6/
 relation/62422"
 ```
 
 
-```{r,eval=Ex}
+
+```r
 BE <- xmlParse(url)
 ```
 
@@ -74,18 +73,47 @@ BE <- xmlParse(url)
 
 - [Tobi Bosede - Working with XML Data in R](http://www.informit.com/articles/article.aspx?p=2215520)
 
-```{r,eval=Ex}
+
+```r
 xmltop = xmlRoot(BE)
 class(xmltop)
+```
+
+```
+## [1] "XMLInternalElementNode" "XMLInternalNode"       
+## [3] "XMLAbstractNode"
+```
+
+```r
 xmlSize(xmltop)
+```
+
+```
+## [1] 1
+```
+
+```r
 xmlSize(xmltop[[1]])
+```
+
+```
+## [1] 324
 ```
 
 [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
 
-```{r,eval=Ex}
+
+```r
 xpathApply(BE,"//tag[@k = 'source:population']")
+```
+
+```
+## [[1]]
+## <tag k="source:population" v="http://www.statistik-berlin-brandenburg.de/Publikationen/Stat_Berichte/2010/SB_A1-1_A2-4_q01-10_BE.pdf 2010-10-01"/> 
+## 
+## attr(,"class")
+## [1] "XMLNodeSet"
 ```
 
 
@@ -120,7 +148,31 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 
 ## Referenzen
 
-```{r}
+
+```r
 citation("XML")
+```
+
+```
+## 
+## To cite package 'XML' in publications use:
+## 
+##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
+##   Parsing and Generating XML Within R and S-Plus. R package
+##   version 3.98-1.4. https://CRAN.R-project.org/package=XML
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
+##     author = {Duncan Temple Lang and the CRAN Team},
+##     year = {2016},
+##     note = {R package version 3.98-1.4},
+##     url = {https://CRAN.R-project.org/package=XML},
+##   }
+## 
+## ATTENTION: This citation information has been auto-generated from
+## the package DESCRIPTION file and may need manual editing, see
+## 'help("citation")'.
 ```
 
