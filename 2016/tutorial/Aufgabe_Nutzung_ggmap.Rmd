@@ -7,7 +7,7 @@ output:
     keep_md: true
 ---
 
-## Aufgabe 2 - Nutzung von ggmap
+## Aufgabe 2 - Nutzung von `ggmap`
 
 
 - Erzeugen Sie eine Karte von einem Ort, der Ihnen besonders gut gefällt und speichern Sie diesen.

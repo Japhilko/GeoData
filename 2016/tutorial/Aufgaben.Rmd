@@ -1,0 +1,77 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Aufgaben"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output: pdf_document
+---
+
+## Aufgabe 1 - Vorbereitung und Brainstorming
+
+- Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses Kurses speichern.
+
+- Machen Sie sich mit der Nutzung von Github vertraut.
+
+- Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen wollen erstellen Sie eine kleine Skizze und schicken Sie dieses Thema per E-mail an mich. 
+
+## Aufgabe 2 - Nutzung von `ggmap`
+
+- Erzeugen Sie eine Karte von einem Ort, der Ihnen besonders gut gefällt und speichern Sie diesen.
+
+- Versuchen Sie Ihren Anreiseweg in einer Karte darzustellen.
+
+## Aufgabe 3 - Eine Karte für das Saarland
+
+- Laden Sie die Shapefiles der Gemeinden Deutschlands
+
+- Schränken Sie die Daten auf das Saarland ein, und zeichnen Sie eine Karte.
+
+- Speichern Sie die Daten in geeigneter Form ab.
+
+- Überlegen Sie welche Geodaten Sie zur Darstellung Ihres eigenen Themas benötigen.
+
+## Aufgabe 4 - Zensus Ergebnisse importieren und bearbeiten
+
+- Laden Sie die Gemeindeergebnisse für den Zensus 2011 herunter: <https://www.destatis.de/DE/Methoden/Zensus_/Zensus.html>
+- Erzeugen Sie einen Datensatz, der nur die Ergebnisse für die Saarländischen Gemeinden enthält.
+- Geben Sie die Gemeinde an, in der der Anteil der unter 1-jährigen am höchsten ist. 
+- Speichern Sie einen Datensatz ab, in dem die folgenden Variablen enthalten sind:
+    - der amtliche Gemeindeschlüssel, 
+    - die Gemeindenamen,  
+    - die Bevölkerungszahl insgesamt 
+    - die Zahl der Einjährigen und 
+    - die Zahl der Zwanzigjährigen 
+    
+## Aufgabe 5 - Verbindung von Zensus Daten und Karte
+
+- Verbinden Sie die Zensus Ergebnisse mit einer Karte für das Saarland.
+
+- Stellen Sie den Anteil der Einjährigen und den Anteil der Zwanzigjährigen im Vergleich dar.
+
+## Aufgabe 6 - Die Inflation visualisieren
+
+- Laden Sie die Daten für den Inflationsindikator von Eurostat herunter.
+
+<http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
+
+- Importieren Sie die Daten in R.
+
+- Nutzen Sie das `choroplethr`-Paket um den Indikator zu visualisieren.
+
+## Aufgabe 7 - Darstellung von OpenStreetMap Daten mit dem R-Paket `tmap`
+
+- Nutzen Sie das Paket `osmar` um einen Ausschnitt für eine Sie interessierende Stadt herunterzuladen.
+
+- Produzieren Sie eine Karte der Gebäude in diesem Ausschnitt mit dem Paket `tmap`.
+
+## Aufgabe 8 - Distanzberechnung
+
+- Stellen Sie sich vor, Sie stehen am Brandenburger Tor. Finden Sie heraus, welche Bars sich in einem zwei Kilometer Umkreis befinden. 
+
+- Nutzen Sie entweder das Paket `geosmdata` um die Daten herunterzuladen oder nutzen Sie den folgenden Datensatz: 
+
+```{r,eval=F}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_bar.csv"
+bars <- read.csv(link)
+```
+
+

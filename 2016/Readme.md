@@ -28,7 +28,7 @@ Verschiedene Kartentypen mit ggmap
 
 R-Recap: Objekte und Indizierung ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/ObjekttypenIndizierung.Rmd))
 
-Aufgabe: [Vorbereitung und Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
+Aufgabe: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md)
 
 Quellen für räumliche Daten
 ---------------------
@@ -63,9 +63,9 @@ Sozialwissenschaftliche Datenquellen
 
 - Weitere Datenquellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WeitereDatenquellen.Rmd))
 
-Aufgabe: [Zensus Ergebnisser herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
+Aufgabe: [Zensus Ergebnisse herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
-R-Recap: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/dataImport.md)) 
+R-Recap: Faktoren ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Faktoren.Rmd)) 
 
 
 Verbindung, Editierung und Einfärbung
@@ -82,6 +82,8 @@ of data sources
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
 )
 
+Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.md)
+
 
 Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 ---------------------
@@ -95,6 +97,8 @@ Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 - __(F2) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.Rmd) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
 
+Aufgabe: [Darstellung von Eurostat Daten mit `choroplethr`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_choroplethr.Rmd)
+
 
 Nutzung von OpenStreetMap Daten
 ---------------------
@@ -107,6 +111,8 @@ Nutzung von OpenStreetMap Daten
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
+Aufgabe: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd)
+
 
 Räumliche Statistik und Interaktive Karten 
 ---------------------
@@ -118,6 +124,8 @@ Räumliche Statistik und Interaktive Karten
 - __(H2) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R))
 Beispiel - [Campingplätze](http://rpubs.com/Japhilko82/Campsites)
+
+Aufgabe: [Distanzberechnung](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Distanzberechnung.Rmd)
 
 
 Kontext und Ausblick

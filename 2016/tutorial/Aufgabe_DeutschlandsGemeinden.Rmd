@@ -7,11 +7,7 @@ output:
     keep_md: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-## Aufgabe
+## Aufgabe 3 - Eine Karte für das Saarland
 
 - Laden Sie die Shapefiles der Gemeinden Deutschlands
 

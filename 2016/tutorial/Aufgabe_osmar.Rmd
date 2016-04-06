@@ -1,0 +1,13 @@
+---
+title: "Aufgabe osmar Zensus Ergebnisse in einer Karte visualisieren"
+author: "Jan-Philipp Kolb"
+date: "08 April 2016"
+output: html_document
+---
+
+
+## Aufgabe
+
+- Nutzen Sie das Paket `osmar` um einen Ausschnitt für eine Sie interessierende Stadt herunterzuladen.
+
+- Produzieren Sie eine Karte der Gebäude in diesem Ausschnitt mit dem Paket `tmap`

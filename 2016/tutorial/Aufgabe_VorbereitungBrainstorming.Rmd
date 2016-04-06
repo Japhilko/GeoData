@@ -9,4 +9,6 @@ output: md_document
 
 - Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses Kurses speichern.
 
-- Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen wollen
+- Machen Sie sich mit der Nutzung von Github vertraut.
+
+- Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen wollen erstellen Sie eine kleine Skizze und schicken Sie dieses Thema per E-mail an mich. 

@@ -1,0 +1,13 @@
+---
+title: "Aufgabe_choroplethr.Rmd"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+
+
+## Aufgabe 
+
+- Laden Sie 
+
+- Nutzen Sie das `choroplethr`-Paket um die Indikatoren zu visualisieren

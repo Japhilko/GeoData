@@ -1,0 +1,57 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Faktoren"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+## Ein `data.frame`
+
+```{r,eval=F}
+?data.frame
+```
+
+```{r}
+L3 <- LETTERS[1:3]
+fac <- sample(L3, 10, replace = TRUE)
+d <- data.frame(x = 1, y = 1:10, fac = fac)
+```
+
+```{r,echo=F}
+kable(d)
+```
+
+## Einen Überblick über die Daten
+
+```{r}
+head(d)
+```
+
+## `integer` in `character` umwandeln
+
+```{r}
+A <- 1:10
+A
+str(A)
+```
+
+```{r}
+B <- as.character(A)
+B
+str(B)
+```
+
+## Ein `factor`
+
+```{r}
+AB <- sample(LETTERS,4)
+AB <- as.factor(AB)
+levels(AB) <- LETTERS
+table(AB)
+```
+

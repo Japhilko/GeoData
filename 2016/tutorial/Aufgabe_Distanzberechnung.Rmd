@@ -1,0 +1,19 @@
+---
+title: "Aufgabe Distanzberechnung"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+
+
+## Aufgabe Distanzberechnung
+
+- Stellen Sie sich vor, Sie stehen am Brandenburger Tor. Finden Sie heraus, welche Bars sich in einem zwei Kilometer Umkreis befinden. 
+
+- Nutzen Sie entweder das Paket `geosmdata` um die Daten herunterzuladen oder nutzen Sie den folgenden Datensatz: 
+
+```{r,eval=F}
+link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/Deutschland_bar.csv"
+bars <- read.csv(link)
+```
+
