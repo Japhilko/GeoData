@@ -1,10 +1,8 @@
 ---
-title: "Package spdep"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Paket spdep"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: beamer_presentation
 ---
 
 ## Das erste Gesetz der Geographie (TFLG)
@@ -87,4 +85,8 @@ plot(Africa,col=Af_color)
 
 - [Raster, CMSAF and solaR](https://procomun.wordpress.com/2011/06/17/raster-cmsaf-and-solar/)
 
+<https://procomun.wordpress.com/2011/06/17/raster-cmsaf-and-solar/>
+
 - [Getting rasters into shape from R](https://johnbaumgartner.wordpress.com/2012/07/26/getting-rasters-into-shape-from-r/)
+
+<https://johnbaumgartner.wordpress.com/2012/07/26/getting-rasters-into-shape-from-r/>

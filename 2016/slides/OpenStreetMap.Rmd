@@ -31,9 +31,12 @@ Seine Arbeit sieht man [hier](http://gastonsanchez.com/) und ein anderes [Bild](
 
 ## Wichtiger für mich:
 
-[work with XML data](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
+[Das Arbeiten mit XML Daten](http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf)
 
-<img src="https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/GastonSanchez.PNG" alt="alt text" width="700x" height="500x">
+<http://gastonsanchez.com/work/webdata/getting_web_data_r4_parsing_xml_html.pdf>
+
+![Manual von Gaston Sanchez](figure/GastonSanchez.PNG)
+
 
 ## Funktionen im XML Paket
 
@@ -49,13 +52,21 @@ kable(tab)
 
 [Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
 
-```{r,eval=Ex}
+```{r,echo=F}
 url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
+```
 
+```{r,eval=F}
+url <- "http://api.openstreetmap.org/api/0.6/
+relation/62422"
+```
+
+
+```{r,eval=Ex}
 BE <- xmlParse(url)
 ```
 
-![Admin Berlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ExampleAdmBE.PNG)
+![Administrative Grenzen  Berlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ExampleAdmBE.PNG)
 
 ## Das XML analysieren
 
@@ -76,31 +87,34 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 ```
 
 
-## More working example with XML files:
+## Mehr Beispiele, wie man mit XML Daten umgeht:
 
 
-- [Extracting data from XML](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+- [Daten aus XML extrahieren](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+
+<http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf>
 
 - Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.org/RSXML/shortIntro.pdf)
 
+<http://www.omegahat.org/RSXML/shortIntro.pdf>
 
-## Further information
+## Noch mehr Informationen
 
-- [Manipulating Data from the Web](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
+- [Web Daten manipulieren](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
 
-- [Information on xquery](http://www.w3schools.com/xquery/)
+<http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml>
 
-- [R and the web (for beginners), Part II: XML in R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
+- [Information zu xquery](http://www.w3schools.com/xquery/)
 
+<http://www.w3schools.com/xquery/>
+
+- [R und das Web (für Anfänger), Teil II: XML und R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
+
+<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
 
 - [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
 
-## Kompletter Datensatz
-
-- geofabrik
-- Shapefiles are not complete
-- but e.g. `germany-latest.osm.pbf`
-
+<http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf>
 
 ## Referenzen
 

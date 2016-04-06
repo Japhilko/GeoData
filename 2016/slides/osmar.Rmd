@@ -1,17 +1,15 @@
 ---
-title: "Das R-Paket osmar"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das R-Paket osmar"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: beamer_presentation
 ---
 
 ```{r,echo=F}
 library(knitr)
 library(DT)
 Ex=T
-Ca=T
+Ca=F
 ```
 
 
@@ -34,11 +32,21 @@ api <- osmsource_api()
 - Der Download dauert eine Weile
 - Der Download Ausschnitt ist stark begrenzt
 
-```{r,cache=Ca,message=F,eval=Ex}
+```{r,cache=Ca,message=F,eval=F}
 cityC <- geocode("Trier")
 bb <- center_bbox(cityC$lon,cityC$lat,200, 200)
 ua <- get_osm(bb, source = api)
 ```
+
+```{r,eval=F,echo=F}
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/2016/slides/data")
+save(ua,file="uaTrier.RData")
+```
+
+```{r,echo=F}
+load("data/uaTrier.RData")
+```
+
 
 ## Welche Informationen hat man nun:
 
@@ -48,20 +56,20 @@ Man bekommt drei Arten von Informationen:
 names(ua)
 ```
 
-![pic nodes](http://wiki.openstreetmap.org/w/images/thumb/7/76/Osm_element_node.svg/30px-Osm_element_node.svg.png) [Node](http://wiki.openstreetmap.org/wiki/Elements#Node)
+![Symbol node](figure/30px-Osm_element_node.svg.png) [Node](http://wiki.openstreetmap.org/wiki/Elements#Node)
 
-![pic ways](http://wiki.openstreetmap.org/w/images/thumb/e/ee/Osm_element_way.svg/30px-Osm_element_way.svg.png) [Way](http://wiki.openstreetmap.org/wiki/Elements#Way)
+![Symbol way](figure/30px-Osm_element_way.svg.png) [Way](http://wiki.openstreetmap.org/wiki/Elements#Way)
 
-![pic relation](http://wiki.openstreetmap.org/w/images/thumb/4/48/Osm_element_relation.svg/30px-Osm_element_relation.svg.png) [Relation](http://wiki.openstreetmap.org/wiki/Relation)
+![Symbol relation](figure/30px-Osm_element_relation.svg.png) [Relation](http://wiki.openstreetmap.org/wiki/Relation)
 
 
 ## Um sich die Information zu den nodes anzuschauen:
 
-```{r,eval=Ex}
+```{r,eval=F}
 summary(ua$nodes)
 ```
 
-## Überblick über die Information
+Überblick über die Information
 
 ```{r,eval=F,echo=F}
 datatable(summary(ua$nodes)[[6]])
@@ -97,8 +105,8 @@ plot(bg_poly)
 
 - The information can be exported from [OSM](https://www.openstreetmap.org/export)
 
-![sipp](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Sippersfeld.png)
 
+![Ausschnitt Sippersfeld](figure/Sippersfeld.png)
 
 ## In R Importieren unter Nutzung von `osmar`
 
@@ -107,8 +115,7 @@ map <- get_osm(complete_file(),
                 source = osmsource_file("map.osm"))
 ```
 
-
-## Was ist dahinter:
+Was ist dahinter:
 
 [Osmosis](http://wiki.openstreetmap.org/wiki/Osmosis/Detailed_Usage_0.44#--tag-filter_.28--tf.29) ist eine Kommandozeilen Java Applikation um OSM Daten zu verarbeiten.
 
@@ -117,10 +124,15 @@ map <- get_osm(complete_file(),
 - [giswerk.org](http://giswerk.org/)
 ist eine Sammlung von Informationen zu den Themen Geographie und Geoinformatik. Es gibt auch Informationen wie man OpenStreetMap Daten in R importiert und verarbeitet ([OpenStreetMap2R ](http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest))
 
+<http://giswerk.org/doku.php?id=r:r-tutorials:packages:osmar#things_of_further_interest>
+
 - [Nutzung von OpenStreetMap Daten um Karten zu erzeugen](https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd)
 
+<https://github.com/Robinlovelace/osm-tutorial/blob/master/osm.Rmd>
 
 - [Kochbuch zur Nutzung von osmar](http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic)
+
+<http://generalcookbook.blogspot.de/2013/08/application-of-openstreetmap-data-in.html?view=classic>
 
 ## Resourcen
 

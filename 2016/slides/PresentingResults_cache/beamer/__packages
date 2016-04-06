@@ -1,0 +1,8 @@
+base
+knitr
+sp
+maptools
+ggplot2
+ggmap
+magrittr
+leaflet

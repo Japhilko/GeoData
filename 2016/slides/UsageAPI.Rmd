@@ -1,8 +1,8 @@
 ---
-title: "The Usage of APIs"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Die Nutzung von Programmierschnittstellen"
 author: "Jan-Philipp Kolb"
-date: "Mon Feb 29 08:36:33 2016"
-output: html_document
+date: "08 April 2016"
+output: beamer_presentation
 ---
 
 ```{r,echo=F}
@@ -13,55 +13,71 @@ Ex=F
 
 ## The Overpass API
 
-![Overpass API](http://wiki.openstreetmap.org/w/images/thumb/b/b5/Overpass_API_logo.svg/400px-Overpass_API_logo.svg.png)
+![Logo Overpass API](figure/400px-Overpass_API_logo.svg.png)
 
->The Overpass API is a read-only API that serves up custom selected parts of the OSM map data. ([Source](http://wiki.openstreetmap.org/wiki/Overpass_API))
+>The Overpass API is a read-only API that serves up custom selected parts of the OSM map data.
 
-## Important Information
+(<http://wiki.openstreetmap.org/wiki/Overpass_API>)
 
-[OSM map features](http://wiki.openstreetmap.org/wiki/Map_Features)
+## Wichtige Information 
 
-![osm map features](https://www.mapbox.com/help/img/3rdparty/overpass-osm-disney.png)
+<http://wiki.openstreetmap.org/wiki/Map_Features>
+
+![osm map features](figure/overpass-osm-disney.png)
 
 
-## Example: Usage Overpass API
+## Beispiel: Nutzung der Overpass API
 
-![playground Mannheim](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/BSPoverpassMannheim.PNG)
+![Spielplätze Mannheim](figure/BSPoverpassMannheim.PNG)
 
-![Export Raw data](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/OverpassExportRohdaten.PNG)
+## Export der Rohdaten
 
-## Import from Overpass API to R
+![Export Rohdaten](figure/OverpassExportRohdaten.PNG)
+
+## Import von der Overpass API zu R
+
+```{r,echo=F}
+Link1 <- "http://www.overpass-api.de/api/interpreter?data=[maxsize:1073741824][timeout:900];area[name=\""
+```
+
+```{r,eval=F}
+Link1 <- "http://www.overpass-api.de/api/interpreter?
+data=[maxsize:1073741824][timeout:900];area[name=\""
+```
 
 ```{r,eval=Ex}
-Link1 <- "http://www.overpass-api.de/api/interpreter?data=[maxsize:1073741824][timeout:900];area[name=\""
 place <- "Mannheim"
 type_obj <- "node"
 object <- "leisure=playground"
 
-InfoList <- xmlParse(paste(Link1,place,"\"];",
-                           type_obj,"(area)[",object,"];out;",sep=""))
+InfoList <- xmlParse(
+  paste(Link1,place,"\"];",                         type_obj,"(area)[",object,                           "];out;",sep=""))
 ```
 
 
-## Work with XML data (xpath)
+## Das Arbeiten mit XML Daten (xpath)
 
-The list of ID's with value playground:
+Die Liste der ID's mit dem Wert *playground*:
 
 ```{r,eval=Ex}
-node_id<- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ id")
+node_id<- xpathApply(InfoList,
+"//tag[@v= 'playground']/parent::node/@ id")
 ```
 
-## Get latitude and longitude
+## latitude und longitude bekommen
 
 ```{r,eval=Ex}
-lat_x <- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ lat")
+lat_x <- xpathApply(InfoList,
+"//tag[@v= 'playground']/parent::node/@ lat")
 ```
 
 ```{r,eval=Ex}
-lat_x <- xpathApply(InfoList,"//tag[@v= 'playground']/parent::node/@ lon")
+lat_x <- xpathApply(InfoList,
+"//tag[@v= 'playground']/parent::node/@ lon")
 ```
 
-## Links
+## Link
 
-[Tutorial for the Usage of the Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
+- [Tutorial zur Nutzung der Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
 
+<http://osmlab.github.io/learnoverpass/en/exercises/intro/1/>

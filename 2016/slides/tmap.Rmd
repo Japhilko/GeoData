@@ -381,6 +381,44 @@ tm_shape(Europe[Europe$name=="Austria", ]) +
 ```
 
 
+## Die Daten laden
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/Unemployment07a13.csv"
+
+Unemp <- read.csv(url) 
+```
+
+## Überblick über die Daten
+
+```{r,warning=F,echo=F}
+kable(Unemp[1:8,c(2,3,4)])
+```
+
+
+## Nutzung des Paketes `tmap` mit eigenen Daten
+
+```{r,warning=F}
+library("tmap")
+data(Europe)
+```
+
+## Die Daten matchen
+
+```{r}
+iso_a2<- substr(Europe@data$iso_a3,1,2)
+ind <- match(iso_a2,Unemp$GEO)
+Europe@data$Val2007M12 <- Unemp$Val2007M12[ind]
+Europe@data$Val2013M01 <- Unemp$Val2013M01[ind]
+```
+
+## Eine Karte erzeugen
+
+```{r}
+qtm(Europe,c("Val2007M12","Val2013M01"))
+```
+
 
 ```{r,eval=F,echo=F}
 ## Weltweite Flächennutzung

@@ -7,6 +7,9 @@ install.packages("raster")
 install.packages("osmar")
 
 install.packages("colorRamps")
+install.packages("choroplethr")
+install.packages("choroplethrMaps")
+install.packages("choroplethrZip")
 
 install.packages("readr")
 install.packages("rvest")
@@ -68,3 +71,5 @@ install.packages("DT")
 
 library(devtools)
 install_github('arilamstein/choroplethrZip@v1.3.0')
+
+install_github('arilamstein/choroplethrZip@v1.1.1')
