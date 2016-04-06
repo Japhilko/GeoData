@@ -2,7 +2,9 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das R-Paket sp"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: beamer_presentation
+output:
+  html_document:
+    keep_md: true
 ---
 
 
@@ -19,7 +21,7 @@ ca <- T
 
 Die Daten bekommen:
 
-```{r,warning=F}
+```{r,warning=F,message=F}
 library(maps)
 data(unemp)
 data(county.fips)
@@ -78,7 +80,7 @@ my_map <- wrld_simpl[ind,]
 
 ## Die Karte zeichnen
 
-```{r}
+```{r,message=F}
 library(maptools)
 plot(my_map)
 ```

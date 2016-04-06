@@ -6,8 +6,12 @@ output: html_document
 ---
 
 
-## Aufgabe 
+## Aufgabe 6 - Die Inflation visualisieren
 
-- Laden Sie 
+- Laden Sie die Daten für den Inflationsindikator von Eurostat herunter.
 
-- Nutzen Sie das `choroplethr`-Paket um die Indikatoren zu visualisieren
+<http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
+
+- Importieren Sie die Daten in R.
+
+- Nutzen Sie das `choroplethr`-Paket um den Indikator zu visualisieren.

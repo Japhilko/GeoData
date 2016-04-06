@@ -2,7 +2,7 @@
 title: "Objekttypen und Indizierung"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: md_document
+output: html_document
 ---
 
 
@@ -103,6 +103,13 @@ Gleiches Ergebnis:
 ```{r}
 ABC$A
 ```
+
+## Darstellung ohne erste Zeile
+
+```{r}
+ABC[-1,]
+```
+
 
 
 ## Indizierung

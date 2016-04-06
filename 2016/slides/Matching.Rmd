@@ -2,7 +2,9 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Daten verbinden"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: beamer_presentation
+output:
+  ioslides_presentation:
+    keep_md: true
 ---
 
 

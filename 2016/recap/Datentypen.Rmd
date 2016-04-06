@@ -1,0 +1,205 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Faktoren"
+author: "Jan-Philipp Kolb"
+date: "6 April 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+## Ein `data.frame`
+
+```{r,eval=F}
+?data.frame
+```
+
+```{r}
+L3 <- LETTERS[1:3]
+fac <- sample(L3, 10, replace = TRUE)
+d <- data.frame(x = 1, y = 1:10, fac = fac)
+```
+
+```{r,echo=F}
+kable(d)
+```
+
+## Einen Überblick über die Daten
+
+```{r}
+head(d)
+```
+
+## Datentypen
+
+- Wenn ein Vektor als `factor` dargestellt wird, gibt es manchmal Probleme diesen mit einem anderen Vektor zu matchen.
+
+- Deshalb muss man den Datentyp verändern.
+
+- Am Besten ist es `character` zu matchen.
+
+
+## `integer` in `character` umwandeln
+
+```{r}
+A <- 1:10
+A
+str(A)
+```
+
+```{r}
+B <- as.character(A)
+B
+str(B)
+```
+
+## Ein `factor`
+
+```{r}
+AB <- sample(LETTERS,4)
+AB <- as.factor(AB)
+levels(AB) <- LETTERS
+table(AB)
+```
+
+## Das Matchen
+
+```{r,eval=F}
+?match
+```
+
+```{r}
+1:10 %in% c(1,3,5,9)
+```
+
+- Ergebnis ist ein `logical`.
+- Man bekommt die Aussagen wahr und falsch.
+
+```{r}
+match(1:10,c(1,3,5,9))
+```
+
+- Als Ergebnis bekommt man die Stelle an der sich die Zahl im zweiten Vektor wiederfindet.
+
+## Fehlende Werte
+
+- Fehlende Werte sind in R mit `NA` definiert.
+- Man bekommt die Information, ob es sich um einen fehlenden Wert handelt mit der Funktion `is.na`.
+
+```{r}
+A <- 1:10
+is.na(A)
+```
+
+```{r}
+A[5] <- NA
+is.na(A)
+```
+
+## Die Länge eines Vektors
+
+```{r}
+A <- 1:10
+length(A)
+```
+
+
+## if-Abfrage
+
+- Nur wenn Bedingung erfüllt ist, wird das Statement in den geschweiften Klammern ausgeführt.
+
+```{r}
+a <- 5
+if (a>4){
+  cat("Dies stimmt")
+}
+```
+
+```{r}
+a <- 3
+if (a>4){
+  cat("Dies stimmt")
+}
+```
+
+
+## Schleifen
+
+```{r}
+A <- 1
+for (i in 1:5){
+  A <- A + i
+  cat(A,"\n")
+}
+```
+
+## Matchen mit `agrep`
+
+```{r,eval=F}
+?agrep
+```
+
+```{r}
+agrep("lasy", "1 lazy 2")
+```
+
+## Die Funktion `which`
+
+```{r}
+A <- 1:10
+A
+which(A==5)
+which(A>5)
+```
+
+## Tabellieren
+
+```{r}
+A <- sample(1:10,100,replace=T)
+table(A)
+```
+
+## Die Funktion cut
+
+- Diese Funktion kann verwendet werden um zu kategorisieren
+
+```{r,eval=F}
+?cut
+```
+
+```{r}
+Z <- rnorm(10000)
+head(Z)
+```
+
+```{r}
+Zc <- cut(Z, breaks = -6:6)
+head(Zc)
+```
+
+```{r}
+table(Zc)
+```
+
+## Die Funktion `plot`
+
+- `plot` ist eine generische Funktion 
+- d.h. je nachdem welches Objekt man rein steckt kommt ein anderes Ergebnis heraus.
+
+```{r}
+plot(1:10)
+```
+
+## Ein weiterer plot
+
+```{r}
+A <- runif(100)
+B <- runif(100)
+mod1 <- lm(A~B)
+
+par(mfrow=c(2,2))
+plot(mod1)
+```
+

@@ -1,6 +1,6 @@
-# Daten verbinden
+# Nutzung von GeoDaten in den Sozialwissenschaften - Daten verbinden
 Jan-Philipp Kolb  
-07 April 2016  
+08 April 2016  
 
 
 
@@ -26,7 +26,7 @@ df_ws <- data.frame(wrld_simpl@data)
 
 Jetzt können wir den Rstudio Daten-Browser verwenden
 
-![pic](https://github.com/Japhilko/GeoData/blob/master/data/figure/RstudioDataBrowser.PNG) 
+![Rstudio Daten Browser](figure/RstudioDataBrowser.PNG) 
 
 
 ## Der wrld_simpl Datensatz
@@ -94,18 +94,24 @@ CNames[CNames2=="An"]
 ## CO2 Emissionen
 
 
+
+
 ```r
-link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/CO2emissions.csv"
-co2 <- read.csv(link)
+(load("data/CO2emissions.RData"))
+```
+
+```
+## [1] "co2"
 ```
 
 
-  X  V1   V2                     V3     V4     V5     V6     V7   
----  ---  ---------------------  -----  -----  -----  -----  -----
-  1  1.   Qatar                  25.2   36.7   54.3   60.9   58.7 
-  2  2.   Trinidad and Tobago    13.9   17.1   17.0   13.5   15.8 
-  3  3.   Netherlands Antilles   32.6   26.9   22.6   35.0   34.3 
-  4  4.   Kuwait                 19.0   5.1    10.0   16.9   20.8 
+
+Rank   Country                 j1990   j1991   j1992   j1993   j1994   j1995
+-----  ---------------------  ------  ------  ------  ------  ------  ------
+1.     Qatar                    25.2    36.7    54.3    60.9    58.7    58.6
+2.     Trinidad and Tobago      13.9    17.1    17.0    13.5    15.8    16.6
+3.     Netherlands Antilles     32.6    26.9    22.6    35.0    34.3    34.1
+4.     Kuwait                   19.0     5.1    10.0    16.9    20.8    30.8
 
 Wir müssen Länder in diesem Datensatz und Ländernamen in wrld_simpl-Datensatz zusammenbringen
 
@@ -153,7 +159,7 @@ match(D,E)
 
 
 ```r
-ind <- match(wrld_simpl@data$NAME,co2$V2)
+ind <- match(wrld_simpl@data$NAME,co2$Country)
 ind
 ```
 
@@ -180,7 +186,7 @@ ind
 
 
 ```r
-wrld_simpl@data$co2_90 <- co2$V3[ind]
+wrld_simpl@data$co2_90 <- co2$j1990[ind]
 ```
 
 
@@ -189,20 +195,127 @@ library(sp)
 spplot(wrld_simpl,"co2_90")
 ```
 
-![](Matching_files/figure-html/unnamed-chunk-16-1.png)
+![](Matching_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+
+## Zusätzliche Länder matchen
+
+
+```r
+ind2 <- match(co2$Country,wrld_simpl@data$NAME)
+fehlt <- co2$Country[is.na(ind2)]
+fehlt
+```
+
+```
+##  [1] Brunei                                      
+##  [2] United Arab Emirates                        
+##  [3] Falkland Islands                            
+##  [4] South Korea                                 
+##  [5] Taiwan[4][5]                                
+##  [6] Libya                                       
+##  [7] European Union                              
+##  [8] Iran                                        
+##  [9] Macedonia                                   
+## [10] World                                       
+## [11] Réunion                                     
+## [12] Syria                                       
+## [13] North Korea                                 
+## [14] Saint Helena, Ascension and Tristan da Cunha
+## [15] Wallis and Futuna                           
+## [16] Moldova                                     
+## [17] Vietnam                                     
+## [18] São Tomé and Príncipe                       
+## [19] Federated States of Micronesia              
+## [20] Republic of the Congo                       
+## [21] Ivory Coast                                 
+## [22] Laos                                        
+## [23] Myanmar                                     
+## [24] Tanzania                                    
+## [25] Soviet Union                                
+## [26] Czechoslovakia                              
+## [27] Yugoslavia                                  
+## 219 Levels: Afghanistan Albania Algeria Andorra Angola ... Zimbabwe
+```
+
+Die Funktion `agrep`
+
+
+```r
+fehlt[1]
+```
+
+```
+## [1] Brunei
+## 219 Levels: Afghanistan Albania Algeria Andorra Angola ... Zimbabwe
+```
+
+```r
+ind3 <- agrep(fehlt[1],wrld_simpl@data$NAME)
+ind3
+```
+
+```
+## [1] 23
+```
+
+
+```r
+wrld_simpl@data$NAME[ind3]
+```
+
+```
+## [1] Brunei Darussalam
+## 246 Levels: Aaland Islands Afghanistan Albania Algeria ... Zimbabwe
+```
+
+## Matching mit agrep
+
+
+```r
+Namen_ws <- as.character(wrld_simpl@data$NAME)
+Namen_co2 <- as.character(co2$Country)
+for (i in 1:length(ind)){
+  if(is.na(ind[i])){
+    ind4 <- agrep(Namen_ws[i],Namen_co2)
+    if(length(ind4)==1){
+      ind[i] <- ind4
+    }
+  }
+}
+```
+
+## Daten anspielen
+
+
+```r
+wrld_simpl@data$co2_91 <- co2$j1991[ind]
+```
+
+
+```r
+spplot(wrld_simpl,"co2_91")
+```
+
+![](Matching_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 
 ## Matching mit Eurostat Daten
 
-Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
+Sie können Statistik für wichtige ökonomische Indikatoren bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
 
-[link](http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500)
+<http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
+
+Beispiel Sparquote:
+
+<http://ec.europa.eu/eurostat/tgm/download.do?tab=table&plugin=0&language=en&pcode=teina500>
 
 
 
 
-
-
+```r
+library(xlsx)
+HHsr <- read.xlsx2("HHsavingRate.xls",1)
+```
 
 
 
@@ -216,7 +329,7 @@ EUR <- wrld_simpl[wrld_simpl$REGION==150,]
 plot(EUR)
 ```
 
-![](Matching_files/figure-html/unnamed-chunk-20-1.png)
+![](Matching_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
 
 ## Europa ohne Russland
 
@@ -228,7 +341,7 @@ EUR <- EUR[-which(EUR@data$NAME=="Russia"),]
 plot(EUR)
 ```
 
-![](Matching_files/figure-html/unnamed-chunk-21-1.png)
+![](Matching_files/figure-html/unnamed-chunk-27-1.png)<!-- -->
 
 ## Matching Staaten
 
@@ -269,6 +382,4 @@ EUR@data$HHsr <- as.numeric(as.character(HHsr[ind,2]))
 library(sp)
 spplot(EUR,"HHsr")
 ```
-
-
 

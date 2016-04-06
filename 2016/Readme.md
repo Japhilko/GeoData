@@ -65,7 +65,7 @@ Sozialwissenschaftliche Datenquellen
 
 Aufgabe: [Zensus Ergebnisse herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
-R-Recap: Faktoren ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Faktoren.Rmd)) 
+R-Recap: Schleifen, if-Abfragen und Tabellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datentypen.Rmd)) 
 
 
 Verbindung, Editierung und Einfärbung
@@ -75,7 +75,7 @@ Verbindung, Editierung und Einfärbung
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
 of data sources
 
-- __(E2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.Rmd)| 
+- __(E2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md)| 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
 
 - __(E3) Shapefiles zusammenfassen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md) | 

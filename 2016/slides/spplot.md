@@ -1,7 +1,56 @@
-# R-package sp
+# Nutzung von GeoDaten in den Sozialwissenschaften - Das R-Paket sp
 Jan-Philipp Kolb  
-07 April 2016  
+08 April 2016  
 
+
+
+
+
+## Beispiel: US Arbeitslosigkeit 
+
+- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
+
+
+Die Daten bekommen:
+
+
+```r
+library(maps)
+data(unemp)
+data(county.fips)
+```
+
+## Farbverläufe
+
+
+```r
+library(colorRamps)
+colors <- blue2red(6)
+barplot(1:6,col=colors)
+```
+
+![](spplot_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
+## Beispiel: US Arbeitslosigkeit - Farbschattierung
+
+
+```r
+unemp$colorSteps <- cut(unemp$unemp, 
+          c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
+          unemp$fips)]
+```
+
+
+## Beispiel: US Arbeitslosigkeit
+
+
+```r
+map("county", col = colors[colorsmatch], 
+    fill = TRUE)
+```
+
+![](spplot_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 
 
@@ -36,21 +85,10 @@ my_map <- wrld_simpl[ind,]
 
 ```r
 library(maptools)
-```
-
-```
-## Loading required package: sp
-```
-
-```
-## Checking rgeos availability: TRUE
-```
-
-```r
 plot(my_map)
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-4-1.png)
+![](spplot_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 ## Der Datensatz
@@ -78,7 +116,7 @@ CHE   CH     Switzerland     4000    7424389      150
 spplot(my_map,"POP2005")
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-7-1.png)
+![](spplot_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -88,7 +126,7 @@ library(colorRamps)
 spplot(my_map,"POP2005",col.regions=blue2red(100))
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-8-1.png)
+![](spplot_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -97,7 +135,7 @@ spplot(my_map,"POP2005",col.regions=blue2red(100))
 spplot(my_map,"POP2005",col.regions=blue2green(100))
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-9-1.png)
+![](spplot_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -106,7 +144,7 @@ spplot(my_map,"POP2005",col.regions=blue2green(100))
 spplot(my_map,"POP2005",col.regions=green2red(100))
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-10-1.png)
+![](spplot_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -114,7 +152,7 @@ spplot(my_map,"POP2005",col.regions=green2red(100))
 spplot(my_map,"POP2005",col.regions=blue2yellow(100))
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-11-1.png)
+![](spplot_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -122,7 +160,7 @@ spplot(my_map,"POP2005",col.regions=blue2yellow(100))
 spplot(my_map,"POP2005",col.regions=matlab.like(100))
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-12-1.png)
+![](spplot_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 ## Nutzung von synthetischen Daten
 
@@ -143,35 +181,41 @@ spplot(my_map,c("POP2005","Pop2010"),
        col.regions=matlab.like(100))
 ```
 
-![](spplot_files/figure-html/unnamed-chunk-14-1.png)
+![](spplot_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 ## Mehr Beispiele 
 
 - [Stamen Karten mit spplot](https://procomun.wordpress.com/2013/04/24/stamen-maps-with-spplot/)
 
+<https://procomun.wordpress.com/2013/04/24/stamen-maps-with-spplot/>
+
 - [Indien durch Visualisierung kennenlernen](http://justanotherdatablog.blogspot.de/2014/02/know-india-through-visualisations-1.html)
+
+<http://justanotherdatablog.blogspot.de/2014/02/know-india-through-visualisations-1.html>
 
 - [Great circles](https://procomun.wordpress.com/2011/05/20/great-circles/)
 
+<https://procomun.wordpress.com/2011/05/20/great-circles/>
+
 - [Kanadischer Wählerkompass](http://blog.revolutionanalytics.com/2011/12/vote-compass-visualizing-canadian-poll-results-with-r.html)
+
+<http://blog.revolutionanalytics.com/2011/12/vote-compass-visualizing-canadian-poll-results-with-r.html>
 
 - [Mehr Farben in R](http://www.r-bloggers.com/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/)
 
+<http://www.r-bloggers.com/using-the-new-viridis-colormap-in-r-thanks-to-simon-garnier/>
 
-## Vignettes for package `sp`
+## Vignetten für das Paket `sp`
 
 - Edzer Pebesma - [Customising spatial data classes and methods](https://cran.r-project.org/web/packages/sp/vignettes/csdacm.pdf)
 
+<https://cran.r-project.org/web/packages/sp/vignettes/csdacm.pdf>
+
 - Edzer Pebesma und Roger S. Bivand - [S Classes and Methods for Spatial Data: the `sp` Package](https://cran.r-project.org/web/packages/sp/vignettes/intro_sp.pdf)
+
+<https://cran.r-project.org/web/packages/sp/vignettes/intro_sp.pdf>
 
 - Edzer Pebesma - [Map overlay and spatial aggregation in sp](https://cran.r-project.org/web/packages/sp/vignettes/over.pdf)
 
+<https://cran.r-project.org/web/packages/sp/vignettes/over.pdf>
 
-
-## Projektionen
-
-- [Spatial Reference Identifier](https://en.wikipedia.org/wiki/SRID)
-
-- [Arbeiten mit Shapefiles](http://lincolnmullen.com/projects/dh-r/geospatial-data.html)
-
-- [srid für OpenStreetMap Daten](http://gis.stackexchange.com/questions/48949/epsg-3857-or-4326-for-googlemaps-openstreetmap-and-leaflet)

@@ -6,7 +6,7 @@ output: html_document
 ---
 
 
-## Aufgabe Distanzberechnung
+## Aufgabe 8 - Distanzberechnung
 
 - Stellen Sie sich vor, Sie stehen am Brandenburger Tor. Finden Sie heraus, welche Bars sich in einem zwei Kilometer Umkreis befinden. 
 

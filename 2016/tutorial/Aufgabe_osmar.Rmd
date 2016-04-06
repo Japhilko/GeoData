@@ -1,12 +1,12 @@
 ---
-title: "Aufgabe osmar Zensus Ergebnisse in einer Karte visualisieren"
+title: "Aufgabe osmar "
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
 output: html_document
 ---
 
 
-## Aufgabe
+## Aufgabe 7 - Darstellung von OpenStreetMap Daten mit dem R-Paket `tmap`
 
 - Nutzen Sie das Paket `osmar` um einen Ausschnitt für eine Sie interessierende Stadt herunterzuladen.
 
