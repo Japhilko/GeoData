@@ -10,18 +10,19 @@ library(knitr)
 library(DT)
 internet <- F
 Nint <- !internet
+par(mai=c(0,0,0,0))
 ```
 
 ## Einleitung
 
-[`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Vereinfachung der Erstellung von Choroplethen in R
+- [`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Vereinfachung der Erstellung von Choroplethen in R
 
-Paket von [Ari Lamstein](http://www.arilamstein.com/)
+- Paket von [Ari Lamstein](http://www.arilamstein.com/)
 
-[`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
+- [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
 - World Development Indicators (World Bank)
 
-Folgendes basiert auf der [Vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) des `choroplethr`-Paketes
+- Folgendes basiert auf der [Vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) des `choroplethr`-Paketes
 
 ## Was ist ein Choropleth
 
@@ -60,22 +61,20 @@ Die Karte zeigt die US Bevölkerungsschätzung für die US-Staaten und das Jahr 
 
 Wir bekommen eine Choroplethenkarte mit nur einem Argument:
 
-```{r}
+```{r, fig.width=8, fig.height=6}
 state_choropleth(df_pop_state)
 ```
 
 
 Aber wir können auch einen Titel erstellen und die Legende benennen:
 
-```{r}
+```{r, fig.width=8, fig.height=6}
 state_choropleth(df_pop_state, title="2012 US State Population Estimates", legend="Population")
 ```
 
-## Nur drei Staaten darstellen
+## [Nur drei Staaten darstellen](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
 
-[US State Chroplethen](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
-
-```{r}
+```{r, fig.width=8, fig.height=6}
 state_choropleth(df_pop_state,
                  title      = "2012 Population Estimates",
                  legend     = "Population",
@@ -95,8 +94,9 @@ state_choropleth(df_pop_state,
 ?county_choropleth
 ```
 
+## Eine Karte der US Counties
 
-```{r}
+```{r, fig.width=8, fig.height=6}
 data(df_pop_county)
 county_choropleth(df_pop_county)
 ```
@@ -104,7 +104,7 @@ county_choropleth(df_pop_county)
 
 ## [Country Choroplethen ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
 
-```{r}
+```{r, fig.width=8, fig.height=6}
 data(df_pop_country)
 country_choropleth(df_pop_country,
               title      = "2012 Population Estimates",
@@ -118,7 +118,7 @@ country_choropleth(df_pop_country,
 
 ## Weltbank Daten
 
-```{r,cache=T,warning=F,message=F}
+```{r,cache=T,warning=F,message=F, fig.width=8, fig.height=6}
 library(choroplethr)
 library(WDI) 
 choroplethr_wdi(code="SP.POP.TOTL", year=2012, 
@@ -128,7 +128,7 @@ choroplethr_wdi(code="SP.POP.TOTL", year=2012,
 
 ## [Lebenserwartung](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
 
-```{r,warning=F,message=F}
+```{r,warning=F,message=F, fig.width=8, fig.height=6}
 library(WDI) 
 choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012,
                 title="2012 Life Expectancy")

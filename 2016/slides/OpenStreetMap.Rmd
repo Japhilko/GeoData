@@ -1,13 +1,13 @@
 ---
-title: "OpenStreetMap"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das Arbeiten mit OpenStreetMap Daten"
 author: "Jan-Philipp Kolb"
-date: "Mon Feb 29 07:48:58 2016"
-output: html_document
+date: "08 April 2016"
+output: beamer_presentation
 ---
 
 ```{r,echo=F}
 library("knitr")
-Ex=F
+Ex=T
 ```
 
 
