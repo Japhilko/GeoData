@@ -2,7 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Webscraping"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: beamer_presentation
+output: slidy_presentation
 ---
 
 
@@ -22,6 +22,7 @@ Gaston Sanchez - [Basics of XML and HTML](https://www.dropbox.com/s/eyd4t9h7n9fx
 ```{r}
 # install.packages("XML")
 library(XML)
+library("rvest")
 ```
 
 
@@ -103,7 +104,7 @@ link <- "https://de.wikipedia.org/wiki/Fl%C3%BC
 chtlingskrise_in_Europa_ab_2015"
 ```
 
-```{r}
+```{r,eval=Ex2}
 link_data <- read_html(link)
 ```
 
