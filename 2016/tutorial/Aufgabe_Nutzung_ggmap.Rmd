@@ -2,9 +2,7 @@
 title: "Aufgabe - Nutzung von ggmap"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: md_document
 ---
 
 ## Aufgabe 2 - Nutzung von `ggmap`
