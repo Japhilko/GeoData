@@ -1,6 +1,7 @@
-## ----echo=F--------------------------------------------------------------
-library(knitr)
-Ex <- T
+# Nutzung von GeoDaten in den Sozialwissenschaften
+# Recap 3 - Daten importieren
+# Jan-Philipp Kolb
+# Thu Apr 07 07:55:06 2016
 
 ## ----eval=Ex-------------------------------------------------------------
 link <- "https://raw.githubusercontent.com/Japhilko/
@@ -12,9 +13,6 @@ trust_data <- read.csv2(link)
 ## ----eval=Ex-------------------------------------------------------------
 head(trust_data)
 
-## ----echo=F,eval=Ex------------------------------------------------------
-kable(trust_data[1:6,1:4])
-
 ## ----eval=Ex-------------------------------------------------------------
 colnames(trust_data)
 
@@ -22,7 +20,7 @@ colnames(trust_data)
 library("readxl")
 
 ## ----eval=F--------------------------------------------------------------
-## ab <- read_excel("dataset.xlsx",sheet=1)
+# ab <- read_excel("dataset.xlsx",sheet=1)
 
 ## ------------------------------------------------------------------------
 url <- "https://raw.githubusercontent.com/Japhilko/
@@ -39,25 +37,27 @@ colnames(whc)
 ## ----eval=Ex-------------------------------------------------------------
 barplot(table(whc$category))
 
-## ----echo=F,eval=Ex------------------------------------------------------
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
+# hier muss der eigene Pfad angegeben werden Beispiel:
+# setwd("C:/")
+
 load("mz10_small.Rdata")
 
 ## ----eval=F--------------------------------------------------------------
-## library(foreign)
-## mz10 <- read.spss("mz2010_cf.sav",to.data.frame=T)
+library(foreign)
+mz10 <- read.spss("mz2010_cf.sav",
+                  to.data.frame=T)
 
 ## ----eval=F--------------------------------------------------------------
-## ?read.spss
+?read.spss
 
 ## ----message=F,warning=F,eval=F------------------------------------------
-## studis <- read.dta("studenten_cf_2000.dta")
+studis <- read.dta("studenten_cf_2000.dta")
 
 ## ----eval=F--------------------------------------------------------------
-## x <- runif(1000)
-## save(x, file="WasAuchImmer.RData")
+x <- runif(1000)
+save(x, file="WasAuchImmer.RData")
 
 ## ----eval=F--------------------------------------------------------------
-## install.packages("Rz")
-## library(Rz)
+# install.packages("Rz")
+library(Rz)
 

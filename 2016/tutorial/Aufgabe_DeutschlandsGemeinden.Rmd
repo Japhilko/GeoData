@@ -2,9 +2,7 @@
 title: "Aufgabe - Deutschlands Gemeinden"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: md_document
 ---
 
 ## Aufgabe 3 - Eine Karte für das Saarland

@@ -38,12 +38,14 @@ Quellen für räumliche Daten
 - __(C2) Choroplethen mit dem R-Paket maptools__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC2_maptools.R))
 
-- __(C3) Internetquellen für Geodaten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)|
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_polygonSources.R))
+- __(C3) Internetquellen für Geodaten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)| [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.pdf)|
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC3_polygonSources.R))
 
-- __(C4) OpenStreetMap als Datenquelle__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.Rmd))
+- __(C4) OpenStreetMap als Datenquelle__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.md) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.pdf))
 
-R-Recap: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/dataImport.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_dataImport.R)) 
+R-Recap: Daten Import und Export ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/dataImport.md) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/recap3_dataImport.R)) 
 
 
 Aufgabe 3: [Eine Karte um Daten für Deutschlands Gemeinden darzustellen](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md)
@@ -52,9 +54,14 @@ Sozialwissenschaftliche Datenquellen
 ---------------------
 
 - __(D1) R interne Daten__
-([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RinternData.Rmd))
+([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RinternData.md) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/RinternData.pdf) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD1_RInternData.R))
 
-- __(D2) Öffentliche Daten zur freien Verfügung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.Rmd))
+- __(D2) Öffentliche Daten zur freien Verfügung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.md) | 
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.pdf) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R)
+)
 
 - __(D3) Beispiel: Webscraping__
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_WebScraping.R))

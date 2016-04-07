@@ -2,7 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - R interne Datensätze"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: beamer_presentation
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}

@@ -2,14 +2,12 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Daten Import"
 author: "Jan-Philipp Kolb"
 date: "07 April"
-output:
-  html_document:
-    keep_md: true
+output: slidy_presentation
 ---
 
 ```{r,echo=F}
 library(knitr)
-Ex <- F
+Ex <- T
 ```
 
 
@@ -18,16 +16,20 @@ Ex <- F
 - csv-Dateien aus dem Internet direkt einlesen
 
 ```{r,eval=Ex}
-link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/TrustData.csv"
+link <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/data/TrustData.csv"
+```
 
-trust_data <- read_csv2(link)
+
+```{r,eval=Ex}
+trust_data <- read.csv2(link)
 ```
 
 - Für Deutsche Daten sollte `read_csv2` verwendet werden
 
 ## Sich die Daten anzeigen lassen
 
-```{r,eval=F}
+```{r,eval=Ex}
 head(trust_data)
 ```
 
@@ -53,6 +55,15 @@ ab <- read_excel("dataset.xlsx",sheet=1)
 ```
 
 - Blatt Index als zweites Argument nötig
+
+## Weltkulturerbe Datensatz einlesen
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/whcSites.csv"
+
+whc <- read.csv(url) 
+```
 
 
 ## Übersicht zum Weltkulturerbe Datensatz
@@ -87,7 +98,7 @@ mz10 <- read.spss("mz2010_cf.sav",to.data.frame=T)
 
 ## Der Befehl read.spss
 
-```{r}
+```{r,eval=F}
 ?read.spss
 ```
 
@@ -103,11 +114,7 @@ studis <- read.dta("studenten_cf_2000.dta")
 
 - Blog post zum lesen und schreiben von stata Dateien auf [is.R](http://is-r.tumblr.com/post/37181850668/readingwriting-stata-dta-files-with-foreign)
 
-## Quick R zum Datenimport
-
-<http://www.statmethods.net/input/index.html>
-
-## Datenexport
+## Datenexport und Quellen
 
 ```{r,eval=F}
 x <- runif(1000)
@@ -115,8 +122,11 @@ save(x, file="WasAuchImmer.RData")
 ```
 
 
+Quick R zum Datenimport
 
-## Datenmanagement ein wenig wie bei SPSS
+<http://www.statmethods.net/input/index.html>
+
+Datenmanagement ein wenig wie bei SPSS
 
 ```{r,eval=F}
 install.packages("Rz")

@@ -2,7 +2,7 @@
 title: "Karten Gemeinden Deutschland"
 author: "Jan-Philipp Kolb"
 date: "2 April 2016"
-output: html_document
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -26,7 +26,7 @@ plot(DEU4)
 ## Überblick über Daten
 
 ```{r,eval=F}
-head(DEU4)
+head(DEU4@data)
 ```
 
 ## Auf das Saarland einschränken
