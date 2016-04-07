@@ -13,7 +13,7 @@ Das Paket maptools
 <table>
 <thead>
 <tr class="header">
-<th align="left"></th>
+<th></th>
 <th align="left">FIPS</th>
 <th align="left">ISO2</th>
 <th align="left">ISO3</th>
@@ -23,7 +23,7 @@ Das Paket maptools
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">ATG</td>
+<td>ATG</td>
 <td align="left">AC</td>
 <td align="left">AG</td>
 <td align="left">ATG</td>
@@ -31,7 +31,7 @@ Das Paket maptools
 <td align="left">Antigua and Barbuda</td>
 </tr>
 <tr class="even">
-<td align="left">DZA</td>
+<td>DZA</td>
 <td align="left">AG</td>
 <td align="left">DZ</td>
 <td align="left">DZA</td>
@@ -39,7 +39,7 @@ Das Paket maptools
 <td align="left">Algeria</td>
 </tr>
 <tr class="odd">
-<td align="left">AZE</td>
+<td>AZE</td>
 <td align="left">AJ</td>
 <td align="left">AZ</td>
 <td align="left">AZE</td>
@@ -47,7 +47,7 @@ Das Paket maptools
 <td align="left">Azerbaijan</td>
 </tr>
 <tr class="even">
-<td align="left">ALB</td>
+<td>ALB</td>
 <td align="left">AL</td>
 <td align="left">AL</td>
 <td align="left">ALB</td>
@@ -88,7 +88,7 @@ Der Datensatz
 <table>
 <thead>
 <tr class="header">
-<th align="left"></th>
+<th></th>
 <th align="left">FIPS</th>
 <th align="left">ISO2</th>
 <th align="left">ISO3</th>
@@ -98,7 +98,7 @@ Der Datensatz
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">ATG</td>
+<td>ATG</td>
 <td align="left">AC</td>
 <td align="left">AG</td>
 <td align="left">ATG</td>
@@ -106,7 +106,7 @@ Der Datensatz
 <td align="left">Antigua and Barbuda</td>
 </tr>
 <tr class="even">
-<td align="left">DZA</td>
+<td>DZA</td>
 <td align="left">AG</td>
 <td align="left">DZ</td>
 <td align="left">DZA</td>
@@ -114,7 +114,7 @@ Der Datensatz
 <td align="left">Algeria</td>
 </tr>
 <tr class="odd">
-<td align="left">AZE</td>
+<td>AZE</td>
 <td align="left">AJ</td>
 <td align="left">AZ</td>
 <td align="left">AZE</td>
@@ -122,7 +122,7 @@ Der Datensatz
 <td align="left">Azerbaijan</td>
 </tr>
 <tr class="even">
-<td align="left">ALB</td>
+<td>ALB</td>
 <td align="left">AL</td>
 <td align="left">AL</td>
 <td align="left">ALB</td>
