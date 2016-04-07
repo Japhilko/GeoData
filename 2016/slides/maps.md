@@ -62,7 +62,7 @@ Add In: Colour Picker
 -   RStudio Version 0.99.893 oder höher ist notwendig
 -   Das Paket `shinyjs` muss installiert sein.
 
-![colourpicker](https://github.com/Japhilko/GeoData/blob/master/data/figure/colourpicker.PNG)
+![colourpicker](figure/colourpicker.PNG)
 
 Choroplethen - R-Paket maps
 ---------------------------
