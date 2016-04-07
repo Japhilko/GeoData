@@ -2,7 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Einleitung und Motivation"
 author: "Jan-Philipp Kolb"
 date: "7 April 2016"
-output: beamer_presentation
+output: slidy_presentation
 ---
 
 ## Motivation - Geschichte
