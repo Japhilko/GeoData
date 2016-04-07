@@ -115,8 +115,13 @@ data("world.cities")
 X <- world.cities[,c("lat","pop")]
 plot(world.cities$lon,world.cities$lat)
 for(i in 1:length(X$lat)) {
- abline(h=X$lat[i],col=rgb(1,0,0,.001),lwd=2.7)
+ abline(h=X$lat[i],col=rgb(1,0,0,.1),lwd=2.7)
 }
+
+plot(world.cities$lon,world.cities$lat)
+abline(h=X$lat,col=rgb(1,0,0,.1))
+
+
 
 ## ----eval=F,echo=F-------------------------------------------------------
 library(maps)

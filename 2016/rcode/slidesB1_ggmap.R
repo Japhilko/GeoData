@@ -120,6 +120,7 @@ mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 POI1 <- geocode("B2, 1 Mannheim",source="google")
 POI2 <- geocode("Hbf Mannheim",source="google")
 POI3 <- geocode("Wasserturm Mannheim",source="google")
+
 ListPOI <-rbind(POI1,POI2,POI3)
 POI1;POI2;POI3
 
@@ -134,15 +135,17 @@ geom_point(aes(x = lon, y = lat),col="red",
 data = ListPOI)
 
 ## ----eval=Ex,cache=Ca----------------------------------------------------
-ListPOI$color <- c("A","B","C")
+ListPOI$color <- c("Alpha","B","C")
+
+
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color),
 data = ListPOI)
 
 ## ----eval=Ex,cache=Ca----------------------------------------------------
-ListPOI$size <- c(10,20,30)
+ListPOI$Alter <- c(10,20,30)
 MA_map +
-geom_point(aes(x = lon, y = lat,col=color,size=size),
+geom_point(aes(x = lon, y = lat,col=color,size=Alter),
 data = ListPOI)
 
 ## ----message=F,warning=F,cache=T-----------------------------------------
