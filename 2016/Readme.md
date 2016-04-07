@@ -1,7 +1,7 @@
 Nutzung von Geodaten in den Sozialwissenschaften
 ====================
 
-Thema ist die Beschaffung und Nutzung von räumlichen Informationen (GeoDaten) in einem (sozial-) wissenschaftlichen Kontext.  Dabei handelt es sich bei den GeoDaten bspw. um Shapefiles oder  [OpenStreetMap](http://openstreetmap.de/) Daten.  Es werden vor allem Quellen für frei verfügbare Daten vorgestellt. 
+Thema ist die Beschaffung und Nutzung von räumlichen Informationen (GeoDaten) in einem (sozial-) wissenschaftlichen Kontext.  Dabei handelt es sich bei den GeoDaten bspw. um [Shapefiles](https://de.wikipedia.org/wiki/Shapefile) oder  [OpenStreetMap](http://openstreetmap.de/) Daten.  Es werden vor allem Quellen für frei verfügbare Daten vorgestellt. 
 
 Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files der Bevökerungsbefragungen auch Daten des Zensus-Atlas und Daten von Eurostat, der Weltbank und freien Portalen wie [datahub.io](https://datahub.io/) und [Wikipedia](https://www.wikidata.org/wiki/Wikidata:Main_Page) verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird nur die Programmiersprache R genutzt. 
 
@@ -11,11 +11,11 @@ Intro und Vorbereitung
 
 - __(A) Motivation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
-- Unter [Infos github](https://github.com/Japhilko/GeoData/blob/master/2015/slides/github.md) sind Informationen zur Nutzung des  Verzeichnisses zu finden.
+- Unter [Infos github](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Github.md) sind Informationen zur Nutzung des  Verzeichnisses zu finden.
 
 - Um den Kurs zu verfolgen muss [R](https://cran.uni-muenster.de/) und [Rstudio](https://www.rstudio.com/products/rstudio/download/) installiert werden. Der Installationsprozess ist relativ einfach. 
 
-R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.md) | [rcode](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.R)) 
+R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/HalloWelt.R)) 
 
 Aufgabe 1: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_VorbereitungBrainstorming.Rmd)
 

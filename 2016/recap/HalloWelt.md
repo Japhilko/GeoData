@@ -17,7 +17,7 @@ Funktionen durchführen
     # BSP Funktion die kein Argument braucht:
     date()
 
-    ## [1] "Tue Apr 05 08:12:22 2016"
+    ## [1] "Thu Apr 07 07:52:32 2016"
 
     # BSP Funktion mit einem Argument
     sqrt(5)
@@ -27,7 +27,7 @@ Funktionen durchführen
     # BSP Funktion mit mehr Argumenten
     sample(1:10,3)
 
-    ## [1] 2 6 8
+    ## [1]  8  1 10
 
 Der Zuweisungspfeil
 -------------------

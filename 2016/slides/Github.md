@@ -40,6 +40,15 @@ Weitere Dateien herunterladen
 -   Alle anderen Dateien (bspw. `.RData`) auch mittels Raw
     Button herunterladen.
 
+Organisatorisches
+-----------------
+
+-   Am Ende jeden Kapitels gibt es eine kurze Auffrischung von
+    R-Befehlen die im Folgenden verwendet werden.
+
+-   Zusätzlich gibt es für jedes Kapitel eine Aufgabe, da man nur durch
+    eigenes Trainieren auf der Lernkurve vorankommt.
+
 Links und Quellen
 -----------------
 
