@@ -2,9 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Objekttypen und Indizierung"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: slidy_presentation
 ---
 
 
@@ -13,6 +11,12 @@ output:
 Die aktuellste Version von Rstudio kann man hier herunterladen:
 
 <https://www.rstudio.com/products/rstudio/download/>
+
+```{r,echo=F}
+# Rstudio aktualisieren
+# https://www.rstudio.com/products/rstudio/download/
+```
+
 
 ## Nutzung von AddIns in Rstudio
 
@@ -124,6 +128,57 @@ ABC[ABC$B==2,]
 ## Manuals zur Einführung in R
 
 - [R-Intro](http://cran.r-project.org/doc/manuals/R-intro.html) auf cran.
+
+<http://cran.r-project.org/doc/manuals/R-intro.html>
+
+- [Kurs auf Github](https://github.com/Japhilko/IntroR/tree/master/2016)
+
+<https://github.com/Japhilko/IntroR/tree/master/2016>
+
+- [Sehr kurze Einführung in R](https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf)
+
+<https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf>
+
+- [Youtube zur Einführung in R](https://www.youtube.com/watch?v=7cGwYMhPDUY)
+
+<https://www.youtube.com/watch?v=7cGwYMhPDUY>
+
+```{r,echo=F}
+
+# R-Intro
+# http://cran.r-project.org/doc/manuals/R-intro.html
+
+# Kurs auf Github
+# https://github.com/Japhilko/IntroR/tree/master/2016
+
+# Sehr kurze Einführung in R
+# https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf
+
+# Youtube zur Einführung in R
+# https://www.youtube.com/watch?v=7cGwYMhPDUY
+```
+
+
+## Reference Card und Chaetsheet
+
+- Wenn man die R-Befehle noch nicht so gut kennt bietet es sich an ein Cheatsheet auszudrucken und neben den Bildschirm zu legen
+
+<https://cran.r-project.org/doc/contrib/Short-refcard.pdf>
+
+<http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf>
+
+<http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf>
+
+```{r,echo=F}
+# https://cran.r-project.org/doc/contrib/Short-refcard.pdf
+
+##Cheatsheets
+# http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf
+
+# http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf
+```
+
+
 
 ## Schleifen
 
