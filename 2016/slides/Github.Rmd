@@ -2,29 +2,49 @@
 title: "Github Nutzung"
 author: "Jan-Philipp Kolb"
 date: "7 April 2016"
-output: html_document
+output: md_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-## R Markdown
+## Github Seite
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+-   Die folgende Seite ist die Startseite für den Kurs:
 
-```{r cars}
-summary(cars)
-```
+<https://github.com/Japhilko/GeoData/tree/master/2016>
 
-## Including Plots
+- Es lohnt sich immer wieder zu dieser Seite zurückzukehren, weil hier alle relevanten Dokumente verlinkt sind.
 
-You can also embed plots, for example:
+- Grundsätzlich bietet es sich an, den einzelnen Teilen der Veranstaltung mit dem File zu folgen, dass mit dem Begriff _Browser_ verlinkt ist.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+## Informationen audrucken
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+-   Zum Ausdrucken eignen sich die pdf-Dateien besser. 
+
+-   Diese können mit dem Raw Button heruntergeladen werden. 
+
+![Raw Button zum Download](figure/GithubDownload.bmp)
+
+## Weitere Dateien herunterladen
+
+- Begleitend zu den Folien wird meistens auch ein R-File angeboten. 
+
+- Hier können Sie entweder das gesamte R-File herunterladen und in R ausführen oder einzelne Befehle per Copy/Paste übernehmen.
+
+- Vereinzelt sind auch Datensätze vorhanden. 
+
+- `.csv` Dateien können direkt von R eingelesen werden (wie das geht werde ich noch zeigen).
+
+- Wenn die `.csv` Dateien heruntergeladen werden sollen auch den Raw Button verwenden.
+
+- Alle anderen Dateien (bspw. `.RData`) auch mittels Raw Button herunterladen.
+
+## Links und Quellen
+
+
+Wen Github näher interessiert:
+
+- [Hello World](https://guides.github.com/activities/hello-world/)
+
+- [Understanding the GitHub](https://guides.github.com/introduction/flow/)
