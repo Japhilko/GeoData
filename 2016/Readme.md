@@ -15,14 +15,14 @@ Intro und Vorbereitung
 
 - Um den Kurs zu verfolgen muss [R](https://cran.uni-muenster.de/) und [Rstudio](https://www.rstudio.com/products/rstudio/download/) installiert werden. Der Installationsprozess ist relativ einfach. 
 
-R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/HalloWelt.R)) 
+R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/recap1_HalloWelt.R)) 
 
 Aufgabe 1: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_VorbereitungBrainstorming.Rmd)
 
 Verschiedene Kartentypen mit ggmap
 ---------------------
 
-- __(B) Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)__ zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_ggmap.R) )
+- __(B) Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)__ zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slides2_ggmap.R) )
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
