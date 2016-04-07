@@ -116,19 +116,19 @@ C &lt;-<span class="st"> </span><span class="kw">runif</span>(<span class="dv">6
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ABC &lt;-<span class="st"> </span><span class="kw">data.frame</span>(A,B,C)
 ABC</code></pre></div>
 <pre><code>##   A B         C
-## 1 1 1 0.8428858
-## 2 2 2 0.9416002
-## 3 3 1 0.6539981
-## 4 4 2 0.4674946
-## 5 5 1 0.7746713
-## 6 6 2 0.3937651</code></pre>
+## 1 1 1 0.8800054
+## 2 2 2 0.7208706
+## 3 3 1 0.4245698
+## 4 4 2 0.4336337
+## 5 5 1 0.2937048
+## 6 6 2 0.9944728</code></pre>
 </div>
 <div id="auswahl-auf-einem-data.frame" class="slide section level2">
 <h1>Auswahl auf einem <code>data.frame</code></h1>
 <p>Nur eine Zeile:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ABC[<span class="dv">1</span>,]</code></pre></div>
 <pre><code>##   A B         C
-## 1 1 1 0.8428858</code></pre>
+## 1 1 1 0.8800054</code></pre>
 <p>Nur eine Spalte:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ABC[,<span class="dv">1</span>]</code></pre></div>
 <pre><code>## [1] 1 2 3 4 5 6</code></pre>
@@ -140,25 +140,47 @@ ABC</code></pre></div>
 <h1>Darstellung ohne erste Zeile</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ABC[-<span class="dv">1</span>,]</code></pre></div>
 <pre><code>##   A B         C
-## 2 2 2 0.9416002
-## 3 3 1 0.6539981
-## 4 4 2 0.4674946
-## 5 5 1 0.7746713
-## 6 6 2 0.3937651</code></pre>
+## 2 2 2 0.7208706
+## 3 3 1 0.4245698
+## 4 4 2 0.4336337
+## 5 5 1 0.2937048
+## 6 6 2 0.9944728</code></pre>
 </div>
 <div id="indizierung" class="slide section level2">
 <h1>Indizierung</h1>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ABC[ABC$B==<span class="dv">2</span>,]</code></pre></div>
 <pre><code>##   A B         C
-## 2 2 2 0.9416002
-## 4 4 2 0.4674946
-## 6 6 2 0.3937651</code></pre>
+## 2 2 2 0.7208706
+## 4 4 2 0.4336337
+## 6 6 2 0.9944728</code></pre>
 </div>
 <div id="manuals-zur-einfuhrung-in-r" class="slide section level2">
 <h1>Manuals zur Einführung in R</h1>
 <ul>
 <li><a href="http://cran.r-project.org/doc/manuals/R-intro.html">R-Intro</a> auf cran.</li>
 </ul>
+<p><a href="http://cran.r-project.org/doc/manuals/R-intro.html" class="uri">http://cran.r-project.org/doc/manuals/R-intro.html</a></p>
+<ul>
+<li><a href="https://github.com/Japhilko/IntroR/tree/master/2016">Kurs auf Github</a></li>
+</ul>
+<p><a href="https://github.com/Japhilko/IntroR/tree/master/2016" class="uri">https://github.com/Japhilko/IntroR/tree/master/2016</a></p>
+<ul>
+<li><a href="https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf">Sehr kurze Einführung in R</a></li>
+</ul>
+<p><a href="https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf" class="uri">https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf</a></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=7cGwYMhPDUY">Youtube zur Einführung in R</a></li>
+</ul>
+<p><a href="https://www.youtube.com/watch?v=7cGwYMhPDUY" class="uri">https://www.youtube.com/watch?v=7cGwYMhPDUY</a></p>
+</div>
+<div id="reference-card-und-chaetsheet" class="slide section level2">
+<h1>Reference Card und Chaetsheet</h1>
+<ul>
+<li>Wenn man die R-Befehle noch nicht so gut kennt bietet es sich an ein Cheatsheet auszudrucken und neben den Bildschirm zu legen</li>
+</ul>
+<p><a href="https://cran.r-project.org/doc/contrib/Short-refcard.pdf" class="uri">https://cran.r-project.org/doc/contrib/Short-refcard.pdf</a></p>
+<p><a href="http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf" class="uri">http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf</a></p>
+<p><a href="http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf" class="uri">http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf</a></p>
 </div>
 <div id="schleifen" class="slide section level2">
 <h1>Schleifen</h1>

@@ -59,7 +59,7 @@ Farben in R
             col=c("red",1,"#01B8AA",
                   rgb(0,1,0),"purple"))
 
-![](ObjekttypenIndizierung_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
+![](ObjekttypenIndizierung_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
 
 Logische Abfragen
 -----------------
@@ -87,13 +87,13 @@ Ein `data.frame`
     ABC <- data.frame(A,B,C)
     ABC
 
-    ##   A B         C
-    ## 1 1 1 0.6155805
-    ## 2 2 2 0.3498422
-    ## 3 3 1 0.9039388
-    ## 4 4 2 0.5872200
-    ## 5 5 1 0.5172648
-    ## 6 6 2 0.7526731
+    ##   A B          C
+    ## 1 1 1 0.06829395
+    ## 2 2 2 0.24212702
+    ## 3 3 1 0.01060434
+    ## 4 4 2 0.81195285
+    ## 5 5 1 0.35490212
+    ## 6 6 2 0.14360994
 
 Auswahl auf einem `data.frame`
 ------------------------------
@@ -102,8 +102,8 @@ Nur eine Zeile:
 
     ABC[1,]
 
-    ##   A B         C
-    ## 1 1 1 0.6155805
+    ##   A B          C
+    ## 1 1 1 0.06829395
 
 Nur eine Spalte:
 
@@ -122,12 +122,12 @@ Darstellung ohne erste Zeile
 
     ABC[-1,]
 
-    ##   A B         C
-    ## 2 2 2 0.3498422
-    ## 3 3 1 0.9039388
-    ## 4 4 2 0.5872200
-    ## 5 5 1 0.5172648
-    ## 6 6 2 0.7526731
+    ##   A B          C
+    ## 2 2 2 0.24212702
+    ## 3 3 1 0.01060434
+    ## 4 4 2 0.81195285
+    ## 5 5 1 0.35490212
+    ## 6 6 2 0.14360994
 
 Indizierung
 -----------
@@ -135,15 +135,44 @@ Indizierung
     ABC[ABC$B==2,]
 
     ##   A B         C
-    ## 2 2 2 0.3498422
-    ## 4 4 2 0.5872200
-    ## 6 6 2 0.7526731
+    ## 2 2 2 0.2421270
+    ## 4 4 2 0.8119529
+    ## 6 6 2 0.1436099
 
 Manuals zur Einführung in R
 ---------------------------
 
 -   [R-Intro](http://cran.r-project.org/doc/manuals/R-intro.html)
     auf cran.
+
+<http://cran.r-project.org/doc/manuals/R-intro.html>
+
+-   [Kurs auf
+    Github](https://github.com/Japhilko/IntroR/tree/master/2016)
+
+<https://github.com/Japhilko/IntroR/tree/master/2016>
+
+-   [Sehr kurze Einführung in
+    R](https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf)
+
+<https://cran.r-project.org/doc/contrib/Torfs+Brauer-Short-R-Intro.pdf>
+
+-   [Youtube zur Einführung in
+    R](https://www.youtube.com/watch?v=7cGwYMhPDUY)
+
+<https://www.youtube.com/watch?v=7cGwYMhPDUY>
+
+Reference Card und Chaetsheet
+-----------------------------
+
+-   Wenn man die R-Befehle noch nicht so gut kennt bietet es sich an ein
+    Cheatsheet auszudrucken und neben den Bildschirm zu legen
+
+<https://cran.r-project.org/doc/contrib/Short-refcard.pdf>
+
+<http://www.rstudio.com/wp-content/uploads/2016/01/rstudio-IDE-cheatsheet.pdf>
+
+<http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf>
 
 Schleifen
 ---------

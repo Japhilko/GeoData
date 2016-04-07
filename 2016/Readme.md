@@ -17,7 +17,7 @@ Intro und Vorbereitung
 
 R-Recap: Hallo Welt ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/HalloWelt.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/recap1_HalloWelt.R)) 
 
-Aufgabe 1: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_VorbereitungBrainstorming.Rmd)
+Aufgabe 1: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_VorbereitungBrainstorming.md)
 
 Verschiedene Kartentypen mit ggmap
 ---------------------

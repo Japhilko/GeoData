@@ -1,3 +1,9 @@
+# Nutzung von GeoDaten in den Sozialwissenschaften
+# R-Recap - Objekttypen und Indizierung
+# Jan-Philipp Kolb
+# Thu Apr 07 07:55:06 2016
+
+
 ## ----echo=F--------------------------------------------------------------
 # Rstudio aktualisieren
 # https://www.rstudio.com/products/rstudio/download/
@@ -83,7 +89,7 @@ ABC[ABC$B==2,]
 # http://www.rstudio.com/wp-content/uploads/2015/12/ggplot2-cheatsheet-2.0.pdf
 
 ## ----eval=F--------------------------------------------------------------
-## for (i in 1:4){
-##   paste(i,"\n")
-## }
+ for (i in 1:4){
+   paste(i,"\n")
+ }
 

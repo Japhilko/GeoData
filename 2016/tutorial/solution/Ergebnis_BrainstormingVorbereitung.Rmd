@@ -1,8 +1,8 @@
 ---
-title: "Lösung - Brainstorming und Vorbereitung"
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Brainstorming und Vorbereitung"
 author: "Jan-Philipp Kolb"
-date: "6 April 2016"
-output: html_document
+date: "07 April 2016"
+output: slidy_presentation
 ---
 
 ## Ordner anlegen
@@ -19,8 +19,20 @@ output: html_document
 
 ![GeoData Oberste Ebene](figure/GeoDataObersteEbene.PNG)
 
-## Mögliche Datenquelle
-
-
+## Mögliche Datenquellen - Open Data Portale
 
 ![<https://datahub.io/>](figure/datahub_logo-full.png)
+
+![<http://data.okfn.org/>](figure/okfn_logo-l.png)
+
+<https://opendata.mannheim.de/>
+
+<https://offenedaten.de/>
+
+<https://open-data.europa.eu/de/data>
+
+## Auf was muss geachtet werden
+
+- Wichtig ist, dass in den sozialwissenschaftlichen Daten ein regionaler Bezug entahlten ist.
+
+- Dann können in einem zweiten Schritt entsprechende GeoDaten gesucht werden.

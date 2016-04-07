@@ -2,7 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Objekttypen und Indizierung"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: slidy_presentation
+output: md_document
 ---
 
 
