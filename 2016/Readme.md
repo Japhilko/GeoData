@@ -22,7 +22,7 @@ Aufgabe 1: [Vorbereitung und Brainstorming](https://github.com/Japhilko/GeoData/
 Verschiedene Kartentypen mit ggmap
 ---------------------
 
-- __(B) Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)__ zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slides2_ggmap.R) )
+- __(B) Nutzung von R-Paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)__ zur Erzeugung verschiedener Kartentypen. ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesB1_ggmap.R) )
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
@@ -33,7 +33,7 @@ Aufgabe 2: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/maste
 Quellen für räumliche Daten
 ---------------------
 
-- __(C1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maps.R) )
+- __(C1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md) | | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf) [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R) )
 
 - __(C2) Choroplethen mit dem R-Paket maptools__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_maptools.R))
