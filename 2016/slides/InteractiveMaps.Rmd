@@ -2,9 +2,7 @@
 title: "Interactive maps"
 author: "Jan-Philipp Kolb"
 date: "Tue Oct 27 13:36:25 2015"
-output:
-  html_document:
-    keep_md: true
+output: slidy_presentation
 ---
 
 ```{r,echo=F}

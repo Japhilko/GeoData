@@ -17,20 +17,25 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![TabellenKopf](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ZensusTabellenKopf.PNG)
 
+```{r,echo=F}
+Ex <- F
+```
+
+
 ## Tabellenkopf bei Excel Daten
 
 ![tabk2](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Tabellenkopf2.PNG)
 
 ## Import in R
 
-```{r,eval=T,echo=F}
+```{r,eval=Ex,echo=F}
 setwd("D:/GESIS/Workshops/GeoDaten/data")
 ```
 
 
 Erste Möglichkeit:
 
-```{r,eval=T}
+```{r,eval=Ex}
 library(readxl)
 dat <- read_excel("TABELLE_2F.xls",3)
 ```
@@ -41,20 +46,20 @@ Zweite Möglichkeit:
 
 - Optionen, damit der AGS richtig dargestellt wird:
 
-```{r,eval=F}
+```{r,eval=Ex}
 options("scipen"=100, "digits"=4)
 ```
 
 - Deutsche csv-Dateien einlesen mit `read.csv2`:
 
-```{r,eval=T}
+```{r,eval=Ex}
 dat <- read.csv2("TABELLE_2F.csv")
 ```
 
 
 ## Daten bearbeiten
 
-```{r,eval=F}
+```{r,eval=Ex}
 AGS <- dat[,2]
 Gnamen <- dat[,3]
 Bev <- dat[,4]
@@ -68,7 +73,7 @@ Bev20 <- as.numeric(gsub(" ","",Bev20))
 
 ## Datensatz erzeugen 
 
-```{r,eval=F}
+```{r,eval=Ex}
 zdat <- data.frame(AGS,Gnamen,Bev,Bev1,Bev20)
 ```
 
@@ -77,7 +82,7 @@ zdat <- data.frame(AGS,Gnamen,Bev,Bev1,Bev20)
 - AGS bei [Wikipedia](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel)
 - 1.–2. Stelle = Kennzahl des Bundeslandes
 
-```{r}
+```{r,eval=Ex}
 AGS2 <- substr(AGS,1,2)
 
 library(lattice)
@@ -88,13 +93,13 @@ barchart(table(AGS2))
 
 ## Unterauswahl für das Saarland
 
-```{r,eval=F}
+```{r,eval=Ex}
 datSAL <- zdat[AGS2=="10" & nchar(AGS)==9,]
 ```
 
 ## Wo ist der Anteil am Größten
 
-```{r,eval=F}
+```{r,eval=Ex}
 ant <- datSAL$Bev1/datSAL$Bev
 which.max(ant)
 datSAL[15,]
@@ -102,11 +107,11 @@ datSAL[15,]
 
 ## Den Datensatz abspeichern
 
-```{r,echo=F,eval=F}
+```{r,echo=F,eval=Ex}
 setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
 ```
 
-```{r,eval=F}
+```{r,eval=Ex}
 write.csv(datSAL,"datSAL.csv")
 ```
 
