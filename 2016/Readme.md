@@ -139,7 +139,7 @@ Räumliche Statistik und Interaktive Karten
 
 
 - __(H2) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
-| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/SpatMA_PrepPresentation.R))
+| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH2_Interaktiv.R))
 Beispiel - [Campingplätze](http://rpubs.com/Japhilko82/Campsites)
 
 Aufgabe 7: [Distanzberechnung](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Distanzberechnung.Rmd)

@@ -2,7 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Präsentation und Interaktive Karten"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output: md_document
+output: slidy_presentation
 ---
 
 ```{r,echo=F,warning=F}
