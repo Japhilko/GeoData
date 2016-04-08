@@ -1,8 +1,8 @@
 ---
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Datenaufbereitung"
 author: "Jan-Philipp Kolb"
-date: "07 April 2016"
-output: md_document
+date: "08 April 2016"
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -156,7 +156,7 @@ co2[,3] <- as.numeric(as.character(co2[,3]))
 ```
 
 ```{r,warning=F}
-for (i in 3:ncol(tab2)){
+for (i in 3:ncol(co2)){
   co2[,i] <- as.numeric(as.character(co2[,i]))
 }
 ```
@@ -175,8 +175,8 @@ save(co2,file="CO2emissions.RData")
 
 ```{r,warning=F}
 library(lattice)
-emissions <- as.numeric(tab2[,3])
-names(emissions) <- tab2[,2]
+emissions <- as.numeric(co2[,3])
+names(emissions) <- co2[,2]
 barchart(emissions[1:10],col="royalblue")
 ```
 

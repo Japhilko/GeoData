@@ -66,7 +66,10 @@ Sozialwissenschaftliche Datenquellen
 - __(D3) Beispiel: Webscraping__
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WebScraping.md) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD3_Webscraping.R))
 
-- __(D4) Datenaufbereitung__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.md)) 
+- __(D4) Datenaufbereitung__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.md) | 
+([pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Datenaufbereitung.pdf)
+|
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD4_Datenaufbereitung.R)) 
 
 - Weitere Datenquellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WeitereDatenquellen.Rmd))
 
