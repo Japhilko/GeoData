@@ -2,9 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das R-Paket osmar"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output:
-  slidy_presentation:
-    keep_md: true
+output: slidy_presentation
 ---
 
 ```{r,echo=F}

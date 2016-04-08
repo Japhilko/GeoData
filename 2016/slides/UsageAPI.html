@@ -115,6 +115,16 @@ type_obj,<span class="st">&quot;(area)[&quot;</span>,object,
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">lat_x &lt;-<span class="st"> </span><span class="kw">xpathApply</span>(InfoList,
 <span class="st">&quot;//tag[@v= 'playground']/parent::node/@ lon&quot;</span>)</code></pre></div>
 </div>
+<div id="paket-auf-github" class="slide section level2">
+<h1>Paket auf Github</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(devtools)
+<span class="kw">install_github</span>(<span class="st">&quot;Japhilko/GeoData/geosmdata&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(geosmdata)
+pg_MA &lt;-<span class="st"> </span><span class="kw">get_osm_nodes</span>(<span class="dt">object=</span><span class="st">&quot;leisure=playground&quot;</span>,
+                       <span class="st">&quot;Mannheim&quot;</span>)
+info &lt;-<span class="st"> </span><span class="kw">extract_osm_nodes</span>(<span class="dt">OSM.Data=</span>pg_MA,
+                          <span class="dt">value=</span><span class="st">&quot;playground&quot;</span>)</code></pre></div>
+</div>
 <div id="link" class="slide section level2">
 <h1>Link</h1>
 <ul>

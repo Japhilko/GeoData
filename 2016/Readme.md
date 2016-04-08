@@ -109,7 +109,8 @@ Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 - Beispiel: *Maps with Eurostat data* ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 
 - __(F2) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md) | 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Choroplethr.R))
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.pdf) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF2_choroplethr.R))
 
 Aufgabe: [Darstellung von Eurostat Daten mit `choroplethr`](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_choroplethr.Rmd)
 
@@ -119,9 +120,11 @@ Nutzung von OpenStreetMap Daten
 
 - __(G1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.md))
 
-- __(G2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md))
+- __(G2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md) | 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG1_UsageAPI.R))
 
-- __(G3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md))
+- __(G3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md)| 
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG3_osmar.R))
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
@@ -132,11 +135,11 @@ Räumliche Statistik und Interaktive Karten
 ---------------------
 
 - __(H1) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.md) |
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spdep.R))
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH1_spdep.R))
 
 
 - __(H2) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
-| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_PrepPresentation.R))
+| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/SpatMA_PrepPresentation.R))
 Beispiel - [Campingplätze](http://rpubs.com/Japhilko82/Campsites)
 
 Aufgabe 7: [Distanzberechnung](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Distanzberechnung.Rmd)

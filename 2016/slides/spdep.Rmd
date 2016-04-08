@@ -2,9 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Paket spdep"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output:
-  slidy_presentation:
-    keep_md: true
+output: slidy_presentation
 ---
 
 ## Das erste Gesetz der Geographie (TFLG)

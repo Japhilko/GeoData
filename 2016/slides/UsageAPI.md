@@ -56,6 +56,18 @@ latitude und longitude bekommen
     lat_x <- xpathApply(InfoList,
     "//tag[@v= 'playground']/parent::node/@ lon")
 
+Paket auf Github
+----------------
+
+    library(devtools)
+    install_github("Japhilko/GeoData/geosmdata")
+
+    library(geosmdata)
+    pg_MA <- get_osm_nodes(object="leisure=playground",
+                           "Mannheim")
+    info <- extract_osm_nodes(OSM.Data=pg_MA,
+                              value="playground")
+
 Link
 ----
 

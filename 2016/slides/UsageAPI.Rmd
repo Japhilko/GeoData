@@ -77,6 +77,21 @@ lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lon")
 ```
 
+## Paket auf Github
+
+```{r,eval=F}
+library(devtools)
+install_github("Japhilko/GeoData/geosmdata")
+```
+
+```{r,eval=F}
+library(geosmdata)
+pg_MA <- get_osm_nodes(object="leisure=playground",
+                       "Mannheim")
+info <- extract_osm_nodes(OSM.Data=pg_MA,
+                          value="playground")
+```
+
 ## Link
 
 - [Tutorial zur Nutzung der Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
