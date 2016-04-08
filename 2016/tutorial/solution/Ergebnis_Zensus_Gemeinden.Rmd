@@ -2,9 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Lösung Zensus Ergebnisse"
 author: "Jan-Philipp Kolb"
 date: "2 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -25,14 +23,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Import in R
 
-```{r,eval=F,echo=F}
+```{r,eval=T,echo=F}
 setwd("D:/GESIS/Workshops/GeoDaten/data")
 ```
 
 
 Erste Möglichkeit:
 
-```{r,eval=F}
+```{r,eval=T}
 library(readxl)
 dat <- read_excel("TABELLE_2F.xls",3)
 ```
@@ -49,7 +47,7 @@ options("scipen"=100, "digits"=4)
 
 - Deutsche csv-Dateien einlesen mit `read.csv2`:
 
-```{r,eval=F}
+```{r,eval=T}
 dat <- read.csv2("TABELLE_2F.csv")
 ```
 
