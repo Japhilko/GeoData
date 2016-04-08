@@ -1,0 +1,11 @@
+base
+knitr
+DT
+stringr
+plyr
+XML
+acs
+choroplethr
+choroplethrMaps
+RJSONIO
+WDI

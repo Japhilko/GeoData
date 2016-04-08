@@ -82,27 +82,29 @@ Verbindung, Editierung und Einfärbung
 ---------------------
 
 - __(E1) Verbindung von Daten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md) |
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Matching.R))
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE1_Matching.R))
 of data sources
 
 - __(E2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md)| 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_spplot.R))
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE2_spplot.R))
 
 - __(E3) Shapefiles zusammenfassen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md) | 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_DataUseCases.R)
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE3_CombineShapefiles.R)
 )
 
+R-Recap: Zufallszahlen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Zufallszahlen.md) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/recap5_Zufallszahlen.R)) 
+
+
 Aufgabe 5: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.md)
-
-R-Recap: Zufallszahlen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Zufallszahlen.md)) 
-
 
 Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 ---------------------
 
 - __(F1) Thematische Karten mit dem R-Paket `tmap`__ 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.md) | 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_tmap.R))
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.pdf) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF1_tmap.R))
 
 - Beispiel: *Maps with Eurostat data* ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 

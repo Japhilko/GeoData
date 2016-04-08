@@ -1,157 +1,96 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Zufallszahlen
-Jan-Philipp Kolb  
-08 April 2016  
+Erzeugung von ganzzahligen Zufallszahlen
+----------------------------------------
 
+    Asample <- sample(1:5,1000,replace=T)
+    head(Asample)
 
+    ## [1] 5 5 4 2 5 3
 
+    table(Asample)
 
-## Erzeugung von ganzzahligen Zufallszahlen
+    ## Asample
+    ##   1   2   3   4   5 
+    ## 205 200 197 202 196
 
+Gleichverteilte Zufallszahlen
+-----------------------------
 
-```r
-Asample <- sample(1:5,1000,replace=T)
-head(Asample)
-```
+    A <- runif(100)
+    head(A)
+    hist(A)
 
-```
-## [1] 3 4 5 4 4 2
-```
+Gleichverteilte Zufallszahlen in einem Rahmen
+---------------------------------------------
 
-```r
-table(Asample)
-```
+    A2 <- runif(100,100,200)
+    head(A2)
+    hist(A2)
 
-```
-## Asample
-##   1   2   3   4   5 
-## 196 179 216 214 195
-```
+Normalverteilte Zufallszahlen
+-----------------------------
 
-## Gleichverteilte Zufallszahlen
+    Bnrom <- rnorm(1000)
+    hist(Bnrom,col="royalblue")
 
+![](Zufallszahlen_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
 
-```r
-A <- runif(100)
-head(A)
-hist(A)
-```
+Normalverteilte Zufallszahlen
+-----------------------------
 
-## Gleichverteilte Zufallszahlen in einem Rahmen
+    ?rnorm
 
+    Bnrom2 <- rnorm(1000,mean=-100,sd=20)
+    hist(Bnrom2,col="red")
 
-```r
-A2 <- runif(100,100,200)
-head(A2)
-hist(A2)
-```
+![](Zufallszahlen_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
 
-## Normalverteilte Zufallszahlen
-
-
-```r
-Bnrom <- rnorm(1000)
-hist(Bnrom,col="royalblue")
-```
-
-![](Zufallszahlen_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
-
-## Normalverteilte Zufallszahlen
-
-
-```r
-?rnorm
-```
-
-
-
-```r
-Bnrom2 <- rnorm(1000,mean=-100,sd=20)
-hist(Bnrom2,col="red")
-```
-
-![](Zufallszahlen_files/figure-slidy/unnamed-chunk-6-1.png)<!-- -->
-
-## Das Runden
+Das Runden
+----------
 
 Zahlen runden:
 
+    (A <- rnorm(10))
 
-```r
-(A <- rnorm(10))
-```
+    ##  [1] -0.81632157 -1.24539330  1.38670117 -0.51115873 -0.28718225
+    ##  [6] -0.41021274  1.62368087  2.05953921  0.02592153  0.37508675
 
-```
-##  [1]  0.2171446 -0.5485507 -0.3913620  0.2295255  0.1241608 -2.5799743
-##  [7] -0.6635406 -1.2929358 -0.4003972 -0.4541735
-```
+    round(A)
 
+    ##  [1] -1 -1  1 -1  0  0  2  2  0  0
 
-```r
-round(A)
-```
+    round(A,digits=2)
 
-```
-##  [1]  0 -1  0  0  0 -3 -1 -1  0  0
-```
+    ##  [1] -0.82 -1.25  1.39 -0.51 -0.29 -0.41  1.62  2.06  0.03  0.38
 
+R als Taschenrechner
+--------------------
 
-```r
-round(A,digits=2)
-```
+    2/4
 
-```
-##  [1]  0.22 -0.55 -0.39  0.23  0.12 -2.58 -0.66 -1.29 -0.40 -0.45
-```
+    ## [1] 0.5
 
-## R als Taschenrechner
+    2*4
 
+    ## [1] 8
 
-```r
-2/4
-```
+    sqrt(5)
 
-```
-## [1] 0.5
-```
+    ## [1] 2.236068
 
+Ein Kreisdiagramm
+-----------------
 
-```r
-2*4
-```
+    Students <- c(100, 200,30)
+    pie(Students)
 
-```
-## [1] 8
-```
+![](Zufallszahlen_files/figure-markdown_strict/unnamed-chunk-13-1.png)<!-- -->
 
+Graphiken speichern
+-------------------
 
-```r
-sqrt(5)
-```
+    pdf("pie_Students.pdf")
+    pie(Students)
+    dev.off()
 
-```
-## [1] 2.236068
-```
-
-## Ein Kreisdiagramm
-
-
-```r
-Students <- c(100, 200,30)
-pie(Students)
-```
-
-![](Zufallszahlen_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
-
-## Graphiken speichern
-
-
-```r
-pdf("pie_Students.pdf")
-pie(Students)
-dev.off()
-```
-
-```
-## png 
-##   2
-```
+    ## png 
+    ##   2

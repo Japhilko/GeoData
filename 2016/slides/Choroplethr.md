@@ -33,8 +33,6 @@ enthalten ist, es enthält Schätzungen zu den US-Staaten für das Jahr
 
     library("choroplethrMaps")
 
-    ## Warning: package 'choroplethrMaps' was built under R version 3.2.4
-
 <table>
 <thead>
 <tr class="header">
@@ -271,7 +269,7 @@ Resourcen
     ## To cite package 'choroplethr' in publications use:
     ## 
     ##   Ari Lamstein and Brian P Johnson (2016). choroplethr: Simplify
-    ##   the Creation of Choropleth Maps in R. R package version 3.5.0.
+    ##   the Creation of Choropleth Maps in R. R package version 3.5.2.
     ##   https://CRAN.R-project.org/package=choroplethr
     ## 
     ## A BibTeX entry for LaTeX users is
@@ -280,7 +278,7 @@ Resourcen
     ##     title = {choroplethr: Simplify the Creation of Choropleth Maps in R},
     ##     author = {Ari Lamstein and Brian P Johnson},
     ##     year = {2016},
-    ##     note = {R package version 3.5.0},
+    ##     note = {R package version 3.5.2},
     ##     url = {https://CRAN.R-project.org/package=choroplethr},
     ##   }
     ## 

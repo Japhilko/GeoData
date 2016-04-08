@@ -1,82 +1,65 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Die Nutzung von Programmierschnittstellen
-Jan-Philipp Kolb  
-08 April 2016  
-
-
-
-
-
-## The Overpass API
+The Overpass API
+----------------
 
 ![Logo Overpass API](figure/400px-Overpass_API_logo.svg.png)
 
->The Overpass API is a read-only API that serves up custom selected parts of the OSM map data.
+> The Overpass API is a read-only API that serves up custom selected
+> parts of the OSM map data.
 
 (<http://wiki.openstreetmap.org/wiki/Overpass_API>)
 
-## Wichtige Information 
+Wichtige Information
+--------------------
 
 <http://wiki.openstreetmap.org/wiki/Map_Features>
 
 ![osm map features](figure/overpass-osm-disney.png)
 
-
-## Beispiel: Nutzung der Overpass API
+Beispiel: Nutzung der Overpass API
+----------------------------------
 
 ![Spielplätze Mannheim](figure/BSPoverpassMannheim.PNG)
 
-## Export der Rohdaten
+Export der Rohdaten
+-------------------
 
 ![Export Rohdaten](figure/OverpassExportRohdaten.PNG)
 
-## Import von der Overpass API zu R
+Import von der Overpass API zu R
+--------------------------------
 
+    Link1 <- "http://www.overpass-api.de/api/interpreter?
+    data=[maxsize:1073741824][timeout:900];area[name=\""
 
+    place <- "Mannheim"
+    type_obj <- "node"
+    object <- "leisure=playground"
 
+    InfoList <- xmlParse(paste(Link1,place,"\"];",
+    type_obj,"(area)[",object,
+    "];out;",sep=""))
 
-```r
-Link1 <- "http://www.overpass-api.de/api/interpreter?
-data=[maxsize:1073741824][timeout:900];area[name=\""
-```
-
-
-```r
-place <- "Mannheim"
-type_obj <- "node"
-object <- "leisure=playground"
-
-InfoList <- xmlParse(paste(Link1,place,"\"];",
-type_obj,"(area)[",object,
-"];out;",sep=""))
-```
-
-
-## Das Arbeiten mit XML Daten (xpath)
+Das Arbeiten mit XML Daten (xpath)
+----------------------------------
 
 Die Liste der ID's mit dem Wert *playground*:
 
+    node_id<- xpathApply(InfoList,
+    "//tag[@v= 'playground']/parent::node/@ id")
 
-```r
-node_id<- xpathApply(InfoList,
-"//tag[@v= 'playground']/parent::node/@ id")
-```
+latitude und longitude bekommen
+-------------------------------
 
-## latitude und longitude bekommen
+    lat_x <- xpathApply(InfoList,
+    "//tag[@v= 'playground']/parent::node/@ lat")
 
+    lat_x <- xpathApply(InfoList,
+    "//tag[@v= 'playground']/parent::node/@ lon")
 
-```r
-lat_x <- xpathApply(InfoList,
-"//tag[@v= 'playground']/parent::node/@ lat")
-```
+Link
+----
 
-
-```r
-lat_x <- xpathApply(InfoList,
-"//tag[@v= 'playground']/parent::node/@ lon")
-```
-
-## Link
-
-- [Tutorial zur Nutzung der Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
+-   [Tutorial zur Nutzung der Overpass
+    API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
 
 <http://osmlab.github.io/learnoverpass/en/exercises/intro/1/>

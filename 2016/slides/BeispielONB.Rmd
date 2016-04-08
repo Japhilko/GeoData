@@ -2,9 +2,7 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Telefonvorwahlen"
 author: "Jan-Philipp Kolb"
 date: "08 April 2016"
-output:
-  html_document:
-    keep_md: true
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}
