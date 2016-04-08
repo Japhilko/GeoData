@@ -96,7 +96,7 @@ R-Recap: Zufallszahlen ([Browser](https://github.com/Japhilko/GeoData/blob/maste
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/recap5_Zufallszahlen.R)) 
 
 
-Aufgabe 5: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.md)
+Aufgabe 5: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.Rmd)
 
 Weitere Möglichkeiten zur Erstellung von Choroplethenkarten
 ---------------------
