@@ -1,10 +1,8 @@
 ---
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Datentypen, Graphiken, Schleifen etc."
 author: "Jan-Philipp Kolb"
-date: "07 April 2016"
-output:
-  slidy_presentation:
-    keep_md: true
+date: "08 April 2016"
+output: slidy_presentation
 ---
 
 ```{r setup, include=FALSE}

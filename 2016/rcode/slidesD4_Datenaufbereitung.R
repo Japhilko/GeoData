@@ -1,12 +1,10 @@
-## ----setup, include=FALSE------------------------------------------------
-knitr::opts_chunk$set(echo = TRUE)
+# Nutzung von GeoDaten in den Sozialwissenschaften
+# Slides D4 - Datenaufbereitung
+# Jan-Philipp Kolb
+# Fri Apr 08 07:50:07 2016
 
-## ----echo=F--------------------------------------------------------------
-Ex4=F
-Ex1 <- T
-
-## ----eval=F,echo=F-------------------------------------------------------
-## setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/")
+## Eigener Pfad z.B.
+## setwd("D:/Eigene Dateien/")
 
 ## ----eval=Ex1------------------------------------------------------------
 load("data/refugeeTab.RData")
@@ -37,23 +35,17 @@ colnames(refugeeTab) <- c("Land","2015",
                           "pro_tsd_Einwohner")
 
 
-## ----eval=F,echo=F-------------------------------------------------------
-## setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
+## Eigener Pfad z.B.
+## setwd("D:/Eigene Dateien/")
 
 ## ----eval=F--------------------------------------------------------------
-## save(refugeeTab,file="refugeeTab_final.RData")
+save(refugeeTab,file="refugeeTab_final.RData")
 
 ## ----echo=F,eval=Ex1,warning=F-------------------------------------------
-library(knitr)
-kable(head(refugeeTab))
+head(refugeeTab)
 
 ## ----eval=Ex4,echo=F-----------------------------------------------------
 link <- "https://en.wikipedia.org/wiki/List_of_countries_by_carbon_dioxide_emissions_per_capita"
-
-## ----eval=F--------------------------------------------------------------
-## link <- "https://en.wikipedia.org/wiki/
-## List_of_countries_by_carbon_dioxide_
-## emissions_per_capita"
 
 ## ----cache=T,eval=Ex4----------------------------------------------------
 link_data <- read_html(link)
@@ -61,7 +53,7 @@ doc <- htmlParse(link_data)
 tab <- readHTMLTable(doc)
 
 ## ----eval=F,echO=F-------------------------------------------------------
-## save(tab,file="co2tab.RData")
+save(tab,file="co2tab.RData")
 
 ## ----echo=F--------------------------------------------------------------
 load("data/co2tab.RData")
@@ -91,11 +83,11 @@ for (i in 3:ncol(co2)){
   co2[,i] <- as.numeric(as.character(co2[,i]))
 }
 
-## ----eval=F,echo=F-------------------------------------------------------
-## setwd("D:/Eigene Dateien/Dokumente/GitHub/GeoData/2016/slides/data")
+## Eigener Pfad z.B.
+## setwd("D:/Eigene Dateien/")
 
 ## ----eval=F--------------------------------------------------------------
-## save(co2,file="CO2emissions.RData")
+save(co2,file="CO2emissions.RData")
 
 ## ----warning=F-----------------------------------------------------------
 library(lattice)

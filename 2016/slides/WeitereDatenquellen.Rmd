@@ -1,8 +1,8 @@
 ---
 title: "Weitere Datenquellen"
 author: "Jan-Philipp Kolb"
-date: "5 April 2016"
-output: html_document
+date: "08 April 2016"
+output: md_document
 ---
 
 

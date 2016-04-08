@@ -73,10 +73,10 @@ Sozialwissenschaftliche Datenquellen
 
 - Weitere Datenquellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/WeitereDatenquellen.Rmd))
 
+R-Recap: Schleifen, if-Abfragen und Tabellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Datentypen.md) |
+[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/recap4_Datentypen.R)) 
+
 Aufgabe 4: [Zensus Ergebnisse herunterladen und importieren](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
-
-R-Recap: Schleifen, if-Abfragen und Tabellen ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/recap/Datentypen.md)) 
-
 
 Verbindung, Editierung und Einfärbung
 ---------------------

@@ -1,394 +1,331 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Datentypen, Graphiken, Schleifen etc.
-Jan-Philipp Kolb  
-07 April 2016  
+Ein `data.frame`
+----------------
+
+    ?data.frame
+
+    L3 <- LETTERS[1:3]
+    fac <- sample(L3, 10, replace = TRUE)
+    d <- data.frame(x = 1, y = 1:10, fac = fac)
+
+<table>
+<thead>
+<tr class="header">
+<th align="right">x</th>
+<th align="right">y</th>
+<th align="left">fac</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">1</td>
+<td align="left">C</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">2</td>
+<td align="left">C</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">3</td>
+<td align="left">B</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">4</td>
+<td align="left">B</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">5</td>
+<td align="left">B</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">6</td>
+<td align="left">B</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">7</td>
+<td align="left">C</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">8</td>
+<td align="left">B</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="right">9</td>
+<td align="left">B</td>
+</tr>
+<tr class="even">
+<td align="right">1</td>
+<td align="right">10</td>
+<td align="left">B</td>
+</tr>
+</tbody>
+</table>
+
+Einen Überblick über die Daten
+------------------------------
+
+    head(d)
+
+    ##   x y fac
+    ## 1 1 1   C
+    ## 2 1 2   C
+    ## 3 1 3   B
+    ## 4 1 4   B
+    ## 5 1 5   B
+    ## 6 1 6   B
+
+Datentypen
+----------
+
+-   Wenn ein Vektor als `factor` dargestellt wird, gibt es manchmal
+    Probleme diesen mit einem anderen Vektor zu matchen.
+
+-   Deshalb muss man den Datentyp verändern.
+
+-   Am Besten ist es `character` zu matchen.
+
+`integer` in `character` umwandeln
+----------------------------------
+
+    A <- 1:10
+    A
+
+    ##  [1]  1  2  3  4  5  6  7  8  9 10
 
+    str(A)
 
+    ##  int [1:10] 1 2 3 4 5 6 7 8 9 10
 
-## Ein `data.frame`
+    B <- as.character(A)
+    B
 
+    ##  [1] "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"
 
-```r
-?data.frame
-```
+    str(B)
 
+    ##  chr [1:10] "1" "2" "3" "4" "5" "6" "7" "8" "9" ...
 
-```r
-L3 <- LETTERS[1:3]
-fac <- sample(L3, 10, replace = TRUE)
-d <- data.frame(x = 1, y = 1:10, fac = fac)
-```
+Ein `factor`
+------------
 
+    AB <- sample(LETTERS,4)
+    AB <- as.factor(AB)
+    levels(AB) <- LETTERS
+    table(AB)
 
-  x    y  fac 
----  ---  ----
-  1    1  A   
-  1    2  C   
-  1    3  C   
-  1    4  B   
-  1    5  A   
-  1    6  B   
-  1    7  C   
-  1    8  B   
-  1    9  B   
-  1   10  C   
+    ## AB
+    ## A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+    ## 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
-## Einen Überblick über die Daten
+Das Matchen
+-----------
 
+    ?match
 
-```r
-head(d)
-```
+    1:10 %in% c(1,3,5,9)
 
-```
-##   x y fac
-## 1 1 1   A
-## 2 1 2   C
-## 3 1 3   C
-## 4 1 4   B
-## 5 1 5   A
-## 6 1 6   B
-```
+    ##  [1]  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE
 
-## Datentypen
+-   Ergebnis ist ein `logical`.
+-   Man bekommt die Aussagen wahr und falsch.
 
-- Wenn ein Vektor als `factor` dargestellt wird, gibt es manchmal Probleme diesen mit einem anderen Vektor zu matchen.
+<!-- -->
 
-- Deshalb muss man den Datentyp verändern.
+    match(1:10,c(1,3,5,9))
 
-- Am Besten ist es `character` zu matchen.
+    ##  [1]  1 NA  2 NA  3 NA NA NA  4 NA
 
+-   Als Ergebnis bekommt man die Stelle an der sich die Zahl im zweiten
+    Vektor wiederfindet.
 
-## `integer` in `character` umwandeln
+Fehlende Werte
+--------------
 
+-   Fehlende Werte sind in R mit `NA` definiert.
+-   Man bekommt die Information, ob es sich um einen fehlenden Wert
+    handelt mit der Funktion `is.na`.
 
-```r
-A <- 1:10
-A
-```
+<!-- -->
 
-```
-##  [1]  1  2  3  4  5  6  7  8  9 10
-```
+    A <- 1:10
+    is.na(A)
 
-```r
-str(A)
-```
+    ##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 
-```
-##  int [1:10] 1 2 3 4 5 6 7 8 9 10
-```
+    A[5] <- NA
+    is.na(A)
 
+    ##  [1] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE
 
-```r
-B <- as.character(A)
-B
-```
+Die Länge eines Vektors
+-----------------------
 
-```
-##  [1] "1"  "2"  "3"  "4"  "5"  "6"  "7"  "8"  "9"  "10"
-```
+    A <- 1:10
+    length(A)
 
-```r
-str(B)
-```
+    ## [1] 10
 
-```
-##  chr [1:10] "1" "2" "3" "4" "5" "6" "7" "8" "9" ...
-```
+if-Abfrage
+----------
 
-## Ein `factor`
+-   Nur wenn Bedingung erfüllt ist, wird das Statement in den
+    geschweiften Klammern ausgeführt.
 
+<!-- -->
 
-```r
-AB <- sample(LETTERS,4)
-AB <- as.factor(AB)
-levels(AB) <- LETTERS
-table(AB)
-```
+    a <- 5
+    if (a>4){
+      cat("Dies stimmt")
+    }
 
-```
-## AB
-## A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
-## 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-```
+    ## Dies stimmt
 
-## Das Matchen
+    a <- 3
+    if (a>4){
+      cat("Dies stimmt")
+    }
 
+Schleifen
+---------
 
-```r
-?match
-```
+    A <- 1
+    for (i in 1:5){
+      A <- A + i
+      cat(A,"\n")
+    }
 
+    ## 2 
+    ## 4 
+    ## 7 
+    ## 11 
+    ## 16
 
-```r
-1:10 %in% c(1,3,5,9)
-```
+Matchen mit `agrep`
+-------------------
 
-```
-##  [1]  TRUE FALSE  TRUE FALSE  TRUE FALSE FALSE FALSE  TRUE FALSE
-```
+    ?agrep
 
-- Ergebnis ist ein `logical`.
-- Man bekommt die Aussagen wahr und falsch.
+    agrep("lasy", "1 lazy 2")
 
+    ## [1] 1
 
-```r
-match(1:10,c(1,3,5,9))
-```
+Die Funktion `which`
+--------------------
 
-```
-##  [1]  1 NA  2 NA  3 NA NA NA  4 NA
-```
+    A <- 1:10
+    A
 
-- Als Ergebnis bekommt man die Stelle an der sich die Zahl im zweiten Vektor wiederfindet.
+    ##  [1]  1  2  3  4  5  6  7  8  9 10
 
-## Fehlende Werte
+    which(A==5)
 
-- Fehlende Werte sind in R mit `NA` definiert.
-- Man bekommt die Information, ob es sich um einen fehlenden Wert handelt mit der Funktion `is.na`.
+    ## [1] 5
 
+    which(A>5)
 
-```r
-A <- 1:10
-is.na(A)
-```
+    ## [1]  6  7  8  9 10
 
-```
-##  [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
-```
+Tabellieren
+-----------
 
+    A <- sample(1:10,100,replace=T)
+    table(A)
 
-```r
-A[5] <- NA
-is.na(A)
-```
+    ## A
+    ##  1  2  3  4  5  6  7  8  9 10 
+    ##  4  9 10 14  8 12 13 13 13  4
 
-```
-##  [1] FALSE FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE
-```
+Die Funktion cut
+----------------
 
-## Die Länge eines Vektors
+-   Diese Funktion kann verwendet werden um zu kategorisieren
 
+<!-- -->
 
-```r
-A <- 1:10
-length(A)
-```
+    ?cut
 
-```
-## [1] 10
-```
+    Z <- rnorm(10000)
+    head(Z)
 
+    ## [1]  1.612124378 -0.326085724  0.736554296  0.008194126 -0.523867191
+    ## [6] -0.493458194
 
-## if-Abfrage
+    Zc <- cut(Z, breaks = -6:6)
+    head(Zc)
 
-- Nur wenn Bedingung erfüllt ist, wird das Statement in den geschweiften Klammern ausgeführt.
+    ## [1] (1,2]  (-1,0] (0,1]  (0,1]  (-1,0] (-1,0]
+    ## 12 Levels: (-6,-5] (-5,-4] (-4,-3] (-3,-2] (-2,-1] (-1,0] (0,1] ... (5,6]
 
+    table(Zc)
 
-```r
-a <- 5
-if (a>4){
-  cat("Dies stimmt")
-}
-```
+    ## Zc
+    ## (-6,-5] (-5,-4] (-4,-3] (-3,-2] (-2,-1]  (-1,0]   (0,1]   (1,2]   (2,3] 
+    ##       0       0      18     226    1411    3388    3425    1299     221 
+    ##   (3,4]   (4,5]   (5,6] 
+    ##      12       0       0
 
-```
-## Dies stimmt
-```
+Die Funktion `plot`
+-------------------
 
+-   `plot` ist eine generische Funktion
+-   d.h. je nachdem welches Objekt man rein steckt kommt ein anderes
+    Ergebnis heraus.
 
-```r
-a <- 3
-if (a>4){
-  cat("Dies stimmt")
-}
-```
+<!-- -->
 
+    plot(1:10)
 
-## Schleifen
+![](Datentypen_files/figure-markdown_strict/unnamed-chunk-25-1.png)<!-- -->
 
+Ein weiterer plot
+-----------------
 
-```r
-A <- 1
-for (i in 1:5){
-  A <- A + i
-  cat(A,"\n")
-}
-```
+    A <- runif(100)
+    B <- runif(100)
+    mod1 <- lm(A~B)
 
-```
-## 2 
-## 4 
-## 7 
-## 11 
-## 16
-```
+    par(mfrow=c(2,2))
+    plot(mod1)
 
-## Matchen mit `agrep`
+![](Datentypen_files/figure-markdown_strict/unnamed-chunk-26-1.png)<!-- -->
 
+Eine Graphik ohne Rand
+----------------------
 
-```r
-?agrep
-```
+-   Optionen bei der Gestaltung von Basis-Graphiken
 
+<!-- -->
 
-```r
-agrep("lasy", "1 lazy 2")
-```
+    ?par
 
-```
-## [1] 1
-```
+    par(mai=c(0,0,0,0))
+    plot(hist(runif(1000)))
 
-## Die Funktion `which`
+![](Datentypen_files/figure-markdown_strict/unnamed-chunk-28-1.png)<!-- -->![](Datentypen_files/figure-markdown_strict/unnamed-chunk-28-2.png)<!-- -->
 
+Ein Balkendiagramm
+------------------
 
-```r
-A <- 1:10
-A
-```
+    A <- sample(1:10,1000,replace=T)
+    tabA <- table(A)
 
-```
-##  [1]  1  2  3  4  5  6  7  8  9 10
-```
+    barplot(tabA)
 
-```r
-which(A==5)
-```
+![](Datentypen_files/figure-markdown_strict/unnamed-chunk-29-1.png)<!-- -->
 
-```
-## [1] 5
-```
+Die Achsenbezeichnung
+---------------------
 
-```r
-which(A>5)
-```
+    barplot(tabA,xlab="Die Ausprägungen",
+            ylab="Häufigkeiten",
+            main="Ein Balkendiagramm")
 
-```
-## [1]  6  7  8  9 10
-```
-
-## Tabellieren
-
-
-```r
-A <- sample(1:10,100,replace=T)
-table(A)
-```
-
-```
-## A
-##  1  2  3  4  5  6  7  8  9 10 
-## 11  6  9  6 11 14 15  9  6 13
-```
-
-## Die Funktion cut
-
-- Diese Funktion kann verwendet werden um zu kategorisieren
-
-
-```r
-?cut
-```
-
-
-```r
-Z <- rnorm(10000)
-head(Z)
-```
-
-```
-## [1]  1.0574466  1.5200830  0.5856919  0.5319430  1.4754538 -0.9150610
-```
-
-
-```r
-Zc <- cut(Z, breaks = -6:6)
-head(Zc)
-```
-
-```
-## [1] (1,2]  (1,2]  (0,1]  (0,1]  (1,2]  (-1,0]
-## 12 Levels: (-6,-5] (-5,-4] (-4,-3] (-3,-2] (-2,-1] (-1,0] (0,1] ... (5,6]
-```
-
-
-```r
-table(Zc)
-```
-
-```
-## Zc
-## (-6,-5] (-5,-4] (-4,-3] (-3,-2] (-2,-1]  (-1,0]   (0,1]   (1,2]   (2,3] 
-##       0       0      10     186    1417    3414    3405    1315     234 
-##   (3,4]   (4,5]   (5,6] 
-##      19       0       0
-```
-
-## Die Funktion `plot`
-
-- `plot` ist eine generische Funktion 
-- d.h. je nachdem welches Objekt man rein steckt kommt ein anderes Ergebnis heraus.
-
-
-```r
-plot(1:10)
-```
-
-![](Datentypen_files/figure-slidy/unnamed-chunk-25-1.png)<!-- -->
-
-## Ein weiterer plot
-
-
-```r
-A <- runif(100)
-B <- runif(100)
-mod1 <- lm(A~B)
-
-par(mfrow=c(2,2))
-plot(mod1)
-```
-
-![](Datentypen_files/figure-slidy/unnamed-chunk-26-1.png)<!-- -->
-
-## Eine Graphik ohne Rand
-
-- Optionen bei der Gestaltung von Basis-Graphiken
-
-
-```r
-?par
-```
-
-
-
-```r
-par(mai=c(0,0,0,0))
-plot(hist(runif(1000)))
-```
-
-![](Datentypen_files/figure-slidy/unnamed-chunk-28-1.png)<!-- -->![](Datentypen_files/figure-slidy/unnamed-chunk-28-2.png)<!-- -->
-
-## Ein Balkendiagramm
-
-
-```r
-A <- sample(1:10,1000,replace=T)
-tabA <- table(A)
-
-barplot(tabA)
-```
-
-![](Datentypen_files/figure-slidy/unnamed-chunk-29-1.png)<!-- -->
-
-## Die Achsenbezeichnung
-
-
-```r
-barplot(tabA,xlab="Die Ausprägungen",
-        ylab="Häufigkeiten",
-        main="Ein Balkendiagramm")
-```
-
-![](Datentypen_files/figure-slidy/unnamed-chunk-30-1.png)<!-- -->
-
+![](Datentypen_files/figure-markdown_strict/unnamed-chunk-30-1.png)<!-- -->
