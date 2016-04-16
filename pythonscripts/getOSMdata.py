@@ -25,6 +25,7 @@ print MyApi.NodeGet(123)
 
 # Get a bounding box
 # http://boundingbox.klokantech.com/
+# http://nbviewer.jupyter.org/github/balzer82/OSM2Pandas/blob/master/OSM2Pandas-Kreuzungen.ipynb
 
 import pandas as pd
 
@@ -33,6 +34,14 @@ import requests
 import json
 
 
+#------------------------------------------------------#
+# Overpass API
+
+import overpass
+api = overpass.API()
+response = api.Get('node["name"="Salt Lake City"]')
+
+# https://github.com/mvexel/overpass-api-python-wrapper
 
 #------------------------------------------------------#
 # mapnik 
@@ -42,5 +51,12 @@ import json
 
 ## Some Links
 
+# http://forum.openstreetmap.org/viewtopic.php?id=7806
+
+# https://github.com/brianw/osmgeocode
+
+# http://wiki.openstreetmap.org/wiki/Nominatim
 
 # https://www.youtube.com/watch?v=a0dT1Q2iPWA
+
+# http://dataorigami.blogspot.de/2010/10/beta-release-how-to-render.html
