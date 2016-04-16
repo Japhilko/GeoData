@@ -16,3 +16,31 @@ from osmapi import OsmApi
 MyApi = OsmApi()
 
 print MyApi.NodeGet(123)
+
+
+#-----------------------------------------------------#
+
+# https://vimeo.com/101220572
+# http://balzer82.github.io/OSM2Pandas/
+
+# Get a bounding box
+# http://boundingbox.klokantech.com/
+
+import pandas as pd
+
+import requests
+
+import json
+
+
+
+#------------------------------------------------------#
+# mapnik 
+
+# https://gist.github.com/springmeyer/5651701
+
+
+## Some Links
+
+
+# https://www.youtube.com/watch?v=a0dT1Q2iPWA
