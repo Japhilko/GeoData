@@ -33,15 +33,72 @@ import requests
 
 import json
 
+bbox = [13.521945,50.919085,13.976063,51.18772]
 
+# Links unten
+minLat = bbox[1]
+minLon = bbox[0]
+
+# Rechts oben
+maxLat = bbox[3]
+maxLon = bbox[2]
+    
+    tags = ['primary','secondary','secondary_link','tertiary','tertiary_link','living_street','residential']
+    objects = ['way'] # like way, node, relation
+    
+    compactOverpassQLstring = '[out:json][timeout:60];('
+    for tag in tags:
+        for obj in objects:
+            compactOverpassQLstring += '%s["highway"="%s"](%s,%s,%s,%s);' % (obj, tag, minLat, minLon, maxLat, maxLon)
+    compactOverpassQLstring += ');out body;>;out skel qt;' 
+
+
+
+osmrequest = {'data': compactOverpassQLstring}
+osmurl = 'http://overpass-api.de/api/interpreter'
+
+# Ask the API
+osm = requests.get(osmurl, params=osmrequest)
+
+osmdata = osm.json()
+osmdata = osmdata['elements']
+for dct in osmdata:
+    if dct['type']=='way':
+        for key, val in dct['tags'].iteritems():
+            dct[key] = val
+        del dct['tags']
+    else:
+        pass # nodes
+
+osmdf = pd.DataFrame(osmdata)
+
+osmdf.tail(5)
 #------------------------------------------------------#
 # Overpass API
 
 import overpass
 api = overpass.API()
-response = api.Get('node["name"="Salt Lake City"]')
+response = api.Get('node["name"="Dresden"]')
 
 # https://github.com/mvexel/overpass-api-python-wrapper
+
+
+#------------------------------------------------------#
+# http://gis.stackexchange.com/questions/76454/osm-extract-streets-from-osm-data-with-without-python
+import ogr
+
+ds = ogr.Open('map.osm')
+layer = ds.GetLayer(1) # layer 1 for ways
+
+nameList = []
+for feature in layer:
+    if feature.GetField("highway") != None: 
+        name = feature.GetField("name")
+        if name != None and name not in nameList: 
+            nameList.append(name)
+
+print nameList
+
 
 #------------------------------------------------------#
 # mapnik 
@@ -60,3 +117,5 @@ response = api.Get('node["name"="Salt Lake City"]')
 # https://www.youtube.com/watch?v=a0dT1Q2iPWA
 
 # http://dataorigami.blogspot.de/2010/10/beta-release-how-to-render.html
+
+# https://pythonhosted.org/osmium/intro.html
