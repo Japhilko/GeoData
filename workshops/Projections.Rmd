@@ -1,0 +1,22 @@
+---
+title: "Info"
+author: "Jan-Philipp Kolb"
+date: "7 April 2016"
+output: html_document
+---
+
+
+```{r,echo=F}
+# http://gis.stackexchange.com/questions/31743/projecting-sp-objects-in-r
+```
+
+```{r}
+crs.laea <- CRS("+proj=laea +lat_0=52 +lon_0=10 +x_0=4321000 +y_0=3210000 +ellps=GRS80 +units=m +no_defs")  # Lambert Azimuthal Equal Area
+locs.laea <- spTransform(locs, crs.laea)  # spTransform makes the projection
+```
+
+```{r}
+library(rgdal)
+g <- spTransform(shpmap, CRS("+proj=longlat +datum=WGS84"))
+```
+
