@@ -1,5 +1,0 @@
-= Hello World
-
-:published_at: 2016-05-11
-
-This is my first post.
