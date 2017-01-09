@@ -14,3 +14,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ## 
 
 - [Theamtic Interactive Map](https://www.r-bloggers.com/thematic-interactive-map/) Suitzerland
+
+- [Administrative boundaries of Belgium](https://www.r-bloggers.com/belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium-2/)
