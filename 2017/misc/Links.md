@@ -1,15 +1,8 @@
----
-title: "Links"
-author: "Jan-Philipp Kolb"
-date: "9 Januar 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# Links
+Jan-Philipp Kolb  
+9 Januar 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Working with maps - R-bloggers
 
