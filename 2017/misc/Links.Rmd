@@ -1,0 +1,16 @@
+---
+title: "Links"
+author: "Jan-Philipp Kolb"
+date: "9 Januar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [Theamtic Interactive Map](https://www.r-bloggers.com/thematic-interactive-map/) Suitzerland
