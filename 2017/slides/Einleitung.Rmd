@@ -4,6 +4,7 @@ author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
   slidy_presentation: 
+    highlight: espresso
     keep_md: yes
 ---
 

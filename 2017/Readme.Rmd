@@ -15,7 +15,7 @@ In einem ersten Schritt werden vor allem Quellen für frei verfügbare Geodaten 
 
 Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files der Bevökerungsbefragungen auch Daten des Zensus-Atlas und Daten von Eurostat, der Weltbank und freien Portalen wie [datahub.io](https://datahub.io/) und [Wikipedia](https://www.wikidata.org/wiki/Wikidata:Main_Page) verwendet. Für die Analyse der Daten und die Visualisierung in Karten wird nur die Programmiersprache R genutzt. 
 
-- __(A) Motivation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
+- __(A) Motivation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 
 

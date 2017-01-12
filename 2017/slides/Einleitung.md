@@ -1,6 +1,6 @@
 # Nutzung von GeoDaten in den Sozialwissenschaften - Einleitung und Motivation
 Jan-Philipp Kolb  
-22. Februar 2017  
+22 Februar 2017  
 
 ## Motivation - Geschichte
 
@@ -13,8 +13,7 @@ Quelle: <https://en.wikipedia.org/wiki/Fra_Mauro_map>
 
 ## Motivation - aktuelle Phänomene
 
-- Die räumliche Darstellung hilt beim Verstehen (aktueller) sozialwissenschaftlicher Phänomene.
-
+- Die räumliche Darstellung hilft beim Verstehen (aktueller)  Phänomene.
 
 ![migrantroute](https://camo.githubusercontent.com/5cb1ec9daa4eac2f5ecfd2a6af1de67d8536bd2b/687474703a2f2f69636865662e626263692e636f2e756b2f6e6577732f3632342f63707370726f6470622f333246362f70726f64756374696f6e2f5f38353136343033315f6d696772616e745f6a6f75726e6579735f7475726b65795f746f5f6765726d616e795f3632342e706e67)
 

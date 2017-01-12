@@ -28,13 +28,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Manuel Gimond - [Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/index.html)
 
-
 ## Get Data
 
 - [OpenGeoDB](http://opengeodb.giswiki.org/wiki/OpenGeoDB)
 
+- [openstreetmapdata](http://openstreetmapdata.com/)
+
 ## Misc
 
-
+- [Geospatial Data Processing and Analysis in R](http://rpubs.com/ajlyons/rspatialdata)
 
 - [disastermappers Heidelberg](https://disastermappers.wordpress.com/)

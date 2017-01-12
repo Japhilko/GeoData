@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 - [The archive of the R-journal](https://journal.r-project.org/archive/)
 
 
-## 
+## Interesting articles in the R-journal
 
 - Manuel J. A. Eugster and Thomas Schlesinger - [osmar: OpenStreetMap and R](https://journal.r-project.org/archive/2013-1/eugster-schlesinger.pdf)
 
@@ -30,6 +30,26 @@ install.packages("mapmisc")
 library(mapmisc)
 citation("mapmisc")
 ```
+
+- David Kahle and Hadley Wickham - [ggmap: Spatial Visualization with
+ggplot2](https://journal.r-project.org/archive/2013-1/kahle-wickham.pdf)
+
+
+- Andy South - [rworldmap: A New R package for
+Mapping Global Data](https://journal.r-project.org/archive/2011-1/RJournal_2011-1_South.pdf)
+
+```{r,eval=F}
+install.packages("rworldmap")
+```
+
+- Nils B. Weidmann and Kristian Skrede Gleditsch - [Mapping and Measuring Country Shapes](https://journal.r-project.org/archive/2010-1/RJournal_2010-1_Weidmann+Skrede~Gleditsch.pdf)
+
+```{r,eval=F}
+install.packages("cshapes")
+```
+
+
+- Stefan Wilhelm and Miguel Godinho de Matos - [Estimating Spatial Probit Models in R](https://journal.r-project.org/archive/2013-1/wilhelm-matos.pdf)
 
 
 - Benedikt Gräler, Edzer Pebesma and Gerard Heuvelink - [Spatio-Temporal Interpolation using gstat](https://journal.r-project.org/archive/2016-1/na-pebesma-heuvelink.pdf)
