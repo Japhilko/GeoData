@@ -1,0 +1,51 @@
+---
+title: "The R-Journal"
+author: "Jan-Philipp Kolb"
+date: "12 Januar 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## The R-journal
+
+- [The archive of the R-journal](https://journal.r-project.org/archive/)
+
+
+## 
+
+- Manuel J. A. Eugster and Thomas Schlesinger - [osmar: OpenStreetMap and R](https://journal.r-project.org/archive/2013-1/eugster-schlesinger.pdf)
+
+
+- Patrick E. Brown [Maps, Coordinate Reference Systems and
+Visualising Geographic Data with mapmisc](https://journal.r-project.org/archive/2016-1/brown.pdf)
+
+```{r mapmisc,eval=F}
+install.packages("mapmisc")
+```
+
+```{r}
+library(mapmisc)
+citation("mapmisc")
+```
+
+
+- Benedikt Gräler, Edzer Pebesma and Gerard Heuvelink - [Spatio-Temporal Interpolation using gstat](https://journal.r-project.org/archive/2016-1/na-pebesma-heuvelink.pdf)
+
+- John Hughes - [ngspatial: A Package for Fitting the
+Centered Autologistic and Sparse Spatial
+Generalized Linear Mixed Models for
+Areal Data](https://journal.r-project.org/archive/2014-2/hughes.pdf)
+
+- Luca Sartore - [spMC: Modelling Spatial Random Fields
+with Continuous Lag Markov Chains](https://journal.r-project.org/archive/2013-2/sartore.pdf)
+
+## Misc
+
+-  Paul Murrell - [The gridGraphics Package](https://journal.r-project.org/archive/2015-1/murrell.pdf)
+
+```{r,eval=F}
+install.packages("gridGraphics")
+```

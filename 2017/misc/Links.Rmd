@@ -32,3 +32,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Get Data
 
 - [OpenGeoDB](http://opengeodb.giswiki.org/wiki/OpenGeoDB)
+
+## Misc
+
+
+
+- [disastermappers Heidelberg](https://disastermappers.wordpress.com/)
