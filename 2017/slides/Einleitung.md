@@ -7,7 +7,7 @@ Jan-Philipp Kolb
 - Räumliche Darstellungen haben eine lange Geschichte
 - Beispiel: Fra Mauro map
 
-![DiMauroMap](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/FraMauroDetailedMap.jpeg.jpg)
+![Di Mauro Map - entstanden um 1450 - erstaunliche Detailtreue ](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/FraMauroDetailedMap.jpeg.jpg)
 
 Quelle: <https://en.wikipedia.org/wiki/Fra_Mauro_map>
 
@@ -15,9 +15,9 @@ Quelle: <https://en.wikipedia.org/wiki/Fra_Mauro_map>
 
 - Die räumliche Darstellung hilft beim Verstehen (aktueller)  Phänomene.
 
-![migrantroute](https://camo.githubusercontent.com/5cb1ec9daa4eac2f5ecfd2a6af1de67d8536bd2b/687474703a2f2f69636865662e626263692e636f2e756b2f6e6577732f3632342f63707370726f6470622f333246362f70726f64756374696f6e2f5f38353136343033315f6d696772616e745f6a6f75726e6579735f7475726b65795f746f5f6765726d616e795f3632342e706e67)
+![Vorwahlen zur US-Präsidenten Wahl in Florida](figure/FloridaPresPrim.png)
 
-
+Quelle: <http://www.arilamstein.com/blog/2016/03/21/mapping-election-results-r-choroplethr/>
 
 ## Attraktiver Output - Beispiel [Wind Map](http://hint.fm/wind/)
 
