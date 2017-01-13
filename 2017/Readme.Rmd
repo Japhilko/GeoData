@@ -1,7 +1,7 @@
 ---
 title: "Geodaten in den Sozialwissenschaften"
 author: "Jan-Philipp Kolb"
-date: "10 Januar 2017"
+date: "22 Februar 2017"
 output: word_document
 ---
 
