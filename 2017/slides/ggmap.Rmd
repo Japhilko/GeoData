@@ -2,8 +2,20 @@
 title: "Nutzung von GeoDaten in den Sozialwissenschaften - Kartentypen mit ggmap"
 author: "Jan-Philipp Kolb"
 date: "07 April 2016"
-output: slidy_presentation
+output: 
+  slidy_presentation: 
+    keep_md: yes
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=T)
+```
+
+```{r,echo=F,warning=F}
+library(knitr)
+```
+
+
 
 ## Gliederung
 
@@ -20,16 +32,6 @@ Das R-paket [ggmap](http://journal.r-project.org/archive/2013-1/kahle-wickham.pd
 Mit [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap) kann man eine schnelle Karte erzeugen.
 
 
-```{r,echo=F,warning=F}
-internet=F
-Ex <- T
-Ca <- T
-library(knitr)
-
-graph.path <- "../data/figure/"
-```
-
-
 ## Straßenkarten
 
 - Straßenkarte werden sehr häufig verwendet. 
@@ -41,20 +43,9 @@ graph.path <- "../data/figure/"
 
 - Zur Erstellung der Karten brauchen wir das Paket `ggmap`:
 
-1. Möglichkeit:
-
 ```{r,eval=F}
 install.packages("ggmap")
 ```
-
-
-2. Möglichkeit:
-
-![Install packages](figure/Installpackages1.PNG)
-
-## Pakete installieren
-
-![Install packages](figure/Installpackages2.PNG)
 
 
 ## Paket ggmap - Hallo Welt
@@ -67,7 +58,7 @@ library(ggmap)
 
 Und schon kann die erste Karte erstellt werden:
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F,eval=T }
 qmap("Mannheim")
 ```
 
@@ -140,52 +131,40 @@ qmap("baylor university", zoom = 14)
 
 ## Ein anderes *zoom level*
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F }
 qmap("Mannheim", zoom = 12)
 ```
 
 ## Näher rankommen
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F }
 qmap('Mannheim', zoom = 13)
 ```
 
 
 ## Ganz nah dran
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 20)
-```
-
-## ggmap - Quelle OpenStreetMap
-
-```{r,message=F,eval=Ex,cache=Ca}
-qmap('Mannheim', zoom = 14, source="osm")
-```
-
-## ggmap - OpenStreetMap - schwarz/weiß
-
-```{r,message=F,eval=Ex,cache=Ca}
-qmap('Mannheim', zoom = 14, source="osm",color="bw")
 ```
 
 
 ## ggmap - maptype satellite
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
 ## ggmap - maptype satellite zoom 20
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 20, maptype="hybrid")
 ```
 
 
 ## ggmap - maptype hybrid
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F }
 qmap("Mannheim", zoom = 14, maptype="hybrid")
 ```
 
@@ -217,7 +196,7 @@ qmap('Schriesheim', zoom = 14,
 
 ## ggmap - maptype watercolor
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 14,
  maptype="watercolor",source="stamen")
 ```
@@ -225,7 +204,7 @@ qmap('Mannheim', zoom = 14,
 
 ## ggmap - source stamen
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
@@ -233,14 +212,14 @@ qmap('Mannheim', zoom = 14,
 
 ## ggmap - maptype toner-lite
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 14,
  maptype="toner-lite",source="stamen")
 ```
 
 ## ggmap - maptype toner-hybrid
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 14,
  maptype="toner-hybrid",source="stamen")
 ```
@@ -248,7 +227,7 @@ qmap('Mannheim', zoom = 14,
 
 ## ggmap - maptype terrain-lines
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 qmap('Mannheim', zoom = 14,
  maptype="terrain-lines",source="stamen")
 ```
@@ -264,7 +243,7 @@ qmap('Mannheim', zoom = 14,
 - `<-` ist der Zuweisungspfeil um ein Objekt zu erzeugen
 - Dieses Vorgehen macht bspw. Sinn, wenn mehrere Karten nebeneinander gebraucht werden.
 
-```{r,warning=F,message=F,cache=T}
+```{r,warning=F,message=F}
 MA_map <- qmap('Mannheim', 
                zoom = 14,
                maptype="toner",
@@ -280,11 +259,11 @@ MA_map <- qmap('Mannheim',
 
 ```{r,message=F,eval=F,warning=F}
 library(ggmap)
-geocode("Mannheim Wasserturm",source="google")
+geocode("Mannheim",source="google")
 ```
 
-```{r,echo=F,message=F,warning=F,cache=Ca}
-MAgc <- geocode("Mannheim University",source="google")
+```{r,echo=F,message=F,warning=F}
+MAgc <- geocode("Mannheim B2,5",source="google")
 kable(MAgc)
 ```
 
@@ -326,28 +305,28 @@ revgeocode(c(48,8))
 
 ## Die Distanz zwischen zwei Punkten
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim")
 ```
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="walking")
 ```
 
 
 ## Eine andere Distanz bekommen
 
-```{r,message=F,eval=Ex,cache=Ca}
+```{r,message=F}
 mapdist("Q1, 4 Mannheim","B2, 1 Mannheim",mode="bicycling")
 ```
 
 
 ## Geokodierung - verschiedene Punkte von Interesse
 
-```{r,cache=Ca,message=F,warning=F}
+```{r,message=F,warning=F}
 POI1 <- geocode("B2, 1 Mannheim",source="google")
 POI2 <- geocode("Hbf Mannheim",source="google")
-POI3 <- geocode("Wasserturm Mannheim",source="google")
+POI3 <- geocode("Mannheim, Friedrichsplatz",source="google")
 ListPOI <-rbind(POI1,POI2,POI3)
 POI1;POI2;POI3
 ```
@@ -355,7 +334,7 @@ POI1;POI2;POI3
 
 ## Punkte in der Karte
 
-```{r,message=F,warning=F,eval=Ex,cache=Ca}
+```{r,message=F,warning=F }
 MA_map +
 geom_point(aes(x = lon, y = lat),
 data = ListPOI)
@@ -363,7 +342,7 @@ data = ListPOI)
 
 ## Punkte in der Karte
 
-```{r,message=F,warning=F,eval=Ex,cache=Ca}
+```{r,message=F,warning=F }
 MA_map +
 geom_point(aes(x = lon, y = lat),col="red",
 data = ListPOI)
@@ -372,7 +351,7 @@ data = ListPOI)
 
 ## ggmap - verschiedene Farben
 
-```{r,eval=Ex,cache=Ca}
+```{r }
 ListPOI$color <- c("A","B","C")
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color),
@@ -381,7 +360,7 @@ data = ListPOI)
 
 ## ggmap - größere Punkte
 
-```{r,eval=Ex,cache=Ca}
+```{r }
 ListPOI$size <- c(10,20,30)
 MA_map +
 geom_point(aes(x = lon, y = lat,col=color,size=size),
@@ -451,7 +430,7 @@ Wie fügt man Punkte hinzu
 Was klar sein sollte:
 
 - Wie man eine schnelle Karte erzeugt
-- wie man geokodiert
+- Wie man geokodiert
 - Wie man eine Distanz berechnet
 
  
