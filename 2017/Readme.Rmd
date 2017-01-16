@@ -18,4 +18,3 @@ Als Beispiele für sozialwissenschaftliche Daten werden neben Public-Use-Files d
 - __(A) Motivation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
 
-
