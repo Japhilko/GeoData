@@ -27,7 +27,9 @@ Quelle: <http://www.arilamstein.com/blog/2016/03/21/mapping-election-results-r-c
 
 
 
-## Verfügbarkeit der Daten - Beispiel <www.driven-by-data.net/>
+## Verfügbarkeit der Daten - Beispiel 
+
+<http://www.driven-by-data.net/>
 
 ![pic](http://driven-by-data.net/images/working-women-full.png)
 
@@ -133,3 +135,13 @@ Dargestellt werden OpenStreetMap Daten, die mit der Overpass API heruntergeladen
 ![StrassenBerlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/streets_Berlin2.png)
 
 
+## Aufgabe 1 - Vorbereitung und Brainstorming
+
+-   Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses
+    Kurses speichern.
+
+-   Machen Sie sich mit der Nutzung von Github vertraut.
+
+-   Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen
+    wollen erstellen Sie eine kleine Skizze und schicken Sie dieses
+    Thema per E-mail an mich.

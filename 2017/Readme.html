@@ -124,58 +124,47 @@ $(document).ready(function () {
 
 
 <p>In diesem eintägigen Workshop geht es um die Beschaffung und Verarbeitung von räumlichen Informationen (Geodaten) in einem (sozial-) wissenschaftlichen Kontext.</p>
+<div id="motivation-und-einleitung" class="section level2">
+<h2>Motivation und Einleitung</h2>
 <ul>
-<li><strong>(A) Motivation</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2017/slides/Einleitung.md">Browser</a>) - <a href="http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim">Regionales</a></li>
-</ul>
-<div id="verschiedene-kartentypen-mit-ggmap" class="section level2">
-<h2>Verschiedene Kartentypen mit ggmap</h2>
-<ul>
-<li><p><strong>(B) Nutzung von R-Paket <a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">ggmap</a></strong> zur Erzeugung verschiedener Kartentypen. (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesB1_ggmap.R">rcode</a> )</p></li>
+<li><p><strong>(A1) Motivation</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2017/slides/Einleitung.md">Browser</a>) - <a href="http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim">Regionales</a></p></li>
+<li><p><strong>(A2) Nutzung von R-Paket <a href="http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf">ggmap</a></strong> zur Erzeugung verschiedener Kartentypen. (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/ggmap.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesB1_ggmap.R">rcode</a> )</p></li>
 <li><p>Beispiel: <em>Points of interest</em> (<a href="https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/">poi</a>) für Backpacker in Amsterdam</p></li>
 </ul>
-<p>Aufgabe 2: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Nutzung_ggmap.md">Nutzung von <code>ggmap</code></a></p>
+<p>Aufgabe 1: <a href="https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Nutzung_ggmap.Rmd">Nutzung von <code>ggmap</code></a></p>
 </div>
-<div id="quellen-fur-raumliche-daten" class="section level2">
-<h2>Quellen für räumliche Daten</h2>
+<div id="datenquellen" class="section level2">
+<h2>Datenquellen</h2>
 <ul>
-<li><p><strong>(C1) Politische und thematische Karten mit dem R-Paket <a href="https://cran.r-project.org/web/packages/maps/index.html">maps</a></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md">Browser</a> | | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf">pdf</a> <a href="https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/">blog</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R">rcode</a> )</p></li>
-<li><p><strong>(C2) Choroplethen mit dem R-Paket maptools</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC2_maptools.R">rcode</a>)</p></li>
-<li><p><strong>(C3) Internetquellen für Geodaten</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md">Browser</a>| <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.pdf">pdf</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC3_polygonSources.R">rcode</a>)</p></li>
-<li><p><strong>(C4) OpenStreetMap als Datenquelle</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.pdf">pdf</a>)</p></li>
+<li><p><strong>(B1) Politische und thematische Karten mit dem R-Paket <a href="https://cran.r-project.org/web/packages/maps/index.html">maps</a></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md">Browser</a> | | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf">pdf</a> <a href="https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/">blog</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R">rcode</a> )</p></li>
+<li><p><strong>(B2) Choroplethen mit dem R-Paket maptools</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC2_maptools.R">rcode</a>)</p></li>
+<li><p><strong>(B3) Internetquellen für Geodaten</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md">Browser</a>| <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.pdf">pdf</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC3_polygonSources.R">rcode</a>)</p></li>
+<li><p><strong>(B4) OpenStreetMap als Datenquelle</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.pdf">pdf</a>)</p></li>
+<li><p><strong>(B5) Öffentliche Daten zur freien Verfügung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R">rcode</a> )</p></li>
 </ul>
-<p>Aufgabe 3: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_DeutschlandsGemeinden.md">Eine Karte um Daten für Deutschlands Gemeinden darzustellen</a></p>
-</div>
-<div id="sozialwissenschaftliche-datenquellen" class="section level2">
-<h2>Sozialwissenschaftliche Datenquellen</h2>
-<ul>
-<li><strong>(D1) Öffentliche Daten zur freien Verfügung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R">rcode</a> )</li>
-</ul>
-<p>Aufgabe 4: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md">Zensus Ergebnisse herunterladen und importieren</a></p>
+<p>Aufgabe 2: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md">Deutschlands Gemeinden</a></p>
 </div>
 <div id="verbindung-editierung-und-einfarbung" class="section level2">
 <h2>Verbindung, Editierung und Einfärbung</h2>
 <ul>
-<li><p><strong>(E1) Verbindung von Daten</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE1_Matching.R">rcode</a>) of data sources</p></li>
-<li><p><strong>(E2) Das R-Paket <code>spplot</code> und Farbkodierung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE2_spplot.R">rcode</a>)</p></li>
-<li><p><strong>(E3) Shapefiles zusammenfassen</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE3_CombineShapefiles.R">rcode</a> )</p></li>
+<li><p><strong>(C1) Verbindung von Daten</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE1_Matching.R">rcode</a>) of data sources</p></li>
+<li><p><strong>(C2) Das R-Paket <code>spplot</code> und Farbkodierung</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE2_spplot.R">rcode</a>)</p></li>
+<li><p><strong>(C3) Shapefiles zusammenfassen</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE3_CombineShapefiles.R">rcode</a> )</p></li>
 </ul>
 <p>Aufgabe 5: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.Rmd">Zensus Ergebnisse und Karte miteinander verbinden und einfärben</a></p>
-</div>
-<div id="weitere-moglichkeiten-zur-erstellung-von-choroplethenkarten" class="section level2">
-<h2>Weitere Möglichkeiten zur Erstellung von Choroplethenkarten</h2>
 <ul>
-<li><p><strong>(F1) Thematische Karten mit dem R-Paket <code>tmap</code></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF1_tmap.R">rcode</a>)</p></li>
+<li><p><strong>(C4) Thematische Karten mit dem R-Paket <code>tmap</code></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF1_tmap.R">rcode</a>)</p></li>
 <li><p>Beispiel: <em>Maps with Eurostat data</em> (<a href="https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R">rcode</a>)</p></li>
-<li><p><strong>(F2) Das R-Paket <code>choroplethr</code></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF2_choroplethr.R">rcode</a>)</p></li>
+<li><p><strong>(C5) Das R-Paket <code>choroplethr</code></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md">Browser</a> | <a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.pdf">pdf</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF2_choroplethr.R">rcode</a>)</p></li>
 </ul>
 <p>Aufgabe: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_choroplethr.Rmd">Darstellung von Eurostat Daten mit <code>choroplethr</code></a></p>
 </div>
-<div id="nutzung-von-openstreetmap-daten" class="section level2">
-<h2>Nutzung von OpenStreetMap Daten</h2>
+<div id="openstreetmap-und-raumliche-statistik" class="section level2">
+<h2>OpenStreetMap und räumliche Statistik</h2>
 <ul>
-<li><p><strong>(G1) Das Arbeiten mit XML-Dateien</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.md">Browser</a>)</p></li>
-<li><p><strong>(G2) Die Nutzung von Programmierschnittstellen</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG1_UsageAPI.R">rcode</a>)</p></li>
-<li><p><strong>(G3) Das R-Paket <code>osmar</code></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG3_osmar.R">rcode</a>)</p></li>
+<li><p><strong>(D1) Das Arbeiten mit XML-Dateien</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.md">Browser</a>)</p></li>
+<li><p><strong>(D2) Die Nutzung von Programmierschnittstellen</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG1_UsageAPI.R">rcode</a>)</p></li>
+<li><p><strong>(D3) Das R-Paket <code>osmar</code></strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md">Browser</a>| <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG3_osmar.R">rcode</a>)</p></li>
 <li><p>Beispiel Hostels in Madrid (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd">Browser</a>), <a href="https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/">Energieerzeugung</a></p></li>
 </ul>
 <p>Aufgabe 6: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd">Darstellung von OSM Daten mit tmap</a></p>
@@ -183,8 +172,8 @@ $(document).ready(function () {
 <div id="raumliche-statistik-und-interaktive-karten" class="section level2">
 <h2>Räumliche Statistik und Interaktive Karten</h2>
 <ul>
-<li><p><strong>(H1) Das R-Paket <code>spdep</code> - Nachbarschaft und Distanz</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH1_spdep.R">rcode</a>)</p></li>
-<li><p><strong>(H2) Interaktive Karten und Präsentation</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH2_Interaktiv.R">rcode</a>) Beispiel - <a href="http://rpubs.com/Japhilko82/Campsites">Campingplätze</a></p></li>
+<li><p><strong>(D4) Das R-Paket <code>spdep</code> - Nachbarschaft und Distanz</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.md">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH1_spdep.R">rcode</a>)</p></li>
+<li><p><strong>(D5) Interaktive Karten und Präsentation</strong> (<a href="https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd">Browser</a> | <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH2_Interaktiv.R">rcode</a>) Beispiel - <a href="http://rpubs.com/Japhilko82/Campsites">Campingplätze</a></p></li>
 </ul>
 <p>Aufgabe 7: <a href="https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Distanzberechnung.Rmd">Distanzberechnung</a></p>
 </div>
