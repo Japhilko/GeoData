@@ -2,6 +2,15 @@
 Jan-Philipp Kolb  
 22 Februar 2017  
 
+## Gliederung
+
+- Spatial Turn - warum dieser Kurs
+- Fragestellungen
+- Verfügbare Daten
+- Neogeograpie
+- Realisierung
+
+
 ## Motivation - Geschichte
 
 - Räumliche Darstellungen haben eine lange Geschichte
@@ -18,6 +27,29 @@ Quelle: <https://en.wikipedia.org/wiki/Fra_Mauro_map>
 ![Vorwahlen zur US-Präsidenten Wahl in Florida](figure/FloridaPresPrim.png)
 
 Quelle: <http://www.arilamstein.com/blog/2016/03/21/mapping-election-results-r-choroplethr/>
+
+
+
+
+
+## [Laws of Spatial Sience](http://de.slideshare.net/rheimann04/big-social-data-the-spatial-turn-in-big-data)
+
+[Tobler's Gesetz](https://en.wikipedia.org/wiki/Tobler's_first_law_of_geography)
+
+> everything is related to everything else, but near things are more related than distant things.
+
+## [Spatial Turn](https://de.wikipedia.org/wiki/Spatial_turn)
+
+> Als Spatial turn wird seit Ende der 1980er-Jahre ein Paradigmenwechsel in den Kultur- und Sozialwissenschaften bezeichnet, der den Raum bzw. den geographischen Raum als kulturelle Größe wieder wahrnimmt.
+
+[Englisches Wikipedia](https://en.wikipedia.org/wiki/Spatial_turn)
+
+
+## Regional/geographical differences in the perception of...
+
+- ... measures to promote climatic change
+- ... big infrastructure projects
+
 
 ## Attraktiver Output - Beispiel [Wind Map](http://hint.fm/wind/)
 
@@ -134,14 +166,3 @@ Dargestellt werden OpenStreetMap Daten, die mit der Overpass API heruntergeladen
 
 ![StrassenBerlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/streets_Berlin2.png)
 
-
-## Aufgabe 1 - Vorbereitung und Brainstorming
-
--   Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses
-    Kurses speichern.
-
--   Machen Sie sich mit der Nutzung von Github vertraut.
-
--   Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen
-    wollen erstellen Sie eine kleine Skizze und schicken Sie dieses
-    Thema per E-mail an mich.
