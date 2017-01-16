@@ -13,12 +13,21 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Working with maps - R-bloggers
 
-- [Theamtic Interactive Map](https://www.r-bloggers.com/thematic-interactive-map/) Suitzerland
+- [Thematic Interactive Map](https://www.r-bloggers.com/thematic-interactive-map/) Suitzerland
 
 - [Administrative boundaries of Belgium](https://www.r-bloggers.com/belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium-2/)
 
+- [Plot maps like a boss](https://www.r-bloggers.com/plot-maps-like-a-boss/)
+
+## Tutorials
+
+- [ggmap Cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf)
+
+- Darren Wilkinson - [Mapping in R: Representing geospatial data together with ggplot](https://wilkinsondarren.wordpress.com/2013/02/01/mapping-in-r-representing-geospatial-data-together-with-ggplot/)
 
 ## GIS tasks
+
+- [OpenStreetMap and R](http://osmar.r-forge.r-project.org/)
 
 - [Dissolve polygons in R](https://philmikejones.wordpress.com/2015/09/03/dissolve-polygons-in-r/)
 
@@ -28,14 +37,46 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Manuel Gimond - [Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/index.html)
 
+Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+
+- Nick Bearman - [R and Google Map Making](https://rpubs.com/nickbearman/r-google-map-making)
+
+- [Heatmap of Toronto Traffic Signals using RGoogleMaps](https://www.r-bloggers.com/heatmap-of-toronto-traffic-signals-using-rgooglemaps/)
+
+
+- Mathieu Rajerison - [Paris's history, captured in its streets](http://blog.revolutionanalytics.com/2015/02/pariss-history-captured-in-its-streets.html)
+
+## Relevant Mapping Toppics
+
+- [Spatial Humanities Step by Step](http://spatial.scholarslab.org/stepbystep/)
+
+- [Big Social Data - The spatial turn in big data](http://de.slideshare.net/rheimann04/big-social-data-the-spatial-turn-in-big-data)
+
+- [What makes a beatiful map](http://gis.stackexchange.com/questions/3083/what-makes-a-map-beautiful/45518#45518)
+
+- [Maiking beautiful maps with R](http://gis.stackexchange.com/questions/48828/making-beautiful-maps-in-r)
+
+- [Many mapping projects](http://tracemedia.co.uk/)
+
+## OSM Tile Server
+
+
+- [ggmap source osm does not work any more](https://help.openstreetmap.org/questions/41673/get-open-street-map-in-r)
+
+- [Mapbox](https://rpubs.com/walkerke/rstudio-mapbox)
+
 ## Get Data
 
 - [OpenGeoDB](http://opengeodb.giswiki.org/wiki/OpenGeoDB)
 
 - [openstreetmapdata](http://openstreetmapdata.com/)
 
+- [Using Open Data for Statistical Purposes](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
+
 ## Misc
 
 - [Geospatial Data Processing and Analysis in R](http://rpubs.com/ajlyons/rspatialdata)
 
 - [disastermappers Heidelberg](https://disastermappers.wordpress.com/)
+
+- [Radio OSM](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
