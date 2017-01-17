@@ -73,6 +73,11 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 
 - [Using Open Data for Statistical Purposes](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
 
+## Relevant Books
+
+- Michael Dorman [Learning R for Geospatial Analysis]
+
+
 ## Misc
 
 - [Geospatial Data Processing and Analysis in R](http://rpubs.com/ajlyons/rspatialdata)
