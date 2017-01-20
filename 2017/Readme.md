@@ -20,7 +20,7 @@ Aufgabe 1: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/maste
 Datenquellen
 ---------------------
 
-- __(B1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md) | | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf) [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R) )
+- __(B1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R) )
 
 - __(B2) Choroplethen mit dem R-Paket maptools__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC2_maptools.R))
@@ -74,7 +74,7 @@ Aufgabe: [Darstellung von Eurostat Daten mit `choroplethr`](https://github.com/J
 OpenStreetMap und räumliche Statistik
 ---------------------
 
-- __(D1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/OpenStreetMap.md))
+- __(D1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.md))
 
 - __(D2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG1_UsageAPI.R))

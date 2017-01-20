@@ -1,0 +1,359 @@
+---
+title: "R-Paket maps"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r,echo=F,warning=F}
+library(knitr)
+```
+
+
+## Politische Karte:
+
+- Eine politische Karte zeigt keine topographischen Informationen.
+
+- Hauptsächlich sollen adminstrative Grenzen dargestellt werden.
+
+- Teilweise werden auch Städte mit eingezeichnet
+
+- Ein typisches Beispiel ist eine Karte der US-Staaten
+
+## Politische Karte
+
+```{r,echo=F,message=F,warning=F,eval=F}
+library(maps)
+library(magrittr)
+library(leaflet)
+mapStates = map("state", fill = TRUE, plot = FALSE)
+leaflet(data = mapStates) %>% addTiles() %>%
+  addPolygons(fillColor = topo.colors(10, alpha = NULL), stroke = FALSE)
+```
+
+```{r,echo=F,message=F,warning=F}
+library(maps)
+map("state",fill=T,col=1:10)
+```
+
+
+
+## Das R-Paket maps
+
+```{r,message=F}
+library(maps)
+```
+
+Wie man Hilfe bekommt:
+
+```{r,eval=F}
+?map
+```
+
+
+
+## Hallo Welt
+
+```{r}
+map()
+```
+
+
+## Ein erstes Argument
+
+Der gleiche Befehl mit einem Argument:
+
+```{r}
+map("usa")
+```
+
+## Eine Frankreichkarte
+
+```{r}
+map("france")
+```
+
+## Politische Karte - Italien
+
+Grenzen in blau:
+
+```{r}
+library ( maps )
+map ("italy", col = "blue")
+```
+
+## Add In: Colour Picker
+
+- RStudio Version 0.99.893 oder höher ist notwendig
+- Das Paket `shinyjs` muss installiert sein.
+
+![colourpicker](figure/colourpicker.PNG)
+
+
+## Choroplethen - R-Paket maps
+
+Wir wollen die Flächen blau einfärben:
+```{r}
+map ("italy",fill =T, col = "blue")
+```
+
+## Mehr Farben
+
+Einen Vektor erzeugen:
+
+```{r}
+colors <- c("blue","red","yellow")
+```
+
+nun nutzrn wir den Vektor um die Farbe zu spezifizieren
+
+```{r}
+map ("italy",fill =T, col = colors)
+```
+
+## Excurs: mehr Farben!
+Wir können auch den [rgb](https://stat.ethz.ch/R-manual/R-devel/library/grDevices/html/rgb.html) Befehl nutzen um eigene Farben zu erzeugen:
+
+```{r}
+map("italy",fill=T, col = rgb(0,1,0))
+```
+
+## [Hintergrund](https://dataveld.wordpress.com/2016/02/15/getting-started-with-r-maps-in-microsoft-power-bi/)
+
+```{r}
+map("state", col="#01B8AA", bg="#374649")
+```
+
+
+## Auch ausprobieren:
+
+```{r,eval=F}
+map("italy",fill=T, col = rgb(1,0,0))
+map("italy",fill=T, col = rgb(1,1,1))
+map("italy",fill=T, col = rgb(1,0.5,0.4))
+```
+
+
+```{r,echo=F}
+par(mfrow=c(1,3),mai=c(0,0,0,0))
+map("italy",fill=T, col = rgb(1,0,0))
+map("italy",fill=T, col = rgb(1,1,1))
+map("italy",fill=T, col = rgb(1,0.5,0.4))
+```
+
+
+## Choroplethen - R-Paket maps
+Wenn man wissen will, welche Region sich wohinter verbirgt:
+
+```{r}
+italy <- map("italy", plot = F)
+head(italy$names)
+```
+
+## Karten mit nur einem Argument
+
+```{r,eval=F}
+map("county")
+```
+
+
+```{r,echo=F}
+Argument <- c("county","france","italy","nz","state","usa","world")
+What <- c("US Counties","France","Italy","New Zealand","US States","USA","Countries of the world")
+
+kable(data.frame(Argument,What))
+```
+
+
+## Eine Karte für Deutschland
+
+```{r}
+library(maps)
+map("world", "Germany")
+```
+
+## R-Paket maps - zwei Länder
+
+
+```{r}
+map("world", c("Germany","Poland"))
+```
+
+
+## Zwei Länder mit mehr Farbe 
+
+```{r}
+map("world", c("Germany","Austria"),fill=T,
+col=c("red","green"))
+```
+
+
+
+## R-Paket maps - mehr Feature
+
+```{r}
+map("world", "China")
+map.scale()
+```
+
+## R-Paket maps - mehr Feature
+
+Wie `map`, aber mit Bezeichnungen für die Regionen:
+
+```{r}
+map.text("county", "penn")
+```
+
+Counties in Pennsylvania 
+
+## R-Paket maps - Städte der Welt
+
+mit dem Befehl `data` kann man spezifische Datensätze einlesen.
+
+```{r}
+data(world.cities)
+```
+
+`head` - den ersten Teil eines Objekts zurück geben
+
+```{r,eval=F}
+head(world.cities)
+```
+
+```{r,echo=F}
+kable(head(world.cities))
+```
+
+
+## Übebrlick über Datensatz Städte der Welt
+
+```{r,echo=F}
+kable(head(world.cities))
+```
+
+## Die Städte der Welt kartieren 
+
+
+```{r}
+map()
+map.cities(world.cities)
+```
+
+## Frankreichs Städte
+
+```{r}
+data(world.cities)
+map("france")
+map.cities(world.cities)
+```
+
+## Nur französische Städte 
+
+```{r}
+FrenchCity <- world.cities$country.etc=="France"
+FCit <- world.cities[FrenchCity,]
+```
+
+```{r,echo=F}
+kable(head(FCit,n=4))
+```
+
+
+## Nur französische Städte 
+
+Jetzt ist es möglich nur die französischen Städte zu kartieren:
+
+```{r}
+map("france")
+map.cities(FCit,col="blue",pch=20)
+```
+
+`pch` - plotting character, z.B., das Symbol das genutzt werden soll.
+
+
+## Verschiedene Größen - verschiedene Farben 
+
+```{r}
+FCit_Bc<-FCit[FCit$pop>50000,]
+map("france")
+map.cities(FCit,col="blue",pch=20)
+map.cities(FCit_Bc,col="red",pch=20)
+```
+
+## Beispiel für Fortgeschrittene 
+
+[Where people live](http://www.r-bloggers.com/where-people-live/)
+
+<http://www.r-bloggers.com/where-people-live/>
+
+```{r,eval=F}
+library(maps)
+data("world.cities")
+X <- world.cities[,c("lat","pop")]
+plot(world.cities$lon,world.cities$lat)
+for(i in 1:length(X$lat)) {
+  abline(h=X$lat[i],col=rgb(1,0,0,.001),lwd=2.7)  
+}
+```
+
+## Wo leben viele Menschen
+
+```{r,eval=F,echo=F}
+library(maps)
+data("world.cities")
+X=world.cities[,c("lat","pop")]
+liss=function(x,h){
+ w=dnorm(x-X[,"lat"],0,h)
+ sum(X[,"pop"]*w)
+}
+vx=seq(-80,80)
+vy=Vectorize(function(x) liss(x,1))(vx)
+vy=vy/max(vy)
+plot(world.cities$lon,world.cities$lat,)
+for(i in 1:length(vx)) 
+abline(h=vx[i],col=rgb(1,0,0,vy[i]),lwd=2.7)
+```
+
+![Where People Live](figure/WherePeopleLive.png)
+
+## Thematische Karten mit dem R-Paket maps
+
+Datenbasis - CIA World DataBank II
+
+> The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+
+
+## Verschiedene Projektionen
+
+```{r,warning=F}
+library(mapproj)
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
+```
+
+## Eine andere Projektion
+
+```{r}
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
+```
+
+## Eine weitere Projektion
+
+```{r}
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
+```
+
+## Mehr Links und Quellen
+
+- [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
+
+<http://mazamascience.com/WorkingWithData/?p=1277>
+
+- Robin Lovelace, James Cheshire - [Introduction to visualising spatial data in R](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
+
+<https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf>
+
+- [Maps in R: Introduction - Drawing the map of Europe](http://www.milanor.net/blog/?p=534)
+
+<http://www.milanor.net/blog/?p=534>
