@@ -1,0 +1,225 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das Paket maptools"
+author: "Jan-Philipp Kolb"
+date: "07 April 2016"
+output: slidy_presentation
+---
+
+
+```{r setup, include=FALSE,echo=F}
+knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F,message=F)
+```
+
+```{r,echo=F}
+library(knitr)
+library(sp)
+```
+
+
+
+## Das Paket maptools
+
+- Datensatz `wrld_simpl` aus dem Paket [maptools](https://cran.r-project.org/web/packages/maptools/index.html) 
+- Polygone für fast alle Staaten der Erde
+
+```{r,message=F,warning=F}
+library(maptools)
+data(wrld_simpl)
+```
+
+```{r,echo=F}
+kable(wrld_simpl@data[1:4,1:5])
+```
+
+## Hello world
+
+```{r,warning=F}
+data(wrld_simpl)
+plot(wrld_simpl)
+```
+
+
+## Der shapefile
+
+- Es handelt sich um einen `shapefile` 
+
+```{r}
+typeof(wrld_simpl)
+```
+
+- Die Daten sind als `S4` abgespeichert
+- Es gibt verschiedene Slots
+- In einem davon ist Information als `data.frame` gespeichert.
+
+## Der Datensatz
+
+```{r,eval=F}
+head(wrld_simpl@data)
+```
+
+```{r,results='asis',echo=F}
+library(knitr)
+kable(wrld_simpl@data[1:4,1:5])
+```
+
+
+## Die Struktur der Daten
+
+```{r}
+head(wrld_simpl@data$NAME)
+```
+
+
+## Eine logische Abfrage
+
+```{r}
+ind_SA <- wrld_simpl@data$NAME =="South Africa"
+head(ind_SA)
+```
+
+```{r}
+table(ind_SA)
+```
+
+## Eine Karte für Süd Afrika
+
+- Ein Land zeichnen
+
+```{r}
+SouthAfrica <- wrld_simpl[ind_SA,]
+plot(SouthAfrica)
+```
+
+## Mehr als ein Land zeichnen
+
+```{r}
+EuropeList <- c('Germany', 'France')
+my_map <- wrld_simpl[wrld_simpl$NAME %in% EuropeList, ]
+par(mai=c(0,0,0,0))
+plot(my_map)
+```
+
+## Mehr Farbe
+
+```{r}
+my_map@data$color <- c("blue","green")
+plot(my_map,col=my_map@data$color)
+```
+
+## Mehr Farbe für die Welt
+
+```{r}
+plot(wrld_simpl, bg='azure2', col='green',
+     border='lightgray')
+```
+
+## Eine Karte für Europa
+
+```{r}
+Europe <- wrld_simpl[wrld_simpl$REGION=="150",]
+plot(Europe,col="royalblue")
+```
+
+
+## Europa ohne Russland
+
+```{r}
+ind <- which(Europe@data$NAME=="Russia")
+EU <- Europe[-ind,]
+plot(EU,col="blue",border="darkgray")
+```
+
+## Spielen Sie mit Farben
+
+```{r}
+EU$colors <- "green"
+plot(EU,col=EU$colors,border="darkgray")
+pop05 <- Europe$POP2005
+Europe$colors[pop05>mean(pop05)] <- "royalblue"
+plot(Europe,col=Europe$colors)
+```
+
+## Mehr über Farben
+
+[Colors in R](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf)
+
+```{r}
+Europe$colors[pop05>median(pop05)] <- "chocolate4"
+plot(Europe,col=Europe$colors)
+```
+
+## Europa - Farbschattierung blau
+
+```{r}
+val <- Europe$POP2005/max(Europe$POP2005)
+plot(Europe,col=rgb(0,0,val))
+```
+
+## Europa - Farbschattierung rot
+
+```{r}
+val <- Europe$POP2005/max(Europe$POP2005)
+plot(Europe,col=rgb(val,0,0))
+```
+
+## Europa - Farbschattierung grün
+
+```{r}
+val <- Europe$POP2005/max(Europe$POP2005)
+plot(Europe,col=rgb(0,val,0))
+```
+
+## Europa - Farbschattierung grau
+
+```{r}
+val <- Europe$POP2005/max(Europe$POP2005)
+plot(Europe,col=rgb(val,val,val))
+```
+
+## Europa - zwei Graphiken nebeneinander
+
+```{r}
+par(mfrow=c(1,2))
+plot(Europe,col=rgb(val,0,val))
+plot(Europe,col=rgb(val,val,0))
+```
+
+## Europa - Punkte hinzufügen
+
+```{r}
+which(Europe$ISO2=="FR") # 14
+plot(Europe)
+points(Europe$LON[14],Europe$LAT[14],col="red",pch=20)
+```
+
+## Europa - Blasen hinzufügen
+
+```{r}
+pop <- Europe$POP2005
+pop <- pop/max(pop)*10
+plot(Europe)
+points(Europe$LON,Europe$LAT,cex=pop,col=rgb(0,0,1,.2),
+pch=20)
+```
+
+## Europa - Text hinzufügen
+
+```{r}
+plot(Europe)
+text(Europe$LON,Europe$LAT,Europe$ISO2,col="red")
+```
+
+## Europa - Linien hinzufügen
+
+```{r,eval=F}
+which(Europe$ISO2=="FR") # 15
+which(Europe$ISO2=="DE") # 16
+```
+
+
+```{r}
+Dat <- cbind(Europe$LON[15:16],Europe$LAT[15:16])
+plot(Europe)
+lines(Dat,col="red",lwd=2)
+```
+

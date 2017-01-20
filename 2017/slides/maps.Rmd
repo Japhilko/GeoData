@@ -222,10 +222,6 @@ data(world.cities)
 head(world.cities)
 ```
 
-```{r,echo=F}
-kable(head(world.cities))
-```
-
 
 ## Übebrlick über Datensatz Städte der Welt
 
@@ -284,7 +280,7 @@ map.cities(FCit_Bc,col="red",pch=20)
 
 ## Beispiel für Fortgeschrittene 
 
-[Where people live](http://www.r-bloggers.com/where-people-live/)
+- Arthur Charpentier auf R-bloggers - [Where people live](http://www.r-bloggers.com/where-people-live/)
 
 <http://www.r-bloggers.com/where-people-live/>
 
