@@ -1,16 +1,9 @@
----
-title: "Die Nutzung von Programmierschnittstellen"
-author: "Jan-Philipp Kolb"
-date: "22 Februar 2017"
-output: 
-  slidy_presentation: 
-    keep_md: yes
----
+# Die Nutzung von Programmierschnittstellen
+Jan-Philipp Kolb  
+22 Februar 2017  
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T)
-```
+
 
 
 
@@ -39,16 +32,16 @@ knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T)
 
 ## Import von der Overpass API zu R
 
-```{r,echo=F}
-Link1 <- "http://www.overpass-api.de/api/interpreter?data=[maxsize:1073741824][timeout:900];area[name=\""
-```
 
-```{r,eval=F}
+
+
+```r
 Link1 <- "http://www.overpass-api.de/api/interpreter?
 data=[maxsize:1073741824][timeout:900];area[name=\""
 ```
 
-```{r}
+
+```r
 library(XML)
 place <- "Mannheim"
 type_obj <- "node"
@@ -64,31 +57,36 @@ type_obj,"(area)[",object,
 
 Die Liste der ID's mit dem Wert *playground*:
 
-```{r}
+
+```r
 node_id<- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ id")
 ```
 
 ## latitude und longitude bekommen
 
-```{r}
+
+```r
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lat")
 ```
 
-```{r}
+
+```r
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lon")
 ```
 
 ## Paket auf Github
 
-```{r,eval=F}
+
+```r
 library(devtools)
 install_github("Japhilko/GeoData/geosmdata")
 ```
 
-```{r,eval=F}
+
+```r
 library(geosmdata)
 pg_MA <- get_osm_nodes(object="leisure=playground",
                        "Mannheim")
