@@ -116,9 +116,9 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 
 <http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml>
 
-- [Information zu xquery](http://www.w3schools.com/xquery/)
+- [Tutorial zu xquery](http://www.w3schools.com/xml/xquery_intro.asp)
 
-<http://www.w3schools.com/xquery/>
+<http://www.w3schools.com/xml/xquery_intro.asp>
 
 - [R und das Web (für Anfänger), Teil II: XML und R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
 
