@@ -106,9 +106,9 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 
 <http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf>
 
-- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.org/RSXML/shortIntro.pdf)
+- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.net/RSXML/shortIntro.pdf)
 
-<http://www.omegahat.org/RSXML/shortIntro.pdf>
+<http://www.omegahat.net/RSXML/shortIntro.pdf>
 
 ## Noch mehr Informationen
 
