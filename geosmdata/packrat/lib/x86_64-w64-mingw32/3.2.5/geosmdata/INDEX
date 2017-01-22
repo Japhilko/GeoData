@@ -1,0 +1,4 @@
+extract_osm_nodes       function extract_osm_nodes
+geocode_osm             function geocode_osm
+get_osm_nodes           function get_osm_nodes
+osm_df                  data frame map features OpenStreetMap
