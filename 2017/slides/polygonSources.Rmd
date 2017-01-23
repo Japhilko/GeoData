@@ -72,7 +72,7 @@ plot(LUX3)
 
 ## [GADM](http://www.gadm.org/)- NUTS level 4
 
-```{r,warning=F}
+```{r,warning=F,eval=F}
 LUX4 <- getData('GADM', country='LUX', level=4)
 plot(LUX4)
 ```

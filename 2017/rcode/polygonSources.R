@@ -1,10 +1,5 @@
 ## ----echo=F--------------------------------------------------------------
 library(knitr)
-ca <- F
-Ex2 <- F
-Ex3 <- F
-Ex4 <- F
-Ex5 <- F
 
 ## ----cache=ca,warning=F,message=F----------------------------------------
 library(raster)
