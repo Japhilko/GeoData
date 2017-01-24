@@ -8,13 +8,30 @@ output:
     keep_md: yes
 ---
 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=T)
+```
+
+
 ## Gliederung
+
+```{r,echo=F,eval=F}
+library(ggmap)
+qmap("Mannheim A5,6",zoom=18, maptype = "satellite")
+```
+
+
+<div class="columns-2">
+![MZES](figure/mzesma.PNG)
 
 - Spatial Turn - warum dieser Kurs
 - Fragestellungen
 - Verfügbare Daten
 - Neogeograpie
 - Realisierung
+</div>
+
 
 
 ## Motivation - Geschichte

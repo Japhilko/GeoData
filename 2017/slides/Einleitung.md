@@ -2,13 +2,25 @@
 Jan-Philipp Kolb  
 22 Februar 2017  
 
+
+
+
+
 ## Gliederung
+
+
+
+
+<div class="columns-2">
+![MZES](figure/mzesma.PNG)
 
 - Spatial Turn - warum dieser Kurs
 - Fragestellungen
 - Verfügbare Daten
 - Neogeograpie
 - Realisierung
+</div>
+
 
 
 ## Motivation - Geschichte
