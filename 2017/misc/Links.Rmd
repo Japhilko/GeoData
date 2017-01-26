@@ -19,6 +19,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Plot maps like a boss](https://www.r-bloggers.com/plot-maps-like-a-boss/)
 
+- [Possibilities for geocoding](http://www.webcodepro.net/pdfs/pw-top-10-maps.pdf)
+
 ## Tutorials
 
 - [ggmap Cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf)
