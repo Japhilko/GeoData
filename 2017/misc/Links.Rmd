@@ -19,8 +19,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Plot maps like a boss](https://www.r-bloggers.com/plot-maps-like-a-boss/)
 
-- [Possibilities for geocoding](http://www.webcodepro.net/pdfs/pw-top-10-maps.pdf)
-
 ## Tutorials
 
 - [ggmap Cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf)
@@ -74,6 +72,15 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 - [openstreetmapdata](http://openstreetmapdata.com/)
 
 - [Using Open Data for Statistical Purposes](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
+
+## Geocoding
+
+- [Possibilities for geocoding](http://www.webcodepro.net/pdfs/pw-top-10-maps.pdf)
+
+
+- [Offline geocoder](http://gis.stackexchange.com/questions/18565/is-there-a-method-to-create-offline-geocoder-using-osm-xml-data)
+
+- [Google Maps APIs Terms of Service ](https://developers.google.com/maps/terms)
 
 ## Relevant Books
 
