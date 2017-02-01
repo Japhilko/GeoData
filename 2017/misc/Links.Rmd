@@ -13,6 +13,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Working with maps - R-bloggers
 
+- [Choroplethr v3.5.3 is now on CRAN](https://www.r-bloggers.com/choroplethr-v3-5-3-is-now-on-cran/)
+
 - [Thematic Interactive Map](https://www.r-bloggers.com/thematic-interactive-map/) Suitzerland
 
 - [Administrative boundaries of Belgium](https://www.r-bloggers.com/belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium-2/)
@@ -45,6 +47,9 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 
 
 - Mathieu Rajerison - [Paris's history, captured in its streets](http://blog.revolutionanalytics.com/2015/02/pariss-history-captured-in-its-streets.html)
+
+
+- [Rqgis](https://www.r-bloggers.com/releasing-rqgis-0-2-0/)
 
 ## Relevant Mapping Toppics
 
@@ -117,3 +122,14 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 - [Short osmar example](http://www.r-bloggers.com/a-short-example-with-r-package-osmar/)
 
 
+## Beispiele
+
+- [Verkehrsunfälle in Belgrad](https://www.r-bloggers.com/open-data-r-meetup-exploring-the-distribution-of-traffic-accidents-in-belgrade-2015-in-r/)
+
+- [Metro in Paris](https://www.r-bloggers.com/metro-systems-over-time-part-1/)
+
+
+
+- [Französische Orte](https://www.r-bloggers.com/french-villages-and-a-sort-of-resolution/)
+
+- [Finding antipodes using the globe and ggmap packages](https://www.r-bloggers.com/finding-antipodes-using-the-globe-and-ggmap-packages/)
