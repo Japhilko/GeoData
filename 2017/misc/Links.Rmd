@@ -94,3 +94,26 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 - [disastermappers Heidelberg](https://disastermappers.wordpress.com/)
 
 - [Radio OSM](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
+
+
+- [hiking waymarked trails](http://hiking.waymarkedtrails.org/de/)
+
+## Kurs - R als GIS
+
+-[R as a GIS: overlay/aggregate, rgeos, osmar, networks](http://www.geostat-course.org/system/files/rgis.pdf)
+
+- [spatial data visualization with r](http://www.r-bloggers.com/spatial-data-visualization-with-r/)
+  
+- [convert openstreetmap objects to kml with r](http://www.r-bloggers.com/convert-openstreetmap-objects-to-kml-with-r/)
+  
+- [osmar at rforge](http://osmar.r-forge.r-project.org/)
+
+- [OpenStreetMap in R - Freie Räumliche Daten für geostatistische Analysen](http://epub.ub.uni-muenchen.de/12463/1/BA_Schlesingert.pdf)
+
+- [Tackling OpenStreetMap with R](http://geoidin.wordpress.com/2013/01/06/tackling-openstreetmap-with-r/)
+
+- [osmar - Eugster Schlesinger](http://journal.r-project.org/archive/2013-1/eugster-schlesinger.pdf)
+  
+- [Short osmar example](http://www.r-bloggers.com/a-short-example-with-r-package-osmar/)
+
+
