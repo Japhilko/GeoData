@@ -6,12 +6,23 @@ Jan-Philipp Kolb
 
 ## Working with maps - R-bloggers
 
+- [Choroplethr v3.5.3 is now on CRAN](https://www.r-bloggers.com/choroplethr-v3-5-3-is-now-on-cran/)
+
 - [Thematic Interactive Map](https://www.r-bloggers.com/thematic-interactive-map/) Suitzerland
 
 - [Administrative boundaries of Belgium](https://www.r-bloggers.com/belgiummaps-statbel-r-package-with-administrative-boundaries-of-belgium-2/)
 
+- [Plot maps like a boss](https://www.r-bloggers.com/plot-maps-like-a-boss/)
+
+## Tutorials
+
+- [ggmap Cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf)
+
+- Darren Wilkinson - [Mapping in R: Representing geospatial data together with ggplot](https://wilkinsondarren.wordpress.com/2013/02/01/mapping-in-r-representing-geospatial-data-together-with-ggplot/)
 
 ## GIS tasks
+
+- [OpenStreetMap and R](http://osmar.r-forge.r-project.org/)
 
 - [Dissolve polygons in R](https://philmikejones.wordpress.com/2015/09/03/dissolve-polygons-in-r/)
 
@@ -28,7 +39,22 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 - [Heatmap of Toronto Traffic Signals using RGoogleMaps](https://www.r-bloggers.com/heatmap-of-toronto-traffic-signals-using-rgooglemaps/)
 
 
+- Mathieu Rajerison - [Paris's history, captured in its streets](http://blog.revolutionanalytics.com/2015/02/pariss-history-captured-in-its-streets.html)
+
+
+- [Rqgis](https://www.r-bloggers.com/releasing-rqgis-0-2-0/)
+
+## Relevant Mapping Toppics
+
+- [Spatial Humanities Step by Step](http://spatial.scholarslab.org/stepbystep/)
+
+- [Big Social Data - The spatial turn in big data](http://de.slideshare.net/rheimann04/big-social-data-the-spatial-turn-in-big-data)
+
 - [What makes a beatiful map](http://gis.stackexchange.com/questions/3083/what-makes-a-map-beautiful/45518#45518)
+
+- [Maiking beautiful maps with R](http://gis.stackexchange.com/questions/48828/making-beautiful-maps-in-r)
+
+- [Many mapping projects](http://tracemedia.co.uk/)
 
 ## OSM Tile Server
 
@@ -45,6 +71,20 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 
 - [Using Open Data for Statistical Purposes](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
 
+## Geocoding
+
+- [Possibilities for geocoding](http://www.webcodepro.net/pdfs/pw-top-10-maps.pdf)
+
+
+- [Offline geocoder](http://gis.stackexchange.com/questions/18565/is-there-a-method-to-create-offline-geocoder-using-osm-xml-data)
+
+- [Google Maps APIs Terms of Service ](https://developers.google.com/maps/terms)
+
+## Relevant Books
+
+- Michael Dorman [Learning R for Geospatial Analysis]
+
+
 ## Misc
 
 - [Geospatial Data Processing and Analysis in R](http://rpubs.com/ajlyons/rspatialdata)
@@ -52,3 +92,37 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 - [disastermappers Heidelberg](https://disastermappers.wordpress.com/)
 
 - [Radio OSM](http://sk53-osm.blogspot.de/2016/10/using-open-data-for-statistical-purposes.html)
+
+
+- [hiking waymarked trails](http://hiking.waymarkedtrails.org/de/)
+
+## Kurs - R als GIS
+
+-[R as a GIS: overlay/aggregate, rgeos, osmar, networks](http://www.geostat-course.org/system/files/rgis.pdf)
+
+- [spatial data visualization with r](http://www.r-bloggers.com/spatial-data-visualization-with-r/)
+  
+- [convert openstreetmap objects to kml with r](http://www.r-bloggers.com/convert-openstreetmap-objects-to-kml-with-r/)
+  
+- [osmar at rforge](http://osmar.r-forge.r-project.org/)
+
+- [OpenStreetMap in R - Freie Räumliche Daten für geostatistische Analysen](http://epub.ub.uni-muenchen.de/12463/1/BA_Schlesingert.pdf)
+
+- [Tackling OpenStreetMap with R](http://geoidin.wordpress.com/2013/01/06/tackling-openstreetmap-with-r/)
+
+- [osmar - Eugster Schlesinger](http://journal.r-project.org/archive/2013-1/eugster-schlesinger.pdf)
+  
+- [Short osmar example](http://www.r-bloggers.com/a-short-example-with-r-package-osmar/)
+
+
+## Beispiele
+
+- [Verkehrsunfälle in Belgrad](https://www.r-bloggers.com/open-data-r-meetup-exploring-the-distribution-of-traffic-accidents-in-belgrade-2015-in-r/)
+
+- [Metro in Paris](https://www.r-bloggers.com/metro-systems-over-time-part-1/)
+
+
+
+- [Französische Orte](https://www.r-bloggers.com/french-villages-and-a-sort-of-resolution/)
+
+- [Finding antipodes using the globe and ggmap packages](https://www.r-bloggers.com/finding-antipodes-using-the-globe-and-ggmap-packages/)

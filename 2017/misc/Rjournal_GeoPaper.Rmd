@@ -62,6 +62,11 @@ Areal Data](https://journal.r-project.org/archive/2014-2/hughes.pdf)
 - Luca Sartore - [spMC: Modelling Spatial Random Fields
 with Continuous Lag Markov Chains](https://journal.r-project.org/archive/2013-2/sartore.pdf)
 
+## Other Journals
+
+- Sterling Quinn - [A Geolinguistic Approach for Comprehending Local Influence in OpenStreetMap ](http://www.utpjournals.press/doi/ref/10.3138/cart.51.2.3301)
+
+
 ## Misc
 
 -  Paul Murrell - [The gridGraphics Package](https://journal.r-project.org/archive/2015-1/murrell.pdf)

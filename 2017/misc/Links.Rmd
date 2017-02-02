@@ -39,7 +39,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Manuel Gimond - [Intro to GIS and Spatial Analysis](https://mgimond.github.io/Spatial/index.html)
 
-Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
+- Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/making-maps-with-r/)
 
 - Nick Bearman - [R and Google Map Making](https://rpubs.com/nickbearman/r-google-map-making)
 
@@ -89,8 +89,17 @@ Kim Gilbert - [Making maps with R](http://www.molecularecologist.com/2012/09/mak
 
 ## Relevant Books
 
-- Michael Dorman [Learning R for Geospatial Analysis]
+- Michael Dorman [Learning R for Geospatial Analysis](https://www.amazon.de/Learning-Geospatial-Analysis-Michael-Dorman/dp/1783984368)
 
+## [Projekte mit OSM Daten](http://wiki.openstreetmap.org/wiki/Research)
+
+- [App OSMap Tuner](http://wiki.openstreetmap.org/wiki/OSMapTuner)
+
+- [University of Maryland](https://terpnav.umd.edu/)
+
+- Michael F. Goodchild - [Citizens as Sensors: The World of Volunteered Geography](http://www.ncgia.ucsb.edu/projects/vgi/docs/present/Goodchild_intro.pdf)
+
+- [Ongoing training of homeland security personnel through the use of open- source, geospatial tools such as OpenStreetMap and Walking Papers](http://sdsu-dspace.calstate.edu/handle/10211.10/1658)
 
 ## Misc
 
