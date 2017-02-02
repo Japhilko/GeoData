@@ -22,7 +22,7 @@ Datenquellen
 
 - __(B1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2017/slides/maps.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R) )
 
-- __(B2) Choroplethen mit dem R-Paket maptools__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf)
+- __(B2) Choroplethen mit dem R-Paket maptools__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/maptools.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC2_maptools.R))
 
 - __(B3) Internetquellen für Geodaten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)| [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.pdf)|
@@ -90,7 +90,7 @@ Aufgabe 6: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoD
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH1_spdep.R))
 
 
-- __(D5) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/PresentingResults.Rmd)
+- __(D5) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/InteractiveMaps.md)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH2_Interaktiv.R))
 Beispiel - [Campingplätze](http://rpubs.com/Japhilko82/Campsites)
 

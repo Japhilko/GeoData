@@ -1,6 +1,6 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Das Paket maptools
+# Das Paket maptools
 Jan-Philipp Kolb  
-07 April 2016  
+22 Februar 2017  
 
 
 
@@ -36,7 +36,7 @@ data(wrld_simpl)
 plot(wrld_simpl)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 ## Der shapefile
@@ -119,7 +119,7 @@ SouthAfrica <- wrld_simpl[ind_SA,]
 plot(SouthAfrica)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-11-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ## Mehr als ein Land zeichnen
 
@@ -131,7 +131,7 @@ par(mai=c(0,0,0,0))
 plot(my_map)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ## Mehr Farbe
 
@@ -141,7 +141,7 @@ my_map@data$color <- c("blue","green")
 plot(my_map,col=my_map@data$color)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ## Mehr Farbe für die Welt
 
@@ -151,7 +151,7 @@ plot(wrld_simpl, bg='azure2', col='green',
      border='lightgray')
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 ## Eine Karte für Europa
 
@@ -161,7 +161,7 @@ Europe <- wrld_simpl[wrld_simpl$REGION=="150",]
 plot(Europe,col="royalblue")
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-15-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 
 ## Europa ohne Russland
@@ -173,7 +173,7 @@ EU <- Europe[-ind,]
 plot(EU,col="blue",border="darkgray")
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-16-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 ## Spielen Sie mit Farben
 
@@ -183,7 +183,7 @@ EU$colors <- "green"
 plot(EU,col=EU$colors,border="darkgray")
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 ```r
 pop05 <- Europe$POP2005
@@ -191,7 +191,7 @@ Europe$colors[pop05>mean(pop05)] <- "royalblue"
 plot(Europe,col=Europe$colors)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-17-2.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-17-2.png)<!-- -->
 
 ## Mehr über Farben
 
@@ -203,7 +203,7 @@ Europe$colors[pop05>median(pop05)] <- "chocolate4"
 plot(Europe,col=Europe$colors)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-18-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 ## Europa - Farbschattierung blau
 
@@ -213,7 +213,7 @@ val <- Europe$POP2005/max(Europe$POP2005)
 plot(Europe,col=rgb(0,0,val))
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-19-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 ## Europa - Farbschattierung rot
 
@@ -223,7 +223,7 @@ val <- Europe$POP2005/max(Europe$POP2005)
 plot(Europe,col=rgb(val,0,0))
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-20-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 ## Europa - Farbschattierung grün
 
@@ -233,7 +233,7 @@ val <- Europe$POP2005/max(Europe$POP2005)
 plot(Europe,col=rgb(0,val,0))
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-21-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 ## Europa - Farbschattierung grau
 
@@ -243,7 +243,7 @@ val <- Europe$POP2005/max(Europe$POP2005)
 plot(Europe,col=rgb(val,val,val))
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-22-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 ## Europa - zwei Graphiken nebeneinander
 
@@ -254,7 +254,7 @@ plot(Europe,col=rgb(val,0,val))
 plot(Europe,col=rgb(val,val,0))
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-23-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
 
 ## Europa - Punkte hinzufügen
 
@@ -272,7 +272,7 @@ plot(Europe)
 points(Europe$LON[14],Europe$LAT[14],col="red",pch=20)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-24-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-24-1.png)<!-- -->
 
 ## Europa - Blasen hinzufügen
 
@@ -285,7 +285,7 @@ points(Europe$LON,Europe$LAT,cex=pop,col=rgb(0,0,1,.2),
 pch=20)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-25-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 
 ## Europa - Text hinzufügen
 
@@ -295,7 +295,7 @@ plot(Europe)
 text(Europe$LON,Europe$LAT,Europe$ISO2,col="red")
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-26-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-26-1.png)<!-- -->
 
 ## Europa - Linien hinzufügen
 
@@ -313,5 +313,5 @@ plot(Europe)
 lines(Dat,col="red",lwd=2)
 ```
 
-![](maptools_files/figure-slidy/unnamed-chunk-28-1.png)<!-- -->
+![](maptools_files/figure-html/unnamed-chunk-28-1.png)<!-- -->
 

@@ -1,9 +1,9 @@
 ---
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Das Paket maptools"
+title: "Das Paket maptools"
 author: "Jan-Philipp Kolb"
-date: "07 April 2016"
+date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  ioslides_presentation: 
     keep_md: yes
 ---
 
