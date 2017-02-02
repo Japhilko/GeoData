@@ -24,18 +24,14 @@ Jan-Philipp Kolb
 library("XML")
 ```
 
-![Gaston Sanchez - Dataflow](https://raw.githubusercontent.com/gastonstat/tutorial-R-web-data/master/01-introduction/images/jaume_nit.jpg)
+![Gaston Sanchez - Dataflow](figure/GastonSanchez2.png)
 
 Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
 
 
-## Wichtiger für mich:
+## [Das Arbeiten mit XML Daten](https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf)
 
-[Das Arbeiten mit XML Daten](https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf)
-
-<https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf>
-
-![Manual von Gaston Sanchez](figure/GastonSanchez.PNG)
+![Gaston Sanchez - Webdaten bekommen](figure/GastonSanchez3.PNG)
 
 
 ## Funktionen im XML Paket
@@ -69,6 +65,7 @@ relation/62422"
 
 ```r
 library(xml2)
+# BE <- read_xml.raw(url)
 BE <- xmlParse(url)
 ```
 
@@ -111,6 +108,21 @@ xmlSize(xmltop[[1]])
 [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
 
+```r
+xpathApply(BE,"//tag[@k = 'population']")
+```
+
+```
+## [[1]]
+## <tag k="population" v="3440441"/> 
+## 
+## attr(,"class")
+## [1] "XMLNodeSet"
+```
+
+
+## Quelle für die Bevölkerungsgröße
+
 
 ```r
 xpathApply(BE,"//tag[@k = 'source:population']")
@@ -125,6 +137,35 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 ```
 
 
+## Etwas überraschend: 
+
+
+```r
+xpathApply(BE,"//tag[@k = 'name:ta']")
+```
+
+```
+## [[1]]
+## <tag k="name:ta" v="<U+0BAA><U+0BC6><U+0BB0><U+0BCD><U+0BB2><U+0BBF><U+0BA9><U+0BCD>"/> 
+## 
+## attr(,"class")
+## [1] "XMLNodeSet"
+```
+
+## Geographische Region
+
+
+```r
+region <- xpathApply(BE,"//tag[@k = 'geographical_region']")
+# regular expressions
+region[[1]]
+```
+
+```
+## <tag k="geographical_region" v="Barnim;Berliner Urstromtal;Teltow;Nauener Platte"/>
+```
+
+
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 
 
@@ -132,9 +173,9 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 
 <http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf>
 
-- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.org/RSXML/shortIntro.pdf)
+- Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.net/RSXML/shortIntro.pdf)
 
-<http://www.omegahat.org/RSXML/shortIntro.pdf>
+<http://www.omegahat.net/RSXML/shortIntro.pdf>
 
 ## Noch mehr Informationen
 
@@ -142,9 +183,9 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 
 <http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml>
 
-- [Information zu xquery](http://www.w3schools.com/xquery/)
+- [Tutorial zu xquery](http://www.w3schools.com/xml/xquery_intro.asp)
 
-<http://www.w3schools.com/xquery/>
+<http://www.w3schools.com/xml/xquery_intro.asp>
 
 - [R und das Web (für Anfänger), Teil II: XML und R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
 
@@ -167,7 +208,7 @@ citation("XML")
 ## 
 ##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
 ##   Parsing and Generating XML Within R and S-Plus. R package
-##   version 3.98-1.5. https://CRAN.R-project.org/package=XML
+##   version 3.98-1.4. https://CRAN.R-project.org/package=XML
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -175,7 +216,7 @@ citation("XML")
 ##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
 ##     author = {Duncan Temple Lang and the CRAN Team},
 ##     year = {2016},
-##     note = {R package version 3.98-1.5},
+##     note = {R package version 3.98-1.4},
 ##     url = {https://CRAN.R-project.org/package=XML},
 ##   }
 ## 
@@ -184,3 +225,8 @@ citation("XML")
 ## 'help("citation")'.
 ```
 
+## Links
+
+- [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
+
+- [Forschungsprojekte im Zusammenhang mit OpenStreetMap](http://wiki.openstreetmap.org/wiki/Research)

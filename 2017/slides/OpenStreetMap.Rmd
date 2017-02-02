@@ -3,12 +3,12 @@ title: "Das Arbeiten mit OSM Daten"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  ioslides_presentation: 
     keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,cache=T)
+knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F)
 ```
 
 
@@ -32,23 +32,19 @@ library("knitr")
 library("XML")
 ```
 
-![Gaston Sanchez - Dataflow](https://raw.githubusercontent.com/gastonstat/tutorial-R-web-data/master/01-introduction/images/jaume_nit.jpg)
+![Gaston Sanchez - Dataflow](figure/GastonSanchez2.png)
 
 Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
 
 
-## Wichtiger für mich:
+## [Das Arbeiten mit XML Daten](https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf)
 
-[Das Arbeiten mit XML Daten](https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf)
-
-<https://github.com/gastonstat/tutorial-R-web-data/blob/master/04-parsing-xml/04-parsing-xml.pdf>
-
-![Manual von Gaston Sanchez](figure/GastonSanchez.PNG)
+![Gaston Sanchez - Webdaten bekommen](figure/GastonSanchez3.PNG)
 
 
 ## Funktionen im XML Paket
 
-```{r,echo=F}
+```{r,echo=F,eval=T}
 names <- c("Function","Description","xmlName()","name of the node","xmlSize()","number of subnodes","xmlAttrs()","named character vector of all attributes","xmlGetAttr()","value of a single attribute","xmlValue()","contents of a leaf node","xmlParent()","name of parent node","xmlAncestors()","name of ancestor nodes","getSibling()","siblings to the right or to the left","xmlNamespace()","the namespace (if there’s one)")
 tab <- data.frame(t(array(names,dim=c(2,length(names)/2))))
 colnames(tab) <- tab[1,]
@@ -72,7 +68,8 @@ relation/62422"
 
 ```{r}
 library(xml2)
-BE <- read_xml.raw(url)
+# BE <- read_xml.raw(url)
+BE <- xmlParse(url)
 ```
 
 ![Administrative Grenzen  Berlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ExampleAdmBE.PNG)
@@ -93,9 +90,58 @@ xmlSize(xmltop[[1]])
 
 [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
+```{r}
+xpathApply(BE,"//tag[@k = 'population']")
+```
+
+
+## Quelle für die Bevölkerungsgröße
 
 ```{r}
 xpathApply(BE,"//tag[@k = 'source:population']")
+```
+
+
+## Etwas überraschend: 
+
+```{r}
+xpathApply(BE,"//tag[@k = 'name:ta']")
+```
+
+## Geographische Region
+
+```{r}
+region <- xpathApply(BE,"//tag[@k = 'geographical_region']")
+# regular expressions
+region[[1]]
+```
+
+## Landkreis
+
+![Barnim](figure/Barnim.png)
+
+
+## Weiteres Beispiel
+
+```{r}
+url2 <- "http://api.openstreetmap.org/api/0.6/node/25113879"
+obj2 <- xmlParse(url2)
+obj_amenity <- xpathApply(obj2,"//tag[@k = 'amenity']")[[1]]
+obj_amenity
+```
+
+## Wikipedia Artikel
+
+```{r}
+xpathApply(obj2,"//tag[@k = 'wikipedia']")[[1]]
+```
+
+## Das C und das A
+
+```{r}
+url3 <- "http://api.openstreetmap.org/api/0.6/node/303550876"
+obj3 <- xmlParse(url3)
+xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
 ```
 
 

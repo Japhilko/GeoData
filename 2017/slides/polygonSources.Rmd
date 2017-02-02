@@ -3,12 +3,12 @@ title: "Quellen für Polygone"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  ioslides_presentation: 
     keep_md: yes
 ---
 
 ```{r setup, include=FALSE,echo=F}
-knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F,message=F)
+knitr::opts_chunk$set(echo = TRUE,cache=T,eval=F,warning=F,message=F)
 ```
 
 
@@ -32,8 +32,12 @@ Quelle: <https://en.wikipedia.org/wiki/Shapefile>
 
 ## Global Adminastrative Boundaries - [GADM](http://www.gadm.org/) - NUTS level 1
 
-```{r,warning=F,message=F,eval=F}
+```{r}
 library(raster)
+```
+
+
+```{r,warning=F,message=F,eval=F}
 LUX1 <- getData('GADM', country='LUX', level=1)
 plot(LUX1)
 ```
@@ -93,9 +97,13 @@ plot(DEU3)
 setwd("D:/Daten/Daten/GeoDaten")
 ```
 
-
-```{r,echo=T,message=F}
+```{r}
 library(rgdal)
+```
+
+
+
+```{r,echo=T,message=F,eval=F}
 PLZ <- readOGR ("post_pl.shp","post_pl")
 ```
 
@@ -141,7 +149,7 @@ setwd("D:/Daten/Daten/GeoDaten/vg250_ebenen")
 ```
 
 
-```{r,cache=F,message=F,warning=F}
+```{r,cache=F,message=F,warning=F,eval=F}
 library(maptools)
 krs <- readShapePoly("vg250_krs.shp")
 plot(krs)
@@ -151,7 +159,7 @@ plot(krs)
 
 ## Kreise eines Bundeslandes
 
-```{r}
+```{r,eval=F}
 fds <- substr(krs@data$AGS,1,2)
 
 plot(krs[fds=="05",])
