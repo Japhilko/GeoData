@@ -165,6 +165,49 @@ region[[1]]
 ## <tag k="geographical_region" v="Barnim;Berliner Urstromtal;Teltow;Nauener Platte"/>
 ```
 
+## Landkreis
+
+![Barnim](figure/Barnim.png)
+
+
+## Weiteres Beispiel
+
+
+```r
+url2 <- "http://api.openstreetmap.org/api/0.6/node/25113879"
+obj2 <- xmlParse(url2)
+obj_amenity <- xpathApply(obj2,"//tag[@k = 'amenity']")[[1]]
+obj_amenity
+```
+
+```
+## <tag k="amenity" v="university"/>
+```
+
+## Wikipedia Artikel
+
+
+```r
+xpathApply(obj2,"//tag[@k = 'wikipedia']")[[1]]
+```
+
+```
+## <tag k="wikipedia" v="de:Universität Mannheim"/>
+```
+
+## Das C und das A
+
+
+```r
+url3 <- "http://api.openstreetmap.org/api/0.6/node/303550876"
+obj3 <- xmlParse(url3)
+xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
+```
+
+```
+## <tag k="opening_hours" v="Mo-Sa 09:00-20:00; Su,PH off"/>
+```
+
 
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 

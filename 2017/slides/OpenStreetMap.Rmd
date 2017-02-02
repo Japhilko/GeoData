@@ -180,6 +180,13 @@ xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
 citation("XML")
 ```
 
+## Das neuere Paket
+
+```{r}
+citation("xml2")
+```
+
+
 ## Links
 
 - [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
