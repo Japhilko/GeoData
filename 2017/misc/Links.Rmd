@@ -130,6 +130,7 @@ knitr::opts_chunk$set(echo = TRUE)
   
 - [Short osmar example](http://www.r-bloggers.com/a-short-example-with-r-package-osmar/)
 
+- [OpenStreetMap Package](http://blog.fellstat.com/?p=356)
 
 ## Beispiele
 
@@ -137,8 +138,14 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Metro in Paris](https://www.r-bloggers.com/metro-systems-over-time-part-1/)
 
-
+- [Using small cities to understand the crowd behind OpenStreetMap](http://www.personal.psu.edu/sdq107/publications/Using%20small%20cities%20to%20understand%20the%20crowd%20behind%20OpenStreetMap.pdf)
 
 - [Französische Orte](https://www.r-bloggers.com/french-villages-and-a-sort-of-resolution/)
 
 - [Finding antipodes using the globe and ggmap packages](https://www.r-bloggers.com/finding-antipodes-using-the-globe-and-ggmap-packages/)
+
+- [Waze Navigator](https://www.waze.com/de/)
+
+- [NeoGeography and the nature of geographic expertise](http://www.tandfonline.com/doi/abs/10.1080/17489720902950374)
+
+- [Public Participation GIS and Participatory GIS in the Era of GeoWeb – editorial for a special issue](https://povesham.wordpress.com/)
