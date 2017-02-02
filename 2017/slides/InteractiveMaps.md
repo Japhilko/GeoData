@@ -32,86 +32,17 @@ CampSites <- read.csv(url)
 ## Überblick über Daten zu Campingplätzen
 
 
+  X  name                                  tourism     website                                    
+---  ------------------------------------  ----------  -------------------------------------------
+  1  Campingplatz Winkelbachtal            camp_site   http://www.gruibingen.de/campingplatz.html 
+  2  Radler-Zeltplatz                      camp_site   NA                                         
+  3  Campingplatz des Naturfreundehauses   camp_site   NA                                         
+  4  Campingplatz Am Aichstruter Stausee   camp_site   NA                                         
+  5  NA                                    camp_site   NA                                         
+  6  Kandern                               camp_site   NA                                         
+  7  Campingplatz Baiersbronn-Obertal      camp_site   NA                                         
+  8  Campingplatz SchwabenmÃ¼hle           camp_site   NA                                         
 
-
-## Eine Karte für Deutschland bekommen
-
-
-```r
-library(raster)
-DEU1 <- getData('GADM', country='DEU', level=1)
-```
-
-
-
-
-
-
-```r
-library(maptools)
-plot(DEU1)
-```
-
-## Die Campingplätze hinzufügen
-
-
-```r
-plot(DEU1)
-points(y=CampSites$lat,x=CampSites$lon,
-       col="red",pch=20)
-```
-
-## Die Transparenz verändern
-
-
-```r
-plot(DEU1)
-points(y=CampSites$lat,x=CampSites$lon,col=rgb(0,1,0,.2),
-       pch=20)
-```
-
-## Eine Google Karte für Deutschland bekommen
-
-
-```r
-library(ggmap)
-DE_Map <- qmap("Germany", zoom=6, maptype="hybrid")
-DE_Map
-```
-
-## Die Punkte auf die Google Karte zeichnen
-
-
-```r
-DE_Map + geom_point(aes(x = lon, y = lat),
-                    data = CampSites)
-```
-
-## Einen Dichteplot zeichnen
-
-
-```r
-DE_Map + geom_density2d(data = CampSites,                  aes(x = lon, y = lat),lwd=1.5)
-```
-
-## Einen anderen Dichteplot
-
-
-```r
-DE_Map + stat_density2d(data = CampSites, 
-aes(x = lon, y = lat,fill = ..level..), bins = 100, 
-geom = 'polygon')
-```
-
-
-## Einen anderen Dichteplot
-
-
-```r
-DE_Map + stat_density2d(data=CampSites, 
-                        aes(x=lon,y=lat,fill=..level..,
-alpha = ..level..),bins=80,geom='polygon')
-```
 
 ## Notwendige Pakete
 
@@ -142,6 +73,40 @@ m <- leaflet() %>%
              popup=CampSites$name)
 m
 ```
+
+## [Stamen als Hintergrundkarte](https://rstudio.github.io/leaflet/basemaps.html)
+
+
+```r
+m %>% addProviderTiles("Stamen.Toner")
+```
+
+![Eine Stamen Karte als Hintergrund](figure/InteractiveStamen.PNG)
+
+## CartoDB als Hintergrund
+
+
+```r
+m %>% addProviderTiles("CartoDB.Positron")
+```
+
+![CartoDB als Hintergrund](figure/CartoDBInteractive.PNG)
+
+- [Info zu Map Tiles](https://www.mapbox.com/help/how-web-maps-work/)
+
+
+## [Mehr Hintergründe](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
+
+
+
+```r
+m %>% addProviderTiles("NASAGIBS.ViirsEarthAtNight2012")
+```
+
+![Lichter der Nacht](figure/LightsInteractive.PNG)
+
+
+
 
 ## Mehr Informationen hinzufügen
 
@@ -240,25 +205,6 @@ m1
 
 ![Als Website speichern](figure/snapshot2.png)
 
-## ggmap: Zwei Karten nebeneinander
-
-
-```r
-url <- "https://raw.githubusercontent.com/Japhilko/
-GeoData/master/2015/data/whcSites.csv"
-UNESCO <- read.csv(url)
-```
-
-
-
-## Die Stätten für Deutschland
-
-
-```r
-library(ggmap)
-ind <- UNESCO$states_name_en=="Germany"
-UNESCO_DE <- UNESCO[ind,]
-```
 
 ## Links und Quellen
 

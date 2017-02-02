@@ -9,6 +9,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,eval=F,message=F,warning=F)
+library(knitr)
 ```
 
 
@@ -22,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE,eval=F,message=F,warning=F)
 
 <http://wiki.openstreetmap.org/wiki/Overpass_API>
 
-```{r,echo=F}
+```{r,echo=F,eval=T}
 url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/CampSites_Germany.csv"
 ```
 
@@ -31,92 +32,17 @@ url <- "https://raw.githubusercontent.com/Japhilko/
 GeoData/master/2015/data/CampSites_Germany.csv"
 ```
 
-```{r}
+```{r,eval=T}
 CampSites <- read.csv(url)
 ```
 
 
 ## Überblick über Daten zu Campingplätzen
 
-```{r,echo=F}
+```{r,echo=F,eval=T}
 kable(CampSites[1:8,1:4])
 ```
 
-
-## Eine Karte für Deutschland bekommen
-
-```{r Get map of Germany,eval=F}
-library(raster)
-DEU1 <- getData('GADM', country='DEU', level=1)
-```
-
-```{r,eval=F,echo=F}
-setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/2016/slides/data")
-save(DEU1,file="DEU1.RData")
-```
-
-```{r,echo=F}
-load("data/DEU1.RData")
-```
-
-```{r,message=F}
-library(maptools)
-plot(DEU1)
-```
-
-## Die Campingplätze hinzufügen
-
-```{r plot Campsites}
-plot(DEU1)
-points(y=CampSites$lat,x=CampSites$lon,
-       col="red",pch=20)
-```
-
-## Die Transparenz verändern
-
-```{r}
-plot(DEU1)
-points(y=CampSites$lat,x=CampSites$lon,col=rgb(0,1,0,.2),
-       pch=20)
-```
-
-## Eine Google Karte für Deutschland bekommen
-
-```{r,message=F,warning=F}
-library(ggmap)
-DE_Map <- qmap("Germany", zoom=6, maptype="hybrid")
-DE_Map
-```
-
-## Die Punkte auf die Google Karte zeichnen
-
-```{r,warning=F}
-DE_Map + geom_point(aes(x = lon, y = lat),
-                    data = CampSites)
-```
-
-## Einen Dichteplot zeichnen
-
-```{r}
-DE_Map + geom_density2d(data = CampSites,                  aes(x = lon, y = lat),lwd=1.5)
-```
-
-## Einen anderen Dichteplot
-
-```{r}
-DE_Map + stat_density2d(data = CampSites, 
-aes(x = lon, y = lat,fill = ..level..), bins = 100, 
-geom = 'polygon')
-```
-
-
-## Einen anderen Dichteplot
-
-```{r}
-DE_Map + stat_density2d(data=CampSites, 
-                        aes(x=lon,y=lat,fill=..level..,
-alpha = ..level..),bins=80,geom='polygon')
-```
 
 ## Notwendige Pakete
 
@@ -144,6 +70,37 @@ m <- leaflet() %>%
              popup=CampSites$name)
 m
 ```
+
+## [Stamen als Hintergrundkarte](https://rstudio.github.io/leaflet/basemaps.html)
+
+```{r}
+m %>% addProviderTiles("Stamen.Toner")
+```
+
+![Eine Stamen Karte als Hintergrund](figure/InteractiveStamen.PNG)
+
+## CartoDB als Hintergrund
+
+```{r}
+m %>% addProviderTiles("CartoDB.Positron")
+```
+
+![CartoDB als Hintergrund](figure/CartoDBInteractive.PNG)
+
+- [Info zu Map Tiles](https://www.mapbox.com/help/how-web-maps-work/)
+
+
+## [Mehr Hintergründe](http://leaflet-extras.github.io/leaflet-providers/preview/index.html)
+
+
+```{r}
+m %>% addProviderTiles("NASAGIBS.ViirsEarthAtNight2012")
+```
+
+![Lichter der Nacht](figure/LightsInteractive.PNG)
+
+
+
 
 ## Mehr Informationen hinzufügen
 
@@ -236,25 +193,6 @@ m1
 
 ![Als Website speichern](figure/snapshot2.png)
 
-## ggmap: Zwei Karten nebeneinander
-
-```{r}
-url <- "https://raw.githubusercontent.com/Japhilko/
-GeoData/master/2015/data/whcSites.csv"
-UNESCO <- read.csv(url)
-```
-
-```{r,echo=F}
-kable(UNESCO[1:4,c("name_en","latitude","longitude")])
-```
-
-## Die Stätten für Deutschland
-
-```{r,cache=T,message=F}
-library(ggmap)
-ind <- UNESCO$states_name_en=="Germany"
-UNESCO_DE <- UNESCO[ind,]
-```
 
 ## Links und Quellen
 
