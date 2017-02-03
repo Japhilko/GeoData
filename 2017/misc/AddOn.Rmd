@@ -1,0 +1,31 @@
+---
+title: "AddOn - OSM und R"
+author: "Jan-Philipp Kolb"
+date: "3 Februar 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+## [osrm R package](https://github.com/rCarto/osrm)
+
+```{r,eval=F}
+# https://github.com/rCarto/osrm
+library("devtools")
+install_github("osrm","rCarto")
+```
+
+
+```{r}
+library(osrm)
+data("com")
+distCom <- osrmTable(loc = com[1:50, c("name","lon","lat")])
+kable(distCom$duration[1:5,1:5])
+```
+
+## Links
+
+- [Creating Maps in R](https://github.com/Robinlovelace/Creating-maps-in-R)

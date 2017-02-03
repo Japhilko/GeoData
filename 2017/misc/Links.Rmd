@@ -142,6 +142,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - [Französische Orte](https://www.r-bloggers.com/french-villages-and-a-sort-of-resolution/)
 
+- [Strassen und Schienen in Paris](https://www.r-bloggers.com/create-maps-with-maptools-r-package/) - [als pdf](http://coulmont.com/cartes/rcarto.pdf)
+
 - [Finding antipodes using the globe and ggmap packages](https://www.r-bloggers.com/finding-antipodes-using-the-globe-and-ggmap-packages/)
 
 - [Waze Navigator](https://www.waze.com/de/)
@@ -149,3 +151,5 @@ knitr::opts_chunk$set(echo = TRUE)
 - [NeoGeography and the nature of geographic expertise](http://www.tandfonline.com/doi/abs/10.1080/17489720902950374)
 
 - [Public Participation GIS and Participatory GIS in the Era of GeoWeb – editorial for a special issue](https://povesham.wordpress.com/)
+
+- [Code for Germany](http://codefor.de/en/projekte/alle/)

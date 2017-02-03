@@ -7,7 +7,7 @@ output:
     keep_md: yes
 ---
 
-## Worum geht es?
+## [Worum geht es?](http://blog.revolutionanalytics.com/2012/07/making-beautiful-maps-in-r-with-ggmap.html)
 
 ![Weine probieren im Napa Valley?](http://revolution-computing.typepad.com/.a/6a010534b1db25970b0177432e8f61970d-800wi)
 
@@ -96,6 +96,8 @@ osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
 ## Links
 
 - [Wiki zum Downlaod](http://wiki.openstreetmap.org/wiki/Downloading_data) von Openstreetmap Daten
+
+- [Openstreetmap Blog](http://blog.openstreetmap.de/)
 
 - Liste möglicher Datenquellen für räumliche Analysen ([weltweit](http://wiki.openstreetmap.org/wiki/Potential_Datasources) und in  [Deutschland](http://wiki.openstreetmap.org/wiki/DE:Potential_Datasources)
 )

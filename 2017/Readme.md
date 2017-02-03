@@ -29,7 +29,7 @@ Datenquellen
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC3_polygonSources.R))
 
 - __(B4) OpenStreetMap als Datenquelle__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.md) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osm_data.pdf))
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/osm_data.pdf))
 
 - __(B5) Öffentliche Daten zur freien Verfügung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.md) | 
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.pdf) |
