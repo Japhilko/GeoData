@@ -20,11 +20,6 @@ library("knitr")
 
 
 
-## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
-
-<www.openstreetmap.org/export>
-
-![osm export](http://www.azavea.com/blogs/atlas/wp-content/uploads/2015/11/openstreetmap_export-1024x505.png)
 
 ## Das R-Paket `XML` - Gaston Sanchez
 
@@ -52,6 +47,14 @@ tab <- tab[-1,]
 kable(tab)
 ```
 
+
+## [Einzelne Objekte finden](http://www.openstreetmap.org/export)
+
+<www.openstreetmap.org/export>
+
+![osm export](figure/admgrBer.PNG)
+
+
 ## Beispiel: administrative Grenzen Berlin
 
 [Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
@@ -60,14 +63,8 @@ kable(tab)
 url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
 ```
 
-```{r,eval=F}
-url <- "http://api.openstreetmap.org/api/0.6/
-relation/62422"
-```
-
-
 ```{r}
-library(xml2)
+# library(xml2)
 # BE <- read_xml.raw(url)
 BE <- xmlParse(url)
 ```
@@ -88,7 +85,7 @@ xmlSize(xmltop[[1]])
 
 ## Nutzung von Xpath
 
-[Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
+> [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
 ```{r}
 xpathApply(BE,"//tag[@k = 'population']")
@@ -101,12 +98,15 @@ xpathApply(BE,"//tag[@k = 'population']")
 xpathApply(BE,"//tag[@k = 'source:population']")
 ```
 
+-[Statistik Berlin Brandenburg](https://www.statistik-berlin-brandenburg.de/datenbank/inhalt-datenbank.asp)
 
 ## Etwas überraschend: 
 
 ```{r}
 xpathApply(BE,"//tag[@k = 'name:ta']")
 ```
+
+![](figure/OSMBerta.png)
 
 ## Geographische Region
 
@@ -144,6 +144,37 @@ obj3 <- xmlParse(url3)
 xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
 ```
 
+## Hin und weg
+
+```{r }
+url4 <- "http://api.openstreetmap.org/api/0.6/node/25439439"
+obj4 <- xmlParse(url4)
+xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
+```
+
+- [Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+
+## Exkurs: Bahnhofskategorien
+
+```{r}
+library(rvest)
+html_bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
+df_html_bhfkat <- html_table(html_nodes(html_bhfkat, "table")[[1]], fill = TRUE)
+```
+
+## Bahnhofskategorien Übersicht
+
+```{r,echo=F}
+library(knitr)
+kable(df_html_bhfkat)
+```
+
+
+## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
+
+<www.openstreetmap.org/export>
+
+![osm export](http://www.azavea.com/blogs/atlas/wp-content/uploads/2015/11/openstreetmap_export-1024x505.png)
 
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 

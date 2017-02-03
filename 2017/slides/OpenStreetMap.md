@@ -11,11 +11,6 @@ Jan-Philipp Kolb
 
 
 
-## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
-
-<www.openstreetmap.org/export>
-
-![osm export](http://www.azavea.com/blogs/atlas/wp-content/uploads/2015/11/openstreetmap_export-1024x505.png)
 
 ## Das R-Paket `XML` - Gaston Sanchez
 
@@ -49,6 +44,14 @@ Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
 9    getSibling()     siblings to the right or to the left     
 10   xmlNamespace()   the namespace (if there’s one)           
 
+
+## [Einzelne Objekte finden](http://www.openstreetmap.org/export)
+
+<www.openstreetmap.org/export>
+
+![osm export](figure/admgrBer.PNG)
+
+
 ## Beispiel: administrative Grenzen Berlin
 
 [Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
@@ -57,14 +60,7 @@ Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
 
 
 ```r
-url <- "http://api.openstreetmap.org/api/0.6/
-relation/62422"
-```
-
-
-
-```r
-library(xml2)
+# library(xml2)
 # BE <- read_xml.raw(url)
 BE <- xmlParse(url)
 ```
@@ -105,7 +101,7 @@ xmlSize(xmltop[[1]])
 
 ## Nutzung von Xpath
 
-[Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
+> [Xpath](https://de.wikipedia.org/wiki/XPath), the XML Path Language, is a query language for selecting nodes from an XML document. 
 
 
 ```r
@@ -136,6 +132,7 @@ xpathApply(BE,"//tag[@k = 'source:population']")
 ## [1] "XMLNodeSet"
 ```
 
+-[Statistik Berlin Brandenburg](https://www.statistik-berlin-brandenburg.de/datenbank/inhalt-datenbank.asp)
 
 ## Etwas überraschend: 
 
@@ -151,6 +148,8 @@ xpathApply(BE,"//tag[@k = 'name:ta']")
 ## attr(,"class")
 ## [1] "XMLNodeSet"
 ```
+
+![](figure/OSMBerta.png)
 
 ## Geographische Region
 
@@ -208,6 +207,62 @@ xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
 ## <tag k="opening_hours" v="Mo-Sa 09:00-20:00; Su,PH off"/>
 ```
 
+## Hin und weg
+
+
+```r
+url4 <- "http://api.openstreetmap.org/api/0.6/node/25439439"
+obj4 <- xmlParse(url4)
+xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
+```
+
+```
+## <tag k="railway:station_category" v="2"/>
+```
+
+- [Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+
+## Exkurs: Bahnhofskategorien
+
+
+```r
+library(rvest)
+```
+
+```
+## 
+## Attaching package: 'rvest'
+```
+
+```
+## The following object is masked from 'package:XML':
+## 
+##     xml
+```
+
+```r
+html_bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
+df_html_bhfkat <- html_table(html_nodes(html_bhfkat, "table")[[1]], fill = TRUE)
+```
+
+## Bahnhofskategorien Übersicht
+
+
+ Stufe  Bahnsteigkanten   Bahnsteiglänge    Reisende/Tag        Zughalte/Tag 
+------  ----------------  ----------------  ------------------  -------------
+     6  01                > 000 bis 090 m   00000 bis 00049     000 bis 0010 
+     5  02                > 090 bis 140 m   00050 bis 00299     011 bis 0050 
+     4  03 bis 04         > 140 bis 170 m   00300 bis 00999     051 bis 0100 
+     3  05 bis 09         > 170 bis 210 m   01000 bis 09999     101 bis 0500 
+     2  10 bis 14         > 210 bis 280 m   10.000 bis 49.999   501 bis 1000 
+     1  00i ab 15         > 280 m           00000i ab 50.000    000i ab 1001 
+
+
+## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
+
+<www.openstreetmap.org/export>
+
+![osm export](http://www.azavea.com/blogs/atlas/wp-content/uploads/2015/11/openstreetmap_export-1024x505.png)
 
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 
@@ -251,7 +306,7 @@ citation("XML")
 ## 
 ##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
 ##   Parsing and Generating XML Within R and S-Plus. R package
-##   version 3.98-1.4. https://CRAN.R-project.org/package=XML
+##   version 3.98-1.5. https://CRAN.R-project.org/package=XML
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -259,7 +314,7 @@ citation("XML")
 ##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
 ##     author = {Duncan Temple Lang and the CRAN Team},
 ##     year = {2016},
-##     note = {R package version 3.98-1.4},
+##     note = {R package version 3.98-1.5},
 ##     url = {https://CRAN.R-project.org/package=XML},
 ##   }
 ## 
@@ -267,6 +322,33 @@ citation("XML")
 ## the package DESCRIPTION file and may need manual editing, see
 ## 'help("citation")'.
 ```
+
+## Das neuere Paket
+
+
+```r
+citation("xml2")
+```
+
+```
+## 
+## To cite package 'xml2' in publications use:
+## 
+##   Hadley Wickham, James Hester and Jeroen Ooms (2017). xml2: Parse
+##   XML. R package version 1.1.0.
+##   https://CRAN.R-project.org/package=xml2
+## 
+## A BibTeX entry for LaTeX users is
+## 
+##   @Manual{,
+##     title = {xml2: Parse XML},
+##     author = {Hadley Wickham and James Hester and Jeroen Ooms},
+##     year = {2017},
+##     note = {R package version 1.1.0},
+##     url = {https://CRAN.R-project.org/package=xml2},
+##   }
+```
+
 
 ## Links
 
