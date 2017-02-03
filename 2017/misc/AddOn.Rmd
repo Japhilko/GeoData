@@ -26,6 +26,22 @@ distCom <- osrmTable(loc = com[1:50, c("name","lon","lat")])
 kable(distCom$duration[1:5,1:5])
 ```
 
-## Links
+## Das CRS ändern
+
+- [Projecting sp objects in R](http://gis.stackexchange.com/questions/31743/projecting-sp-objects-in-r)
+
+
+## Beispiele
+
+- [Turning R into a GIS – Mapping the weather in Germany](https://www.r-bloggers.com/turning-r-into-a-gis-mapping-the-weather-in-germany/)
+
 
 - [Creating Maps in R](https://github.com/Robinlovelace/Creating-maps-in-R)
+
+- [Commented Scripts to Build Maps with cartography](https://cran.r-project.org/web/packages/cartography/vignettes/cartography.html)
+
+- [Create and integrate maps in your R workflow with the cartography package](https://rgeomatic.hypotheses.org/842)
+
+- [Mapping the Transit System of Rio with GTFS data ](http://urbandemographics.blogspot.de/2015/03/mapping-transit-system-of-rio-with-gtfs.html)
+
+- [Maps and Data Visualisations with R](http://spatial.ly/r/)

@@ -92,6 +92,8 @@ m %>% addProviderTiles("CartoDB.Positron")
 
 ![CartoDB als Hintergrund](figure/CartoDBInteractive.PNG)
 
+- [CartoDB](https://carto.com/attribution)
+
 - [Info zu Map Tiles](https://www.mapbox.com/help/how-web-maps-work/)
 
 
@@ -208,8 +210,8 @@ m1
 
 ## Links und Quellen
 
-- <http://www.r-bloggers.com/the-leaflet-package-for-online-mapping-in-r/>
+- [Rbloggers Artikel zu Leaflet](http://www.r-bloggers.com/the-leaflet-package-for-online-mapping-in-r/)
 
-- <https://rstudio.github.io/leaflet/>
+- [Einführung in Leaflet für R](https://rstudio.github.io/leaflet/)
 
-
+- [Offline Karten mit RgoogleMaps und leaflet](https://blog.hwr-berlin.de/codeandstats/category/scientific-software/r/)

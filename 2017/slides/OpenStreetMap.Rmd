@@ -169,6 +169,18 @@ library(knitr)
 kable(df_html_bhfkat)
 ```
 
+## Nur fliegen ist schöner
+
+```{r }
+url5 <- "http://api.openstreetmap.org/api/0.6/way/162149882"
+obj5 <- xmlParse(url5)
+xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
+```
+
+
+
+
+
 
 ## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
 
