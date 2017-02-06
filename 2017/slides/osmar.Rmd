@@ -129,6 +129,14 @@ lh_2 <- as_sp(lh_1, "lines")
 plot(lh_2,col="red")
 ```
 
+## Sonderzeichen
+
+```{r}
+Orte <- c("Haßloch","Wörth","Bad Säckingen")
+Orte <- gsub("ß","ÃŸ",Orte)
+Orte <- gsub("ö","Ã¶",Orte)
+Orte <- gsub("ä","Ã¤",Orte)
+```
 
 
 ## Die Informationen manuell herunterladen

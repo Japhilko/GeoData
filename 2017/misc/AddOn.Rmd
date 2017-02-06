@@ -2,7 +2,9 @@
 title: "AddOn - OSM und R"
 author: "Jan-Philipp Kolb"
 date: "3 Februar 2017"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -25,6 +27,10 @@ data("com")
 distCom <- osrmTable(loc = com[1:50, c("name","lon","lat")])
 kable(distCom$duration[1:5,1:5])
 ```
+
+## Zu den Projektionen
+
+- [Adresse auslesen mit Nominatim](https://forum.openstreetmap.org/viewtopic.php?id=15811)
 
 ## Das CRS ändern
 
