@@ -60,26 +60,41 @@ type_obj,"(area)[",object,
 ```
 
 
+```{r,echo=F,eval=F}
+setwd("C:/Users/kolbjp/Documents/GitHub/GeoData/2017/data")
+saveXML(InfoList,file="saveXML.xml")
+```
+
+## XML Output
+
+![Splielplätze in Mannheim](figure/xmlPlaygorung.PNG)
+
 ## Das Arbeiten mit XML Daten (xpath)
 
 Die Liste der ID's mit dem Wert *playground*:
 
-```{r}
-node_id<- xpathApply(InfoList,
+```{r,eval=F}
+node_id <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ id")
+## node_id[[1]]
 ```
+
+![Erste node id](figure/nodeid.PNG)
 
 ## latitude und longitude bekommen
 
-```{r}
+```{r,eval=F}
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lat")
+# lat_x[[1]];lat_x[[2]]
 ```
 
-```{r}
+```{r,eval=F}
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lon")
 ```
+
+![Latitude Koordinate](figure/latpoi.PNG)
 
 ## Paket auf Github
 
@@ -88,16 +103,25 @@ library(devtools)
 install_github("Japhilko/GeoData/geosmdata")
 ```
 
-```{r,eval=F}
-library(geosmdata)
+```{r getplaygrounds,eval=T}
+library(gosmd)
 pg_MA <- get_osm_nodes(object="leisure=playground",
                        "Mannheim")
 info <- extract_osm_nodes(OSM.Data=pg_MA,
                           value="playground")
 ```
 
+## Ausschnitt der Ergebnisse
+
+```{r produceinttable,echo=F}
+library(knitr)
+kable(head(info[,c("leisure","lat","lon","note")]))
+```
+
+
+
 ## Link
 
 - [Tutorial zur Nutzung der Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
 
-<http://osmlab.github.io/learnoverpass/en/exercises/intro/1/>
+- [Vignette xml2](https://cran.r-project.org/web/packages/xml2/vignettes/modification.html)

@@ -83,7 +83,7 @@ OpenStreetMap und räumliche Statistik
 
 - __(D1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.md))
 
-- __(D2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/UsageAPI.md) | 
+- __(D2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/UsageAPI.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG1_UsageAPI.R))
 
 - __(D3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md)| 

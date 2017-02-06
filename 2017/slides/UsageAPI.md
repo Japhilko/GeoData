@@ -53,14 +53,21 @@ type_obj,"(area)[",object,
 ```
 
 
+
+
+## XML Output
+
+![Splielplätze in Mannheim](figure/xmlPlaygorung.PNG)
+
 ## Das Arbeiten mit XML Daten (xpath)
 
 Die Liste der ID's mit dem Wert *playground*:
 
 
 ```r
-node_id<- xpathApply(InfoList,
+node_id <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ id")
+# node_id[[1]]
 ```
 
 ## latitude und longitude bekommen
@@ -69,6 +76,7 @@ node_id<- xpathApply(InfoList,
 ```r
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lat")
+# lat_x
 ```
 
 
@@ -87,7 +95,7 @@ install_github("Japhilko/GeoData/geosmdata")
 
 
 ```r
-library(geosmdata)
+library(gosmd)
 pg_MA <- get_osm_nodes(object="leisure=playground",
                        "Mannheim")
 info <- extract_osm_nodes(OSM.Data=pg_MA,
@@ -98,4 +106,4 @@ info <- extract_osm_nodes(OSM.Data=pg_MA,
 
 - [Tutorial zur Nutzung der Overpass API](http://osmlab.github.io/learnoverpass/en/exercises/intro/1/)
 
-<http://osmlab.github.io/learnoverpass/en/exercises/intro/1/>
+- [Vignette xml2](https://cran.r-project.org/web/packages/xml2/vignettes/modification.html)
