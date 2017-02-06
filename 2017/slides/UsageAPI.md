@@ -67,8 +67,10 @@ Die Liste der ID's mit dem Wert *playground*:
 ```r
 node_id <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ id")
-# node_id[[1]]
+## node_id[[1]]
 ```
+
+![Erste node id](figure/nodeid.PNG)
 
 ## latitude und longitude bekommen
 
@@ -76,7 +78,7 @@ node_id <- xpathApply(InfoList,
 ```r
 lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lat")
-# lat_x
+# lat_x[[1]];lat_x[[2]]
 ```
 
 
@@ -85,22 +87,61 @@ lat_x <- xpathApply(InfoList,
 "//tag[@v= 'playground']/parent::node/@ lon")
 ```
 
+![Latitude Koordinate](figure/latpoi.PNG)
+
 ## Paket auf Github
 
 
 ```r
 library(devtools)
-install_github("Japhilko/GeoData/geosmdata")
+install_github("Japhilko/gosmd")
 ```
 
 
 ```r
 library(gosmd)
+```
+
+```
+## Loading required package: maptools
+```
+
+```
+## Loading required package: sp
+```
+
+```
+## Checking rgeos availability: TRUE
+```
+
+```
+## Loading required package: RJSONIO
+```
+
+```
+## Loading required package: stringr
+```
+
+```r
 pg_MA <- get_osm_nodes(object="leisure=playground",
                        "Mannheim")
 info <- extract_osm_nodes(OSM.Data=pg_MA,
                           value="playground")
 ```
+
+## Ausschnitt der Ergebnisse
+
+
+           leisure            lat        lon  note                                                     
+---------  -----------  ---------  ---------  ---------------------------------------------------------
+30560755   playground    49.51910   8.502807  NA                                                       
+76468450   playground    49.49633   8.539396  Rutsche, Schaukel, groÃŸer Sandkasten, Tischtennis       
+76468534   playground    49.49678   8.552959  NA                                                       
+76468535   playground    49.49230   8.548750  NA                                                       
+76468536   playground    49.50243   8.548140  Schaukel, Rutsche, Sandkasten, SpielhÃ¤user, Tischtennis 
+76468558   playground    49.49759   8.542036  NA                                                       
+
+
 
 ## Link
 
