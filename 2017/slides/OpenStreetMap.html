@@ -353,6 +353,14 @@ df_html_bhfkat &lt;- html_table(html_nodes(html_bhfkat, &quot;table&quot;)[[1]],
 </tr>
 </table>
 
+</article></slide><slide class=''><hgroup><h2>Nur fliegen ist schöner</h2></hgroup><article  id="nur-fliegen-ist-schoner">
+
+<pre class = 'prettyprint lang-r'>url5 &lt;- &quot;http://api.openstreetmap.org/api/0.6/way/162149882&quot;
+obj5 &lt;- xmlParse(url5)
+xpathApply(obj5,&quot;//tag[@k = &#39;iata&#39;]&quot;)[[1]]</pre>
+
+<pre >## &lt;tag k=&quot;iata&quot; v=&quot;MHG&quot;/&gt;</pre>
+
 </article></slide><slide class=''><hgroup><h2><a href='http://www.openstreetmap.org/export' title=''>OSM Ausschnitte herunterladen</a></h2></hgroup><article  id="osm-ausschnitte-herunterladen">
 
 <p>&lt;www.openstreetmap.org/export&gt;</p>

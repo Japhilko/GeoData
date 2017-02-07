@@ -257,6 +257,23 @@ df_html_bhfkat <- html_table(html_nodes(html_bhfkat, "table")[[1]], fill = TRUE)
      2  10 bis 14         > 210 bis 280 m   10.000 bis 49.999   501 bis 1000 
      1  00i ab 15         > 280 m           00000i ab 50.000    000i ab 1001 
 
+## Nur fliegen ist schöner
+
+
+```r
+url5 <- "http://api.openstreetmap.org/api/0.6/way/162149882"
+obj5 <- xmlParse(url5)
+xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
+```
+
+```
+## <tag k="iata" v="MHG"/>
+```
+
+
+
+
+
 
 ## [OSM Ausschnitte herunterladen](http://www.openstreetmap.org/export)
 
