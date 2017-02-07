@@ -36,6 +36,8 @@ Mit [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap) kann man eine 
 
 
 ```r
+devtools::install_github("dkahle/ggmap")
+devtools::install_github("hadley/ggplot2")
 install.packages("ggmap")
 ```
 
@@ -56,7 +58,7 @@ Und schon kann die erste Karte erstellt werden:
 qmap("Mannheim")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 
@@ -68,7 +70,7 @@ BBT <- qmap("Berlin Brandenburger Tor")
 BBT
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-6-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
 ## Karte für einen ganzen Staat
@@ -78,7 +80,7 @@ BBT
 qmap("Germany")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-7-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 - Wir brauchen ein anderes *zoom level*
 
@@ -93,7 +95,7 @@ qmap("Germany")
 qmap("Germany", zoom = 6)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-8-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 
@@ -139,7 +141,7 @@ qmap("baylor university", zoom = 14)
 qmap("Mannheim", zoom = 12)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ## Näher rankommen
 
@@ -148,7 +150,7 @@ qmap("Mannheim", zoom = 12)
 qmap('Mannheim', zoom = 13)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 
 ## Ganz nah dran
@@ -158,7 +160,7 @@ qmap('Mannheim', zoom = 13)
 qmap('Mannheim', zoom = 20)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 
 ## ggmap - maptype satellite
@@ -168,7 +170,7 @@ qmap('Mannheim', zoom = 20)
 qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-15-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 ## ggmap - maptype satellite zoom 20
 
@@ -177,7 +179,7 @@ qmap('Mannheim', zoom = 14, maptype="satellite")
 qmap('Mannheim', zoom = 20, maptype="hybrid")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-16-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 
 ## ggmap - maptype hybrid
@@ -187,7 +189,7 @@ qmap('Mannheim', zoom = 20, maptype="hybrid")
 qmap("Mannheim", zoom = 14, maptype="hybrid")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 
 ## Terrain/physical maps
@@ -204,7 +206,7 @@ qmap('Schriesheim', zoom = 14,
  maptype="terrain")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-18-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 ## Abstrahierte Karten ([http://www.designfaves.com](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities))
 
@@ -226,7 +228,7 @@ qmap('Mannheim', zoom = 14,
  maptype="watercolor",source="stamen")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-19-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 
 ## ggmap - source stamen
@@ -237,7 +239,7 @@ qmap('Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-20-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
 
 
 ## ggmap - maptype toner-lite
@@ -248,7 +250,7 @@ qmap('Mannheim', zoom = 14,
  maptype="toner-lite",source="stamen")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-21-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-21-1.png)<!-- -->
 
 ## ggmap - maptype toner-hybrid
 
@@ -258,7 +260,7 @@ qmap('Mannheim', zoom = 14,
  maptype="toner-hybrid",source="stamen")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-22-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 
 ## ggmap - maptype terrain-lines
@@ -269,7 +271,7 @@ qmap('Mannheim', zoom = 14,
  maptype="terrain-lines",source="stamen")
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-23-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-23-1.png)<!-- -->
 
 
 ## Graphiken speichern
@@ -419,7 +421,7 @@ geom_point(aes(x = lon, y = lat),
 data = ListPOI)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-33-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-33-1.png)<!-- -->
 
 ## Punkte in der Karte
 
@@ -430,7 +432,7 @@ geom_point(aes(x = lon, y = lat),col="red",
 data = ListPOI)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-34-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-34-1.png)<!-- -->
 
 
 ## ggmap - verschiedene Farben
@@ -443,7 +445,7 @@ geom_point(aes(x = lon, y = lat,col=color),
 data = ListPOI)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-35-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-35-1.png)<!-- -->
 
 ## ggmap - größere Punkte
 
@@ -455,7 +457,7 @@ geom_point(aes(x = lon, y = lat,col=color,size=size),
 data = ListPOI)
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-36-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-36-1.png)<!-- -->
 
 
 ## Eine Route von Google maps bekommen
@@ -482,7 +484,7 @@ qmap("Mannheim Hbf", zoom = 14) +
   )
 ```
 
-![](ggmap_files/figure-slidy/unnamed-chunk-38-1.png)<!-- -->
+![](ggmap_files/figure-html/unnamed-chunk-38-1.png)<!-- -->
 
 Wie fügt man Punkte hinzu
 
@@ -509,15 +511,13 @@ Wie fügt man Punkte hinzu
 
 - [Artikel von David Kahle und Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) zur Nutzung von `ggmap`.
 
-<http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf>
 
 - [Schnell eine Karte bekommen ](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
 
-<http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html>
 
 - [Karten machen mit R](http://www.kevjohnson.org/making-maps-in-r-part-2/)
 
-<http://www.kevjohnson.org/making-maps-in-r-part-2/>
+- [Problem mit der Installation von ggmap ](http://stackoverflow.com/questions/40642850/ggmap-error-geomrasterann-was-built-with-an-incompatible-version-of-ggproto)
 
 ## Take Home Message
 

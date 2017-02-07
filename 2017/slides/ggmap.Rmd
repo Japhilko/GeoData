@@ -1,10 +1,9 @@
 ---
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Kartentypen mit ggmap"
+title: "Kartentypen mit ggmap"
 author: "Jan-Philipp Kolb"
-date: "07 April 2016"
+date: "22 Februar 2017"
 output: 
-  ioslides_presentation: 
-    keep_md: yes
+  beamer_presentation
 ---
 
 ```{r setup, include=FALSE}
@@ -44,6 +43,8 @@ Mit [qmap](http://www.inside-r.org/packages/cran/ggmap/docs/qmap) kann man eine 
 - Zur Erstellung der Karten brauchen wir das Paket `ggmap`:
 
 ```{r,eval=F}
+devtools::install_github("dkahle/ggmap")
+devtools::install_github("hadley/ggplot2")
 install.packages("ggmap")
 ```
 
@@ -415,15 +416,13 @@ Wie fügt man Punkte hinzu
 
 - [Artikel von David Kahle und Hadley Wickham](http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf) zur Nutzung von `ggmap`.
 
-<http://journal.r-project.org/archive/2013-1/kahle-wickham.pdf>
 
 - [Schnell eine Karte bekommen ](http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html)
 
-<http://rpackages.ianhowson.com/cran/ggmap/man/get_map.html>
 
 - [Karten machen mit R](http://www.kevjohnson.org/making-maps-in-r-part-2/)
 
-<http://www.kevjohnson.org/making-maps-in-r-part-2/>
+- [Problem mit der Installation von ggmap ](http://stackoverflow.com/questions/40642850/ggmap-error-geomrasterann-was-built-with-an-incompatible-version-of-ggproto)
 
 ## Take Home Message
 
