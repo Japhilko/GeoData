@@ -202,19 +202,15 @@ xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
 
 - [Web Daten manipulieren](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
 
-<http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml>
-
 - [Tutorial zu xquery](http://www.w3schools.com/xml/xquery_intro.asp)
-
-<http://www.w3schools.com/xml/xquery_intro.asp>
 
 - [R und das Web (für Anfänger), Teil II: XML und R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
 
-<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
-
 - [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
 
-<http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf>
+- [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
+
+- [Forschungsprojekte im Zusammenhang mit OpenStreetMap](http://wiki.openstreetmap.org/wiki/Research)
 
 ## Referenzen
 
@@ -227,10 +223,3 @@ citation("XML")
 ```{r}
 citation("xml2")
 ```
-
-
-## Links
-
-- [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
-
-- [Forschungsprojekte im Zusammenhang mit OpenStreetMap](http://wiki.openstreetmap.org/wiki/Research)
