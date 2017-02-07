@@ -135,6 +135,15 @@ obj_amenity
 xpathApply(obj2,"//tag[@k = 'wikipedia']")[[1]]
 ```
 
+```{r,eval=F}
+xpathApply(obj2,"//tag[@k = 'wheelchair']")[[1]]
+```
+
+```{r,eval=F}
+xpathApply(obj2,"//tag[@k = 'name']")[[1]]
+```
+
+
 ## Das C und das A
 
 ```{r}
@@ -151,14 +160,19 @@ obj4 <- xmlParse(url4)
 xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
 ```
 
-- [Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+- [Wikipedia Artikel Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+
+![](figure/Bahnhofskategorien.PNG)
 
 ## Exkurs: Bahnhofskategorien
 
+- [rvest: Easily Harvest (Scrape) Web Pages](https://cran.r-project.org/web/packages/rvest/index.html)
+
 ```{r}
 library(rvest)
-html_bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
-df_html_bhfkat <- html_table(html_nodes(html_bhfkat, "table")[[1]], fill = TRUE)
+bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
+df_html_bhfkat <- html_table(html_nodes(bhfkat, "table")[[1]], 
+                             fill = TRUE)
 ```
 
 ## Bahnhofskategorien Übersicht
@@ -173,11 +187,18 @@ kable(df_html_bhfkat)
 ```{r }
 url5 <- "http://api.openstreetmap.org/api/0.6/way/162149882"
 obj5 <- xmlParse(url5)
-xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
+xpathApply(obj5,"//tag[@k = 'name']")[[1]]
 ```
 
 
+```{r}
+xpathApply(obj5,"//tag[@k = 'website']")[[1]]
+```
 
+
+```{r}
+xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
+```
 
 
 
@@ -190,15 +211,13 @@ xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 
 
-- [Daten aus XML extrahieren](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+- Deborah Nolan - [Extracting data from XML](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
 
-<http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf>
 
 - Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.net/RSXML/shortIntro.pdf)
 
-<http://www.omegahat.net/RSXML/shortIntro.pdf>
 
-## Noch mehr Informationen
+Noch mehr Informationen
 
 - [Web Daten manipulieren](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
 

@@ -1,17 +1,9 @@
----
-title: "Frei verfügbare öffentliche Daten"
-author: "Jan-Philipp Kolb"
-date: "22 Februar 2017"
-output: 
-  ioslides_presentation: 
-    keep_md: yes
----
+# Frei verfügbare öffentliche Daten
+Jan-Philipp Kolb  
+22 Februar 2017  
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F)
-library(knitr)
-```
+
 
 ## Datenzugang
 
@@ -58,18 +50,15 @@ Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/euro
 
 <http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
 
-```{r,echo=F,eval=F}
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
-```
 
-```{r,eval=F}
+
+
+```r
 library(xlsx)
 HHsr <- read.xlsx2("HHsavingRate.xls",1)
 ```
 
-```{r,echo=F,eval=F}
-kable(HHsr[1:4,1:6])
-```
+
 
 |geo                      |X2012Q3 |X2012Q4 |X2013Q1 |X2013Q2 |X2013Q3 |
 |:------------------------|:-------|:-------|:-------|:-------|:-------|
@@ -83,21 +72,12 @@ kable(HHsr[1:4,1:6])
 
 Viele Daten vorhanden, bspw. zum UNESCO Weltkulturerbe - [Link datahub.io](http://datahub.io/dataset/unesco-world-heritage-sites/resource/d4116195-44d8-4bc1-9f91-9b570870dc19)
 
-```{r,eval=F,echo=F}
-setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data")
-```
 
 
-```{r,echo=F,cache=T,eval=F}
-load("whc.RData")
-```
 
-```{r,echo=F,eval=F}
-whc2 <- whc[4:8,c("name_en","longitude","latitude","category_short")]
-whc2$longitude <- round(whc2$longitude,2)
-whc2$latitude <- round(whc2$latitude,2)
-kable(whc2)
-```
+
+
+
 
 |   |name_en                 | longitude| latitude|category_short |
 |:--|:-----------------------|---------:|--------:|:--------------|

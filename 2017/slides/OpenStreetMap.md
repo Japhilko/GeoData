@@ -194,6 +194,17 @@ xpathApply(obj2,"//tag[@k = 'wikipedia']")[[1]]
 ## <tag k="wikipedia" v="de:Universität Mannheim"/>
 ```
 
+
+```r
+xpathApply(obj2,"//tag[@k = 'wheelchair']")[[1]]
+```
+
+
+```r
+xpathApply(obj2,"//tag[@k = 'name']")[[1]]
+```
+
+
 ## Das C und das A
 
 
@@ -220,29 +231,20 @@ xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
 ## <tag k="railway:station_category" v="2"/>
 ```
 
-- [Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+- [Wikipedia Artikel Bahnhofskategorien](https://de.wikipedia.org/wiki/Bahnhofskategorie)
+
+![](figure/Bahnhofskategorien.PNG)
 
 ## Exkurs: Bahnhofskategorien
+
+- [rvest: Easily Harvest (Scrape) Web Pages](https://cran.r-project.org/web/packages/rvest/index.html)
 
 
 ```r
 library(rvest)
-```
-
-```
-## 
-## Attaching package: 'rvest'
-```
-
-```
-## The following object is masked from 'package:XML':
-## 
-##     xml
-```
-
-```r
-html_bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
-df_html_bhfkat <- html_table(html_nodes(html_bhfkat, "table")[[1]], fill = TRUE)
+bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
+df_html_bhfkat <- html_table(html_nodes(bhfkat, "table")[[1]], 
+                             fill = TRUE)
 ```
 
 ## Bahnhofskategorien Übersicht
@@ -263,15 +265,32 @@ df_html_bhfkat <- html_table(html_nodes(html_bhfkat, "table")[[1]], fill = TRUE)
 ```r
 url5 <- "http://api.openstreetmap.org/api/0.6/way/162149882"
 obj5 <- xmlParse(url5)
+xpathApply(obj5,"//tag[@k = 'name']")[[1]]
+```
+
+```
+## <tag k="name" v="City-Airport Mannheim"/>
+```
+
+
+
+```r
+xpathApply(obj5,"//tag[@k = 'website']")[[1]]
+```
+
+```
+## <tag k="website" v="http://www.flugplatz-mannheim.de/"/>
+```
+
+
+
+```r
 xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
 ```
 
 ```
 ## <tag k="iata" v="MHG"/>
 ```
-
-
-
 
 
 
@@ -284,31 +303,25 @@ xpathApply(obj5,"//tag[@k = 'iata']")[[1]]
 ## Mehr Beispiele, wie man mit XML Daten umgeht:
 
 
-- [Daten aus XML extrahieren](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
+- Deborah Nolan - [Extracting data from XML](http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf)
 
-<http://www.stat.berkeley.edu/~statcur/Workshop2/Presentations/XML.pdf>
 
 - Duncan Temple Lang - [A Short Introduction to the XML package for R](http://www.omegahat.net/RSXML/shortIntro.pdf)
 
-<http://www.omegahat.net/RSXML/shortIntro.pdf>
 
-## Noch mehr Informationen
+Noch mehr Informationen
 
 - [Web Daten manipulieren](http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml)
 
-<http://www.di.fc.ul.pt/~jpn/r/web/index.html#parsing-xml>
-
 - [Tutorial zu xquery](http://www.w3schools.com/xml/xquery_intro.asp)
-
-<http://www.w3schools.com/xml/xquery_intro.asp>
 
 - [R und das Web (für Anfänger), Teil II: XML und R](http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html)
 
-<http://giventhedata.blogspot.de/2012/06/r-and-web-for-beginners-part-ii-xml-in.html>
-
 - [String Manipulation](http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf)
 
-<http://gastonsanchez.com/Handling_and_Processing_Strings_in_R.pdf>
+- [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
+
+- [Forschungsprojekte im Zusammenhang mit OpenStreetMap](http://wiki.openstreetmap.org/wiki/Research)
 
 ## Referenzen
 
@@ -323,7 +336,7 @@ citation("XML")
 ## 
 ##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
 ##   Parsing and Generating XML Within R and S-Plus. R package
-##   version 3.98-1.5. https://CRAN.R-project.org/package=XML
+##   version 3.98-1.4. https://CRAN.R-project.org/package=XML
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -331,7 +344,7 @@ citation("XML")
 ##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
 ##     author = {Duncan Temple Lang and the CRAN Team},
 ##     year = {2016},
-##     note = {R package version 3.98-1.5},
+##     note = {R package version 3.98-1.4},
 ##     url = {https://CRAN.R-project.org/package=XML},
 ##   }
 ## 
@@ -351,24 +364,16 @@ citation("xml2")
 ## 
 ## To cite package 'xml2' in publications use:
 ## 
-##   Hadley Wickham, James Hester and Jeroen Ooms (2017). xml2: Parse
-##   XML. R package version 1.1.0.
-##   https://CRAN.R-project.org/package=xml2
+##   Hadley Wickham and James Hester (2016). xml2: Parse XML. R
+##   package version 1.0.0. https://CRAN.R-project.org/package=xml2
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
 ##   @Manual{,
 ##     title = {xml2: Parse XML},
-##     author = {Hadley Wickham and James Hester and Jeroen Ooms},
-##     year = {2017},
-##     note = {R package version 1.1.0},
+##     author = {Hadley Wickham and James Hester},
+##     year = {2016},
+##     note = {R package version 1.0.0},
 ##     url = {https://CRAN.R-project.org/package=xml2},
 ##   }
 ```
-
-
-## Links
-
-- [Nutzung, Vor- und Nachteile OSM](https://www.e-education.psu.edu/geog585/node/738)
-
-- [Forschungsprojekte im Zusammenhang mit OpenStreetMap](http://wiki.openstreetmap.org/wiki/Research)
