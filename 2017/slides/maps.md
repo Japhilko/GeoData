@@ -1,6 +1,6 @@
 # R-Paket maps
 Jan-Philipp Kolb  
-07 April 2016  
+22 Februar 2017  
 
 
 
@@ -257,7 +257,7 @@ head(world.cities)
 ```
 
 
-## Übebrlick über Datensatz Städte der Welt
+## Überblick über Datensatz Städte der Welt
 
 
 name                 country.etc      pop     lat    long   capital
@@ -339,7 +339,6 @@ map.cities(FCit_Bc,col="red",pch=20)
 
 - Arthur Charpentier auf R-bloggers - [Where people live](http://www.r-bloggers.com/where-people-live/)
 
-<http://www.r-bloggers.com/where-people-live/>
 
 
 ```r
@@ -362,7 +361,7 @@ for(i in 1:length(X$lat)) {
 
 Datenbasis - CIA World DataBank II
 
-> The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, / political boundaries. It was created by U.S. government in the 1980s.
+> The [CIA World DataBank](http://www.evl.uic.edu/pape/data/WDB/) is a collection of world map data, consisting of vector descriptions of land outlines, rivers, political boundaries. It was created by U.S. government in the 1980s.
 
 
 ## Verschiedene Projektionen
@@ -395,14 +394,8 @@ map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
 
 ## Mehr Links und Quellen
 
-- [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
-
-<http://mazamascience.com/WorkingWithData/?p=1277>
+- Steven Brey - [Using R — Working with Geospatial Data](http://mazamascience.com/WorkingWithData/?p=1277)
 
 - Robin Lovelace, James Cheshire - [Introduction to visualising spatial data in R](https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf)
 
-<https://cran.r-project.org/doc/contrib/intro-spatial-rl.pdf>
-
-- [Maps in R: Introduction - Drawing the map of Europe](http://www.milanor.net/blog/?p=534)
-
-<http://www.milanor.net/blog/?p=534>
+- Max Marchi - [Maps in R: Introduction - Drawing the map of Europe](http://www.milanor.net/blog/?p=534)
