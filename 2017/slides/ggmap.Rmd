@@ -3,7 +3,8 @@ title: "Kartentypen mit ggmap"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  beamer_presentation
+  ioslides_presentation: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
