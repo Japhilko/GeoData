@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 In diesem eintägigen Workshop geht es um die Beschaffung und Verarbeitung von räumlichen Informationen (Geodaten) in einem (sozial-) wissenschaftlichen Kontext.
 
 Motivation und Einleitung
----------------------
+---------------------   
 
 - __(A1) Motivation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/Einleitung.md)) - [Regionales](http://rpubs.com/Japhilko82/OpenStreetMap_Mannheim)
 
