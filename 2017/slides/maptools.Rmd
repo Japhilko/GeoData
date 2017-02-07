@@ -71,6 +71,14 @@ kable(wrld_simpl@data[1:4,1:5])
 head(wrld_simpl@data$NAME)
 ```
 
+```{r}
+head(wrld_simpl@data$ISO2)
+```
+
+```{r}
+head(wrld_simpl@data$POP2005)
+```
+
 
 ## Eine logische Abfrage
 
@@ -189,9 +197,9 @@ plot(Europe,col=rgb(val,val,0))
 ## Europa - Punkte hinzufügen
 
 ```{r}
-which(Europe$ISO2=="FR") # 14
+which(Europe$ISO2=="FR") # 10
 plot(Europe)
-points(Europe$LON[14],Europe$LAT[14],col="red",pch=20)
+points(Europe$LON[10],Europe$LAT[10],col="red",pch=20)
 ```
 
 ## Europa - Blasen hinzufügen
