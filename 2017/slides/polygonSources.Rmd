@@ -37,10 +37,12 @@ library(raster)
 ```
 
 
-```{r,warning=F,message=F,eval=F}
+```{r,warning=F,message=F,eval=T}
 LUX1 <- getData('GADM', country='LUX', level=1)
 plot(LUX1)
 ```
+
+
 
 ## Ein Blick auf die Daten
 
@@ -50,11 +52,11 @@ plot(LUXA)
 ```
 
 Koordinaten im polygon slot
-```{r,eval=F}
+```{r,eval=T}
 LUX1@polygons[[1]]@Polygons[[1]]@coords
 ```
 
-```{r,echo=F,eval=F}
+```{r,echo=F,eval=T}
 head(LUX1@polygons[[1]]@Polygons[[1]]@coords)
 ```
 
@@ -64,30 +66,34 @@ head(LUX1@polygons[[1]]@Polygons[[1]]@coords)
 head(LUX1@data)
 ```
 
+```{r,eval=T,echo=F}
+kable(head(LUX1@data))
+```
 
 ## [GADM](http://www.gadm.org/)- NUTS level 3
 
 <http://www.gadm.org/>
 
-```{r,warning=F,eval=F}
+```{r LUX3,warning=F,eval=T}
 LUX3 <- getData('GADM', country='LUX', level=3)
 plot(LUX3)
 ```
 
 ## [GADM](http://www.gadm.org/)- NUTS level 4
 
-```{r,warning=F,eval=F}
+```{r LUX4,warning=F,eval=T}
 LUX4 <- getData('GADM', country='LUX', level=4)
 plot(LUX4)
 ```
 
 ## [GADM](http://www.gadm.org/)- NUTS level 3
 
-```{r,warning=F}
+```{r DEU3,warning=F,eval=F}
 DEU3 <- getData('GADM', country='DEU', level=3)
 plot(DEU3)
 ```
 
+![](figure/DEU3.png)
 
 ## PLZ für Deutschland
 
@@ -134,7 +140,7 @@ MA <- PLZ[PLZ@data$PLZORT99=="Mannheim",]
 plot(MA)
 ```
 
-![Mannheim PLZ](figure/MannheimPLZ.png)
+![Mannheim PLZ](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/slides/figure/MannheimPLZ.png)
 
 ## Gemeinden in Deutschland
 
@@ -217,7 +223,7 @@ plot(onb[Com=="Kaiserslautern",],col="blue",add=T)
 
 ## Andere Quellen
 
-[World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
+- [World Port Index](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_62&pubCode=0015)
 
 ```{r,echo=F,eval=F}
 setwd("D:/Daten/Daten/GeoDaten/WPI_Shapefile")
@@ -249,29 +255,14 @@ library(mapdata)
 - [Eurostat Karten](http://epp.eurostat.ec.europa.eu/portal/page/portal/gisco_Geographical_information_maps/popups/
 references/administrative_units_statistical_units_1)
 
-<http://epp.eurostat.ec.europa.eu>
-
 - [Open linked data](https://www.ordnancesurvey.co.uk/business-and-government/products/opendata-products-grid.html)
 
-<https://www.ordnancesurvey.co.uk/>
-
 - [World Borders Datensatz](http://thematicmapping.org/downloads/world_borders.php)
-<http://thematicmapping.org>
 
 - [National Historical Information System](https://www.nhgis.org/)
 
-<https://www.nhgis.org/>
-
 - [Freie polygon Daten für die USA](http://www.freemapdata.com/html/free_polygon_data.html)
-
-<http://www.freemapdata.com/>
-
-## Noch mehr Quellen
 
 - [Spatial Data in R](https://science.nature.nps.gov/im/datamgmt/statistics/r/advanced/spatial.cfm)
 
-<https://science.nature.nps.gov/>
-
 - [ggmap und shapefiles](http://www.r-bloggers.com/shapefile-polygons-plotted-on-google-maps-using-ggmap-in-r-throw-some-throw-some-stats-on-that-mappart-2/)
-
-<http://www.r-bloggers.com/>
