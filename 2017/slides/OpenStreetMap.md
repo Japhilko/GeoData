@@ -32,17 +32,17 @@ Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
 ## Funktionen im XML Paket
 
 
-     1                2                                        
----  ---------------  -----------------------------------------
-2    xmlName()        name of the node                         
-3    xmlSize()        number of subnodes                       
-4    xmlAttrs()       named character vector of all attributes 
-5    xmlGetAttr()     value of a single attribute              
-6    xmlValue()       contents of a leaf node                  
-7    xmlParent()      name of parent node                      
-8    xmlAncestors()   name of ancestor nodes                   
-9    getSibling()     siblings to the right or to the left     
-10   xmlNamespace()   the namespace (if there’s one)           
+Function         Description                              
+---------------  -----------------------------------------
+xmlName()        name of the node                         
+xmlSize()        number of subnodes                       
+xmlAttrs()       named character vector of all attributes 
+xmlGetAttr()     value of a single attribute              
+xmlValue()       contents of a leaf node                  
+xmlParent()      name of parent node                      
+xmlAncestors()   name of ancestor nodes                   
+getSibling()     siblings to the right or to the left     
+xmlNamespace()   the namespace (if there’s one)           
 
 
 ## [Einzelne Objekte finden](http://www.openstreetmap.org/export)

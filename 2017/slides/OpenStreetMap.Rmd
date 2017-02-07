@@ -40,10 +40,9 @@ Seine Arbeit sieht man [hier](http://gastonsanchez.com/).
 ## Funktionen im XML Paket
 
 ```{r,echo=F,eval=T}
-names <- c("Function","Description","xmlName()","name of the node","xmlSize()","number of subnodes","xmlAttrs()","named character vector of all attributes","xmlGetAttr()","value of a single attribute","xmlValue()","contents of a leaf node","xmlParent()","name of parent node","xmlAncestors()","name of ancestor nodes","getSibling()","siblings to the right or to the left","xmlNamespace()","the namespace (if there’s one)")
+names <- c("xmlName()","name of the node","xmlSize()","number of subnodes","xmlAttrs()","named character vector of all attributes","xmlGetAttr()","value of a single attribute","xmlValue()","contents of a leaf node","xmlParent()","name of parent node","xmlAncestors()","name of ancestor nodes","getSibling()","siblings to the right or to the left","xmlNamespace()","the namespace (if there’s one)")
 tab <- data.frame(t(array(names,dim=c(2,length(names)/2))))
-colnames(tab) <- tab[1,]
-tab <- tab[-1,]
+colnames(tab) <- c("Function","Description")
 kable(tab)
 ```
 
