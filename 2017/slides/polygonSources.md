@@ -1251,12 +1251,6 @@ head(LUX1@data)
 ```
 
 
-```r
-kable(head(LUX1@data))
-```
-
-
-
  OBJECTID   ID_0  ISO   NAME_0        ID_1  NAME_1         HASC_1    CCN_1  CCA_1   TYPE_1     ENGTYPE_1   NL_NAME_1   VARNAME_1            
 ---------  -----  ----  -----------  -----  -------------  -------  ------  ------  ---------  ----------  ----------  ---------------------
         1    131  LUX   Luxembourg       1  Diekirch       LU.DI        NA          District   District                Dikrech|Dikkrich     
@@ -1293,6 +1287,7 @@ DEU3 <- getData('GADM', country='DEU', level=3)
 plot(DEU3)
 ```
 
+![](figure/DEU3.png)
 
 ## PLZ für Deutschland
 
@@ -1339,11 +1334,7 @@ plot(MA)
 
 ## Gemeinden in Deutschland
 
-Bundesamt für Kartographie und Geodäsie (BKG)
-
-[Link zum Download der Karten](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
-
-<http://www.geodatenzentrum.de/>
+[Bundesamt für Kartographie und Geodäsie (BKG)](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
 
 
 

@@ -144,11 +144,7 @@ plot(MA)
 
 ## Gemeinden in Deutschland
 
-Bundesamt für Kartographie und Geodäsie (BKG)
-
-[Link zum Download der Karten](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
-
-<http://www.geodatenzentrum.de/>
+[Bundesamt für Kartographie und Geodäsie (BKG)](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
 
 ```{r,eval=F,echo=F}
 setwd("D:/Daten/Daten/GeoDaten/vg250_ebenen")
