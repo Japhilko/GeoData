@@ -1,32 +1,50 @@
----
-title: "AddOn - OSM und R"
-author: "Jan-Philipp Kolb"
-date: "3 Februar 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# AddOn - OSM und R
+Jan-Philipp Kolb  
+3 Februar 2017  
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-library(knitr)
-```
+
 
 ## [osrm R package](https://github.com/rCarto/osrm)
 
-```{r,eval=F}
+
+```r
 # https://github.com/rCarto/osrm
 library("devtools")
 install_github("osrm","rCarto")
 ```
 
 
-```{r}
+
+```r
 library(osrm)
+```
+
+```
+## Data (c) OpenStreetMap contributors, ODbL 1.0. http://www.openstreetmap.org/copyright
+```
+
+```
+## Routes: OSRM. http://project-osrm.org/
+```
+
+```
+## If you plan to use the OSRM public API, read the OSRM API Usage Policy:
+## https://github.com/Project-OSRM/osrm-backend/wiki/Api-usage-policy
+```
+
+```r
 data("com")
 distCom <- osrmTable(loc = com[1:50, c("name","lon","lat")])
 kable(distCom$duration[1:5,1:5])
 ```
+
+               Bethune   Annezin   Denderleeuw   Haaltert   Locon
+------------  --------  --------  ------------  ---------  ------
+Bethune            0.0       7.4         111.4      107.0     9.7
+Annezin            6.6       0.0         115.4      111.0     8.8
+Denderleeuw      115.3     119.2           0.0       13.9   114.0
+Haaltert         111.2     115.1          13.9        0.0   109.9
+Locon              9.0       8.6         108.8      104.4     0.0
 
 ## Zu den Projektionen
 
@@ -52,10 +70,6 @@ kable(distCom$duration[1:5,1:5])
 
 - [Maps and Data Visualisations with R](http://spatial.ly/r/)
 
-- [Can a census-tract-level regression analysis untangle correlation between lead and crime?](http://andrewgelman.com/2016/11/11/29443/)
-
 ## Das Potential von Geodaten
 
 - Peter Staub - [Über das Potenzial und die Grenzen der semantischen Interoperabilität von Geodaten ](http://www.igp-data.ethz.ch/berichte/Blaue_Berichte_PDF/102.pdf)
-
-- [How to Learn Geography With Your Hands](http://www.atlasobscura.com/articles/tactile-maps-blind-geography)
