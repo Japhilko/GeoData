@@ -20,18 +20,18 @@ Aufgabe 1: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/maste
 Datenquellen
 ---------------------
 
-- __(B1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](https://github.com/Japhilko/GeoData/blob/master/2017/slides/maps.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC1_maps.R) )
+- __(B1) Politische und thematische Karten mit dem R-Paket [maps](https://cran.r-project.org/web/packages/maps/index.html)__ ([Browser ](slides/maps.md) |  [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maps.pdf) | [blog](https://rpossib.wordpress.com/2015/09/18/political-maps-with-r/) | [rcode](sildes/maps.R) )
 
-- __(B2) Choroplethen mit dem R-Paket maptools__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/maptools.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf)
-| [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC2_maptools.R))
+- __(B2) Choroplethen mit dem R-Paket maptools__ ([Browser](slides/maptools.md) | [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/maptools.pdf)
+| [rcode](slides/maptools.R))
 
-- __(B3) Internetquellen für Geodaten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.md)| [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.pdf)|
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesC3_polygonSources.R))
+- __(B3) Internetquellen für Geodaten__ ([Browser](slides/polygonSources.md)| [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/polygonSources.pdf)|
+[rcode](slides/polygonSources.R))
 
-- __(B4) OpenStreetMap als Datenquelle__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.md) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/osm_data.pdf))
+- __(B4) OpenStreetMap als Datenquelle__ ([Browser](slides/OpenStreetMap.md) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/osm_data.pdf) | [rcode](slides/OpenStreetMap.R))
 
-- __(B5) Öffentliche Daten zur freien Verfügung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.md) | 
+- __(B5) Öffentliche Daten zur freien Verfügung__  ([Browser](slides/DataPUF.md) | 
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R)
 )
@@ -42,8 +42,8 @@ Aufgabe 2: [Deutschlands Gemeinden](https://github.com/Japhilko/GeoData/blob/mas
 Verbindung, Editierung und Einfärbung
 ---------------------
 
-- __(C1) Verbindung von Daten__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Matching.md) |
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE1_Matching.R))
+- __(C1) Verbindung von Daten__ ([Browser](slides/Matching.md) |
+[rcode](slides/Matching.R))
 of data sources
 
 - __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md)| 

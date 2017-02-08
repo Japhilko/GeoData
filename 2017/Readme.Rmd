@@ -53,8 +53,8 @@ Verbindung, Editierung und Einfärbung
 [rcode](slides/Matching.R))
 of data sources
 
-- __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md)| 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE2_spplot.R))
+- __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](slides/spplot.md)| 
+[rcode](slides/spplot.R))
 
 - __(C3) Shapefiles zusammenfassen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE3_CombineShapefiles.R)

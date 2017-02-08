@@ -1,17 +1,9 @@
----
-title: "Das R-Paket sp"
-author: "Jan-Philipp Kolb"
-date: "22 Februar 2017"
-output: 
-  slidy_presentation: 
-    keep_md: yes
----
+# Das R-Paket sp
+Jan-Philipp Kolb  
+22 Februar 2017  
 
 
-```{r,echo=F,warning=F}
-library(knitr)
-ca <- T
-```
+
 
 
 ## Beispiel: US Arbeitslosigkeit 
@@ -21,7 +13,8 @@ ca <- T
 
 Die Daten bekommen:
 
-```{r,warning=F,message=F}
+
+```r
 library(maps)
 data(unemp)
 data(county.fips)
@@ -29,20 +22,25 @@ data(county.fips)
 
 ## Farbverläufe
 
-```{r,eval=F}
+
+```r
 install.packages("colorRamps")
 ```
 
 
-```{r,warning=F}
+
+```r
 library(colorRamps)
 colors <- blue2red(6)
 barplot(1:6,col=colors)
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
+
 ## Beispiel: US Arbeitslosigkeit - Farbschattierung
 
-```{r}
+
+```r
 unemp$colorSteps <- cut(unemp$unemp, 
           c(0, 2, 4, 6, 8,10, 100))
 colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
@@ -52,10 +50,13 @@ colorsmatch <- unemp$colorSteps[match(county.fips$fips,
 
 ## Beispiel: US Arbeitslosigkeit
 
-```{r}
+
+```r
 map("county", col = colors[colorsmatch], 
     fill = TRUE)
 ```
+
+![](spplot_files/figure-slidy/unnamed-chunk-6-1.png)<!-- -->
 
 
 
@@ -65,7 +66,8 @@ map("county", col = colors[colorsmatch],
 - Authoren: Edzer Pebesma, Roger Bivand, Barry Rowlingson, Virgilio Gomez-Rubio et. al.
 - Viele [Einführungen](http://ifgi.uni-muenster.de/~epebe_01/Aufbaukurs/R/slides_R.pdf) sind verfügbar
 
-```{r,message=F,cache=ca,warning=F}
+
+```r
 library(sp)
 ```
 
@@ -74,7 +76,8 @@ library(sp)
 - Ein erstes Beispiel unter Verwendung von Daten aus `maptools` ([ISO2-codes](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2))
 
 
-```{r,message=F,cache=ca,warning=F}
+
+```r
 library(maptools)
 data("wrld_simpl")
 ISO2codes <- wrld_simpl@data$ISO2
@@ -85,66 +88,92 @@ my_map <- wrld_simpl[ind,]
 
 ## Die Karte zeichnen
 
-```{r,message=F}
+
+```r
 library(maptools)
 plot(my_map)
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-9-1.png)<!-- -->
+
 
 ## Der Datensatz
 
-```{r,eval=F,cache=ca,warning=F}
+
+```r
 head(my_map@data)
 ```
 
 
-```{r,echo=F,cache=ca,warning=F}
-library(knitr)
-kable(my_map@data[1:4,c("ISO2","NAME","AREA","POP2005","REGION")])
-```
+
+      ISO2   NAME            AREA    POP2005   REGION
+----  -----  ------------  ------  ---------  -------
+FRA   FR     France         55010   60990544      150
+DEU   DE     Germany        34895   82652369      150
+AUT   AT     Austria         8245    8291979      150
+CHE   CH     Switzerland     4000    7424389      150
 
 
 
 ## Ein weiteres Beispiel
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005")
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
+
 ## Nutzung von `colorRamps`
 
-```{r,message=F,cache=ca,warning=F}
+
+```r
 library(colorRamps)
 spplot(my_map,"POP2005",col.regions=blue2red(100))
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
+
 ## Nutzung von `colorRamps`
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=blue2green(100))
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
+
 ## Nutzung von `colorRamps`
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=green2red(100))
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-15-1.png)<!-- -->
+
 ## Nutzung von `colorRamps`
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=blue2yellow(100))
 ```
 
+![](spplot_files/figure-slidy/unnamed-chunk-16-1.png)<!-- -->
+
 ## Nutzung von `colorRamps`
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,"POP2005",col.regions=matlab.like(100))
 ```
+
+![](spplot_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
 
 ## Nutzung von synthetischen Daten
 
 Synthetische Daten erzeugen (Bevölkerung 2010)
 
-```{r,cache=ca,warning=F}
+
+```r
 my_map$Pop2010 <- my_map$POP2005 + 
                     runif(length(my_map),-10000,10000)
 ```
@@ -152,10 +181,13 @@ my_map$Pop2010 <- my_map$POP2005 +
 
 ## Farben wie bei [matlab](http://de.mathworks.com/products/matlab/)
 
-```{r,cache=ca,warning=F}
+
+```r
 spplot(my_map,c("POP2005","Pop2010"),
        col.regions=matlab.like(100))
 ```
+
+![](spplot_files/figure-slidy/unnamed-chunk-19-1.png)<!-- -->
 
 ## Mehr Beispiele 
 
