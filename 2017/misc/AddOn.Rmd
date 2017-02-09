@@ -39,6 +39,21 @@ kable(distCom$duration[1:5,1:5])
 
 ## Beispiele
 
+- [How to map geospatial data: USA rivers](https://www.r-bloggers.com/how-to-map-geospatial-data-usa-rivers/)
+
+```{r}
+library(tidyverse)
+library(maptools)
+url.river_data <- url("http://sharpsightlabs.com/wp-content/datasets/usa_rivers.RData")
+
+
+# LOAD DATA
+# - this will retrieve the data from the URL
+load(url.river_data)
+```
+
+- [An Introduction to Spatial Econometrics in R](https://www.r-bloggers.com/an-introduction-to-spatial-econometrics-in-r/)
+
 - [Turning R into a GIS – Mapping the weather in Germany](https://www.r-bloggers.com/turning-r-into-a-gis-mapping-the-weather-in-germany/)
 
 
