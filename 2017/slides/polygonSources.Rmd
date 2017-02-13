@@ -52,7 +52,7 @@ plot(LUXA)
 ```
 
 Koordinaten im polygon slot
-```{r,eval=T}
+```{r,eval=F}
 LUX1@polygons[[1]]@Polygons[[1]]@coords
 ```
 
