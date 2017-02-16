@@ -1,5 +1,5 @@
 ---
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Einleitung und Motivation"
+title: "Einleitung und Motivation"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
@@ -22,7 +22,6 @@ qmap("Mannheim A5,6",zoom=18, maptype = "satellite")
 ```
 
 
-<div class="columns-2">
 ![MZES](figure/mzesma.PNG)
 
 - Spatial Turn - warum dieser Kurs
@@ -30,8 +29,6 @@ qmap("Mannheim A5,6",zoom=18, maptype = "satellite")
 - Verfügbare Daten
 - Neogeograpie
 - Realisierung
-</div>
-
 
 
 ## Motivation - Geschichte

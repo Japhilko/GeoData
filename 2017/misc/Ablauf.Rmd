@@ -2,7 +2,9 @@
 title: "Ablauf"
 author: "Jan-Philipp Kolb"
 date: "16 Januar 2017"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}

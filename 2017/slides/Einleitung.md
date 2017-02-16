@@ -1,4 +1,4 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Einleitung und Motivation
+# Einleitung und Motivation
 Jan-Philipp Kolb  
 22 Februar 2017  
 
@@ -11,7 +11,6 @@ Jan-Philipp Kolb
 
 
 
-<div class="columns-2">
 ![MZES](figure/mzesma.PNG)
 
 - Spatial Turn - warum dieser Kurs
@@ -19,8 +18,6 @@ Jan-Philipp Kolb
 - Verfügbare Daten
 - Neogeograpie
 - Realisierung
-</div>
-
 
 
 ## Motivation - Geschichte
@@ -177,4 +174,17 @@ Resourcen
 Dargestellt werden OpenStreetMap Daten, die mit der Overpass API heruntergeladen wurden.
 
 ![StrassenBerlin](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/streets_Berlin2.png)
+
+## Verschiedene Kartentypen
+
+- [Create and integrate maps in your R workflow with the cartography package](https://rgeomatic.hypotheses.org/842)
+
+
+- [Das Paket cartography](https://cran.r-project.org/web/packages/cartography/vignettes/cartography.html)
+
+
+```r
+# install.packages("cartography")
+library(cartography)
+```
 

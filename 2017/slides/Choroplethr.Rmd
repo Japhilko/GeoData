@@ -1,0 +1,186 @@
+---
+title: "Nutzung von GeoDaten in den Sozialwissenschaften - R-Paket Choroplethr"
+author: "Jan-Philipp Kolb"
+date: "08 April 2016"
+output: slidy_presentation
+---
+
+```{r,echo=F,warning=F}
+library(knitr)
+library(DT)
+internet <- F
+Nint <- !internet
+par(mai=c(0,0,0,0))
+```
+
+## Einleitung
+
+- [`choroplethr`](https://cran.r-project.org/web/packages/choroplethr/index.html) - Vereinfachung der Erstellung von Choroplethen in R
+
+- Paket von [Ari Lamstein](http://www.arilamstein.com/)
+
+- [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html)
+- World Development Indicators (World Bank)
+
+- Folgendes basiert auf der [Vignette](https://cran.r-project.org/web/packages/choroplethr/index.html) des `choroplethr`-Paketes
+
+## Was ist ein Choropleth
+
+Ein Choropleth ist eine Karte, die
+
+- geografische Grenzen zeigt.
+- bei denen Bereiche basierend auf Metriken eingefärbt werden.
+
+Choroplethen sind nützlich für die Visualisierung von Daten, wo geografische Grenzen eine natürliche Einheit der Aggregation sind. 
+
+## Bevölkerungsschätzungen für den US-Staaten
+
+```{r,warning=F,message=F,echo=F}
+library("choroplethr")
+data(df_pop_state)
+```
+
+`df_pop_state` ist ein Datensatz , der in dem Paket `choroplethr` enthalten ist, es enthält Schätzungen zu den US-Staaten für das Jahr 2012.
+
+```{r,echo=F,eval=internet}
+library("choroplethrMaps")
+datatable(df_pop_state,options = list(pageLength = 5))
+```
+
+```{r}
+library("choroplethrMaps")
+```
+
+```{r,echo=F}
+kable(head(df_pop_state))
+```
+
+## `choroplethr` - [Hallo Welt](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/a-introduction.html) 
+
+Die Karte zeigt die US Bevölkerungsschätzung für die US-Staaten und das Jahr 2012:
+
+Wir bekommen eine Choroplethenkarte mit nur einem Argument:
+
+```{r, fig.width=8, fig.height=6}
+state_choropleth(df_pop_state)
+```
+
+
+Aber wir können auch einen Titel erstellen und die Legende benennen:
+
+```{r, fig.width=8, fig.height=6}
+state_choropleth(df_pop_state, title="2012 US State Population Estimates", legend="Population")
+```
+
+## [Nur drei Staaten darstellen](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+
+```{r, fig.width=8, fig.height=6}
+state_choropleth(df_pop_state,
+                 title      = "2012 Population Estimates",
+                 legend     = "Population",
+                 num_colors = 1,
+                 zoom       = c("california", "washington", "oregon"))
+```
+
+
+## US County Chroplethen
+
+[Choroplethen der US Counties](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html)
+
+<http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/c-county-choropleth.html>
+
+```{r,eval=F}
+?df_pop_county
+?county_choropleth
+```
+
+## Eine Karte der US Counties
+
+```{r, fig.width=8, fig.height=6}
+data(df_pop_county)
+county_choropleth(df_pop_county)
+```
+
+
+## [Country Choroplethen ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+
+```{r, fig.width=8, fig.height=6}
+data(df_pop_country)
+country_choropleth(df_pop_country,
+              title      = "2012 Population Estimates",
+              legend     = "Population",
+              num_colors = 1,
+              zoom       = c("united states of america",
+                             "mexico", "canada"))
+```
+
+
+
+## Weltbank Daten
+
+```{r,cache=T,warning=F,message=F, fig.width=8, fig.height=6}
+library(choroplethr)
+library(WDI) 
+choroplethr_wdi(code="SP.POP.TOTL", year=2012, 
+                title="2012 Population", 
+                num_colors=1)
+```
+
+## [Lebenserwartung](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/f-world-bank-data.html)
+
+```{r,warning=F,message=F, fig.width=8, fig.height=6}
+library(WDI) 
+choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012,
+                title="2012 Life Expectancy")
+```
+
+
+## Ein weiterer Datensatz
+
+```{r,cache=T}
+data(df_president_ts)
+```
+
+Mit dem Fragezeichen bekommen wir Hilfe
+
+```{r,eval=F}
+?df_president_ts
+```
+
+```{r}
+kable(df_president_ts[1:8,1:8])
+```
+
+
+## Resourcen
+
+```{r}
+citation("choroplethr")
+```
+
+## Resources / Links
+
+- [Einführung - Was sind Choroplethen](https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html)
+
+<https://cran.r-project.org/web/packages/choroplethr/vignettes/a-introduction.html>
+
+- [Beschreibung](http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html) der Nutzung des  `choroplethr` Paketes
+
+<http://radar.oreilly.com/2014/01/new-choropleth-package-in-r.html>
+- Plot the [US states](https://cran.r-project.org/web/packages/choroplethr/vignettes/b-state-choropleth.html) with `choroplethr`
+
+- [Weltbankdaten in Karten darstellen](https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html) mit `choroplethr`
+
+<https://cran.r-project.org/web/packages/choroplethr/vignettes/f-world-bank-data.html>
+
+- [Revolutions-blog](http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html) über das `choroplethr` Paket
+
+<http://blog.revolutionanalytics.com/2014/01/easy-data-maps-with-r-the-choroplethr-package-.html>
+
+- [trulia](http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/)-blog über das `choroplethr` Paket
+
+<http://www.trulia.com/tech/2014/01/15/the-choroplethr-package-for-r/>
+
+- [Präsentation von Ari Lamstein](http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/) über das `choroplethr` Paket
+
+<http://www.r-bloggers.com/slides-for-my-upcoming-talk-mapping-census-data-in-r/>

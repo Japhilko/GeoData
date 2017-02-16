@@ -36,7 +36,7 @@ Datenquellen
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R)
 )
 
-Aufgabe: [Deutschlands Gemeinden](https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Zensus_Ergebnisse.md)
+Aufgabe: [Deutschlands Gemeinden](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
 
 Verbindung, Editierung und Einfärbung
@@ -54,14 +54,12 @@ of data sources
 )
 
 
-Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.Rmd)
+Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Verbindung.Rmd)
 
 - __(C4) Thematische Karten mit dem R-Paket `tmap`__ 
-([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.md) | 
+([Browser](slides/tmap.md) | 
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF1_tmap.R))
-
-- Beispiel: *Maps with Eurostat data* ([pdf](https://github.com/Japhilko/GeoData/blob/master/2015/slides/eurostatMapsR.pdf) | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_EurostatMaps.R))
 
 - __(C5) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md) | 
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.pdf) | 

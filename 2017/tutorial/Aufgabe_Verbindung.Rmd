@@ -1,0 +1,12 @@
+---
+title: "Aufgabe - Verbindung von Karte und Zensus Daten"
+author: "Jan-Philipp Kolb"
+date: "22 Februar 2017"
+output: md_document
+---
+
+## Aufgabe - Verbindung von Zensus Daten und Karte
+
+- Verbinden Sie die Zensus Ergebnisse mit einer Karte für das Saarland.
+
+- Stellen Sie den Anteil der Einjährigen und den Anteil der Zwanzigjährigen im Vergleich dar.
