@@ -64,8 +64,11 @@ Quelle: <http://www.arilamstein.com/blog/2016/03/21/mapping-election-results-r-c
 
 <http://hint.fm/wind/>
 
+<!--
 ![pic](http://www.flowjustflow.com/wp-content/gallery/hint-fm/high-res-3600.jpg)
+-->
 
+![Wind map USA](figure/windfm.PNG)
 
 
 ## Verfügbarkeit der Daten - Beispiel 
