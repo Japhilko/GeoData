@@ -15,7 +15,7 @@ Motivation und Einleitung
 
 - Beispiel: *Points of interest* ([poi](https://rpossib.wordpress.com/2015/09/15/points-of-interest-for-backpackers/)) für Backpacker in Amsterdam
 
-Aufgabe 1: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Nutzung_ggmap.Rmd)
+Aufgabe: [Nutzung von  `ggmap`](https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Nutzung_ggmap.Rmd)
 
 Datenquellen
 ---------------------
@@ -36,7 +36,7 @@ Datenquellen
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R)
 )
 
-Aufgabe 2: [Deutschlands Gemeinden](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Zensus_Ergebnisse.md)
+Aufgabe: [Deutschlands Gemeinden](https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Zensus_Ergebnisse.md)
 
 
 Verbindung, Editierung und Einfärbung
@@ -46,15 +46,15 @@ Verbindung, Editierung und Einfärbung
 [rcode](slides/Matching.R))
 of data sources
 
-- __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spplot.md)| 
-[rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE2_spplot.R))
+- __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](slides/spplot.md)| 
+[rcode](slides/spplot.R))
 
-- __(C3) Shapefiles zusammenfassen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/BeispielONB.md) | 
+- __(C3) Shapefiles zusammenfassen__ ([Browser](slides/BeispielONB.md) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE3_CombineShapefiles.R)
 )
 
 
-Aufgabe 5: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.Rmd)
+Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_Verbindung.Rmd)
 
 - __(C4) Thematische Karten mit dem R-Paket `tmap`__ 
 ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.md) | 

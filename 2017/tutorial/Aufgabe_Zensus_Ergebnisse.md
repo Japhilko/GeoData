@@ -1,11 +1,6 @@
----
-title: "Zensus 2011 Ergebnisse"
-author: "Jan-Philipp Kolb"
-date: "07 Februar 2017"
-output:
-  html_document:
-    keep_md: true
----
+# Zensus 2011 Ergebnisse
+Jan-Philipp Kolb  
+07 Februar 2017  
 
 
 ## Aufgabe - Eine Karte für das Saarland

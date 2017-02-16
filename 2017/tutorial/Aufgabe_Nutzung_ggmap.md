@@ -1,0 +1,19 @@
+Aufgabe - Vorbereitung und Brainstorming
+----------------------------------------
+
+-   Erzeugen Sie einen Ordner in dem Sie alle Dateien dieses
+    Kurses speichern.
+
+-   Machen Sie sich mit der Nutzung von Github vertraut.
+
+-   Überlegen Sie sich ein Thema, dass Sie in einer Karte darstellen
+    wollen erstellen Sie eine kleine Skizze und schicken Sie dieses
+    Thema per E-mail an mich.
+
+Aufgabe - Nutzung von `ggmap`
+-----------------------------
+
+-   Erzeugen Sie eine Karte von einem Ort, der Ihnen besonders gut
+    gefällt und speichern Sie diesen.
+
+-   Versuchen Sie Ihren Anreiseweg in einer Karte darzustellen.
