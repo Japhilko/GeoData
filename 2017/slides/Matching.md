@@ -183,7 +183,11 @@ ind
 
 
 ```r
-wrld_simpl@data$co2_90 <- co2$V3[ind]
+wrld_simpl@data$co2_90 <- as.numeric(as.character(co2$V3[ind]))
+```
+
+```
+## Warning: NAs durch Umwandlung erzeugt
 ```
 
 
