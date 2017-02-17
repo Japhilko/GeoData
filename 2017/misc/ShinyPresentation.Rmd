@@ -1,0 +1,65 @@
+---
+title: "Interactive Maps"
+author: "Jan-Philipp Kolb"
+date: "17 Februar 2017"
+output: slidy_presentation
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Beispiel zu Campingplätzen
+
+- Die Daten stammen von [OpenStreetMap](http://www.openstreetmap.de/)
+
+- Dabei wird die [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) genutzt:
+
+
+
+```{r,echo=F,eval=T}
+url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/CampSites_Germany.csv"
+```
+
+```{r,eval=F}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/CampSites_Germany.csv"
+```
+
+```{r,eval=T}
+CampSites <- read.csv(url)
+```
+
+
+## Überblick über Daten zu Campingplätzen
+
+```{r,echo=F,eval=T}
+library(knitr)
+kable(CampSites[1:8,1:4])
+```
+
+```{r}
+library(DT)
+datatable(CampSites)
+```
+
+## Interactive Plot
+
+```{r eruptions}
+inputPanel(
+  selectInput("n_breaks", label = "Number of bins:",
+              choices = c(10, 20, 35, 50), selected = 20),
+  
+  sliderInput("bw_adjust", label = "Bandwidth adjustment:",
+              min = 0.2, max = 2, value = 1, step = 0.2)
+)
+
+renderPlot({
+  hist(faithful$eruptions, probability = TRUE, breaks = as.numeric(input$n_breaks),
+       xlab = "Duration (minutes)", main = "Geyser eruption duration")
+  
+  dens <- density(faithful$eruptions, adjust = input$bw_adjust)
+  lines(dens, col = "blue")
+})
+```

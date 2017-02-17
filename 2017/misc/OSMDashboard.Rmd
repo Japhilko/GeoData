@@ -16,7 +16,8 @@ Column {data-width=650}
 ### Chart A
 
 ```{r}
-
+library(ggmap)
+qmap("Mannheim")
 ```
 
 Column {data-width=350}
