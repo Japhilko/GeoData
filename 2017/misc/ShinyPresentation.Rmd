@@ -2,7 +2,9 @@
 title: "Interactive Maps"
 author: "Jan-Philipp Kolb"
 date: "17 Februar 2017"
-output: slidy_presentation
+output: 
+  slidy_presentation: 
+    keep_md: yes
 runtime: shiny
 ---
 
