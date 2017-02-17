@@ -3,7 +3,7 @@ title: "Interaktive Karten"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  html_document: 
+  ioslides_presentation: 
     keep_md: yes
 ---
 
