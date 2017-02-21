@@ -2,14 +2,14 @@
 title: "Einleitung und Motivation"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
-output: 
-  slidy_presentation: 
-    highlight: espresso
-    keep_md: yes
-  beamer_presentation: 
+output:
+  beamer_presentation:
     colortheme: beaver
     fonttheme: professionalfonts
     highlight: null
+  slidy_presentation:
+    highlight: espresso
+    keep_md: yes
 ---
 
 
@@ -26,7 +26,7 @@ qmap("Mannheim A5,6",zoom=18, maptype = "satellite")
 ```
 
 
-![MZES](figure/mzesma.PNG)
+![](figure/mzesma.PNG)
 
 - Spatial Turn - warum dieser Kurs
 - Fragestellungen
@@ -90,25 +90,25 @@ Quelle: <http://www.arilamstein.com/blog/2016/03/21/mapping-election-results-r-c
 
 <http://www.driven-by-data.net/>
 
-![pic](http://driven-by-data.net/images/working-women-full.png)
+![](http://driven-by-data.net/images/working-women-full.png)
 
 
 ## Verfügbarkeit der Daten - Beispiel Zensus Atlas
 
 <https://atlas.zensus2011.de/>
-![ZensusAtlas](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Zensus_Mannheim2.png)
+![](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/Zensus_Mannheim2.png)
 
 
 ## Verfügbarkeit der Daten - Beispiel [Fahrradunfälle in Berlin](http://michael-hoerz.de/maps/berlin-bike/)
 
 <http://www.sowirdberlin.de/>
-![Fahhrad Berlin](https://asset0.torial.com/system/portfolio_item_images/production/2014/07/21/m5we1vmq6_preview_image_9678.jpg)
+![](https://asset0.torial.com/system/portfolio_item_images/production/2014/07/21/m5we1vmq6_preview_image_9678.jpg)
 
 
 
 ## Heterogener Datenbestand - Beispiel <http://names.mappinglondon.co.uk/>
 
-![Surnames London](http://mappinglondon.co.uk/wp-content/uploads/2011/11/surnames1.png)
+![](http://mappinglondon.co.uk/wp-content/uploads/2011/11/surnames1.png)
 
 
 ## Motivation - Warum die Darstellung in Karten
@@ -140,15 +140,15 @@ Quelle: <http://www.arilamstein.com/blog/2016/03/21/mapping-election-results-r-c
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
 
 - R ist eine Skriptsprache 
-- Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
+- Gute [MöglichkeitenLink](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) für die [Visualisierung](http://research.stowers-institute.org/efg/R/)
 
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
 
-## Übersicht - warum R
+## Übersicht - [warum R](http://www.edureka.co/)
 
-<http://www.edureka.co/>
 
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
+![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
 ## R Nutzer rund um die Welt
 
