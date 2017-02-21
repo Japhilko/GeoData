@@ -1,6 +1,6 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Kartentypen mit ggmap
+# Kartentypen mit ggmap
 Jan-Philipp Kolb  
-07 April 2016  
+22 Februar 2017  
 
 
 

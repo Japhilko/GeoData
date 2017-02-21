@@ -78,8 +78,8 @@ summary(ua$nodes)
 Key             Value              Freq
 --------------  ----------------  -----
 highway         crossing             22
-addr:postcode   54290                15
-addr:city       Trier                15
+addr:postcode   54290                14
+addr:city       Trier                14
 crossing        traffic_signals      13
 addr:country    DE                   10
 highway         traffic_signals      10
@@ -100,7 +100,7 @@ bg <- subset(ua, ids = bg_ids)
 plot(bg)
 ```
 
-![](osmar_files/figure-slidy/unnamed-chunk-11-1.png)<!-- -->
+![](osmar_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ## Einen Shapefile erzeugen
 
@@ -110,7 +110,7 @@ bg_poly <- as_sp(bg, "polygons")
 plot(bg_poly)
 ```
 
-![](osmar_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
+![](osmar_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ## Stadtteilgrenzen
 
@@ -123,7 +123,7 @@ lh_1 <- subset(lindehof, ids = lh_)
 plot(lh_1)
 ```
 
-![](osmar_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
+![](osmar_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ## In ein `sp` Objekt umwandeln
 
@@ -135,13 +135,20 @@ lh_2 <- as_sp(lh_1, "lines")
 plot(lh_2,col="red")
 ```
 
-![](osmar_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
+![](osmar_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+
+## Sonderzeichen
 
 
+```r
+Orte <- c("Haßloch","Wörth","Bad Säckingen")
+Orte <- gsub("ß","ÃŸ",Orte)
+Orte <- gsub("ö","Ã¶",Orte)
+Orte <- gsub("ä","Ã¤",Orte)
+```
 
-## Die Informationen manuell herunterladen
 
-- The information can be exported from [OSM](https://www.openstreetmap.org/export)
+## Die Informationen manuell herunterladen - [OSM](https://www.openstreetmap.org/export)
 
 
 ![Ausschnitt Sippersfeld](figure/Sippersfeld.png)
