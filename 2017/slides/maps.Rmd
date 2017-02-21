@@ -6,8 +6,8 @@ output:
   beamer_presentation: 
     colortheme: beaver
     fonttheme: structurebold
-    highlight: kate
-    theme: Berkeley
+    highlight: tango
+    theme: Warsaw
   ioslides_presentation: 
     keep_md: yes
 ---
@@ -329,19 +329,22 @@ Datenbasis - CIA World DataBank II
 
 ```{r,warning=F}
 library(mapproj)
-map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, 
+    proj="mercator")
 ```
 
 ## Eine andere Projektion
 
 ```{r}
-map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, 
+    proj="azequalarea")
 ```
 
 ## Eine weitere Projektion
 
 ```{r}
-map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, 
+    proj="guyou")
 ```
 
 ## Mehr Links und Quellen
