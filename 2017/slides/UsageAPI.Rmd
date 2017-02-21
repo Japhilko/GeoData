@@ -60,8 +60,7 @@ type_obj <- "node"
 object <- "leisure=playground"
 
 InfoList <- xmlParse(paste(Link1,place,"\"];",
-type_obj,"(area)[",object,
-"];out;",sep=""))
+type_obj,"(area)[",object,"];out;",sep=""))
 ```
 
 
@@ -72,7 +71,7 @@ saveXML(InfoList,file="saveXML.xml")
 
 ## XML Output
 
-![Splielplätze in Mannheim](figure/xmlPlaygorung.PNG)
+![Spielplätze in Mannheim](figure/xmlPlaygorung.PNG)
 
 ## Das Arbeiten mit XML Daten (xpath)
 

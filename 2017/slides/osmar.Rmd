@@ -3,7 +3,12 @@ title: "Das R-Paket osmar"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+  ioslides_presentation: 
     keep_md: yes
 ---
 
@@ -139,9 +144,7 @@ Orte <- gsub("ä","Ã¤",Orte)
 ```
 
 
-## Die Informationen manuell herunterladen
-
-- The information can be exported from [OSM](https://www.openstreetmap.org/export)
+## Die Informationen manuell herunterladen - [OSM](https://www.openstreetmap.org/export)
 
 
 ![Ausschnitt Sippersfeld](figure/Sippersfeld.png)
