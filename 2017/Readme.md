@@ -42,14 +42,14 @@ Aufgabe: [Deutschlands Gemeinden](https://github.com/Japhilko/GeoData/blob/maste
 Verbindung, Editierung und Einfärbung
 ---------------------
 
-- __(C1) Verbindung von Daten__ ([Browser](slides/Matching.md) |
+- __(C1) Verbindung von Daten__ ([Browser](slides/Matching.md) | [pdf](slides/Matching.pdf) |
 [rcode](slides/Matching.R))
 of data sources
 
-- __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](slides/spplot.md)| 
+- __(C2) Das R-Paket `spplot` und Farbkodierung__  ([Browser](slides/spplot.md)|  [pdf](slides/spplot.pdf) | 
 [rcode](slides/spplot.R))
 
-- __(C3) Shapefiles zusammenfassen__ ([Browser](slides/BeispielONB.md) | 
+- __(C3) Shapefiles zusammenfassen__ ([Browser](slides/BeispielONB.md) |  [pdf](slides/BeispielONB.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesE3_CombineShapefiles.R)
 )
 
@@ -57,12 +57,12 @@ of data sources
 Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](https://github.com/Japhilko/GeoData/blob/master/2017/tutorial/Aufgabe_Verbindung.Rmd)
 
 - __(C4) Thematische Karten mit dem R-Paket `tmap`__ 
-([Browser](slides/tmap.md) | 
+([Browser](slides/tmap.md) | [pdf](slides/tmap.pdf) | 
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/tmap.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF1_tmap.R))
 
-- __(C5) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md) | 
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.pdf) | 
+- __(C5) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/Choroplethr.md) | 
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/Choroplethr.pdf) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF2_choroplethr.R))
 
 
@@ -72,23 +72,23 @@ Aufgabe: [Darstellung von Eurostat Daten mit `choroplethr`](https://github.com/J
 OpenStreetMap und räumliche Statistik
 ---------------------
 
-- __(D1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.md))
+- __(D1) Das Arbeiten mit XML-Dateien__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.md)| [pdf](slides/OpenStreetMap.pdf))
 
-- __(D2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/UsageAPI.md) | 
+- __(D2) Die Nutzung von Programmierschnittstellen__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/UsageAPI.md)| [pdf](slides/UsageAPI.pdf) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG1_UsageAPI.R))
 
-- __(D3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md)| 
+- __(D3) Das R-Paket `osmar`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/osmar.md) | [pdf](slides/osmar.pdf) | 
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesG3_osmar.R))
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
 Aufgabe: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd)
 
-- __(D4) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/spdep.md) |
+- __(D4) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/spdep.md) | [pdf](slides/spdep.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH1_spdep.R))
 
 
-- __(D5) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/InteractiveMaps.md)
+- __(D5) Interaktive Karten und Präsentation__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/InteractiveMaps.md) | [pdf](slides/InteractiveMaps.pdf)
 | [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH2_Interaktiv.R))
 Beispiel - [Campingplätze](http://rpubs.com/Japhilko82/Campsites)
 
