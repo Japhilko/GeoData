@@ -3,6 +3,11 @@ title: "R-Paket maps"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: kate
+    theme: Berkeley
   ioslides_presentation: 
     keep_md: yes
 ---
