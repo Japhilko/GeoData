@@ -36,10 +36,10 @@ Datenquellen
 [rcode](slides/polygonSources.R))
 
 - __(B4) OpenStreetMap als Datenquelle__ ([Browser](slides/OpenStreetMap.md) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/osm_data.pdf) | [rcode](slides/OpenStreetMap.R))
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.pdf) | [rcode](slides/OpenStreetMap.R))
 
 - __(B5) Öffentliche Daten zur freien Verfügung__  ([Browser](slides/DataPUF.md) | 
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/DataPUF.pdf) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/DataPUF.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesD2_DataPUF.R)
 )
 
