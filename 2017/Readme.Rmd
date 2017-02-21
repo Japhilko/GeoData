@@ -35,8 +35,8 @@ Datenquellen
 - __(B3) Internetquellen für Geodaten__ ([Browser](slides/polygonSources.md)| [pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/polygonSources.pdf)|
 [rcode](slides/polygonSources.R))
 
-- __(B4) OpenStreetMap als Datenquelle__ ([Browser](slides/OpenStreetMap.md) |
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/OpenStreetMap.pdf) | [rcode](slides/OpenStreetMap.R))
+- __(B4) OpenStreetMap als Datenquelle__ ([Browser](slides/osm_data.md) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/osm_data.pdf) | [rcode](slides/OpenStreetMap.R))
 
 - __(B5) Öffentliche Daten zur freien Verfügung__  ([Browser](slides/DataPUF.md) | 
 [pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/DataPUF.pdf) |
@@ -65,7 +65,7 @@ Aufgabe: [Zensus Ergebnisse und Karte miteinander verbinden und einfärben](http
 
 - __(C4) Thematische Karten mit dem R-Paket `tmap`__ 
 ([Browser](slides/tmap.md) | 
-[pdf](https://github.com/Japhilko/GeoData/blob/master/2016/slides/tmap.pdf) |
+[pdf](https://github.com/Japhilko/GeoData/blob/master/2017/slides/tmap.pdf) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesF1_tmap.R))
 
 - __(C5) Das R-Paket `choroplethr`__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Choroplethr.md) | 
@@ -89,9 +89,9 @@ OpenStreetMap und räumliche Statistik
 
 - Beispiel Hostels in Madrid ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/Madrid_hostels.Rmd)), [Energieerzeugung](https://rpossib.wordpress.com/2015/11/20/use-openstreetmap-date/)
 
-Aufgabe 6: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd)
+Aufgabe: [Darstellung von OSM Daten mit tmap](https://github.com/Japhilko/GeoData/blob/master/2016/tutorial/Aufgabe_osmar.Rmd)
 
-- __(D4) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2016/slides/spdep.md) |
+- __(D4) Das R-Paket `spdep` - Nachbarschaft und Distanz__ ([Browser](https://github.com/Japhilko/GeoData/blob/master/2017/slides/spdep.md) |
 [rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2016/rcode/slidesH1_spdep.R))
 
 
