@@ -3,13 +3,18 @@ title: "Die Nutzung von Programmierschnittstellen"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+  ioslides_presentation: 
     keep_md: yes
 ---
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T)
+knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,message=F)
 ```
 
 
