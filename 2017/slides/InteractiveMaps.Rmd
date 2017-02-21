@@ -5,6 +5,7 @@ date: "22 Februar 2017"
 output: 
   slidy_presentation: 
     highlight: tango
+    keep_md: yes
   ioslides_presentation: 
     keep_md: yes
   beamer_presentation: 

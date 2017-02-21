@@ -61,6 +61,27 @@ library("magrittr")
 library("leaflet")
 ```
 
+## Eine erste interaktive Karte
+
+
+```r
+leaflet()%>%
+  addTiles()
+```
+
+![Hallo Leaflet](figure/FirstLeaflet.PNG)
+
+## Auf eine Stadt zoomen
+
+
+```r
+leaflet() %>%
+  addTiles() %>%
+  addMarkers(lng=8.456597, lat=49.48738,
+             popup="Wo wir sind")
+```
+
+![](figure/leafletMZESMA.PNG)
 
 ## Eine interaktive Karte
 
