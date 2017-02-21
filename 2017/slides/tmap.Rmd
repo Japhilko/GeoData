@@ -13,7 +13,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F)
+knitr::opts_chunk$set(echo = TRUE,warning=F,cache=T)
 ```
 
 
@@ -98,7 +98,8 @@ qtm(Europe, fill="gdp_cap_est", text="iso_a3",
 ## [Bevölkerungsdichte](https://en.wikipedia.org/wiki/Population_density)
 
 ```{r,cache=T,eval=Ex}
-qtm(Europe, fill="pop_est_dens", fill.title="Population density")
+qtm(Europe, fill="pop_est_dens", 
+    fill.title="Population density")
 ```
 
 ## Themen des Europa-Datensatzes
@@ -280,7 +281,8 @@ qtm(NLD_prov, fill="proportion",fill.title="proportion")
 
 ```{r,cache=T}
 ant <- runif(length(NLD_prov),.18,.28)
-NLD_prov@data$pop_65plus <- round(NLD_prov@data$population*ant)
+NLD_prov@data$pop_65plus <- 
+  round(NLD_prov@data$population*ant)
 pop65plus <- NLD_prov@data$pop_65plus
 prop65plus <- pop65plus/pop
 NLD_prov@data$proportion65plus <- prop65plus
@@ -460,9 +462,7 @@ tm_layout_World(inner.margins=0,
 ```{r,cache=T}
 tm_shape(Europe[Europe$continent=="Europe",]) +
     tm_fill("part", thres.poly = 0) +
-    tm_facets("name", free.coords=TRUE, drop.shapes=TRUE) +
-tm_layout(legend.show = FALSE, title.position = c("center", "center"), 
-          title.size = 2)
+    tm_facets("name", free.coords=TRUE)
 ```
 
 

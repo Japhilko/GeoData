@@ -1,9 +1,21 @@
 ---
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - R-Paket Choroplethr"
+title: "R-Paket Choroplethr"
 author: "Jan-Philipp Kolb"
-date: "08 April 2016"
-output: slidy_presentation
+date: "22 Februar 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+  ioslides_presentation: 
+    keep_md: yes
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F,cache=T)
+```
+
 
 ```{r,echo=F,warning=F}
 library(knitr)
@@ -36,6 +48,7 @@ Choroplethen sind nützlich für die Visualisierung von Daten, wo geografische G
 ## Bevölkerungsschätzungen für den US-Staaten
 
 ```{r,warning=F,message=F,echo=F}
+# install.packages("choroplethr")
 library("choroplethr")
 data(df_pop_state)
 ```
@@ -43,6 +56,7 @@ data(df_pop_state)
 `df_pop_state` ist ein Datensatz , der in dem Paket `choroplethr` enthalten ist, es enthält Schätzungen zu den US-Staaten für das Jahr 2012.
 
 ```{r,echo=F,eval=internet}
+# install.packages("choroplethrMaps")
 library("choroplethrMaps")
 datatable(df_pop_state,options = list(pageLength = 5))
 ```
@@ -102,9 +116,9 @@ county_choropleth(df_pop_county)
 ```
 
 
-## [Country Choroplethen ](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+## [Choroplethen Länder](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
 
-```{r, fig.width=8, fig.height=6}
+```{r, fig.width=8, fig.height=6,eval=F}
 data(df_pop_country)
 country_choropleth(df_pop_country,
               title      = "2012 Population Estimates",
@@ -114,6 +128,17 @@ country_choropleth(df_pop_country,
                              "mexico", "canada"))
 ```
 
+## [Choroplethen Länder](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+
+```{r, fig.width=8, fig.height=6,echo=F}
+data(df_pop_country)
+country_choropleth(df_pop_country,
+              title      = "2012 Population Estimates",
+              legend     = "Population",
+              num_colors = 1,
+              zoom       = c("united states of america",
+                             "mexico", "canada"))
+```
 
 
 ## Weltbank Daten
