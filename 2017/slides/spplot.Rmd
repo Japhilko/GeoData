@@ -3,7 +3,12 @@ title: "Das R-Paket sp"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+  ioslides_presentation: 
     keep_md: yes
 ---
 
@@ -14,49 +19,25 @@ ca <- T
 ```
 
 
-## Beispiel: US Arbeitslosigkeit 
+## Das Paket colorRamps
 
-- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
-
-
-Die Daten bekommen:
-
-```{r,warning=F,message=F}
-library(maps)
-data(unemp)
-data(county.fips)
-```
-
-## Farbverläufe
 
 ```{r,eval=F}
 install.packages("colorRamps")
 ```
 
+```{r}
+library(colorRamps)
+```
+
+
+## Farbverläufe
+
 
 ```{r,warning=F}
-library(colorRamps)
 colors <- blue2red(6)
 barplot(1:6,col=colors)
 ```
-
-## Beispiel: US Arbeitslosigkeit - Farbschattierung
-
-```{r}
-unemp$colorSteps <- cut(unemp$unemp, 
-          c(0, 2, 4, 6, 8,10, 100))
-colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
-          unemp$fips)]
-```
-
-
-## Beispiel: US Arbeitslosigkeit
-
-```{r}
-map("county", col = colors[colorsmatch], 
-    fill = TRUE)
-```
-
 
 
 ## Das R-Paket [sp](https://cran.r-project.org/web/packages/sp/index.html)
@@ -156,6 +137,42 @@ my_map$Pop2010 <- my_map$POP2005 +
 spplot(my_map,c("POP2005","Pop2010"),
        col.regions=matlab.like(100))
 ```
+
+
+
+
+## Beispiel: US Arbeitslosigkeit 
+
+- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
+
+
+Die Daten bekommen:
+
+```{r,warning=F,message=F}
+library(maps)
+data(unemp)
+data(county.fips)
+```
+
+
+## Beispiel: US Arbeitslosigkeit - Farbschattierung
+
+```{r}
+unemp$colorSteps <- cut(unemp$unemp, 
+          c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
+          unemp$fips)]
+```
+
+
+## Beispiel: US Arbeitslosigkeit
+
+```{r}
+map("county", col = colors[colorsmatch], 
+    fill = TRUE)
+```
+
+
 
 ## Mehr Beispiele 
 
