@@ -1,11 +1,22 @@
 ---
-title: "Nutzung von GeoDaten in den Sozialwissenschaften - Daten verbinden"
+title: "Daten verbinden"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
-  slidy_presentation: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+  ioslides_presentation: 
     keep_md: yes
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F)
+library(knitr)
+```
+
 
 
 ```{r,echo=F,warning=F}
@@ -71,8 +82,17 @@ CNames[CNames2=="An"]
 
 ## CO2 Emissionen
 
-```{r,eval=T,echo=T}
-link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/CO2emissions.csv"
+```{r,eval=F,echo=T}
+link <- 
+"https://raw.githubusercontent.com/Japhilko/
+GeoData/master/data/CO2emissions.csv"
+co2 <- read.csv(link)
+```
+
+
+```{r,eval=T,echo=F}
+link <- 
+"https://raw.githubusercontent.com/Japhilko/GeoData/master/data/CO2emissions.csv"
 co2 <- read.csv(link)
 ```
 
@@ -119,11 +139,23 @@ ind <- match(wrld_simpl@data$NAME,co2$V2)
 ind
 ```
 
+## Struktur der Daten
+
+```{r}
+co2vec<-co2$V3
+str(co2vec)
+co2vec<-as.character(co2vec)
+str(co2vec)
+co2vec<-as.numeric(co2vec)
+str(co2vec)
+```
+
+
 
 ## Daten anspielen
 
 ```{r}
-wrld_simpl@data$co2_90 <- as.numeric(as.character(co2$V3[ind]))
+wrld_simpl@data$co2_90 <- co2vec[ind]
 ```
 
 ```{r}
@@ -169,7 +201,7 @@ for (i in 1:length(ind)){
 ## Daten anspielen
 
 ```{r}
-wrld_simpl@data$co2_91 <- co2$V3[ind]
+wrld_simpl@data$co2_91 <- co2vec[ind]
 ```
 
 ```{r}
