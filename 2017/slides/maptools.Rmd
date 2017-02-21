@@ -3,6 +3,11 @@ title: "Das Paket maptools"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
   ioslides_presentation: 
     keep_md: yes
 ---

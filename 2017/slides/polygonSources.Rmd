@@ -3,6 +3,11 @@ title: "Quellen für Polygone"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
   ioslides_presentation: 
     keep_md: yes
 ---
@@ -38,6 +43,7 @@ library(raster)
 
 
 ```{r,warning=F,message=F,eval=T}
+library(raster)
 LUX1 <- getData('GADM', country='LUX', level=1)
 plot(LUX1)
 ```
@@ -62,17 +68,15 @@ head(LUX1@polygons[[1]]@Polygons[[1]]@coords)
 
 ## Der Datenslot
 
-```{r,eval=F}
+```{r,eval=T}
 head(LUX1@data)
 ```
 
-```{r,eval=T,echo=F}
+```{r,eval=F,echo=F}
 kable(head(LUX1@data))
 ```
 
 ## [GADM](http://www.gadm.org/)- NUTS level 3
-
-<http://www.gadm.org/>
 
 ```{r LUX3,warning=F,eval=T}
 LUX3 <- getData('GADM', country='LUX', level=3)
@@ -97,7 +101,10 @@ plot(DEU3)
 
 ## PLZ für Deutschland
 
-<http://datahub.io/de/dataset/postal-codes-de>
+- <http://datahub.io/de/dataset/postal-codes-de>
+
+- datahub.io funktioniert leider nicht mehr
+- <http://arnulf.us/PLZ>
 
 ```{r,eval=F,echo=F}
 setwd("D:/Daten/Daten/GeoDaten")
@@ -182,9 +189,12 @@ par(mai=c(0,0,0,0))
 
 ```{r,eval=F}
 onb <- readShapePoly("onb_grenzen.shp")
+```
 
+```{r,eval=F,echo=F}
 kable(head(onb@data))
 ```
+
 
 |   |VORWAHL |NAME                 |KENNUNG |
 |:--|:-------|:--------------------|:-------|
