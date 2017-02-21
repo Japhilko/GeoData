@@ -6,6 +6,10 @@ output:
   slidy_presentation: 
     highlight: espresso
     keep_md: yes
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: professionalfonts
+    highlight: null
 ---
 
 
@@ -31,7 +35,7 @@ qmap("Mannheim A5,6",zoom=18, maptype = "satellite")
 - Realisierung
 
 
-## Motivation - Geschichte
+## Motivation 
 
 - Räumliche Darstellungen haben eine lange Geschichte
 - Beispiel: Fra Mauro map

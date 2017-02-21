@@ -20,7 +20,7 @@ Jan-Philipp Kolb
 - Realisierung
 
 
-## Motivation - Geschichte
+## Motivation 
 
 - Räumliche Darstellungen haben eine lange Geschichte
 - Beispiel: Fra Mauro map
