@@ -31,6 +31,7 @@ library(raster)
 
 
 ```r
+library(raster)
 LUX1 <- getData('GADM', country='LUX', level=1)
 plot(LUX1)
 ```
@@ -67,16 +68,20 @@ LUX1@polygons[[1]]@Polygons[[1]]@coords
 head(LUX1@data)
 ```
 
+```
+##   OBJECTID ID_0 ISO     NAME_0 ID_1       NAME_1 HASC_1 CCN_1 CCA_1
+## 1        1  131 LUX Luxembourg    1     Diekirch  LU.DI    NA      
+## 2        2  131 LUX Luxembourg    2 Grevenmacher  LU.GR    NA      
+## 3        3  131 LUX Luxembourg    3   Luxembourg  LU.LU    NA      
+##     TYPE_1 ENGTYPE_1 NL_NAME_1            VARNAME_1
+## 1 District  District               Dikrech|Dikkrich
+## 2 District  District                  Gréivemaacher
+## 3 District  District           Lëtzebuerg|Luxemburg
+```
 
- OBJECTID   ID_0  ISO   NAME_0        ID_1  NAME_1         HASC_1    CCN_1  CCA_1   TYPE_1     ENGTYPE_1   NL_NAME_1   VARNAME_1            
----------  -----  ----  -----------  -----  -------------  -------  ------  ------  ---------  ----------  ----------  ---------------------
-        1    131  LUX   Luxembourg       1  Diekirch       LU.DI        NA          District   District                Dikrech|Dikkrich     
-        2    131  LUX   Luxembourg       2  Grevenmacher   LU.GR        NA          District   District                Gréivemaacher        
-        3    131  LUX   Luxembourg       3  Luxembourg     LU.LU        NA          District   District                Lëtzebuerg|Luxemburg 
+
 
 ## [GADM](http://www.gadm.org/)- NUTS level 3
-
-<http://www.gadm.org/>
 
 
 ```r
@@ -108,7 +113,10 @@ plot(DEU3)
 
 ## PLZ für Deutschland
 
-<http://datahub.io/de/dataset/postal-codes-de>
+- <http://datahub.io/de/dataset/postal-codes-de>
+
+- datahub.io funktioniert leider nicht mehr
+- <http://arnulf.us/PLZ>
 
 
 
@@ -187,9 +195,10 @@ plot(krs[fds=="05",])
 
 ```r
 onb <- readShapePoly("onb_grenzen.shp")
-
-kable(head(onb@data))
 ```
+
+
+
 
 |   |VORWAHL |NAME                 |KENNUNG |
 |:--|:-------|:--------------------|:-------|

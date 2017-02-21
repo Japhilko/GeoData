@@ -164,9 +164,9 @@
 
 <p><a href='http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4' title=''>Administrative Grenzen für Deutschland</a></p>
 
-<pre class = 'prettyprint lang-r'># library(xml2)
-# BE &lt;- read_xml.raw(url)
-BE &lt;- xmlParse(url)</pre>
+<pre class = 'prettyprint lang-r'>url &lt;- &quot;http://api.openstreetmap.org/api/0.6/relation/62422&quot;</pre>
+
+<pre class = 'prettyprint lang-r'>BE &lt;- xmlParse(url)</pre>
 
 <img src='https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/ExampleAdmBE.PNG' title='fig:'/><p class='caption'>Administrative Grenzen Berlin</p>
 
@@ -230,11 +230,16 @@ class(xmltop)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Geographische Region</h2></hgroup><article  id="geographische-region">
 
-<pre class = 'prettyprint lang-r'>region &lt;- xpathApply(BE,&quot;//tag[@k = &#39;geographical_region&#39;]&quot;)
+<pre class = 'prettyprint lang-r'>region &lt;- xpathApply(BE,
+  &quot;//tag[@k = &#39;geographical_region&#39;]&quot;)
 # regular expressions
 region[[1]]</pre>
 
 <pre >## &lt;tag k=&quot;geographical_region&quot; v=&quot;Barnim;Berliner Urstromtal;Teltow;Nauener Platte&quot;/&gt;</pre>
+
+<pre >&lt;tag k=&quot;geographical_region&quot; 
+  v=&quot;Barnim;Berliner Urstromtal;
+  Teltow;Nauener Platte&quot;/&gt;</pre>
 
 </article></slide><slide class=''><hgroup><h2>Landkreis</h2></hgroup><article  id="landkreis">
 
@@ -242,9 +247,9 @@ region[[1]]</pre>
 
 </article></slide><slide class=''><hgroup><h2>Weiteres Beispiel</h2></hgroup><article  id="weiteres-beispiel">
 
-<pre class = 'prettyprint lang-r'>url2 &lt;- &quot;http://api.openstreetmap.org/api/0.6/node/25113879&quot;
-obj2 &lt;- xmlParse(url2)
-obj_amenity &lt;- xpathApply(obj2,&quot;//tag[@k = &#39;amenity&#39;]&quot;)[[1]]
+<pre class = 'prettyprint lang-r'>url2&lt;-&quot;http://api.openstreetmap.org/api/0.6/node/25113879&quot;
+obj2&lt;-xmlParse(url2)
+obj_amenity&lt;-xpathApply(obj2,&quot;//tag[@k = &#39;amenity&#39;]&quot;)[[1]]
 obj_amenity</pre>
 
 <pre >## &lt;tag k=&quot;amenity&quot; v=&quot;university&quot;/&gt;</pre>
@@ -261,7 +266,7 @@ obj_amenity</pre>
 
 </article></slide><slide class=''><hgroup><h2>Das C und das A</h2></hgroup><article  id="das-c-und-das-a">
 
-<pre class = 'prettyprint lang-r'>url3 &lt;- &quot;http://api.openstreetmap.org/api/0.6/node/303550876&quot;
+<pre class = 'prettyprint lang-r'>url3&lt;-&quot;http://api.openstreetmap.org/api/0.6/node/303550876&quot;
 obj3 &lt;- xmlParse(url3)
 xpathApply(obj3,&quot;//tag[@k = &#39;opening_hours&#39;]&quot;)[[1]]</pre>
 
@@ -269,7 +274,7 @@ xpathApply(obj3,&quot;//tag[@k = &#39;opening_hours&#39;]&quot;)[[1]]</pre>
 
 </article></slide><slide class=''><hgroup><h2>Hin und weg</h2></hgroup><article  id="hin-und-weg">
 
-<pre class = 'prettyprint lang-r'>url4 &lt;- &quot;http://api.openstreetmap.org/api/0.6/node/25439439&quot;
+<pre class = 'prettyprint lang-r'>url4&lt;-&quot;http://api.openstreetmap.org/api/0.6/node/25439439&quot;
 obj4 &lt;- xmlParse(url4)
 xpathApply(obj4,&quot;//tag[@k = &#39;railway:station_category&#39;]&quot;)[[1]]</pre>
 
@@ -288,9 +293,10 @@ xpathApply(obj4,&quot;//tag[@k = &#39;railway:station_category&#39;]&quot;)[[1]]
 </ul>
 
 <pre class = 'prettyprint lang-r'>library(rvest)
-bhfkat &lt;- read_html(&quot;https://de.wikipedia.org/wiki/Bahnhofskategorie&quot;)
-df_html_bhfkat &lt;- html_table(html_nodes(bhfkat, &quot;table&quot;)[[1]], 
-                             fill = TRUE)</pre>
+bhfkat&lt;-read_html(
+  &quot;https://de.wikipedia.org/wiki/Bahnhofskategorie&quot;)
+df_html_bhfkat&lt;-html_table(
+  html_nodes(bhfkat, &quot;table&quot;)[[1]],fill = TRUE)</pre>
 
 </article></slide><slide class=''><hgroup><h2>Bahnhofskategorien Übersicht</h2></hgroup><article  id="bahnhofskategorien-ubersicht">
 
@@ -348,8 +354,8 @@ df_html_bhfkat &lt;- html_table(html_nodes(bhfkat, &quot;table&quot;)[[1]],
 
 </article></slide><slide class=''><hgroup><h2>Nur fliegen ist schöner</h2></hgroup><article  id="nur-fliegen-ist-schoner">
 
-<pre class = 'prettyprint lang-r'>url5 &lt;- &quot;http://api.openstreetmap.org/api/0.6/way/162149882&quot;
-obj5 &lt;- xmlParse(url5)
+<pre class = 'prettyprint lang-r'>url5&lt;-&quot;http://api.openstreetmap.org/api/0.6/way/162149882&quot;
+obj5&lt;-xmlParse(url5)
 xpathApply(obj5,&quot;//tag[@k = &#39;name&#39;]&quot;)[[1]]</pre>
 
 <pre >## &lt;tag k=&quot;name&quot; v=&quot;City-Airport Mannheim&quot;/&gt;</pre>
@@ -395,7 +401,7 @@ xpathApply(obj5,&quot;//tag[@k = &#39;name&#39;]&quot;)[[1]]</pre>
 ## 
 ##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
 ##   Parsing and Generating XML Within R and S-Plus. R package
-##   version 3.98-1.4. https://CRAN.R-project.org/package=XML
+##   version 3.98-1.5. https://CRAN.R-project.org/package=XML
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -403,7 +409,7 @@ xpathApply(obj5,&quot;//tag[@k = &#39;name&#39;]&quot;)[[1]]</pre>
 ##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
 ##     author = {Duncan Temple Lang and the CRAN Team},
 ##     year = {2016},
-##     note = {R package version 3.98-1.4},
+##     note = {R package version 3.98-1.5},
 ##     url = {https://CRAN.R-project.org/package=XML},
 ##   }
 ## 

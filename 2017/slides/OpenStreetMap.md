@@ -57,11 +57,15 @@ xmlNamespace()   the namespace (if there’s one)
 [Administrative Grenzen für Deutschland](http://wiki.openstreetmap.org/wiki/DE:Grenze#Bundesl.C3.A4ndergrenze_-_admin_level.3D4)
 
 
+```r
+url <- "http://api.openstreetmap.org/api/0.6/relation/62422"
+```
+
+
+
 
 
 ```r
-# library(xml2)
-# BE <- read_xml.raw(url)
 BE <- xmlParse(url)
 ```
 
@@ -155,13 +159,20 @@ xpathApply(BE,"//tag[@k = 'name:ta']")
 
 
 ```r
-region <- xpathApply(BE,"//tag[@k = 'geographical_region']")
+region <- xpathApply(BE,
+  "//tag[@k = 'geographical_region']")
 # regular expressions
 region[[1]]
 ```
 
 ```
 ## <tag k="geographical_region" v="Barnim;Berliner Urstromtal;Teltow;Nauener Platte"/>
+```
+
+```
+<tag k="geographical_region" 
+  v="Barnim;Berliner Urstromtal;
+  Teltow;Nauener Platte"/>
 ```
 
 ## Landkreis
@@ -173,9 +184,9 @@ region[[1]]
 
 
 ```r
-url2 <- "http://api.openstreetmap.org/api/0.6/node/25113879"
-obj2 <- xmlParse(url2)
-obj_amenity <- xpathApply(obj2,"//tag[@k = 'amenity']")[[1]]
+url2<-"http://api.openstreetmap.org/api/0.6/node/25113879"
+obj2<-xmlParse(url2)
+obj_amenity<-xpathApply(obj2,"//tag[@k = 'amenity']")[[1]]
 obj_amenity
 ```
 
@@ -209,7 +220,7 @@ xpathApply(obj2,"//tag[@k = 'name']")[[1]]
 
 
 ```r
-url3 <- "http://api.openstreetmap.org/api/0.6/node/303550876"
+url3<-"http://api.openstreetmap.org/api/0.6/node/303550876"
 obj3 <- xmlParse(url3)
 xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
 ```
@@ -222,7 +233,7 @@ xpathApply(obj3,"//tag[@k = 'opening_hours']")[[1]]
 
 
 ```r
-url4 <- "http://api.openstreetmap.org/api/0.6/node/25439439"
+url4<-"http://api.openstreetmap.org/api/0.6/node/25439439"
 obj4 <- xmlParse(url4)
 xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
 ```
@@ -242,9 +253,10 @@ xpathApply(obj4,"//tag[@k = 'railway:station_category']")[[1]]
 
 ```r
 library(rvest)
-bhfkat <- read_html("https://de.wikipedia.org/wiki/Bahnhofskategorie")
-df_html_bhfkat <- html_table(html_nodes(bhfkat, "table")[[1]], 
-                             fill = TRUE)
+bhfkat<-read_html(
+  "https://de.wikipedia.org/wiki/Bahnhofskategorie")
+df_html_bhfkat<-html_table(
+  html_nodes(bhfkat, "table")[[1]],fill = TRUE)
 ```
 
 ## Bahnhofskategorien Übersicht
@@ -263,8 +275,8 @@ df_html_bhfkat <- html_table(html_nodes(bhfkat, "table")[[1]],
 
 
 ```r
-url5 <- "http://api.openstreetmap.org/api/0.6/way/162149882"
-obj5 <- xmlParse(url5)
+url5<-"http://api.openstreetmap.org/api/0.6/way/162149882"
+obj5<-xmlParse(url5)
 xpathApply(obj5,"//tag[@k = 'name']")[[1]]
 ```
 
@@ -336,7 +348,7 @@ citation("XML")
 ## 
 ##   Duncan Temple Lang and the CRAN Team (2016). XML: Tools for
 ##   Parsing and Generating XML Within R and S-Plus. R package
-##   version 3.98-1.4. https://CRAN.R-project.org/package=XML
+##   version 3.98-1.5. https://CRAN.R-project.org/package=XML
 ## 
 ## A BibTeX entry for LaTeX users is
 ## 
@@ -344,7 +356,7 @@ citation("XML")
 ##     title = {XML: Tools for Parsing and Generating XML Within R and S-Plus},
 ##     author = {Duncan Temple Lang and the CRAN Team},
 ##     year = {2016},
-##     note = {R package version 3.98-1.4},
+##     note = {R package version 3.98-1.5},
 ##     url = {https://CRAN.R-project.org/package=XML},
 ##   }
 ## 

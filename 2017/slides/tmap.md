@@ -4,6 +4,9 @@ Jan-Philipp Kolb
 
 
 
+
+
+
 ## Das Paket [tmap](https://cran.r-project.org/web/packages/tmap/index.html)
 
 - Laden Sie das Paket [tmap](http://twitter.com/sharon000/status/593028906820599808/photo/1?ref_src=twsrc%5Etfw)
@@ -30,7 +33,7 @@ data(Europe)
 qtm(Europe)
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-3-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 
 ## Der Europa-Datensatz
@@ -123,7 +126,7 @@ qtm(Europe)
 qtm(Europe, fill="gdp_cap_est")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-7-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 ## Eine Karte mit Text 
@@ -133,7 +136,7 @@ qtm(Europe, fill="gdp_cap_est")
 qtm(Europe, fill="gdp_cap_est", text="iso_a3")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-8-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 ## Dieses Schema passt besser:
 
@@ -144,7 +147,7 @@ qtm(Europe, fill="gdp_cap_est", text="iso_a3",
     fill.textNA="Non-European countries", theme="Europe")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-9-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 
 
@@ -153,10 +156,11 @@ qtm(Europe, fill="gdp_cap_est", text="iso_a3",
 
 
 ```r
-qtm(Europe, fill="pop_est_dens", fill.title="Population density")
+qtm(Europe, fill="pop_est_dens", 
+    fill.title="Population density")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-10-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ## Themen des Europa-Datensatzes
 
@@ -439,7 +443,7 @@ qtm(Europe, fill="pop_est_dens", fill.title="Population density")
 qtm(Europe, fill="continent")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 
 ## Teil Europas?
@@ -449,7 +453,7 @@ qtm(Europe, fill="continent")
 qtm(Europe, fill="part",fill.title="part of Europe")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 ## Fläche
 
@@ -458,7 +462,7 @@ qtm(Europe, fill="part",fill.title="part of Europe")
 qtm(Europe, fill="area") # Russia is huge
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-15-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 
 ## Bevölkerung
@@ -468,7 +472,7 @@ qtm(Europe, fill="area") # Russia is huge
 qtm(Europe, fill="pop_est",fill.title="Population") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-16-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
 
 ## Bevölkerungsdichte
 
@@ -478,7 +482,7 @@ qtm(Europe, fill="pop_est_dens",
     fill.title="Population density") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
 
 
 ## Ökonomie
@@ -488,7 +492,7 @@ qtm(Europe, fill="pop_est_dens",
 qtm(Europe, fill="economy") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-18-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
 
 ## Einkommensgruppe
 
@@ -497,7 +501,7 @@ qtm(Europe, fill="economy")
 qtm(Europe, fill="income_grp",fill.title="Income group") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-19-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 
 
@@ -532,7 +536,7 @@ qtm(Europe, fill="income_grp",fill.title="Income group")
 qtm(World, fill="income_grp",fill.title="Income group") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-22-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-22-1.png)<!-- -->
 
 ## Ein Datensatz zu den Provinzen in den Niederlanden (R-Paket `tmap`)
 
@@ -555,7 +559,7 @@ qtm(World, fill="income_grp",fill.title="Income group")
 qtm(NLD_prov, fill="population",fill.title="population") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-25-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 
 ## Anteile berechnen
 
@@ -600,7 +604,7 @@ prop
 barplot(prop)
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-29-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-29-1.png)<!-- -->
 
 Barplot mit Farbe
 
@@ -609,7 +613,7 @@ Barplot mit Farbe
 barplot(prop,col="blue")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-30-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-30-1.png)<!-- -->
 
 ## Niederlnade - Anteil Männer
 
@@ -625,7 +629,7 @@ NLD_prov@data$proportion <- prop
 qtm(NLD_prov, fill="proportion",fill.title="proportion") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-32-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-32-1.png)<!-- -->
 
 ## Niederlande - Anteil der Personen 65 plus
 
@@ -634,7 +638,8 @@ qtm(NLD_prov, fill="proportion",fill.title="proportion")
 
 ```r
 ant <- runif(length(NLD_prov),.18,.28)
-NLD_prov@data$pop_65plus <- round(NLD_prov@data$population*ant)
+NLD_prov@data$pop_65plus <- 
+  round(NLD_prov@data$population*ant)
 pop65plus <- NLD_prov@data$pop_65plus
 prop65plus <- pop65plus/pop
 NLD_prov@data$proportion65plus <- prop65plus
@@ -647,7 +652,7 @@ NLD_prov@data$proportion65plus <- prop65plus
 qtm(NLD_prov, fill="proportion",fill.title="proportion") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-34-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-34-1.png)<!-- -->
 
 
 ## Ein Datensatz zu den Gemeinden in den Niederlanden (R-Paket `tmap`)
@@ -1075,7 +1080,7 @@ data(NLD_muni)
 qtm(NLD_muni, fill="population") 
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-38-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-38-1.png)<!-- -->
 
 
 
@@ -1091,7 +1096,7 @@ tm_shape(Europe) +
 
 ## Zwei Karten
 
-![](tmap_files/figure-slidy/unnamed-chunk-40-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-40-1.png)<!-- -->
 
 
 ## Räumliche Daten zur Flächennutzung
@@ -1127,7 +1132,7 @@ tm_shape(land,  relative=FALSE) +
     tm_raster("cover_cls", title="Global Land Cover")
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-43-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-43-1.png)<!-- -->
 
 
 ## Räumliche Daten zu Metropolregionen
@@ -1247,7 +1252,7 @@ tm_shape(Europe[Europe$name=="Austria", ]) +
     tm_polygons()
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-46-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-46-1.png)<!-- -->
 
 
 ## Die Daten laden
@@ -1300,7 +1305,7 @@ Europe@data$Val2013M01 <- Unemp$Val2013M01[ind]
 qtm(Europe,c("Val2007M12","Val2013M01"))
 ```
 
-![](tmap_files/figure-slidy/unnamed-chunk-51-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-51-1.png)<!-- -->
 
 
 
@@ -1313,17 +1318,10 @@ qtm(Europe,c("Val2007M12","Val2013M01"))
 ```r
 tm_shape(Europe[Europe$continent=="Europe",]) +
     tm_fill("part", thres.poly = 0) +
-    tm_facets("name", free.coords=TRUE, drop.shapes=TRUE) +
-tm_layout(legend.show = FALSE, title.position = c("center", "center"), 
-          title.size = 2)
+    tm_facets("name", free.coords=TRUE)
 ```
 
-```
-## Warning: The argument drop.shapes has been renamed to drop.units, and is
-## therefore deprecated
-```
-
-![](tmap_files/figure-slidy/unnamed-chunk-53-1.png)<!-- -->
+![](tmap_files/figure-html/unnamed-chunk-53-1.png)<!-- -->
 
 
 

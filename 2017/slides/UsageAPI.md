@@ -43,13 +43,19 @@ data=[maxsize:1073741824][timeout:900];area[name=\""
 
 ```r
 library(XML)
+```
+
+```
+## Warning: package 'XML' was built under R version 3.3.2
+```
+
+```r
 place <- "Mannheim"
 type_obj <- "node"
 object <- "leisure=playground"
 
 InfoList <- xmlParse(paste(Link1,place,"\"];",
-type_obj,"(area)[",object,
-"];out;",sep=""))
+type_obj,"(area)[",object,"];out;",sep=""))
 ```
 
 
@@ -57,7 +63,7 @@ type_obj,"(area)[",object,
 
 ## XML Output
 
-![Splielplätze in Mannheim](figure/xmlPlaygorung.PNG)
+![Spielplätze in Mannheim](figure/xmlPlaygorung.PNG)
 
 ## Das Arbeiten mit XML Daten (xpath)
 
@@ -103,23 +109,11 @@ library(gosmd)
 ```
 
 ```
-## Loading required package: maptools
+## Warning: package 'maptools' was built under R version 3.3.2
 ```
 
 ```
-## Loading required package: sp
-```
-
-```
-## Checking rgeos availability: TRUE
-```
-
-```
-## Loading required package: RJSONIO
-```
-
-```
-## Loading required package: stringr
+## Warning: package 'stringr' was built under R version 3.3.2
 ```
 
 ```r

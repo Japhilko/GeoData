@@ -113,7 +113,8 @@
 
 <pre class = 'prettyprint lang-r'>library(raster)</pre>
 
-<pre class = 'prettyprint lang-r'>LUX1 &lt;- getData(&#39;GADM&#39;, country=&#39;LUX&#39;, level=1)
+<pre class = 'prettyprint lang-r'>library(raster)
+LUX1 &lt;- getData(&#39;GADM&#39;, country=&#39;LUX&#39;, level=1)
 plot(LUX1)</pre>
 
 <p><img src='data:image/png;base64,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' title=''/><!-- --></p>
@@ -136,72 +137,16 @@ plot(LUX1)</pre>
 
 <pre class = 'prettyprint lang-r'>head(LUX1@data)</pre>
 
-<table class = 'rmdtable'>
-<tr class="header">
-<th align="right">OBJECTID</th>
-<th align="right">ID_0</th>
-<th align="left">ISO</th>
-<th align="left">NAME_0</th>
-<th align="right">ID_1</th>
-<th align="left">NAME_1</th>
-<th align="left">HASC_1</th>
-<th align="right">CCN_1</th>
-<th align="left">CCA_1</th>
-<th align="left">TYPE_1</th>
-<th align="left">ENGTYPE_1</th>
-<th align="left">NL_NAME_1</th>
-<th align="left">VARNAME_1</th>
-</tr>
-<tr class="odd">
-<td align="right">1</td>
-<td align="right">131</td>
-<td align="left">LUX</td>
-<td align="left">Luxembourg</td>
-<td align="right">1</td>
-<td align="left">Diekirch</td>
-<td align="left">LU.DI</td>
-<td align="right">NA</td>
-<td align="left"></td>
-<td align="left">District</td>
-<td align="left">District</td>
-<td align="left"></td>
-<td align="left">Dikrech|Dikkrich</td>
-</tr>
-<tr class="even">
-<td align="right">2</td>
-<td align="right">131</td>
-<td align="left">LUX</td>
-<td align="left">Luxembourg</td>
-<td align="right">2</td>
-<td align="left">Grevenmacher</td>
-<td align="left">LU.GR</td>
-<td align="right">NA</td>
-<td align="left"></td>
-<td align="left">District</td>
-<td align="left">District</td>
-<td align="left"></td>
-<td align="left">Gréivemaacher</td>
-</tr>
-<tr class="odd">
-<td align="right">3</td>
-<td align="right">131</td>
-<td align="left">LUX</td>
-<td align="left">Luxembourg</td>
-<td align="right">3</td>
-<td align="left">Luxembourg</td>
-<td align="left">LU.LU</td>
-<td align="right">NA</td>
-<td align="left"></td>
-<td align="left">District</td>
-<td align="left">District</td>
-<td align="left"></td>
-<td align="left">Lëtzebuerg|Luxemburg</td>
-</tr>
-</table>
+<pre >##   OBJECTID ID_0 ISO     NAME_0 ID_1       NAME_1 HASC_1 CCN_1 CCA_1
+## 1        1  131 LUX Luxembourg    1     Diekirch  LU.DI    NA      
+## 2        2  131 LUX Luxembourg    2 Grevenmacher  LU.GR    NA      
+## 3        3  131 LUX Luxembourg    3   Luxembourg  LU.LU    NA      
+##     TYPE_1 ENGTYPE_1 NL_NAME_1            VARNAME_1
+## 1 District  District               Dikrech|Dikkrich
+## 2 District  District                  Gréivemaacher
+## 3 District  District           Lëtzebuerg|Luxemburg</pre>
 
 </article></slide><slide class=''><hgroup><h2><a href='http://www.gadm.org/' title=''>GADM</a>- NUTS level 3</h2></hgroup><article  id="gadm--nuts-level-3">
-
-<p><a href='http://www.gadm.org/' title=''>http://www.gadm.org/</a></p>
 
 <pre class = 'prettyprint lang-r'>LUX3 &lt;- getData(&#39;GADM&#39;, country=&#39;LUX&#39;, level=3)
 plot(LUX3)</pre>
@@ -224,7 +169,11 @@ plot(DEU3)</pre>
 
 </article></slide><slide class=''><hgroup><h2>PLZ für Deutschland</h2></hgroup><article  id="plz-fur-deutschland">
 
-<p><a href='http://datahub.io/de/dataset/postal-codes-de' title=''>http://datahub.io/de/dataset/postal-codes-de</a></p>
+<ul>
+<li><p><a href='http://datahub.io/de/dataset/postal-codes-de' title=''>http://datahub.io/de/dataset/postal-codes-de</a></p></li>
+<li>datahub.io funktioniert leider nicht mehr</li>
+<li><p><a href='http://arnulf.us/PLZ' title=''>http://arnulf.us/PLZ</a></p></li>
+</ul>
 
 <pre class = 'prettyprint lang-r'>library(rgdal)</pre>
 
@@ -269,9 +218,7 @@ plot(krs[fds==&quot;05&quot;,])</pre>
 
 <p><a href='http://www.bundesnetzagentur.de/' title=''>http://www.bundesnetzagentur.de/</a></p>
 
-<pre class = 'prettyprint lang-r'>onb &lt;- readShapePoly(&quot;onb_grenzen.shp&quot;)
-
-kable(head(onb@data))</pre>
+<pre class = 'prettyprint lang-r'>onb &lt;- readShapePoly(&quot;onb_grenzen.shp&quot;)</pre>
 
 <table class = 'rmdtable'>
 <tr class="header">

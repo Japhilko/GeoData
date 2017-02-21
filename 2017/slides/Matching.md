@@ -1,6 +1,9 @@
-# Nutzung von GeoDaten in den Sozialwissenschaften - Daten verbinden
+# Daten verbinden
 Jan-Philipp Kolb  
 22 Februar 2017  
+
+
+
 
 
 
@@ -95,9 +98,14 @@ CNames[CNames2=="An"]
 
 
 ```r
-link <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/data/CO2emissions.csv"
+link <- 
+"https://raw.githubusercontent.com/Japhilko/
+GeoData/master/data/CO2emissions.csv"
 co2 <- read.csv(link)
 ```
+
+
+
 
 
 
@@ -174,20 +182,47 @@ ind
 ## [171]  94  NA 161  NA  23 208  13  82  48  42  NA 114 174  44 194  60 209
 ## [188]  54 121 188  76  NA  74   2  99 153  NA 135 196  NA 118 100  NA  40
 ## [205]  NA 210  43  59  12 198 128  89 127  68  91  NA  NA 139  NA 158 159
-## [222] 155 197 163 132  86   3  NA 195  NA  33 134  24  NA  NA  83 176  81
+## [222] 155 197 163 132  86   3   6 195  NA  33 134  24  NA  NA  83 176  81
 ## [239]  NA  NA  NA  NA  NA  NA  NA  NA
 ```
+
+## Struktur der Daten
+
+
+```r
+co2vec<-co2$V3
+str(co2vec)
+```
+
+```
+##  Factor w/ 90 levels "","-","0","0.1",..: 48 28 57 37 47 51 50 46 49 36 ...
+```
+
+```r
+co2vec<-as.character(co2vec)
+str(co2vec)
+```
+
+```
+##  chr [1:219] "25.2" "13.9" "32.6" "19.0" "25.0" "29.4" ...
+```
+
+```r
+co2vec<-as.numeric(co2vec)
+str(co2vec)
+```
+
+```
+##  num [1:219] 25.2 13.9 32.6 19 25 29.4 29.1 24.1 25.9 18.5 ...
+```
+
 
 
 ## Daten anspielen
 
 
 ```r
-wrld_simpl@data$co2_90 <- as.numeric(as.character(co2$V3[ind]))
-```
-
-```
-## Warning: NAs durch Umwandlung erzeugt
+wrld_simpl@data$co2_90 <- co2vec[ind]
 ```
 
 
@@ -196,7 +231,7 @@ library(sp)
 spplot(wrld_simpl,"co2_90")
 ```
 
-![](Matching_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
+![](Matching_files/figure-html/unnamed-chunk-19-1.png)<!-- -->
 
 ## Zusätzliche Länder matchen
 
@@ -209,32 +244,31 @@ fehlt
 
 ```
 ##  [1] Brunei                                      
-##  [2] United Arab Emirates                        
-##  [3] Falkland Islands                            
-##  [4] South Korea                                 
-##  [5] Taiwan[4][5]                                
-##  [6] Libya                                       
-##  [7] European Union                              
-##  [8] Iran                                        
-##  [9] Macedonia                                   
-## [10] World                                       
-## [11] Réunion                                     
-## [12] Syria                                       
-## [13] North Korea                                 
-## [14] Saint Helena, Ascension and Tristan da Cunha
-## [15] Wallis and Futuna                           
-## [16] Moldova                                     
-## [17] Vietnam                                     
-## [18] São Tomé and Príncipe                       
-## [19] Federated States of Micronesia              
-## [20] Republic of the Congo                       
-## [21] Ivory Coast                                 
-## [22] Laos                                        
-## [23] Myanmar                                     
-## [24] Tanzania                                    
-## [25] Soviet Union                                
-## [26] Czechoslovakia                              
-## [27] Yugoslavia                                  
+##  [2] Falkland Islands                            
+##  [3] South Korea                                 
+##  [4] Taiwan[4][5]                                
+##  [5] Libya                                       
+##  [6] European Union                              
+##  [7] Iran                                        
+##  [8] Macedonia                                   
+##  [9] World                                       
+## [10] Réunion                                     
+## [11] Syria                                       
+## [12] North Korea                                 
+## [13] Saint Helena, Ascension and Tristan da Cunha
+## [14] Wallis and Futuna                           
+## [15] Moldova                                     
+## [16] Vietnam                                     
+## [17] São Tomé and Príncipe                       
+## [18] Federated States of Micronesia              
+## [19] Republic of the Congo                       
+## [20] Ivory Coast                                 
+## [21] Laos                                        
+## [22] Myanmar                                     
+## [23] Tanzania                                    
+## [24] Soviet Union                                
+## [25] Czechoslovakia                              
+## [26] Yugoslavia                                  
 ## 219 Levels: Afghanistan Albania Algeria Andorra Angola ... Zimbabwe
 ```
 
@@ -289,7 +323,7 @@ for (i in 1:length(ind)){
 
 
 ```r
-wrld_simpl@data$co2_91 <- co2$V3[ind]
+wrld_simpl@data$co2_91 <- co2vec[ind]
 ```
 
 
@@ -297,5 +331,5 @@ wrld_simpl@data$co2_91 <- co2$V3[ind]
 spplot(wrld_simpl,"co2_91")
 ```
 
-![](Matching_files/figure-slidy/unnamed-chunk-23-1.png)<!-- -->
+![](Matching_files/figure-html/unnamed-chunk-25-1.png)<!-- -->
 

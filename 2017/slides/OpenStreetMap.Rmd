@@ -3,13 +3,13 @@ title: "Das Arbeiten mit OSM Daten"
 author: "Jan-Philipp Kolb"
 date: "22 Februar 2017"
 output: 
+  ioslides_presentation: 
+    keep_md: yes
   beamer_presentation: 
     colortheme: beaver
     fonttheme: structurebold
     highlight: tango
     theme: Warsaw
-  ioslides_presentation: 
-    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}

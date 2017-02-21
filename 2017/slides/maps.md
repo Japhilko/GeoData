@@ -369,7 +369,8 @@ Datenbasis - CIA World DataBank II
 
 ```r
 library(mapproj)
-map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, 
+    proj="mercator")
 ```
 
 ![](maps_files/figure-html/unnamed-chunk-36-1.png)<!-- -->
@@ -378,7 +379,8 @@ map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="mercator")
 
 
 ```r
-map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, 
+    proj="azequalarea")
 ```
 
 ![](maps_files/figure-html/unnamed-chunk-37-1.png)<!-- -->
@@ -387,7 +389,8 @@ map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="azequalarea")
 
 
 ```r
-map("state", col="#01B8AA", bg="#374649", fill=TRUE, proj="guyou")
+map("state", col="#01B8AA", bg="#374649", fill=TRUE, 
+    proj="guyou")
 ```
 
 ![](maps_files/figure-html/unnamed-chunk-38-1.png)<!-- -->

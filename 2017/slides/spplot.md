@@ -6,21 +6,8 @@ Jan-Philipp Kolb
 
 
 
-## Beispiel: US Arbeitslosigkeit 
+## Das Paket colorRamps
 
-- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
-
-
-Die Daten bekommen:
-
-
-```r
-library(maps)
-data(unemp)
-data(county.fips)
-```
-
-## Farbverläufe
 
 
 ```r
@@ -28,36 +15,25 @@ install.packages("colorRamps")
 ```
 
 
-
 ```r
 library(colorRamps)
+```
+
+```
+## Warning: package 'colorRamps' was built under R version 3.3.2
+```
+
+
+## Farbverläufe
+
+
+
+```r
 colors <- blue2red(6)
 barplot(1:6,col=colors)
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
-
-## Beispiel: US Arbeitslosigkeit - Farbschattierung
-
-
-```r
-unemp$colorSteps <- cut(unemp$unemp, 
-          c(0, 2, 4, 6, 8,10, 100))
-colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
-          unemp$fips)]
-```
-
-
-## Beispiel: US Arbeitslosigkeit
-
-
-```r
-map("county", col = colors[colorsmatch], 
-    fill = TRUE)
-```
-
-![](spplot_files/figure-slidy/unnamed-chunk-6-1.png)<!-- -->
-
+![](spplot_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 ## Das R-Paket [sp](https://cran.r-project.org/web/packages/sp/index.html)
@@ -94,7 +70,7 @@ library(maptools)
 plot(my_map)
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-9-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 ## Der Datensatz
@@ -122,7 +98,7 @@ CHE   CH     Switzerland     4000    7424389      150
 spplot(my_map,"POP2005")
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -132,7 +108,7 @@ library(colorRamps)
 spplot(my_map,"POP2005",col.regions=blue2red(100))
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -141,7 +117,7 @@ spplot(my_map,"POP2005",col.regions=blue2red(100))
 spplot(my_map,"POP2005",col.regions=blue2green(100))
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -150,7 +126,7 @@ spplot(my_map,"POP2005",col.regions=blue2green(100))
 spplot(my_map,"POP2005",col.regions=green2red(100))
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-15-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -158,7 +134,7 @@ spplot(my_map,"POP2005",col.regions=green2red(100))
 spplot(my_map,"POP2005",col.regions=blue2yellow(100))
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-16-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
 
 ## Nutzung von `colorRamps`
 
@@ -166,7 +142,7 @@ spplot(my_map,"POP2005",col.regions=blue2yellow(100))
 spplot(my_map,"POP2005",col.regions=matlab.like(100))
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
 
 ## Nutzung von synthetischen Daten
 
@@ -187,7 +163,48 @@ spplot(my_map,c("POP2005","Pop2010"),
        col.regions=matlab.like(100))
 ```
 
-![](spplot_files/figure-slidy/unnamed-chunk-19-1.png)<!-- -->
+![](spplot_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+
+
+
+
+## Beispiel: US Arbeitslosigkeit 
+
+- [Mehr](http://bcb.dfci.harvard.edu/~aedin/courses/R/CDC/maps.html) über die Nutzung des Paketes `maps`
+
+
+Die Daten bekommen:
+
+
+```r
+library(maps)
+data(unemp)
+data(county.fips)
+```
+
+
+## Beispiel: US Arbeitslosigkeit - Farbschattierung
+
+
+```r
+unemp$colorSteps <- cut(unemp$unemp, 
+          c(0, 2, 4, 6, 8,10, 100))
+colorsmatch <- unemp$colorSteps[match(county.fips$fips, 
+          unemp$fips)]
+```
+
+
+## Beispiel: US Arbeitslosigkeit
+
+
+```r
+map("county", col = colors[colorsmatch], 
+    fill = TRUE)
+```
+
+![](spplot_files/figure-html/unnamed-chunk-20-1.png)<!-- -->
+
+
 
 ## Mehr Beispiele 
 
