@@ -1,0 +1,46 @@
+---
+title: "Karten erstellen mit R"
+author: "Jan-Philipp Kolb"
+date: "23 November 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,cache=T)
+```
+
+
+## Ortsnetzbereiche
+
+Quelle: [Bundesnetzagentur](https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONRufnr/ON_Einteilung_ONB/ON_ONB_ONKz_ONBGrenzen_Basepage.html)
+
+<!-- 
+ggf. noch mal neu herunterladen
+--> 
+
+```{r,echo=F,eval=F}
+setwd("D:/Daten/Daten/GeoDaten/")
+```
+
+```{r,eval=F,echo=F}
+install.packages("maptools")
+```
+
+
+```{r,eval=F}
+library(maptools)
+onb <- readShapePoly("onb_grenzen.shp")
+```
+
+```{r,eval=F}
+par(mai=c(0,0,0,0))
+plot(onb)
+```
+
+![onbD](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/onbGermany.png)
+
