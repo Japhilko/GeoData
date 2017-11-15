@@ -13,12 +13,35 @@ knitr::opts_chunk$set(echo = FALSE,cache=T)
 wie du R in deinem Arbeitsalltag einbindest und wie du die Zukunft von R in der Wissenschaft siehst. 
 -->
 
-## R in meinem Arbeitsalltag
+## Was ist Gesis
 
-- Datenaufbereitung
-- Datendokumentation
-- Codebook, Wave Report (Rmarkdown)
-- Versionskontrolle
+- Leibniz Institut für die Sozialwissenschaften 
+- Forschungseinrichtung aber auch Infrastrukturangebote 
+
+## Was ist das Gesis Panel
+
+- Mixed Mode Access Panel
+
+
+<!-- 
+xxxxtodo: interessante Studien herausfinden
+-->
+
+## [R in meinem Arbeitsalltag](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
+
+- `foreign`, `readstata13` zum Import
+- `dplyr` Paket zur Datenaufbereitung
+- `doParallel` zur Bearbeitung vieler Jobs
+- `Rmarkdown` bei der Datendokumentation (Codebook, Wave Report) 
+- Rstudio git Interface zur Versionskontrolle
+
+## Datenaufbereitung
+
+- Panelbereinigung (bei Abmeldung oder Nonresponse)
+- Anonymisierung und Kategorisierung
+- Filterführung muss sich in den Missings wiederspiegeln
+
+
 
 ## [Reguläre Ausdrücke](https://www.rstudio.com/resources/cheatsheets/)
 
