@@ -1,0 +1,12 @@
+---
+title: "Die Zukunft von R in der Wissnschaft"
+author: "Jan-Philipp Kolb"
+date: "16 November 2017"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 

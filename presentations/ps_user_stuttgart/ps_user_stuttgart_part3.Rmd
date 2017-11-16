@@ -5,22 +5,24 @@ date: "23 November 2017"
 output: 
   beamer_presentation: 
     colortheme: beaver
-    fonttheme: structurebold
+    fonttheme: professionalfonts
     highlight: tango
-    theme: Warsaw
+    theme: Szeged
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,cache=T,warnings=F,message=FALSE)
+knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
+log_gesis=T
+library(knitr)
 ```
 
 
 ## Gliederung
 
+- Quellen für räumliche Daten
 - Pakete zur Darstellung in Karten
 - Quellen für inhaltliche Daten
-- Quellen für räumliche Daten
 - Verknüpfung von Daten
 - Beispiele für die Darstellung in Karten
  
@@ -37,6 +39,13 @@ map("france")
 map.cities(world.cities,col="blue")
 ```
 
+## Grenzen sind recht grob
+
+```{r}
+map("world", "Germany")
+```
+
+
 ## Das Paket `maptools`
 
 ```{r}
@@ -45,6 +54,41 @@ data(wrld_simpl)
 plot(wrld_simpl,col="royalblue")
 ```
 
+
+## Das Paket `sp`
+
+```{r}
+library(sp)
+spplot(wrld_simpl,"POP2005")
+```
+
+
+## Das Paket `raster`
+
+```{r,warning=F}
+library(raster)
+LUX1 <- getData('GADM', country='LUX', level=1)
+plot(LUX1)
+```
+
+## Daten für das Luxemburg Beispiel
+
+```{r}
+kable(head(LUX1@data[,1:6]))
+```
+
+## Kreise in Deutschland
+
+- Umrisse von 402 Kreisen in Deutschland
+- Quelle: [Bundesamt für Kartographie und Geodäsie](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
+- Karten gibt es auch für Bundesländer und Gemeinden
+
+
+```{r,eval=F}
+library(maptools)
+krs <- readShapePoly("vg250_ebenen/vg250_krs.shp")
+plot(krs)
+```
 
 
 ## Ortsnetzbereiche
@@ -55,7 +99,7 @@ Quelle: [Bundesnetzagentur](https://www.bundesnetzagentur.de/DE/Sachgebiete/Tele
 ggf. noch mal neu herunterladen
 --> 
 
-```{r,echo=F,eval=F}
+```{r,echo=F,eval=log_gesis}
 setwd("D:/Daten/Daten/GeoDaten/")
 ```
 
@@ -64,17 +108,119 @@ install.packages("maptools")
 ```
 
 
-```{r,eval=F}
+```{r,eval=log_gesis,echo=F}
 library(maptools)
+setwd("D:/Daten/Daten/GeoDaten/")
+
 onb <- readShapePoly("onb_grenzen.shp")
+kable(head(onb@data))
 ```
 
+
 ```{r,eval=F}
-par(mai=c(0,0,0,0))
-plot(onb)
+onb <- readShapePoly("onb_grenzen.shp")
+kable(head(onb@data))
+```
+
+
+
+
+## Vorwahlbereiche in der Region Stuttgart
+
+```{r,eval=log_gesis,tidy=T}
+vw_stg<-c("0711","07121","07122") 
+vw_reg_stg<-onb[onb@data$VORWAHL%in%vw_stg,]
+plot(vw_reg_stg)
 ```
 
 ![onbD](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/onbGermany.png)
+
+## Einen größeren Vorwahlbereich ausschneiden
+
+```{r,eval=log_gesis}
+vwb <- as.character(onb@data$ONB_NUMMER)
+vwb1 <- substr(vwb, 1,2)
+vwb7 <- onb[vwb1=="07",]
+plot(vwb7)
+```
+
+
+
+
+## Das Paket `rgdal`
+
+- Postleitzahlenbereiche - <http://arnulf.us/PLZ>
+
+```{r}
+library(rgdal)
+```
+
+
+```{r,eval=log_gesis,echo=F}
+setwd("D:/Daten/Daten/GeoDaten")
+PLZ <- readOGR ("post_pl.shp","post_pl")
+```
+
+
+```{r,eval=F}
+library(rgdal)
+PLZ <- readOGR ("post_pl.shp","post_pl")
+```
+
+## PLZ-Bereiche in Stuttgart
+
+```{r}
+SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
+plot(SG,col="chocolate1")
+```
+
+## PLZ-Bereiche in Berlin
+
+```{r}
+BE <- PLZ[PLZ@data$PLZORT99%in%c("Berlin-West","Berlin (östl. Stadtbezirke)"),]
+plot(BE,col="chocolate2")
+```
+
+
+
+## Daten verbinden - Bäckereien in Berlin
+
+```{r,eval=F,echo=T}
+load("data/info_bar_Berlin.RData")
+```
+
+```{r,echo=F}
+info_be <- info[,c("addr.postcode","addr.street","name","lat","lon")]
+```
+
+```{r,echo=F}
+kable(head(info_be))
+```
+
+## Matching
+
+```{r}
+tab_plz <- table(info_be$addr.postcode)
+```
+
+
+
+```{r}
+ind <- match(BE@data$PLZ99_N,names(tab_plz))
+ind
+```
+
+## Daten anspielen
+
+```{r}
+BE@data$num_plz <- tab_plz[ind]
+```
+
+```{r,eval=F,echo=F}
+install.packages("colorRamps")
+```
+
+
 
 
 ## Zensus Atlas

@@ -12,6 +12,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
 ```
 
 ## Biographie
@@ -58,5 +59,33 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Studien im Gesis Panel
 
+```{r,echo=F}
+(load("data/GP_spat_studies.RData"))
+colnames(tab_spatial)[1] <- "Kürzel"
+kable(tab_spatial)
+```
+
+## Datenaufbereitung
+
+- Panelbereinigung (bei Abmeldung oder Nonresponse)
+- Anonymisierung und Kategorisierung
+- Filterführung muss sich in den Missings wiederspiegeln
+
+
+
+## [R in meinem Arbeitsalltag](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
+
+- `foreign`, `readstata13` und `xlsx` zum Import von Daten
+- `dplyr` Paket zur Datenaufbereitung
+- `doParallel` zur Bearbeitung vieler Jobs
+- `Rmarkdown` bei der Datendokumentation (Codebook, Wave Report) 
+- Rstudio git Interface zur Versionskontrolle
+
+
+## Arbeiten mit HTML Daten
+
+- [Cheatsheet zum Umgang mit Strings](file:///D:/Eigene%20Dateien/Downloads/strings.pdf)
+
+![](figure/DruckversionFragebogen.PNG)
 
 

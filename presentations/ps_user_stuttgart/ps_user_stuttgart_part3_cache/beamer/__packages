@@ -2,3 +2,7 @@ base
 maps
 sp
 maptools
+knitr
+raster
+rgdal
+colorRamps
