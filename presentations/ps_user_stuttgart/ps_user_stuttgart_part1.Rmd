@@ -1,0 +1,62 @@
+---
+title: "R in meinem Arbeitsalltag"
+author: "Jan-Philipp Kolb"
+date: "16 November 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: tango
+    theme: Warsaw
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Biographie
+
+- VWL Studium in Trier (Diplom 2008)
+- 2004 Erasmus Jahr an der Université Jean Moulin in Lyon
+- Wissenschaftlicher Mitarbeiter am [Lehrstuhl für Wirtschafts- und Sozialstatistik](https://www.uni-trier.de/index.php?id=35894)
+- 2012 Promotion (Thema: Die Erzeugung von synthetischen Grundgesamtheiten)
+- Seit 2012 am Gesis Leibnitz Institut für Sozialwissenschaften - zunächst Team Statistik
+- Seit 2017 Survey Statistik im Team Gesis Panel
+
+## Das Gesis Institut
+
+### Fünf wissenschaftliche Abteilungen
+
+- Datenarchiv für Sozialwissenschaften (DAS)
+- Dauerbeobachtung der Gesellschaft (DBG)
+- Computational Social Siences (CSS)
+- Survey Design and Methodology (SDM)
+- Wissenstechnologien für Sozialwissenschaften (WTS)
+
+
+## Das Gesis Institut II
+
+### Gesis ist:
+
+- Infrastruktureinrichtung für die Sozialwissenschaften
+- mit über 250 MitarbeiterInnen an zwei Standorten (Köln und Mannheim)
+
+### GESIS bietet:
+
+- Beratung zu Forschungsprojekten in allen Phasen
+- Forschungsbasierte wissenschaftliche Dienstleistungen
+
+## Datenerhebungsinfrastruktur für die Profession
+
+- Probabilistisches mixed-mode Access Panel
+- Deutsche Allgemeinbevölkerung
+  - Deutschsprachig - ab 18 Jahren
+  - Basierend auf Einwohnermeldeamtsstichprobe
+- Mehrstufiger Rekrutierungsprozess, sequentielles mixed-mode Design
+- Initiale Rekrutierung 2013 
+- 2016 Auffrischungsstichprobe
+
+## Studien im Gesis Panel
+
+
+
