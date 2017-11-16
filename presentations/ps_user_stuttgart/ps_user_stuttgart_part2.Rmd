@@ -1,12 +1,45 @@
 ---
 title: "Die Zukunft von R in der Wissnschaft"
 author: "Jan-Philipp Kolb"
-date: "16 November 2017"
-output: beamer_presentation
+date: "23 November 2017"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: professionalfonts
+    highlight: tango
+    theme: Szeged
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## 
+## [Welche Programm werden genutzt](http://blog.revolutionanalytics.com/2013/10/r-usage-skyrocketing-rexer-poll.html)
+
+![](http://revolution-computing.typepad.com/.a/6a010534b1db25970b019b00077267970b-800wi)
+
+## [Trend Open Science - Leibniz Gemeinschaft](https://www.leibniz-gemeinschaft.de/forschung/open-science/)
+
+![](figure/Leibniz_openScience.PNG)
+
+## [Trend Open Science - GESIS](https://www.gesis.org/forschung/angewandte-informatik/open-science/)
+
+![](figure/Gesis_openscience.PNG)
+
+
+## [Job trends ](http://blog.revolutionanalytics.com/2017/02/job-trends-for-r-and-python.html)
+
+![](http://revolution-computing.typepad.com/.a/6a010534b1db25970b01b7c8d42886970b-800wi)
+
+## Fazit - Zukunft von R in der Wissenschaft
+
+- Bedeutung von R scheint zuzunehmen
+- Open Science Entwicklung
+- Stata ist nach wie vor wichtig (Pfadabhängigkeit)
+- Bedeutung von SPSS nimmt ab
+
+
+<!--
+http://sharpsightlabs.com/blog/r-recommend-data-science/
+-->

@@ -13,7 +13,8 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
-log_gesis=T
+log_gesis=F
+log_home=T
 library(knitr)
 ```
 
@@ -29,6 +30,22 @@ library(knitr)
 <!--
 Beim letzten Punkt colour Picker einbauen - Folien maps
 -->
+
+
+```{r,echo=F,eval=F}
+install.packages("sp")
+```
+
+```{r,echo=F,eval=F}
+setwd("~/GitHub/GeoData/presentations/ps_user_stuttgart")
+```
+
+## Motivation
+
+### [Deutschlands größte Klimasünder](http://www.spiegel.de/wissenschaft/mensch/deutschland-das-sind-die-groessten-klimasuender-a-1178207.html)
+
+![](figure/Kohle_mannheim.PNG)
+
 
 ## Das Paket `maps`
 
@@ -161,6 +178,12 @@ setwd("D:/Daten/Daten/GeoDaten")
 PLZ <- readOGR ("post_pl.shp","post_pl")
 ```
 
+```{r,eval=log_home}
+setwd("D:/GESIS/Workshops/GeoDaten/data/")
+PLZ <- readOGR ("post_pl.shp","post_pl")
+```
+
+
 
 ```{r,eval=F}
 library(rgdal)
@@ -218,9 +241,21 @@ BE@data$num_plz <- tab_plz[ind]
 
 ```{r,eval=F,echo=F}
 install.packages("colorRamps")
+install.packages("XML")
+install.packages("geosphere")
+install.packages("tmap")
+install.packages("curl")
+install.packages("R.oo")
 ```
 
 
+## Das Paket `tmap`
+
+```{r}
+library(tmap)
+BE@data$num_plz[is.na(BE@data$num_plz)] <- 0
+qtm(BE,fill = "num_plz")
+```
 
 
 ## Zensus Atlas
