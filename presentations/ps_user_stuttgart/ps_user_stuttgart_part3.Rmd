@@ -251,7 +251,7 @@ plot(BE,col="chocolate2")
 http://wiki.openstreetmap.org/wiki/DE:Datenherkunft_richtig_angeben
 -->
 
-## OSm als Datenquelle
+## OSM als Datenquelle
 
 - Zum Download habe ich die [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) verwendet
 
@@ -275,14 +275,14 @@ tab_plz <- table(info_be$addr.postcode)
 
 
 
-```{r,eval=log_home}
+```{r}
 ind <- match(BE@data$PLZ99_N,names(tab_plz))
 ind
 ```
 
 ## Daten anspielen
 
-```{r,eval=F}
+```{r}
 BE@data$num_plz <- tab_plz[ind]
 ```
 
@@ -304,7 +304,7 @@ library(tmap)
 
 - mit qmap kann man schnell eine thematische Karte erzeugen
 
-```{r,eval=F}
+```{r}
 BE@data$num_plz[is.na(BE@data$num_plz)] <- 0
 qtm(BE,fill = "num_plz")
 ```
@@ -321,6 +321,33 @@ load("data/osmsa_PLZ_14.RData")
 ```{r,echo=F}
 dat_plz <- PLZ@data
 kable(head(dat_plz))
+```
+
+## OSM-Daten - Bäckereien in Stuttgart
+
+```{r,echo=F}
+PLZ_SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
+```
+
+
+```{r}
+qtm(PLZ_SG,fill="bakery")
+```
+
+## In welchem PLZ Bereich sind die meisten Bäckereien
+
+```{r}
+kable(PLZ_SG@data[which.max(PLZ_SG$bakery),c("PLZ99","lat","lon","bakery")])
+```
+
+## Das Paket `ggmap`
+
+```{r ggmap_citycenter}
+library(ggmap)
+lon_plz <- PLZ_SG@data[which.max(PLZ_SG$bakery),"lon"]
+lat_plz <- PLZ_SG@data[which.max(PLZ_SG$bakery),"lat"]
+mp_plz <- as.numeric(c(lon_plz,lat_plz))
+qmap(location = mp_plz,zoom=15)
 ```
 
 
@@ -368,6 +395,30 @@ qtm(PLZ_SG,fill="land_cover.value")
 ```{r}
 qtm(PLZ_SG,fill="elevation.value")
 ```
+
+<!--
+man könnte hier noch zeigen, wie man einen Punkt hinzufügen kann
+-->
+
+## Das Paket `osmar`
+
+```{r}
+library(osmar) 
+```
+
+
+```{r,eval=F}
+src <- osmsource_api()
+gc <- geocode("Stuttgart-Degerloch")
+bb <- center_bbox(gc$lon, gc$lat, 800, 800)
+ua <- get_osm(bb, source = src)
+plot(ua)
+```
+
+## Graphiken Stadtleben Stuttgart
+
+
+
 
 ## Zensus Atlas
 
