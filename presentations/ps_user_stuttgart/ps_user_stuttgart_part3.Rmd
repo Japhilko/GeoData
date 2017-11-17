@@ -3,19 +3,21 @@ title: "Karten erstellen mit R"
 author: "Jan-Philipp Kolb"
 date: "23 November 2017"
 output: 
+  slidy_presentation: 
+    highlight: tango
   beamer_presentation: 
     colortheme: beaver
     fonttheme: professionalfonts
     highlight: tango
+    keep_tex: yes
     theme: Szeged
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
-log_gesis=F
-log_home=T
-library(knitr)
+log_gesis=T
+log_home=F
 ```
 
 
@@ -31,18 +33,29 @@ library(knitr)
 Beim letzten Punkt colour Picker einbauen - Folien maps
 -->
 
+```{r}
+library(knitr)
+```
+
 
 ```{r,echo=F,eval=F}
 install.packages("sp")
+install.packages("tmap")
 ```
 
-```{r,echo=F,eval=F}
+```{r,echo=F,eval=log_home}
 setwd("~/GitHub/GeoData/presentations/ps_user_stuttgart")
 ```
 
-## Motivation
 
-### [Deutschlands größte Klimasünder](http://www.spiegel.de/wissenschaft/mensch/deutschland-das-sind-die-groessten-klimasuender-a-1178207.html)
+```{r,eval=F}
+setwd("D:/Daten/GitHub/GeoData/presentations/ps_user_stuttgart")
+purl("ps_user_stuttgart_part3.Rmd")
+```
+
+
+
+## Motivation - [Deutschlands größte Klimasünder](http://www.spiegel.de/wissenschaft/mensch/deutschland-das-sind-die-groessten-klimasuender-a-1178207.html)
 
 ![](figure/Kohle_mannheim.PNG)
 
@@ -204,38 +217,57 @@ BE <- PLZ[PLZ@data$PLZORT99%in%c("Berlin-West","Berlin (östl. Stadtbezirke)"),]
 plot(BE,col="chocolate2")
 ```
 
+## Exkurs - Open Street Map
+
+<www.openstreetmap.org/export>
+
+![](https://raw.githubusercontent.com/Japhilko/GeoData/master/2017/slides/figure/admgrBer.PNG)
+
+## [OpenStreetMap - Map Features](http://wiki.openstreetmap.org/wiki/Map_Features)
+
+![](figure/OSMroads.PNG)
 
 
 ## Daten verbinden - Bäckereien in Berlin
 
+- Quelle für die folgenden Daten ist: 
+
+![](http://wiki.openstreetmap.org/w/images/thumb/f/f3/Wandertafel_Lizenz.png/1081px-Wandertafel_Lizenz.png)
+
+<!--
+http://wiki.openstreetmap.org/wiki/DE:Datenherkunft_richtig_angeben
+-->
+
+- Zum Download habe ich die [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) verwendet
+
 ```{r,eval=F,echo=T}
-load("data/info_bar_Berlin.RData")
+(load("data/info_bar_Berlin.RData"))
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=log_home}
 info_be <- info[,c("addr.postcode","addr.street","name","lat","lon")]
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=log_home}
 kable(head(info_be))
 ```
 
 ## Matching
 
-```{r}
+```{r,eval=log_home}
 tab_plz <- table(info_be$addr.postcode)
 ```
 
 
 
-```{r}
+```{r,eval=log_home}
 ind <- match(BE@data$PLZ99_N,names(tab_plz))
 ind
 ```
 
 ## Daten anspielen
 
-```{r}
+```{r,eval=F}
 BE@data$num_plz <- tab_plz[ind]
 ```
 
@@ -253,6 +285,10 @@ install.packages("R.oo")
 
 ```{r}
 library(tmap)
+```
+
+
+```{r,eval=F}
 BE@data$num_plz[is.na(BE@data$num_plz)] <- 0
 qtm(BE,fill = "num_plz")
 ```
