@@ -42,4 +42,8 @@ knitr::opts_chunk$set(echo = FALSE)
 
 <!--
 http://sharpsightlabs.com/blog/r-recommend-data-science/
+
+http://r4stats.com/articles/popularity/
+
+https://www.kdnuggets.com/2013/12/poll-results-r-leading-python-gaining.html
 -->
