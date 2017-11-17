@@ -6,3 +6,8 @@ maptools
 raster
 rgdal
 tmap
+plyr
+rjson
+bitops
+RCurl
+RDSTK

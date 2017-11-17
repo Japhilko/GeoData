@@ -3,8 +3,7 @@ title: "Karten erstellen mit R"
 author: "Jan-Philipp Kolb"
 date: "23 November 2017"
 output: 
-  slidy_presentation: 
-    highlight: tango
+  slidy_presentation: default
   beamer_presentation: 
     colortheme: beaver
     fonttheme: professionalfonts
@@ -57,22 +56,36 @@ purl("ps_user_stuttgart_part3.Rmd")
 
 ## Motivation - [Deutschlands größte Klimasünder](http://www.spiegel.de/wissenschaft/mensch/deutschland-das-sind-die-groessten-klimasuender-a-1178207.html)
 
+- Spiegel Artikel am 16.11.2017 aus Anlass der Jameika Gespräche
+
 ![](figure/Kohle_mannheim.PNG)
 
 
-## Das Paket `maps`
+## Hello World
 
 ```{r}
 library(maps)
-data(world.cities)
-map("france")
-map.cities(world.cities,col="blue")
+map()
 ```
 
-## Grenzen sind recht grob
+
+## Das Paket `maps` - detailierter
+
+
+Grenzen sind recht grob:
 
 ```{r}
 map("world", "Germany")
+```
+
+
+## Das Paket `maps` - Mehr Information
+
+
+```{r}
+data(world.cities)
+map("france")
+map.cities(world.cities,col="blue")
 ```
 
 
@@ -238,23 +251,25 @@ plot(BE,col="chocolate2")
 http://wiki.openstreetmap.org/wiki/DE:Datenherkunft_richtig_angeben
 -->
 
+## OSm als Datenquelle
+
 - Zum Download habe ich die [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) verwendet
 
-```{r,eval=F,echo=T}
+```{r,eval=T,echo=T}
 (load("data/info_bar_Berlin.RData"))
 ```
 
-```{r,echo=F,eval=log_home}
+```{r,echo=F}
 info_be <- info[,c("addr.postcode","addr.street","name","lat","lon")]
 ```
 
-```{r,echo=F,eval=log_home}
+```{r,echo=F}
 kable(head(info_be))
 ```
 
 ## Matching
 
-```{r,eval=log_home}
+```{r}
 tab_plz <- table(info_be$addr.postcode)
 ```
 
@@ -287,12 +302,72 @@ install.packages("R.oo")
 library(tmap)
 ```
 
+- mit qmap kann man schnell eine thematische Karte erzeugen
 
 ```{r,eval=F}
 BE@data$num_plz[is.na(BE@data$num_plz)] <- 0
 qtm(BE,fill = "num_plz")
 ```
 
+## Mehr Informationen einbinden
+
+- Der folgende Datensatz ist eine Kombination aus den vorgestellten PLZ-Shapefiles und OSM-Daten die über Overpass heruntergeladen wurden:
+
+
+```{r}
+load("data/osmsa_PLZ_14.RData")
+```
+
+```{r,echo=F}
+dat_plz <- PLZ@data
+kable(head(dat_plz))
+```
+
+
+
+## [Das R-Paket `RDSTK`](http://www.datasciencetoolkit.org/)
+
+```{r,eval=F,echo=F}
+install.packages("RDSTK")
+```
+
+![](figure/DataScienceToolkit.PNG)
+
+- Data Science Toolkit API
+
+```{r}
+library("RDSTK")
+```
+
+## Die Daten für Stuttgart
+
+```{r}
+PLZ_SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
+```
+
+```{r,echo=F}
+tab_landcover <- table(PLZ_SG$land_cover.value)
+df_landcover <- data.frame(tab_landcover)
+colnames(df_landcover)[1] <- c("Type_landcover")
+kable(df_landcover)
+```
+
+
+## Eine Karte der Flächenbedeckung erstellen
+
+- Daten von [European Commission Land Resource Management Unit Global Land Cover 2000.](http://bioval.jrc.ec.europa.eu/products/glc2000/products.php)
+
+```{r}
+qtm(PLZ_SG,fill="land_cover.value")
+```
+
+## Die Höhe in Stuttgart
+
+- Daten von [NASA and the CGIAR Consortium for Spatial Information .](http://srtm.csi.cgiar.org/)
+
+```{r}
+qtm(PLZ_SG,fill="elevation.value")
+```
 
 ## Zensus Atlas
 
