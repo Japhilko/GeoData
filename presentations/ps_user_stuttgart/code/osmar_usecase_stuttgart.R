@@ -5,6 +5,7 @@ datapath <- "D:/Daten/GitHub/GeoData/presentations/ps_user_stuttgart/data/"
 graphpath <- "D:/Daten/GitHub/GeoData/presentations/ps_user_stuttgart/figure"
 
 
+
 # bounding box for Stuttgart
 
 library(devtools)

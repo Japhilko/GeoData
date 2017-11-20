@@ -12,11 +12,11 @@ output:
     theme: Szeged
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
-log_gesis=T
-log_home=F
+log_gesis=F
+log_home=T
 ```
 
 
@@ -32,18 +32,20 @@ log_home=F
 Beim letzten Punkt colour Picker einbauen - Folien maps
 -->
 
-```{r}
-library(knitr)
-```
-
-
 ```{r,echo=F,eval=F}
+install.packages("knitr")
 install.packages("sp")
 install.packages("tmap")
 ```
 
-```{r,echo=F,eval=log_home}
+
+```{r}
+library(knitr)
+```
+
+```{r,echo=F,eval=F}
 setwd("~/GitHub/GeoData/presentations/ps_user_stuttgart")
+purl("ps_user_stuttgart_part3.Rmd")
 ```
 
 
