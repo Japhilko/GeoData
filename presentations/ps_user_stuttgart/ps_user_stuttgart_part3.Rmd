@@ -15,16 +15,24 @@ output:
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
-log_gesis=F
-log_home=T
+log_gesis=T
+log_home=F
 ```
 
 
-## Gliederung
 
-- Quellen für räumliche Daten
-- Pakete zur Darstellung in Karten
+# Motivation - [Deutschlands größte Klimasünder](http://www.spiegel.de/wissenschaft/mensch/deutschland-das-sind-die-groessten-klimasuender-a-1178207.html)
+
+- Spiegel Artikel am 16.11.2017 aus Anlass der Jamaika Gespräche
+
+![](figure/Kohle_mannheim.PNG)
+
+
+# Gliederung
+
+- Quellen für Polygonzüge (Staaten, Gemeinden, PLZ Bereiche etc.)
 - Quellen für inhaltliche Daten
+- Pakete zur Erstellung thematischer Karten (bspw. Pakete `maptools`, `sp`, `tmap`)
 - Verknüpfung von Daten
 - Beispiele für die Darstellung in Karten
  
@@ -39,7 +47,7 @@ install.packages("tmap")
 ```
 
 
-```{r}
+```{r,echo=F}
 library(knitr)
 ```
 
@@ -49,21 +57,17 @@ purl("ps_user_stuttgart_part3.Rmd")
 ```
 
 
-```{r,eval=F}
+```{r,eval=F,echo=F}
 setwd("D:/Daten/GitHub/GeoData/presentations/ps_user_stuttgart")
 purl("ps_user_stuttgart_part3.Rmd")
 ```
 
 
+# Quellen für Polygonzüge
 
-## Motivation - [Deutschlands größte Klimasünder](http://www.spiegel.de/wissenschaft/mensch/deutschland-das-sind-die-groessten-klimasuender-a-1178207.html)
+![](figure/quizz.PNG)
 
-- Spiegel Artikel am 16.11.2017 aus Anlass der Jameika Gespräche
-
-![](figure/Kohle_mannheim.PNG)
-
-
-## Hello World
+# Hello World
 
 ```{r}
 library(maps)
@@ -71,7 +75,7 @@ map()
 ```
 
 
-## Das Paket `maps` - detailierter
+# Das Paket `maps` - etwas detailierter
 
 
 Grenzen sind recht grob:
@@ -81,8 +85,13 @@ map("world", "Germany")
 ```
 
 
-## Das Paket `maps` - Mehr Information
+<!--
+Die Befehle im Paket maps sind etwas anders als bei den anderen Paketen.
+-->
 
+# Das Paket `maps` - Mehr Information
+
+- Nur für manche Staaten bekommt man Umkreise für Einheiten unterhalb der Staatsgrenze (bspw. Frankreich, USA). 
 
 ```{r}
 data(world.cities)
@@ -91,7 +100,9 @@ map.cities(world.cities,col="blue")
 ```
 
 
-## Das Paket `maptools`
+# Das Paket `maptools`
+
+- Das Paket `maptools` hat intuitivere Bedienung, zudem können Shapefiles verarbeitet werden.
 
 ```{r}
 library(maptools)
@@ -99,16 +110,43 @@ data(wrld_simpl)
 plot(wrld_simpl,col="royalblue")
 ```
 
+# Was sind shapefiles (`.shp`)?
 
-## Das Paket `sp`
+- Das Dateiformat Shapefile ist ein ursprünglich für die Software ArcView der Firma ESRI entwickeltes Format für Geodaten. (Quelle: [Wikipedia](https://de.wikipedia.org/wiki/Shapefile))
+
+```{r,eval=F}
+head(wrld_simpl@data)
+```
+
+```{r,echo=F}
+kable(head(wrld_simpl@data))
+```
 
 ```{r}
-library(sp)
-spplot(wrld_simpl,"POP2005")
+length(wrld_simpl)
+nrow(wrld_simpl@data)
+```
+
+# Einzelne Elemente des Datensatzes plotten
+
+```{r}
+ind <- which(wrld_simpl$ISO3=="DEU")
+```
+
+```{r}
+plot(wrld_simpl[ind,])
+```
+
+```{r}
+wrld_simpl@data[ind,]
 ```
 
 
-## Das Paket `raster`
+
+# Andere Quellen für Shapefiles - Das Paket `raster`
+
+- Für Polygonzüge unterhalb der Staatsgrenzen ist [Global Administrative Boundaries](http://www.gadm.org/) eine gute Quelle.
+- Vor allem weil es auch eine API gibt, die man mit dem Paket `raster` nutzen kann.
 
 ```{r,warning=F}
 library(raster)
@@ -116,16 +154,21 @@ LUX1 <- getData('GADM', country='LUX', level=1)
 plot(LUX1)
 ```
 
-## Daten für das Luxemburg Beispiel
+# Daten für das Luxemburg Beispiel
 
 ```{r}
-kable(head(LUX1@data[,1:6]))
+kable(head(LUX1@data))
 ```
 
-## Kreise in Deutschland
+# [Shapefiles bei Eurostat](http://ec.europa.eu/eurostat/de/web/gisco/geodata/reference-data/administrative-units-statistical-units)
+
+![](figure/Eurostat_Zensus.PNG)
+
+
+# BKG - Quelle für Kreise in Deutschland
 
 - Umrisse von 402 Kreisen in Deutschland
-- Quelle: [Bundesamt für Kartographie und Geodäsie](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0)
+- Quelle: [Bundesamt für Kartographie und Geodäsie](http://www.geodatenzentrum.de/geodaten/gdz_rahmen.gdz_div?gdz_spr=deu&gdz_akt_zeile=5&gdz_anz_zeile=1&gdz_unt_zeile=15&gdz_user_id=0) (BKG)
 - Karten gibt es auch für Bundesländer und Gemeinden
 
 
@@ -135,8 +178,38 @@ krs <- readShapePoly("vg250_ebenen/vg250_krs.shp")
 plot(krs)
 ```
 
+```{r,echo=F,eval=log_gesis}
+library(maptools)
+krs <- readShapePoly("D:/Daten/Daten/GeoDaten/vg250_ebenen/vg250_krs.shp")
+```
 
-## Ortsnetzbereiche
+```{r,echo=F}
+library(DT)
+```
+
+```{r,echo=F,eval=F}
+datatable(krs@data)
+```
+
+```{r}
+head(krs@data$RS)
+```
+
+- Die Kreise für Baden-Württemberg
+- Systematik hinter dem Amtlichen Gemeindeschlüssel (AGS) bzw. Regionalschlüssel (RS) bei [Wikipedia](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel)
+
+```{r}
+BLA <- substr(krs@data$RS,1,2)
+plot(krs[BLA=="08",])
+```
+
+# [Shapefiles für Wahlkreise](https://www.bundeswahlleiter.de/bundestagswahlen/2017/wahlkreiseinteilung/downloads.html)
+
+
+![](figure/shapefiles_btw.PNG)
+
+
+# Ortsnetzbereiche
 
 Quelle: [Bundesnetzagentur](https://www.bundesnetzagentur.de/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONRufnr/ON_Einteilung_ONB/ON_ONB_ONKz_ONBGrenzen_Basepage.html)
 
@@ -170,7 +243,7 @@ kable(head(onb@data))
 
 
 
-## Vorwahlbereiche in der Region Stuttgart
+# Vorwahlbereiche in der Region Stuttgart
 
 ```{r,eval=log_gesis,tidy=T}
 vw_stg<-c("0711","07121","07122") 
@@ -180,7 +253,7 @@ plot(vw_reg_stg)
 
 ![onbD](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/onbGermany.png)
 
-## Einen größeren Vorwahlbereich ausschneiden
+# Einen größeren Vorwahlbereich ausschneiden
 
 ```{r,eval=log_gesis}
 vwb <- as.character(onb@data$ONB_NUMMER)
@@ -192,7 +265,7 @@ plot(vwb7)
 
 
 
-## Das Paket `rgdal`
+# Das Paket `rgdal`
 
 - Postleitzahlenbereiche - <http://arnulf.us/PLZ>
 
@@ -218,32 +291,140 @@ library(rgdal)
 PLZ <- readOGR ("post_pl.shp","post_pl")
 ```
 
-## PLZ-Bereiche in Stuttgart
+# PLZ-Bereiche in Stuttgart
 
 ```{r}
 SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
 plot(SG,col="chocolate1")
 ```
 
-## PLZ-Bereiche in Berlin
+# PLZ-Bereiche in Berlin
 
 ```{r}
 BE <- PLZ[PLZ@data$PLZORT99%in%c("Berlin-West","Berlin (östl. Stadtbezirke)"),]
 plot(BE,col="chocolate2")
 ```
 
-## Exkurs - Open Street Map
+# Zwischenfazit - Quellen für Polygonzüge
+
+- In einigen R-Paketen sind Polygonzüge hinterlegt
+- Umgang mit den Daten unterscheidet sich
+- Am sinnvollsten ist das arbeiten mit Shapefiles (.shp)
+- Neben den R-Paketen gibt es zahlreiche weitere Quellen für Polygonzüge.
+
+# Thematische Karten mit R erstellen
+
+![](figure/ProjekteKarten.PNG)
+
+# Thematische Karten erzeugen - das Paket `sp`
+
+```{r}
+library(sp)
+spplot(wrld_simpl,"POP2005")
+```
+
+# Andere Einfärbungen wählen - Das Paket `colorRamps`
+
+```{r,eval=F,echo=F}
+install.packages("colorRamps")
+```
+
+```{r}
+library(colorRamps)
+spplot(wrld_simpl,"POP2005",col.regions=blue2red(100))
+```
+
+# Es gibt auch noch mehr Farbverläufe im Paket `colorRamps`
+
+- `blue2green`, `blue2yellow`
+
+```{r}
+spplot(wrld_simpl,"POP2005",col.regions=matlab.like(100))
+```
+
+
+# Eurostat Daten
+
+Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) downloaden.
+
+<http://ec.europa.eu/eurostat/web/euro-indicators/peeis>
+
+```{r,echo=F,eval=log_gesis}
+setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
+```
+
+```{r,eval=F}
+library(xlsx)
+HHsr <- read.xlsx2("HHsavingRate.xls",1)
+```
+
+```{r,echo=F,eval=F}
+kable(HHsr[1:8,1:6])
+```
+
+
+# [Zensus Ergebnisse](https://www.zensus2011.de/SharedDocs/Aktuelles/Ergebnisse/DemografischeGrunddaten.html)
+
+![](figure/ZensusErgebnisse.PNG)
+
+
+# Zensus Atlas
+
+<https://ergebnisse.zensus2011.de/>
+
+![Zensus Datenbank](https://raw.githubusercontent.com/Japhilko/GeoData/master/2017/slides/figure/Zensusdtb.PNG)
+
+
+# <datahub.io>
+
+![](figure/datahub_whc.PNG)
+
+# Weltkulturerbestätten
+
+```{r,eval=F}
+url <- "https://raw.githubusercontent.com/Japhilko/
+GeoData/master/2015/data/whcSites.csv"
+
+whcSites <- read.csv(url) 
+```
+
+```{r,echo=F}
+url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcSites.csv"
+
+whcSites <- read.csv(url) 
+```
+
+```{r,echo=F}
+kable(head(whcSites))
+```
+
+
+
+# Exkurs -  [OpenStreetMap](http://www.openstreetmap.de/) Projekt
+
+> OpenStreetMap.org ist ein im Jahre 2004 gegründetes internationales Projekt mit dem Ziel, eine freie Weltkarte zu erschaffen. Dafür sammeln wir weltweit Daten über Straßen, Eisenbahnen, Flüsse, Wälder, Häuser und vieles mehr. 
+
+<http://www.openstreetmap.de/>
+
+# Export von OpenStreetMap Daten
 
 <www.openstreetmap.org/export>
 
 ![](https://raw.githubusercontent.com/Japhilko/GeoData/master/2017/slides/figure/admgrBer.PNG)
 
-## [OpenStreetMap - Map Features](http://wiki.openstreetmap.org/wiki/Map_Features)
+# [OpenStreetMap - Map Features](http://wiki.openstreetmap.org/wiki/Map_Features)
 
 ![](figure/OSMroads.PNG)
 
 
-## Daten verbinden - Bäckereien in Berlin
+
+# Zwischenfazit - Quellen für inhaltliche Daten
+
+- Gerade auf Staatenebene gibt es sehr viele Daten
+- Oftmals hat man aber eigene Daten, die man in einer Karte darstellen möchte
+- Frage ist wie sich die inhaltlichen Daten mit den Polygonzügen verbinden lassen
+
+# Daten verbinden - Beispiel Bäckereien in Berlin
 
 - Quelle für die folgenden Daten ist: 
 
@@ -253,7 +434,7 @@ plot(BE,col="chocolate2")
 http://wiki.openstreetmap.org/wiki/DE:Datenherkunft_richtig_angeben
 -->
 
-## OSM als Datenquelle
+# OSM als Datenquelle
 
 - Zum Download habe ich die [Overpass API](http://wiki.openstreetmap.org/wiki/Overpass_API) verwendet
 
@@ -269,7 +450,7 @@ info_be <- info[,c("addr.postcode","addr.street","name","lat","lon")]
 kable(head(info_be))
 ```
 
-## Matching
+# Matching
 
 ```{r}
 tab_plz <- table(info_be$addr.postcode)
@@ -282,7 +463,7 @@ ind <- match(BE@data$PLZ99_N,names(tab_plz))
 ind
 ```
 
-## Daten anspielen
+# Daten anspielen
 
 ```{r}
 BE@data$num_plz <- tab_plz[ind]
@@ -298,7 +479,7 @@ install.packages("R.oo")
 ```
 
 
-## Das Paket `tmap`
+# Das Paket `tmap`
 
 ```{r}
 library(tmap)
@@ -311,7 +492,7 @@ BE@data$num_plz[is.na(BE@data$num_plz)] <- 0
 qtm(BE,fill = "num_plz")
 ```
 
-## Mehr Informationen einbinden
+# Mehr Informationen einbinden
 
 - Der folgende Datensatz ist eine Kombination aus den vorgestellten PLZ-Shapefiles und OSM-Daten die über Overpass heruntergeladen wurden:
 
@@ -325,7 +506,7 @@ dat_plz <- PLZ@data
 kable(head(dat_plz))
 ```
 
-## OSM-Daten - Bäckereien in Stuttgart
+# OSM-Daten - Bäckereien in Stuttgart
 
 ```{r,echo=F}
 PLZ_SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
@@ -336,13 +517,13 @@ PLZ_SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
 qtm(PLZ_SG,fill="bakery")
 ```
 
-## In welchem PLZ Bereich sind die meisten Bäckereien
+# In welchem PLZ Bereich sind die meisten Bäckereien
 
 ```{r}
 kable(PLZ_SG@data[which.max(PLZ_SG$bakery),c("PLZ99","lat","lon","bakery")])
 ```
 
-## Das Paket `ggmap`
+# Das Paket `ggmap`
 
 ```{r ggmap_citycenter}
 library(ggmap)
@@ -354,7 +535,7 @@ qmap(location = mp_plz,zoom=15)
 
 
 
-## [Das R-Paket `RDSTK`](http://www.datasciencetoolkit.org/)
+# [Das R-Paket `RDSTK`](http://www.datasciencetoolkit.org/)
 
 ```{r,eval=F,echo=F}
 install.packages("RDSTK")
@@ -368,7 +549,7 @@ install.packages("RDSTK")
 library("RDSTK")
 ```
 
-## Die Daten für Stuttgart
+# Die Daten für Stuttgart
 
 ```{r}
 PLZ_SG <- PLZ[PLZ@data$PLZORT99=="Stuttgart",]
@@ -382,19 +563,19 @@ kable(df_landcover)
 ```
 
 
-## Eine Karte der Flächenbedeckung erstellen
+# Eine Karte der Flächenbedeckung erstellen
 
 - Daten von [European Commission Land Resource Management Unit Global Land Cover 2000.](http://bioval.jrc.ec.europa.eu/products/glc2000/products.php)
 
-```{r}
+```{r,eval=F}
 qtm(PLZ_SG,fill="land_cover.value")
 ```
 
-## Die Höhe in Stuttgart
+# Die Höhe in Stuttgart
 
 - Daten von [NASA and the CGIAR Consortium for Spatial Information .](http://srtm.csi.cgiar.org/)
 
-```{r}
+```{r,eval=F}
 qtm(PLZ_SG,fill="elevation.value")
 ```
 
@@ -402,7 +583,7 @@ qtm(PLZ_SG,fill="elevation.value")
 man könnte hier noch zeigen, wie man einen Punkt hinzufügen kann
 -->
 
-## Das Paket `osmar`
+# Das Paket `osmar`
 
 ```{r}
 library(osmar) 
@@ -417,16 +598,8 @@ ua <- get_osm(bb, source = src)
 plot(ua)
 ```
 
-## Graphiken Stadtleben Stuttgart
+# Graphiken Stadtleben Stuttgart
 
-
-
-
-## Zensus Atlas
-
-<https://ergebnisse.zensus2011.de/>
-
-![Zensus Datenbank](https://raw.githubusercontent.com/Japhilko/GeoData/master/2017/slides/figure/Zensusdtb.PNG)
 
 
 
