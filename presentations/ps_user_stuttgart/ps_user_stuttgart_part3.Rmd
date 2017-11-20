@@ -375,7 +375,7 @@ kable(HHsr[1:8,1:6])
 ![Zensus Datenbank](https://raw.githubusercontent.com/Japhilko/GeoData/master/2017/slides/figure/Zensusdtb.PNG)
 
 
-# <datahub.io>
+# [datahub.io](datahub.io)
 
 ![](figure/datahub_whc.PNG)
 
@@ -395,9 +395,8 @@ whcSites <- read.csv(url)
 ```
 
 ```{r,echo=F}
-kable(head(whcSites))
+kable(head(whcSites[,c("name_en","date_inscribed","longitude","latitude","area_hectares","category","states_name_fr")]))
 ```
-
 
 
 # Exkurs -  [OpenStreetMap](http://www.openstreetmap.de/) Projekt
@@ -417,12 +416,41 @@ kable(head(whcSites))
 ![](figure/OSMroads.PNG)
 
 
+## [Overpass Turbo](https://overpass-turbo.eu/)
+
+
+
+![https://overpass-turbo.eu/](http://blog.openstreetmap.de/wp-uploads/2014/01/Overpass_turbo_query_wizard_result_DE.png)
+
+
+
+## Query Overpass
+
+```
+node
+  [amenity=bar]
+  ({{bbox}});
+out;
+```
+
 
 # Zwischenfazit - Quellen für inhaltliche Daten
 
 - Gerade auf Staatenebene gibt es sehr viele Daten
 - Oftmals hat man aber eigene Daten, die man in einer Karte darstellen möchte
 - Frage ist wie sich die inhaltlichen Daten mit den Polygonzügen verbinden lassen
+
+
+## Verknüpfung von Daten
+
+<!--
+http://mjcetce409.blogspot.de/2015/10/
+-->
+
+![](http://2.bp.blogspot.com/-bXnJX5-Lvl4/VhoR95p3zLI/AAAAAAAAATk/37SHhK1BceQ/s640/covdiag.gif)
+
+Quelle: [Geographic Information Systems and Remote Sensing](http://mjcetce409.blogspot.de/2015/10/)
+
 
 # Daten verbinden - Beispiel Bäckereien in Berlin
 
