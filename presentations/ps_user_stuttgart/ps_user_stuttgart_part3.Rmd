@@ -518,14 +518,37 @@ kable(HHsr[1:8,1:6])
 
 ![](figure/ZensusErgebnisse.PNG)
 
-- [Zensus Gemeindeergebnisse](https://www.destatis.de/DE/Methoden/Zensus_/Zensus.html)
-
 
 # Zensus Atlas
 
 <https://ergebnisse.zensus2011.de/>
 
 ![Zensus Datenbank](https://raw.githubusercontent.com/Japhilko/GeoData/master/2017/slides/figure/Zensusdtb.PNG)
+
+# [Zensus Gemeindeergebnisse](https://www.destatis.de/DE/Methoden/Zensus_/Zensus.html)
+
+```{r,eval=F,echo=F}
+library(xlsx)
+setwd("D:/GESIS/Vorträge/20171122_userStuttgart/data/")
+bev_dat <- read.xlsx("xlsx_Bevoelkerung.xlsx",3)
+```
+
+
+![](figure/ZensusMigbg.PNG)
+
+```{r}
+zen <- read.csv2("data/Zensus_extract.csv")
+# Personen mit eigener Migrationserfahrung
+# mit beidseitigem Migrationshintergrund
+zen2 <- data.frame(Personen_Mig=zen[,which(zen[9,]==128)],
+                   Personen_Mig_bs=zen[,which(zen[9,]==133)])
+```
+
+
+```{r, eval=F,echo=F}
+library(knitr)
+kable(head(bev_dat))
+```
 
 
 # [datahub.io](datahub.io)
@@ -557,6 +580,14 @@ kable(head(whcSites[,c("name_en","date_inscribed","longitude","latitude","area_h
 > OpenStreetMap.org ist ein im Jahre 2004 gegründetes internationales Projekt mit dem Ziel, eine freie Weltkarte zu erschaffen. Dafür sammeln wir weltweit Daten über Straßen, Eisenbahnen, Flüsse, Wälder, Häuser und vieles mehr. 
 
 <http://www.openstreetmap.de/>
+
+
+
+![[OSM Mapper](http://wiki.openstreetmap.org/wiki/OSM_Mapper)](http://wiki.openstreetmap.org/w/images/6/6d/New_York.jpg)
+
+<!--
+http://wiki.openstreetmap.org/wiki/Glasgow
+-->
 
 # Export von OpenStreetMap Daten
 
@@ -682,7 +713,7 @@ ind <- match(BE@data$PLZ99_N,names(tab_plz))
 ind
 ```
 
-# Daten anspielen
+## Daten anspielen
 
 ```{r}
 BE@data$num_plz <- tab_plz[ind]
@@ -742,17 +773,6 @@ qtm(PLZ_SG,fill="bakery")
 kable(PLZ_SG@data[which.max(PLZ_SG$bakery),c("PLZ99","lat","lon","bakery")])
 ```
 
-# Das Paket `ggmap`
-
-```{r ggmap_citycenter}
-library(ggmap)
-lon_plz <- PLZ_SG@data[which.max(PLZ_SG$bakery),"lon"]
-lat_plz <- PLZ_SG@data[which.max(PLZ_SG$bakery),"lat"]
-mp_plz <- as.numeric(c(lon_plz,lat_plz))
-qmap(location = mp_plz,zoom=15)
-```
-
-
 
 # [Das R-Paket `RDSTK`](http://www.datasciencetoolkit.org/)
 
@@ -786,7 +806,7 @@ kable(df_landcover)
 
 - Daten von [European Commission Land Resource Management Unit Global Land Cover 2000.](http://bioval.jrc.ec.europa.eu/products/glc2000/products.php)
 
-```{r,eval=F}
+```{r}
 qtm(PLZ_SG,fill="land_cover.value")
 ```
 
@@ -794,7 +814,7 @@ qtm(PLZ_SG,fill="land_cover.value")
 
 - Daten von [NASA and the CGIAR Consortium for Spatial Information .](http://srtm.csi.cgiar.org/)
 
-```{r,eval=F}
+```{r}
 qtm(PLZ_SG,fill="elevation.value")
 ```
 
@@ -802,25 +822,8 @@ qtm(PLZ_SG,fill="elevation.value")
 man könnte hier noch zeigen, wie man einen Punkt hinzufügen kann
 -->
 
-# Das Paket `osmar`
-
-```{r}
-library(osmar) 
-```
-
-
-```{r,eval=F}
-src <- osmsource_api()
-gc <- geocode("Stuttgart-Degerloch")
-bb <- center_bbox(gc$lon, gc$lat, 800, 800)
-ua <- get_osm(bb, source = src)
-plot(ua)
-```
 
 # Graphiken Stadtleben Stuttgart - das Paket `ggmap`
-
-
-# Das Paket `ggmap`
 
 ```{r,eval=F}
 devtools::install_github("dkahle/ggmap")
@@ -1083,6 +1086,51 @@ Wie fügt man Punkte hinzu
 -->
 
 
+# Das Paket `ggmap`
+
+```{r ggmap_citycenter}
+library(ggmap)
+lon_plz <- PLZ_SG@data[which.max(PLZ_SG$bakery),"lon"]
+lat_plz <- PLZ_SG@data[which.max(PLZ_SG$bakery),"lat"]
+mp_plz <- as.numeric(c(lon_plz,lat_plz))
+qmap(location = mp_plz,zoom=15)
+```
+
+
+# Das Paket `osmar`
+
+```{r}
+library(osmar) 
+```
+
+
+```{r,eval=F}
+src <- osmsource_api()
+gc <- geocode("Stuttgart-Degerloch")
+bb <- center_bbox(gc$lon, gc$lat, 800, 800)
+ua <- get_osm(bb, source = src)
+plot(ua)
+```
+
+```{r,echo=F}
+load("data/ua_SG_cc.RData")
+plot(ua)
+```
+
+# Gebäude in diesem Ausschnitt plotten
+
+```{r}
+bg_ids <- find(ua, way(tags(k=="building")))
+bg_ids <- find_down(ua, way(bg_ids))
+bg <- subset(ua, ids = bg_ids)
+bg_poly <- as_sp(bg, "polygons")  
+plot(bg_poly)
+```
+
+# Gebäude und Straßen im Ausschnitt
+
+![](figure/SG_streets.png)
+
 <!--
 Interaktive Karten
 http://rmaps.github.io/
@@ -1101,3 +1149,6 @@ m
 xxxxtodo: Point in Polygon Methode
 -->
 
+# [Karte auf Carto zur Energieerzeugung](https://japhilko.carto.com/viz/f31db8c4-8f7d-11e5-b394-0ef7f98ade21/public_map)
+
+![](figure/CartoEnergeticChange.PNG)
