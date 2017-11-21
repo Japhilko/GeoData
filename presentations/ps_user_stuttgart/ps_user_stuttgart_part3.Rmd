@@ -15,7 +15,7 @@ output:
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
-log_gesis=T
+log_gesis=F
 log_home=!log_gesis
   
 internet=F
@@ -49,6 +49,10 @@ install.packages("sp")
 install.packages("tmap")
 install.packages("choroplethr")
 install.packages("choroplethrMaps")
+install.packages("acs")
+install.packages("rJava")
+install.packages("xlsxjars")
+install.packages("xlsx")
 ```
 
 
@@ -252,11 +256,18 @@ Quelle: [Bundesnetzagentur](https://www.bundesnetzagentur.de/DE/Sachgebiete/Tele
 
 <!-- 
 ggf. noch mal neu herunterladen
+
+https://www.bundesnetzagentur.de/SharedDocs/Downloads/DE/Sachgebiete/Telekommunikation/Unternehmen_Institutionen/Nummerierung/Rufnummern/ONVerzeichnisse/ONBGrenzen/ONB-Grenzen-2017.zip;jsessionid=E4247BF20DD015E0722196351E0DC163?__blob=publicationFile&v=14
 --> 
 
 ```{r,echo=F,eval=log_gesis}
 setwd("D:/Daten/Daten/GeoDaten/")
 ```
+
+```{r,echo=F,eval=log_home}
+setwd("D:/GESIS/Vorträge/20171122_userStuttgart/data/")
+```
+
 
 ```{r,eval=F,echo=F}
 install.packages("maptools")
@@ -267,6 +278,12 @@ install.packages("maptools")
 library(maptools)
 setwd("D:/Daten/Daten/GeoDaten/")
 onb <- readShapePoly("onb_grenzen.shp")
+```
+
+```{r,eval=log_home,echo=F}
+library(maptools)
+setwd("D:/GESIS/Vorträge/20171122_userStuttgart/data/")
+onb <- readShapePoly("ONB_BnetzA_DHDN_Gauss3d-3.shp")
 ```
 
 
@@ -298,6 +315,14 @@ vwb1 <- substr(vwb, 1,2)
 vwb7 <- onb[vwb1=="07",]
 plot(vwb7)
 ```
+
+```{r,eval=log_home}
+vwb <- as.character(onb@data$ONB_NUMMER)
+vwb1 <- substr(vwb, 1,1)
+vwb7 <- onb[vwb1=="7",]
+plot(vwb7)
+```
+
 
 # Das Paket `rgdal`
 
@@ -492,6 +517,8 @@ kable(HHsr[1:8,1:6])
 # [Zensus Ergebnisse](https://www.zensus2011.de/SharedDocs/Aktuelles/Ergebnisse/DemografischeGrunddaten.html)
 
 ![](figure/ZensusErgebnisse.PNG)
+
+- [Zensus Gemeindeergebnisse](https://www.destatis.de/DE/Methoden/Zensus_/Zensus.html)
 
 
 # Zensus Atlas
@@ -1063,7 +1090,7 @@ http://rmaps.github.io/
 
 # Interaktive Karten mit dem Paket `leaflet`
 
-```{r}
+```{r,eval=F}
 library(leaflet)
 
 m = leaflet() %>% addTiles()
