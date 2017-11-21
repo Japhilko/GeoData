@@ -16,9 +16,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
 log_gesis=T
-log_home=F
-internet=T
-noint = F
+log_home=!log_gesis
+  
+internet=F
+noint = !internet
 ```
 
 
@@ -46,6 +47,8 @@ Beim letzten Punkt colour Picker einbauen - Folien maps
 install.packages("knitr")
 install.packages("sp")
 install.packages("tmap")
+install.packages("choroplethr")
+install.packages("choroplethrMaps")
 ```
 
 
@@ -150,6 +153,21 @@ wrld_simpl@data[ind,]
 ```
 
 
+# Das R-Paket `choroplethrMaps`
+
+```{r}
+library(ggplot2)
+library(choroplethrMaps)
+data(country.map)
+ggplot(country.map, aes(long, lat, group=group)) + geom_polygon()
+```
+
+# Eine Karte für die USA
+
+```{r}
+data(state.map)
+ggplot(state.map,aes(long,lat,group=group))+geom_polygon()
+```
 
 # Andere Quellen für Shapefiles - Das Paket `raster`
 
@@ -173,7 +191,7 @@ head(LUX1@data)
 kable(head(LUX1@data))
 ```
 
-```{r,eval=noint,echo=F}
+```{r,eval=internet,echo=F}
 datatable(LUX1@data)
 ```
 
@@ -213,7 +231,8 @@ datatable(krs@data)
 head(krs@data$RS)
 ```
 
-- Die Kreise für Baden-Württemberg
+# Die Kreise für Baden-Württemberg
+
 - Systematik hinter dem Amtlichen Gemeindeschlüssel (AGS) bzw. Regionalschlüssel (RS) bei [Wikipedia](https://de.wikipedia.org/wiki/Amtlicher_Gemeindeschl%C3%BCssel)
 
 ```{r}
@@ -247,9 +266,7 @@ install.packages("maptools")
 ```{r,eval=log_gesis,echo=F}
 library(maptools)
 setwd("D:/Daten/Daten/GeoDaten/")
-
 onb <- readShapePoly("onb_grenzen.shp")
-kable(head(onb@data))
 ```
 
 
@@ -261,7 +278,7 @@ onb <- readShapePoly("onb_grenzen.shp")
 head(onb@data)
 ```
 
-```{r,eval=!internet,echo=F}
+```{r,eval=noint,echo=F}
 kable(head(onb@data))
 ```
 
@@ -269,28 +286,18 @@ kable(head(onb@data))
 datatable(onb@data)
 ```
 
+# Karte der Vorwahlbereiche
 
-# Vorwahlbereiche in der Region Stuttgart
-
-```{r,eval=log_gesis,tidy=T}
-vw_stg<-c("0711","07121","07122") 
-vw_reg_stg<-onb[onb@data$VORWAHL%in%vw_stg,]
-plot(vw_reg_stg)
-```
-
-![onbD](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/onbGermany.png)
+![](https://raw.githubusercontent.com/Japhilko/GeoData/master/data/figure/onbGermany.png)
 
 # Einen größeren Vorwahlbereich ausschneiden
 
 ```{r,eval=log_gesis}
-vwb <- as.character(onb@data$ONB_NUMMER)
+vwb <- as.character(onb@data$VORWAHL)
 vwb1 <- substr(vwb, 1,2)
 vwb7 <- onb[vwb1=="07",]
 plot(vwb7)
 ```
-
-
-
 
 # Das Paket `rgdal`
 
@@ -306,7 +313,7 @@ setwd("D:/Daten/Daten/GeoDaten")
 PLZ <- readOGR ("post_pl.shp","post_pl")
 ```
 
-```{r,eval=log_home}
+```{r,eval=log_home,echo=F}
 setwd("D:/GESIS/Workshops/GeoDaten/data/")
 PLZ <- readOGR ("post_pl.shp","post_pl")
 ```
@@ -329,8 +336,13 @@ plot(SG,col="chocolate1")
 
 ```{r}
 BE <- PLZ[PLZ@data$PLZORT99%in%c("Berlin-West","Berlin (östl. Stadtbezirke)"),]
-plot(BE,col="chocolate2")
+plot(BE,col="chocolate2",border="lightgray")
 ```
+
+<!--
+# Die Grenzen anders einfärben
+https://gis.stackexchange.com/questions/36877/how-do-i-change-the-polygon-fill-color-and-border-color-for-spatialpolygons-obje
+-->
 
 # Zwischenfazit - Quellen für Polygonzüge
 
@@ -369,6 +381,93 @@ spplot(wrld_simpl,"POP2005",col.regions=blue2red(100))
 spplot(wrld_simpl,"POP2005",col.regions=matlab.like(100))
 ```
 
+# Thematische Karten mit dem Paket `choroplethr`
+
+```{r}
+library(choroplethr)
+data(df_pop_state)
+```
+
+```{r,eval=F}
+head(df_pop_state)
+```
+
+```{r,echo=F,eval=internet}
+datatable(df_pop_state)
+```
+
+```{r,echo=F,eval=noint}
+kable(head(df_pop_state))
+```
+
+# Eine thematische Karte mit `choroplethr` erstellen
+
+```{r}
+state_choropleth(df_pop_state)
+```
+
+
+
+# [Nur drei Staaten darstellen](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/b-state-choropleth.html)
+
+```{r}
+state_choropleth(df_pop_state,
+                 title      = "2012 Population Estimates",
+                 legend     = "Population",
+                 num_colors = 1,
+                 zoom       = c("california", "washington", "oregon"))
+```
+
+# Eine Karte der US Counties
+
+```{r}
+data(df_pop_county)
+county_choropleth(df_pop_county)
+```
+
+
+# [Choroplethen Länder](http://mirrors.softliste.de/cran/web/packages/choroplethr/vignettes/d-country-choropleth.html)
+
+```{r}
+data(df_pop_country)
+country_choropleth(df_pop_country,
+              title      = "2012 Population Estimates",
+              legend     = "Population",
+              num_colors = 1,
+              zoom       = c("austria","germany",
+                             "poland", "switzerland"))
+```
+
+# Weltbank Daten
+
+```{r}
+library(WDI) 
+WDI_dat <- WDI(country="all", indicator=c("AG.AGR.TRAC.NO","TM.TAX.TCOM.BC.ZS"),
+    start=1990, end=2000)
+```
+
+- Es gibt auch eine Funktion `WDIsearch` mit der man nach Indikatoren suchen kann
+
+```{r,eval=F}
+head(WDI_dat)
+```
+
+```{r,eval=noint,echo=F}
+kable(head(WDI_dat))
+```
+
+```{r,eval=internet,echo=F}
+datatable(WDI_dat)
+```
+
+# Weltkarte mit den Weltbank Daten
+
+```{r}
+choroplethr_wdi(code="SP.DYN.LE00.IN", year=2012,
+                title="2012 Life Expectancy")
+```
+
+
 
 # Eurostat Daten
 
@@ -380,9 +479,9 @@ Sie können eine Statistik der Sparquote bei [Eurostat](http://ec.europa.eu/euro
 setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
 ```
 
-```{r,eval=F}
+```{r,eval=T}
 library(xlsx)
-HHsr <- read.xlsx2("HHsavingRate.xls",1)
+HHsr <- read.xlsx2("data/HHsavingRate.xls",1)
 ```
 
 ```{r,echo=F,eval=F}
@@ -443,7 +542,7 @@ kable(head(whcSites[,c("name_en","date_inscribed","longitude","latitude","area_h
 ![](figure/OSMroads.PNG)
 
 
-## [Overpass Turbo](https://overpass-turbo.eu/)
+# [Overpass Turbo](https://overpass-turbo.eu/)
 
 
 
@@ -451,7 +550,9 @@ kable(head(whcSites[,c("name_en","date_inscribed","longitude","latitude","area_h
 
 
 
-## Query Overpass
+# Query Overpass
+
+- Overpass hat eine eigene Abfragesprache
 
 ```
 node
@@ -468,7 +569,7 @@ out;
 - Frage ist wie sich die inhaltlichen Daten mit den Polygonzügen verbinden lassen
 
 
-## Verknüpfung von Daten
+# Verknüpfung von Daten
 
 <!--
 http://mjcetce409.blogspot.de/2015/10/
@@ -477,6 +578,42 @@ http://mjcetce409.blogspot.de/2015/10/
 ![](http://2.bp.blogspot.com/-bXnJX5-Lvl4/VhoR95p3zLI/AAAAAAAAATk/37SHhK1BceQ/s640/covdiag.gif)
 
 Quelle: [Geographic Information Systems and Remote Sensing](http://mjcetce409.blogspot.de/2015/10/)
+
+
+# Daten verbinden - Beispiel Eurostat Daten 
+
+- Wir hatten vorhin schon die Haushaltssparrate geladen
+- Dabei handelt es sich um einen von den Ausgewählte Wichtigsten Europäische Wirtschaftsindikatoren bei [Eurostat](http://ec.europa.eu/eurostat/web/euro-indicators/peeis) 
+- Der Datensatz `wrld_simpl` aus dem Paket `maptools` wird verwendet
+- Die Daten werden mit Hilfe des Ländernamens miteinander verknüpft
+
+
+```{r}
+ind <- match(HHsr$geo,wrld_simpl@data$NAME)
+ind <- ind[-which(is.na(ind))]
+```
+
+- Der `wrld_simpl` Datensatz wird auf Europa eingeschränkt
+
+```{r}
+EUR <- wrld_simpl[ind,]
+```
+
+- Informationen zur Haushaltssparrate werden hinzugefügt
+
+```{r}
+EUR@data$HHSR_2012Q3 <- as.numeric(as.character(HHsr[-(1:2),2]))
+EUR@data$HHSR_2015Q2 <- as.numeric(as.character(HHsr[-(1:2),13]))
+```
+
+
+# Karte mit Eurostat Indikator Household Saving Rate
+
+- Mit dem Befehl `spplot` aus dem Paket `sp` ist es möglich zwei Karten nebeneinander darzustellen:
+
+```{r}
+spplot(EUR,c("HHSR_2012Q3","HHSR_2015Q2"))
+```
 
 
 # Daten verbinden - Beispiel Bäckereien in Berlin
@@ -540,7 +677,7 @@ install.packages("R.oo")
 library(tmap)
 ```
 
-- mit qmap kann man schnell eine thematische Karte erzeugen
+- mit `qtm` kann man schnell eine thematische Karte erzeugen
 
 ```{r}
 BE@data$num_plz[is.na(BE@data$num_plz)] <- 0
@@ -653,7 +790,271 @@ ua <- get_osm(bb, source = src)
 plot(ua)
 ```
 
-# Graphiken Stadtleben Stuttgart
+# Graphiken Stadtleben Stuttgart - das Paket `ggmap`
+
+
+# Das Paket `ggmap`
+
+```{r,eval=F}
+devtools::install_github("dkahle/ggmap")
+install.packages("ggmap")
+```
+
+# Eine erste Karte mit `ggmap` erzeugen
+
+```{r}
+library(ggmap)
+```
+
+
+```{r,message=F,eval=F}
+qmap("Stuttgart")
+```
+
+![](figure/Stuttgart.png)
+
+# Karte für einen ganzen Staat
+
+```{r,message=F,eval=F}
+qmap("Germany")
+```
+
+![](figure/Germany.png)
+
+- Wir brauchen ein anderes *zoom level*
+
+# Ein anderes *zoom level*
+
+- level 3 - Kontinent
+- level 10 - Stadt
+- level 21 - Gebäude
+
+```{r,message=F,eval=F}
+qmap("Germany", zoom = 6)
+```
+
+![](figure/Germany6.png)
+
+```{r,echo=F}
+# https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/ggmap/ggmapCheatsheet.pdf
+```
+
+
+# Karte für eine Sehenswürdigkeit
+
+- `ggmap` - maptype satellite
+
+```{r,message=F,eval=F}
+WIL <- qmap("Wilhelma",zoom=20, maptype="satellite")
+WIL
+```
+
+![](figure/Wilhelma.png)
+
+# `ggmap` - maptype satellite zoom 20
+
+```{r,message=F,eval=F}
+qmap('Stuttgart Hauptbahnhof', zoom = 15, maptype="hybrid")
+```
+
+![](figure/Stuttgart_Hauptbahnhof.png)
+
+# Eine terrain Karte
+
+
+```{r,message=F,cache=T,eval=F}
+qmap('Stuttgart Fernsehturm', zoom = 14,
+ maptype="terrain")
+```
+
+![](figure/Stuttgart_Fernsehturm.png)
+
+# `ggmap` - maptype watercolor
+
+```{r,message=F,eval=F}
+qmap('Stuttgart', zoom = 14,
+ maptype="watercolor",source="stamen")
+```
+
+![](figure/Stuttgart_wc.png)
+
+# `ggmap` - source stamen
+
+```{r,message=F,eval=F}
+qmap('Stuttgart', zoom = 14,
+ maptype="toner",source="stamen")
+```
+
+![](figure/Stuttgart_stamen.png)
+
+# `ggmap` - maptype toner-lite
+
+```{r,message=F,eval=F}
+qmap('Stuttgart', zoom = 14,
+ maptype="toner-lite",source="stamen")
+```
+
+![](figure/Stuttgart_tonerlite.png)
+# `ggmap` - maptype toner-hybrid
+
+```{r,message=F,eval=F}
+qmap('Stuttgart', zoom = 14,
+ maptype="toner-hybrid",source="stamen")
+```
+
+![](figure/Stuttgart_tonerhybrid.png)
+
+# `ggmap` - maptype terrain-lines
+
+```{r,message=F,eval=F}
+qmap('Stuttgart', zoom = 14,
+ maptype="terrain-lines",source="stamen")
+```
+
+![](figure/Stuttgart_terrainlines.png)
+
+
+# Geokodierung
+
+> Geocoding (...) uses a description of a location, most typically a postal address or place name, to find geographic coordinates from spatial reference data ... 
+
+[Wikipedia - Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)
+
+```{r,message=F,eval=T,warning=F}
+library(ggmap)
+geocode("Stuttgart")
+```
+
+```{r,echo=F,message=F,warning=F}
+MAgc <- geocode("Stuttgart Wormser Str. 15")
+kable(MAgc)
+```
+
+
+# Reverse Geokodierung
+
+> Reverse geocoding is the process of back (reverse) coding of a point location (latitude, longitude) to a readable address or place name. This permits the identification of nearby street addresses, places, and/or areal subdivisions such as neighbourhoods, county, state, or country.
+
+Quelle: [Wikipedia](https://en.wikipedia.org/wiki/Reverse_geocoding)
+
+```{r,cache=T,message=F}
+revgeocode(c(48,8))
+```
+
+
+# Die Distanz zwischen zwei Punkten
+
+```{r,message=F}
+mapdist("Marienplatz Stuttgart","Hauptbahnhof Stuttgart")
+```
+
+```{r,message=F}
+mapdist("Marienplatz Stuttgart","Hauptbahnhof Stuttgart",mode="walking")
+```
+
+
+# Eine andere Distanz bekommen
+
+```{r,message=F}
+mapdist("Marienplatz Stuttgart","Hauptbahnhof Stuttgart",mode="bicycling")
+```
+
+# Geokodierung - verschiedene Punkte von Interesse
+
+```{r,message=F,warning=F}
+POI1 <- geocode("B2, 1 Mannheim",source="google")
+POI2 <- geocode("Hbf Mannheim",source="google")
+POI3 <- geocode("Mannheim, Friedrichsplatz",source="google")
+ListPOI <-rbind(POI1,POI2,POI3)
+POI1;POI2;POI3
+```
+
+
+# Punkte in der Karte
+
+```{r,message=F,warning=F,eval=F}
+MA_map +
+geom_point(aes(x = lon, y = lat),
+data = ListPOI)
+```
+
+# Punkte in der Karte
+
+```{r,message=F,warning=F,eval=F}
+MA_map +
+geom_point(aes(x = lon, y = lat),col="red",
+data = ListPOI)
+```
+
+![](figure/MA_mapred.png)
+
+# `ggmap` - verschiedene Farben
+
+```{r,eval=F}
+ListPOI$color <- c("A","B","C")
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color),
+data = ListPOI)
+```
+
+![](figure/MA_map_tc.png)
+
+# `ggmap` - größere Punkte
+
+```{r,eval=F}
+ListPOI$size <- c(10,20,30)
+MA_map +
+geom_point(aes(x = lon, y = lat,col=color,size=size),
+data = ListPOI)
+```
+
+![](figure/MA_map.png)
+
+# Eine Route von Google maps bekommen
+
+```{r,message=F,warning=F,cache=T,eval=F}
+from <- "Mannheim Hbf"
+to <- "Mannheim B2 , 1"
+route_df <- route(from, to, structure = "route")
+```
+
+[Mehr Information](http://rpackages.ianhowson.com/cran/ggmap/man/route.html)
+
+<http://rpackages.ianhowson.com/cran/ggmap/man/route.html>
+
+# Eine Karte mit dieser Information zeichnen
+
+```{r,message=F,warning=F,cache=T,eval=F}
+qmap("Mannheim Hbf", zoom = 14) +
+  geom_path(
+    aes(x = lon, y = lat),  colour = "red", size = 1.5,
+    data = route_df, lineend = "round"
+  )
+```
+
+<!--
+![](figure/MA_map_route.png)
+-->
+Wie fügt man Punkte hinzu
+
+- Nutzung von [geom_point](http://zevross.com/blog/2014/07/16/mapping-in-r-using-the-ggplot2-package/)
+
+
+- Question on [stackoverflow](http://stackoverflow.com/questions/15069963/getting-a-map-with-points-using-ggmap-and-ggplot2)
+
+<http://i.stack.imgur.com>
+
+ 
+# Cheatsheet
+
+- Cheatsheet zu [data visualisation](https://www.rstudio.com/wp-content/uploads/2015/04/ggplot2-cheatsheet.pdf)
+
+<https://www.rstudio.com/>
+
+<!--
+![Cheatsheet](figure/ggplot2-cheatsheet.png)
+-->
+
 
 <!--
 Interaktive Karten
@@ -669,5 +1070,7 @@ m = leaflet() %>% addTiles()
 m 
 ```
 
-
+<!--
+xxxxtodo: Point in Polygon Methode
+-->
 
