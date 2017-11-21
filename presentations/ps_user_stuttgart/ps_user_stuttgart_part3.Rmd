@@ -17,6 +17,8 @@ knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message=FALSE)
 par(mai=c(0,0,0,0))
 log_gesis=T
 log_home=F
+internet=T
+noint = F
 ```
 
 
@@ -118,9 +120,15 @@ plot(wrld_simpl,col="royalblue")
 head(wrld_simpl@data)
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=noint}
 kable(head(wrld_simpl@data))
 ```
+
+```{r,echo=F,eval=internet}
+library(DT)
+datatable(wrld_simpl@data)
+```
+
 
 ```{r}
 length(wrld_simpl)
@@ -156,9 +164,19 @@ plot(LUX1)
 
 # Daten für das Luxemburg Beispiel
 
-```{r}
+```{r,eval=F}
+head(LUX1@data)
+```
+
+
+```{r,eval=noint,echo=F}
 kable(head(LUX1@data))
 ```
+
+```{r,eval=noint,echo=F}
+datatable(LUX1@data)
+```
+
 
 # [Shapefiles bei Eurostat](http://ec.europa.eu/eurostat/de/web/gisco/geodata/reference-data/administrative-units-statistical-units)
 
@@ -237,10 +255,19 @@ kable(head(onb@data))
 
 ```{r,eval=F}
 onb <- readShapePoly("onb_grenzen.shp")
+```
+
+```{r,eval=F}
+head(onb@data)
+```
+
+```{r,eval=!internet,echo=F}
 kable(head(onb@data))
 ```
 
-
+```{r,eval=internet,echo=F}
+datatable(onb@data)
+```
 
 
 # Vorwahlbereiche in der Region Stuttgart
@@ -628,6 +655,19 @@ plot(ua)
 
 # Graphiken Stadtleben Stuttgart
 
+<!--
+Interaktive Karten
+http://rmaps.github.io/
+-->
+
+# Interaktive Karten mit dem Paket `leaflet`
+
+```{r}
+library(leaflet)
+
+m = leaflet() %>% addTiles()
+m 
+```
 
 
 

@@ -1,0 +1,59 @@
+---
+title: "Interaktive Karten"
+author: "Jan-Philipp Kolb"
+date: "21 November 2017"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [Das Paket `rMaps`](https://github.com/ramnathv/rMaps)
+
+```{r,eval=F}
+require(devtools)
+install_github('ramnathv/rCharts@dev')
+install_github('ramnathv/rMaps')
+install.packages("leaflet")
+```
+
+## Die interaktive Karte
+
+```{r,eval=F}
+library(rMaps)
+crosslet(
+  x = "country", 
+  y = c("web_index", "universal_access", "impact_empowerment", "freedom_openness"),
+  data = web_index
+)
+```
+
+
+## Das Paket leaflet
+
+```{r}
+library(leaflet)
+
+m = leaflet() %>% addTiles()
+m 
+```
+
+
+## Weltkulturerbe Datensatz einlesen
+
+```{r}
+url <- "https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/data/whcSites.csv"
+
+whcSites <- read.csv(url) 
+```
+
+
+
+## Das Paket `DT`
+
+```{r}
+library(DT)
+datatable(whcSites)
+```
+
