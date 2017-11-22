@@ -13,9 +13,7 @@ data("wrld_simpl")
 setwd("J:/Work/Statistik/Kolb/Workshops/2015/Spatial_MA/Folien/dataImport/data/")
 
 HHsr <- read.xlsx2("HHsavingRate.xls",1)
-
 ind <- match(HHsr$geo,wrld_simpl@data$NAME)
-
 ind <- ind[-which(is.na(ind))]
 
 EUR <- wrld_simpl[ind,]
