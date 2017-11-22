@@ -1136,14 +1136,16 @@ Interaktive Karten
 http://rmaps.github.io/
 -->
 
-# Interaktive Karten mit dem Paket `leaflet`
+# Schlussfolie
 
-```{r,eval=F}
-library(leaflet)
+Vielen Dank für die Aufmerksamkeit
 
-m = leaflet() %>% addTiles()
-m 
-```
+
+# Erweiterungsmöglichkeiten
+
+- Interaktive Karten mit dem Paket `leaflet`
+
+http://rpubs.com/Japhilko82/Rleaflet
 
 <!--
 xxxxtodo: Point in Polygon Methode
