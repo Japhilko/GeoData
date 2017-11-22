@@ -1,7 +1,7 @@
 ---
-title: "R in meinem Arbeitsalltag"
+title: "Wer ich bin und warum ich R nutze"
 author: "Jan-Philipp Kolb"
-date: "16 November 2017"
+date: "23 November 2017"
 output: 
   beamer_presentation: 
     colortheme: beaver
@@ -47,7 +47,9 @@ library(knitr)
 - Beratung zu Forschungsprojekten in allen Phasen
 - Forschungsbasierte wissenschaftliche Dienstleistungen
 
-## Datenerhebungsinfrastruktur für die Profession
+## Was ist das Gesis Panel
+
+### Datenerhebungsinfrastruktur für die Profession
 
 - Probabilistisches mixed-mode Access Panel
 - Deutsche Allgemeinbevölkerung
@@ -68,10 +70,11 @@ kable(tab_spatial)
 ## Datenaufbereitung
 
 - Panelbereinigung (bei Abmeldung oder Nonresponse)
+- Online- und Offline-Daten zusammenführen
 - Anonymisierung und Kategorisierung
-- Filterführung muss sich in den Missings wiederspiegeln
-
-
+- Missings kodieren; Bspw. Filterführung muss sich in den Missings wiederspiegeln
+- Codebuch und Wellenreport erstellen
+- ....
 
 ## [R in meinem Arbeitsalltag](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
 
@@ -79,8 +82,8 @@ kable(tab_spatial)
 - `dplyr` Paket zur Datenaufbereitung
 - `doParallel` zur Bearbeitung vieler Jobs
 - `Rmarkdown` bei der Datendokumentation (Codebook, Wave Report) 
+- `caret` für maschinelles Lernen
 - Rstudio git Interface zur Versionskontrolle
-
 
 ## Arbeiten mit HTML Daten
 
@@ -89,3 +92,35 @@ kable(tab_spatial)
 ![](figure/DruckversionFragebogen.PNG)
 
 
+## [Welche Programm werden genutzt](http://blog.revolutionanalytics.com/2013/10/r-usage-skyrocketing-rexer-poll.html)
+
+![](http://revolution-computing.typepad.com/.a/6a010534b1db25970b019b00077267970b-800wi)
+
+## [Trend Open Science - Leibniz Gemeinschaft](https://www.leibniz-gemeinschaft.de/forschung/open-science/)
+
+![](figure/Leibniz_openScience.PNG)
+
+## [Trend Open Science - GESIS](https://www.gesis.org/forschung/angewandte-informatik/open-science/)
+
+![](figure/Gesis_openscience.PNG)
+
+
+## [Job trends ](http://blog.revolutionanalytics.com/2017/02/job-trends-for-r-and-python.html)
+
+![](http://revolution-computing.typepad.com/.a/6a010534b1db25970b01b7c8d42886970b-800wi)
+
+## Fazit - Zukunft von R in der Wissenschaft
+
+- Bedeutung von R scheint zuzunehmen
+- Open Science Entwicklung
+- Stata ist nach wie vor wichtig (Pfadabhängigkeit)
+- Bedeutung von SPSS nimmt ab
+
+
+<!--
+http://sharpsightlabs.com/blog/r-recommend-data-science/
+
+http://r4stats.com/articles/popularity/
+
+https://www.kdnuggets.com/2013/12/poll-results-r-leading-python-gaining.html
+-->
