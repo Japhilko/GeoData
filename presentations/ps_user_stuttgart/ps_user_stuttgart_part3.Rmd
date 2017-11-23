@@ -700,6 +700,21 @@ info_be <- info[,c("addr.postcode","addr.street","name","lat","lon")]
 kable(head(info_be))
 ```
 
+
+## Verwendung des Pakets `gosmd`
+
+```{r,eval=F}
+devtools::install_github("Japhilko/gosmd")
+```
+
+
+```{r,eval=F}
+library("gosmd")
+pg_MA <- get_osm_nodes(object="leisure=playground","Mannheim")
+pg_MA <- extract_osm_nodes(pg_MA,value='playground')
+```
+
+
 # Matching
 
 ```{r}

@@ -2,6 +2,9 @@
 # Jan-Philipp Kolb
 # Tue Nov 21 15:35:10 2017
 
+
+# [](https://blog.dominodatalab.com/geographic-visualization-with-rs-ggmaps/)
+
 library(ggmap)
 
 graph.path <- "D:/Daten/GitHub/GeoData/presentations/ps_user_stuttgart/figure"
