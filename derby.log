@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Jan 29 15:44:18 CET 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.12.1.1 - (1704137): instance a816c00e-017e-a64b-4586-00000c0b9200 
+on database directory memory:C:\github\GeoData\databaseName=metastore_db with class loader org.apache.spark.sql.hive.client.IsolatedClientLoader$$anon$1@41e336e9 
+Loaded from file:/C:/Users/X230/AppData/Local/spark/spark-2.3.3-bin-hadoop2.7/jars/derby-10.12.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_321-b07
+user.dir=C:\github\GeoData
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
