@@ -48,7 +48,7 @@ dbGetQuery(sc, "SELECT count(*) FROM mtcars")
 flights <- copy_to(sc, flights, "flights")
 airlines <- copy_to(sc, airlines, "airlines")
 
-flights %>% left_join(airlines, by = "carrier")
+ab <- flights %>% left_join(airlines, by = "carrier")
 
 
 # Streaming
